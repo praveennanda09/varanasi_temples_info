@@ -4,11 +4,13 @@ import re
 import json
 import subprocess
 import sys
+import pdf_map_and_pins_builder as pmb
+import master_temples_coordinates as mtc
 
 sys.stdout.reconfigure(encoding='utf-8')
 
 print("=" * 70)
-print("COMPILING KASHI MAIN VISHNU TEMPLES COMPLETE MIRROR HTML & PDF")
+print("COMPILING KASHI MAIN VISHNU TEMPLES COMPLETE MIRROR HTML & PDF WITH GPS & MAP")
 print("=" * 70)
 
 # Load extracted Vishnu data
@@ -601,6 +603,11 @@ def render_vishnu_block(t, idx, tag_label, tag_class, anchor_id):
       </div>
     """)
 
+    # Verified GPS Pinpoint Box
+    orig_gmap = t['google_maps_urls'][0] if t.get('google_maps_urls') else None
+    gps_box = pmb.generate_gps_card_html(t['title'], orig_map_url=orig_gmap, custom_landmark=t.get('location_text'))
+    parts.append(gps_box)
+
     # Images
     if t['images']:
         if len(t['images']) == 1:
@@ -728,7 +735,32 @@ html_parts.append("""
   <li><strong>Auspicious Days:</strong> All <strong>Ekadashis</strong> (especially Prabodhini and Nirjala Ekadashi), Vaikuntha Chaturdashi, and the holy month of <strong>Kartika</strong> (when daily bathing at Panchganga and darshan of Bindu Madhav confers infinite blessings).</li>
   <li><strong>Narasimha Worship:</strong> Tuesdays and Saturdays, as well as Narasimha Jayanti (Vaishakha Shukla Chaturdashi), are especially auspicious for worshipping Prachand, Atyugra, Vidar, and Vitank Narasimha to overcome legal disputes, illness, and fears.</li>
 </ul>
+""")
 
+# ==========================================
+# 8. GEOGRAPHIC PILGRIMAGE MAP & PIN DIRECTORY
+# ==========================================
+vishnu_items = []
+for group in [main_18, additional_12]:
+    for v in group:
+        vishnu_items.append({
+            'key': v['title'],
+            'title': v['title'],
+            'canonical_name': v['title'],
+            'landmark': v.get('location_text', '')[:100]
+        })
+
+map_appendix = pmb.generate_map_appendix_html(
+    base_dir,
+    "KASHI MAIN VISHNU TEMPLES",
+    "Eighteen Main Vishnu Manifestations & Additional Keshava Sanctums",
+    "Map_Main_Vishnu_Temples.svg",
+    vishnu_items,
+    banner_bg="linear-gradient(135deg, #0f766e 0%, #0d9488 100%)"
+)
+html_parts.append(map_appendix)
+
+html_parts.append("""
 <div style="margin-top: 30pt; padding: 12pt; border: 1px solid #bfdbfe; border-radius: 6px; text-align: center; font-size: 8.5pt; color: #64748b;">
   <strong>Kashi Offline Pilgrimage Mirror Pack</strong> &bull; Complete Vishnu Knowledge Base<br>
   Preserved from <a href="https://varanasitemples.in/">https://varanasitemples.in/</a> for offline field worship &bull; Hari Om Tat Sat!

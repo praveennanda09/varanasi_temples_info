@@ -4,11 +4,13 @@ import re
 import json
 import subprocess
 import sys
+import pdf_map_and_pins_builder as pmb
+import master_temples_coordinates as mtc
 
 sys.stdout.reconfigure(encoding='utf-8')
 
 print("=" * 70)
-print("COMPILING KASHI GANGA & TEERTHS COMPLETE MIRROR HTML & PDF")
+print("COMPILING KASHI GANGA & TEERTHS COMPLETE MIRROR HTML & PDF WITH GPS & MAP")
 print("=" * 70)
 
 # Load extracted Ganga & Teerths data
@@ -572,6 +574,11 @@ for idx, t in enumerate(sections, 1):
       </div>
     """)
 
+    # Verified GPS Pinpoint Box
+    orig_gmap = t['google_maps_urls'][0] if t.get('google_maps_urls') else None
+    gps_box = pmb.generate_gps_card_html(t['title'], orig_map_url=orig_gmap, custom_landmark=t.get('location_text'))
+    html_parts.append(gps_box)
+
     # Images
     if t['images']:
         if len(t['images']) == 1:
@@ -683,7 +690,31 @@ html_parts.append("""
   <li><strong>Deepdan (Floating Lamps):</strong> In the evening, light earthen lamps (diyas) nestled with marigold flowers and set them afloat upon the river surface, invoking light for all beings in creation.</li>
   <li><strong>Environmental Sanctity:</strong> Under strict Vedic injunctions, never use soaps, detergents, shampoos, or plastic bags in or near the sacred river waters. Maintain absolute reverence for Mother Ganga.</li>
 </ul>
+""")
 
+# ==========================================
+# 7. GEOGRAPHIC PILGRIMAGE MAP & PIN DIRECTORY
+# ==========================================
+ganga_items = []
+for sec in sections:
+    ganga_items.append({
+        'key': sec['title'],
+        'title': sec['title'],
+        'canonical_name': sec['title'],
+        'landmark': sec.get('location_text', '')[:100]
+    })
+
+map_appendix = pmb.generate_map_appendix_html(
+    base_dir,
+    "KASHI GANGA & SACRED TEERTHS",
+    "Holy River Ganga, Confluences, Sacred Kunds & Pushkarinis",
+    "Map_Ganga_and_Teerths.svg",
+    ganga_items,
+    banner_bg="linear-gradient(135deg, #0f766e 0%, #0284c7 100%)"
+)
+html_parts.append(map_appendix)
+
+html_parts.append("""
 <div style="margin-top: 30pt; padding: 12pt; border: 1px solid #99f6e4; border-radius: 6px; text-align: center; font-size: 8.5pt; color: #64748b;">
   <strong>Kashi Offline Pilgrimage Mirror Pack</strong> &bull; Complete Ganga &amp; Teerthas Knowledge Base<br>
   Preserved from <a href="https://varanasitemples.in/">https://varanasitemples.in/</a> for offline field worship &bull; Har Har Gange!

@@ -4,11 +4,13 @@ import re
 import json
 import subprocess
 import sys
+import pdf_map_and_pins_builder as pmb
+import master_temples_coordinates as mtc
 
 sys.stdout.reconfigure(encoding='utf-8')
 
 print("=" * 65)
-print("BUILDING COMPLETE BHAIRAV TEMPLES MIRROR PDF")
+print("BUILDING COMPLETE BHAIRAV TEMPLES MIRROR PDF WITH GPS PINPOINTS & MAP")
 print("=" * 65)
 
 # Load extracted Bhairav articles
@@ -642,16 +644,21 @@ for item in bhairavs:
 
     # Append Digital Links Box if any
     digital_links = []
+    orig_gmap_url = None
     if matched_t and matched_t.get('google_maps_url') and 'Not provided' not in matched_t['google_maps_url']:
-        digital_links.append(f'<strong>Google Maps Coordinates:</strong> <a href="{matched_t["google_maps_url"]}" target="_blank">{matched_t["google_maps_url"][:90]}...</a>')
+        orig_gmap_url = matched_t['google_maps_url']
+        digital_links.append(f'<strong>Google Maps (Source Blog):</strong> <a href="{matched_t["google_maps_url"]}" target="_blank">{matched_t["google_maps_url"][:90]}...</a>')
     if matched_t and matched_t.get('youtube_url') and 'Not provided' not in matched_t['youtube_url']:
         digital_links.append(f'<strong>Temple Darshan Video:</strong> <a href="{matched_t["youtube_url"]}" target="_blank">{matched_t["youtube_url"]}</a>')
 
     for l_href, l_text in links:
         if 'youtube' in l_href and not any(l_href in dl for dl in digital_links):
             digital_links.append(f'<strong>YouTube Video:</strong> <a href="{l_href}" target="_blank">{l_href}</a>')
-        elif 'google.com/maps' in l_href and not any(l_href in dl for dl in digital_links):
-            digital_links.append(f'<strong>Google Maps:</strong> <a href="{l_href}" target="_blank">{l_href[:90]}...</a>')
+        elif 'google.com/maps' in l_href:
+            if not orig_gmap_url:
+                orig_gmap_url = l_href
+            if not any(l_href in dl for dl in digital_links):
+                digital_links.append(f'<strong>Google Maps:</strong> <a href="{l_href}" target="_blank">{l_href[:90]}...</a>')
 
     if digital_links:
         html_parts.append(f"""
@@ -659,6 +666,65 @@ for item in bhairavs:
   <div style="font-weight:700; color:#1e40af; margin-bottom:3pt;">&#128279; Digital Reference Links (Requires Internet):</div>
   {'<br>'.join(digital_links)}
 </div>
+""")
+
+    # Append Verified GPS Pinpoint Box
+    if article_id != 'hub':
+        custom_lm = matched_t['address'] if matched_t else None
+        gps_box = pmb.generate_gps_card_html(article_id, orig_map_url=orig_gmap_url, custom_landmark=custom_lm)
+        html_parts.append(gps_box)
+
+# Append Bal Bhairav Sanctum Card
+meta_bal = mtc.get_coords_and_meta('bal-bhairav')
+bal_gps_card = pmb.generate_gps_card_html('bal-bhairav', custom_landmark=meta_bal['landmark'])
+html_parts.append(f"""
+<div class="page-break"></div>
+<div class="article-header-banner">
+  <div class="article-number-badge">ADDITIONAL ASHTA BHAIRAVA COUNTERPART</div>
+  <div class="article-main-title">BAL BHAIRAV TEMPLE</div>
+  <div class="article-subtitle">{meta_bal['hindi']} &bull; {meta_bal['subtitle']}</div>
+</div>
+
+<div class="provenance-box">
+  <table>
+    <tr>
+      <td class="key">&#128205; Location / Mohalla:</td>
+      <td>Daranagar, near Kal Bhairav Temple complex, Varanasi</td>
+    </tr>
+    <tr>
+      <td class="key">&#128214; Scripture Authority:</td>
+      <td>Skanda Purana — Kashi Khand (Guardian of Children & Peaceful Family Life)</td>
+    </tr>
+  </table>
+</div>
+
+<div class="article-body-container">
+  <p>
+    <strong>Shri Bal Bhairav</strong> represents the youthful, benevolent, and highly protective manifestation of Lord Bhairava in Varanasi. Situated in the historic Daranagar locality close to the supreme Kotwal temple of Kaal Bhairav, this sacred shrine is especially venerated by parents and householders who pray for the divine longevity, physical protection, and spiritual well-being of young children.
+  </p>
+  <p>
+    Unlike the fearsome Ugra forms of Bhairava who wield punitive cosmic justice, Bal Bhairav showers gentle grace upon innocent devotees, dispelling nocturnal terrors, childhood sickness, and planetary doshas (such as evil eye / Balarishta). Pilgrims undertaking the complete Kashi Bhairav Yatra traditionally visit Bal Bhairav following darshan of Kaal Bhairav and Asitang Bhairav in northern Varanasi.
+  </p>
+</div>
+
+<div class="info-grid">
+  <div class="info-cell">
+    <div class="info-panel">
+      <h4>&#128205; Location & Approach Route</h4>
+      <p style="margin-bottom:4pt;"><strong>Address:</strong> Daranagar Mohalla, near Visheshwarganj, Varanasi</p>
+      <p style="margin-bottom:4pt;"><strong>Nearby Landmark:</strong> 250 meters walking distance north of Kaal Bhairav</p>
+      <p style="margin-bottom:0;"><strong>Geographic Zone:</strong> North-Central Kashi</p>
+    </div>
+  </div>
+  <div class="info-cell">
+    <div class="info-panel">
+      <h4>&#9200; Darshan & Pooja Arrangements</h4>
+      <p style="margin-bottom:4pt;"><strong>Timings:</strong> 06:00 AM &ndash; 11:30 AM &amp; 04:30 PM &ndash; 09:00 PM</p>
+      <p style="margin-bottom:0;"><strong>Pooja Details:</strong> Offerings of mustard oil, sweet batasha, and vermilion tilak</p>
+    </div>
+  </div>
+</div>
+{bal_gps_card}
 """)
 
 # =========================================================================
@@ -737,7 +803,38 @@ html_parts.append("""
     </tr>
   </tbody>
 </table>
+""")
 
+# =========================================================================
+# 5. GEOGRAPHIC PILGRIMAGE MAP & PIN DIRECTORY
+# =========================================================================
+bhairav_items = []
+for b in bhairavs:
+    if b['id'] == 'hub': continue
+    bhairav_items.append({
+        'key': b['id'],
+        'title': b['title'],
+        'canonical_name': b['title']
+    })
+
+# Add Bal Bhairav
+bhairav_items.append({
+    'key': 'bal-bhairav',
+    'title': 'Bal Bhairav Temple',
+    'canonical_name': 'Bal Bhairav'
+})
+
+map_appendix = pmb.generate_map_appendix_html(
+    base_dir,
+    "KASHI BHAIRAV TEMPLES",
+    "Ashta Bhairavas, Kaal Bhairav & Protective Sanctums",
+    "Map_Bhairav_Temples.svg",
+    bhairav_items,
+    banner_bg="linear-gradient(135deg, #311042 0%, #581c87 100%)"
+)
+html_parts.append(map_appendix)
+
+html_parts.append("""
 <div style="margin-top:24pt; border-top:1px solid #d1d5db; padding-top:10pt; font-size:8.5pt; color:#6b7280; text-align:center;">
   <strong>END OF KASHI BHAIRAV TEMPLES GUIDE</strong> &bull; Compiled from Authorised Website Archive: <a href="https://varanasitemples.in/">https://varanasitemples.in/</a>
 </div>

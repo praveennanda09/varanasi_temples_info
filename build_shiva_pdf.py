@@ -4,11 +4,13 @@ import re
 import json
 import subprocess
 import sys
+import pdf_map_and_pins_builder as pmb
+import master_temples_coordinates as mtc
 
 sys.stdout.reconfigure(encoding='utf-8')
 
 print("=" * 70)
-print("COMPILING KASHI MAIN SHIVA TEMPLES COMPLETE MIRROR HTML & PDF")
+print("COMPILING KASHI MAIN SHIVA TEMPLES COMPLETE MIRROR HTML & PDF WITH GPS & MAP")
 print("=" * 70)
 
 # Load extracted Shiva data
@@ -691,6 +693,11 @@ def render_temple_article(t, section_label):
       </div>
     """)
 
+    # Verified GPS Pinpoint Box
+    orig_gmap = t['google_maps_urls'][0] if t.get('google_maps_urls') else None
+    gps_box = pmb.generate_gps_card_html(t['title'], orig_map_url=orig_gmap, custom_landmark=t.get('location_text'))
+    parts.append(gps_box)
+
     # Images
     if t['images']:
         if len(t['images']) == 1:
@@ -901,7 +908,32 @@ html_parts.append("""
   <li><strong>Electronic Devices:</strong> Mobile phones, cameras, and leather items are strictly prohibited inside the inner security zone of the Kashi Vishwanath corridor; deposit them in official locker facilities before entering.</li>
   <li><strong>Water Quality:</strong> The sacred well water at Mrityunjay Mahadev (<em>Amrit Kupa</em>) is believed to possess medicinal and divine curative properties; pilgrims typically take a few drops as charanamrit.</li>
 </ul>
+""")
 
+# ==========================================
+# 9. GEOGRAPHIC PILGRIMAGE MAP & PIN DIRECTORY
+# ==========================================
+shiva_items = []
+for group in [main_shiva, jyotirlingas, landmarks]:
+    for s in group:
+        shiva_items.append({
+            'key': s['title'],
+            'title': s['title'],
+            'canonical_name': s['title'],
+            'landmark': s.get('location_text', '')[:100]
+        })
+
+map_appendix = pmb.generate_map_appendix_html(
+    base_dir,
+    "KASHI MAIN SHIVA TEMPLES & JYOTIRLINGAS",
+    "Supreme Avimukta Mahalingas & Kashi Jyotirlinga Counterparts",
+    "Map_Main_Shiva_Temples.svg",
+    shiva_items,
+    banner_bg="linear-gradient(135deg, #1e1b4b 0%, #1e40af 100%)"
+)
+html_parts.append(map_appendix)
+
+html_parts.append("""
 <div style="margin-top: 30pt; padding: 12pt; border: 1px solid #cbd5e1; border-radius: 6px; text-align: center; font-size: 8.5pt; color: #64748b;">
   <strong>Kashi Offline Pilgrimage Mirror Pack</strong> &bull; Complete Shiva Knowledge Base<br>
   Preserved from <a href="https://varanasitemples.in/">https://varanasitemples.in/</a> for offline field worship &bull; Har Har Mahadev!

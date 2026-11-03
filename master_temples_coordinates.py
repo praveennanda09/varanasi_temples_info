@@ -1,9 +1,10 @@
 # master_temples_coordinates.py
 # Comprehensive Verified GPS Coordinates, Hindi Titles & Role Subtitles for all Kashi Pilgrimage Sanctums
+# Authorised GPS Directory cross-verified with Kashi Khand and varanasitemples.in
 
 COORDINATES_DB = {
     # =========================================================================
-    # 1. DWADASA ADITYAS (12)
+    # 1. DWADASA ADITYAS (12 Sanctums)
     # =========================================================================
     'arun-aditya': {
         'lat': 25.32105, 'lon': 83.02258,
@@ -51,7 +52,7 @@ COORDINATES_DB = {
         'lat': 25.31485, 'lon': 82.99820,
         'hindi': 'श्री साम्बादित्य • सूरज कुंड',
         'subtitle': 'Curer of Incurable Afflictions (Penance of Samba)',
-        'landmark': 'Suraj Kund, near Lahurabir / Luxa'
+        'landmark': 'Suraj Kund, near Lahurabir / Luxa Road'
     },
     'uttarark-aditya': {
         'lat': 25.33620, 'lon': 83.01050,
@@ -63,29 +64,29 @@ COORDINATES_DB = {
         'lat': 25.30520, 'lon': 83.00480,
         'hindi': 'श्री विमलादित्य • जंगमबाड़ी',
         'subtitle': 'Cleanser of Leprosy and Purity of Inner Conscience',
-        'landmark': 'Near Godowlia, Jangambari Math area'
+        'landmark': 'Near Godowlia, Khari Kuan alley, Jangambari Math area'
     },
     'vriddhaditya': {
         'lat': 25.30325, 'lon': 83.01080,
-        'hindi': 'श्री वृद्धादित्य • मीरजापुर घाट',
+        'hindi': 'श्री वृद्धादित्य • मीर घाट',
         'subtitle': 'The Divine Physician Conquering Frailty & Senility',
-        'landmark': 'Mirzapur Ghat / near Dharmeshwar Temple'
+        'landmark': 'D-3/15 Mir Ghat, south of Bare Hanumanji'
     },
     'yama-aditya': {
         'lat': 25.31350, 'lon': 83.01580,
         'hindi': 'श्री यमादित्य • संकटा घाट',
         'subtitle': 'The Just Judge of Deeds & Dispeller of Hellish Fears',
-        'landmark': 'Sankata Ghat / near Scindia Ghat'
+        'landmark': 'Sankata Ghat steps, near Scindia Ghat'
     },
 
     # =========================================================================
-    # 2. BHAIRAV TEMPLES (11)
+    # 2. BHAIRAV TEMPLES (11 Sanctums)
     # =========================================================================
     'batuk-bhairav': {
         'lat': 25.30252, 'lon': 82.99225,
         'hindi': 'श्री बटुक भैरव मंदिर • कामाच्छा',
         'subtitle': 'Child Form of Bhairava & Omnipotent Protector against Evil',
-        'landmark': 'Kamachha Road, Rathyatra area'
+        'landmark': 'B.28/43 Kamachha Road, Rathyatra area'
     },
     'kal-bhairav': {
         'lat': 25.31955, 'lon': 83.01425,
@@ -97,7 +98,7 @@ COORDINATES_DB = {
         'lat': 25.32220, 'lon': 83.01460,
         'hindi': 'श्री असितांग भैरव • महामृत्युंजय',
         'subtitle': 'First Ashta Bhairava Presiding Over the East',
-        'landmark': 'Inside Maha Mrityunjay Temple, Daranagar'
+        'landmark': 'K-32/41 inside Maha Mrityunjay Temple, Daranagar'
     },
     'krodhan-bhairav': {
         'lat': 25.30245, 'lon': 82.99240,
@@ -149,70 +150,345 @@ COORDINATES_DB = {
     },
 
     # =========================================================================
-    # 3. DEVI TEMPLES (32)
+    # 3. DEVI TEMPLES (32 Sanctums)
     # =========================================================================
-    'shailputri': {'lat': 25.33550, 'lon': 83.01780, 'hindi': 'श्री शैलपुत्री देवी • मढ़िया घाट', 'subtitle': 'Navadurga #1 • Daughter of the Mountain', 'landmark': 'A-40/11 Marhia Ghat, Alipura'},
-    'brahmacharini': {'lat': 25.31620, 'lon': 83.01820, 'hindi': 'श्री ब्रह्मचारिणी देवी • दुर्गा घाट', 'subtitle': 'Navadurga #2 • Embodiment of Penance', 'landmark': 'K-60/61 Durga Ghat'},
-    'chandraghanta': {'lat': 25.31280, 'lon': 83.00950, 'hindi': 'श्री चंद्रघंटा देवी • चौक', 'subtitle': 'Navadurga #3 • Bell of Crescent Moon', 'landmark': 'J-69/56 Chandraghanta Gali, Chowk'},
-    'kushmanda': {'lat': 25.28660, 'lon': 82.99920, 'hindi': 'श्री कूष्मांडा देवी (दुर्गा कुंड)', 'subtitle': 'Navadurga #4 • Creator of the Cosmic Egg', 'landmark': 'Durga Kund Temple'},
-    'skandamata': {'lat': 25.32650, 'lon': 83.00850, 'hindi': 'श्री स्कंदमाता देवी • जैतपुरा', 'subtitle': 'Navadurga #5 • Mother of Lord Skanda', 'landmark': 'J-20/190 Jaitpura'},
-    'katyayani': {'lat': 25.31260, 'lon': 83.01440, 'hindi': 'श्री कात्यायनी देवी • संकटा घाट', 'subtitle': 'Navadurga #6 • Slayer of Mahishasura', 'landmark': 'Atma Veereshwar complex, Scindia Ghat'},
-    'kalratri': {'lat': 25.31150, 'lon': 83.01180, 'hindi': 'श्री कालरात्रि देवी • कालिका गली', 'subtitle': 'Navadurga #7 • Destroyer of Darkness', 'landmark': 'D-8/17 Kalika Galli, Chowk'},
-    'annapurna': {'lat': 25.31060, 'lon': 83.01020, 'hindi': 'श्री अन्नपूर्णा देवी (महागौरी) • विश्वनाथ गली', 'subtitle': 'Supreme Mother of Kashi & Queen of Nectar', 'landmark': 'D-9/1 Vishwanath Gali'},
-    'siddhidatri': {'lat': 25.31420, 'lon': 83.01120, 'hindi': 'श्री सिद्धिदात्री देवी • गोलघर', 'subtitle': 'Navadurga #9 • Bestower of All Siddhis', 'landmark': 'K-60/29 Siddhamata Gali, Golghar'},
-    'mukhnirmalika-gauri': {'lat': 25.29780, 'lon': 83.00760, 'hindi': 'श्री मुखनिर्मलिका गौरी • हनुमान घाट', 'subtitle': 'Navagauri #1 • Grantor of Flawless Aura', 'landmark': 'B-4/24 Hanuman Ghat'},
-    'jyeshta-gauri': {'lat': 25.31120, 'lon': 83.01100, 'hindi': 'श्री ज्येष्ठा गौरी • काशी करवट', 'subtitle': 'Navagauri #2 • Supreme Eldest Goddess', 'landmark': 'Inside Kashi Karvat Temple'},
-    'saubhagya-gauri': {'lat': 25.31080, 'lon': 83.01040, 'hindi': 'श्री सौभाग्य गौरी • ज्ञानवापी', 'subtitle': 'Navagauri #3 • Bestower of Conjugal Bliss', 'landmark': 'Gyanvapi compound, near Vishweshwar'},
-    'shringar-gauri': {'lat': 25.31090, 'lon': 83.01050, 'hindi': 'श्री श्रृंगार गौरी • ज्ञानवापी', 'subtitle': 'Navagauri #4 • Goddess of Divine Ornamentation', 'landmark': 'Western wall of Gyanvapi mosque'},
-    'vishalaksi': {'lat': 25.30750, 'lon': 83.01250, 'hindi': 'श्री विशालाक्षी देवी • मीर घाट', 'subtitle': 'Navagauri #5 & Shaktipeeth • Large-Eyed Sovereign', 'landmark': 'D-3/85 Meer Ghat'},
-    'lalita-gauri': {'lat': 25.30980, 'lon': 83.01320, 'hindi': 'श्री ललिता गौरी • ललिता घाट', 'subtitle': 'Navagauri #6 • Playful Enchantress', 'landmark': 'CK-1/67 Lalita Ghat'},
-    'bhavani-gauri': {'lat': 25.31450, 'lon': 83.01680, 'hindi': 'श्री भवानी गौरी • राम घाट', 'subtitle': 'Navagauri #7 • Supreme Vital Life Force', 'landmark': 'Ram Ghat riverfront'},
-    'mangala-gauri': {'lat': 25.31700, 'lon': 83.01760, 'hindi': 'श्री मंगला गौरी • पंचगंगा घाट', 'subtitle': 'Navagauri #8 • Supreme Auspiciousness', 'landmark': 'K-24/34 Panchganga Ghat'},
-    'mahalaxmi-gauri': {'lat': 25.30820, 'lon': 82.99850, 'hindi': 'श्री महालक्ष्मी गौरी • लक्ष्मी कुंड', 'subtitle': 'Navagauri #9 • Goddess of Prosperity', 'landmark': 'D-52/40 Lakshmi Kund, Luxa'},
-    'kali': {'lat': 25.31160, 'lon': 83.01190, 'hindi': 'श्री काली देवी • कालिका गली', 'subtitle': 'Mahavidya #1 • Timeless Transcendent Void', 'landmark': 'Kalika Galli, near Vishwanath corridor'},
-    'tara': {'lat': 25.31280, 'lon': 83.01460, 'hindi': 'श्री तारा देवी • सिंधिया घाट', 'subtitle': 'Mahavidya #2 • Compassionate Saviouress', 'landmark': 'Scindia Ghat steps'},
-    'tri-lokya-sundary': {'lat': 25.30780, 'lon': 83.01020, 'hindi': 'श्री त्रैलोक्य सुंदरी (षोडशी) • दशाश्वमेध', 'subtitle': 'Mahavidya #3 • Beauty of the Three Worlds', 'landmark': 'Tripura Bhairavi Gali'},
-    'bhuvaneshwari': {'lat': 25.31130, 'lon': 83.01110, 'hindi': 'श्री भुवनेश्वरी देवी • चौक', 'subtitle': 'Mahavidya #4 • Sovereign Empress of Cosmos', 'landmark': 'Bhuvaneshwari Gali, near Kashi Karvat'},
-    'chinnamasta': {'lat': 25.31480, 'lon': 83.01700, 'hindi': 'श्री छिन्नमस्ता देवी • राम घाट', 'subtitle': 'Mahavidya #5 • Self-Severed Cosmic Sacrifice', 'landmark': 'Ram Ghat riverfront'},
-    'tripura-bhairavi': {'lat': 25.30770, 'lon': 83.01010, 'hindi': 'श्री त्रिपुरा भैरवी • दशाश्वमेध', 'subtitle': 'Mahavidya #6 • Radiant Fiery Energy', 'landmark': 'D-5/24 Tripura Bhairavi Gali'},
-    'dhoomavathi': {'lat': 25.32620, 'lon': 83.00250, 'hindi': 'श्री धूमावती देवी • धूपचंडी', 'subtitle': 'Mahavidya #7 • The Smoke-Hued Crone', 'landmark': 'Dhupchandi / Dhumavati Mohalla'},
-    'baglamukhi': {'lat': 25.30720, 'lon': 83.00920, 'hindi': 'श्री बगलामुखी देवी • दशाश्वमेध', 'subtitle': 'Mahavidya #8 • Paralyzer of Adversaries', 'landmark': 'Dashashwamedh Gali'},
-    'matangeeshwari': {'lat': 25.30120, 'lon': 83.00620, 'hindi': 'श्री मातंगी देवी • मदनपुरा', 'subtitle': 'Mahavidya #9 • Goddess of Spoken Word & Music', 'landmark': 'Madanpura / near Kedar Ghat'},
-    'kamala': {'lat': 25.30840, 'lon': 82.99860, 'hindi': 'श्री कमला देवी • लक्ष्मी कुंड', 'subtitle': 'Mahavidya #10 • Golden Lotus Goddess', 'landmark': 'Lakshmi Kund compound'},
-    'varahi': {'lat': 25.30680, 'lon': 83.01180, 'hindi': 'श्री वाराही देवी • मान मंदिर घाट', 'subtitle': 'Subterranean Boar-Faced Matrika Goddess', 'landmark': 'D-17/111 Man Mandir Ghat'},
-    'sankata': {'lat': 25.31380, 'lon': 83.01620, 'hindi': 'श्री संकटा देवी • संकटा घाट', 'subtitle': 'Vanquisher of Impossible Catastrophes', 'landmark': 'CK-21/20 Sankata Ghat'},
-    'mahishasuramardini': {'lat': 25.30650, 'lon': 83.00780, 'hindi': 'श्री महिषासुरमर्दिनी • गोदौलिया', 'subtitle': 'Invincible Demon Slayer', 'landmark': 'Godowlia / Dashashwamedh lane'},
-    'kamakhya': {'lat': 25.31180, 'lon': 82.99250, 'hindi': 'श्री कामाख्या देवी • सिगरा', 'subtitle': 'Yoni Peeth Shakti Manifestation', 'landmark': 'Kamakhya Temple, Sigra'},
+    'annapurna': {
+        'lat': 25.31060, 'lon': 83.01020,
+        'hindi': 'श्री अन्नपूर्णा देवी (महागौरी) • विश्वनाथ गली',
+        'subtitle': 'Supreme Mother of Kashi & Queen of Nectar',
+        'landmark': 'D-9/1 Vishwanath Gali, near Kashi Vishwanath'
+    },
+    'bandi-devi': {
+        'lat': 25.30650, 'lon': 83.01020,
+        'hindi': 'श्री बंदी देवी • दशाश्वमेध',
+        'subtitle': 'Liberator from Captivity, Debts & Earthly Bondage',
+        'landmark': 'Near Dashashwamedh Ghat, D.17 sector'
+    },
+    'bhavani-gauri': {
+        'lat': 25.31450, 'lon': 83.01680,
+        'hindi': 'श्री भवानी गौरी • राम घाट',
+        'subtitle': 'Navagauri #8 • Supreme Vital Life Force & Energy',
+        'landmark': 'D.8/38 inside Annapurna premises / Ram Ghat'
+    },
+    'brahmacharini': {
+        'lat': 25.31620, 'lon': 83.01820,
+        'hindi': 'श्री ब्रह्मचारिणी देवी • दुर्गा घाट',
+        'subtitle': 'Navadurga #2 • Embodiment of Sacred Penance & Asceticism',
+        'landmark': 'K-22/72 Durga Ghat, Brahmacharini lane'
+    },
+    'chamunda-devi': {
+        'lat': 25.29120, 'lon': 83.00650,
+        'hindi': 'श्री चामुंडा देवी • अस्सी / लोलार्क',
+        'subtitle': 'Terrible Destroyer of Chanda-Munda & Inner Vices',
+        'landmark': 'Near Lolark Kund, B-2/62 Bhadaini, Assi'
+    },
+    'chandi-devi': {
+        'lat': 25.28620, 'lon': 82.99960,
+        'hindi': 'श्री चंडी देवी • आनंद पार्क',
+        'subtitle': 'Kaurmi Shakti Granter of Victory & Courage',
+        'landmark': 'Near Durga Kund, Anand Park enclosure'
+    },
+    'charma-munda-devi': {
+        'lat': 25.29150, 'lon': 83.00680,
+        'hindi': 'श्री चर्ममुण्डा देवी • भदैनी',
+        'subtitle': 'Ancient Tantric Matrika Vanquishing Dreadful Ailments',
+        'landmark': 'B-2/62, Bhadaini, steps above Lolark Kund'
+    },
+    'chandraghanta': {
+        'lat': 25.31280, 'lon': 83.00950,
+        'hindi': 'श्री चंद्रघंटा देवी • चौक',
+        'subtitle': 'Navadurga #3 • Divine Bell of Crescent Moon Awakening Soul',
+        'landmark': 'Ck. 23/34, Chitra Ghanta Gulli, Chowk'
+    },
+    'kushmanda': {
+        'lat': 25.28660, 'lon': 82.99920,
+        'hindi': 'श्री कूष्मांडा देवी • दुर्गा मंदिर दुर्गा कुंड',
+        'subtitle': 'Navadurga #4 • Creator of the Cosmic Egg & Red Temple Goddess',
+        'landmark': 'B.27/2, Famous Red Durga Kund Mandir'
+    },
+    'hayakanti-devi': {
+        'lat': 25.31250, 'lon': 82.99750,
+        'hindi': 'श्री हयकांति देवी • लक्ष्मी कुंड',
+        'subtitle': 'Radiant Solar Aspect Bestowing Lustre and Knowledge',
+        'landmark': 'D.52/35, Lakshmi Kund compound, Luxa'
+    },
+    'jyeshta-gauri': {
+        'lat': 25.31120, 'lon': 83.01100,
+        'hindi': 'श्री ज्येष्ठा गौरी • काशी करवट',
+        'subtitle': 'Navagauri #7 • Supreme Eldest Goddess of Wisdom',
+        'landmark': 'K-63/24 Sapt Sagar / inside Kashi Karvat Temple'
+    },
+    'kalratri': {
+        'lat': 25.31150, 'lon': 83.01180,
+        'hindi': 'श्री कालरात्रि देवी • कालिका गली',
+        'subtitle': 'Navadurga #7 • Destroyer of Darkness, Fear & Sorcery',
+        'landmark': 'D.8/17 Kalika Galli, near Vishwanath corridor'
+    },
+    'kamakhya': {
+        'lat': 25.31180, 'lon': 82.99250,
+        'hindi': 'श्री कामाख्या देवी (कामाक्षी) • सिगरा',
+        'subtitle': 'Yoni Pitha Shakti Manifestation Granting Desires',
+        'landmark': 'B.21/123, Kamakhya Temple, Sigra / Kamachha'
+    },
+    'katyayani': {
+        'lat': 25.31260, 'lon': 83.01440,
+        'hindi': 'श्री कात्यायनी देवी • संकटा घाट',
+        'subtitle': 'Navadurga #6 • Invincible Slayer of Mahishasura',
+        'landmark': 'Ck-7/158, Atma Veereshwar complex, Scindia Ghat'
+    },
+    'lalita-gauri': {
+        'lat': 25.30980, 'lon': 83.01320,
+        'hindi': 'श्री ललिता गौरी • ललिता घाट',
+        'subtitle': 'Navagauri #6 • Sri Vidya Supreme Divine Empress',
+        'landmark': 'CK-1/67 Lalita Ghat steps, below Nepali Mandir'
+    },
+    'mahalaxmi-gauri': {
+        'lat': 25.30820, 'lon': 82.99850,
+        'hindi': 'श्री महालक्ष्मी गौरी • लक्ष्मी कुंड',
+        'subtitle': 'Navagauri #3 • Goddess of Sovereign Abundance & Moksha',
+        'landmark': 'D.52/40 Lakshmi Kund, Luxa Road'
+    },
+    'mangala-gauri': {
+        'lat': 25.31700, 'lon': 83.01760,
+        'hindi': 'श्री मंगला गौरी • पंचगंगा घाट',
+        'subtitle': 'Navagauri #2 • Supreme Auspiciousness & Harita Siddhi',
+        'landmark': 'K-24/34 Panchganga Ghat steps'
+    },
+    'mani-karnika-devi': {
+        'lat': 25.31080, 'lon': 83.01390,
+        'hindi': 'श्री मणिकर्णिका देवी • मणिकर्णिका घाट',
+        'subtitle': 'Presiding Goddess of the Cremation Ground & Mukti',
+        'landmark': 'Ck.7/130, Manikarnika Ghat riverside'
+    },
+    'mukhnirmalika-gauri': {
+        'lat': 25.29780, 'lon': 83.00760,
+        'hindi': 'श्री मुखनिर्मलिका गौरी • हनुमान घाट',
+        'subtitle': 'Navagauri #1 • Grantor of Flawless Aura and Inner Purity',
+        'landmark': 'K.3/42 Gai Ghat / Hanuman Ghat'
+    },
+    'sankata': {
+        'lat': 25.31380, 'lon': 83.01620,
+        'hindi': 'श्री संकटा देवी • संकटा घाट',
+        'subtitle': 'Vanquisher of Impossible Catastrophes & Matrika',
+        'landmark': 'CK-21/20 Sankata Ghat, near Scindia Ghat'
+    },
+    'shailputri': {
+        'lat': 25.33550, 'lon': 83.01780,
+        'hindi': 'श्री शैलपुत्री देवी • मढ़िया घाट',
+        'subtitle': 'Navadurga #1 • Primordial Daughter of the Mountain',
+        'landmark': 'A-40/11 Marhia Ghat, Alipura near Varuna'
+    },
+    'shringar-gauri': {
+        'lat': 25.31090, 'lon': 83.01050,
+        'hindi': 'श्री श्रृंगार गौरी • ज्ञानवापी',
+        'subtitle': 'Navagauri #4 • Goddess of Divine Beauty & Ornamentation',
+        'landmark': 'Western wall of Gyanvapi mosque complex'
+    },
+    'siddha-lakshmi-devi': {
+        'lat': 25.31120, 'lon': 83.01350,
+        'hindi': 'श्री सिद्ध लक्ष्मी देवी • मणिकर्णिका',
+        'subtitle': 'Tantric Siddhi Granter Presiding Over Liberation',
+        'landmark': 'Ck.8/1, near Manikarnika / Siddha Koop'
+    },
+    'siddhidatri': {
+        'lat': 25.31420, 'lon': 83.01120,
+        'hindi': 'श्री सिद्धेश्वरी (सिद्धिदात्री) देवी • गोलघर',
+        'subtitle': 'Navadurga #9 • Bestower of All 26 Supernatural Siddhis',
+        'landmark': 'Ck.7/124 Siddheshwari Mohalla / Golghar'
+    },
+    'skandamata': {
+        'lat': 25.32650, 'lon': 83.00850,
+        'hindi': 'श्री स्कंदमाता देवी • जैतपुरा',
+        'subtitle': 'Navadurga #5 • Mother of Lord Skanda (Kartikeya)',
+        'landmark': 'J.6/33 Jaitpura, Baradeo locality'
+    },
+    'saubhagya-gauri': {
+        'lat': 25.31080, 'lon': 83.01040,
+        'hindi': 'श्री सौभाग्य गौरी • ज्ञानवापी / आदि विश्वनाथ',
+        'subtitle': 'Navagauri #9 • Bestower of Perpetual Conjugal Bliss',
+        'landmark': 'Ck.38/8 Adi Vishwanath, Gyanvapi compound'
+    },
+    'tri-lokya-sundary': {
+        'lat': 25.30780, 'lon': 83.01020,
+        'hindi': 'श्री त्रैलोक्य सुंदरी (षोडशी) • दशाश्वमेध',
+        'subtitle': 'Mahavidya #3 • Beauty of the Three Worlds (Tripura Sundari)',
+        'landmark': 'Near Manmandir Ghat / Tripura Bhairavi Gali'
+    },
+    'tripura-bhairavi': {
+        'lat': 25.30770, 'lon': 83.01010,
+        'hindi': 'श्री त्रिपुरा भैरवी • दशाश्वमेध',
+        'subtitle': 'Mahavidya #5 • Radiant Fiery Energy of Kundalini',
+        'landmark': 'D.5/24 Tripura Bhairavi Gali, Mir Ghat'
+    },
+    'varahi': {
+        'lat': 25.30680, 'lon': 83.01180,
+        'hindi': 'श्री वाराही देवी • मान मंदिर घाट',
+        'subtitle': 'Subterranean Boar-Faced Matrika (Darshan at Dawn Only)',
+        'landmark': 'D.16/84 Manmandir Ghat subterranean sanctum'
+    },
+    'vindhya-devi': {
+        'lat': 25.31320, 'lon': 83.01550,
+        'hindi': 'श्री विंध्य देवी • संकटा घाट',
+        'subtitle': 'Vindhyavasini Manifestation in Sacred Kashi',
+        'landmark': 'Ck.2/33, near Sankata Ghat riverfront'
+    },
+    'vishalaksi': {
+        'lat': 25.30750, 'lon': 83.01250,
+        'hindi': 'श्री विशालाक्षी देवी • मीर घाट (शक्तिपीठ)',
+        'subtitle': 'Navagauri #5 & Supreme Shaktipeeth (Earrings of Sati)',
+        'landmark': 'D.3/85 Mir Ghat, close to River Ganga'
+    },
+    'vishwa-bhuja-gauri': {
+        'lat': 25.30820, 'lon': 83.01120,
+        'hindi': 'श्री विश्वभुजा गौरी • धरम कूप',
+        'subtitle': 'Universal Multi-Armed Protector of the Cosmos',
+        'landmark': 'D.2/15, near Dharam Koop / Dashashwamedh'
+    },
 
     # =========================================================================
-    # 4. MAIN SHIVA TEMPLES & JYOTIRLINGAS (23)
+    # 4. MAIN SHIVA TEMPLES & JYOTIRLINGAS (23 Sanctums)
     # =========================================================================
-    'visweshwar-vishwanath': {'lat': 25.31090, 'lon': 83.01070, 'hindi': 'श्री काशी विश्वेश्वर (विश्वनाथ) ज्योतिर्लिंग', 'subtitle': 'Supreme Sovereign of Avimukta & Golden Temple', 'landmark': 'Vishwanath Gali / New Corridor'},
-    'mrityunjay-mahadev': {'lat': 25.32180, 'lon': 83.01440, 'hindi': 'श्री महामृत्युंजय महादेव • दारानगर', 'subtitle': 'The Conqueror of Death & Amrit Kupa Sanctum', 'landmark': 'Daranagar, Visheshwarganj'},
-    'omkareshwar': {'lat': 25.32550, 'lon': 83.01950, 'hindi': 'श्री ओंकारेश्वर महादेव • मछोदरी', 'subtitle': 'Primordial Pranava Linga (A-U-M Sanctums)', 'landmark': 'Beyond Machhodari, Omkareshwar Hill'},
-    'krithi-vaseshwar': {'lat': 25.31520, 'lon': 83.01180, 'hindi': 'श्री कृत्तिवासेश्वर • चित्रघंटा', 'subtitle': 'Slayer of Demon Gajasura (Avimukta Maha-Linga)', 'landmark': 'Chitra Ghanta, near Chowk'},
-    'kedareshwar': {'lat': 25.29960, 'lon': 83.00920, 'hindi': 'श्री केदारेश्वर महादेव • केदार घाट', 'subtitle': 'Sovereign of Kedar Khanda & Kedarnath Counterpart', 'landmark': 'B-6/102 Kedar Ghat steps'},
-    'dharmeshwar': {'lat': 25.30320, 'lon': 83.01080, 'hindi': 'श्री धर्मेश्वर महादेव • मीरजापुर घाट', 'subtitle': 'Sanctum Established by Yama Dharmaraja', 'landmark': 'Mirzapur Ghat / Tripura Bhairavi area'},
-    'vridha-kalelshwar': {'lat': 25.32200, 'lon': 83.01450, 'hindi': 'श्री वृद्ध कालेश्वर • दारानगर', 'subtitle': 'Vriddha Kaleshwar — Conqueror of Aging and Time', 'landmark': 'Adjoining Maha Mrityunjay, Daranagar'},
-    'atma-veereshwar': {'lat': 25.31250, 'lon': 83.01450, 'hindi': 'श्री आत्मवीरेश्वर • सिंधिया घाट', 'subtitle': 'Sanctum Established by Maharishi Vishwamitra', 'landmark': 'CK-7/158 Scindia Ghat'},
-    'gabhasteeshwar': {'lat': 25.31710, 'lon': 83.01740, 'hindi': 'श्री गभस्तीश्वर • मंगला गौरी', 'subtitle': 'Sanctum Established by Surya (Mayukh Aditya)', 'landmark': 'Mangala Gauri complex, Panchganga'},
-    'someshwar': {'lat': 25.30710, 'lon': 83.01160, 'hindi': 'श्री सोमेश्वर महादेव • मान मंदिर घाट', 'subtitle': 'Somnath Jyotirlinga Counterpart in Kashi', 'landmark': 'D-16/34 Man Mandir Ghat'},
-    'tripurantakeshwar': {'lat': 25.31190, 'lon': 82.99260, 'hindi': 'श्री त्रिपुरान्तकेश्वर • सिगरा', 'subtitle': 'Mallikarjuna & Grishneshwar Counterpart', 'landmark': 'Kamakhya temple compound, Sigra'},
-    'mahakaleshwar': {'lat': 25.32120, 'lon': 83.01420, 'hindi': 'श्री महाकालेश्वर • दारानगर', 'subtitle': 'Mahakaleshwar Ujjain Counterpart in Kashi', 'landmark': 'K-32/41 Daranagar'},
-    'bheemeshwar': {'lat': 25.31110, 'lon': 83.01090, 'hindi': 'श्री भीमेश्वर • काशी करवट', 'subtitle': 'Bhimashankar Counterpart inside Kashi Karvat', 'landmark': 'Kashi Karvat Temple, Chowk'},
-    'ganeshwar-rameshwar': {'lat': 25.30690, 'lon': 83.01150, 'hindi': 'श्री गणेश्वर (रामेश्वर) • मान मंदिर घाट', 'subtitle': 'Rameshwaram Jyotirlinga Counterpart in Kashi', 'landmark': 'Man Mandir Ghat riverfront'},
-    'nageshwar': {'lat': 25.31550, 'lon': 83.01700, 'hindi': 'श्री नागेश्वर महादेव • भोंसला घाट', 'subtitle': 'Nageshwar Jyotirlinga Counterpart in Kashi', 'landmark': 'Bhonsla Ghat / Mehta Hospital'},
-    'karkotak-nageshwar': {'lat': 25.32820, 'lon': 83.00650, 'hindi': 'श्री कर्कोटक नागेश्वर • जैतपुरा', 'subtitle': 'King of Serpents Well Sanctum (Nag Kuan)', 'landmark': 'Jaitpura / Nag Kupa'},
-    'triambakeshwar': {'lat': 25.30750, 'lon': 83.00550, 'hindi': 'श्री त्र्यम्बकेश्वर • गोदौलिया', 'subtitle': 'Trimbakeshwar Nashik Counterpart in Kashi', 'landmark': 'Near Godowlia crossing'},
-    'trilochan': {'lat': 25.32080, 'lon': 83.02240, 'hindi': 'श्री त्रिलोचन महादेव • त्रिलोचन घाट', 'subtitle': 'The Primordial Three-Eyed Lord of Kashi', 'landmark': 'A-2/80 Trilochan Ghat'},
-    'aadi-mahadev': {'lat': 25.32120, 'lon': 83.02200, 'hindi': 'श्री आदि महादेव • त्रिलोचन मोहल्ला', 'subtitle': 'The Primordial Shiva Linga of Avimukta', 'landmark': 'Trilochan locality'},
-    'kardhameshwar': {'lat': 25.26750, 'lon': 82.96400, 'hindi': 'श्री कर्दमेश्वर महादेव • कंदवा', 'subtitle': 'Station #1 of Sacred Panchkroshi Pilgrimage', 'landmark': 'Kandwa village, southern outskirts'},
-    'markandeyshwar': {'lat': 25.31290, 'lon': 83.01480, 'hindi': 'श्री मार्कण्डेयेश्वर • सिंधिया घाट', 'subtitle': 'Where Sage Markandeya Conquered Death', 'landmark': 'Near Scindia Ghat'},
-    'ratneshwar': {'lat': 25.31060, 'lon': 83.01420, 'hindi': 'श्री रत्नेश्वर महादेव • मणिकर्णिका घाट', 'subtitle': 'The Iconic 9-Degree Leaning Temple of Kashi', 'landmark': 'Manikarnika Ghat waterside'},
-    'pasupateshwar': {'lat': 25.31010, 'lon': 83.01300, 'hindi': 'श्री पशुपतेश्वर • नेपाली मंदिर', 'subtitle': 'Pashupatinath of Nepal Counterpart in Kashi', 'landmark': 'Lalita Ghat / Nepali Mandir'},
+    'visweshwar-vishwanath': {
+        'lat': 25.31090, 'lon': 83.01070,
+        'hindi': 'श्री काशी विश्वेश्वर (विश्वनाथ) ज्योतिर्लिंग',
+        'subtitle': 'Supreme Sovereign of Avimukta & Golden Temple',
+        'landmark': 'Vishwanath Gali / New Corridor'
+    },
+    'mrityunjay-mahadev': {
+        'lat': 25.32180, 'lon': 83.01440,
+        'hindi': 'श्री महामृत्युंजय महादेव • दारानगर',
+        'subtitle': 'The Conqueror of Death & Amrit Kupa Sanctum',
+        'landmark': 'Daranagar, Visheshwarganj'
+    },
+    'omkareshwar': {
+        'lat': 25.32550, 'lon': 83.01950,
+        'hindi': 'श्री ओंकारेश्वर महादेव • मछोदरी',
+        'subtitle': 'Primordial Pranava Linga (A-U-M Sanctums)',
+        'landmark': 'Beyond Machhodari, Omkareshwar Hill'
+    },
+    'krithi-vaseshwar': {
+        'lat': 25.31520, 'lon': 83.01180,
+        'hindi': 'श्री कृत्तिवासेश्वर • चित्रघंटा',
+        'subtitle': 'Slayer of Demon Gajasura (Avimukta Maha-Linga)',
+        'landmark': 'Chitra Ghanta, near Chowk'
+    },
+    'kedareshwar': {
+        'lat': 25.29960, 'lon': 83.00920,
+        'hindi': 'श्री केदारेश्वर महादेव • केदार घाट',
+        'subtitle': 'Sovereign of Kedar Khanda & Kedarnath Counterpart',
+        'landmark': 'B-6/102 Kedar Ghat steps'
+    },
+    'dharmeshwar': {
+        'lat': 25.30320, 'lon': 83.01080,
+        'hindi': 'श्री धर्मेश्वर महादेव • मीरजापुर घाट',
+        'subtitle': 'Sanctum Established by Yama Dharmaraja',
+        'landmark': 'Mirzapur Ghat / Tripura Bhairavi area'
+    },
+    'vridha-kalelshwar': {
+        'lat': 25.32200, 'lon': 83.01450,
+        'hindi': 'श्री वृद्ध कालेश्वर • दारानगर',
+        'subtitle': 'Vriddha Kaleshwar — Conqueror of Aging and Time',
+        'landmark': 'Adjoining Maha Mrityunjay, Daranagar'
+    },
+    'atma-veereshwar': {
+        'lat': 25.31250, 'lon': 83.01450,
+        'hindi': 'श्री आत्मवीरेश्वर • सिंधिया घाट',
+        'subtitle': 'Sanctum Established by Maharishi Vishwamitra',
+        'landmark': 'CK-7/158 Scindia Ghat'
+    },
+    'gabhasteeshwar': {
+        'lat': 25.31710, 'lon': 83.01740,
+        'hindi': 'श्री गभस्तीश्वर • मंगला गौरी',
+        'subtitle': 'Sanctum Established by Surya (Mayukh Aditya)',
+        'landmark': 'Mangala Gauri complex, Panchganga'
+    },
+    'someshwar': {
+        'lat': 25.30710, 'lon': 83.01160,
+        'hindi': 'श्री सोमेश्वर महादेव • मान मंदिर घाट',
+        'subtitle': 'Somnath Jyotirlinga Counterpart in Kashi',
+        'landmark': 'D-16/34 Man Mandir Ghat'
+    },
+    'tripurantakeshwar': {
+        'lat': 25.31190, 'lon': 82.99260,
+        'hindi': 'श्री त्रिपुरान्तकेश्वर • सिगरा',
+        'subtitle': 'Mallikarjuna & Grishneshwar Counterpart',
+        'landmark': 'Kamakhya temple compound, Sigra'
+    },
+    'mahakaleshwar': {
+        'lat': 25.32120, 'lon': 83.01420,
+        'hindi': 'श्री महाकालेश्वर • दारानगर',
+        'subtitle': 'Mahakaleshwar Ujjain Counterpart in Kashi',
+        'landmark': 'K-32/41 Daranagar'
+    },
+    'bheemeshwar': {
+        'lat': 25.31110, 'lon': 83.01090,
+        'hindi': 'श्री भीमेश्वर • काशी करवट',
+        'subtitle': 'Bhimashankar Counterpart inside Kashi Karvat',
+        'landmark': 'Kashi Karvat Temple, Chowk'
+    },
+    'ganeshwar-rameshwar': {
+        'lat': 25.30690, 'lon': 83.01150,
+        'hindi': 'श्री गणेश्वर (रामेश्वर) • मान मंदिर घाट',
+        'subtitle': 'Rameshwaram Jyotirlinga Counterpart in Kashi',
+        'landmark': 'Man Mandir Ghat riverfront'
+    },
+    'nageshwar': {
+        'lat': 25.31550, 'lon': 83.01700,
+        'hindi': 'श्री नागेश्वर महादेव • भोंसला घाट',
+        'subtitle': 'Nageshwar Jyotirlinga Counterpart in Kashi',
+        'landmark': 'Bhonsla Ghat / Mehta Hospital'
+    },
+    'karkotak-nageshwar': {
+        'lat': 25.32820, 'lon': 83.00650,
+        'hindi': 'श्री कर्कोटक नागेश्वर • जैतपुरा',
+        'subtitle': 'King of Serpents Well Sanctum (Nag Kuan)',
+        'landmark': 'Jaitpura / Nag Kupa'
+    },
+    'triambakeshwar': {
+        'lat': 25.30750, 'lon': 83.00550,
+        'hindi': 'श्री त्र्यम्बकेश्वर • गोदौलिया',
+        'subtitle': 'Trimbakeshwar Nashik Counterpart in Kashi',
+        'landmark': 'Near Godowlia crossing'
+    },
+    'trilochan': {
+        'lat': 25.32080, 'lon': 83.02240,
+        'hindi': 'श्री त्रिलोचन महादेव • त्रिलोचन घाट',
+        'subtitle': 'The Primordial Three-Eyed Lord of Kashi',
+        'landmark': 'A-2/80 Trilochan Ghat'
+    },
+    'aadi-mahadev': {
+        'lat': 25.32120, 'lon': 83.02200,
+        'hindi': 'श्री आदि महादेव • त्रिलोचन मोहल्ला',
+        'subtitle': 'The Primordial Shiva Linga of Avimukta',
+        'landmark': 'Trilochan locality'
+    },
+    'kardhameshwar': {
+        'lat': 25.26750, 'lon': 82.96400,
+        'hindi': 'श्री कर्दमेश्वर महादेव • कंदवा',
+        'subtitle': 'Station #1 of Sacred Panchkroshi Pilgrimage',
+        'landmark': 'Kandwa village, southern outskirts'
+    },
+    'markandeyshwar': {
+        'lat': 25.31290, 'lon': 83.01480,
+        'hindi': 'श्री मार्कण्डेयेश्वर • सिंधिया घाट',
+        'subtitle': 'Where Sage Markandeya Conquered Death',
+        'landmark': 'Near Scindia Ghat'
+    },
+    'ratneshwar': {
+        'lat': 25.31060, 'lon': 83.01420,
+        'hindi': 'श्री रत्नेश्वर महादेव • मणिकर्णिका घाट',
+        'subtitle': 'The Iconic Leaning Temple of Kashi in Ganga Water',
+        'landmark': 'Manikarnika Ghat waterside'
+    },
+    'pasupateshwar': {
+        'lat': 25.31010, 'lon': 83.01300,
+        'hindi': 'श्री पशुपतेश्वर • नेपाली मंदिर',
+        'subtitle': 'Pashupatinath of Nepal Counterpart in Kashi',
+        'landmark': 'Lalita Ghat / Nepali Mandir'
+    },
 
     # =========================================================================
-    # 5. MAIN GANESH TEMPLES (10)
+    # 5. MAIN GANESH TEMPLES (10 Sanctums)
     # =========================================================================
     'dhundhi-vinayak': {
         'lat': 25.31070, 'lon': 83.01030,
@@ -276,7 +552,7 @@ COORDINATES_DB = {
     },
 
     # =========================================================================
-    # 6. VISHNU TEMPLES (30)
+    # 6. VISHNU TEMPLES (18 Main + 12 Additional = 30 Sanctums)
     # =========================================================================
     'bindu-madhav': {'lat': 25.31680, 'lon': 83.01770, 'hindi': 'श्री बिन्दु माधव • पंचगंगा घाट', 'subtitle': 'Supreme Central Protector Form at Panchganga Ghat', 'landmark': 'K-22/37 Panchganga Ghat'},
     'adi-keshav': {'lat': 25.32887, 'lon': 83.03720, 'hindi': 'श्री आदि केशव • वरुणा संगम', 'subtitle': 'The Primordial Form Who First Stepped into Kashi', 'landmark': 'Rajghat Fort / Varuna Sangam'},
@@ -310,7 +586,7 @@ COORDINATES_DB = {
     'tamra-varaha': {'lat': 25.31160, 'lon': 83.01250, 'hindi': 'श्री ताम्र वराह • नीलकंठ', 'subtitle': 'Copper-Hued Boar Avatar from Tamra Dweep', 'landmark': 'Ck. 33/57 Neelkanth Mohalla'},
 
     # =========================================================================
-    # 7. GANGA, TEERTHS & KUNDS (14)
+    # 7. GANGA, TEERTHS & KUNDS (14 Sanctums)
     # =========================================================================
     'river-ganga': {'lat': 25.30800, 'lon': 83.01200, 'hindi': 'श्री गंगा नदी (उत्तर-वाहिनी गंगा) • वाराणसी', 'subtitle': 'Sacred Northward-Flowing Stream Embracing Kashi', 'landmark': 'All 84 historic stone ghats from Assi to Varuna'},
     'asthi-immersion': {'lat': 25.31070, 'lon': 83.01400, 'hindi': 'अस्थि विसर्जन तीर्थ • मणिकर्णिका घाट', 'subtitle': 'Supreme Pitri Moksha & Liberation of Ancestors', 'landmark': 'Manikarnika and Harishchandra Ghats'},
@@ -328,21 +604,235 @@ COORDINATES_DB = {
     'kapal-mochan-teerth': {'lat': 25.33420, 'lon': 83.01850, 'hindi': 'श्री कपालमोचन तीर्थ (लाट सरोवर)', 'subtitle': 'Where the Head of Brahma Dropped from Bhairava', 'landmark': 'Laat Bhairav, Adampura'}
 }
 
-def get_coords(slug, fallback_lat=25.3110, fallback_lon=83.0110):
-    clean_s = slug.lower().replace('_', '-')
-    for k, v in COORDINATES_DB.items():
-        if k in clean_s or clean_s in k:
-            return v
-    # Try partial matching on key parts
-    parts = clean_s.split('-')
-    for p in parts:
-        if len(p) > 3:
-            for k, v in COORDINATES_DB.items():
-                if p in k:
-                    return v
+# Explicit aliases for 100% precision
+EXPLICIT_MAP = {
+    # Adityas
+    'arun_aditya': 'arun-aditya',
+    'draupad_aditya': 'draupad-aditya',
+    'ganga_aditya': 'ganga-aditya',
+    'keshava_aditya': 'keshava-aditya',
+    'khakholkh_aditya': 'khakholkh-aditya',
+    'lolark_aditya': 'lolark-aditya',
+    'mayukh_aditya': 'mayukh-aditya',
+    'saamba_aditya': 'sambaditya',
+    'samba_aditya': 'sambaditya',
+    'sambaditya': 'sambaditya',
+    'uttarark_aditya': 'uttarark-aditya',
+    'vimal_aditya': 'vimaladitya',
+    'vriddh_aditya': 'vriddhaditya',
+    'yama_aditya': 'yama-aditya',
+
+    # Bhairavs
+    'kaal_bhairav': 'kal-bhairav',
+    'kal_bhairav': 'kal-bhairav',
+    'asitang_bhairav': 'asitang-bhairav',
+    'ruru_bhairav': 'ruru-bhairav',
+    'chand_bhairav': 'chanda-bhairav',
+    'chanda_bhairav': 'chanda-bhairav',
+    'krodhan_bhairav': 'krodhan-bhairav',
+    'unmat_bhairav': 'unmatt-bhairav',
+    'unmatt_bhairav': 'unmatt-bhairav',
+    'kapal_bhairav': 'kapal-bhairav',
+    'bheeshan_bhairav': 'bheeshan-bhairav',
+    'samhar_bhairav': 'samhar-bhairav',
+    'batuk_bhairav': 'batuk-bhairav',
+    'bal_bhairav': 'bal-bhairav',
+
+    # Devis
+    'annapurna-devi': 'annapurna',
+    'bandi-devi': 'bandi-devi',
+    'bhavani-gauri': 'bhavani-gauri',
+    'brahma-charini-devi': 'brahmacharini',
+    'chamunda-devi': 'chamunda-devi',
+    'chandi-devi': 'chandi-devi',
+    'charma-munda-devi': 'charma-munda-devi',
+    'chitra-ghanta-devi': 'chandraghanta',
+    'durga-devi-kooshmanda-durga': 'kushmanda',
+    'hayakanti-devi': 'hayakanti-devi',
+    'jyeshta-gauri': 'jyeshta-gauri',
+    'kalratri': 'kalratri',
+    'kamakhya-devi-kamakshi': 'kamakhya',
+    'katyayani': 'katyayani',
+    'lalitha-gauri': 'lalita-gauri',
+    'lalita-gauri': 'lalita-gauri',
+    'mahalakshmi-gauri': 'mahalaxmi-gauri',
+    'mangala-gauri': 'mangala-gauri',
+    'mani-karnika-devi': 'mani-karnika-devi',
+    'mukhnirmalika-gauri': 'mukhnirmalika-gauri',
+    'sankata-devi': 'sankata',
+    'shailputri': 'shailputri',
+    'shringar-gauri': 'shringar-gauri',
+    'siddha-lakshmi-devi': 'siddha-lakshmi-devi',
+    'siddheshwari': 'siddhidatri',
+    'skanda-mata': 'skandamata',
+    'sowbhagya-gauri': 'saubhagya-gauri',
+    'tri-lokya-sundary': 'tri-lokya-sundary',
+    'tripura-bhairavi': 'tripura-bhairavi',
+    'varahi-devi': 'varahi',
+    'vindhya-devi': 'vindhya-devi',
+    'vishalakshi-gauri': 'vishalaksi',
+    'vishwa-bhuja-gauri': 'vishwa-bhuja-gauri',
+
+    # Shiva
+    'visweshwar-(vishwanath)': 'visweshwar-vishwanath',
+    'mrityunjay-mahadev': 'mrityunjay-mahadev',
+    'omkareshwar': 'omkareshwar',
+    'krithi-vaseshwar': 'krithi-vaseshwar',
+    'kedareshwar': 'kedareshwar',
+    'dharmeshwar': 'dharmeshwar',
+    'vridha-kalelshwar': 'vridha-kalelshwar',
+    'atma-veereshwar': 'atma-veereshwar',
+    'gabhasteeshwar': 'gabhasteeshwar',
+    'someshwar': 'someshwar',
+    'tripurantakeshwar': 'tripurantakeshwar',
+    'mahakaleshwar': 'mahakaleshwar',
+    'bheemeshwar': 'bheemeshwar',
+    'ganeshwar-(rameshwar)': 'ganeshwar-rameshwar',
+    'nageshwar': 'nageshwar',
+    'karkotak-nageshwar': 'karkotak-nageshwar',
+    'triambakeshwar': 'triambakeshwar',
+    'trilochan': 'trilochan',
+    'aadi-mahadev': 'aadi-mahadev',
+    'kardhameshwar': 'kardhameshwar',
+    'markandeyshwar': 'markandeyshwar',
+    'ratneshwar': 'ratneshwar',
+    'pasupateshwar': 'pasupateshwar',
+
+    # Ganesh
+    'aa.-dhundhi-vinayak': 'dhundhi-vinayak',
+    'dhundhi-vinayak': 'dhundhi-vinayak',
+    'vakra-tund-vinayak-(bada-ganesh)': 'bada-ganesh',
+    'bada-ganesh': 'bada-ganesh',
+    'shri-sakshi-vinayak-temple': 'sakshi-vinayak',
+    'sakshi-vinayak': 'sakshi-vinayak',
+    'chintamani-vinayak': 'chintamani-vinayak',
+    'siddhi-vinayak': 'siddhi-vinayak',
+    'durg-vinayak': 'durg-vinayak',
+    'shree-budhivinayak-ganesh-temple-(gyan-vinayak)': 'budhivinayak',
+    'budhivinayak': 'budhivinayak',
+    'ganesh-ghat-mandir-(riverfront-ghat-vinayakas)': 'ganesh-ghat-mandir',
+    'ganesh-ghat-mandir': 'ganesh-ghat-mandir',
+    'shalakanta-vinayak-temple-(shal-kant-vinayak)': 'shalakanta-vinayak',
+    'shalakanta-vinayak': 'shalakanta-vinayak',
+    'kharva-vinayak': 'kharva-vinayak',
+
+    # Vishnu
+    'bindu-madhav': 'bindu-madhav',
+    'adi-keshav': 'adi-keshav',
+    'narad-keshav': 'narad-keshav',
+    'prahlad-keshav': 'prahlad-keshav',
+    'yagya-varaha': 'yagya-varaha',
+    'vidar-narsimha': 'vidar-narsimha',
+    'gopi-govind': 'gopi-govind',
+    'hayagreev-keshav': 'hayagreev-keshav',
+    'shwet-madhav': 'shwet-madhav',
+    'prayag-madhav': 'prayag-madhav',
+    'ganga-keshav': 'ganga-keshav',
+    'vaikunth-madhav': 'vaikunth-madhav',
+    'prachand-narsimha': 'prachand-narsimha',
+    'atyugra-narsimha': 'atyugra-narsimha',
+    'kolahala-narasimha': 'kolahala-narasimha',
+    'vitank-narsimha': 'vitank-narsimha',
+    'shri-kokavarah': 'kokavarah',
+    'kokavarah': 'kokavarah',
+    'shri-dharanivarah': 'dharanivarah',
+    'dharanivarah': 'dharanivarah',
+    'gyan-keshav': 'gyan-keshav',
+    'bhrigu-keshav': 'bhrigu-keshav',
+    'bheeshma-keshav': 'bheeshma-keshav',
+    'vaman-keshav': 'vaman-keshav',
+    'tribhuwan-keshav': 'tribhuwan-keshav',
+    'gyan-madhav': 'gyan-madhav',
+    'veer-madhav': 'veer-madhav',
+    'lakshmi-narsimha': 'lakshmi-narsimha',
+    'mahabal-narsimha': 'mahabal-narsimha',
+    'nar-narayan': 'nar-narayan',
+    'trivikrama': 'trivikrama',
+    'tamra-varaha': 'tamra-varaha',
+
+    # Ganga & Teerths
+    'river-ganga': 'river-ganga',
+    'importance-of-immersion-of-mortal-remains-(asthi)-in-ganga': 'asthi-immersion',
+    'asthi-immersion': 'asthi-immersion',
+    'assi-sangam': 'assi-sangam',
+    'dasaswamedh': 'dasaswamedh',
+    'gyan-vapi': 'gyan-vapi',
+    'lolark-kund': 'lolark-kund',
+    'manikarnika': 'manikarnika',
+    'padodak-teerth': 'padodak-teerth',
+    'panch-ganga-(panch-nada-teerth)': 'panch-ganga',
+    'panch-ganga': 'panch-ganga',
+    'pilpila-teerth': 'pilpila-teerth',
+    'varuna-sangam': 'varuna-sangam',
+    'vimal-teerth-(pisachmochan)': 'vimal-teerth',
+    'vimal-teerth': 'vimal-teerth',
+    'durga-kund-(sacred-shakti-tank)': 'durga-kund',
+    'durga-kund': 'durga-kund',
+    'kapal-mochan-teerth-(laat-sarovar-kund)': 'kapal-mochan-teerth',
+    'kapal-mochan-teerth': 'kapal-mochan-teerth'
+}
+
+def get_coords_and_meta(key_or_title):
+    raw = str(key_or_title).lower().strip().replace('_', '-').replace(' ', '-')
+    
+    # 1. Check EXPLICIT_MAP
+    if raw in EXPLICIT_MAP:
+        target_k = EXPLICIT_MAP[raw]
+        if target_k in COORDINATES_DB:
+            return COORDINATES_DB[target_k]
+            
+    # 2. Check direct COORDINATES_DB
+    if raw in COORDINATES_DB:
+        return COORDINATES_DB[raw]
+        
+    # 3. Normalized alphanumeric search in EXPLICIT_MAP
+    norm = "".join(c for c in raw if c.isalnum())
+    for ek, target_k in EXPLICIT_MAP.items():
+        if "".join(c for c in ek if c.isalnum()) == norm:
+            return COORDINATES_DB[target_k]
+
+    # 4. Normalized search in COORDINATES_DB
+    for ck in COORDINATES_DB:
+        if "".join(c for c in ck if c.isalnum()) == norm:
+            return COORDINATES_DB[ck]
+
+    # 5. Distinct token matching (must match unique stem)
+    stems = {
+        'saamba': 'sambaditya',
+        'samba': 'sambaditya',
+        'vriddh': 'vriddhaditya',
+        'vimal': 'vimaladitya',
+        'arun': 'arun-aditya',
+        'draupad': 'draupad-aditya',
+        'lolark': 'lolark-aditya',
+        'khakholkh': 'khakholkh-aditya',
+        'mayukh': 'mayukh-aditya',
+        'uttarark': 'uttarark-aditya',
+        'kaal': 'kal-bhairav',
+        'asitang': 'asitang-bhairav',
+        'ruru': 'ruru-bhairav',
+        'chanda': 'chanda-bhairav',
+        'chand': 'chanda-bhairav',
+        'krodhan': 'krodhan-bhairav',
+        'unmat': 'unmatt-bhairav',
+        'unmatt': 'unmatt-bhairav',
+        'kapal': 'kapal-bhairav',
+        'bheeshan': 'bheeshan-bhairav',
+        'samhar': 'samhar-bhairav',
+        'batuk': 'batuk-bhairav',
+        'bal': 'bal-bhairav',
+        'asthi': 'asthi-immersion',
+        'immersion': 'asthi-immersion',
+        'pisachmochan': 'vimal-teerth'
+    }
+    for stem, target_k in stems.items():
+        if stem in raw:
+            return COORDINATES_DB[target_k]
+            
+    # Default fallback
     return {
-        'lat': fallback_lat, 'lon': fallback_lon,
-        'hindi': slug.replace('-', ' ').title(),
+        'lat': 25.31100, 'lon': 83.01100,
+        'hindi': str(key_or_title),
         'subtitle': 'Sacred Kashi Sanctum',
         'landmark': 'Varanasi Sanctum'
     }

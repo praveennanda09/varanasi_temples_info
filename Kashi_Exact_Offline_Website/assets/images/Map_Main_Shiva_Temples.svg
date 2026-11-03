@@ -1,0 +1,777 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="100%" height="auto">
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  
+  <!-- Background Landmass -->
+  <rect width="1200" height="800" fill="#f8fafc" />
+  
+  <!-- Subtle Urban Grids -->
+  <pattern id="urbanGrid" width="40" height="40" patternUnits="userSpaceOnUse">
+    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#e2e8f0" stroke-width="0.75" opacity="0.6"/>
+  </pattern>
+  <rect width="1200" height="800" fill="url(#urbanGrid)" />
+
+  <!-- Major Roadways -->
+  <!-- NH 731B -->
+  <path d="M 60.0,298.4 Q 401.1,254.3 798.9,121.8" fill="none" stroke="#93c5fd" stroke-width="6" stroke-linecap="round" />
+  <path d="M 60.0,298.4 Q 401.1,254.3 798.9,121.8" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" />
+
+  <!-- DLW Road -->
+  <path d="M 230.5,695.8 L 344.2,475.1 L 514.7,298.4" fill="none" stroke="#cbd5e1" stroke-width="5" stroke-linecap="round" />
+  <path d="M 230.5,695.8 L 344.2,475.1 L 514.7,298.4" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" />
+
+  <!-- Railway Line (Dashed) -->
+  <path d="M 287.4,475.1 L 457.9,183.6 L 764.8,121.8 L 1026.3,166.0" fill="none" stroke="#64748b" stroke-width="3" stroke-dasharray="6,4" />
+
+  <!-- River Ganga (Ganges) Waterbody -->
+  <path d="M 651.2,740.0 L 668.2,651.7 L 685.3,563.4 L 702.3,514.8 L 733.0,434.4 L 751.2,370.9 L 787.6,335.5 L 829.6,282.5 L 884.2,245.5 L 1051.3,175.7 L 1105.9,121.8 L 1140.0,60.0 L 1200,60.0 L 1200,800 L 651.2,800 Z" fill="#bae6fd" stroke="#7dd3fc" stroke-width="2" />
+
+  <!-- River Flow Label -->
+  <g transform="translate(912.6, 430.9) rotate(-45)">
+    <text fill="#0369a1" font-family="'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="700" opacity="0.65" letter-spacing="4">RIVER GANGES • पवित्र गंगा</text>
+  </g>
+
+  <!-- Highway Badge 731B -->
+  <g transform="translate(310.1, 245.5)">
+    <rect x="-18" y="-10" width="36" height="20" rx="4" fill="#fef08a" stroke="#ca8a04" stroke-width="1.5" />
+    <text x="0" y="4" text-anchor="middle" font-family="'Segoe UI', sans-serif" font-size="10" font-weight="800" fill="#713f12">731B</text>
+  </g>
+
+  <!-- DLW Rd Label -->
+  <text x="356.2" y="475.1" font-family="'Segoe UI', sans-serif" font-size="10" font-weight="600" fill="#64748b" transform="rotate(75, 344.2, 475.1)">DLW Rd</text>
+
+  <!-- Varanasi City Landmark Label -->
+  <g transform="translate(401.1, 227.8)">
+    <text x="0" y="0" font-family="'Segoe UI', 'Cinzel', serif" font-size="24" font-weight="800" fill="#0f172a">Varanasi</text>
+    <text x="0" y="22" font-family="'Segoe UI', 'Nirmala UI', sans-serif" font-size="20" font-weight="700" fill="#334155">वाराणसी</text>
+  </g>
+
+  <!-- Railway Station Icons -->
+  <g transform="translate(457.9, 183.6)">
+    <circle r="9" fill="#0284c7" />
+    <text x="0" y="3.5" text-anchor="middle" font-family="'Segoe UI', sans-serif" font-size="10" fill="#ffffff">&#128646;</text>
+    <text x="12" y="3" font-family="'Segoe UI', sans-serif" font-size="9" font-weight="700" fill="#0369a1">Cantt Jn</text>
+  </g>
+  <g transform="translate(287.4, 475.1)">
+    <circle r="8" fill="#0284c7" />
+    <text x="0" y="3" text-anchor="middle" font-family="'Segoe UI', sans-serif" font-size="9" fill="#ffffff">&#128646;</text>
+    <text x="12" y="3" font-family="'Segoe UI', sans-serif" font-size="8.5" font-weight="600" fill="#0369a1">Banaras Stn</text>
+  </g>
+
+  <!-- Map Scale & Copyright Bar (Matching Reference Screenshot) -->
+  <g transform="translate(920, 775)">
+    <rect x="-10" y="-16" width="280" height="32" rx="4" fill="#ffffff" opacity="0.9" stroke="#cbd5e1" stroke-width="1" />
+    <text x="0" y="4" font-family="'Segoe UI', sans-serif" font-size="9.5" fill="#475569">Map data &#169;2026 Terms</text>
+    <!-- 1 km Scale Bar -->
+    <text x="175" y="4" font-family="'Segoe UI', sans-serif" font-size="9.5" font-weight="700" fill="#1e293b">1 km</text>
+    <line x1="205" y1="2" x2="255" y2="2" stroke="#1e293b" stroke-width="2.5" />
+    <line x1="205" y1="-3" x2="205" y2="7" stroke="#1e293b" stroke-width="1.5" />
+    <line x1="255" y1="-3" x2="255" y2="7" stroke="#1e293b" stroke-width="1.5" />
+  </g>
+
+
+  <!-- Map Header Banner -->
+  <g transform="translate(40, 35)">
+    <rect x="-10" y="-16" width="420" height="48" rx="6" fill="#ffffff" opacity="0.95" stroke="#cbd5e1" stroke-width="1.2" filter="url(#shadow)" />
+    <rect x="-10" y="-16" width="6" height="48" rx="3" fill="#1e40af" />
+    <text x="8" y="4" font-family="'Segoe UI', 'Cinzel', serif" font-size="14" font-weight="800" fill="#0f172a">KASHI MAIN SHIVA TEMPLES & JYOTIRLINGAS MAP</text>
+    <text x="8" y="21" font-family="'Segoe UI', sans-serif" font-size="9.5" font-weight="600" fill="#64748b">Supreme Avimukta Mahalingas & Kashi Jyotirlinga Counterparts (23 Verified Sanctums)</text>
+  </g>
+
+  <!-- Temple Pins & Callout Cards -->
+  
+    <!-- Leader Line -->
+    <path d="M 702.3,181.9 Q 768.05,175.9 726.3,169.9" fill="none" stroke="#dc2626" stroke-width="1.2" stroke-dasharray="3,2" opacity="0.75" />
+
+    <!-- Pin at (702.3, 181.9) -->
+    <g transform="translate(702.3, 181.9)">
+      <!-- Shadow -->
+      <ellipse cx="0" cy="3" rx="7" ry="3" fill="#0f172a" opacity="0.25" />
+      
+      <!-- Teardrop Body -->
+      <path d="M 0,0 C -8,-9 -11,-15 -11,-22 A 11,11 0 1,1 11,-22 C 11,-15 8,-9 0,0 Z" fill="#dc2626" stroke="#ffffff" stroke-width="1.5" />
+      
+      <!-- Inner Circle for ॐ -->
+      <circle cx="0" cy="-22" r="8" fill="#ffffff" />
+      <text x="0" y="-18" text-anchor="middle" font-family="'Segoe UI', 'Nirmala UI', sans-serif" font-size="11" font-weight="800" fill="#dc2626">&#2384;</text>
+    </g>
+
+    <!-- Callout Card -->
+    <g transform="translate(726.3, 147.9)">
+      <rect x="0" y="0" width="215" height="44" rx="5" fill="#ffffff" opacity="0.94" stroke="#ef4444" stroke-width="1.2" filter="drop-shadow(0px 2px 4px rgba(0,0,0,0.15))" />
+      <!-- Left Accent Line -->
+      <rect x="0" y="0" width="4" height="44" rx="2" fill="#dc2626" />
+      <!-- Line 1: English Title -->
+      <text x="10" y="13" font-family="'Segoe UI', Arial, sans-serif" font-size="9.5" font-weight="700" fill="#0f172a">Karkotak Nageshwar</text>
+      <!-- Line 2: Devanagari Hindi -->
+      <text x="10" y="26" font-family="'Segoe UI', 'Nirmala UI', sans-serif" font-size="8.5" font-weight="600" fill="#334155">श्री कर्कोटक नागेश्वर • जैतपुरा</text>
+      <!-- Line 3: Subtitle / Role -->
+      <text x="10" y="38" font-family="'Segoe UI', Arial, sans-serif" font-size="8" font-style="italic" fill="#0284c7">King of Serpents Well Sanctum (N...</text>
+    </g>
+
+
+    <!-- Leader Line -->
+    <path d="M 850.1,205.7 Q 785.35,207.7 828.1,209.7" fill="none" stroke="#2563eb" stroke-width="1.2" stroke-dasharray="3,2" opacity="0.75" />
+
+    <!-- Pin at (850.1, 205.7) -->
+    <g transform="translate(850.1, 205.7)">
+      <!-- Shadow -->
+      <ellipse cx="0" cy="3" rx="7" ry="3" fill="#0f172a" opacity="0.25" />
+      
+      <!-- Teardrop Body -->
+      <path d="M 0,0 C -8,-9 -11,-15 -11,-22 A 11,11 0 1,1 11,-22 C 11,-15 8,-9 0,0 Z" fill="#2563eb" stroke="#ffffff" stroke-width="1.5" />
+      
+      <!-- Inner Circle for ॐ -->
+      <circle cx="0" cy="-22" r="8" fill="#ffffff" />
+      <text x="0" y="-18" text-anchor="middle" font-family="'Segoe UI', 'Nirmala UI', sans-serif" font-size="11" font-weight="800" fill="#2563eb">&#2384;</text>
+    </g>
+
+    <!-- Callout Card -->
+    <g transform="translate(613.1, 187.7)">
+      <rect x="0" y="0" width="215" height="44" rx="5" fill="#ffffff" opacity="0.94" stroke="#3b82f6" stroke-width="1.2" filter="drop-shadow(0px 2px 4px rgba(0,0,0,0.15))" />
+      <!-- Left Accent Line -->
+      <rect x="0" y="0" width="4" height="44" rx="2" fill="#2563eb" />
+      <!-- Line 1: English Title -->
+      <text x="10" y="13" font-family="'Segoe UI', Arial, sans-serif" font-size="9.5" font-weight="700" fill="#0f172a">Omkareshwar</text>
+      <!-- Line 2: Devanagari Hindi -->
+      <text x="10" y="26" font-family="'Segoe UI', 'Nirmala UI', sans-serif" font-size="8.5" font-weight="600" fill="#334155">श्री ओंकारेश्वर महादेव • मछोदरी</text>
+      <!-- Line 3: Subtitle / Role -->
+      <text x="10" y="38" font-family="'Segoe UI', Arial, sans-serif" font-size="8" font-style="italic" fill="#0284c7">Primordial Pranava Linga (A-U-M ...</text>
+    </g>
+
+
+    <!-- Leader Line -->
+    <path d="M 793.3,236.6 Q 728.55,238.6 771.3,240.6" fill="none" stroke="#7c3aed" stroke-width="1.2" stroke-dasharray="3,2" opacity="0.75" />
+
+    <!-- Pin at (793.3, 236.6) -->
+    <g transform="translate(793.3, 236.6)">
+      <!-- Shadow -->
+      <ellipse cx="0" cy="3" rx="7" ry="3" fill="#0f172a" opacity="0.25" />
+      
+      <!-- Teardrop Body -->
+      <path d="M 0,0 C -8,-9 -11,-15 -11,-22 A 11,11 0 1,1 11,-22 C 11,-15 8,-9 0,0 Z" fill="#7c3aed" stroke="#ffffff" stroke-width="1.5" />
+      
+      <!-- Inner Circle for ॐ -->
+      <circle cx="0" cy="-22" r="8" fill="#ffffff" />
+      <text x="0" y="-18" text-anchor="middle" font-family="'Segoe UI', 'Nirmala UI', sans-serif" font-size="11" font-weight="800" fill="#7c3aed">&#2384;</text>
+    </g>
+
+    <!-- Callout Card -->
+    <g transform="translate(556.3, 218.6)">
+      <rect x="0" y="0" width="215" height="44" rx="5" fill="#ffffff" opacity="0.94" stroke="#8b5cf6" stroke-width="1.2" filter="drop-shadow(0px 2px 4px rgba(0,0,0,0.15))" />
+      <!-- Left Accent Line -->
+      <rect x="0" y="0" width="4" height="44" rx="2" fill="#7c3aed" />
+      <!-- Line 1: English Title -->
+      <text x="10" y="13" font-family="'Segoe UI', Arial, sans-serif" font-size="9.5" font-weight="700" fill="#0f172a">Vridha Kalelshwar</text>
+      <!-- Line 2: Devanagari Hindi -->
+      <text x="10" y="26" font-family="'Segoe UI', 'Nirmala UI', sans-serif" font-size="8.5" font-weight="600" fill="#334155">श्री वृद्ध कालेश्वर • दारानगर</text>
+      <!-- Line 3: Subtitle / Role -->
+      <text x="10" y="38" font-family="'Segoe UI', Arial, sans-serif" font-size="8" font-style="italic" fill="#0284c7">Vriddha Kaleshwar — Conqueror of...</text>
+    </g>
+
+
+    <!-- Leader Line -->
+    <path d="M 792.1,238.4 Q 727.35,240.4 770.1,242.4" fill="none" stroke="#d97706" stroke-width="1.2" stroke-dasharray="3,2" opacity="0.75" />
+
+    <!-- Pin at (792.1, 238.4) -->
+    <g transform="translate(792.1, 238.4)">
+      <!-- Shadow -->
+      <ellipse cx="0" cy="3" rx="7" ry="3" fill="#0f172a" opacity="0.25" />
+      
+      <!-- Teardrop Body -->
+      <path d="M 0,0 C -8,-9 -11,-15 -11,-22 A 11,11 0 1,1 11,-22 C 11,-15 8,-9 0,0 Z" fill="#d97706" stroke="#ffffff" stroke-width="1.5" />
+      
+      <!-- Inner Circle for ॐ -->
+      <circle cx="0" cy="-22" r="8" fill="#ffffff" />
+      <text x="0" y="-18" text-anchor="middle" font-family="'Segoe UI', 'Nirmala UI', sans-serif" font-size="11" font-weight="800" fill="#d97706">&#2384;</text>
+    </g>
+
+    <!-- Callout Card -->
+    <g transform="translate(555.1, 220.4)">
+      <rect x="0" y="0" width="215" height="44" rx="5" fill="#ffffff" opacity="0.94" stroke="#f59e0b" stroke-width="1.2" filter="drop-shadow(0px 2px 4px rgba(0,0,0,0.15))" />
+      <!-- Left Accent Line -->
+      <rect x="0" y="0" width="4" height="44" rx="2" fill="#d97706" />
+      <!-- Line 1: English Title -->
+      <text x="10" y="13" font-family="'Segoe UI', Arial, sans-serif" font-size="9.5" font-weight="700" fill="#0f172a">Mrityunjay Mahadev</text>
+      <!-- Line 2: Devanagari Hindi -->
+      <text x="10" y="26" font-family="'Segoe UI', 'Nirmala UI', sans-serif" font-size="8.5" font-weight="600" fill="#334155">श्री महामृत्युंजय महादेव • दार...</text>
+      <!-- Line 3: Subtitle / Role -->
+      <text x="10" y="38" font-family="'Segoe UI', Arial, sans-serif" font-size="8" font-style="italic" fill="#0284c7">The Conqueror of Death & Amrit K...</text>
+    </g>
+
+
+    <!-- Leader Line -->
+    <path d="M 789.9,243.7 Q 725.15,245.7 767.9,247.7" fill="none" stroke="#059669" stroke-width="1.2" stroke-dasharray="3,2" opacity="0.75" />
+
+    <!-- Pin at (789.9, 243.7) -->
+    <g transform="translate(789.9, 243.7)">
+      <!-- Shadow -->
+      <ellipse cx="0" cy="3" rx="7" ry="3" fill="#0f172a" opacity="0.25" />
+      
+      <!-- Teardrop Body -->
+      <path d="M 0,0 C -8,-9 -11,-15 -11,-22 A 11,11 0 1,1 11,-22 C 11,-15 8,-9 0,0 Z" fill="#059669" stroke="#ffffff" stroke-width="1.5" />
+      
+      <!-- Inner Circle for ॐ -->
+      <circle cx="0" cy="-22" r="8" fill="#ffffff" />
+      <text x="0" y="-18" text-anchor="middle" font-family="'Segoe UI', 'Nirmala UI', sans-serif" font-size="11" font-weight="800" fill="#059669">&#2384;</text>
+    </g>
+
+    <!-- Callout Card -->
+    <g transform="translate(552.9, 225.7)">
+      <rect x="0" y="0" width="215" height="44" rx="5" fill="#ffffff" opacity="0.94" stroke="#10b981" stroke-width="1.2" filter="drop-shadow(0px 2px 4px rgba(0,0,0,0.15))" />
+      <!-- Left Accent Line -->
+      <rect x="0" y="0" width="4" height="44" rx="2" fill="#059669" />
+      <!-- Line 1: English Title -->
+      <text x="10" y="13" font-family="'Segoe UI', Arial, sans-serif" font-size="9.5" font-weight="700" fill="#0f172a">Mahakaleshwar</text>
+      <!-- Line 2: Devanagari Hindi -->
+      <text x="10" y="26" font-family="'Segoe UI', 'Nirmala UI', sans-serif" font-size="8.5" font-weight="600" fill="#334155">श्री महाकालेश्वर • दारानगर</text>
+      <!-- Line 3: Subtitle / Role -->
+      <text x="10" y="38" font-family="'Segoe UI', Arial, sans-serif" font-size="8" font-style="italic" fill="#0284c7">Mahakaleshwar Ujjain Counterpart...</text>
+    </g>
+
+
+    <!-- Leader Line -->
+    <path d="M 878.5,243.7 Q 813.75,245.7 856.5,247.7" fill="none" stroke="#dc2626" stroke-width="1.2" stroke-dasharray="3,2" opacity="0.75" />
+
+    <!-- Pin at (878.5, 243.7) -->
+    <g transform="translate(878.5, 243.7)">
+      <!-- Shadow -->
+      <ellipse cx="0" cy="3" rx="7" ry="3" fill="#0f172a" opacity="0.25" />
+      
+      <!-- Teardrop Body -->
+      <path d="M 0,0 C -8,-9 -11,-15 -11,-22 A 11,11 0 1,1 11,-22 C 11,-15 8,-9 0,0 Z" fill="#dc2626" stroke="#ffffff" stroke-width="1.5" />
+      
+      <!-- Inner Circle for ॐ -->
+      <circle cx="0" cy="-22" r="8" fill="#ffffff" />
+      <text x="0" y="-18" text-anchor="middle" font-family="'Segoe UI', 'Nirmala UI', sans-serif" font-size="11" font-weight="800" fill="#dc2626">&#2384;</text>
+    </g>
+
+    <!-- Callout Card -->
+    <g transform="translate(641.5, 225.7)">
+      <rect x="0" y="0" width="215" height="44" rx="5" fill="#ffffff" opacity="0.94" stroke="#ef4444" stroke-width="1.2" filter="drop-shadow(0px 2px 4px rgba(0,0,0,0.15))" />
+      <!-- Left Accent Line -->
+      <rect x="0" y="0" width="4" height="44" rx="2" fill="#dc2626" />
+      <!-- Line 1: English Title -->
+      <text x="10" y="13" font-family="'Segoe UI', Arial, sans-serif" font-size="9.5" font-weight="700" fill="#0f172a">Aadi Mahadev</text>
+      <!-- Line 2: Devanagari Hindi -->
+      <text x="10" y="26" font-family="'Segoe UI', 'Nirmala UI', sans-serif" font-size="8.5" font-weight="600" fill="#334155">श्री आदि महादेव • त्रिलोचन मोह...</text>
+      <!-- Line 3: Subtitle / Role -->
+      <text x="10" y="38" font-family="'Segoe UI', Arial, sans-serif" font-size="8" font-style="italic" fill="#0284c7">The Primordial Shiva Linga of Av...</text>
+    </g>
+
+
+    <!-- Leader Line -->
+    <path d="M 883.1,247.2 Q 818.35,249.2 861.1,251.2" fill="none" stroke="#2563eb" stroke-width="1.2" stroke-dasharray="3,2" opacity="0.75" />
+
+    <!-- Pin at (883.1, 247.2) -->
+    <g transform="translate(883.1, 247.2)">
+      <!-- Shadow -->
+      <ellipse cx="0" cy="3" rx="7" ry="3" fill="#0f172a" opacity="0.25" />
+      
+      <!-- Teardrop Body -->
+      <path d="M 0,0 C -8,-9 -11,-15 -11,-22 A 11,11 0 1,1 11,-22 C 11,-15 8,-9 0,0 Z" fill="#2563eb" stroke="#ffffff" stroke-width="1.5" />
+      
+      <!-- Inner Circle for ॐ -->
+      <circle cx="0" cy="-22" r="8" fill="#ffffff" />
+      <text x="0" y="-18" text-anchor="middle" font-family="'Segoe UI', 'Nirmala UI', sans-serif" font-size="11" font-weight="800" fill="#2563eb">&#2384;</text>
+    </g>
+
+    <!-- Callout Card -->
+    <g transform="translate(646.1, 229.2)">
+      <rect x="0" y="0" width="215" height="44" rx="5" fill="#ffffff" opacity="0.94" stroke="#3b82f6" stroke-width="1.2" filter="drop-shadow(0px 2px 4px rgba(0,0,0,0.15))" />
+      <!-- Left Accent Line -->
+      <rect x="0" y="0" width="4" height="44" rx="2" fill="#2563eb" />
+      <!-- Line 1: English Title -->
+      <text x="10" y="13" font-family="'Segoe UI', Arial, sans-serif" font-size="9.5" font-weight="700" fill="#0f172a">Trilochan</text>
+      <!-- Line 2: Devanagari Hindi -->
+      <text x="10" y="26" font-family="'Segoe UI', 'Nirmala UI', sans-serif" font-size="8.5" font-weight="600" fill="#334155">श्री त्रिलोचन महादेव • त्रिलोच...</text>
+      <!-- Line 3: Subtitle / Role -->
+      <text x="10" y="38" font-family="'Segoe UI', Arial, sans-serif" font-size="8" font-style="italic" fill="#0284c7">The Primordial Three-Eyed Lord o...</text>
+    </g>
+
+
+    <!-- Leader Line -->
+    <path d="M 826.2,279.9 Q 761.45,281.9 804.2,283.9" fill="none" stroke="#7c3aed" stroke-width="1.2" stroke-dasharray="3,2" opacity="0.75" />
+
+    <!-- Pin at (826.2, 279.9) -->
+    <g transform="translate(826.2, 279.9)">
+      <!-- Shadow -->
+      <ellipse cx="0" cy="3" rx="7" ry="3" fill="#0f172a" opacity="0.25" />
+      
+      <!-- Teardrop Body -->
+      <path d="M 0,0 C -8,-9 -11,-15 -11,-22 A 11,11 0 1,1 11,-22 C 11,-15 8,-9 0,0 Z" fill="#7c3aed" stroke="#ffffff" stroke-width="1.5" />
+      
+      <!-- Inner Circle for ॐ -->
+      <circle cx="0" cy="-22" r="8" fill="#ffffff" />
+      <text x="0" y="-18" text-anchor="middle" font-family="'Segoe UI', 'Nirmala UI', sans-serif" font-size="11" font-weight="800" fill="#7c3aed">&#2384;</text>
+    </g>
+
+    <!-- Callout Card -->
+    <g transform="translate(589.2, 261.9)">
+      <rect x="0" y="0" width="215" height="44" rx="5" fill="#ffffff" opacity="0.94" stroke="#8b5cf6" stroke-width="1.2" filter="drop-shadow(0px 2px 4px rgba(0,0,0,0.15))" />
+      <!-- Left Accent Line -->
+      <rect x="0" y="0" width="4" height="44" rx="2" fill="#7c3aed" />
+      <!-- Line 1: English Title -->
+      <text x="10" y="13" font-family="'Segoe UI', Arial, sans-serif" font-size="9.5" font-weight="700" fill="#0f172a">Gabhasteeshwar</text>
+      <!-- Line 2: Devanagari Hindi -->
+      <text x="10" y="26" font-family="'Segoe UI', 'Nirmala UI', sans-serif" font-size="8.5" font-weight="600" fill="#334155">श्री गभस्तीश्वर • मंगला गौरी</text>
+      <!-- Line 3: Subtitle / Role -->
+      <text x="10" y="38" font-family="'Segoe UI', Arial, sans-serif" font-size="8" font-style="italic" fill="#0284c7">Sanctum Established by Surya (Ma...</text>
+    </g>
+
+
+    <!-- Leader Line -->
+    <path d="M 821.7,294.0 Q 756.95,296.0 799.7,298.0" fill="none" stroke="#d97706" stroke-width="1.2" stroke-dasharray="3,2" opacity="0.75" />
+
+    <!-- Pin at (821.7, 294.0) -->
+    <g transform="translate(821.7, 294.0)">
+      <!-- Shadow -->
+      <ellipse cx="0" cy="3" rx="7" ry="3" fill="#0f172a" opacity="0.25" />
+      
+      <!-- Teardrop Body -->
+      <path d="M 0,0 C -8,-9 -11,-15 -11,-22 A 11,11 0 1,1 11,-22 C 11,-15 8,-9 0,0 Z" fill="#d97706" stroke="#ffffff" stroke-width="1.5" />
+      
+      <!-- Inner Circle for ॐ -->
+      <circle cx="0" cy="-22" r="8" fill="#ffffff" />
+      <text x="0" y="-18" text-anchor="middle" font-family="'Segoe UI', 'Nirmala UI', sans-serif" font-size="11" font-weight="800" fill="#d97706">&#2384;</text>
+    </g>
+
+    <!-- Callout Card -->
+    <g transform="translate(584.7, 276.0)">
+      <rect x="0" y="0" width="215" height="44" rx="5" fill="#ffffff" opacity="0.94" stroke="#f59e0b" stroke-width="1.2" filter="drop-shadow(0px 2px 4px rgba(0,0,0,0.15))" />
+      <!-- Left Accent Line -->
+      <rect x="0" y="0" width="4" height="44" rx="2" fill="#d97706" />
+      <!-- Line 1: English Title -->
+      <text x="10" y="13" font-family="'Segoe UI', Arial, sans-serif" font-size="9.5" font-weight="700" fill="#0f172a">Nageshwar</text>
+      <!-- Line 2: Devanagari Hindi -->
+      <text x="10" y="26" font-family="'Segoe UI', 'Nirmala UI', sans-serif" font-size="8.5" font-weight="600" fill="#334155">श्री नागेश्वर महादेव • भोंसला ...</text>
+      <!-- Line 3: Subtitle / Role -->
+      <text x="10" y="38" font-family="'Segoe UI', Arial, sans-serif" font-size="8" font-style="italic" fill="#0284c7">Nageshwar Jyotirlinga Counterpar...</text>
+    </g>
+
+
+    <!-- Leader Line -->
+    <path d="M 762.6,296.7 Q 697.85,298.7 740.6,300.7" fill="none" stroke="#059669" stroke-width="1.2" stroke-dasharray="3,2" opacity="0.75" />
+
+    <!-- Pin at (762.6, 296.7) -->
+    <g transform="translate(762.6, 296.7)">
+      <!-- Shadow -->
+      <ellipse cx="0" cy="3" rx="7" ry="3" fill="#0f172a" opacity="0.25" />
+      
+      <!-- Teardrop Body -->
+      <path d="M 0,0 C -8,-9 -11,-15 -11,-22 A 11,11 0 1,1 11,-22 C 11,-15 8,-9 0,0 Z" fill="#059669" stroke="#ffffff" stroke-width="1.5" />
+      
+      <!-- Inner Circle for ॐ -->
+      <circle cx="0" cy="-22" r="8" fill="#ffffff" />
+      <text x="0" y="-18" text-anchor="middle" font-family="'Segoe UI', 'Nirmala UI', sans-serif" font-size="11" font-weight="800" fill="#059669">&#2384;</text>
+    </g>
+
+    <!-- Callout Card -->
+    <g transform="translate(525.6, 278.7)">
+      <rect x="0" y="0" width="215" height="44" rx="5" fill="#ffffff" opacity="0.94" stroke="#10b981" stroke-width="1.2" filter="drop-shadow(0px 2px 4px rgba(0,0,0,0.15))" />
+      <!-- Left Accent Line -->
+      <rect x="0" y="0" width="4" height="44" rx="2" fill="#059669" />
+      <!-- Line 1: English Title -->
+      <text x="10" y="13" font-family="'Segoe UI', Arial, sans-serif" font-size="9.5" font-weight="700" fill="#0f172a">Krithi Vaseshwar</text>
+      <!-- Line 2: Devanagari Hindi -->
+      <text x="10" y="26" font-family="'Segoe UI', 'Nirmala UI', sans-serif" font-size="8.5" font-weight="600" fill="#334155">श्री कृत्तिवासेश्वर • चित्रघंटा</text>
+      <!-- Line 3: Subtitle / Role -->
+      <text x="10" y="38" font-family="'Segoe UI', Arial, sans-serif" font-size="8" font-style="italic" fill="#0284c7">Slayer of Demon Gajasura (Avimuk...</text>
+    </g>
+
+
+    <!-- Leader Line -->
+    <path d="M 796.7,317.0 Q 731.95,319.0 774.7,321.0" fill="none" stroke="#dc2626" stroke-width="1.2" stroke-dasharray="3,2" opacity="0.75" />
+
+    <!-- Pin at (796.7, 317.0) -->
+    <g transform="translate(796.7, 317.0)">
+      <!-- Shadow -->
+      <ellipse cx="0" cy="3" rx="7" ry="3" fill="#0f172a" opacity="0.25" />
+      
+      <!-- Teardrop Body -->
+      <path d="M 0,0 C -8,-9 -11,-15 -11,-22 A 11,11 0 1,1 11,-22 C 11,-15 8,-9 0,0 Z" fill="#dc2626" stroke="#ffffff" stroke-width="1.5" />
+      
+      <!-- Inner Circle for ॐ -->
+      <circle cx="0" cy="-22" r="8" fill="#ffffff" />
+      <text x="0" y="-18" text-anchor="middle" font-family="'Segoe UI', 'Nirmala UI', sans-serif" font-size="11" font-weight="800" fill="#dc2626">&#2384;</text>
+    </g>
+
+    <!-- Callout Card -->
+    <g transform="translate(559.7, 299.0)">
+      <rect x="0" y="0" width="215" height="44" rx="5" fill="#ffffff" opacity="0.94" stroke="#ef4444" stroke-width="1.2" filter="drop-shadow(0px 2px 4px rgba(0,0,0,0.15))" />
+      <!-- Left Accent Line -->
+      <rect x="0" y="0" width="4" height="44" rx="2" fill="#dc2626" />
+      <!-- Line 1: English Title -->
+      <text x="10" y="13" font-family="'Segoe UI', Arial, sans-serif" font-size="9.5" font-weight="700" fill="#0f172a">Markandeyshwar</text>
+      <!-- Line 2: Devanagari Hindi -->
+      <text x="10" y="26" font-family="'Segoe UI', 'Nirmala UI', sans-serif" font-size="8.5" font-weight="600" fill="#334155">श्री मार्कण्डेयेश्वर • सिंधिया...</text>
+      <!-- Line 3: Subtitle / Role -->
+      <text x="10" y="38" font-family="'Segoe UI', Arial, sans-serif" font-size="8" font-style="italic" fill="#0284c7">Where Sage Markandeya Conquered ...</text>
+    </g>
+
+
+    <!-- Leader Line -->
+    <path d="M 793.3,320.5 Q 728.55,322.5 771.3,324.5" fill="none" stroke="#2563eb" stroke-width="1.2" stroke-dasharray="3,2" opacity="0.75" />
+
+    <!-- Pin at (793.3, 320.5) -->
+    <g transform="translate(793.3, 320.5)">
+      <!-- Shadow -->
+      <ellipse cx="0" cy="3" rx="7" ry="3" fill="#0f172a" opacity="0.25" />
+      
+      <!-- Teardrop Body -->
+      <path d="M 0,0 C -8,-9 -11,-15 -11,-22 A 11,11 0 1,1 11,-22 C 11,-15 8,-9 0,0 Z" fill="#2563eb" stroke="#ffffff" stroke-width="1.5" />
+      
+      <!-- Inner Circle for ॐ -->
+      <circle cx="0" cy="-22" r="8" fill="#ffffff" />
+      <text x="0" y="-18" text-anchor="middle" font-family="'Segoe UI', 'Nirmala UI', sans-serif" font-size="11" font-weight="800" fill="#2563eb">&#2384;</text>
+    </g>
+
+    <!-- Callout Card -->
+    <g transform="translate(556.3, 302.5)">
+      <rect x="0" y="0" width="215" height="44" rx="5" fill="#ffffff" opacity="0.94" stroke="#3b82f6" stroke-width="1.2" filter="drop-shadow(0px 2px 4px rgba(0,0,0,0.15))" />
+      <!-- Left Accent Line -->
+      <rect x="0" y="0" width="4" height="44" rx="2" fill="#2563eb" />
+      <!-- Line 1: English Title -->
+      <text x="10" y="13" font-family="'Segoe UI', Arial, sans-serif" font-size="9.5" font-weight="700" fill="#0f172a">Atma Veereshwar</text>
+      <!-- Line 2: Devanagari Hindi -->
+      <text x="10" y="26" font-family="'Segoe UI', 'Nirmala UI', sans-serif" font-size="8.5" font-weight="600" fill="#334155">श्री आत्मवीरेश्वर • सिंधिया घाट</text>
+      <!-- Line 3: Subtitle / Role -->
+      <text x="10" y="38" font-family="'Segoe UI', Arial, sans-serif" font-size="8" font-style="italic" fill="#0284c7">Sanctum Established by Maharishi...</text>
+    </g>
+
+
+    <!-- Leader Line -->
+    <path d="M 544.3,325.8 Q 610.05,319.8 568.3,313.8" fill="none" stroke="#7c3aed" stroke-width="1.2" stroke-dasharray="3,2" opacity="0.75" />
+
+    <!-- Pin at (544.3, 325.8) -->
+    <g transform="translate(544.3, 325.8)">
+      <!-- Shadow -->
+      <ellipse cx="0" cy="3" rx="7" ry="3" fill="#0f172a" opacity="0.25" />
+      
+      <!-- Teardrop Body -->
+      <path d="M 0,0 C -8,-9 -11,-15 -11,-22 A 11,11 0 1,1 11,-22 C 11,-15 8,-9 0,0 Z" fill="#7c3aed" stroke="#ffffff" stroke-width="1.5" />
+      
+      <!-- Inner Circle for ॐ -->
+      <circle cx="0" cy="-22" r="8" fill="#ffffff" />
+      <text x="0" y="-18" text-anchor="middle" font-family="'Segoe UI', 'Nirmala UI', sans-serif" font-size="11" font-weight="800" fill="#7c3aed">&#2384;</text>
+    </g>
+
+    <!-- Callout Card -->
+    <g transform="translate(568.3, 291.8)">
+      <rect x="0" y="0" width="215" height="44" rx="5" fill="#ffffff" opacity="0.94" stroke="#8b5cf6" stroke-width="1.2" filter="drop-shadow(0px 2px 4px rgba(0,0,0,0.15))" />
+      <!-- Left Accent Line -->
+      <rect x="0" y="0" width="4" height="44" rx="2" fill="#7c3aed" />
+      <!-- Line 1: English Title -->
+      <text x="10" y="13" font-family="'Segoe UI', Arial, sans-serif" font-size="9.5" font-weight="700" fill="#0f172a">Tripurantakeshwar</text>
+      <!-- Line 2: Devanagari Hindi -->
+      <text x="10" y="26" font-family="'Segoe UI', 'Nirmala UI', sans-serif" font-size="8.5" font-weight="600" fill="#334155">श्री त्रिपुरान्तकेश्वर • सिगरा</text>
+      <!-- Line 3: Subtitle / Role -->
+      <text x="10" y="38" font-family="'Segoe UI', Arial, sans-serif" font-size="8" font-style="italic" fill="#0284c7">Mallikarjuna & Grishneshwar Coun...</text>
+    </g>
+
+
+    <!-- Leader Line -->
+    <path d="M 752.3,332.9 Q 687.55,334.9 730.3,336.9" fill="none" stroke="#d97706" stroke-width="1.2" stroke-dasharray="3,2" opacity="0.75" />
+
+    <!-- Pin at (752.3, 332.9) -->
+    <g transform="translate(752.3, 332.9)">
+      <!-- Shadow -->
+      <ellipse cx="0" cy="3" rx="7" ry="3" fill="#0f172a" opacity="0.25" />
+      
+      <!-- Teardrop Body -->
+      <path d="M 0,0 C -8,-9 -11,-15 -11,-22 A 11,11 0 1,1 11,-22 C 11,-15 8,-9 0,0 Z" fill="#d97706" stroke="#ffffff" stroke-width="1.5" />
+      
+      <!-- Inner Circle for ॐ -->
+      <circle cx="0" cy="-22" r="8" fill="#ffffff" />
+      <text x="0" y="-18" text-anchor="middle" font-family="'Segoe UI', 'Nirmala UI', sans-serif" font-size="11" font-weight="800" fill="#d97706">&#2384;</text>
+    </g>
+
+    <!-- Callout Card -->
+    <g transform="translate(515.3, 314.9)">
+      <rect x="0" y="0" width="215" height="44" rx="5" fill="#ffffff" opacity="0.94" stroke="#f59e0b" stroke-width="1.2" filter="drop-shadow(0px 2px 4px rgba(0,0,0,0.15))" />
+      <!-- Left Accent Line -->
+      <rect x="0" y="0" width="4" height="44" rx="2" fill="#d97706" />
+      <!-- Line 1: English Title -->
+      <text x="10" y="13" font-family="'Segoe UI', Arial, sans-serif" font-size="9.5" font-weight="700" fill="#0f172a">Bheemeshwar</text>
+      <!-- Line 2: Devanagari Hindi -->
+      <text x="10" y="26" font-family="'Segoe UI', 'Nirmala UI', sans-serif" font-size="8.5" font-weight="600" fill="#334155">श्री भीमेश्वर • काशी करवट</text>
+      <!-- Line 3: Subtitle / Role -->
+      <text x="10" y="38" font-family="'Segoe UI', Arial, sans-serif" font-size="8" font-style="italic" fill="#0284c7">Bhimashankar Counterpart inside ...</text>
+    </g>
+
+
+    <!-- Leader Line -->
+    <path d="M 750.1,334.6 Q 685.35,336.6 728.1,338.6" fill="none" stroke="#059669" stroke-width="1.2" stroke-dasharray="3,2" opacity="0.75" />
+
+    <!-- Pin at (750.1, 334.6) -->
+    <g transform="translate(750.1, 334.6)">
+      <!-- Shadow -->
+      <ellipse cx="0" cy="3" rx="7" ry="3" fill="#0f172a" opacity="0.25" />
+      
+      <!-- Teardrop Body -->
+      <path d="M 0,0 C -8,-9 -11,-15 -11,-22 A 11,11 0 1,1 11,-22 C 11,-15 8,-9 0,0 Z" fill="#059669" stroke="#ffffff" stroke-width="1.5" />
+      
+      <!-- Inner Circle for ॐ -->
+      <circle cx="0" cy="-22" r="8" fill="#ffffff" />
+      <text x="0" y="-18" text-anchor="middle" font-family="'Segoe UI', 'Nirmala UI', sans-serif" font-size="11" font-weight="800" fill="#059669">&#2384;</text>
+    </g>
+
+    <!-- Callout Card -->
+    <g transform="translate(513.1, 316.6)">
+      <rect x="0" y="0" width="215" height="44" rx="5" fill="#ffffff" opacity="0.94" stroke="#10b981" stroke-width="1.2" filter="drop-shadow(0px 2px 4px rgba(0,0,0,0.15))" />
+      <!-- Left Accent Line -->
+      <rect x="0" y="0" width="4" height="44" rx="2" fill="#059669" />
+      <!-- Line 1: English Title -->
+      <text x="10" y="13" font-family="'Segoe UI', Arial, sans-serif" font-size="9.5" font-weight="700" fill="#0f172a">Visweshwar (Vishwanath)</text>
+      <!-- Line 2: Devanagari Hindi -->
+      <text x="10" y="26" font-family="'Segoe UI', 'Nirmala UI', sans-serif" font-size="8.5" font-weight="600" fill="#334155">श्री काशी विश्वेश्वर (विश्वनाथ...</text>
+      <!-- Line 3: Subtitle / Role -->
+      <text x="10" y="38" font-family="'Segoe UI', Arial, sans-serif" font-size="8" font-style="italic" fill="#0284c7">Supreme Sovereign of Avimukta & ...</text>
+    </g>
+
+
+    <!-- Leader Line -->
+    <path d="M 789.9,337.3 Q 725.15,339.3 767.9,341.3" fill="none" stroke="#dc2626" stroke-width="1.2" stroke-dasharray="3,2" opacity="0.75" />
+
+    <!-- Pin at (789.9, 337.3) -->
+    <g transform="translate(789.9, 337.3)">
+      <!-- Shadow -->
+      <ellipse cx="0" cy="3" rx="7" ry="3" fill="#0f172a" opacity="0.25" />
+      
+      <!-- Teardrop Body -->
+      <path d="M 0,0 C -8,-9 -11,-15 -11,-22 A 11,11 0 1,1 11,-22 C 11,-15 8,-9 0,0 Z" fill="#dc2626" stroke="#ffffff" stroke-width="1.5" />
+      
+      <!-- Inner Circle for ॐ -->
+      <circle cx="0" cy="-22" r="8" fill="#ffffff" />
+      <text x="0" y="-18" text-anchor="middle" font-family="'Segoe UI', 'Nirmala UI', sans-serif" font-size="11" font-weight="800" fill="#dc2626">&#2384;</text>
+    </g>
+
+    <!-- Callout Card -->
+    <g transform="translate(552.9, 319.3)">
+      <rect x="0" y="0" width="215" height="44" rx="5" fill="#ffffff" opacity="0.94" stroke="#ef4444" stroke-width="1.2" filter="drop-shadow(0px 2px 4px rgba(0,0,0,0.15))" />
+      <!-- Left Accent Line -->
+      <rect x="0" y="0" width="4" height="44" rx="2" fill="#dc2626" />
+      <!-- Line 1: English Title -->
+      <text x="10" y="13" font-family="'Segoe UI', Arial, sans-serif" font-size="9.5" font-weight="700" fill="#0f172a">Ratneshwar</text>
+      <!-- Line 2: Devanagari Hindi -->
+      <text x="10" y="26" font-family="'Segoe UI', 'Nirmala UI', sans-serif" font-size="8.5" font-weight="600" fill="#334155">श्री रत्नेश्वर महादेव • मणिकर्...</text>
+      <!-- Line 3: Subtitle / Role -->
+      <text x="10" y="38" font-family="'Segoe UI', Arial, sans-serif" font-size="8" font-style="italic" fill="#0284c7">The Iconic Leaning Temple of Kas...</text>
+    </g>
+
+
+    <!-- Leader Line -->
+    <path d="M 776.2,341.7 Q 711.45,343.7 754.2,345.7" fill="none" stroke="#2563eb" stroke-width="1.2" stroke-dasharray="3,2" opacity="0.75" />
+
+    <!-- Pin at (776.2, 341.7) -->
+    <g transform="translate(776.2, 341.7)">
+      <!-- Shadow -->
+      <ellipse cx="0" cy="3" rx="7" ry="3" fill="#0f172a" opacity="0.25" />
+      
+      <!-- Teardrop Body -->
+      <path d="M 0,0 C -8,-9 -11,-15 -11,-22 A 11,11 0 1,1 11,-22 C 11,-15 8,-9 0,0 Z" fill="#2563eb" stroke="#ffffff" stroke-width="1.5" />
+      
+      <!-- Inner Circle for ॐ -->
+      <circle cx="0" cy="-22" r="8" fill="#ffffff" />
+      <text x="0" y="-18" text-anchor="middle" font-family="'Segoe UI', 'Nirmala UI', sans-serif" font-size="11" font-weight="800" fill="#2563eb">&#2384;</text>
+    </g>
+
+    <!-- Callout Card -->
+    <g transform="translate(539.2, 323.7)">
+      <rect x="0" y="0" width="215" height="44" rx="5" fill="#ffffff" opacity="0.94" stroke="#3b82f6" stroke-width="1.2" filter="drop-shadow(0px 2px 4px rgba(0,0,0,0.15))" />
+      <!-- Left Accent Line -->
+      <rect x="0" y="0" width="4" height="44" rx="2" fill="#2563eb" />
+      <!-- Line 1: English Title -->
+      <text x="10" y="13" font-family="'Segoe UI', Arial, sans-serif" font-size="9.5" font-weight="700" fill="#0f172a">Pasupateshwar</text>
+      <!-- Line 2: Devanagari Hindi -->
+      <text x="10" y="26" font-family="'Segoe UI', 'Nirmala UI', sans-serif" font-size="8.5" font-weight="600" fill="#334155">श्री पशुपतेश्वर • नेपाली मंदिर</text>
+      <!-- Line 3: Subtitle / Role -->
+      <text x="10" y="38" font-family="'Segoe UI', Arial, sans-serif" font-size="8" font-style="italic" fill="#0284c7">Pashupatinath of Nepal Counterpa...</text>
+    </g>
+
+
+    <!-- Leader Line -->
+    <path d="M 690.9,364.7 Q 625.15,372.7 666.9,380.7" fill="none" stroke="#7c3aed" stroke-width="1.2" stroke-dasharray="3,2" opacity="0.75" />
+
+    <!-- Pin at (690.9, 364.7) -->
+    <g transform="translate(690.9, 364.7)">
+      <!-- Shadow -->
+      <ellipse cx="0" cy="3" rx="7" ry="3" fill="#0f172a" opacity="0.25" />
+      
+      <!-- Teardrop Body -->
+      <path d="M 0,0 C -8,-9 -11,-15 -11,-22 A 11,11 0 1,1 11,-22 C 11,-15 8,-9 0,0 Z" fill="#7c3aed" stroke="#ffffff" stroke-width="1.5" />
+      
+      <!-- Inner Circle for ॐ -->
+      <circle cx="0" cy="-22" r="8" fill="#ffffff" />
+      <text x="0" y="-18" text-anchor="middle" font-family="'Segoe UI', 'Nirmala UI', sans-serif" font-size="11" font-weight="800" fill="#7c3aed">&#2384;</text>
+    </g>
+
+    <!-- Callout Card -->
+    <g transform="translate(451.9, 358.7)">
+      <rect x="0" y="0" width="215" height="44" rx="5" fill="#ffffff" opacity="0.94" stroke="#8b5cf6" stroke-width="1.2" filter="drop-shadow(0px 2px 4px rgba(0,0,0,0.15))" />
+      <!-- Left Accent Line -->
+      <rect x="0" y="0" width="4" height="44" rx="2" fill="#7c3aed" />
+      <!-- Line 1: English Title -->
+      <text x="10" y="13" font-family="'Segoe UI', Arial, sans-serif" font-size="9.5" font-weight="700" fill="#0f172a">Triambakeshwar</text>
+      <!-- Line 2: Devanagari Hindi -->
+      <text x="10" y="26" font-family="'Segoe UI', 'Nirmala UI', sans-serif" font-size="8.5" font-weight="600" fill="#334155">श्री त्र्यम्बकेश्वर • गोदौलिया</text>
+      <!-- Line 3: Subtitle / Role -->
+      <text x="10" y="38" font-family="'Segoe UI', Arial, sans-serif" font-size="8" font-style="italic" fill="#0284c7">Trimbakeshwar Nashik Counterpart...</text>
+    </g>
+
+
+    <!-- Leader Line -->
+    <path d="M 760.3,368.2 Q 695.55,370.2 738.3,372.2" fill="none" stroke="#d97706" stroke-width="1.2" stroke-dasharray="3,2" opacity="0.75" />
+
+    <!-- Pin at (760.3, 368.2) -->
+    <g transform="translate(760.3, 368.2)">
+      <!-- Shadow -->
+      <ellipse cx="0" cy="3" rx="7" ry="3" fill="#0f172a" opacity="0.25" />
+      
+      <!-- Teardrop Body -->
+      <path d="M 0,0 C -8,-9 -11,-15 -11,-22 A 11,11 0 1,1 11,-22 C 11,-15 8,-9 0,0 Z" fill="#d97706" stroke="#ffffff" stroke-width="1.5" />
+      
+      <!-- Inner Circle for ॐ -->
+      <circle cx="0" cy="-22" r="8" fill="#ffffff" />
+      <text x="0" y="-18" text-anchor="middle" font-family="'Segoe UI', 'Nirmala UI', sans-serif" font-size="11" font-weight="800" fill="#d97706">&#2384;</text>
+    </g>
+
+    <!-- Callout Card -->
+    <g transform="translate(523.3, 350.2)">
+      <rect x="0" y="0" width="215" height="44" rx="5" fill="#ffffff" opacity="0.94" stroke="#f59e0b" stroke-width="1.2" filter="drop-shadow(0px 2px 4px rgba(0,0,0,0.15))" />
+      <!-- Left Accent Line -->
+      <rect x="0" y="0" width="4" height="44" rx="2" fill="#d97706" />
+      <!-- Line 1: English Title -->
+      <text x="10" y="13" font-family="'Segoe UI', Arial, sans-serif" font-size="9.5" font-weight="700" fill="#0f172a">Someshwar</text>
+      <!-- Line 2: Devanagari Hindi -->
+      <text x="10" y="26" font-family="'Segoe UI', 'Nirmala UI', sans-serif" font-size="8.5" font-weight="600" fill="#334155">श्री सोमेश्वर महादेव • मान मंद...</text>
+      <!-- Line 3: Subtitle / Role -->
+      <text x="10" y="38" font-family="'Segoe UI', Arial, sans-serif" font-size="8" font-style="italic" fill="#0284c7">Somnath Jyotirlinga Counterpart ...</text>
+    </g>
+
+
+    <!-- Leader Line -->
+    <path d="M 759.2,370.0 Q 694.45,372.0 737.2,374.0" fill="none" stroke="#059669" stroke-width="1.2" stroke-dasharray="3,2" opacity="0.75" />
+
+    <!-- Pin at (759.2, 370.0) -->
+    <g transform="translate(759.2, 370.0)">
+      <!-- Shadow -->
+      <ellipse cx="0" cy="3" rx="7" ry="3" fill="#0f172a" opacity="0.25" />
+      
+      <!-- Teardrop Body -->
+      <path d="M 0,0 C -8,-9 -11,-15 -11,-22 A 11,11 0 1,1 11,-22 C 11,-15 8,-9 0,0 Z" fill="#059669" stroke="#ffffff" stroke-width="1.5" />
+      
+      <!-- Inner Circle for ॐ -->
+      <circle cx="0" cy="-22" r="8" fill="#ffffff" />
+      <text x="0" y="-18" text-anchor="middle" font-family="'Segoe UI', 'Nirmala UI', sans-serif" font-size="11" font-weight="800" fill="#059669">&#2384;</text>
+    </g>
+
+    <!-- Callout Card -->
+    <g transform="translate(522.2, 352.0)">
+      <rect x="0" y="0" width="215" height="44" rx="5" fill="#ffffff" opacity="0.94" stroke="#10b981" stroke-width="1.2" filter="drop-shadow(0px 2px 4px rgba(0,0,0,0.15))" />
+      <!-- Left Accent Line -->
+      <rect x="0" y="0" width="4" height="44" rx="2" fill="#059669" />
+      <!-- Line 1: English Title -->
+      <text x="10" y="13" font-family="'Segoe UI', Arial, sans-serif" font-size="9.5" font-weight="700" fill="#0f172a">Ganeshwar (Rameshwar)</text>
+      <!-- Line 2: Devanagari Hindi -->
+      <text x="10" y="26" font-family="'Segoe UI', 'Nirmala UI', sans-serif" font-size="8.5" font-weight="600" fill="#334155">श्री गणेश्वर (रामेश्वर) • मान ...</text>
+      <!-- Line 3: Subtitle / Role -->
+      <text x="10" y="38" font-family="'Segoe UI', Arial, sans-serif" font-size="8" font-style="italic" fill="#0284c7">Rameshwaram Jyotirlinga Counterp...</text>
+    </g>
+
+
+    <!-- Leader Line -->
+    <path d="M 751.2,402.6 Q 686.45,404.6 729.2,406.6" fill="none" stroke="#dc2626" stroke-width="1.2" stroke-dasharray="3,2" opacity="0.75" />
+
+    <!-- Pin at (751.2, 402.6) -->
+    <g transform="translate(751.2, 402.6)">
+      <!-- Shadow -->
+      <ellipse cx="0" cy="3" rx="7" ry="3" fill="#0f172a" opacity="0.25" />
+      
+      <!-- Teardrop Body -->
+      <path d="M 0,0 C -8,-9 -11,-15 -11,-22 A 11,11 0 1,1 11,-22 C 11,-15 8,-9 0,0 Z" fill="#dc2626" stroke="#ffffff" stroke-width="1.5" />
+      
+      <!-- Inner Circle for ॐ -->
+      <circle cx="0" cy="-22" r="8" fill="#ffffff" />
+      <text x="0" y="-18" text-anchor="middle" font-family="'Segoe UI', 'Nirmala UI', sans-serif" font-size="11" font-weight="800" fill="#dc2626">&#2384;</text>
+    </g>
+
+    <!-- Callout Card -->
+    <g transform="translate(514.2, 384.6)">
+      <rect x="0" y="0" width="215" height="44" rx="5" fill="#ffffff" opacity="0.94" stroke="#ef4444" stroke-width="1.2" filter="drop-shadow(0px 2px 4px rgba(0,0,0,0.15))" />
+      <!-- Left Accent Line -->
+      <rect x="0" y="0" width="4" height="44" rx="2" fill="#dc2626" />
+      <!-- Line 1: English Title -->
+      <text x="10" y="13" font-family="'Segoe UI', Arial, sans-serif" font-size="9.5" font-weight="700" fill="#0f172a">Dharmeshwar</text>
+      <!-- Line 2: Devanagari Hindi -->
+      <text x="10" y="26" font-family="'Segoe UI', 'Nirmala UI', sans-serif" font-size="8.5" font-weight="600" fill="#334155">श्री धर्मेश्वर महादेव • मीरजाप...</text>
+      <!-- Line 3: Subtitle / Role -->
+      <text x="10" y="38" font-family="'Segoe UI', Arial, sans-serif" font-size="8" font-style="italic" fill="#0284c7">Sanctum Established by Yama Dhar...</text>
+    </g>
+
+
+    <!-- Leader Line -->
+    <path d="M 733.0,434.4 Q 667.25,428.4 709.0,422.4" fill="none" stroke="#2563eb" stroke-width="1.2" stroke-dasharray="3,2" opacity="0.75" />
+
+    <!-- Pin at (733.0, 434.4) -->
+    <g transform="translate(733.0, 434.4)">
+      <!-- Shadow -->
+      <ellipse cx="0" cy="3" rx="7" ry="3" fill="#0f172a" opacity="0.25" />
+      
+      <!-- Teardrop Body -->
+      <path d="M 0,0 C -8,-9 -11,-15 -11,-22 A 11,11 0 1,1 11,-22 C 11,-15 8,-9 0,0 Z" fill="#2563eb" stroke="#ffffff" stroke-width="1.5" />
+      
+      <!-- Inner Circle for ॐ -->
+      <circle cx="0" cy="-22" r="8" fill="#ffffff" />
+      <text x="0" y="-18" text-anchor="middle" font-family="'Segoe UI', 'Nirmala UI', sans-serif" font-size="11" font-weight="800" fill="#2563eb">&#2384;</text>
+    </g>
+
+    <!-- Callout Card -->
+    <g transform="translate(494.0, 400.4)">
+      <rect x="0" y="0" width="215" height="44" rx="5" fill="#ffffff" opacity="0.94" stroke="#3b82f6" stroke-width="1.2" filter="drop-shadow(0px 2px 4px rgba(0,0,0,0.15))" />
+      <!-- Left Accent Line -->
+      <rect x="0" y="0" width="4" height="44" rx="2" fill="#2563eb" />
+      <!-- Line 1: English Title -->
+      <text x="10" y="13" font-family="'Segoe UI', Arial, sans-serif" font-size="9.5" font-weight="700" fill="#0f172a">Kedareshwar</text>
+      <!-- Line 2: Devanagari Hindi -->
+      <text x="10" y="26" font-family="'Segoe UI', 'Nirmala UI', sans-serif" font-size="8.5" font-weight="600" fill="#334155">श्री केदारेश्वर महादेव • केदार...</text>
+      <!-- Line 3: Subtitle / Role -->
+      <text x="10" y="38" font-family="'Segoe UI', Arial, sans-serif" font-size="8" font-style="italic" fill="#0284c7">Sovereign of Kedar Khanda & Keda...</text>
+    </g>
+
+
+    <!-- Leader Line -->
+    <path d="M 219.2,717.9 Q 283.95,719.9 241.2,721.9" fill="none" stroke="#7c3aed" stroke-width="1.2" stroke-dasharray="3,2" opacity="0.75" />
+
+    <!-- Pin at (219.2, 717.9) -->
+    <g transform="translate(219.2, 717.9)">
+      <!-- Shadow -->
+      <ellipse cx="0" cy="3" rx="7" ry="3" fill="#0f172a" opacity="0.25" />
+      
+      <!-- Teardrop Body -->
+      <path d="M 0,0 C -8,-9 -11,-15 -11,-22 A 11,11 0 1,1 11,-22 C 11,-15 8,-9 0,0 Z" fill="#7c3aed" stroke="#ffffff" stroke-width="1.5" />
+      
+      <!-- Inner Circle for ॐ -->
+      <circle cx="0" cy="-22" r="8" fill="#ffffff" />
+      <text x="0" y="-18" text-anchor="middle" font-family="'Segoe UI', 'Nirmala UI', sans-serif" font-size="11" font-weight="800" fill="#7c3aed">&#2384;</text>
+    </g>
+
+    <!-- Callout Card -->
+    <g transform="translate(241.2, 699.9)">
+      <rect x="0" y="0" width="215" height="44" rx="5" fill="#ffffff" opacity="0.94" stroke="#8b5cf6" stroke-width="1.2" filter="drop-shadow(0px 2px 4px rgba(0,0,0,0.15))" />
+      <!-- Left Accent Line -->
+      <rect x="0" y="0" width="4" height="44" rx="2" fill="#7c3aed" />
+      <!-- Line 1: English Title -->
+      <text x="10" y="13" font-family="'Segoe UI', Arial, sans-serif" font-size="9.5" font-weight="700" fill="#0f172a">Kardhameshwar</text>
+      <!-- Line 2: Devanagari Hindi -->
+      <text x="10" y="26" font-family="'Segoe UI', 'Nirmala UI', sans-serif" font-size="8.5" font-weight="600" fill="#334155">श्री कर्दमेश्वर महादेव • कंदवा</text>
+      <!-- Line 3: Subtitle / Role -->
+      <text x="10" y="38" font-family="'Segoe UI', Arial, sans-serif" font-size="8" font-style="italic" fill="#0284c7">Station #1 of Sacred Panchkroshi...</text>
+    </g>
+
+
+</svg>

@@ -4,11 +4,13 @@ import re
 import json
 import subprocess
 import sys
+import pdf_map_and_pins_builder as pmb
+import master_temples_coordinates as mtc
 
 sys.stdout.reconfigure(encoding='utf-8')
 
 print("=" * 65)
-print("BUILDING COMPLETE DEVI TEMPLES MIRROR PDF")
+print("BUILDING COMPLETE DEVI TEMPLES MIRROR PDF WITH GPS PINPOINTS & MAP")
 print("=" * 65)
 
 # Load extracted Devi articles
@@ -679,16 +681,21 @@ for item in devis:
 
     # Append Digital Links Box if any
     digital_links = []
+    orig_gmap_url = None
     if matched_t and matched_t.get('google_maps_url') and 'Not provided' not in matched_t['google_maps_url']:
-        digital_links.append(f'<strong>Google Maps Coordinates:</strong> <a href="{matched_t["google_maps_url"]}" target="_blank">{matched_t["google_maps_url"][:90]}...</a>')
+        orig_gmap_url = matched_t['google_maps_url']
+        digital_links.append(f'<strong>Google Maps (Source Blog):</strong> <a href="{matched_t["google_maps_url"]}" target="_blank">{matched_t["google_maps_url"][:90]}...</a>')
     if matched_t and matched_t.get('youtube_url') and 'Not provided' not in matched_t['youtube_url']:
         digital_links.append(f'<strong>Temple Darshan Video:</strong> <a href="{matched_t["youtube_url"]}" target="_blank">{matched_t["youtube_url"]}</a>')
 
     for l_href, l_text in links:
         if 'youtube' in l_href and not any(l_href in dl for dl in digital_links):
             digital_links.append(f'<strong>YouTube Video:</strong> <a href="{l_href}" target="_blank">{l_href}</a>')
-        elif 'google.com/maps' in l_href and not any(l_href in dl for dl in digital_links):
-            digital_links.append(f'<strong>Google Maps:</strong> <a href="{l_href}" target="_blank">{l_href[:90]}...</a>')
+        elif 'google.com/maps' in l_href:
+            if not orig_gmap_url:
+                orig_gmap_url = l_href
+            if not any(l_href in dl for dl in digital_links):
+                digital_links.append(f'<strong>Google Maps:</strong> <a href="{l_href}" target="_blank">{l_href[:90]}...</a>')
 
     if digital_links:
         html_parts.append(f"""
@@ -697,6 +704,11 @@ for item in devis:
   {'<br>'.join(digital_links)}
 </div>
 """)
+
+    # Append Verified GPS Pinpoint Box
+    custom_lm = matched_t['address'] if matched_t else None
+    gps_box = pmb.generate_gps_card_html(slug, orig_map_url=orig_gmap_url, custom_landmark=custom_lm)
+    html_parts.append(gps_box)
 
 # =========================================================================
 # 5. APPENDIX: NAVARATRI DEVI PILGRIMAGE CIRCUITS
@@ -764,7 +776,30 @@ html_parts.append("""
     </tr>
   </tbody>
 </table>
+""")
 
+# =========================================================================
+# 6. GEOGRAPHIC PILGRIMAGE MAP & PIN DIRECTORY
+# =========================================================================
+devi_items = []
+for d in devis:
+    devi_items.append({
+        'key': d['slug'],
+        'title': d['orig_title'],
+        'canonical_name': d['orig_title']
+    })
+
+map_appendix = pmb.generate_map_appendix_html(
+    base_dir,
+    "KASHI DEVI TEMPLES & DASGAMAHA VIDYA",
+    "Navadurgas, Navagauris, Shaktipeeths & Tantric Sanctums",
+    "Map_Devi_Temples.svg",
+    devi_items,
+    banner_bg="linear-gradient(135deg, #4c0519 0%, #881337 100%)"
+)
+html_parts.append(map_appendix)
+
+html_parts.append("""
 <div style="margin-top:20pt; border-top:1px solid #d1d5db; padding-top:8pt; font-size:8pt; color:#6b7280; text-align:center;">
   <strong>END OF KASHI DEVI TEMPLES GUIDE</strong> &bull; Compiled from Authorised Website Archive: <a href="https://varanasitemples.in/">https://varanasitemples.in/</a>
 </div>

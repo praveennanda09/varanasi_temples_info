@@ -4,11 +4,13 @@ import re
 import json
 import subprocess
 import sys
+import pdf_map_and_pins_builder as pmb
+import master_temples_coordinates as mtc
 
 sys.stdout.reconfigure(encoding='utf-8')
 
 print("=" * 70)
-print("COMPILING KASHI MAIN GANESH TEMPLES COMPLETE MIRROR HTML & PDF")
+print("COMPILING KASHI MAIN GANESH TEMPLES COMPLETE MIRROR HTML & PDF WITH GPS & MAP")
 print("=" * 70)
 
 # Load extracted Ganesh data
@@ -605,6 +607,12 @@ for idx, t in enumerate(main_10, 1):
         </div>
       </div>
     """]
+
+    # Verified GPS Pinpoint Box
+    orig_gmap = t['google_maps_urls'][0] if t.get('google_maps_urls') else None
+    gps_box = pmb.generate_gps_card_html(t['title'], orig_map_url=orig_gmap, custom_landmark=t.get('location_text'))
+    parts_card.append(gps_box)
+
     html_parts.append(''.join(parts_card))
 
     # Images
@@ -795,7 +803,31 @@ html_parts.append("""
   <li><strong>Dhundhi Vinayak Protocol:</strong> By scriptural injunction in Kashi Khand Chapter 57, pilgrims must always bow before Dhundhi Vinayak before entering the Vishwanath Garbha Griha.</li>
   <li><strong>Sakshi Vinayak Custom:</strong> Pilgrims purchase red mauli (sacred protective thread) and declare: <em>"O Sakshi Vinayaka, be Thou the eternal witness that I have arrived in holy Avimukta and bathed in the celestial Ganga!"</em></li>
 </ul>
+""")
 
+# ==========================================
+# 8. GEOGRAPHIC PILGRIMAGE MAP & PIN DIRECTORY
+# ==========================================
+ganesh_items = []
+for g in main_10:
+    ganesh_items.append({
+        'key': g['title'],
+        'title': g['title'],
+        'canonical_name': g['title'],
+        'landmark': g.get('location_text', '')[:100]
+    })
+
+map_appendix = pmb.generate_map_appendix_html(
+    base_dir,
+    "KASHI MAIN GANESH TEMPLES",
+    "The Ten Essential Vinayaka Sanctums of Kashi",
+    "Map_Main_Ganesh_Temples.svg",
+    ganesh_items,
+    banner_bg="linear-gradient(135deg, #7c2d12 0%, #b45309 100%)"
+)
+html_parts.append(map_appendix)
+
+html_parts.append("""
 <div style="margin-top: 30pt; padding: 12pt; border: 1px solid #fed7aa; border-radius: 6px; text-align: center; font-size: 8.5pt; color: #78716c;">
   <strong>Kashi Offline Pilgrimage Mirror Pack</strong> &bull; Complete Vinayaka Knowledge Base<br>
   Preserved from <a href="https://varanasitemples.in/">https://varanasitemples.in/</a> for offline field worship &bull; Om Gam Ganapataye Namah!

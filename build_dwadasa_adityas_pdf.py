@@ -4,11 +4,13 @@ import re
 import json
 import subprocess
 import sys
+import pdf_map_and_pins_builder as pmb
+import master_temples_coordinates as mtc
 
 sys.stdout.reconfigure(encoding='utf-8')
 
 print("=" * 65)
-print("BUILDING COMPLETE DWADASA ADITYAS MIRROR PDF")
+print("BUILDING COMPLETE DWADASA ADITYAS MIRROR PDF WITH GPS PINPOINTS & MAP")
 print("=" * 65)
 
 # Load extracted articles
@@ -671,8 +673,10 @@ for item in adityas:
 
     # Append Digital Links Box if any
     digital_links = []
+    orig_gmap_url = None
     if matched_t and matched_t.get('google_maps_url') and 'Not provided' not in matched_t['google_maps_url']:
-        digital_links.append(f'<strong>Google Maps Coordinates:</strong> <a href="{matched_t["google_maps_url"]}" target="_blank">{matched_t["google_maps_url"][:90]}...</a>')
+        orig_gmap_url = matched_t['google_maps_url']
+        digital_links.append(f'<strong>Google Maps (Source Blog):</strong> <a href="{matched_t["google_maps_url"]}" target="_blank">{matched_t["google_maps_url"][:90]}...</a>')
     if matched_t and matched_t.get('youtube_url') and 'Not provided' not in matched_t['youtube_url']:
         digital_links.append(f'<strong>Temple Darshan Video:</strong> <a href="{matched_t["youtube_url"]}" target="_blank">{matched_t["youtube_url"]}</a>')
     
@@ -680,8 +684,11 @@ for item in adityas:
     for l_href, l_text in links:
         if 'youtube' in l_href and not any(l_href in dl for dl in digital_links):
             digital_links.append(f'<strong>YouTube Video:</strong> <a href="{l_href}" target="_blank">{l_href}</a>')
-        elif 'google.com/maps' in l_href and not any(l_href in dl for dl in digital_links):
-            digital_links.append(f'<strong>Google Maps:</strong> <a href="{l_href}" target="_blank">{l_href[:90]}...</a>')
+        elif 'google.com/maps' in l_href:
+            if not orig_gmap_url:
+                orig_gmap_url = l_href
+            if not any(l_href in dl for dl in digital_links):
+                digital_links.append(f'<strong>Google Maps:</strong> <a href="{l_href}" target="_blank">{l_href[:90]}...</a>')
 
     if digital_links:
         html_parts.append(f"""
@@ -690,6 +697,12 @@ for item in adityas:
   {'<br>'.join(digital_links)}
 </div>
 """)
+
+    # Append Verified GPS Pinpoint Box
+    if article_id != 'hub':
+        custom_lm = matched_t['address'] if matched_t else None
+        gps_box = pmb.generate_gps_card_html(article_id, orig_map_url=orig_gmap_url, custom_landmark=custom_lm)
+        html_parts.append(gps_box)
 
 # =========================================================================
 # 4. APPENDIX: 1-DAY PILGRIMAGE ITINERARY
@@ -767,7 +780,32 @@ html_parts.append("""
     </tr>
   </tbody>
 </table>
+""")
 
+# =========================================================================
+# 5. GEOGRAPHIC PILGRIMAGE MAP & PIN DIRECTORY
+# =========================================================================
+aditya_items = []
+for a in adityas:
+    if a['id'] == 'hub': continue
+    a_name = a['title'].split('.')[1].strip() if '.' in a['title'] else a['title']
+    aditya_items.append({
+        'key': a['id'],
+        'title': f"{a['title'].split('.')[0].strip()}. {a_name}",
+        'canonical_name': a_name
+    })
+
+map_appendix = pmb.generate_map_appendix_html(
+    base_dir,
+    "KASHI DWADASHA ADITYAS",
+    "Twelve Sacred Solar Sanctums",
+    "Map_Dwadasa_Adityas.svg",
+    aditya_items,
+    banner_bg="linear-gradient(135deg, #7f1d1d 0%, #991b1b 100%)"
+)
+html_parts.append(map_appendix)
+
+html_parts.append("""
 <div style="margin-top:24pt; border-top:1px solid #d1d5db; padding-top:10pt; font-size:8.5pt; color:#6b7280; text-align:center;">
   <strong>END OF KASHI DWADASHA ADITYA PILGRIMAGE GUIDE</strong> &bull; Compiled from Authorised Website Archive: <a href="https://varanasitemples.in/">https://varanasitemples.in/</a>
 </div>
