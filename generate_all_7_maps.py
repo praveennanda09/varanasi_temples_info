@@ -1,17 +1,17 @@
 # generate_all_7_maps.py
 # Generates 7 ultra-high-resolution vector SVG pilgrimage maps matching the user's reference screenshot
-# Features: River Ganga curve, Varanasi road grid, ॐ pin badges, Hindi/English labels, and collision avoidance
+# Features: River Ganga curve, Varanasi road grid, ॐ pin badges, Hindi/English labels, and 100% valid XML escaping
 
 import os
 import sys
 import json
-import math
+import xml.etree.ElementTree as ET
 import master_temples_coordinates as mtc
 
 sys.stdout.reconfigure(encoding='utf-8')
 
 print("=" * 65)
-print("GENERATING 7 HIGH-RESOLUTION VECTOR PILGRIMAGE MAPS (SVG)")
+print("GENERATING 7 HIGH-RESOLUTION VECTOR PILGRIMAGE MAPS (100% VALID SVG/XML)")
 print("=" * 65)
 
 # Map Geographic Boundaries (Varanasi Pilgrimage Zone)
@@ -25,6 +25,17 @@ HEIGHT = 800
 PAD_X = 60
 PAD_Y = 60
 
+def esc(text):
+    """Escapes special characters for strictly valid XML in SVG"""
+    if text is None:
+        return ""
+    return (str(text)
+            .replace('&', '&amp;')
+            .replace('<', '&lt;')
+            .replace('>', '&gt;')
+            .replace('"', '&quot;')
+            .replace("'", '&apos;'))
+
 def project(lat, lon):
     """Projects GPS coordinates into SVG canvas (x, y)"""
     x = PAD_X + ((lon - MIN_LON) / (MAX_LON - MIN_LON)) * (WIDTH - 2 * PAD_X)
@@ -34,10 +45,6 @@ def project(lat, lon):
 
 def build_base_map_svg():
     """Generates the background map features: River Ganga curve, highways, railway, city labels"""
-    # River Ganga polyline through Varanasi (from Assi in south to Varuna Sangam in north)
-    # Assi (25.290, 83.006) -> Kedar (25.300, 83.009) -> Dashashwamedh (25.307, 83.011) ->
-    # Manikarnika (25.311, 83.014) -> Panchganga (25.317, 83.018) -> Trilochan (25.321, 83.022) ->
-    # Rajghat / Varuna Sangam (25.329, 83.037) -> North East exit (25.342, 83.045)
     river_points = [
         (25.2650, 83.0020),
         (25.2750, 83.0035),
@@ -53,27 +60,22 @@ def build_base_map_svg():
         (25.3420, 83.0450)
     ]
     
-    # Project river left bank
     left_bank = [project(lat, lon) for lat, lon in river_points]
     
-    # Create river polygon extending to the eastern boundary
     river_path_d = f"M {left_bank[0][0]},{left_bank[0][1]} "
     for pt in left_bank[1:]:
         river_path_d += f"L {pt[0]},{pt[1]} "
     river_path_d += f"L {WIDTH},{left_bank[-1][1]} L {WIDTH},{HEIGHT} L {left_bank[0][0]},{HEIGHT} Z"
 
     # Roads
-    # NH 731B running across west
     r731_start = project(25.3150, 82.9500)
     r731_mid = project(25.3200, 82.9800)
     r731_end = project(25.3350, 83.0150)
     
-    # DLW Road from south-west
     dlw_start = project(25.2700, 82.9650)
     dlw_mid = project(25.2950, 82.9750)
     dlw_end = project(25.3150, 82.9900)
 
-    # Cantt Railway Station
     cantt_pt = project(25.3280, 82.9850)
     manduadih_pt = project(25.2950, 82.9700)
     city_station_pt = project(25.3350, 83.0120)
@@ -105,7 +107,7 @@ def build_base_map_svg():
 
   <!-- River Flow Label -->
   <g transform="translate({project(25.3000, 83.0250)[0]}, {project(25.3000, 83.0250)[1]}) rotate(-45)">
-    <text fill="#0369a1" font-family="'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="700" opacity="0.65" letter-spacing="4">RIVER GANGES • पवित्र गंगा</text>
+    <text fill="#0369a1" font-family="'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="700" opacity="0.65" letter-spacing="4">RIVER GANGES &#8226; पवित्र गंगा</text>
   </g>
 
   <!-- Highway Badge 731B -->
@@ -152,21 +154,14 @@ def render_temple_pins_and_labels(temple_list, theme_color="#dc2626"):
     """
     Renders pins and 3-line callout cards matching the user's uploaded reference screenshot:
     - Teardrop circular pin with ॐ symbol
-    - 3 lines of text: English Title, Devanagari Hindi, and Role Subtitle
-    - Smart positioning to avoid overlapping in dense central Kashi
+    - 3 lines of text: English Title, Devanagari Hindi, and Role Subtitle (all 100% XML-escaped)
     """
     svg_elements = []
-    
-    # Sort temples by latitude descending (North to South)
     sorted_temples = sorted(temple_list, key=lambda t: t['lat'], reverse=True)
-    
-    # We will compute label anchors with alternating placement
-    placed_boxes = []
 
     for idx, t in enumerate(sorted_temples):
         px, py = project(t['lat'], t['lon'])
         
-        # Determine pin color (cycle through red, blue, purple, amber, emerald)
         pin_colors = [
             ("#dc2626", "#ef4444"), # Red
             ("#2563eb", "#3b82f6"), # Blue
@@ -176,24 +171,17 @@ def render_temple_pins_and_labels(temple_list, theme_color="#dc2626"):
         ]
         dark_col, light_col = pin_colors[idx % len(pin_colors)]
 
-        # Determine label offset to prevent collisions
-        # In Varanasi, Ganga is to the East (right), so dense central shrines can branch right over the river
-        # or left into the city
         is_even = (idx % 2 == 0)
-        
-        # Label card dimensions
         card_w = 215
         card_h = 44
         
-        # Staggered offsets
-        if px > 750: # Near Rajghat / River
+        if px > 750:
             lx = px - card_w - 22
             ly = py - 18
-        elif px < 400: # West Kashi (Manduadih, Pisachmochan)
+        elif px < 400:
             lx = px + 22
             ly = py - 18
-        else: # Central Kashi (Vishwanath / Chowk / Ghats)
-            # Alternate left and right, with vertical jitter
+        else:
             v_jitter = ((idx % 3) - 1) * 14
             if is_even:
                 lx = px + 24
@@ -202,33 +190,25 @@ def render_temple_pins_and_labels(temple_list, theme_color="#dc2626"):
                 lx = px - card_w - 24
                 ly = py - 20 + v_jitter
 
-        # Clamp label inside canvas bounds
         lx = max(15, min(lx, WIDTH - card_w - 15))
         ly = max(20, min(ly, HEIGHT - card_h - 35))
 
-        # Leader line from pin to label card
         leader_line = f"""
     <!-- Leader Line -->
     <path d="M {px},{py} Q {(px + lx + card_w/2)/2},{(py + ly + card_h/2)/2} {lx + (card_w/2 if px > lx and px < lx + card_w else (0 if px < lx else card_w))},{ly + card_h/2}" fill="none" stroke="{dark_col}" stroke-width="1.2" stroke-dasharray="3,2" opacity="0.75" />
 """
 
-        # Map Pin Marker (Teardrop shape + Circular Om Badge)
         pin_marker = f"""
     <!-- Pin at ({px}, {py}) -->
     <g transform="translate({px}, {py})">
-      <!-- Shadow -->
       <ellipse cx="0" cy="3" rx="7" ry="3" fill="#0f172a" opacity="0.25" />
-      
-      <!-- Teardrop Body -->
       <path d="M 0,0 C -8,-9 -11,-15 -11,-22 A 11,11 0 1,1 11,-22 C 11,-15 8,-9 0,0 Z" fill="{dark_col}" stroke="#ffffff" stroke-width="1.5" />
-      
-      <!-- Inner Circle for ॐ -->
       <circle cx="0" cy="-22" r="8" fill="#ffffff" />
       <text x="0" y="-18" text-anchor="middle" font-family="'Segoe UI', 'Nirmala UI', sans-serif" font-size="11" font-weight="800" fill="{dark_col}">&#2384;</text>
     </g>
 """
 
-        # Truncate strings cleanly if necessary
+        # Truncate and strictly XML escape strings
         title_en = t['title']
         if len(title_en) > 28:
             title_en = title_en[:26] + "..."
@@ -241,19 +221,18 @@ def render_temple_pins_and_labels(temple_list, theme_color="#dc2626"):
         if len(subtitle) > 34:
             subtitle = subtitle[:32] + "..."
 
-        # Callout Text Box (3 lines matching user screenshot)
+        title_en_esc = esc(title_en)
+        title_hi_esc = esc(title_hi)
+        subtitle_esc = esc(subtitle)
+
         label_card = f"""
     <!-- Callout Card -->
     <g transform="translate({lx}, {ly})">
       <rect x="0" y="0" width="{card_w}" height="{card_h}" rx="5" fill="#ffffff" opacity="0.94" stroke="{light_col}" stroke-width="1.2" filter="drop-shadow(0px 2px 4px rgba(0,0,0,0.15))" />
-      <!-- Left Accent Line -->
       <rect x="0" y="0" width="4" height="{card_h}" rx="2" fill="{dark_col}" />
-      <!-- Line 1: English Title -->
-      <text x="10" y="13" font-family="'Segoe UI', Arial, sans-serif" font-size="9.5" font-weight="700" fill="#0f172a">{title_en}</text>
-      <!-- Line 2: Devanagari Hindi -->
-      <text x="10" y="26" font-family="'Segoe UI', 'Nirmala UI', sans-serif" font-size="8.5" font-weight="600" fill="#334155">{title_hi}</text>
-      <!-- Line 3: Subtitle / Role -->
-      <text x="10" y="38" font-family="'Segoe UI', Arial, sans-serif" font-size="8" font-style="italic" fill="#0284c7">{subtitle}</text>
+      <text x="10" y="13" font-family="'Segoe UI', Arial, sans-serif" font-size="9.5" font-weight="700" fill="#0f172a">{title_en_esc}</text>
+      <text x="10" y="26" font-family="'Segoe UI', 'Nirmala UI', sans-serif" font-size="8.5" font-weight="600" fill="#334155">{title_hi_esc}</text>
+      <text x="10" y="38" font-family="'Segoe UI', Arial, sans-serif" font-size="8" font-style="italic" fill="#0284c7">{subtitle_esc}</text>
     </g>
 """
         svg_elements.append(leader_line + pin_marker + label_card)
@@ -261,10 +240,13 @@ def render_temple_pins_and_labels(temple_list, theme_color="#dc2626"):
     return "\n".join(svg_elements)
 
 def generate_svg_map(guide_title, guide_subtitle, temples, output_filename, theme_color="#dc2626"):
-    """Compiles complete standalone SVG map"""
+    """Compiles complete standalone SVG map with rigorous XML escaping"""
     base_svg = build_base_map_svg()
     pins_svg = render_temple_pins_and_labels(temples, theme_color)
     
+    guide_title_esc = esc(guide_title)
+    guide_subtitle_esc = esc(guide_subtitle)
+
     full_svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {WIDTH} {HEIGHT}" width="100%" height="auto">
   <defs>
     <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
@@ -278,8 +260,8 @@ def generate_svg_map(guide_title, guide_subtitle, temples, output_filename, them
   <g transform="translate(40, 35)">
     <rect x="-10" y="-16" width="420" height="48" rx="6" fill="#ffffff" opacity="0.95" stroke="#cbd5e1" stroke-width="1.2" filter="url(#shadow)" />
     <rect x="-10" y="-16" width="6" height="48" rx="3" fill="{theme_color}" />
-    <text x="8" y="4" font-family="'Segoe UI', 'Cinzel', serif" font-size="14" font-weight="800" fill="#0f172a">{guide_title}</text>
-    <text x="8" y="21" font-family="'Segoe UI', sans-serif" font-size="9.5" font-weight="600" fill="#64748b">{guide_subtitle} ({len(temples)} Verified Sanctums)</text>
+    <text x="8" y="4" font-family="'Segoe UI', 'Cinzel', serif" font-size="14" font-weight="800" fill="#0f172a">{guide_title_esc}</text>
+    <text x="8" y="21" font-family="'Segoe UI', sans-serif" font-size="9.5" font-weight="600" fill="#64748b">{guide_subtitle_esc} ({len(temples)} Verified Sanctums)</text>
   </g>
 
   <!-- Temple Pins & Callout Cards -->
@@ -287,21 +269,26 @@ def generate_svg_map(guide_title, guide_subtitle, temples, output_filename, them
 
 </svg>"""
 
+    # Validate XML before writing!
+    try:
+        ET.fromstring(full_svg)
+    except Exception as e:
+        print(f"CRITICAL XML SYNTAX ERROR in {output_filename}: {e}")
+        raise e
+
     # Ensure output directories exist
-    os.makedirs('assets/images', exist_ok=True)
-    os.makedirs('Kashi_Exact_Offline_Website/assets/images', exist_ok=True)
-    
-    # Write to root assets
-    root_path = os.path.join('assets/images', output_filename)
-    with open(root_path, 'w', encoding='utf-8') as f:
-        f.write(full_svg)
-        
-    # Write to website assets
-    web_path = os.path.join('Kashi_Exact_Offline_Website/assets/images', output_filename)
-    with open(web_path, 'w', encoding='utf-8') as f:
-        f.write(full_svg)
-        
-    print(f"  [+] Created: {root_path} & {web_path}")
+    dirs_to_write = [
+        'assets/images',
+        'Kashi_Exact_Offline_Website/assets/images',
+        'temples guide pdf/visual maps'
+    ]
+    for d in dirs_to_write:
+        os.makedirs(d, exist_ok=True)
+        out_p = os.path.join(d, output_filename)
+        with open(out_p, 'w', encoding='utf-8') as f:
+            f.write(full_svg)
+
+    print(f"  [+] 100% VALID XML SVG: {output_filename} ({len(full_svg)} bytes)")
 
 # =========================================================================
 # BUILD 7 MAPS
@@ -343,7 +330,6 @@ for b in bhairavs_data:
         'lat': meta['lat'],
         'lon': meta['lon']
     })
-# Add Bal Bhairav
 meta_bal = mtc.get_coords_and_meta('bal-bhairav')
 bhairav_temples.append({
     'title': 'Bal Bhairav Temple',
@@ -470,4 +456,4 @@ generate_svg_map(
     "#0284c7"
 )
 
-print("\nALL 7 PILGRIMAGE MAPS GENERATED SUCCESSFULLY!")
+print("\nALL 7 PILGRIMAGE MAPS GENERATED & XML VALIDATED 100% SUCCESSFULLY!")
