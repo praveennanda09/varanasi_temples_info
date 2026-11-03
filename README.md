@@ -28,11 +28,24 @@ Then open <http://localhost:8080/index.html>. This server uses Python's standard
 
 You can also open the HTML files directly in a browser. A local server is recommended for more consistent behavior with browser features and relative links.
 
+## Seven primary offline PDF guides
+
+The seven PDFs in [`temples guide pdf/`](<temples guide pdf/>) are the pack's **primary offline guides** and are intended to be the practical backbone of a Kashi pilgrimage. Keep them on your phone for offline access, or print them as carry-along guides. They are designed to help pilgrims find the temples and locations described, learn their Puranic significance, and approach the visit with *bhava*—a devotional feeling that can deepen one's connection with God. Use the location guidance alongside local directions and current access information.
+
+1. [Bhairav Temples](<temples guide pdf/Kashi_Bhairav_Temples_Complete_Mirror.pdf>)
+2. [Devi Temples](<temples guide pdf/Kashi_Devi_Temples_Complete_Mirror.pdf>)
+3. [Dwadasa Adityas](<temples guide pdf/Kashi_Dwadasa_Adityas_Complete_Mirror.pdf>)
+4. [Ganga and Teerths](<temples guide pdf/Kashi_Ganga_and_Teerths_Complete_Mirror.pdf>)
+5. [Main Ganesh Temples](<temples guide pdf/Kashi_Main_Ganesh_Temples_Complete_Mirror.pdf>)
+6. [Main Shiva Temples](<temples guide pdf/Kashi_Main_Shiva_Temples_Complete_Mirror.pdf>)
+7. [Main Vishnu Temples](<temples guide pdf/Kashi_Main_Vishnu_Temples_Complete_Mirror.pdf>)
+
 ## Contents
 
 - `Kashi_Pilgrimage_Master_Index.html` — interactive index with guide links, search, geographic zones, and itinerary.
 - `01_Surya_Dwadasa_Aditya.html` through `06_Vishnu_Temples.html` — six browsable deity-specific guides.
-- `Kashi_*_Complete_Mirror.html` and matching PDFs — temple and pilgrimage reference editions.
+- `Kashi_*_Complete_Mirror.html` — browsable temple and pilgrimage reference editions.
+- `temples guide pdf/` — the seven primary offline PDFs listed above.
 - `Kashi_Exact_Offline_Website/` — website mirror, downloaded assets, category and article pages, and its local server.
 - `*_Guide.md`, `MASTER_INDEX.md`, and `README_OFFLINE.txt` — text guides, archive notes, and methodology.
 - `temples_master.csv` / `temples_master.json` — consolidated temple data.
