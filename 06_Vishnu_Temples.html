@@ -1,0 +1,2415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vishnu Temples of Kashi — Keshav, Madhava, Narasimha & Varaha — Kashi Offline Guide</title>
+  <style>
+    
+:root {
+  --primary: #8b1e0f;
+  --primary-dark: #5c1007;
+  --secondary: #d97706;
+  --accent: #b45309;
+  --bg: #fdfbf7;
+  --card-bg: #ffffff;
+  --text: #1f2937;
+  --text-muted: #4b5563;
+  --border: #e5e7eb;
+  --north: #1e40af;
+  --south: #15803d;
+  --east: #b45309;
+  --west: #6b21a8;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--text);
+  background-color: var(--bg);
+  padding-bottom: 60px;
+}
+
+header {
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: #fff;
+  padding: 24px 16px;
+  text-align: center;
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+  position: relative;
+}
+
+header h1 {
+  font-size: 1.6rem;
+  margin-bottom: 8px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+header p {
+  font-size: 0.95rem;
+  opacity: 0.9;
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.nav-bar {
+  background: #374151;
+  padding: 10px 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.nav-bar a {
+  color: #f3f4f6;
+  text-decoration: none;
+  font-size: 0.85rem;
+  padding: 6px 12px;
+  border-radius: 4px;
+  background: rgba(255,255,255,0.1);
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.nav-bar a:hover, .nav-bar a.active {
+  background: var(--secondary);
+  color: #fff;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.intro-box {
+  background: #fff;
+  border-left: 4px solid var(--secondary);
+  padding: 16px;
+  margin-bottom: 24px;
+  border-radius: 0 8px 8px 0;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.intro-box h2 {
+  font-size: 1.2rem;
+  color: var(--primary);
+  margin-bottom: 8px;
+}
+
+.zone-heading {
+  margin: 28px 0 16px 0;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.zone-north { background: var(--north); }
+.zone-south { background: var(--south); }
+.zone-east { background: var(--east); }
+.zone-west { background: var(--west); }
+.zone-other { background: #4b5563; }
+
+.temple-card {
+  background: var(--card-bg);
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  margin-bottom: 16px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  overflow: hidden;
+}
+
+.temple-header {
+  padding: 14px 16px;
+  background: #fff;
+  border-bottom: 1px solid var(--border);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  position: relative;
+}
+
+.temple-header:hover {
+  background: #f9fafb;
+}
+
+.temple-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.temple-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+}
+
+.badge {
+  font-size: 0.75rem;
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.badge-zone-north { background: #dbeafe; color: var(--north); }
+.badge-zone-south { background: #dcfce7; color: var(--south); }
+.badge-zone-east { background: #ffedd5; color: var(--east); }
+.badge-zone-west { background: #f3e8ff; color: var(--west); }
+.badge-zone-other { background: #f3f4f6; color: #4b5563; }
+
+.temple-sub {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.temple-body {
+  padding: 16px;
+}
+
+.temple-img-container {
+  margin-bottom: 16px;
+  text-align: center;
+  background: #f3f4f6;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.temple-img {
+  max-width: 100%;
+  height: auto;
+  max-height: 400px;
+  display: block;
+  margin: 0 auto;
+  object-fit: contain;
+}
+
+.img-caption {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  padding: 6px 10px;
+  background: #eee;
+  font-style: italic;
+}
+
+.detail-section {
+  margin-bottom: 14px;
+}
+
+.detail-label {
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--primary);
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.detail-content {
+  font-size: 0.92rem;
+  color: var(--text);
+  line-height: 1.55;
+  white-space: pre-line;
+}
+
+.sanskrit-box {
+  background: #fffbeb;
+  border-left: 3px solid var(--secondary);
+  padding: 10px 14px;
+  margin: 8px 0;
+  font-family: "Georgia", serif;
+  font-size: 0.95rem;
+  color: #78350f;
+  line-height: 1.6;
+}
+
+.links-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px dashed var(--border);
+}
+
+.btn-link {
+  font-size: 0.8rem;
+  padding: 5px 10px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.btn-mirror {
+  background: #eff6ff;
+  color: #1d4ed8;
+  border: 1px solid #bfdbfe;
+}
+
+.btn-mirror:hover { background: #dbeafe; }
+
+.btn-live {
+  background: #f3f4f6;
+  color: #4b5563;
+  border: 1px solid #d1d5db;
+}
+
+.btn-live:hover { background: #e5e7eb; }
+
+/* Filter / Search Bar */
+.search-box {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 1rem;
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  margin-bottom: 16px;
+  outline: none;
+  background: #fff;
+}
+
+.search-box:focus {
+  border-color: var(--secondary);
+}
+
+.filter-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.filter-pill {
+  padding: 6px 12px;
+  border-radius: 16px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  background: #fff;
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+}
+
+.filter-pill.active {
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+}
+
+/* Itinerary Table */
+.itinerary-day {
+  background: #fff;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  margin-bottom: 20px;
+  padding: 16px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.itinerary-day h3 {
+  color: var(--primary);
+  border-bottom: 2px solid #fef3c7;
+  padding-bottom: 6px;
+  margin-bottom: 12px;
+  font-size: 1.15rem;
+}
+
+.itinerary-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 8px;
+  font-size: 0.88rem;
+}
+
+.itinerary-table th, .itinerary-table td {
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+}
+
+.itinerary-table th {
+  background: #f9fafb;
+  color: var(--text-muted);
+}
+
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Vishnu Temples of Kashi — Keshav, Madhava, Narasimha & Varaha</h1>
+  <p>Authentic scriptural narratives, Kashi Khand citations, verified addresses, and offline photographs from varanasitemples.in</p>
+</header>
+
+
+<div class="nav-bar">
+  <a href="Kashi_Pilgrimage_Master_Index.html">&#127963; Master Index</a>
+  <a href="01_Surya_Dwadasa_Aditya.html">&#9728; Surya (12 Aditya)</a>
+  <a href="02_Bhairav_Temples.html">&#128081; Bhairav (9 Temples)</a>
+  <a href="03_Devi_and_Dashamaha_Vidya.html">&#128330; Devi & Mahavidya</a>
+  <a href="04_Shiva_and_Kashi_Jyotirlingas.html">&#128740; Shiva & Jyotirlingas</a>
+  <a href="05_Vinayaka_Temples.html">&#128024; Vinayaka Temples</a>
+  <a href="06_Vishnu_Temples.html">&#127807; Vishnu Temples</a>
+  <a href="Kashi_Exact_Offline_Website/index.html">&#128194; Exact Website Mirror</a>
+</div>
+
+
+<div class="container">
+  
+<div class="intro-box">
+  <h2>The Vaishnava Sacred Geography of Kashi</h2>
+  <p>While Kashi is the capital of Shiva, Lord Vishnu is its primordial guardian. Vishnu first sanctified Kashi as <strong>Adi Keshav</strong> at the confluence of the Varuna and Ganga before Shiva arrived. He also presides over Panchganga Ghat as <strong>Bindu Madhav</strong>, worshipped along with the sacred <em>Pancha Madhava</em> shrines, the seven fierce <em>Sapta Narasimha</em> shrines, and the cosmic <em>Varaha</em> manifestations.</p>
+</div>
+
+
+  <input type="text" id="searchInput" class="search-box" placeholder="&#128269; Search temples by name, locality, or address..." onkeyup="filterTemples()">
+
+  
+        <div class="zone-heading zone-north">
+          <span>North Kashi</span>
+          <span style="font-size:0.85rem; font-weight:normal;">(13 shrines)</span>
+        </div>
+        
+
+    <div class="temple-card" data-zone="North Kashi" data-name="adi keshav none noted in source">
+      <div class="temple-header">
+        <div class="temple-title-row">
+          <div class="temple-title">Adi Keshav</div>
+          <span class="badge badge-zone-north">North Kashi</span>
+        </div>
+        <div class="temple-sub">
+          <strong>Form:</strong> First Deity who Welcomed Shiva to Kashi (Varuna Sangam) | <strong>Alt:</strong> None noted in source
+        </div>
+      </div>
+      <div class="temple-body">
+        
+        <div class="temple-img-container">
+          <img class="temple-img" src="Kashi_Exact_Offline_Website/assets/images/adi-keshav-New-988x1024.jpeg" alt="Adi Keshav" loading="eager" onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src=\'assets/images/\' + this.src.split(\'/\').pop();}" >
+          <div class="img-caption">adi keshav New</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128214; Puranic Origin & Significance</div>
+          <div class="detail-content">Kashi Khand, Chapter 69 mentions the various forms of Keshav  (Lord Vishnu) in Varanasi.  Lord Vishnu told Sage Bindu (details given under Bindu Madhav temple) that a devotee who worships him (Lord Vishnu) in the Lord’s form as Adi Keshav finds his sadness being cleansed away and will enjoy only happiness.
+
+By worshipping Adi Keshav the devotee attains Mukti. Adi Keshav has installed Sangameshwar Ling at Varuna Ganga confluence and the former grants Moksha to the devotees.
+
+-----------------------------------
+
+Kashi Khand, Chapter 97, Shlok 15
+
+वेदेश्वरादुदीच्यां तु क्षेत्रज्ञश्चादिकेशव:
+
+दृष्टं  त्रिभुवनं सर्वं तस्य संदर्षनाद्ध्रुवम्
+
+By worshipping Aadi Keshav, located in the north of Vedeshwar, the devotee derives the benefits of worshipping the three worlds
+
+-----------------------------------
+
+(ADI KESHAV)
+
+This entire area covering the temple is a Shakti Peet and any prayers will yield multiple benefits.  Also, as this temple falls under the area of confluence of two rivers viz. Ganga and Varuna (Ganga Varuna Sangamam), the temple acquires religious power.
+
+(GANGA VARUNA SANGAM)</div>
+        </div>
+
+        
+        <div class="detail-section">
+          <div class="detail-label">&#128366; Sanskrit Verses (Kashi Khand)</div>
+          <div class="sanskrit-box">वेदेश्वरादुदीच्यां तु क्षेत्रज्ञश्चादिकेशव:
+दृष्टं  त्रिभुवनं सर्वं तस्य संदर्षनाद्ध्रुवम्</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128205; Location & Approach Route</div>
+          <div class="detail-content">
+            <strong>Stated Address:</strong> A-37/51, Rajghat Fort. Devotees can travel upto this place by autorickshaw or cycle rickshaw or car<br>
+            <strong>Nearby Ghat:</strong> Not directly on a riverfront ghat<br>
+            <strong>Zone Verification:</strong> North Kashi (Confidence: High)<br>
+            <span style="font-size:0.82rem; color:#6b7280;">Evidence: North landmarks: ['rajghat', 'adi keshav', 'varuna']</span><br>
+            <strong>Directions:</strong> Adi Keshav is located at A-37/51, Rajghat Fort. Devotees can travel upto this place by autorickshaw or cycle rickshaw or car.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#9200; Darshan Timings & Ritual Logistics</div>
+          <div class="detail-content">
+            <strong>Timings:</strong> The place of worship is open from 06.00 a.m. to 12.00 Noon and from 04.00 p.m. to 10.00 p.m.  The<br>
+            <strong>Puja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#128220; Scriptural References</div>
+          <div class="detail-content">
+            Kashi Khand, Chapter 69, Kashi Khand, Chapter 97, Shlok 15
+          </div>
+        </div>
+
+        <div class="links-row">
+          <a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/vishnu-temples/adi-keshav/index.html">&#128194; Exact Website Mirror Article</a>
+          <a class="btn-link btn-live" href="https://varanasitemples.in/category/vishnu-temples/adi-keshav/" target="_blank" rel="noopener">&#127760; Original Live URL &#8599;</a>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="temple-card" data-zone="North Kashi" data-name="gyan keshav none noted in source">
+      <div class="temple-header">
+        <div class="temple-title-row">
+          <div class="temple-title">Gyan Keshav</div>
+          <span class="badge badge-zone-north">North Kashi</span>
+        </div>
+        <div class="temple-sub">
+          <strong>Form:</strong> Bestower of Divine Knowledge | <strong>Alt:</strong> None noted in source
+        </div>
+      </div>
+      <div class="temple-body">
+        
+        <div class="temple-img-container">
+          <img class="temple-img" src="Kashi_Exact_Offline_Website/assets/images/GYAN-KESHAV.jpg" alt="Gyan Keshav" loading="eager" onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src=\'assets/images/\' + this.src.split(\'/\').pop();}" >
+          <div class="img-caption">GYAN KESHAV</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128214; Puranic Origin & Significance</div>
+          <div class="detail-content">Kashi Khand mentions one Teerth known as Swet Deep and nearby is Gyan Keshav.  Devotees who take bath in Swet Deep Teerth and worship Gyan Keshav will acquire ultimate knowledge.
+
+While the Teerth is no longer visible, worshipping Gyan Keshav is considered good for education.  Instead of taking bath in Teerth, now devotees take bath in river Ganges as this temple is exactly on the banks of river Ganges.
+
+(GYAN KESHAV)</div>
+        </div>
+
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128205; Location & Approach Route</div>
+          <div class="detail-content">
+            <strong>Stated Address:</strong> A-37/51, Adi Keshav Temple, Rajghat Fort. Devotees can travel upto this place by autorickshaw or cycle rickshaw or car<br>
+            <strong>Nearby Ghat:</strong> Not directly on a riverfront ghat<br>
+            <strong>Zone Verification:</strong> North Kashi (Confidence: High)<br>
+            <span style="font-size:0.82rem; color:#6b7280;">Evidence: North landmarks: ['rajghat', 'adi keshav']</span><br>
+            <strong>Directions:</strong> Gyan Keshav is located at A-37/51, Adi Keshav Temple, Rajghat Fort. Devotees can travel upto this place by autorickshaw or cycle rickshaw or car.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#9200; Darshan Timings & Ritual Logistics</div>
+          <div class="detail-content">
+            <strong>Timings:</strong> The place of worship is open from 06.00 a.m. to 12.00 Noon and from 04.00 p.m. to 10.00 p.m.  The<br>
+            <strong>Puja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#128220; Scriptural References</div>
+          <div class="detail-content">
+            Not specified in the source article.
+          </div>
+        </div>
+
+        <div class="links-row">
+          <a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/vishnu-temples/gyan-keshav/index.html">&#128194; Exact Website Mirror Article</a>
+          <a class="btn-link btn-live" href="https://varanasitemples.in/category/vishnu-temples/gyan-keshav/" target="_blank" rel="noopener">&#127760; Original Live URL &#8599;</a>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="temple-card" data-zone="North Kashi" data-name="narad keshav none noted in source">
+      <div class="temple-header">
+        <div class="temple-title-row">
+          <div class="temple-title">Narad Keshav</div>
+          <span class="badge badge-zone-north">North Kashi</span>
+        </div>
+        <div class="temple-sub">
+          <strong>Form:</strong> Installed by Devrishi Narada | <strong>Alt:</strong> None noted in source
+        </div>
+      </div>
+      <div class="temple-body">
+        
+        <div class="temple-img-container">
+          <img class="temple-img" src="Kashi_Exact_Offline_Website/assets/images/NARAD-KESHAV-1-559x1024.jpg" alt="Narad Keshav" loading="eager" onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src=\'assets/images/\' + this.src.split(\'/\').pop();}" >
+          <div class="img-caption">NARAD KESHAV</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128214; Puranic Origin & Significance</div>
+          <div class="detail-content">Kashi Khand stated that Lord Vishnu is available in the form of Narad Keshav at Narad Teerth.
+
+(NARAD KESHAV)
+
+Devotees who take bath at Narad Teerth and worship Narad Keshav will be blessed by Lord Vishnu and they will gain ultimate knowledge in life. Narad Teerth is non existent now.  It may be worth mentioning that in ancient times (may be 1000 - 2000 years back) there might have been various Teerths (Sacred ponds) etc. in Kashi. Now most of them have dried up.  Wherever Kashi Khand mentions Teerth and if the Teerth is not available, devotees may take bath in River Ganga.</div>
+        </div>
+
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128205; Location & Approach Route</div>
+          <div class="detail-content">
+            <strong>Stated Address:</strong> A-10/80 Prahlad Ghat, inside Shitla Mandir opp. Prahladeshwar<br>
+            <strong>Nearby Ghat:</strong> Prahlad Ghat<br>
+            <strong>Zone Verification:</strong> North Kashi (Confidence: Medium)<br>
+            <span style="font-size:0.82rem; color:#6b7280;">Evidence: North landmarks: ['prahlad ghat']</span><br>
+            <strong>Directions:</strong> Narad Keshav is located at A-10/80 Prahlad Ghat, inside Shitla Mandir opp. Prahladeshwar. People can approach this place by traveling in a rickshaw upto Prahlad Ghat Chauraha and then on foot.  Alternatively they can take a boat ride upto Prahlad Ghat and climb the steps.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#9200; Darshan Timings & Ritual Logistics</div>
+          <div class="detail-content">
+            <strong>Timings:</strong> The place of worship is open practically throughout and devotees can worship/perform any pooja by their own.<br>
+            <strong>Puja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#128220; Scriptural References</div>
+          <div class="detail-content">
+            Not specified in the source article.
+          </div>
+        </div>
+
+        <div class="links-row">
+          <a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/vishnu-temples/narad-keshav/index.html">&#128194; Exact Website Mirror Article</a>
+          <a class="btn-link btn-live" href="https://varanasitemples.in/category/vishnu-temples/narad-keshav/" target="_blank" rel="noopener">&#127760; Original Live URL &#8599;</a>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="temple-card" data-zone="North Kashi" data-name="bhrigu keshav none noted in source">
+      <div class="temple-header">
+        <div class="temple-title-row">
+          <div class="temple-title">Bhrigu Keshav</div>
+          <span class="badge badge-zone-north">North Kashi</span>
+        </div>
+        <div class="temple-sub">
+          <strong>Form:</strong> Installed by Maharishi Bhrigu | <strong>Alt:</strong> None noted in source
+        </div>
+      </div>
+      <div class="temple-body">
+        
+        <div class="temple-img-container">
+          <img class="temple-img" src="Kashi_Exact_Offline_Website/assets/images/Bhrigu-Keshav.jpeg" alt="Bhrigu Keshav" loading="eager" onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src=\'assets/images/\' + this.src.split(\'/\').pop();}" >
+          <div class="img-caption">Bhrigu Keshav</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128214; Puranic Origin & Significance</div>
+          <div class="detail-content">Lord Vishnu told Bindu Rishi, there is Bhargav Teerth where the Lord is existing in the form of Bhrigu Keshav.
+
+Devotees who take bath in Bhargav Teerth and worship Bhrigu Keshav will receive all sorts of blessings of Lord Vishnu and their desires will be fulfilled.  Bhargav Teerth is not existent now.</div>
+        </div>
+
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128205; Location & Approach Route</div>
+          <div class="detail-content">
+            <strong>Stated Address:</strong> Gola Ghat on the steps aloft the river Ganga. People can approach this place by travelling in a rickshaw upto Prahlad Ghat crossroads and then on foot<br>
+            <strong>Nearby Ghat:</strong> LOCATION OF BHRIGU KESHAV
+Bhrigu Keshav is located at Gola Ghat<br>
+            <strong>Zone Verification:</strong> North Kashi (Confidence: Medium)<br>
+            <span style="font-size:0.82rem; color:#6b7280;">Evidence: North landmarks: ['prahlad ghat']</span><br>
+            <strong>Directions:</strong> Bhrigu Keshav is located at Gola Ghat on the steps aloft the river Ganga. People can approach this place by travelling in a rickshaw upto Prahlad Ghat crossroads and then on foot.  Alternatively they can take a boat ride upto Gola Ghat and climb the steps.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#9200; Darshan Timings & Ritual Logistics</div>
+          <div class="detail-content">
+            <strong>Timings:</strong> The place of worship is open practically throughout and devotees can worship/perform any pooja by their own.<br>
+            <strong>Puja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#128220; Scriptural References</div>
+          <div class="detail-content">
+            Not specified in the source article.
+          </div>
+        </div>
+
+        <div class="links-row">
+          <a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/vishnu-temples/bhrigu-keshav/index.html">&#128194; Exact Website Mirror Article</a>
+          <a class="btn-link btn-live" href="https://varanasitemples.in/category/vishnu-temples/bhrigu-keshav/" target="_blank" rel="noopener">&#127760; Original Live URL &#8599;</a>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="temple-card" data-zone="North Kashi" data-name="gopi govind none noted in source">
+      <div class="temple-header">
+        <div class="temple-title-row">
+          <div class="temple-title">Gopi Govind</div>
+          <span class="badge badge-zone-north">North Kashi</span>
+        </div>
+        <div class="temple-sub">
+          <strong>Form:</strong> Lord of Gopis at Ganga Riverfront | <strong>Alt:</strong> None noted in source
+        </div>
+      </div>
+      <div class="temple-body">
+        
+        
+        <div class="temple-img-container">
+          <img class="temple-img" 
+               src="Kashi_Exact_Offline_Website/assets/images/Gopi-Govind-Shrine.svg" 
+               alt="Gopi Govind" 
+               loading="eager"
+               onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/Gopi-Govind-Shrine.svg';}">
+          <div class="img-caption">&#128330; Sacred Iconographic Representation of Gopi Govind (Kashi Sanctum)</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128214; Puranic Origin & Significance</div>
+          <div class="detail-content">In Gopi Govind Teerth Lord Vishnu is present in the form of Gopi Govind.
+
+Worshippers of Gopi Govind shall always be blessed by Lord Vishnu. The aforementioned Teerth is not in existence now.</div>
+        </div>
+
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128205; Location & Approach Route</div>
+          <div class="detail-content">
+            <strong>Stated Address:</strong> K.4/24, Lal Ghat  near Birla Sanskrit Vidhyalaya, Birla House<br>
+            <strong>Nearby Ghat:</strong> Lal Ghat<br>
+            <strong>Zone Verification:</strong> North Kashi (Confidence: Medium)<br>
+            <span style="font-size:0.82rem; color:#6b7280;">Evidence: North landmarks: ['machhodari']</span><br>
+            <strong>Directions:</strong> Gopi Govind is located at K.4/24, Lal Ghat  near Birla Sanskrit Vidhyalaya, Birla House. Devotees can travel upto Bhaironath or Machhodari in a rickshaw and walk on foot to the place of Gopi Govind. Alternatively, they can travel by boat upto Lal Ghat and climb the steps. This temple also houses Narayani Devi (Lakshmi Devi) which has reference in Kashi Khand, Chapter 70.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#9200; Darshan Timings & Ritual Logistics</div>
+          <div class="detail-content">
+            <strong>Timings:</strong> The temple is open from 07.00 a.m. to 10.00 p.m.  Aarties are held in the morning.<br>
+            <strong>Puja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#128220; Scriptural References</div>
+          <div class="detail-content">
+            Kashi Khand, Chapter 70
+          </div>
+        </div>
+
+        <div class="links-row">
+          <a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/vishnu-temples/gopi-govind/index.html">&#128194; Exact Website Mirror Article</a>
+          <a class="btn-link btn-live" href="https://varanasitemples.in/category/vishnu-temples/gopi-govind/" target="_blank" rel="noopener">&#127760; Original Live URL &#8599;</a>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="temple-card" data-zone="North Kashi" data-name="nar narayan none noted in source">
+      <div class="temple-header">
+        <div class="temple-title-row">
+          <div class="temple-title">Nar Narayan</div>
+          <span class="badge badge-zone-north">North Kashi</span>
+        </div>
+        <div class="temple-sub">
+          <strong>Form:</strong> Sage Avatars of Vishnu | <strong>Alt:</strong> None noted in source
+        </div>
+      </div>
+      <div class="temple-body">
+        
+        <div class="temple-img-container">
+          <img class="temple-img" src="Kashi_Exact_Offline_Website/assets/images/Nar-Narayan.jpeg" alt="Nar Narayan" loading="eager" onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src=\'assets/images/\' + this.src.split(\'/\').pop();}" >
+          <div class="img-caption">Nar Narayan</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128214; Puranic Origin & Significance</div>
+          <div class="detail-content">Kashi Khand states one Narayan Teerth where Lord Vishnu is available in the form of Nar Narayan.
+
+Devotees who worship Nar Narayan will become equivalent to Lord Vishnu. Narayan Teerth is not in existence now.</div>
+        </div>
+
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128205; Location & Approach Route</div>
+          <div class="detail-content">
+            <strong>Stated Address:</strong> A.1/72, Badri Narayan Ghat steps near Gai Ghat<br>
+            <strong>Nearby Ghat:</strong> Badri Narayan Ghat steps near Gai Ghat<br>
+            <strong>Zone Verification:</strong> North Kashi (Confidence: Medium)<br>
+            <span style="font-size:0.82rem; color:#6b7280;">Evidence: North landmarks: ['gai ghat']; East/Riverfront landmarks: ['ghat steps']</span><br>
+            <strong>Directions:</strong> Nar Narayan (popularly known as Badri Narayan) is located at A.1/72, Badri Narayan Ghat steps near Gai Ghat.  Devotees can approach this place by travelling upto Bhaironath in rickshaw and then on foot.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#9200; Darshan Timings & Ritual Logistics</div>
+          <div class="detail-content">
+            <strong>Timings:</strong> The place is open for worship from 06.00 a.m. to 12.00 Noon. During other times, Darshan is allowed through open window.  Name of the priest is Shri Dwarka Nath.<br>
+            <strong>Puja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#128220; Scriptural References</div>
+          <div class="detail-content">
+            Not specified in the source article.
+          </div>
+        </div>
+
+        <div class="links-row">
+          <a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/vishnu-temples/nar-narayan/index.html">&#128194; Exact Website Mirror Article</a>
+          <a class="btn-link btn-live" href="https://varanasitemples.in/category/vishnu-temples/nar-narayan/" target="_blank" rel="noopener">&#127760; Original Live URL &#8599;</a>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="temple-card" data-zone="North Kashi" data-name="prahlad keshav none noted in source">
+      <div class="temple-header">
+        <div class="temple-title-row">
+          <div class="temple-title">Prahlad Keshav</div>
+          <span class="badge badge-zone-north">North Kashi</span>
+        </div>
+        <div class="temple-sub">
+          <strong>Form:</strong> Associated with Bhakta Prahlada (Prahlad Ghat) | <strong>Alt:</strong> None noted in source
+        </div>
+      </div>
+      <div class="temple-body">
+        
+        <div class="temple-img-container">
+          <img class="temple-img" src="Kashi_Exact_Offline_Website/assets/images/PRAHLAD-KESHAV.jpg" alt="Prahlad Keshav" loading="eager" onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src=\'assets/images/\' + this.src.split(\'/\').pop();}" >
+          <div class="img-caption">PRAHLAD KESHAV</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128214; Puranic Origin & Significance</div>
+          <div class="detail-content">Lord Vishnu told Bindu Rishi, there is Prahlad Teerth where the Lord is existing in the form of Prahlad Keshav.
+
+(PRAHLAD KESHAV)
+
+Devotees who take bath in Prahlad Teerth and worship Prahlad Keshav will receive all sorts of blessings of Lord Vishnu.  Prahlad Teerth is not existent now.</div>
+        </div>
+
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128205; Location & Approach Route</div>
+          <div class="detail-content">
+            <strong>Stated Address:</strong> A-10/80 Prahlad Ghat inside Prahledeshwar temple, on the face of Ganges, on the right side wall. People can approach this place by traveling in a rickshaw upto Prahlad Ghat Chauraha and then on foot<br>
+            <strong>Nearby Ghat:</strong> Prahlad Ghat<br>
+            <strong>Zone Verification:</strong> North Kashi (Confidence: Medium)<br>
+            <span style="font-size:0.82rem; color:#6b7280;">Evidence: North landmarks: ['prahlad ghat']</span><br>
+            <strong>Directions:</strong> Prahlad Keshav is located at A-10/80 Prahlad Ghat inside Prahledeshwar temple, on the face of Ganges, on the right side wall. People can approach this place by traveling in a rickshaw upto Prahlad Ghat Chauraha and then on foot.  Alternatively they can take a boat ride upto Prahlad Ghat and climb the steps.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#9200; Darshan Timings & Ritual Logistics</div>
+          <div class="detail-content">
+            <strong>Timings:</strong> The temple remains open from 06.00 a.m. to 11.00 a.m. and from 06.00 p.m. to 07.00 p.m. Aarti is held in the morning.<br>
+            <strong>Puja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#128220; Scriptural References</div>
+          <div class="detail-content">
+            Not specified in the source article.
+          </div>
+        </div>
+
+        <div class="links-row">
+          <a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/vishnu-temples/prahlad-keshav/index.html">&#128194; Exact Website Mirror Article</a>
+          <a class="btn-link btn-live" href="https://varanasitemples.in/category/vishnu-temples/prahlad-keshav/" target="_blank" rel="noopener">&#127760; Original Live URL &#8599;</a>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="temple-card" data-zone="North Kashi" data-name="prayag madhav none noted in source">
+      <div class="temple-header">
+        <div class="temple-title-row">
+          <div class="temple-title">Prayag Madhav</div>
+          <span class="badge badge-zone-north">North Kashi</span>
+        </div>
+        <div class="temple-sub">
+          <strong>Form:</strong> Confluence Form of Madhava (Dashashwamedh) | <strong>Alt:</strong> None noted in source
+        </div>
+      </div>
+      <div class="temple-body">
+        
+        <div class="temple-img-container">
+          <img class="temple-img" src="Kashi_Exact_Offline_Website/assets/images/Prayag-Madhav.jpeg" alt="Prayag Madhav" loading="eager" onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src=\'assets/images/\' + this.src.split(\'/\').pop();}" >
+          <div class="img-caption">Prayag Madhav</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128214; Puranic Origin & Significance</div>
+          <div class="detail-content">Kashi Khand mentions Prayag Teerth where devotees have been advised to take bath and worship Prayag Madhav.  Prayag Teerth has been mentioned to the north of Dasaswamedh.
+
+A person worshipping Prayag Madhav will be cleansed of all his sins.
+
+Kashi Khand has attached a great importance to bathing in Prayag Teerth.  Prayag Teerth, as such, is not in existence but this falls within the larger area of Dasaswamedh.
+
+One point needs to be mentioned here to make things clear.  At the time when Skanda Puran was conceived by Bhagwan Ved Vyas and when the Puran was actually written, there were only five bathing places in Ganga at Varanasi, which had a great religious importance, namely Assi, Dasaswamedh, Manikarnika, Panchganga and Varuna.  Even today, South Indian pilgrims who visit Varanasi, for their Kashi Yatra, perform Shraddha Karma at the above five Ghats.   Over a period of several centuries, many Ghats have come up in the name of many Kings or the Royal families, etc.  Religiously speaking, Dasaswamedh extends to a very wide area in the river Ganga and may include several new Ghats in its fold.
+
+Therefore, Prayag Teerth as mentioned in Kashi Khand is a part of Dasaswamedh. Devotees may consider both as synonymous.  Great importance has been attached to taking bath in the above Teerth in Magh Month and worshipping Prayag Madhav.  Persons doing so, will be blessed with wealth, food grains, happy family and will attain Moksha.</div>
+        </div>
+
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128205; Location & Approach Route</div>
+          <div class="detail-content">
+            <strong>Stated Address:</strong> D.17/111, in the premises of Ram Mandir at Dasaswamedh Ghat<br>
+            <strong>Nearby Ghat:</strong> perform Shraddha Karma at the above five Ghat<br>
+            <strong>Zone Verification:</strong> North Kashi (Confidence: High)<br>
+            <span style="font-size:0.82rem; color:#6b7280;">Evidence: South landmarks: ['assi']; North landmarks: ['panchganga', 'varuna']; East/Riverfront landmarks: ['manikarnika', 'dasaswamedh']</span><br>
+            <strong>Directions:</strong> Prayag Madhav is located at D.17/111, in the premises of Ram Mandir at Dasaswamedh Ghat. Some people also call it  Dharani Varaha (Ref: Varanasi Vaibhav by Pt. Kuber Nath Sukul). Devotees can travel upto Dasaswamedh Ghat in a rickshaw.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#9200; Darshan Timings & Ritual Logistics</div>
+          <div class="detail-content">
+            <strong>Timings:</strong> The temple remains opens for worship from 05.00 p.m. to 12.00 Noon and from 04.00 p.m. to 09.30 p.m.<br>
+            <strong>Puja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#128220; Scriptural References</div>
+          <div class="detail-content">
+            Not specified in the source article.
+          </div>
+        </div>
+
+        <div class="links-row">
+          <a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/vishnu-temples/prayag-madhav/index.html">&#128194; Exact Website Mirror Article</a>
+          <a class="btn-link btn-live" href="https://varanasitemples.in/category/vishnu-temples/prayag-madhav/" target="_blank" rel="noopener">&#127760; Original Live URL &#8599;</a>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="temple-card" data-zone="North Kashi" data-name="trivikrama none noted in source">
+      <div class="temple-header">
+        <div class="temple-title-row">
+          <div class="temple-title">Trivikrama</div>
+          <span class="badge badge-zone-north">North Kashi</span>
+        </div>
+        <div class="temple-sub">
+          <strong>Form:</strong> Cosmic Three-Step Manifestation | <strong>Alt:</strong> None noted in source
+        </div>
+      </div>
+      <div class="temple-body">
+        
+        <div class="temple-img-container">
+          <img class="temple-img" src="Kashi_Exact_Offline_Website/assets/images/Trivikrama-1-640x1024.jpg" alt="Trivikrama" loading="eager" onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src=\'assets/images/\' + this.src.split(\'/\').pop();}" >
+          <div class="img-caption">Trivikrama</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128214; Puranic Origin & Significance</div>
+          <div class="detail-content">Towards the north of Trilochan, Lord Vishnu is present in the form of Trivikrama.
+
+Devotees worshipping this Lord will be blessed with Lakshmi and their sins will be cleansed away. By Lakshmi, readers may infer wealth and prosperity.
+
+(TRIVIKRAMA)
+
+-----------------------------------
+
+Kashi Khand, Chapter 61, Shlok 200
+
+त्रिविक्रमोऽस्म्यहं काश्यामुदीच्यां च त्रिलोचनात्
+
+ददामि पूजितो लक्ष्मीं हरामि वृजिनान्यपि
+
+(Vishnu Bhagwan says) I am positioned in the form of Trivikram in north of Trilochan.  I grant Lakshmi (prosperity) to devotees who worship me there and the sins of such devotees are destroyed by me.
+
+-----------------------------------</div>
+        </div>
+
+        
+        <div class="detail-section">
+          <div class="detail-label">&#128366; Sanskrit Verses (Kashi Khand)</div>
+          <div class="sanskrit-box">त्रिविक्रमोऽस्म्यहं काश्यामुदीच्यां च त्रिलोचनात्
+ददामि पूजितो लक्ष्मीं हरामि वृजिनान्यपि</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128205; Location & Approach Route</div>
+          <div class="detail-content">
+            <strong>Stated Address:</strong> A-2/80, Trilochaneshwar Temple. Above the idol, it has been mentioned as Brihaspati<br>
+            <strong>Nearby Ghat:</strong> they can have a boat ride upto Trilochan Ghat<br>
+            <strong>Zone Verification:</strong> North Kashi (Confidence: High)<br>
+            <span style="font-size:0.82rem; color:#6b7280;">Evidence: North landmarks: ['trilochan', 'machhodari', 'trilochan ghat']</span><br>
+            <strong>Directions:</strong> Trivikrama is located at A-2/80, Trilochaneshwar Temple. Above the idol, it has been mentioned as Brihaspati. The temple is approachable from Birla Hospital after Machhodari upto which place, people can travel in Auto or Cycle Rickshaw. Alternatively, they can have a boat ride upto Trilochan Ghat and climb the stairs.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#9200; Darshan Timings & Ritual Logistics</div>
+          <div class="detail-content">
+            <strong>Timings:</strong> S
+The temple is open for worship 05.30 a.m. to 12.00 noon and 05.00 p.m. to 11 p.m.  Mangala Aarti is performed at 05.30 a.m. and Shayan Aarti at 11.00 p.m. For doing special pooja etc., it is advisable to consult the Poojari before hand.
+POOJARIS OF THE TEMPLE
+Pandit Girija Shankar Pandey is the Poojari of the temple and he can be contacted in his Cell number (0)9236511267 for doing any special pooja.<br>
+            <strong>Puja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#128220; Scriptural References</div>
+          <div class="detail-content">
+            Kashi Khand, Chapter 61, Shlok 200
+          </div>
+        </div>
+
+        <div class="links-row">
+          <a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/vishnu-temples/trivikrama/index.html">&#128194; Exact Website Mirror Article</a>
+          <a class="btn-link btn-live" href="https://varanasitemples.in/category/vishnu-temples/trivikrama/" target="_blank" rel="noopener">&#127760; Original Live URL &#8599;</a>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="temple-card" data-zone="North Kashi" data-name="vaman keshav madhusudhan">
+      <div class="temple-header">
+        <div class="temple-title-row">
+          <div class="temple-title">Vaman Keshav</div>
+          <span class="badge badge-zone-north">North Kashi</span>
+        </div>
+        <div class="temple-sub">
+          <strong>Form:</strong> Dwarf Avatar Form of Vishnu | <strong>Alt:</strong> Madhusudhan
+        </div>
+      </div>
+      <div class="temple-body">
+        
+        <div class="temple-img-container">
+          <img class="temple-img" src="Kashi_Exact_Offline_Website/assets/images/Vaman-Keshav-Madhusudan-1.jpg" alt="Vaman Keshav" loading="eager" onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src=\'assets/images/\' + this.src.split(\'/\').pop();}" >
+          <div class="img-caption">Vaman Keshav (Madhusudan)</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128214; Puranic Origin & Significance</div>
+          <div class="detail-content">Lord Vishnu mentions one Vaman Teerth where the Lord is existing in the name of Vaman Keshav.
+
+Devotees who take bath in Vaman Teerth and worship Vaman Keshav will receive blessings of all round happiness. Vaman Teerth is not in existence now.
+
+(VAMAN KESHAV)</div>
+        </div>
+
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128205; Location & Approach Route</div>
+          <div class="detail-content">
+            <strong>Stated Address:</strong> A.2/29, Trilochan<br>
+            <strong>Nearby Ghat:</strong> they can have a boat ride upto Trilochan Ghat<br>
+            <strong>Zone Verification:</strong> North Kashi (Confidence: High)<br>
+            <span style="font-size:0.82rem; color:#6b7280;">Evidence: North landmarks: ['trilochan', 'machhodari', 'trilochan ghat']</span><br>
+            <strong>Directions:</strong> Vaman Keshav is located at A.2/29, Trilochan. The temple is also known as Madhusudhan.  The temple is approachable from Birla Hospital after Machhodari upto which place, people can travel by Auto or Cycle Rickshaw. Alternatively, they can have a boat ride upto Trilochan Ghat and climb the stairs. This deity is known by the name of Madhusudan.  On Akshay Triteeya Day, many devotees worship this deity and they make offering of butter to the Lord.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#9200; Darshan Timings & Ritual Logistics</div>
+          <div class="detail-content">
+            <strong>Timings:</strong> The temple is open from 05.30 a.m. to 01.00 p.m. and from 03.00 p.m. to 09.00 p.m.<br>
+            <strong>Puja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#128220; Scriptural References</div>
+          <div class="detail-content">
+            Not specified in the source article.
+          </div>
+        </div>
+
+        <div class="links-row">
+          <a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/vishnu-temples/vaman-keshav/index.html">&#128194; Exact Website Mirror Article</a>
+          <a class="btn-link btn-live" href="https://varanasitemples.in/category/vishnu-temples/vaman-keshav/" target="_blank" rel="noopener">&#127760; Original Live URL &#8599;</a>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="temple-card" data-zone="North Kashi" data-name="lakshmi narsimha none noted in source">
+      <div class="temple-header">
+        <div class="temple-title-row">
+          <div class="temple-title">Lakshmi Narsimha</div>
+          <span class="badge badge-zone-north">North Kashi</span>
+        </div>
+        <div class="temple-sub">
+          <strong>Form:</strong> Grace-Bestowing Narasimha with Lakshmi | <strong>Alt:</strong> None noted in source
+        </div>
+      </div>
+      <div class="temple-body">
+        
+        <div class="temple-img-container">
+          <img class="temple-img" src="Kashi_Exact_Offline_Website/assets/images/Lakshmi-Narayan-1024x768.jpg" alt="Lakshmi Narsimha" loading="eager" onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src=\'assets/images/\' + this.src.split(\'/\').pop();}" >
+          <div class="img-caption">Lakshmi Narayan</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128214; Puranic Origin & Significance</div>
+          <div class="detail-content">Kashi Khand mentions one Lakshmi Narsimha Teerth where devotees should take bath and worship Lord Vishnu in the form of Lakshmi Narsimha.
+
+(LAKSHMI NARSIMHA)
+
+Such devotees would be blessed with all round happiness, prosperity and release from rebirth. The Teerth is not in existence as on date.</div>
+        </div>
+
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128205; Location & Approach Route</div>
+          <div class="detail-content">
+            <strong>Stated Address:</strong> K.20/159, Raj Mandir, inside Dakshin Mukhi (one eyed) Hanumanji temple<br>
+            <strong>Nearby Ghat:</strong> Raj Mandir is a locality near Gai Ghat<br>
+            <strong>Zone Verification:</strong> North Kashi (Confidence: Medium)<br>
+            <span style="font-size:0.82rem; color:#6b7280;">Evidence: North landmarks: ['gai ghat']</span><br>
+            <strong>Directions:</strong> Lakshmi Narsimha is located at K.20/159, Raj Mandir, inside Dakshin Mukhi (one eyed) Hanumanji temple. This temple is near Kashi Vyayamshala / Suvodhini Vidya Mandir. Raj Mandir is a locality near Gai Ghat.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#9200; Darshan Timings & Ritual Logistics</div>
+          <div class="detail-content">
+            <strong>Timings:</strong> The temple is open for worship from 06.00 a.m. to 12.00 Noon and from 02.00 p.m. to 10.00 p.m.  Aarties are performed in the morning and evening.<br>
+            <strong>Puja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#128220; Scriptural References</div>
+          <div class="detail-content">
+            Not specified in the source article.
+          </div>
+        </div>
+
+        <div class="links-row">
+          <a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/vishnu-temples/lakshmi-narsimha/index.html">&#128194; Exact Website Mirror Article</a>
+          <a class="btn-link btn-live" href="https://varanasitemples.in/category/vishnu-temples/lakshmi-narsimha/" target="_blank" rel="noopener">&#127760; Original Live URL &#8599;</a>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="temple-card" data-zone="North Kashi" data-name="mahabal narsimha none noted in source">
+      <div class="temple-header">
+        <div class="temple-title-row">
+          <div class="temple-title">Mahabal Narsimha</div>
+          <span class="badge badge-zone-north">North Kashi</span>
+        </div>
+        <div class="temple-sub">
+          <strong>Form:</strong> Mightiest Form of Narasimha | <strong>Alt:</strong> None noted in source
+        </div>
+      </div>
+      <div class="temple-body">
+        
+        <div class="temple-img-container">
+          <img class="temple-img" src="Kashi_Exact_Offline_Website/assets/images/Mahabal-New-one_065.jpg" alt="Mahabal Narsimha" loading="eager" onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src=\'assets/images/\' + this.src.split(\'/\').pop();}" >
+          <div class="img-caption">Mahabal New one_065</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128214; Puranic Origin & Significance</div>
+          <div class="detail-content">Towards the eastern direction of Omkareshwar, Lord Vishnu is present in the form of Mahabal Narasimha.
+
+Devotees worshipping Mahabal Narasimha will not see Yamdoot, meaning thereby they will reach heaven after death.
+
+(MAHABAL NARSIMHA)</div>
+        </div>
+
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128205; Location & Approach Route</div>
+          <div class="detail-content">
+            <strong>Stated Address:</strong> A-2/9 North of Trilochan, in the premises of Kameshwar Temple.  The temple is approachable from a famous locality called Prahlad Ghat (after Machhodari)<br>
+            <strong>Nearby Ghat:</strong> The temple is approachable from a famous locality called Prahlad Ghat<br>
+            <strong>Zone Verification:</strong> North Kashi (Confidence: High)<br>
+            <span style="font-size:0.82rem; color:#6b7280;">Evidence: North landmarks: ['trilochan', 'machhodari', 'kameshwar', 'prahlad ghat']</span><br>
+            <strong>Directions:</strong> Devotees worshipping Mahabal Narasimha will not see Yamdoot, meaning thereby they will reach heaven after death.
+Mahabal Narsimha is located at A-2/9 North of Trilochan, in the premises of Kameshwar Temple.  The temple is approachable from a famous locality called Prahlad Ghat (after Machhodari).  Devotees can travel beyond Machhodari upto Birla Hospital in a rickshaw and walk on foot to the temple.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#9200; Darshan Timings & Ritual Logistics</div>
+          <div class="detail-content">
+            <strong>Timings:</strong> S
+The temple is open for worship from 05.00 a.m. to 12.00 Noon and 05.00 p.m. to 08.30 p.m.  Mangala Aarti is held at 5.30 a.m. and Shayan Aarti at 09.30 p.m.
+For doing special pooja, it is advisable to consult the Poojari before hand.<br>
+            <strong>Puja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#128220; Scriptural References</div>
+          <div class="detail-content">
+            Not specified in the source article.
+          </div>
+        </div>
+
+        <div class="links-row">
+          <a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/vishnu-temples/mahabal-narsimha/index.html">&#128194; Exact Website Mirror Article</a>
+          <a class="btn-link btn-live" href="https://varanasitemples.in/category/vishnu-temples/mahabal-narsimha/" target="_blank" rel="noopener">&#127760; Original Live URL &#8599;</a>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="temple-card" data-zone="North Kashi" data-name="vidar narsimha none noted in source">
+      <div class="temple-header">
+        <div class="temple-title-row">
+          <div class="temple-title">Vidar Narsimha</div>
+          <span class="badge badge-zone-north">North Kashi</span>
+        </div>
+        <div class="temple-sub">
+          <strong>Form:</strong> Chest-Ripping Aspect of Narasimha | <strong>Alt:</strong> None noted in source
+        </div>
+      </div>
+      <div class="temple-body">
+        
+        <div class="temple-img-container">
+          <img class="temple-img" src="Kashi_Exact_Offline_Website/assets/images/VIDAR-NARSIMHA.jpg" alt="Vidar Narsimha" loading="eager" onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src=\'assets/images/\' + this.src.split(\'/\').pop();}" >
+          <div class="img-caption">VIDAR NARSIMHA</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128214; Puranic Origin & Significance</div>
+          <div class="detail-content">Lord Vishnu blesses devotees in the form of Vidar Narsimha at the Teerth of the same name.
+
+Devotees who worship Vidar Narsimha will see that all their obstacles are removed and they will be free from any sort of hindrance. The Teerth is not in existence now.
+
+(VIDAR NARSIMHA)</div>
+        </div>
+
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128205; Location & Approach Route</div>
+          <div class="detail-content">
+            <strong>Stated Address:</strong> A-10/82 Prahlad Ghat. People can approach this place by traveling in a rickshaw upto Birla Hospital after Macchodari and then on foot<br>
+            <strong>Nearby Ghat:</strong> Prahlad Ghat<br>
+            <strong>Zone Verification:</strong> North Kashi (Confidence: Medium)<br>
+            <span style="font-size:0.82rem; color:#6b7280;">Evidence: North landmarks: ['prahlad ghat']</span><br>
+            <strong>Directions:</strong> Vidar Narsimha is located at A-10/82 Prahlad Ghat. People can approach this place by traveling in a rickshaw upto Birla Hospital after Macchodari and then on foot.  Alternatively they can take a boat ride upto Prahlad Ghat and climb the steps.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#9200; Darshan Timings & Ritual Logistics</div>
+          <div class="detail-content">
+            <strong>Timings:</strong> The temple remains open from 04.30 a.m. to 12.00 Noon and from 04.00 p.m. to 09.00 p.m.  Narsimha Jayanti is celebrated with great fervour on Vaishakh Shukla Triodashi.<br>
+            <strong>Puja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#128220; Scriptural References</div>
+          <div class="detail-content">
+            Not specified in the source article.
+          </div>
+        </div>
+
+        <div class="links-row">
+          <a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/vishnu-temples/vidar-narsimha/index.html">&#128194; Exact Website Mirror Article</a>
+          <a class="btn-link btn-live" href="https://varanasitemples.in/category/vishnu-temples/vidar-narsimha/" target="_blank" rel="noopener">&#127760; Original Live URL &#8599;</a>
+        </div>
+      </div>
+    </div>
+    
+
+        <div class="zone-heading zone-south">
+          <span>South Kashi</span>
+          <span style="font-size:0.85rem; font-weight:normal;">(3 shrines)</span>
+        </div>
+        
+
+    <div class="temple-card" data-zone="South Kashi" data-name="hayagreev keshav none noted in source">
+      <div class="temple-header">
+        <div class="temple-title-row">
+          <div class="temple-title">Hayagreev Keshav</div>
+          <span class="badge badge-zone-south">South Kashi</span>
+        </div>
+        <div class="temple-sub">
+          <strong>Form:</strong> Horse-Necked Embodiment of Vedas | <strong>Alt:</strong> None noted in source
+        </div>
+      </div>
+      <div class="temple-body">
+        
+        <div class="temple-img-container">
+          <img class="temple-img" src="Kashi_Exact_Offline_Website/assets/images/Hayagreev-Keshav-1.jpg" alt="Hayagreev Keshav" loading="eager" onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src=\'assets/images/\' + this.src.split(\'/\').pop();}" >
+          <div class="img-caption">Hayagreev Keshav</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128214; Puranic Origin & Significance</div>
+          <div class="detail-content">Kashi Khand mentions one Hayagreev Teerth where Lord Vishnu is present in the form of Hayagreev Keshav.
+
+The devotees worshipping Hayagreev Keshav will reach Lord’s Lotus feet. Hayagreev Teerth is not in existence now.
+
+(HAYAGREEV KESHAV)
+
+-----------------------------------
+
+Kashi Khand, Chapter 61, Shlok 23
+
+हयग्रीवे महातीर्थे मां हयग्रीवकेशवम्
+
+प्रणम्य प्राप्नुयान्नूनं तद्विष्णो: परमं पदम्
+
+(Lord Vishnu Says) I am called present in form of Hargriva Keshava at Hayagriva Teerth. By simply worshipping me, a devotee surely attains the supreme post of Vishnu.
+
+-----------------------------------</div>
+        </div>
+
+        
+        <div class="detail-section">
+          <div class="detail-label">&#128366; Sanskrit Verses (Kashi Khand)</div>
+          <div class="sanskrit-box">हयग्रीवे महातीर्थे मां हयग्रीवकेशवम्
+प्रणम्य प्राप्नुयान्नूनं तद्विष्णो: परमं पदम्</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128205; Location & Approach Route</div>
+          <div class="detail-content">
+            <strong>Stated Address:</strong> B.3/25 near Anandmayee Hospital at Bhadaini<br>
+            <strong>Nearby Ghat:</strong> Not directly on a riverfront ghat<br>
+            <strong>Zone Verification:</strong> South Kashi (Confidence: High)<br>
+            <span style="font-size:0.82rem; color:#6b7280;">Evidence: South landmarks: ['sonarpura', 'bhadaini']</span><br>
+            <strong>Directions:</strong> The devotees worshipping Hayagreev Keshav will reach Lord’s Lotus feet. Hayagreev Teerth is not in existence now.
+Hayagreev Keshav is located at B.3/25 near Anandmayee Hospital at Bhadaini.  People can reach this place by auto/car or cycle rickshaw. If one approaches from Sonarpura area, Hayagreev Keshav will be just before the Hospital.  This place of worship also houses Hayagreeva Yogini which is mentioned in Kashi Khand, Chapter 45.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#9200; Darshan Timings & Ritual Logistics</div>
+          <div class="detail-content">
+            <strong>Timings:</strong> The place is open for worship throughout.<br>
+            <strong>Puja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#128220; Scriptural References</div>
+          <div class="detail-content">
+            Kashi Khand, Chapter 45, Kashi Khand, Chapter 61, Shlok 23
+          </div>
+        </div>
+
+        <div class="links-row">
+          <a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/vishnu-temples/hayagreev-keshav/index.html">&#128194; Exact Website Mirror Article</a>
+          <a class="btn-link btn-live" href="https://varanasitemples.in/category/vishnu-temples/hayagreev-keshav/" target="_blank" rel="noopener">&#127760; Original Live URL &#8599;</a>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="temple-card" data-zone="South Kashi" data-name="prachand narsimha none noted in source">
+      <div class="temple-header">
+        <div class="temple-title-row">
+          <div class="temple-title">Prachand Narsimha</div>
+          <span class="badge badge-zone-south">South Kashi</span>
+        </div>
+        <div class="temple-sub">
+          <strong>Form:</strong> Formidable Slayer of Hiranyakashipu | <strong>Alt:</strong> None noted in source
+        </div>
+      </div>
+      <div class="temple-body">
+        
+        <div class="temple-img-container">
+          <img class="temple-img" src="Kashi_Exact_Offline_Website/assets/images/Prachand-Narsimha-1.jpg" alt="Prachand Narsimha" loading="eager" onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src=\'assets/images/\' + this.src.split(\'/\').pop();}" >
+          <div class="img-caption">Prachand Narsimha</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128214; Puranic Origin & Significance</div>
+          <div class="detail-content">Kashi Khand states, towards the east of Chanda Bhairav, Lord Vishnu is present in the form Prachand Narsimha.
+
+Prachand means huge/big.  Devotees worshipping Prachand Narsimha are cleansed of all their sins irrespective of their magnitude.
+
+(PRACHAND NARSIMHA)
+
+-----------------------------------
+
+Kashi Khand, Chapter 61, Shlok 190
+
+प्रचण्ड नरसिम्होऽहं चण्डभैरवपूर्वत :
+
+प्रचण्डमप्यघं  कृत्वा निष्पाप्मा स्यात्तदर्चनात्
+
+Lord Vishnu says, “Towards the east of Chand Bhairav, I am available as Prachand Narsimha and by worshipping this deity, the devotee will become sinless even after committing gravest of sins”.
+
+-----------------------------------</div>
+        </div>
+
+        
+        <div class="detail-section">
+          <div class="detail-label">&#128366; Sanskrit Verses (Kashi Khand)</div>
+          <div class="sanskrit-box">प्रचण्ड नरसिम्होऽहं चण्डभैरवपूर्वत :
+प्रचण्डमप्यघं  कृत्वा निष्पाप्मा स्यात्तदर्चनात्</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128205; Location & Approach Route</div>
+          <div class="detail-content">
+            <strong>Stated Address:</strong> B.1/151, Jagannath Temple, Assi Ghat<br>
+            <strong>Nearby Ghat:</strong> Assi Ghat<br>
+            <strong>Zone Verification:</strong> South Kashi (Confidence: Medium)<br>
+            <span style="font-size:0.82rem; color:#6b7280;">Evidence: South landmarks: ['assi']</span><br>
+            <strong>Directions:</strong> Prachand Narsimha is located at B.1/151, Jagannath Temple, Assi Ghat. People can travel upto this place in a rickshaw.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#9200; Darshan Timings & Ritual Logistics</div>
+          <div class="detail-content">
+            <strong>Timings:</strong> The temple is open from 06.00 a.m. to 12.00 noon and from 03.00 p.m. to 09.00 p.m.  Aarties are held in the morning and evening.<br>
+            <strong>Puja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#128220; Scriptural References</div>
+          <div class="detail-content">
+            Kashi Khand, Chapter 61, Shlok 190
+          </div>
+        </div>
+
+        <div class="links-row">
+          <a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/vishnu-temples/prachand-narsimha/index.html">&#128194; Exact Website Mirror Article</a>
+          <a class="btn-link btn-live" href="https://varanasitemples.in/category/vishnu-temples/prachand-narsimha/" target="_blank" rel="noopener">&#127760; Original Live URL &#8599;</a>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="temple-card" data-zone="South Kashi" data-name="vitank narsimha none noted in source">
+      <div class="temple-header">
+        <div class="temple-title-row">
+          <div class="temple-title">Vitank Narsimha</div>
+          <span class="badge badge-zone-south">South Kashi</span>
+        </div>
+        <div class="temple-sub">
+          <strong>Form:</strong> Protector Narasimha Shrine | <strong>Alt:</strong> None noted in source
+        </div>
+      </div>
+      <div class="temple-body">
+        
+        
+        <div class="temple-img-container">
+          <img class="temple-img" 
+               src="Kashi_Exact_Offline_Website/assets/images/Vitank-Narsimha-Shrine.svg" 
+               alt="Vitank Narsimha" 
+               loading="eager"
+               onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/Vitank-Narsimha-Shrine.svg';}">
+          <div class="img-caption">&#128330; Sacred Iconographic Representation of Vitank Narsimha (Kashi Sanctum)</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128214; Puranic Origin & Significance</div>
+          <div class="detail-content">Kashi Khand, in Chapter 61, mentions among other forms of Lord Vishnu, one Vitank Narsimha.
+
+Devotees who worship this deity will always be courageous and gain mental strength which is vital for important decision making.</div>
+        </div>
+
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128205; Location & Approach Route</div>
+          <div class="detail-content">
+            <strong>Stated Address:</strong> the steps of Kedar Ghat, on left side. Kedareshwar Temple, Kedar Ghat is a famous place and devotees can reach here by rickshaw, or by boat upto Kedar Ghat (river side)<br>
+            <strong>Nearby Ghat:</strong> The idol of Vitank Narsimha is located at the steps of Kedar Ghat<br>
+            <strong>Zone Verification:</strong> South Kashi (Confidence: High)<br>
+            <span style="font-size:0.82rem; color:#6b7280;">Evidence: South landmarks: ['kedar ghat', 'kedareshwar']</span><br>
+            <strong>Directions:</strong> Vitank Narsimha is located just outside the eastern door of Kedareshwar temple at B.6/102. This door faces the river Ganga. The idol of Vitank Narsimha is located at the steps of Kedar Ghat, on left side. Kedareshwar Temple, Kedar Ghat is a famous place and devotees can reach here by rickshaw, or by boat upto Kedar Ghat (river side).
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#9200; Darshan Timings & Ritual Logistics</div>
+          <div class="detail-content">
+            <strong>Timings:</strong> The place of worship is open throughout the day and devotees can worship as per their convenience.<br>
+            <strong>Puja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#128220; Scriptural References</div>
+          <div class="detail-content">
+            Not specified in the source article.
+          </div>
+        </div>
+
+        <div class="links-row">
+          <a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/vishnu-temples/vitank-narsimha/index.html">&#128194; Exact Website Mirror Article</a>
+          <a class="btn-link btn-live" href="https://varanasitemples.in/category/vishnu-temples/vitank-narsimha/" target="_blank" rel="noopener">&#127760; Original Live URL &#8599;</a>
+        </div>
+      </div>
+    </div>
+    
+
+        <div class="zone-heading zone-east">
+          <span>East Kashi</span>
+          <span style="font-size:0.85rem; font-weight:normal;">(4 shrines)</span>
+        </div>
+        
+
+    <div class="temple-card" data-zone="East Kashi" data-name="ganga keshav none noted in source">
+      <div class="temple-header">
+        <div class="temple-title-row">
+          <div class="temple-title">Ganga Keshav</div>
+          <span class="badge badge-zone-east">East Kashi</span>
+        </div>
+        <div class="temple-sub">
+          <strong>Form:</strong> Installed by Vishnu at Lalita Ghat | <strong>Alt:</strong> None noted in source
+        </div>
+      </div>
+      <div class="temple-body">
+        
+        <div class="temple-img-container">
+          <img class="temple-img" src="Kashi_Exact_Offline_Website/assets/images/Ganga-Keshav-1.jpeg" alt="Ganga Keshav" loading="eager" onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src=\'assets/images/\' + this.src.split(\'/\').pop();}" >
+          <div class="img-caption">Ganga Keshav</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128214; Puranic Origin & Significance</div>
+          <div class="detail-content">Kashi Khand mentions Ganga Keshav Teerth, where Lord Vishnu is present in the name of Ganga Keshav.
+
+Intelligent devotees who worship Ganga Keshav will be respected and glorified in Vishnu Lok (Vaikunth).
+
+(GANGA KESHAV)
+
+Those who take bath in this Teerth and perform Shraddh Ceremony for their forefathers, with due donations etc. will satisfy their forefathers for over 100 years.   While the Teerth is not in existence now, devotees may take bath in river Ganga. According to old timers, this Teerth may have merged with River Ganga.</div>
+        </div>
+
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128205; Location & Approach Route</div>
+          <div class="detail-content">
+            <strong>Stated Address:</strong> D.1/67, Lalita Ghat, just above the steps<br>
+            <strong>Nearby Ghat:</strong> Lalita Ghat<br>
+            <strong>Zone Verification:</strong> East Kashi (Confidence: High)<br>
+            <span style="font-size:0.82rem; color:#6b7280;">Evidence: East/Riverfront landmarks: ['dasaswamedh', 'lalita ghat']</span><br>
+            <strong>Directions:</strong> Ganga Keshav is located at D.1/67, Lalita Ghat, just above the steps. Devotees can travel upto Dasaswamedh Ghat in a rickshaw and it is easier to walk through Ghats rather than through Gullies to reach this place.  Nepali Pasupatinath temple is a landmark below which, devotees can find Ganga Keshav, empanelled in eastern wall, opp. Shiv Ling.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#9200; Darshan Timings & Ritual Logistics</div>
+          <div class="detail-content">
+            <strong>Timings:</strong> This place of worship is open practically through out and devotees can have darshan.<br>
+            <strong>Puja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#128220; Scriptural References</div>
+          <div class="detail-content">
+            Not specified in the source article.
+          </div>
+        </div>
+
+        <div class="links-row">
+          <a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/vishnu-temples/ganga-keshav/index.html">&#128194; Exact Website Mirror Article</a>
+          <a class="btn-link btn-live" href="https://varanasitemples.in/category/vishnu-temples/ganga-keshav/" target="_blank" rel="noopener">&#127760; Original Live URL &#8599;</a>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="temple-card" data-zone="East Kashi" data-name="shwet madhav none noted in source">
+      <div class="temple-header">
+        <div class="temple-title-row">
+          <div class="temple-title">Shwet Madhav</div>
+          <span class="badge badge-zone-east">East Kashi</span>
+        </div>
+        <div class="temple-sub">
+          <strong>Form:</strong> White Form of Lord Madhava | <strong>Alt:</strong> None noted in source
+        </div>
+      </div>
+      <div class="temple-body">
+        
+        <div class="temple-img-container">
+          <img class="temple-img" src="Kashi_Exact_Offline_Website/assets/images/Shwet-Madhav.jpeg" alt="Shwet Madhav" loading="eager" onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src=\'assets/images/\' + this.src.split(\'/\').pop();}" >
+          <div class="img-caption">Shwet Madhav</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128214; Puranic Origin & Significance</div>
+          <div class="detail-content">Kashi Khand mentions Lord Vishnu in the form of Shwet Madhav in the vicinity of  Vishalakshi Devi.
+
+Devotees who worship Shwet Madhav will attain the status equivalent to the Lord.</div>
+        </div>
+
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128205; Location & Approach Route</div>
+          <div class="detail-content">
+            <strong>Stated Address:</strong> D.3/71, Big Hanuman temple at Mir Ghat<br>
+            <strong>Nearby Ghat:</strong> Big Hanuman temple at Mir Ghat<br>
+            <strong>Zone Verification:</strong> East Kashi (Confidence: High)<br>
+            <span style="font-size:0.82rem; color:#6b7280;">Evidence: East/Riverfront landmarks: ['dasaswamedh', 'mir ghat']</span><br>
+            <strong>Directions:</strong> Shwet Madhav is located at D.3/71, Big Hanuman temple at Mir Ghat.  The deity is located in side the temple premises, exactly opposite Hanuman idol.  Devotees can reach this place by traveling upto Dasaswamedh in a rickshaw and then on foot.  Alternatively, they can take a boat ride upto Mir Ghat and climb the steps.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#9200; Darshan Timings & Ritual Logistics</div>
+          <div class="detail-content">
+            <strong>Timings:</strong> The temple is open from 07.00 a.m. to 01.00 p.m. and from 04.00 p.m. to 09.00 p.m.  Aarties are held in the morning and evening.
+POOJARIES OF THE TEMPLE
+Shri Rajeshwar Prasad is the poojari of the temple.<br>
+            <strong>Puja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#128220; Scriptural References</div>
+          <div class="detail-content">
+            Not specified in the source article.
+          </div>
+        </div>
+
+        <div class="links-row">
+          <a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/vishnu-temples/shwet-madhav/index.html">&#128194; Exact Website Mirror Article</a>
+          <a class="btn-link btn-live" href="https://varanasitemples.in/category/vishnu-temples/shwet-madhav/" target="_blank" rel="noopener">&#127760; Original Live URL &#8599;</a>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="temple-card" data-zone="East Kashi" data-name="tribhuwan keshav none noted in source">
+      <div class="temple-header">
+        <div class="temple-title-row">
+          <div class="temple-title">Tribhuwan Keshav</div>
+          <span class="badge badge-zone-east">East Kashi</span>
+        </div>
+        <div class="temple-sub">
+          <strong>Form:</strong> Lord of the Three Worlds | <strong>Alt:</strong> None noted in source
+        </div>
+      </div>
+      <div class="temple-body">
+        
+        <div class="temple-img-container">
+          <img class="temple-img" src="Kashi_Exact_Offline_Website/assets/images/Tribhuwan-Keshav.jpeg" alt="Tribhuwan Keshav" loading="eager" onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src=\'assets/images/\' + this.src.split(\'/\').pop();}" >
+          <div class="img-caption">Tribhuwan Keshav</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128214; Puranic Origin & Significance</div>
+          <div class="detail-content">In Tri Lok Sundari Vandi Devi’s South Kashi, Lord Vishnu is present in the form of Tribhuwan Keshav. (Kashi Khand mentions this as Bhuwan Keshav).
+
+Devotees who worship Tribhuwan Keshav will not see womb again, meaning thereby that there will be no rebirth.
+
+-----------------------------------
+
+Kashi Khand, Chapter 61, Shlok 26
+
+वन्ध्यास्त्रिलोकसुन्दर्या याम्यां यो मां समर्चयेत्
+
+काश्यां ख्यातं त्रिभुवनकेशवं न स गर्भभाक्
+
+(Lord Vishnu says) In Kashi to the south of Trilokya Sundari Bandi Devi, I am famous by the name Tribhuvan Keshav. The devotee who worships me here does not get rebirth. (That means he gets salvation).
+
+-----------------------------------</div>
+        </div>
+
+        
+        <div class="detail-section">
+          <div class="detail-label">&#128366; Sanskrit Verses (Kashi Khand)</div>
+          <div class="sanskrit-box">वन्ध्यास्त्रिलोकसुन्दर्या याम्यां यो मां समर्चयेत्
+काश्यां ख्यातं त्रिभुवनकेशवं न स गर्भभाक्</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128205; Location & Approach Route</div>
+          <div class="detail-content">
+            <strong>Stated Address:</strong> D.17/100, Bandi Devi, Dasaswamedh Ghat<br>
+            <strong>Nearby Ghat:</strong> Dasaswamedh Ghat<br>
+            <strong>Zone Verification:</strong> East Kashi (Confidence: Medium)<br>
+            <span style="font-size:0.82rem; color:#6b7280;">Evidence: East/Riverfront landmarks: ['dasaswamedh']</span><br>
+            <strong>Directions:</strong> Tribhuwan Keshav is located at D.17/100, Bandi Devi, Dasaswamedh Ghat. Just before the Ghat, devotees should take a right turn.  It is advisable to enquire at the vegetable market just before the Ghat.   The temple priest calls this deity by the name of  Dharani Varaha. There is some confusion as some learned Pundits claim that Dharani Varaha is located at D.17/111, Ram Mandir and they give the name of Prayag Madhav for this.
+Kashi Khand mentions South Kashi. If we take the Mukti Kshetra of Kashi as per Kashi Khand, Madhyameshwar is the mid point and Dasaswamedh Ghat falls to the South. However, in the present day scenario Dasaswamedh is the center point for various religious and cultural activities.
+There is also a Shiv Ling in the temple premises which was called  Prayageshwar by the Poojari.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#9200; Darshan Timings & Ritual Logistics</div>
+          <div class="detail-content">
+            <strong>Timings:</strong> The temple remains open from 08.00 a.m. to 11.00 a.m. However, devotees can have darshan through grilled door throughout.<br>
+            <strong>Puja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#128220; Scriptural References</div>
+          <div class="detail-content">
+            Kashi Khand, Chapter 61, Shlok 26
+          </div>
+        </div>
+
+        <div class="links-row">
+          <a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/vishnu-temples/tribhuwan-keshav/index.html">&#128194; Exact Website Mirror Article</a>
+          <a class="btn-link btn-live" href="https://varanasitemples.in/category/vishnu-temples/tribhuwan-keshav/" target="_blank" rel="noopener">&#127760; Original Live URL &#8599;</a>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="temple-card" data-zone="East Kashi" data-name="vaikunth madhav none noted in source">
+      <div class="temple-header">
+        <div class="temple-title-row">
+          <div class="temple-title">Vaikunth Madhav</div>
+          <span class="badge badge-zone-east">East Kashi</span>
+        </div>
+        <div class="temple-sub">
+          <strong>Form:</strong> Lord of Vaikuntha in Kashi | <strong>Alt:</strong> None noted in source
+        </div>
+      </div>
+      <div class="temple-body">
+        
+        <div class="temple-img-container">
+          <img class="temple-img" src="Kashi_Exact_Offline_Website/assets/images/Vaikunt-Madhav.jpeg" alt="Vaikunth Madhav" loading="eager" onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src=\'assets/images/\' + this.src.split(\'/\').pop();}" >
+          <div class="img-caption">Vaikunt Madhav</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128214; Puranic Origin & Significance</div>
+          <div class="detail-content">Towards the east of Vairochaneshwar, Lord Vishnu is present in the form of Vaikunth Madhav.
+
+(VAIKUNTH MADHAV)
+
+Devotees who worship this Lord with utmost devotion will derive the benefit of worshipping Lord Vishnu in Vaikunth.  The implied meaning is that, after death, the devotee will reach Vaikunth (abode of Lord Vishnu).</div>
+        </div>
+
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128205; Location & Approach Route</div>
+          <div class="detail-content">
+            <strong>Stated Address:</strong> Ck.7/165, near Harish-chandreshwar, Scindia Ghat<br>
+            <strong>Nearby Ghat:</strong> Scindia Ghat<br>
+            <strong>Zone Verification:</strong> East Kashi (Confidence: Medium)<br>
+            <span style="font-size:0.82rem; color:#6b7280;">Evidence: East/Riverfront landmarks: ['scindia ghat']; West/Inland landmarks: ['chowk']</span><br>
+            <strong>Directions:</strong> Devotees who worship this Lord with utmost devotion will derive the benefit of worshipping Lord Vishnu in Vaikunth.  The implied meaning is that, after death, the devotee will reach Vaikunth (abode of Lord Vishnu).
+Vaikunth Madhav is located at Ck.7/165, near Harish-chandreshwar, Scindia Ghat.  Devotees can reach this place by travelling upto Chowk in a  rickshaw and then walking on foot via Sankata Devi temple which is a famous landmark.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#9200; Darshan Timings & Ritual Logistics</div>
+          <div class="detail-content">
+            <strong>Timings:</strong> The deity is open for worship throughout.  Devotees can perform pooja on their own.<br>
+            <strong>Puja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#128220; Scriptural References</div>
+          <div class="detail-content">
+            Not specified in the source article.
+          </div>
+        </div>
+
+        <div class="links-row">
+          <a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/vishnu-temples/vaikunth-madhav/index.html">&#128194; Exact Website Mirror Article</a>
+          <a class="btn-link btn-live" href="https://varanasitemples.in/category/vishnu-temples/vaikunth-madhav/" target="_blank" rel="noopener">&#127760; Original Live URL &#8599;</a>
+        </div>
+      </div>
+    </div>
+    
+
+        <div class="zone-heading zone-west">
+          <span>West Kashi</span>
+          <span style="font-size:0.85rem; font-weight:normal;">(5 shrines)</span>
+        </div>
+        
+
+    <div class="temple-card" data-zone="West Kashi" data-name="gyan madhav none noted in source">
+      <div class="temple-header">
+        <div class="temple-title-row">
+          <div class="temple-title">Gyan Madhav</div>
+          <span class="badge badge-zone-west">West Kashi</span>
+        </div>
+        <div class="temple-sub">
+          <strong>Form:</strong> Wisdom Aspect of Lord Madhava | <strong>Alt:</strong> None noted in source
+        </div>
+      </div>
+      <div class="temple-body">
+        
+        
+        <div class="temple-img-container">
+          <img class="temple-img" 
+               src="Kashi_Exact_Offline_Website/assets/images/Gyan-Madhav-Shrine.svg" 
+               alt="Gyan Madhav" 
+               loading="eager"
+               onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/Gyan-Madhav-Shrine.svg';}">
+          <div class="img-caption">&#128330; Sacred Iconographic Representation of Gyan Madhav (Kashi Sanctum)</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128214; Puranic Origin & Significance</div>
+          <div class="detail-content">In front of Gyan Vapi Lord Vishnu is present in the form of Gyan Madhav.
+
+By worshipping this Lord, the devotees will attain ultimate knowledge in all spheres of activities.</div>
+        </div>
+
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128205; Location & Approach Route</div>
+          <div class="detail-content">
+            <strong>Stated Address:</strong> Ck.35/21, Vishwanath Temple compound near Akshay Vat<br>
+            <strong>Nearby Ghat:</strong> Not directly on a riverfront ghat<br>
+            <strong>Zone Verification:</strong> West Kashi (Confidence: High)<br>
+            <span style="font-size:0.82rem; color:#6b7280;">Evidence: West/Inland landmarks: ['gyan vapi', 'akshay vat']</span><br>
+            <strong>Directions:</strong> Gyan Madhav is located at Ck.35/21, Vishwanath Temple compound near Akshay Vat. The narrow lane or Gully approaching the temple is known as Vishwanath Gully.  For directions to reach this place, kindly refer Visweshwar Temple.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#9200; Darshan Timings & Ritual Logistics</div>
+          <div class="detail-content">
+            <strong>Timings:</strong> Devotees can worship and pray this Lord as per their own convenience.<br>
+            <strong>Puja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#128220; Scriptural References</div>
+          <div class="detail-content">
+            Not specified in the source article.
+          </div>
+        </div>
+
+        <div class="links-row">
+          <a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/vishnu-temples/gyan-madhav/index.html">&#128194; Exact Website Mirror Article</a>
+          <a class="btn-link btn-live" href="https://varanasitemples.in/category/vishnu-temples/gyan-madhav/" target="_blank" rel="noopener">&#127760; Original Live URL &#8599;</a>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="temple-card" data-zone="West Kashi" data-name="veer madhav none noted in source">
+      <div class="temple-header">
+        <div class="temple-title-row">
+          <div class="temple-title">Veer Madhav</div>
+          <span class="badge badge-zone-west">West Kashi</span>
+        </div>
+        <div class="temple-sub">
+          <strong>Form:</strong> Heroic Aspect of Lord Madhava | <strong>Alt:</strong> None noted in source
+        </div>
+      </div>
+      <div class="temple-body">
+        
+        <div class="temple-img-container">
+          <img class="temple-img" src="Kashi_Exact_Offline_Website/assets/images/Veer-Madhav-1-640x1024.jpeg" alt="Veer Madhav" loading="eager" onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src=\'assets/images/\' + this.src.split(\'/\').pop();}" >
+          <div class="img-caption">Veer Madhav</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128214; Puranic Origin & Significance</div>
+          <div class="detail-content">Towards the north of Veereshwar, one can find Lord Vishnu in the form of Veer Madhav.
+
+(VEER MADHAV)
+
+A devotee who observes fast and performs Pooja of Veer Madhav will not face the wrath of Lord Yama. Kashi Khand is succinct in the narration.  By the above paragraph, the readers can infer that the devotees who perform pooja of Veer Madhav will reach heaven.</div>
+        </div>
+
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128205; Location & Approach Route</div>
+          <div class="detail-content">
+            <strong>Stated Address:</strong> There are two locations of Veer Madhav. One is near the door of Atma Veereshwar at Ck.7/158 (Rahu’s idol) and other is j<br>
+            <strong>Nearby Ghat:</strong> Not directly on a riverfront ghat<br>
+            <strong>Zone Verification:</strong> West Kashi (Confidence: Medium)<br>
+            <span style="font-size:0.82rem; color:#6b7280;">Evidence: West/Inland landmarks: ['chowk']</span><br>
+            <strong>Directions:</strong> A devotee who observes fast and performs Pooja of Veer Madhav will not face the wrath of Lord Yama. Kashi Khand is succinct in the narration.  By the above paragraph, the readers can infer that the devotees who perform pooja of Veer Madhav will reach heaven.
+Devotees can reach this place by travelling upto Chowk in a rickshaw and then walking on foot via Sankata Devi temple which is a famous landmark.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#9200; Darshan Timings & Ritual Logistics</div>
+          <div class="detail-content">
+            <strong>Timings:</strong> This place of worship is open throughout and devotees can perform pooja on their own.<br>
+            <strong>Puja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#128220; Scriptural References</div>
+          <div class="detail-content">
+            Not specified in the source article.
+          </div>
+        </div>
+
+        <div class="links-row">
+          <a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/vishnu-temples/veer-madhav/index.html">&#128194; Exact Website Mirror Article</a>
+          <a class="btn-link btn-live" href="https://varanasitemples.in/category/vishnu-temples/veer-madhav/" target="_blank" rel="noopener">&#127760; Original Live URL &#8599;</a>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="temple-card" data-zone="West Kashi" data-name="atyugra narsimha none noted in source">
+      <div class="temple-header">
+        <div class="temple-title-row">
+          <div class="temple-title">Atyugra Narsimha</div>
+          <span class="badge badge-zone-west">West Kashi</span>
+        </div>
+        <div class="temple-sub">
+          <strong>Form:</strong> Extremely Fierce Man-Lion Manifestation | <strong>Alt:</strong> None noted in source
+        </div>
+      </div>
+      <div class="temple-body">
+        
+        <div class="temple-img-container">
+          <img class="temple-img" src="Kashi_Exact_Offline_Website/assets/images/Atyugra-Narsimha.jpeg" alt="Atyugra Narsimha" loading="eager" onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src=\'assets/images/\' + this.src.split(\'/\').pop();}" >
+          <div class="img-caption">Atyugra Narsimha</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128214; Puranic Origin & Significance</div>
+          <div class="detail-content">Towards the north of Kamleshwar Siva, Lord Vishnu is present in the form of Atyugra Narsimha.
+
+Devotees worshipping this Lord will be cleansed of all their sins. By splitting Atyugra readers can see the joining of two words Ati and Ugra. This shows the extreme power of this Lord.
+
+-----------------------------------
+
+Kashi Khand, Chapter 61, Shlok 193
+
+अत्युग्र नरसिंहोऽहं  कलशेश्वरपश्चिमे
+
+अत्युग्रमपि पापौघं हरामि श्रद्धयार्चित:
+
+(Lord Vishnu says,) To the west of Kalasheshwar I am called Atyugra Narasimha. If I am worshipped with devotion, I destroy even the group of Atyugra (terrible) sins.
+
+-----------------------------------</div>
+        </div>
+
+        
+        <div class="detail-section">
+          <div class="detail-label">&#128366; Sanskrit Verses (Kashi Khand)</div>
+          <div class="sanskrit-box">अत्युग्र नरसिंहोऽहं  कलशेश्वरपश्चिमे
+अत्युग्रमपि पापौघं हरामि श्रद्धयार्चित:</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128205; Location & Approach Route</div>
+          <div class="detail-content">
+            <strong>Stated Address:</strong> Ck.8/21, Gomath<br>
+            <strong>Nearby Ghat:</strong> Not directly on a riverfront ghat<br>
+            <strong>Zone Verification:</strong> West Kashi (Confidence: Medium)<br>
+            <span style="font-size:0.82rem; color:#6b7280;">Evidence: West/Inland landmarks: ['chowk']</span><br>
+            <strong>Directions:</strong> Atyugra Narsimha is located at Ck.8/21, Gomath. People can approach this place by traveling upto Chowk in a rickshaw and then on foot. Gomath is a famous locality.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#9200; Darshan Timings & Ritual Logistics</div>
+          <div class="detail-content">
+            <strong>Timings:</strong> The place of worship is open from 06.00 a.m. to 10.00 a.m. and from 04.00 p.m. to  10.00 p.m. Devotees can pray and perform pooja by their own.<br>
+            <strong>Puja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#128220; Scriptural References</div>
+          <div class="detail-content">
+            Kashi Khand, Chapter 61, Shlok 193
+          </div>
+        </div>
+
+        <div class="links-row">
+          <a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/vishnu-temples/atyugra-narsimha/index.html">&#128194; Exact Website Mirror Article</a>
+          <a class="btn-link btn-live" href="https://varanasitemples.in/category/vishnu-temples/atyugra-narsimha/" target="_blank" rel="noopener">&#127760; Original Live URL &#8599;</a>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="temple-card" data-zone="West Kashi" data-name="kolahala narasimha none noted in source">
+      <div class="temple-header">
+        <div class="temple-title-row">
+          <div class="temple-title">Kolahala Narasimha</div>
+          <span class="badge badge-zone-west">West Kashi</span>
+        </div>
+        <div class="temple-sub">
+          <strong>Form:</strong> Roaring Man-Lion Protector | <strong>Alt:</strong> None noted in source
+        </div>
+      </div>
+      <div class="temple-body">
+        
+        <div class="temple-img-container">
+          <img class="temple-img" src="Kashi_Exact_Offline_Website/assets/images/Kolahal-Narasimha-1.jpeg" alt="Kolahala Narasimha" loading="eager" onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src=\'assets/images/\' + this.src.split(\'/\').pop();}" >
+          <div class="img-caption">Kolahal Narasimha</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128214; Puranic Origin & Significance</div>
+          <div class="detail-content">In the same locality of Atyugra Narsimha one can find Kolahala Narsimha.
+
+(KOLAHAL NARASIMHA)
+
+By worshipping this Lord, the sins will get topsy turvy and finally vanish.</div>
+        </div>
+
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128205; Location & Approach Route</div>
+          <div class="detail-content">
+            <strong>Stated Address:</strong> Ck.8/181 above Siddhi Vinayak, inside Narsimha Mutt<br>
+            <strong>Nearby Ghat:</strong> Not directly on a riverfront ghat<br>
+            <strong>Zone Verification:</strong> West Kashi (Confidence: Medium)<br>
+            <span style="font-size:0.82rem; color:#6b7280;">Evidence: West/Inland landmarks: ['chowk']</span><br>
+            <strong>Directions:</strong> Kolahala Narsimha is located at Ck.8/181 above Siddhi Vinayak, inside Narsimha Mutt.  People can approach this place by traveling upto Chowk in a rickshaw and then on foot.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#9200; Darshan Timings & Ritual Logistics</div>
+          <div class="detail-content">
+            <strong>Timings:</strong> The place of worship is open from 04.00 a.m. to 11.00 a.m. and from 05.00 p.m. to 09.30 p.m.  Aarties are held in the morning and evening.<br>
+            <strong>Puja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#128220; Scriptural References</div>
+          <div class="detail-content">
+            Not specified in the source article.
+          </div>
+        </div>
+
+        <div class="links-row">
+          <a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/vishnu-temples/kolahala-narasimha/index.html">&#128194; Exact Website Mirror Article</a>
+          <a class="btn-link btn-live" href="https://varanasitemples.in/category/vishnu-temples/kolahala-narasimha/" target="_blank" rel="noopener">&#127760; Original Live URL &#8599;</a>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="temple-card" data-zone="West Kashi" data-name="tamra varaha none noted in source">
+      <div class="temple-header">
+        <div class="temple-title-row">
+          <div class="temple-title">Tamra Varaha</div>
+          <span class="badge badge-zone-west">West Kashi</span>
+        </div>
+        <div class="temple-sub">
+          <strong>Form:</strong> Copper-Hued Boar Avatar | <strong>Alt:</strong> None noted in source
+        </div>
+      </div>
+      <div class="temple-body">
+        
+        <div class="temple-img-container">
+          <img class="temple-img" src="Kashi_Exact_Offline_Website/assets/images/Tamra1-1-1024x768.jpg" alt="Tamra Varaha" loading="eager" onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src=\'assets/images/\' + this.src.split(\'/\').pop();}" >
+          <div class="img-caption">Tamra1</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128214; Puranic Origin & Significance</div>
+          <div class="detail-content">Lord Vishnu is present in the form of Tamra Varaha. This Varaha has come from Tamara Dweep.
+
+(TAMRA VARAHA)
+
+By worshipping Tamra Varaha, devotees will see their wishes and desires fulfilled.</div>
+        </div>
+
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128205; Location & Approach Route</div>
+          <div class="detail-content">
+            <strong>Stated Address:</strong> Tamra Varaha is located outside House No.Ck.33/57, Neelkanth Mohalla in the slope. Devotees can travel upto  Chowk in a rickshaw and walk on foot upto Neelkanth temple which is a famous landmark. Another landmark is Adi Chunchungiri Mutt of Karnataka.<br>
+            <strong>Nearby Ghat:</strong> Not directly on a riverfront ghat<br>
+            <strong>Zone Verification:</strong> West Kashi (Confidence: Medium)<br>
+            <span style="font-size:0.82rem; color:#6b7280;">Evidence: West/Inland landmarks: ['chowk']</span><br>
+            <strong>Directions:</strong> Tamra Varaha is located outside House No.Ck.33/57, Neelkanth Mohalla in the slope. Devotees can travel upto  Chowk in a rickshaw and walk on foot upto Neelkanth temple which is a famous landmark. Another landmark is Adi Chunchungiri Mutt of Karnataka.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#9200; Darshan Timings & Ritual Logistics</div>
+          <div class="detail-content">
+            <strong>Timings:</strong> This place of worship is open throughout and devotees can perform pooja on their own.<br>
+            <strong>Puja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#128220; Scriptural References</div>
+          <div class="detail-content">
+            Not specified in the source article.
+          </div>
+        </div>
+
+        <div class="links-row">
+          <a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/vishnu-temples/tamra-varaha/index.html">&#128194; Exact Website Mirror Article</a>
+          <a class="btn-link btn-live" href="https://varanasitemples.in/category/vishnu-temples/tamra-varaha/" target="_blank" rel="noopener">&#127760; Original Live URL &#8599;</a>
+        </div>
+      </div>
+    </div>
+    
+
+        <div class="zone-heading zone-other">
+          <span>Zone unverified — location evidence insufficient</span>
+          <span style="font-size:0.85rem; font-weight:normal;">(3 shrines)</span>
+        </div>
+        
+
+    <div class="temple-card" data-zone="Zone unverified — location evidence insufficient" data-name="bindu madhav none noted in source">
+      <div class="temple-header">
+        <div class="temple-title-row">
+          <div class="temple-title">Bindu Madhav</div>
+          <span class="badge badge-zone-other">Zone unverified</span>
+        </div>
+        <div class="temple-sub">
+          <strong>Form:</strong> Supreme Presiding Vishnu Deity of Kashi (Panchganga Ghat) | <strong>Alt:</strong> None noted in source
+        </div>
+      </div>
+      <div class="temple-body">
+        
+        <div class="temple-img-container">
+          <img class="temple-img" src="Kashi_Exact_Offline_Website/assets/images/Bindu-Madhav-Copy.jpeg" alt="Bindu Madhav" loading="eager" onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src=\'assets/images/\' + this.src.split(\'/\').pop();}" >
+          <div class="img-caption">Bindu Madhav - Copy</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128214; Puranic Origin & Significance</div>
+          <div class="detail-content">As per directions of Lord Shiva, Lord Vishnu travelled from Mandarachal to Kashi with a divine mission of making King Divodas leave Kashi (Kindly read Divodaseshwar).
+
+After having accomplished his mission, Lord Vishnu was enjoying the serene beauty of Kashi, Pancha Nada Teerth, Padodak Teerth and other places.  At Pancha Nada Teerth, he came across one extremely lean looking Sage who was undergoing Tapas.
+
+Lord Vishnu in his divine form approached the Sage whose name was Agni Bindu and stood in front of him.  The Sage, on seeing the Lord in person, was ecstatic and he prostrated before the Lord.  The Sage then started singing praises of the Lord.
+
+The Sage addressed the Lord by various names like Mukunda, Madusudan, Madhav, Narayan, Rama Bhadran, Chatur Bhuj, Janardhan etc.  The Sage also mentioned that those who worship Lord Vishnu with Tulsi leaves or garland made of Tulsi Leaves will get lots of blessings.
+
+After having sung all praises about Lord Vishnu, Agni Bindu Rishi stood silently with folded hands. Lord Vishnu asked the Sage to seek any divine boon. The Sage, in reply, sought only one thing: that  Lord Vishnu should always be available in the vicinity of Pancha Nada Teerth.
+
+Lord Vishnu granted accordingly.  He further stated that Kashi is a Punya Kshetra and devotees can achieve several kinds of Siddhi by staying in Kashi.  Lord Vishnu further told that he would stay in Kashi as long as Kashi is present and there will be no destruction of Kashi, as this holy city is situated atop the Trishul (Trident) of Lord Shiva.  Therefore, even Maha Pralay (great deluge) cannot destroy the city.
+
+Agni Bindu Rishi was extremely happy at this and sought one more divine boon from Lord Vishnu. He desired that Lord Vishnu should always be available in the vicinity of Pancha Nada Teerth in the name of the Sage. Further, a devotee who takes bath in Pancha Nada Teerth and even if he dies elsewhere, he should attain Moksha.  The Sage also sought that a devotee who bathes in Pacha Nada Teerth and worships Lord Vishnu should be blessed with wealth and prosperity.
+
+Lord Vishnu agreed to the request of the Sage.  He stated that henceforth he (Lord) will be known as Bindu Madhav in Pancha Nada Teerth.  By his presence, the Teerth will be extremely Sacred and devotees who bathe in this Teerth and honour learned persons, will be blessed with wealth and prosperity.
+
+The Teerth, which is capable of cleansing all Sins, will be called as Bindu Teerth.  A person may have committed various sins, knowingly or unknowingly.  But if, during the Kartik Month, he religiously bathes in Pancha Nada Teerth and worships Bindu Madhav, he will attain Mukti.
+
+Kashi Khand, Chapter 60 has given in detail the importance of Kartik Month in respect to Pancha Nada Teerth.  Lord Visweshwar himself regularly takes bath in this Teerth during Kartik Month.
+
+(BINDU MADHAV)
+
+Lord Vishnu further stated that he (Lord) was called as Aadi Madhav in Sat Yug, he should be worshipped as Ananda Madhav in Tretha Yug, he would present himself in Dwapar Yug as Shree Madhav. In Kali Yug the Lord should be known by the name of Bindu Madhav.
+
+Agni Bindu Rishi was extremely happy at the direct worship of Lord Vishnu and he prostrated before the Lord.
+
+-----------------------------------
+
+Kashi Khand, Chapter 60, Shlok 123
+
+बिन्दुमाधवनामानं यो मामत्र समर्चयेत्
+
+बिन्दुतीर्थकृतस्नानो निर्वाणं स हि विन्दति
+
+(Lord Vishnu says), a devotee who takes bath in Bindu Teerth (presently Panch Ganga Ghat) and worships me as Bindu Madhav, attains Moksha.
+
+-----------------------------------
+
+Please watch our  YouTube video on Bindu Madhav at the following Link :
+
+https://www.youtube.com/watch?v=PnHNANHdVFM&t=17s</div>
+        </div>
+
+        
+        <div class="detail-section">
+          <div class="detail-label">&#128366; Sanskrit Verses (Kashi Khand)</div>
+          <div class="sanskrit-box">बिन्दुमाधवनामानं यो मामत्र समर्चयेत्
+बिन्दुतीर्थकृतस्नानो निर्वाणं स हि विन्दति</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128205; Location & Approach Route</div>
+          <div class="detail-content">
+            <strong>Stated Address:</strong> op the Trishul (Trident) of Lord Shiva.  Therefore, even Maha Pralay (great deluge) cannot destroy the city<br>
+            <strong>Nearby Ghat:</strong> presently Panch Ganga Ghat<br>
+            <strong>Zone Verification:</strong> Zone unverified — location evidence insufficient (Confidence: Low)<br>
+            <span style="font-size:0.82rem; color:#6b7280;">Evidence: No distinct locality keyword matched in source text</span><br>
+            <strong>Directions:</strong> As per directions of Lord Shiva, Lord Vishnu travelled from Mandarachal to Kashi with a divine mission of making King Divodas leave Kashi (Kindly read Divodaseshwar).
+Lord Vishnu in his divine form approached the Sage whose name was Agni Bindu and stood in front of him.  The Sage, on seeing the Lord in person, was ecstatic and he prostrated before the Lord.  The Sage then started singing praises of the Lord.
+Bindu Madhav is located at No. K.22/37, Panch Ganga Ghat.  Devotees can approach this place by traveling upto Bhaironath in a rickshaw and walking on foot to this place. This is a famous temple.  Alternatively, they can travel by boat upto Panch Ganga Ghat and climb the steps.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#9200; Darshan Timings & Ritual Logistics</div>
+          <div class="detail-content">
+            <strong>Timings:</strong> The temple remains open from 04.00 a.m. to 08.00 p.m.  Mangala Aarti is held at 04.00 a.m., Shringar Aarti at 08.00 a.m. and Shayan Aarti at 08.00 p.m.  Kartik Month (Hindi) Shukla Ekadasi known as Prabodini Ekadasi is very important.
+POOJARIES OF THE TEMPLE
+Shri Murlidhar Ganesh Patwardhan is the poojary of the temple and he can be contacted in the Cell No. (0)9918936350 for performing any special pooja etc.<br>
+            <strong>Puja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#128220; Scriptural References</div>
+          <div class="detail-content">
+            Kashi Khand, Chapter 60, Kashi Khand, Chapter 60, Shlok 123
+          </div>
+        </div>
+
+        <div class="links-row">
+          <a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/vishnu-temples/bindu-madhav/index.html">&#128194; Exact Website Mirror Article</a>
+          <a class="btn-link btn-live" href="https://varanasitemples.in/category/vishnu-temples/bindu-madhav/" target="_blank" rel="noopener">&#127760; Original Live URL &#8599;</a>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="temple-card" data-zone="Zone unverified — location evidence insufficient" data-name="bheeshma keshav none noted in source">
+      <div class="temple-header">
+        <div class="temple-title-row">
+          <div class="temple-title">Bheeshma Keshav</div>
+          <span class="badge badge-zone-other">Zone unverified</span>
+        </div>
+        <div class="temple-sub">
+          <strong>Form:</strong> Installed by Pitamaha Bheeshma | <strong>Alt:</strong> None noted in source
+        </div>
+      </div>
+      <div class="temple-body">
+        
+        <div class="temple-img-container">
+          <img class="temple-img" src="Kashi_Exact_Offline_Website/assets/images/Bheeshma-Keshav.jpeg" alt="Bheeshma Keshav" loading="eager" onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src=\'assets/images/\' + this.src.split(\'/\').pop();}" >
+          <div class="img-caption">Bheeshma Keshav</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128214; Puranic Origin & Significance</div>
+          <div class="detail-content">In the vicinity of Vriddha Kaleshwar one can find Bheeshma Keshav.
+
+By worshipping Bheeshma Keshav even the most dangerous obstacles of the devotee will be removed.
+
+-----------------------------------
+
+Kashi Khand, Chapter 61, Shlok 24
+
+भीष्मकेशवनामाऽहं वृद्धकालेशपश्चिमे
+
+उपसर्गान हरे भीषमान् सेवितो भक्तियुक्तित:
+
+Lord Vishnu says, “By stationing myself as Bheeshma Keshav towards the west of Vriddh Kaaleshwar, I remove the dangerous disturbances of devotees who worship me with devotion.”
+
+-----------------------------------</div>
+        </div>
+
+        
+        <div class="detail-section">
+          <div class="detail-label">&#128366; Sanskrit Verses (Kashi Khand)</div>
+          <div class="sanskrit-box">भीष्मकेशवनामाऽहं वृद्धकालेशपश्चिमे
+उपसर्गान हरे भीषमान् सेवितो भक्तियुक्तित:</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128205; Location & Approach Route</div>
+          <div class="detail-content">
+            <strong>Stated Address:</strong> Bheeshma Keshav is located in the temple premises of Mrityunjay Mahadev at K.52/39, near Vriddha Kaleshwar.  This place of worship is open throughout.<br>
+            <strong>Nearby Ghat:</strong> Not directly on a riverfront ghat<br>
+            <strong>Zone Verification:</strong> Zone unverified — location evidence insufficient (Confidence: Low)<br>
+            <span style="font-size:0.82rem; color:#6b7280;">Evidence: No distinct locality keyword matched in source text</span><br>
+            <strong>Directions:</strong> Bheeshma Keshav is located in the temple premises of Mrityunjay Mahadev at K.52/39, near Vriddha Kaleshwar.  This place of worship is open throughout.
+Please watch our  YouTube video on Bheeshma Keshav at the following Link :
+https://www.youtube.com/watch?v=PnHNANHdVFM&t=17s
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#9200; Darshan Timings & Ritual Logistics</div>
+          <div class="detail-content">
+            <strong>Timings:</strong> Bheeshma Keshav is located in the temple premises of Mrityunjay Mahadev at K.52/39, near Vriddha Kaleshwar.  This place of worship is open throughout.<br>
+            <strong>Puja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#128220; Scriptural References</div>
+          <div class="detail-content">
+            Kashi Khand, Chapter 61, Shlok 24
+          </div>
+        </div>
+
+        <div class="links-row">
+          <a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/vishnu-temples/bheeshma-keshav/index.html">&#128194; Exact Website Mirror Article</a>
+          <a class="btn-link btn-live" href="https://varanasitemples.in/category/vishnu-temples/bheeshma-keshav/" target="_blank" rel="noopener">&#127760; Original Live URL &#8599;</a>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="temple-card" data-zone="Zone unverified — location evidence insufficient" data-name="yagya varaha none noted in source">
+      <div class="temple-header">
+        <div class="temple-title-row">
+          <div class="temple-title">Yagya Varaha</div>
+          <span class="badge badge-zone-other">Zone unverified</span>
+        </div>
+        <div class="temple-sub">
+          <strong>Form:</strong> Cosmic Sacrificial Boar Avatar (Mir Ghat) | <strong>Alt:</strong> None noted in source
+        </div>
+      </div>
+      <div class="temple-body">
+        
+        <div class="temple-img-container">
+          <img class="temple-img" src="Kashi_Exact_Offline_Website/assets/images/Yagya-Varaha.jpeg" alt="Yagya Varaha" loading="eager" onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src=\'assets/images/\' + this.src.split(\'/\').pop();}" >
+          <div class="img-caption">Yagya Varaha</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128214; Puranic Origin & Significance</div>
+          <div class="detail-content">Kashi Khand states one Yagya Varaha Teerth where Lord Vishnu is available in the form of Yagya Varaha.
+
+Devotees who worship Yagya Varaha attain the benefits which will normally accrue when Yagya is performed.  Here it is worth mentioning that performing any sort of Yagya is a great achievement and the benefits are manifold.  Yagya Varaha Teerth is not in existence now.
+
+-----------------------------------
+
+Kashi Khand, Chapter 61, Shlok 17
+
+तीर्थे यज्ञवराहाख्ये यज्ञवाराहसंज्ञक:
+
+नरै: समर्चनीयोऽहं  सर्वयज्ञफलेप्सुभि:
+
+(Vishnu Bhagwaan says), Then I am present in the form of  Yagya Varaaha at Yagya Varaaha Teerth.  Devotees desirous of getting fruits of performing various Yagyas, should worship me in that form.
+
+-----------------------------------</div>
+        </div>
+
+        
+        <div class="detail-section">
+          <div class="detail-label">&#128366; Sanskrit Verses (Kashi Khand)</div>
+          <div class="sanskrit-box">तीर्थे यज्ञवराहाख्ये यज्ञवाराहसंज्ञक:
+नरै: समर्चनीयोऽहं  सर्वयज्ञफलेप्सुभि:</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128205; Location & Approach Route</div>
+          <div class="detail-content">
+            <strong>Stated Address:</strong> A.11/30, near Swarleeneshwar at Panch Agni Akhada Ghat<br>
+            <strong>Nearby Ghat:</strong> near Swarleeneshwar at Panch Agni Akhada Ghat<br>
+            <strong>Zone Verification:</strong> Zone unverified — location evidence insufficient (Confidence: Low)<br>
+            <span style="font-size:0.82rem; color:#6b7280;">Evidence: No distinct locality keyword matched in source text</span><br>
+            <strong>Directions:</strong> Yagya Varaha is located at A.11/30, near Swarleeneshwar at Panch Agni Akhada Ghat.  The temple is approachable from Prahalad Ghat Chauraha upto which place, people can travel by Auto or Cycle Rickshaw. Alternatively, they can have a boat ride upto Panch Agni Akhada Ghat and climb the steps.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#9200; Darshan Timings & Ritual Logistics</div>
+          <div class="detail-content">
+            <strong>Timings:</strong> S
+The temple is open from 06.00 a.m to 9.00 p.m.   Aarties are performed at 07.00 p.m.
+POOJARIS OF THE TEMPLE
+Shri Shankaranand is the poojari of the temple.<br>
+            <strong>Puja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#128220; Scriptural References</div>
+          <div class="detail-content">
+            Kashi Khand, Chapter 61, Shlok 17
+          </div>
+        </div>
+
+        <div class="links-row">
+          <a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/vishnu-temples/yagya-varaha/index.html">&#128194; Exact Website Mirror Article</a>
+          <a class="btn-link btn-live" href="https://varanasitemples.in/category/vishnu-temples/yagya-varaha/" target="_blank" rel="noopener">&#127760; Original Live URL &#8599;</a>
+        </div>
+      </div>
+    </div>
+    
+</div>
+
+<script>
+function filterTemples() {
+  var input = document.getElementById('searchInput').value.toLowerCase();
+  var cards = document.getElementsByClassName('temple-card');
+  for (var i = 0; i < cards.length; i++) {
+    var name = cards[i].getAttribute('data-name');
+    var text = cards[i].innerText.toLowerCase();
+    if (name.indexOf(input) > -1 || text.indexOf(input) > -1) {
+      cards[i].style.display = "";
+    } else {
+      cards[i].style.display = "none";
+    }
+  }
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgMani" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4c1d95"/>
+      <stop offset="50%" stop-color="#6d28d9"/>
+      <stop offset="100%" stop-color="#7c3aed"/>
+    </linearGradient>
+    <radialGradient id="auraMani" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fde047" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#fde047" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="500" rx="12" fill="url(#bgMani)"/>
+  
+  <rect x="20" y="20" width="760" height="460" rx="8" fill="none" stroke="#e9d5ff" stroke-width="2" stroke-dasharray="6,4" opacity="0.75"/>
+  <rect x="30" y="30" width="740" height="440" rx="6" fill="none" stroke="#f5d0fe" stroke-width="1" opacity="0.5"/>
+
+  <circle cx="400" cy="230" r="180" fill="url(#auraMani)"/>
+
+  <!-- Manikarnika Chakra Pushkarini Kund Steps (Ghat Steps) -->
+  <polygon points="400,165 490,210 490,290 400,335 310,290 310,210" fill="#1e1b4b" opacity="0.7" stroke="#e9d5ff" stroke-width="3"/>
+  
+  <!-- Sacred Waters of the Kund -->
+  <ellipse cx="400" cy="250" rx="65" ry="40" fill="#0284c7" stroke="#38bdf8" stroke-width="2"/>
+
+  <!-- Sudarshana Chakra of Lord Vishnu Carving the Kund -->
+  <circle cx="400" cy="200" r="45" fill="none" stroke="#fde047" stroke-width="4" stroke-dasharray="8,4" filter="url(#glow)"/>
+  <circle cx="400" cy="200" r="15" fill="#f59e0b" stroke="#fef08a" stroke-width="2"/>
+  
+  <!-- Devi Parvati's Manikarnika (Jeweled Earring) Falling into the Waters -->
+  <circle cx="400" cy="245" r="10" fill="#f43f5e" stroke="#ffffff" stroke-width="2" filter="url(#glow)"/>
+  <circle cx="400" cy="245" r="4" fill="#ffffff"/>
+
+  <!-- Text Details -->
+  <text x="400" y="72" text-anchor="middle" font-family="'Cinzel', 'Georgia', serif" font-size="27" font-weight="bold" fill="#fde047" letter-spacing="2">
+    MANIKARNIKA CHAKRA PUSHKARINI KUND
+  </text>
+  <text x="400" y="102" text-anchor="middle" font-family="'Segoe UI Historic', 'Noto Sans Devanagari', serif" font-size="18" fill="#e9d5ff" letter-spacing="1">
+    ॥ मणिकर्णिका चक्रपुष्करिणी तीर्थ • महामुक्ति तीर्थ ॥
+  </text>
+  <text x="400" y="375" text-anchor="middle" font-family="'Cinzel', 'Georgia', serif" font-size="14" font-weight="600" fill="#fde047">
+    THE PRIMORDIAL KUND CARVED BY VISHNU&apos;S SUDARSHANA CHAKRA
+  </text>
+  <text x="400" y="400" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="12" fill="#f3e8ff">
+    Where Devi Parvati&apos;s Jeweled Earring (Manikarnika) Fell &bull; Kashi Khand Ch. 26
+  </text>
+  <text x="400" y="445" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="11" fill="#c084fc" opacity="0.9">
+    Crest-Jewel of All Teerthas &bull; Manikarnika Ghat Riverfront
+  </text>
+</svg>

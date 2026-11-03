@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgShal" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#14532d"/>
+      <stop offset="50%" stop-color="#166534"/>
+      <stop offset="100%" stop-color="#854d0e"/>
+    </linearGradient>
+    <radialGradient id="auraShal" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fef08a" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#fef08a" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="500" rx="12" fill="url(#bgShal)"/>
+  
+  <!-- Outer Ornate Border -->
+  <rect x="20" y="20" width="760" height="460" rx="8" fill="none" stroke="#fde047" stroke-width="2" stroke-dasharray="6,4" opacity="0.75"/>
+  <rect x="30" y="30" width="740" height="440" rx="6" fill="none" stroke="#fef08a" stroke-width="1" opacity="0.5"/>
+
+  <!-- Golden Radiance Aura -->
+  <circle cx="400" cy="230" r="180" fill="url(#auraShal)"/>
+
+  <!-- Sacred Pond Water Lotus Motif -->
+  <path d="M 280 380 Q 400 350 520 380 Z" fill="#0284c7" opacity="0.5"/>
+  
+  <!-- Temple Arch Mandapam -->
+  <path d="M 270 370 L 270 210 Q 400 115 530 210 L 530 370 Z" fill="#1c1917" opacity="0.55" stroke="#fde047" stroke-width="2"/>
+  
+  <!-- Central Ganesha Head Motif -->
+  <circle cx="400" cy="205" r="55" fill="#eab308" stroke="#fef08a" stroke-width="3" filter="url(#glow)"/>
+  
+  <!-- Tilak on Forehead -->
+  <path d="M 396 170 L 404 170 L 400 190 Z" fill="#dc2626"/>
+  <circle cx="400" cy="197" r="3" fill="#dc2626"/>
+
+  <!-- Elephant Trunk Curve (Symbolic of Vinayaka) -->
+  <path d="M 400 220 Q 410 250 425 250 Q 435 250 435 240 Q 435 230 420 230" fill="none" stroke="#fef3c7" stroke-width="8" stroke-linecap="round"/>
+  
+  <!-- Ears -->
+  <path d="M 345 190 Q 315 175 330 225 Q 345 240 355 215" fill="#ca8a04" stroke="#fde047" stroke-width="2"/>
+  <path d="M 455 190 Q 485 175 470 225 Q 455 240 445 215" fill="#ca8a04" stroke="#fde047" stroke-width="2"/>
+
+  <!-- Lotus / Flower Motif (Shalya/Kanta Destroyer) -->
+  <circle cx="400" cy="290" r="16" fill="#f43f5e" stroke="#fff" stroke-width="2"/>
+  <circle cx="375" cy="290" r="10" fill="#fb7185"/>
+  <circle cx="425" cy="290" r="10" fill="#fb7185"/>
+
+  <!-- Text Details -->
+  <text x="400" y="80" text-anchor="middle" font-family="'Cinzel', 'Georgia', serif" font-size="28" font-weight="bold" fill="#fef08a" letter-spacing="2">
+    SHALAKANTA VINAYAK TEMPLE
+  </text>
+  <text x="400" y="112" text-anchor="middle" font-family="'Segoe UI Historic', 'Noto Sans Devanagari', serif" font-size="19" fill="#fde68a" letter-spacing="1">
+    ॥ शलकण्टक विनायक मन्दिर • मण्डुवाडीह ॥
+  </text>
+  <text x="400" y="350" text-anchor="middle" font-family="'Cinzel', 'Georgia', serif" font-size="14" font-weight="600" fill="#fef08a">
+    DISPELLER OF THORNS, OBSTACLES &amp; MENTAL ANGUISH
+  </text>
+  <text x="400" y="375" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="12" fill="#bbf7d0">
+    Sacred Guardian of the Western Kshetra Boundary &bull; Kashi Khand Ch. 57
+  </text>
+  <text x="400" y="440" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="11" fill="#fef08a" opacity="0.9">
+    Location: Near Sacred Pond, Manduadih, Western Varanasi
+  </text>
+</svg>

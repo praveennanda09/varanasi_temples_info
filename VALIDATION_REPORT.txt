@@ -1,0 +1,14 @@
+Phase 1 URL inventory validation
+Generated 2026-11-03
+
+Validated counts:
+- Surya: 12 distinct shrine URLs
+- Bhairav: Kaal Bhairav + 8 protector forms
+- Devi: 32 names visible in the site's navigation menu
+- Main Shiva: 9 names visible in the site's menu
+- Vinayaka shortlist: 10 entries
+- Vishnu shortlist: 10 entries
+
+Validation script status: PASS
+
+Important scope distinction: this checks URL inventory, HTTPS/domain syntax, expected row counts and duplicate names. It does NOT establish that every temple page's full article text, exact street address, Google Maps pin, zone, or complete narrative has been scraped. That remains a material limitation, explicitly disclosed in the guide files.

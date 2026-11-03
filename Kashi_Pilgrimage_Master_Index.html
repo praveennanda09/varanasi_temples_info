@@ -1,0 +1,2526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kashi Pilgrimage Master Portal & Offline Knowledge Base</title>
+  <style>
+    
+:root {
+  --primary: #8b1e0f;
+  --primary-dark: #5c1007;
+  --secondary: #d97706;
+  --accent: #b45309;
+  --bg: #fdfbf7;
+  --card-bg: #ffffff;
+  --text: #1f2937;
+  --text-muted: #4b5563;
+  --border: #e5e7eb;
+  --north: #1e40af;
+  --south: #15803d;
+  --east: #b45309;
+  --west: #6b21a8;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--text);
+  background-color: var(--bg);
+  padding-bottom: 60px;
+}
+
+header {
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: #fff;
+  padding: 24px 16px;
+  text-align: center;
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+  position: relative;
+}
+
+header h1 {
+  font-size: 1.6rem;
+  margin-bottom: 8px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+header p {
+  font-size: 0.95rem;
+  opacity: 0.9;
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.nav-bar {
+  background: #374151;
+  padding: 10px 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.nav-bar a {
+  color: #f3f4f6;
+  text-decoration: none;
+  font-size: 0.85rem;
+  padding: 6px 12px;
+  border-radius: 4px;
+  background: rgba(255,255,255,0.1);
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.nav-bar a:hover, .nav-bar a.active {
+  background: var(--secondary);
+  color: #fff;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.intro-box {
+  background: #fff;
+  border-left: 4px solid var(--secondary);
+  padding: 16px;
+  margin-bottom: 24px;
+  border-radius: 0 8px 8px 0;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.intro-box h2 {
+  font-size: 1.2rem;
+  color: var(--primary);
+  margin-bottom: 8px;
+}
+
+.zone-heading {
+  margin: 28px 0 16px 0;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.zone-north { background: var(--north); }
+.zone-south { background: var(--south); }
+.zone-east { background: var(--east); }
+.zone-west { background: var(--west); }
+.zone-other { background: #4b5563; }
+
+.temple-card {
+  background: var(--card-bg);
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  margin-bottom: 16px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  overflow: hidden;
+}
+
+.temple-header {
+  padding: 14px 16px;
+  background: #fff;
+  border-bottom: 1px solid var(--border);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  position: relative;
+}
+
+.temple-header:hover {
+  background: #f9fafb;
+}
+
+.temple-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.temple-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+}
+
+.badge {
+  font-size: 0.75rem;
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.badge-zone-north { background: #dbeafe; color: var(--north); }
+.badge-zone-south { background: #dcfce7; color: var(--south); }
+.badge-zone-east { background: #ffedd5; color: var(--east); }
+.badge-zone-west { background: #f3e8ff; color: var(--west); }
+.badge-zone-other { background: #f3f4f6; color: #4b5563; }
+
+.temple-sub {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.temple-body {
+  padding: 16px;
+}
+
+.temple-img-container {
+  margin-bottom: 16px;
+  text-align: center;
+  background: #f3f4f6;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.temple-img {
+  max-width: 100%;
+  height: auto;
+  max-height: 400px;
+  display: block;
+  margin: 0 auto;
+  object-fit: contain;
+}
+
+.img-caption {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  padding: 6px 10px;
+  background: #eee;
+  font-style: italic;
+}
+
+.detail-section {
+  margin-bottom: 14px;
+}
+
+.detail-label {
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--primary);
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.detail-content {
+  font-size: 0.92rem;
+  color: var(--text);
+  line-height: 1.55;
+  white-space: pre-line;
+}
+
+.sanskrit-box {
+  background: #fffbeb;
+  border-left: 3px solid var(--secondary);
+  padding: 10px 14px;
+  margin: 8px 0;
+  font-family: "Georgia", serif;
+  font-size: 0.95rem;
+  color: #78350f;
+  line-height: 1.6;
+}
+
+.links-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px dashed var(--border);
+}
+
+.btn-link {
+  font-size: 0.8rem;
+  padding: 5px 10px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.btn-mirror {
+  background: #eff6ff;
+  color: #1d4ed8;
+  border: 1px solid #bfdbfe;
+}
+
+.btn-mirror:hover { background: #dbeafe; }
+
+.btn-live {
+  background: #f3f4f6;
+  color: #4b5563;
+  border: 1px solid #d1d5db;
+}
+
+.btn-live:hover { background: #e5e7eb; }
+
+/* Filter / Search Bar */
+.search-box {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 1rem;
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  margin-bottom: 16px;
+  outline: none;
+  background: #fff;
+}
+
+.search-box:focus {
+  border-color: var(--secondary);
+}
+
+.filter-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.filter-pill {
+  padding: 6px 12px;
+  border-radius: 16px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  background: #fff;
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+}
+
+.filter-pill.active {
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+}
+
+/* Itinerary Table */
+.itinerary-day {
+  background: #fff;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  margin-bottom: 20px;
+  padding: 16px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.itinerary-day h3 {
+  color: var(--primary);
+  border-bottom: 2px solid #fef3c7;
+  padding-bottom: 6px;
+  margin-bottom: 12px;
+  font-size: 1.15rem;
+}
+
+.itinerary-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 8px;
+  font-size: 0.88rem;
+}
+
+.itinerary-table th, .itinerary-table td {
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+}
+
+.itinerary-table th {
+  background: #f9fafb;
+  color: var(--text-muted);
+}
+
+    .portal-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+    .portal-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      text-decoration: none;
+      color: inherit;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      transition: transform 0.2s, box-shadow 0.2s;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .portal-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      border-color: var(--secondary);
+    }
+    .portal-card-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+    .portal-card-icon {
+      font-size: 1.8rem;
+    }
+    .portal-card-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .portal-card-count {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-top: 6px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>&#128740; KASHI PILGRIMAGE MASTER PORTAL</h1>
+  <p>Comprehensive 100% Offline Guide, Exact Mirror, and Scriptural Knowledge Base for Varanasi Pilgrims</p>
+</header>
+
+
+<div class="nav-bar">
+  <a href="Kashi_Pilgrimage_Master_Index.html">&#127963; Master Index</a>
+  <a href="01_Surya_Dwadasa_Aditya.html">&#9728; Surya (12 Aditya)</a>
+  <a href="02_Bhairav_Temples.html">&#128081; Bhairav (9 Temples)</a>
+  <a href="03_Devi_and_Dashamaha_Vidya.html">&#128330; Devi & Mahavidya</a>
+  <a href="04_Shiva_and_Kashi_Jyotirlingas.html">&#128740; Shiva & Jyotirlingas</a>
+  <a href="05_Vinayaka_Temples.html">&#128024; Vinayaka Temples</a>
+  <a href="06_Vishnu_Temples.html">&#127807; Vishnu Temples</a>
+  <a href="Kashi_Exact_Offline_Website/index.html">&#128194; Exact Website Mirror</a>
+</div>
+
+
+<div class="container">
+
+  <!-- Quick Hub Navigation Cards -->
+  <div class="portal-grid">
+    <a href="01_Surya_Dwadasa_Aditya.html" class="portal-card">
+      <div>
+        <div class="portal-card-header">
+          <span class="portal-card-icon">&#9728;</span>
+          <div class="portal-card-title">Surya (Dwadasha Aditya)</div>
+        </div>
+        <p style="font-size:0.85rem; color:#4b5563;">All 12 solar shrines established during King Divodasa's reign (Kashi Khand Ch. 9).</p>
+      </div>
+      <div class="portal-card-count">12 Mandatory Aditya Shrines &#8594;</div>
+    </a>
+
+    <a href="02_Bhairav_Temples.html" class="portal-card">
+      <div>
+        <div class="portal-card-header">
+          <span class="portal-card-icon">&#128081;</span>
+          <div class="portal-card-title">Bhairav Temples</div>
+        </div>
+        <p style="font-size:0.85rem; color:#4b5563;">Kaal Bhairav (Kotwal of Kashi) + all eight directional guardian Ashtabhairavas.</p>
+      </div>
+      <div class="portal-card-count">9 Protector Shrines &#8594;</div>
+    </a>
+
+    <a href="03_Devi_and_Dashamaha_Vidya.html" class="portal-card">
+      <div>
+        <div class="portal-card-header">
+          <span class="portal-card-icon">&#128330;</span>
+          <div class="portal-card-title">Devi & Mahavidyas</div>
+        </div>
+        <p style="font-size:0.85rem; color:#4b5563;">Annapurna, Vishalakshi, Navagauri, Navadurga & Dashamaha Vidya research matrix.</p>
+      </div>
+      <div class="portal-card-count">32 Devi Shrines &#8594;</div>
+    </a>
+
+    <a href="04_Shiva_and_Kashi_Jyotirlingas.html" class="portal-card">
+      <div>
+        <div class="portal-card-header">
+          <span class="portal-card-icon">&#128740;</span>
+          <div class="portal-card-title">Shiva & Jyotirlingas</div>
+        </div>
+        <p style="font-size:0.85rem; color:#4b5563;">Main Shiva temples & verified Kashi counterparts of all 12 Pan-India Jyotirlingas.</p>
+      </div>
+      <div class="portal-card-count">20 Selected Shrines &#8594;</div>
+    </a>
+
+    <a href="05_Vinayaka_Temples.html" class="portal-card">
+      <div>
+        <div class="portal-card-header">
+          <span class="portal-card-icon">&#128024;</span>
+          <div class="portal-card-title">Vinayaka Temples</div>
+        </div>
+        <p style="font-size:0.85rem; color:#4b5563;">Dhundhi Vinayak, Bada Ganesh & sacred geometry of the 56 concentric Vinayakas.</p>
+      </div>
+      <div class="portal-card-count">22 Selected Shrines &#8594;</div>
+    </a>
+
+    <a href="06_Vishnu_Temples.html" class="portal-card">
+      <div>
+        <div class="portal-card-header">
+          <span class="portal-card-icon">&#127807;</span>
+          <div class="portal-card-title">Vishnu Temples</div>
+        </div>
+        <p style="font-size:0.85rem; color:#4b5563;">Adi Keshav, Bindu Madhav, Pancha Madhava, Sapta Narasimha & sacred Varaha temples.</p>
+      </div>
+      <div class="portal-card-count">28 Vaishnava Shrines &#8594;</div>
+    </a>
+  </div>
+
+  <!-- Deliverable A Direct Link Box -->
+  <div class="intro-box" style="background:#eff6ff; border-color:#2563eb;">
+    <h2 style="color:#1e40af;">&#128194; Exact Offline Website Mirror (DELIVERABLE A)</h2>
+    <p>The entire original website <strong>varanasitemples.in</strong> has been preserved as a faithful, local mirror with all 1,314 pages, 326 photographs, local CSS stylesheets, and menu scripts.</p>
+    <div style="margin-top:10px;">
+      <a href="Kashi_Exact_Offline_Website/index.html" class="btn-link btn-mirror" style="font-size:0.9rem; padding:8px 14px;">Open Exact Mirror Homepage &#8594;</a>
+      <a href="README_OFFLINE.txt" class="btn-link btn-live" style="font-size:0.9rem; padding:8px 14px; margin-left:8px;">Read Offline Setup Instructions</a>
+    </div>
+  </div>
+
+  <!-- Four-Day Suggested Pilgrimage Itinerary -->
+  <h2 style="color:var(--primary); margin: 28px 0 16px 0;">&#128506; Suggested Four-Day Kashi Pilgrimage Itinerary</h2>
+  <p style="font-size:0.9rem; color:var(--text-muted); margin-bottom:16px;">
+    Optimized based on verified geographic coordinates and street directions to eliminate backtracking through Varanasi's crowded galis. Grouped logically by geographic quadrant with consideration for ghat access and temple opening timings.
+  </p>
+
+  <!-- DAY 1 -->
+  <div class="itinerary-day">
+    <h3>Day 1: Central Sanctum & Historic Riverfront Ghats (East & Central Kashi)</h3>
+    <p style="font-size:0.85rem; color:#4b5563; margin-bottom:10px;">
+      <strong>Focus:</strong> Primary Vishwanath sanctum, sacred ghats, and surrounding Aditya & Devi shrines. All accessible on foot from Dashashwamedh / Chowk.
+    </p>
+    <table class="itinerary-table">
+      <thead>
+        <tr><th>Time / Sequence</th><th>Temple / Destination</th><th>Significance / Notes</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>05:00 - 07:00</td><td><strong>Ganga Snan at Manikarnika / Dashashwamedh</strong></td><td>Auspicious holy dip; initial sankalpa of Kashi Yatra.</td></tr>
+        <tr><td>07:30 - 09:30</td><td><strong>Visweshwar (Kashi Vishwanath) & Dhundhi Vinayak</strong></td><td>Central Jyotirlinga and sovereign threshold Vinayaka inside corridor.</td></tr>
+        <tr><td>09:30 - 10:30</td><td><strong>Annapurna Devi Temple</strong></td><td>Divine provider of alms; immediate neighbor to Vishwanath.</td></tr>
+        <tr><td>10:30 - 11:30</td><td><strong>Draupad Aditya & Siddhi Vinayak</strong></td><td>Draupad Aditya inside corridor; Siddhi Vinayak in Vishwanath Gali.</td></tr>
+        <tr><td>11:30 - 13:00</td><td><strong>Ganga Aditya & Ganga Keshav (Lalita Ghat)</strong></td><td>Below Nepali Mandir; exquisite riverfront shrines.</td></tr>
+        <tr><td>13:00 - 16:00</td><td><em>Midday Rest & Temple Closures</em></td><td>Most sanctums close between 12:30 PM and 4:00 PM.</td></tr>
+        <tr><td>16:30 - 18:00</td><td><strong>Sankata Devi, Yama Aditya & Someshwar</strong></td><td>Sankata Ghat steps; Someshwar at Man Mandir Ghat (Somnath counterpart).</td></tr>
+        <tr><td>18:30 - 20:00</td><td><strong>Dashashwamedh Ghat Evening Ganga Aarti</strong></td><td>World-renowned spiritual spectacle; concludes Day 1.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- DAY 2 -->
+  <div class="itinerary-day">
+    <h3>Day 2: South Kashi — Kedar Ghat, Durga Kund & Sacred Ponds</h3>
+    <p style="font-size:0.85rem; color:#4b5563; margin-bottom:10px;">
+      <strong>Focus:</strong> Kedareshwar, ancient solar kunds, and fierce guardian deities of southern Varanasi. Accessible via cycle rickshaw/auto along Assi-Bhelupur road.
+    </p>
+    <table class="itinerary-table">
+      <thead>
+        <tr><th>Time / Sequence</th><th>Temple / Destination</th><th>Significance / Notes</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>06:00 - 07:30</td><td><strong>Kedareshwar & Chintamani Vinayak (Kedar Ghat)</strong></td><td>Kedar Jyotirlinga counterpart; historic red-and-white striped steps.</td></tr>
+        <tr><td>07:45 - 08:30</td><td><strong>Ruru Bhairav (Hanuman Ghat)</strong></td><td>Ashtabhairava #2 (Anand Bhairav); near Harishchandra Ghat.</td></tr>
+        <tr><td>08:45 - 10:00</td><td><strong>Lolark Aditya & Lolark Kund (Assi / Tulsi Ghat)</strong></td><td>Sunken stepwell of immense puranic antiquity (Kashi Khand Ch. 46).</td></tr>
+        <tr><td>10:15 - 11:30</td><td><strong>Durga Devi (Kooshmanda Durga) & Chand Bhairav</strong></td><td>Historic red temple at Durga Kund; Chand Bhairav within complex.</td></tr>
+        <tr><td>11:30 - 12:30</td><td><strong>Durg Vinayak (Durga Kund)</strong></td><td>Protector Vinayaka of southern quadrant.</td></tr>
+        <tr><td>12:30 - 16:00</td><td><em>Midday Rest</em></td><td>Relaxation in Bhelupur / Assi area.</td></tr>
+        <tr><td>16:30 - 18:00</td><td><strong>Saamba Aditya & Mahalakshmi Gauri (Surya Kund / Lakshmi Kund)</strong></td><td>D-51/90 Surya Kund; ancient cures for skin ailments.</td></tr>
+        <tr><td>18:30 - 19:30</td><td><strong>Tripurantakeshwar (Sigra)</strong></td><td>Mallikarjuna Jyotirlinga counterpart in western central belt.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- DAY 3 -->
+  <div class="itinerary-day">
+    <h3>Day 3: North Kashi — Panchganga, Trilochan & Rajghat Confluence</h3>
+    <p style="font-size:0.85rem; color:#4b5563; margin-bottom:10px;">
+      <strong>Focus:</strong> Confluence of five rivers (Panchganga), foundational Vaishnava shrines, and northern solar Adityas.
+    </p>
+    <table class="itinerary-table">
+      <thead>
+        <tr><th>Time / Sequence</th><th>Temple / Destination</th><th>Significance / Notes</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>06:00 - 08:00</td><td><strong>Bindu Madhav & Mayukh Aditya (Panchganga Ghat)</strong></td><td>Supreme Vishnu deity of Kashi; Mayukh Aditya & Mangala Gauri atop ghat.</td></tr>
+        <tr><td>08:15 - 09:15</td><td><strong>Mukhnirmalika Gauri & Gabhasteeshwar</strong></td><td>Panchganga labyrinthine lanes; ancient sun-infused Shiva linga.</td></tr>
+        <tr><td>09:30 - 10:30</td><td><strong>Trilochan Mahadev & Arun Aditya (Trilochan Ghat)</strong></td><td>Three-eyed Shiva linga; Arun Aditya facing Ganga steps.</td></tr>
+        <tr><td>10:45 - 11:45</td><td><strong>Khakholkh Aditya & Omkareshwar (Machhodari)</strong></td><td>Kameshwar temple; Omkareshwar Jyotirlinga counterpart hillock.</td></tr>
+        <tr><td>12:00 - 13:00</td><td><strong>Adi Keshav & Keshava Aditya (Rajghat Fort / Varuna Sangam)</strong></td><td>Confluence of Varuna & Ganga; original site where Vishnu welcomed Shiva.</td></tr>
+        <tr><td>13:00 - 16:00</td><td><em>Midday Rest</em></td><td>Northern Varanasi exploration.</td></tr>
+        <tr><td>16:30 - 18:00</td><td><strong>Prahlad Keshav & Gopi Govind (Prahlad Ghat)</strong></td><td>Ancient Vaishnava ghat riverfront shrines.</td></tr>
+        <tr><td>18:30 - 20:00</td><td><strong>Evening Boat Ride from Rajghat to Assi</strong></td><td>Full panoramic riverfront view of all 84 ghats illuminated at dusk.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- DAY 4 -->
+  <div class="itinerary-day">
+    <h3>Day 4: Guardian Kotwal, Protector Bhairavas & Transcendent Shrines (West & Outer Kashi)</h3>
+    <p style="font-size:0.85rem; color:#4b5563; margin-bottom:10px;">
+      <strong>Focus:</strong> Seeking blessings from the divine Kotwal Kaal Bhairav, concluding the Ashtabhairavas, and visiting outer transcendent shrines.
+    </p>
+    <table class="itinerary-table">
+      <thead>
+        <tr><th>Time / Sequence</th><th>Temple / Destination</th><th>Significance / Notes</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>06:00 - 08:00</td><td><strong>Kaal Bhairav (Bhaironath / Golghar)</strong></td><td>The Supreme Magistrate & Kotwal of Kashi; seek forgiveness for yatra sins.</td></tr>
+        <tr><td>08:15 - 09:15</td><td><strong>Asitang Bhairav & Mrityunjay Mahadev (Daranagar)</strong></td><td>Ashtabhairava #1 inside Vriddhakal / Mrityunjay Mahadev complex.</td></tr>
+        <tr><td>09:30 - 10:30</td><td><strong>Mahakaleshwar (Daranagar)</strong></td><td>Ujjain Mahakaleshwar Jyotirlinga counterpart.</td></tr>
+        <tr><td>10:45 - 11:45</td><td><strong>Bheeshan Bhairav (Bhoot Bhairav / Sapt Sagar)</strong></td><td>Ashtabhairava #7; powerful morning aarti at 10 AM.</td></tr>
+        <tr><td>12:00 - 13:00</td><td><strong>Vakra Tund Vinayak / Bada Ganesh (Lohatia)</strong></td><td>Colossal seated Vinayaka shrine; fulfiller of all wishes.</td></tr>
+        <tr><td>13:00 - 15:30</td><td><em>Midday Rest</em></td><td>Shopping for Banarasi silk & local prasad (Peda / Malaiyyo).</td></tr>
+        <tr><td>16:00 - 17:30</td><td><strong>Kapal Bhairav / Laat Bhairav & Uttarark Aditya (Alaipur)</strong></td><td>Outer north-western guardian at Laat Sarovar; ancient Kapal Mochan.</td></tr>
+        <tr><td>18:00 - 19:30</td><td><strong>Vimal Aditya & Triambakeshwar (Godowlia / Jangambari)</strong></td><td>Trimbakeshwar Jyotirlinga counterpart; concludes the four-day pilgrimage.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Searchable Master Temple Directory -->
+  <h2 style="color:var(--primary); margin: 32px 0 16px 0;">&#128269; Master Temple Directory (123 Shrines)</h2>
+  
+  <input type="text" id="masterSearch" class="search-box" placeholder="&#128269; Search by temple name, deity, zone, or locality..." onkeyup="filterMasterTable()">
+
+  <div class="filter-pills">
+    <div class="filter-pill active" onclick="setZoneFilter('all')">All Zones</div>
+    <div class="filter-pill" onclick="setZoneFilter('North Kashi')">North Kashi</div>
+    <div class="filter-pill" onclick="setZoneFilter('South Kashi')">South Kashi</div>
+    <div class="filter-pill" onclick="setZoneFilter('East Kashi')">East Kashi (Ghats)</div>
+    <div class="filter-pill" onclick="setZoneFilter('West Kashi')">West Kashi (Chowk/Inland)</div>
+  </div>
+
+  <div style="overflow-x:auto;">
+    <table class="itinerary-table" id="masterTable">
+      <thead>
+        <tr>
+          <th style="width:65px; text-align:center;">Image</th>
+          <th>Temple Name</th>
+          <th>Deity</th>
+          <th>Zone</th>
+          <th>Stated Address / Locality</th>
+          <th>Guide Link</th>
+          <th>Mirror Link</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr data-zone="North Kashi">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/Aadi-Mahadev-1.jpg" 
+                 alt="Aadi Mahadev" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/Aadi-Mahadev-1.jpg';}">
+          </td>
+          <td><strong>Aadi Mahadev</strong><br><span style="font-size:0.75rem; color:#6b7280;">Primordial Shiva Linga</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Shiva</span></td>
+          <td><span class="badge badge-zone-north">North Kashi</span></td>
+          <td style="font-size:0.82rem;">No. A-3/92, behind Trilochan Temple</td>
+          <td><a class="btn-link btn-live" href="04_Shiva_and_Kashi_Jyotirlingas.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/shiva-temples/other-shiva-temples-a-d/aadi-mahadev/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="East Kashi">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/Abhay-Vinayak.jpg" 
+                 alt="Abhay Vinayak" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/Abhay-Vinayak.jpg';}">
+          </td>
+          <td><strong>Abhay Vinayak</strong><br><span style="font-size:0.75rem; color:#6b7280;">Bestower of Fearlessness</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Vinayaka</span></td>
+          <td><span class="badge badge-zone-east">East Kashi</span></td>
+          <td style="font-size:0.82rem;">D-17/111, Dasaswamedh Ghat inside the premises of Shooltankeshwar temple.  Worsh</td>
+          <td><a class="btn-link btn-live" href="05_Vinayaka_Temples.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/vinayak-temples/abhay-vinayak/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="North Kashi">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/adi-keshav-New-988x1024.jpeg" 
+                 alt="Adi Keshav" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/adi-keshav-New-988x1024.jpeg';}">
+          </td>
+          <td><strong>Adi Keshav</strong><br><span style="font-size:0.75rem; color:#6b7280;">First Deity who Welcomed Shiva to Kashi (Varuna Sangam)</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Vishnu</span></td>
+          <td><span class="badge badge-zone-north">North Kashi</span></td>
+          <td style="font-size:0.82rem;">A-37/51, Rajghat Fort. Devotees can travel upto this place by autorickshaw or cy</td>
+          <td><a class="btn-link btn-live" href="06_Vishnu_Temples.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/vishnu-temples/adi-keshav/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="East Kashi">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/annapurna1.jpg" 
+                 alt="Annapurna Devi" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/annapurna1.jpg';}">
+          </td>
+          <td><strong>Annapurna Devi</strong><br><span style="font-size:0.75rem; color:#6b7280;">Supreme Provider of Food & Sustenance</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Devi</span></td>
+          <td><span class="badge badge-zone-east">East Kashi</span></td>
+          <td style="font-size:0.82rem;">D-9/1, Annapurna Temple. The narrow lane or Gully approaching the temple is know</td>
+          <td><a class="btn-link btn-live" href="03_Devi_and_Dashamaha_Vidya.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/devi-temples/annapurna-devi/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="Zone unverified — location evidence insufficient">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/Arun-Aditya-1024x746.jpg" 
+                 alt="Arun Aditya" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/Arun-Aditya-1024x746.jpg';}">
+          </td>
+          <td><strong>Arun Aditya</strong><br><span style="font-size:0.75rem; color:#6b7280;">Dwadasha Aditya #1</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Surya</span></td>
+          <td><span class="badge badge-zone-other">Zone unverified</span></td>
+          <td style="font-size:0.82rem;">Please watch our YouTube Video about Arun Aditya at following Link
+https://www.y</td>
+          <td><a class="btn-link btn-live" href="01_Surya_Dwadasa_Aditya.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/aditya-temples/arun-aditya/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="East Kashi">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/Asha-Vinayak-1-1024x768.jpg" 
+                 alt="Asha Vinayak" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/Asha-Vinayak-1-1024x768.jpg';}">
+          </td>
+          <td><strong>Asha Vinayak</strong><br><span style="font-size:0.75rem; color:#6b7280;">Fulfiller of Desires and Hopes</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Vinayaka</span></td>
+          <td><span class="badge badge-zone-east">East Kashi</span></td>
+          <td style="font-size:0.82rem;">D-3/71, Mir Ghat, Bare Hanuman Temple.  This falls in the vicinity of Vishalaksh</td>
+          <td><a class="btn-link btn-live" href="05_Vinayaka_Temples.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/vinayak-temples/asha-vinayak/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="North Kashi">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/Asitang-Bhairav-1.jpg" 
+                 alt="Asitang Bhairav" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/Asitang-Bhairav-1.jpg';}">
+          </td>
+          <td><strong>Asitang Bhairav</strong><br><span style="font-size:0.75rem; color:#6b7280;">Ashtabhairava #1 (East Protector)</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Bhairav</span></td>
+          <td><span class="badge badge-zone-north">North Kashi</span></td>
+          <td style="font-size:0.82rem;">K.52/39, Maha Mrityunjay temple near Vriddh Kaleshwar</td>
+          <td><a class="btn-link btn-live" href="02_Bhairav_Temples.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/bhairav-temples/other-bhairav-temples/asitang-bhairav/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="East Kashi">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/Atma-Veereshwar.jpeg" 
+                 alt="Atma Veereshwar" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/Atma-Veereshwar.jpeg';}">
+          </td>
+          <td><strong>Atma Veereshwar</strong><br><span style="font-size:0.75rem; color:#6b7280;">Main Shiva Temple (Installed by Sage Vishwamitra)</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Shiva</span></td>
+          <td><span class="badge badge-zone-east">East Kashi</span></td>
+          <td style="font-size:0.82rem;">Ck-7/158, Scindia Ghat which is a famous locality in Varanasi. This place can be</td>
+          <td><a class="btn-link btn-live" href="04_Shiva_and_Kashi_Jyotirlingas.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/shiva-temples/main-shiva-temples/atma-veereshwar/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="West Kashi">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/Atyugra-Narsimha.jpeg" 
+                 alt="Atyugra Narsimha" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/Atyugra-Narsimha.jpeg';}">
+          </td>
+          <td><strong>Atyugra Narsimha</strong><br><span style="font-size:0.75rem; color:#6b7280;">Extremely Fierce Man-Lion Manifestation</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Vishnu</span></td>
+          <td><span class="badge badge-zone-west">West Kashi</span></td>
+          <td style="font-size:0.82rem;">Ck.8/21, Gomath</td>
+          <td><a class="btn-link btn-live" href="06_Vishnu_Temples.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/vishnu-temples/atyugra-narsimha/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="West Kashi">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/Avi-Mukta-Vinayak-Shrine.svg" 
+                 alt="Avi Mukta Vinayak" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/Avi-Mukta-Vinayak-Shrine.svg';}">
+          </td>
+          <td><strong>Avi Mukta Vinayak</strong><br><span style="font-size:0.75rem; color:#6b7280;">Lord of Avimukta Kshetra</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Vinayaka</span></td>
+          <td><span class="badge badge-zone-west">West Kashi</span></td>
+          <td style="font-size:0.82rem;">According to some old timers, original Avi Mukt Vinayak idol has disappeared.  N</td>
+          <td><a class="btn-link btn-live" href="05_Vinayaka_Temples.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/vinayak-temples/avi-mukta-vinayak/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="East Kashi">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/Bandi-Devi.jpg" 
+                 alt="Bandi Devi" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/Bandi-Devi.jpg';}">
+          </td>
+          <td><strong>Bandi Devi</strong><br><span style="font-size:0.75rem; color:#6b7280;">Liberator from Captivity and Bondage</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Devi</span></td>
+          <td><span class="badge badge-zone-east">East Kashi</span></td>
+          <td style="font-size:0.82rem;">No. D</td>
+          <td><a class="btn-link btn-live" href="03_Devi_and_Dashamaha_Vidya.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/devi-temples/bandi-devi/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="Zone unverified — location evidence insufficient">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/Bhavani-Gauri-1.jpeg" 
+                 alt="Bhavani Gauri" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/Bhavani-Gauri-1.jpeg';}">
+          </td>
+          <td><strong>Bhavani Gauri</strong><br><span style="font-size:0.75rem; color:#6b7280;">Navagauri #7 (Near Vishwanath)</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Devi</span></td>
+          <td><span class="badge badge-zone-other">Zone unverified</span></td>
+          <td style="font-size:0.82rem;">D.8/38, Ram Mandir annexed to the premises of Annapurna Devi</td>
+          <td><a class="btn-link btn-live" href="03_Devi_and_Dashamaha_Vidya.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/devi-temples/bhavani-gauri/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="Zone unverified — location evidence insufficient">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/Bheemeshwar-1024x799.jpeg" 
+                 alt="Bheemeshwar" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/Bheemeshwar-1024x799.jpeg';}">
+          </td>
+          <td><strong>Bheemeshwar</strong><br><span style="font-size:0.75rem; color:#6b7280;">Bhimashankar Counterpart (Jyotirlinga #6 - Kashi Karvat)</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Shiva</span></td>
+          <td><span class="badge badge-zone-other">Zone unverified</span></td>
+          <td style="font-size:0.82rem;">Ck.31/12, Kashi Karvat temple</td>
+          <td><a class="btn-link btn-live" href="04_Shiva_and_Kashi_Jyotirlingas.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/shiva-temples/other-shiva-temples-a-d/bheemeshwar/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="West Kashi">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/Bheeshan-Bhairavar.jpg" 
+                 alt="Bheeshan Bhairav" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/Bheeshan-Bhairavar.jpg';}">
+          </td>
+          <td><strong>Bheeshan Bhairav</strong><br><span style="font-size:0.75rem; color:#6b7280;">Ashtabhairava #7 (North Protector)</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Bhairav</span></td>
+          <td><span class="badge badge-zone-west">West Kashi</span></td>
+          <td style="font-size:0.82rem;">K.63/28, Bhoot Bhairav, near Jyeshteshwar</td>
+          <td><a class="btn-link btn-live" href="02_Bhairav_Temples.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/bhairav-temples/other-bhairav-temples/bheeshan-bhairav/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="Zone unverified — location evidence insufficient">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/Bheeshma-Keshav.jpeg" 
+                 alt="Bheeshma Keshav" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/Bheeshma-Keshav.jpeg';}">
+          </td>
+          <td><strong>Bheeshma Keshav</strong><br><span style="font-size:0.75rem; color:#6b7280;">Installed by Pitamaha Bheeshma</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Vishnu</span></td>
+          <td><span class="badge badge-zone-other">Zone unverified</span></td>
+          <td style="font-size:0.82rem;">Bheeshma Keshav is located in the temple premises of Mrityunjay Mahadev at K.52/</td>
+          <td><a class="btn-link btn-live" href="06_Vishnu_Temples.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/vishnu-temples/bheeshma-keshav/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="North Kashi">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/Bhrigu-Keshav.jpeg" 
+                 alt="Bhrigu Keshav" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/Bhrigu-Keshav.jpeg';}">
+          </td>
+          <td><strong>Bhrigu Keshav</strong><br><span style="font-size:0.75rem; color:#6b7280;">Installed by Maharishi Bhrigu</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Vishnu</span></td>
+          <td><span class="badge badge-zone-north">North Kashi</span></td>
+          <td style="font-size:0.82rem;">Gola Ghat on the steps aloft the river Ganga. People can approach this place by </td>
+          <td><a class="btn-link btn-live" href="06_Vishnu_Temples.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/vishnu-temples/bhrigu-keshav/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="Zone unverified — location evidence insufficient">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/Bindu-Madhav-Copy.jpeg" 
+                 alt="Bindu Madhav" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/Bindu-Madhav-Copy.jpeg';}">
+          </td>
+          <td><strong>Bindu Madhav</strong><br><span style="font-size:0.75rem; color:#6b7280;">Supreme Presiding Vishnu Deity of Kashi (Panchganga Ghat)</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Vishnu</span></td>
+          <td><span class="badge badge-zone-other">Zone unverified</span></td>
+          <td style="font-size:0.82rem;">op the Trishul (Trident) of Lord Shiva.  Therefore, even Maha Pralay (great delu</td>
+          <td><a class="btn-link btn-live" href="06_Vishnu_Temples.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/vishnu-temples/bindu-madhav/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="East Kashi">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/Brahmacharini.jpeg" 
+                 alt="Brahma Charini Devi" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/Brahmacharini.jpeg';}">
+          </td>
+          <td><strong>Brahma Charini Devi</strong><br><span style="font-size:0.75rem; color:#6b7280;">Navadurga #2 (Ganga Ghat)</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Devi</span></td>
+          <td><span class="badge badge-zone-east">East Kashi</span></td>
+          <td style="font-size:0.82rem;">K-22/72, Durga Ghat.  Devotees can travel upto Bhaironath by rickshaw and walk o</td>
+          <td><a class="btn-link btn-live" href="03_Devi_and_Dashamaha_Vidya.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/devi-temples/brahma-charini-devi/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="South Kashi">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/Chamunda-Devi-Mahishasurmardini-1.jpg" 
+                 alt="Chamunda Devi" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/Chamunda-Devi-Mahishasurmardini-1.jpg';}">
+          </td>
+          <td><strong>Chamunda Devi</strong><br><span style="font-size:0.75rem; color:#6b7280;">Slayer of Chanda and Munda</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Devi</span></td>
+          <td><span class="badge badge-zone-south">South Kashi</span></td>
+          <td style="font-size:0.82rem;">This Devi is known by the name of Mahishasura Mardini near Lolark Kund, which is</td>
+          <td><a class="btn-link btn-live" href="03_Devi_and_Dashamaha_Vidya.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/devi-temples/chamunda-devi/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="South Kashi">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/Chand-Bhairav-2.jpg" 
+                 alt="Chand Bhairav" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/Chand-Bhairav-2.jpg';}">
+          </td>
+          <td><strong>Chand Bhairav</strong><br><span style="font-size:0.75rem; color:#6b7280;">Ashtabhairava #3 (South Protector)</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Bhairav</span></td>
+          <td><span class="badge badge-zone-south">South Kashi</span></td>
+          <td style="font-size:0.82rem;">Chand Bhairav is located in the temple premises of Durga Devi at B.27/2, Durga K</td>
+          <td><a class="btn-link btn-live" href="02_Bhairav_Temples.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/bhairav-temples/other-bhairav-temples/chand-bhairav/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="Zone unverified — location evidence insufficient">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/Chandi-Devi-1.jpg" 
+                 alt="Chandi Devi" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/Chandi-Devi-1.jpg';}">
+          </td>
+          <td><strong>Chandi Devi</strong><br><span style="font-size:0.75rem; color:#6b7280;">Fierce Protector Form</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Devi</span></td>
+          <td><span class="badge badge-zone-other">Zone unverified</span></td>
+          <td style="font-size:0.82rem;">several places in the Holy city of Kashi and Kaurmi Shakti is one of them.  Shri</td>
+          <td><a class="btn-link btn-live" href="03_Devi_and_Dashamaha_Vidya.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/devi-temples/chandi-devi/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="South Kashi">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/Charma-Munda-1.jpg" 
+                 alt="Charma Munda Devi" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/Charma-Munda-1.jpg';}">
+          </td>
+          <td><strong>Charma Munda Devi</strong><br><span style="font-size:0.75rem; color:#6b7280;">Protector of Kashi Kshetra</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Devi</span></td>
+          <td><span class="badge badge-zone-south">South Kashi</span></td>
+          <td style="font-size:0.82rem;">B-2/62 Bhadaini. If one proceeds after Mata Anandmayee Hospital towards Assi, th</td>
+          <td><a class="btn-link btn-live" href="03_Devi_and_Dashamaha_Vidya.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/devi-temples/charma-munda-devi/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="Zone unverified — location evidence insufficient">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/Chintamani-Vinayak-1.jpg" 
+                 alt="Chintamani Vinayak" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/Chintamani-Vinayak-1.jpg';}">
+          </td>
+          <td><strong>Chintamani Vinayak</strong><br><span style="font-size:0.75rem; color:#6b7280;">Remover of All Worries (Near Kedargeshwar)</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Vinayaka</span></td>
+          <td><span class="badge badge-zone-other">Zone unverified</span></td>
+          <td style="font-size:0.82rem;">K-56/42, East of Ishwar Gangi Talab, Babu Bazar.  By worshipping Chintamani Vina</td>
+          <td><a class="btn-link btn-live" href="05_Vinayaka_Temples.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/vinayak-temples/chintamani-vinayak/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="West Kashi">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/Chitra-Ghanta-Devi-1.jpg" 
+                 alt="Chitra Ghanta Devi" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/Chitra-Ghanta-Devi-1.jpg';}">
+          </td>
+          <td><strong>Chitra Ghanta Devi</strong><br><span style="font-size:0.75rem; color:#6b7280;">Navadurga #3 (Chandraghanta)</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Devi</span></td>
+          <td><span class="badge badge-zone-west">West Kashi</span></td>
+          <td style="font-size:0.82rem;">Ck. 23/34, Chitra Ghanta Gulli</td>
+          <td><a class="btn-link btn-live" href="03_Devi_and_Dashamaha_Vidya.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/devi-temples/chitra-ghanta-devi/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="Zone unverified — location evidence insufficient">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/Vinayak-Misc.-300x225.jpg" 
+                 alt="Dehli Vinayak" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/Vinayak-Misc.-300x225.jpg';}">
+          </td>
+          <td><strong>Dehli Vinayak</strong><br><span style="font-size:0.75rem; color:#6b7280;">Threshold Guardian of Kashi</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Vinayaka</span></td>
+          <td><span class="badge badge-zone-other">Zone unverified</span></td>
+          <td style="font-size:0.82rem;">a village which is almost more than 20 kms. away from the heart of Varanasi city</td>
+          <td><a class="btn-link btn-live" href="05_Vinayaka_Temples.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/vinayak-temples/dehli-vinayak/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="East Kashi">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/dharmeshwar.jpg" 
+                 alt="Dharmeshwar" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/dharmeshwar.jpg';}">
+          </td>
+          <td><strong>Dharmeshwar</strong><br><span style="font-size:0.75rem; color:#6b7280;">Main Shiva Temple (Installed by Yama Dharmaraja)</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Shiva</span></td>
+          <td><span class="badge badge-zone-east">East Kashi</span></td>
+          <td style="font-size:0.82rem;">D-2/21, Mir Ghat.  The temple is approachable from a famous locality called Dash</td>
+          <td><a class="btn-link btn-live" href="04_Shiva_and_Kashi_Jyotirlingas.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/shiva-temples/main-shiva-temples/dharmeshwar/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="East Kashi">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/Dhundhi-Vinayak-Shrine.svg" 
+                 alt="Dhundhi Vinayak" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/Dhundhi-Vinayak-Shrine.svg';}">
+          </td>
+          <td><strong>Dhundhi Vinayak</strong><br><span style="font-size:0.75rem; color:#6b7280;">Principal Sovereign Vinayaka of Kashi (Kashi Vishwanath Corridor)</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Vinayaka</span></td>
+          <td><span class="badge badge-zone-east">East Kashi</span></td>
+          <td style="font-size:0.82rem;">the entry point of Annapurna Temple via Gate No.1</td>
+          <td><a class="btn-link btn-live" href="05_Vinayaka_Temples.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/vinayak-temples/aa-dhundhi-vinayak/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="West Kashi">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/Draupad-Aditya.jpeg" 
+                 alt="Draupad Aditya" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/Draupad-Aditya.jpeg';}">
+          </td>
+          <td><strong>Draupad Aditya</strong><br><span style="font-size:0.75rem; color:#6b7280;">Dwadasha Aditya #2</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Surya</span></td>
+          <td><span class="badge badge-zone-west">West Kashi</span></td>
+          <td style="font-size:0.82rem;">Ck. 35/21, Akshay Vat, near Vishweshar Temple</td>
+          <td><a class="btn-link btn-live" href="01_Surya_Dwadasa_Aditya.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/aditya-temples/draupad-aditya/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="South Kashi">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/Durg-Vinayak-2.jpg" 
+                 alt="Durg Vinayak" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/Durg-Vinayak-2.jpg';}">
+          </td>
+          <td><strong>Durg Vinayak</strong><br><span style="font-size:0.75rem; color:#6b7280;">Protector at Durga Kund</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Vinayaka</span></td>
+          <td><span class="badge badge-zone-south">South Kashi</span></td>
+          <td style="font-size:0.82rem;">no. 27/1, behind Durga Kund</td>
+          <td><a class="btn-link btn-live" href="05_Vinayaka_Temples.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/vinayak-temples/durg-vinayak/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="South Kashi">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/Durga-Temple.jpg" 
+                 alt="Durga Devi (Kooshmanda Durga)" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/Durga-Temple.jpg';}">
+          </td>
+          <td><strong>Durga Devi (Kooshmanda Durga)</strong><br><span style="font-size:0.75rem; color:#6b7280;">Navadurga #4 & Durgakund Protector</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Devi</span></td>
+          <td><span class="badge badge-zone-south">South Kashi</span></td>
+          <td style="font-size:0.82rem;">Durga Kund area.  People can travel upto this place in car/auto or cycle ricksha</td>
+          <td><a class="btn-link btn-live" href="03_Devi_and_Dashamaha_Vidya.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/devi-temples/durga-devi-kooshmanda-durga/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="Zone unverified — location evidence insufficient">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/Durmukh-Vinayak-1.jpg" 
+                 alt="Durmukh Vinayak" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/Durmukh-Vinayak-1.jpg';}">
+          </td>
+          <td><strong>Durmukh Vinayak</strong><br><span style="font-size:0.75rem; color:#6b7280;">Fierce-Faced Protector</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Vinayaka</span></td>
+          <td><span class="badge badge-zone-other">Zone unverified</span></td>
+          <td style="font-size:0.82rem;">Ck.34/60,  near Kashi Karvat Temlple</td>
+          <td><a class="btn-link btn-live" href="05_Vinayaka_Temples.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/vinayak-temples/durmukh-vinayak/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="East Kashi">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/Dwar-Vinayak.jpg" 
+                 alt="Dwar Vinayak" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/Dwar-Vinayak.jpg';}">
+          </td>
+          <td><strong>Dwar Vinayak</strong><br><span style="font-size:0.75rem; color:#6b7280;">Gateway Guardian Vinayaka</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Vinayaka</span></td>
+          <td><span class="badge badge-zone-east">East Kashi</span></td>
+          <td style="font-size:0.82rem;">Dwar Vinayak also guards Kashi against evil forces, according to Kashi Khand.  D</td>
+          <td><a class="btn-link btn-live" href="05_Vinayaka_Temples.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/vinayak-temples/dwar-vinayak/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="West Kashi">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/Dwi-Mukh-Vinayak-1.jpg" 
+                 alt="Dwi Mukh Vinayak" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/Dwi-Mukh-Vinayak-1.jpg';}">
+          </td>
+          <td><strong>Dwi Mukh Vinayak</strong><br><span style="font-size:0.75rem; color:#6b7280;">Two-Faced Vinayaka (Near Panchganga Ghat)</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Vinayaka</span></td>
+          <td><span class="badge badge-zone-west">West Kashi</span></td>
+          <td style="font-size:0.82rem;">D-51/90, West of Saamba Aditya, Suraj Kund. Worshipping this lord will give all </td>
+          <td><a class="btn-link btn-live" href="05_Vinayaka_Temples.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/vinayak-temples/dwi-mukh-vinayak/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="Zone unverified — location evidence insufficient">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/Eka-Danta-Vinayak-1-1024x771.jpg" 
+                 alt="Eka Danta Vinayak" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/Eka-Danta-Vinayak-1-1024x771.jpg';}">
+          </td>
+          <td><strong>Eka Danta Vinayak</strong><br><span style="font-size:0.75rem; color:#6b7280;">Single-Tusked Lord</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Vinayaka</span></td>
+          <td><span class="badge badge-zone-other">Zone unverified</span></td>
+          <td style="font-size:0.82rem;">D-32/102, Pushpa Danteshwar, Bengali Tola, Varanasi. He guards Anand Van (Kashi)</td>
+          <td><a class="btn-link btn-live" href="05_Vinayaka_Temples.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/vinayak-temples/eka-danta-vinayak/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="North Kashi">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/Gabhasteeshwar-New.jpg" 
+                 alt="Gabhasteeshwar" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/Gabhasteeshwar-New.jpg';}">
+          </td>
+          <td><strong>Gabhasteeshwar</strong><br><span style="font-size:0.75rem; color:#6b7280;">Main Shiva Temple (Installed by Surya / Mayukh Aditya)</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Shiva</span></td>
+          <td><span class="badge badge-zone-north">North Kashi</span></td>
+          <td style="font-size:0.82rem;">K-24/34, Mangala Gauri Temple.  Devotees can travel upto Bhaironath by auto or c</td>
+          <td><a class="btn-link btn-live" href="04_Shiva_and_Kashi_Jyotirlingas.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/shiva-temples/main-shiva-temples/gabhasteeshwar/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="East Kashi">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/Ganeshwar-Rameshwar-1.jpg" 
+                 alt="Ganeshwar (Rameshwar)" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/Ganeshwar-Rameshwar-1.jpg';}">
+          </td>
+          <td><strong>Ganeshwar (Rameshwar)</strong><br><span style="font-size:0.75rem; color:#6b7280;">Rameshwaram Counterpart (Jyotirlinga #7 - Man Mandir Ghat)</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Shiva</span></td>
+          <td><span class="badge badge-zone-east">East Kashi</span></td>
+          <td style="font-size:0.82rem;">D.16/34, Manmandir Ghat</td>
+          <td><a class="btn-link btn-live" href="04_Shiva_and_Kashi_Jyotirlingas.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/shiva-temples/other-shiva-temples-e-k/ganeshwar-rameshwar/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="East Kashi">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/Ganga-Aditya.jpeg" 
+                 alt="Ganga Aditya" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/Ganga-Aditya.jpeg';}">
+          </td>
+          <td><strong>Ganga Aditya</strong><br><span style="font-size:0.75rem; color:#6b7280;">Dwadasha Aditya #3</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Surya</span></td>
+          <td><span class="badge badge-zone-east">East Kashi</span></td>
+          <td style="font-size:0.82rem;">No. 1/68, below Nepali Mandir, Lalita Ghat</td>
+          <td><a class="btn-link btn-live" href="01_Surya_Dwadasa_Aditya.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/aditya-temples/ganga-aditya/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="East Kashi">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/Ganga-Keshav-1.jpeg" 
+                 alt="Ganga Keshav" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/Ganga-Keshav-1.jpeg';}">
+          </td>
+          <td><strong>Ganga Keshav</strong><br><span style="font-size:0.75rem; color:#6b7280;">Installed by Vishnu at Lalita Ghat</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Vishnu</span></td>
+          <td><span class="badge badge-zone-east">East Kashi</span></td>
+          <td style="font-size:0.82rem;">D.1/67, Lalita Ghat, just above the steps</td>
+          <td><a class="btn-link btn-live" href="06_Vishnu_Temples.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/vishnu-temples/ganga-keshav/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="North Kashi">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/Gopi-Govind-Shrine.svg" 
+                 alt="Gopi Govind" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/Gopi-Govind-Shrine.svg';}">
+          </td>
+          <td><strong>Gopi Govind</strong><br><span style="font-size:0.75rem; color:#6b7280;">Lord of Gopis at Ganga Riverfront</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Vishnu</span></td>
+          <td><span class="badge badge-zone-north">North Kashi</span></td>
+          <td style="font-size:0.82rem;">K.4/24, Lal Ghat  near Birla Sanskrit Vidhyalaya, Birla House</td>
+          <td><a class="btn-link btn-live" href="06_Vishnu_Temples.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/vishnu-temples/gopi-govind/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="North Kashi">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/GYAN-KESHAV.jpg" 
+                 alt="Gyan Keshav" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/GYAN-KESHAV.jpg';}">
+          </td>
+          <td><strong>Gyan Keshav</strong><br><span style="font-size:0.75rem; color:#6b7280;">Bestower of Divine Knowledge</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Vishnu</span></td>
+          <td><span class="badge badge-zone-north">North Kashi</span></td>
+          <td style="font-size:0.82rem;">A-37/51, Adi Keshav Temple, Rajghat Fort. Devotees can travel upto this place by</td>
+          <td><a class="btn-link btn-live" href="06_Vishnu_Temples.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/vishnu-temples/gyan-keshav/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="West Kashi">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/Gyan-Madhav-Shrine.svg" 
+                 alt="Gyan Madhav" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/Gyan-Madhav-Shrine.svg';}">
+          </td>
+          <td><strong>Gyan Madhav</strong><br><span style="font-size:0.75rem; color:#6b7280;">Wisdom Aspect of Lord Madhava</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Vishnu</span></td>
+          <td><span class="badge badge-zone-west">West Kashi</span></td>
+          <td style="font-size:0.82rem;">Ck.35/21, Vishwanath Temple compound near Akshay Vat</td>
+          <td><a class="btn-link btn-live" href="06_Vishnu_Temples.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/vishnu-temples/gyan-madhav/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="West Kashi">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/Gyan-Vinayak-1.jpg" 
+                 alt="Gyan Vinayak" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/Gyan-Vinayak-1.jpg';}">
+          </td>
+          <td><strong>Gyan Vinayak</strong><br><span style="font-size:0.75rem; color:#6b7280;">Bestower of Supreme Spiritual Wisdom</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Vinayaka</span></td>
+          <td><span class="badge badge-zone-west">West Kashi</span></td>
+          <td style="font-size:0.82rem;">Khowa Gulli Chowraha at Ck.28/4 Langlishwar temple</td>
+          <td><a class="btn-link btn-live" href="05_Vinayaka_Temples.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/vinayak-temples/gyan-vinayak/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="South Kashi">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/Hayagreev-Keshav-1.jpg" 
+                 alt="Hayagreev Keshav" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/Hayagreev-Keshav-1.jpg';}">
+          </td>
+          <td><strong>Hayagreev Keshav</strong><br><span style="font-size:0.75rem; color:#6b7280;">Horse-Necked Embodiment of Vedas</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Vishnu</span></td>
+          <td><span class="badge badge-zone-south">South Kashi</span></td>
+          <td style="font-size:0.82rem;">B.3/25 near Anandmayee Hospital at Bhadaini</td>
+          <td><a class="btn-link btn-live" href="06_Vishnu_Temples.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/vishnu-temples/hayagreev-keshav/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="West Kashi">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/Hayakanti-Devi-1.jpg" 
+                 alt="Hayakanti Devi" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/Hayakanti-Devi-1.jpg';}">
+          </td>
+          <td><strong>Hayakanti Devi</strong><br><span style="font-size:0.75rem; color:#6b7280;">Bestower of Radiant Beauty & Radiance</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Devi</span></td>
+          <td><span class="badge badge-zone-west">West Kashi</span></td>
+          <td style="font-size:0.82rem;">D.52/35, Kali Mutt, Lakshmi Kund</td>
+          <td><a class="btn-link btn-live" href="03_Devi_and_Dashamaha_Vidya.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/devi-temples/hayakanti-devi/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="Zone unverified — location evidence insufficient">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/Heramba-Vinayak-1.jpg" 
+                 alt="Heramba Vinayak" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/Heramba-Vinayak-1.jpg';}">
+          </td>
+          <td><strong>Heramba Vinayak</strong><br><span style="font-size:0.75rem; color:#6b7280;">Five-Headed Protector Vinayaka</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Vinayaka</span></td>
+          <td><span class="badge badge-zone-other">Zone unverified</span></td>
+          <td style="font-size:0.82rem;">C-21/14, Maldahiya. At the original place of this temple, a shopping complex, kn</td>
+          <td><a class="btn-link btn-live" href="05_Vinayaka_Temples.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/vinayak-temples/heramba-vinayak/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="North Kashi">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/Jyeshta-gauri-COMP.jpg" 
+                 alt="Jyeshta Gauri" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/Jyeshta-gauri-COMP.jpg';}">
+          </td>
+          <td><strong>Jyeshta Gauri</strong><br><span style="font-size:0.75rem; color:#6b7280;">Navagauri #2 (Kashi Pura)</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Devi</span></td>
+          <td><span class="badge badge-zone-north">North Kashi</span></td>
+          <td style="font-size:0.82rem;">K-63/24, Sapt Sagar Mohalla. The temple is approachable from a famous locality c</td>
+          <td><a class="btn-link btn-live" href="03_Devi_and_Dashamaha_Vidya.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/devi-temples/jyeshta-gauri/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="North Kashi">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/Kaal-Bhairav-1-1024x757.jpg" 
+                 alt="Kaal Bhairav" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/Kaal-Bhairav-1-1024x757.jpg';}">
+          </td>
+          <td><strong>Kaal Bhairav</strong><br><span style="font-size:0.75rem; color:#6b7280;">Kotwal of Kashi (Supreme Protector)</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Bhairav</span></td>
+          <td><span class="badge badge-zone-north">North Kashi</span></td>
+          <td style="font-size:0.82rem;">K-32/22, Bhaironath.  People can approach this place by rickshaw either through </td>
+          <td><a class="btn-link btn-live" href="02_Bhairav_Temples.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/bhairav-temples/kaal-bhairav/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="East Kashi">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/kalika1.jpg" 
+                 alt="Kalratri" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/kalika1.jpg';}">
+          </td>
+          <td><strong>Kalratri</strong><br><span style="font-size:0.75rem; color:#6b7280;">Navadurga #7 & Mahavidya Kali counterpart</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Devi</span></td>
+          <td><span class="badge badge-zone-east">East Kashi</span></td>
+          <td style="font-size:0.82rem;">D.8/17, Kalika Galli, which is a lane parallel to Annapurna – Vishwanath Lane</td>
+          <td><a class="btn-link btn-live" href="03_Devi_and_Dashamaha_Vidya.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/devi-temples/kalratri/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="South Kashi">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/Kamakhya-Devi-comp.jpg" 
+                 alt="Kamakhya Devi (Kamakshi)" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/Kamakhya-Devi-comp.jpg';}">
+          </td>
+          <td><strong>Kamakhya Devi (Kamakshi)</strong><br><span style="font-size:0.75rem; color:#6b7280;">Yoni Mudra Shakti Peeth Counterpart</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Devi</span></td>
+          <td><span class="badge badge-zone-south">South Kashi</span></td>
+          <td style="font-size:0.82rem;">B.21/123, Kamachha</td>
+          <td><a class="btn-link btn-live" href="03_Devi_and_Dashamaha_Vidya.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/devi-temples/kamakhya-devi-kamakshi/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="North Kashi">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/Kapal-Bhairav.jpg" 
+                 alt="Kapal Bhairav (Laat Bhairav)" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/Kapal-Bhairav.jpg';}">
+          </td>
+          <td><strong>Kapal Bhairav (Laat Bhairav)</strong><br><span style="font-size:0.75rem; color:#6b7280;">Ashtabhairava #6 (Northwest Protector)</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Bhairav</span></td>
+          <td><span class="badge badge-zone-north">North Kashi</span></td>
+          <td style="font-size:0.82rem;">A.1/123, Alaipur</td>
+          <td><a class="btn-link btn-live" href="02_Bhairav_Temples.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/bhairav-temples/other-bhairav-temples/kapal-bhairav-laat-bhairav/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="South Kashi">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/Kardhameshwar-1.jpg" 
+                 alt="Kardhameshwar" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/Kardhameshwar-1.jpg';}">
+          </td>
+          <td><strong>Kardhameshwar</strong><br><span style="font-size:0.75rem; color:#6b7280;">First stop on Panchkroshi Pilgrimage</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Shiva</span></td>
+          <td><span class="badge badge-zone-south">South Kashi</span></td>
+          <td style="font-size:0.82rem;">No. B</td>
+          <td><a class="btn-link btn-live" href="04_Shiva_and_Kashi_Jyotirlingas.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/shiva-temples/other-shiva-temples-e-k/kardhameshwar/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="East Kashi">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/Katyayani-Devi.jpeg" 
+                 alt="Katyayani" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/Katyayani-Devi.jpeg';}">
+          </td>
+          <td><strong>Katyayani</strong><br><span style="font-size:0.75rem; color:#6b7280;">Navadurga #6 (Atma Veereshwar complex)</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Devi</span></td>
+          <td><span class="badge badge-zone-east">East Kashi</span></td>
+          <td style="font-size:0.82rem;">Katyayini Devi is located in the premises of Atma Veereshwar Temple at Ck-7/158,</td>
+          <td><a class="btn-link btn-live" href="03_Devi_and_Dashamaha_Vidya.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/devi-temples/katyayani/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="South Kashi">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/Kedar-alankar-photo.jpeg" 
+                 alt="Kedareshwar" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/Kedar-alankar-photo.jpeg';}">
+          </td>
+          <td><strong>Kedareshwar</strong><br><span style="font-size:0.75rem; color:#6b7280;">Main Shiva Temple & Kedarnath Counterpart (Jyotirlinga #11)</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Shiva</span></td>
+          <td><span class="badge badge-zone-south">South Kashi</span></td>
+          <td style="font-size:0.82rem;">B-6/102, Kedar Ghat which is a famous locality. It is approachable by cycle rick</td>
+          <td><a class="btn-link btn-live" href="04_Shiva_and_Kashi_Jyotirlingas.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/shiva-temples/main-shiva-temples/kedareshwar/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="North Kashi">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/KESHAV-ADITYA.jpg" 
+                 alt="Keshava Aditya" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/KESHAV-ADITYA.jpg';}">
+          </td>
+          <td><strong>Keshava Aditya</strong><br><span style="font-size:0.75rem; color:#6b7280;">Dwadasha Aditya #4</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Surya</span></td>
+          <td><span class="badge badge-zone-north">North Kashi</span></td>
+          <td style="font-size:0.82rem;">No. A-37/51, Adi Keshav Temple, Rajghat Fort</td>
+          <td><a class="btn-link btn-live" href="01_Surya_Dwadasa_Aditya.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/aditya-temples/keshava-aditya/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="North Kashi">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/Khakholkh-Aditya1.jpg" 
+                 alt="Khakholkh Aditya" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/Khakholkh-Aditya1.jpg';}">
+          </td>
+          <td><strong>Khakholkh Aditya</strong><br><span style="font-size:0.75rem; color:#6b7280;">Dwadasha Aditya #5</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Surya</span></td>
+          <td><span class="badge badge-zone-north">North Kashi</span></td>
+          <td style="font-size:0.82rem;">Kameshwar Temple at A-2/9 North of Trilochan.  The temple is approachable from a</td>
+          <td><a class="btn-link btn-live" href="01_Surya_Dwadasa_Aditya.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/aditya-temples/khakholkh-aditya/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="West Kashi">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/Kolahal-Narasimha-1.jpeg" 
+                 alt="Kolahala Narasimha" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/Kolahal-Narasimha-1.jpeg';}">
+          </td>
+          <td><strong>Kolahala Narasimha</strong><br><span style="font-size:0.75rem; color:#6b7280;">Roaring Man-Lion Protector</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Vishnu</span></td>
+          <td><span class="badge badge-zone-west">West Kashi</span></td>
+          <td style="font-size:0.82rem;">Ck.8/181 above Siddhi Vinayak, inside Narsimha Mutt</td>
+          <td><a class="btn-link btn-live" href="06_Vishnu_Temples.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/vishnu-temples/kolahala-narasimha/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="Zone unverified — location evidence insufficient">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/krithi-vaseshwar.jpg" 
+                 alt="Krithi Vaseshwar" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/krithi-vaseshwar.jpg';}">
+          </td>
+          <td><strong>Krithi Vaseshwar</strong><br><span style="font-size:0.75rem; color:#6b7280;">Main Shiva Temple (Slayer of Gajasura)</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Shiva</span></td>
+          <td><span class="badge badge-zone-other">Zone unverified</span></td>
+          <td style="font-size:0.82rem;">K-46/23, West of Har Tirath Pond, in Mrityunay Mahadev Road.  Hans Teerth as men</td>
+          <td><a class="btn-link btn-live" href="04_Shiva_and_Kashi_Jyotirlingas.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/shiva-temples/main-shiva-temples/krithi-vaseshwar/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="West Kashi">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/Krodhan-Bhairav-1.jpg" 
+                 alt="Krodhan Bhairav" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/Krodhan-Bhairav-1.jpg';}">
+          </td>
+          <td><strong>Krodhan Bhairav</strong><br><span style="font-size:0.75rem; color:#6b7280;">Ashtabhairava #4 (Southwest Protector)</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Bhairav</span></td>
+          <td><span class="badge badge-zone-west">West Kashi</span></td>
+          <td style="font-size:0.82rem;">Batuk Bhairav temple at B.31/126, Kamachha, Varanasi</td>
+          <td><a class="btn-link btn-live" href="02_Bhairav_Temples.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/bhairav-temples/other-bhairav-temples/krodhan-bhairav/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="Zone unverified — location evidence insufficient">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/Kshipra-Prasad-Vinayak-2.jpg" 
+                 alt="Kshipra Prasad Vinayak" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/Kshipra-Prasad-Vinayak-2.jpg';}">
+          </td>
+          <td><strong>Kshipra Prasad Vinayak</strong><br><span style="font-size:0.75rem; color:#6b7280;">Quickly Pleased / Swift Boons</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Vinayaka</span></td>
+          <td><span class="badge badge-zone-other">Zone unverified</span></td>
+          <td style="font-size:0.82rem;">C-18/47, Pitar Kunda, Pitreshwar Temple.  Devotees can travel upto this place by</td>
+          <td><a class="btn-link btn-live" href="05_Vinayaka_Temples.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/vinayak-temples/kshipra-prasad-vinayak/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="North Kashi">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/Lakshmi-Narayan-1024x768.jpg" 
+                 alt="Lakshmi Narsimha" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/Lakshmi-Narayan-1024x768.jpg';}">
+          </td>
+          <td><strong>Lakshmi Narsimha</strong><br><span style="font-size:0.75rem; color:#6b7280;">Grace-Bestowing Narasimha with Lakshmi</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Vishnu</span></td>
+          <td><span class="badge badge-zone-north">North Kashi</span></td>
+          <td style="font-size:0.82rem;">K.20/159, Raj Mandir, inside Dakshin Mukhi (one eyed) Hanumanji temple</td>
+          <td><a class="btn-link btn-live" href="06_Vishnu_Temples.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/vishnu-temples/lakshmi-narsimha/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="East Kashi">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/Lalita-Gauri.jpeg" 
+                 alt="Lalitha Gauri" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/Lalita-Gauri.jpeg';}">
+          </td>
+          <td><strong>Lalitha Gauri</strong><br><span style="font-size:0.75rem; color:#6b7280;">Navagauri #6 & Mahavidya Lalitha/Shodashi counterpart</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Devi</span></td>
+          <td><span class="badge badge-zone-east">East Kashi</span></td>
+          <td style="font-size:0.82rem;">Lalita Gauri is present at Ck.1/67, Lalita Ghat. If one desires to walk on foot,</td>
+          <td><a class="btn-link btn-live" href="03_Devi_and_Dashamaha_Vidya.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/devi-temples/lalitha-gauri/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="South Kashi">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/Lambodar-589x1024.jpg" 
+                 alt="Lambodara Vinayak" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/Lambodar-589x1024.jpg';}">
+          </td>
+          <td><strong>Lambodara Vinayak</strong><br><span style="font-size:0.75rem; color:#6b7280;">Large-Bellied Preserver</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Vinayaka</span></td>
+          <td><span class="badge badge-zone-south">South Kashi</span></td>
+          <td style="font-size:0.82rem;">B.7/206, Kedarghat Road and in this locality devotees normally  know this temple</td>
+          <td><a class="btn-link btn-live" href="05_Vinayaka_Temples.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/vinayak-temples/lambodara-vinayak/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="South Kashi">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/Lolark-Aditya-1.jpg" 
+                 alt="Lolark Aditya" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/Lolark-Aditya-1.jpg';}">
+          </td>
+          <td><strong>Lolark Aditya</strong><br><span style="font-size:0.75rem; color:#6b7280;">Dwadasha Aditya #6</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Surya</span></td>
+          <td><span class="badge badge-zone-south">South Kashi</span></td>
+          <td style="font-size:0.82rem;">Lolark Aditya/Lolark Kund is located near Tulsi Ghat. Persons can travel upto Ma</td>
+          <td><a class="btn-link btn-live" href="01_Surya_Dwadasa_Aditya.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/aditya-temples/lolark-aditya/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="North Kashi">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/Mahabal-New-one_065.jpg" 
+                 alt="Mahabal Narsimha" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/Mahabal-New-one_065.jpg';}">
+          </td>
+          <td><strong>Mahabal Narsimha</strong><br><span style="font-size:0.75rem; color:#6b7280;">Mightiest Form of Narasimha</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Vishnu</span></td>
+          <td><span class="badge badge-zone-north">North Kashi</span></td>
+          <td style="font-size:0.82rem;">A-2/9 North of Trilochan, in the premises of Kameshwar Temple.  The temple is ap</td>
+          <td><a class="btn-link btn-live" href="06_Vishnu_Temples.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/vishnu-temples/mahabal-narsimha/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="North Kashi">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/Mahakaleshwar-1.jpg" 
+                 alt="Mahakaleshwar" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/Mahakaleshwar-1.jpg';}">
+          </td>
+          <td><strong>Mahakaleshwar</strong><br><span style="font-size:0.75rem; color:#6b7280;">Mahakaleshwar Counterpart (Jyotirlinga #3 - Daranagar)</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Shiva</span></td>
+          <td><span class="badge badge-zone-north">North Kashi</span></td>
+          <td style="font-size:0.82rem;">K-52/39, Mrityunjay Mahadev temple.  People can approach this temple by rickshaw</td>
+          <td><a class="btn-link btn-live" href="04_Shiva_and_Kashi_Jyotirlingas.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/shiva-temples/other-shiva-temples-l-r/mahakaleshwar/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="West Kashi">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/Mahalakshmi-Gauri-1.jpg" 
+                 alt="Mahalakshmi Gauri" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/Mahalakshmi-Gauri-1.jpg';}">
+          </td>
+          <td><strong>Mahalakshmi Gauri</strong><br><span style="font-size:0.75rem; color:#6b7280;">Navagauri #9 & Mahavidya Kamala counterpart</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Devi</span></td>
+          <td><span class="badge badge-zone-west">West Kashi</span></td>
+          <td style="font-size:0.82rem;">D.52/40, Lakshmi Kund</td>
+          <td><a class="btn-link btn-live" href="03_Devi_and_Dashamaha_Vidya.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/devi-temples/mahalakshmi-gauri/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="North Kashi">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/Mangal-vinayak.jpeg" 
+                 alt="Mangal Vinayak" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/Mangal-vinayak.jpeg';}">
+          </td>
+          <td><strong>Mangal Vinayak</strong><br><span style="font-size:0.75rem; color:#6b7280;">Auspicious Vinayaka (Near Manikarnika)</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Vinayaka</span></td>
+          <td><span class="badge badge-zone-north">North Kashi</span></td>
+          <td style="font-size:0.82rem;">K-24/34, Mangala Gauri Temple, Bala Ghat. Devotees can travel upto Bhaironath by</td>
+          <td><a class="btn-link btn-live" href="05_Vinayaka_Temples.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/vinayak-temples/mangal-vinayak/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="North Kashi">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/Mangala-Gauri.jpeg" 
+                 alt="Mangala Gauri" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/Mangala-Gauri.jpeg';}">
+          </td>
+          <td><strong>Mangala Gauri</strong><br><span style="font-size:0.75rem; color:#6b7280;">Navagauri #8 (Panchganga Ghat)</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Devi</span></td>
+          <td><span class="badge badge-zone-north">North Kashi</span></td>
+          <td style="font-size:0.82rem;">K-24/34, Panchganga Ghat.  Devotees can travel upto Bhaironath by auto or cycle </td>
+          <td><a class="btn-link btn-live" href="03_Devi_and_Dashamaha_Vidya.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/devi-temples/mangala-gauri/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="East Kashi">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/Manikarnika-Devi-768x1024.jpeg" 
+                 alt="Mani Karnika Devi" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/Manikarnika-Devi-768x1024.jpeg';}">
+          </td>
+          <td><strong>Mani Karnika Devi</strong><br><span style="font-size:0.75rem; color:#6b7280;">Presiding Deity of Manikarnika Teerth</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Devi</span></td>
+          <td><span class="badge badge-zone-east">East Kashi</span></td>
+          <td style="font-size:0.82rem;">Ck.7/130, Scindia Ghat, opposite Atma Veereshwar Temple</td>
+          <td><a class="btn-link btn-live" href="03_Devi_and_Dashamaha_Vidya.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/devi-temples/mani-karnika-devi/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="West Kashi">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/Markhandeshwar-1.jpg" 
+                 alt="Markandeyshwar" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/Markhandeshwar-1.jpg';}">
+          </td>
+          <td><strong>Markandeyshwar</strong><br><span style="font-size:0.75rem; color:#6b7280;">Associated with Sage Markandeya</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Shiva</span></td>
+          <td><span class="badge badge-zone-west">West Kashi</span></td>
+          <td style="font-size:0.82rem;">Ck.36/10,  in the bazar behind Gyan Vapi</td>
+          <td><a class="btn-link btn-live" href="04_Shiva_and_Kashi_Jyotirlingas.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/shiva-temples/other-shiva-temples-l-r/markandeyshwar/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="North Kashi">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/Mayukh-Aditya.jpeg" 
+                 alt="Mayukh Aditya" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/Mayukh-Aditya.jpeg';}">
+          </td>
+          <td><strong>Mayukh Aditya</strong><br><span style="font-size:0.75rem; color:#6b7280;">Dwadasha Aditya #7</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Surya</span></td>
+          <td><span class="badge badge-zone-north">North Kashi</span></td>
+          <td style="font-size:0.82rem;">No. K-24/34, Mangala Gauri Temple, Panchganga Ghat</td>
+          <td><a class="btn-link btn-live" href="01_Surya_Dwadasa_Aditya.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/aditya-temples/mayukh-aditya/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="West Kashi">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/Moda-Vinayak-1.jpg" 
+                 alt="Moda Vinayak" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/Moda-Vinayak-1.jpg';}">
+          </td>
+          <td><strong>Moda Vinayak</strong><br><span style="font-size:0.75rem; color:#6b7280;">Bestower of Joy</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Vinayaka</span></td>
+          <td><span class="badge badge-zone-west">West Kashi</span></td>
+          <td style="font-size:0.82rem;">Ck.31/12, Kashi Karvat Temple, Naipali Khapra</td>
+          <td><a class="btn-link btn-live" href="05_Vinayaka_Temples.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/vinayak-temples/moda-vinayak/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="North Kashi">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/Mrityunjay.jpeg" 
+                 alt="Mrityunjay Mahadev" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/Mrityunjay.jpeg';}">
+          </td>
+          <td><strong>Mrityunjay Mahadev</strong><br><span style="font-size:0.75rem; color:#6b7280;">Main Shiva Temple (Conqueror of Death)</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Shiva</span></td>
+          <td><span class="badge badge-zone-north">North Kashi</span></td>
+          <td style="font-size:0.82rem;">K-52/39, Vriddha Kal, Mrityunjay Mahadev Temple.  People can approach this templ</td>
+          <td><a class="btn-link btn-live" href="04_Shiva_and_Kashi_Jyotirlingas.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/shiva-temples/main-shiva-temples/mrityunjay-mahadev/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="North Kashi">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/mukh-nirmalika-comp.jpg" 
+                 alt="Mukhnirmalika Gauri" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/mukh-nirmalika-comp.jpg';}">
+          </td>
+          <td><strong>Mukhnirmalika Gauri</strong><br><span style="font-size:0.75rem; color:#6b7280;">Navagauri #1 (Panchganga Ghat)</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Devi</span></td>
+          <td><span class="badge badge-zone-north">North Kashi</span></td>
+          <td style="font-size:0.82rem;">K.3/42, Hanumanji temple at Gai Ghat</td>
+          <td><a class="btn-link btn-live" href="03_Devi_and_Dashamaha_Vidya.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/devi-temples/mukhnirmalika-gauri/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="West Kashi">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/Nageshwar-bhosala-ghat.jpg" 
+                 alt="Nageshwar" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/Nageshwar-bhosala-ghat.jpg';}">
+          </td>
+          <td><strong>Nageshwar</strong><br><span style="font-size:0.75rem; color:#6b7280;">Nageshwar Counterpart (Jyotirlinga #8 - Bhonsla Ghat)</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Shiva</span></td>
+          <td><span class="badge badge-zone-west">West Kashi</span></td>
+          <td style="font-size:0.82rem;">House No. Ck</td>
+          <td><a class="btn-link btn-live" href="04_Shiva_and_Kashi_Jyotirlingas.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/shiva-temples/other-shiva-temples-l-r/nageshwar/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="North Kashi">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/Nar-Narayan.jpeg" 
+                 alt="Nar Narayan" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/Nar-Narayan.jpeg';}">
+          </td>
+          <td><strong>Nar Narayan</strong><br><span style="font-size:0.75rem; color:#6b7280;">Sage Avatars of Vishnu</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Vishnu</span></td>
+          <td><span class="badge badge-zone-north">North Kashi</span></td>
+          <td style="font-size:0.82rem;">A.1/72, Badri Narayan Ghat steps near Gai Ghat</td>
+          <td><a class="btn-link btn-live" href="06_Vishnu_Temples.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/vishnu-temples/nar-narayan/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="North Kashi">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/NARAD-KESHAV-1-559x1024.jpg" 
+                 alt="Narad Keshav" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/NARAD-KESHAV-1-559x1024.jpg';}">
+          </td>
+          <td><strong>Narad Keshav</strong><br><span style="font-size:0.75rem; color:#6b7280;">Installed by Devrishi Narada</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Vishnu</span></td>
+          <td><span class="badge badge-zone-north">North Kashi</span></td>
+          <td style="font-size:0.82rem;">A-10/80 Prahlad Ghat, inside Shitla Mandir opp. Prahladeshwar</td>
+          <td><a class="btn-link btn-live" href="06_Vishnu_Temples.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/vishnu-temples/narad-keshav/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="North Kashi">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/Omkareshwar-1.jpg" 
+                 alt="Omkareshwar" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/Omkareshwar-1.jpg';}">
+          </td>
+          <td><strong>Omkareshwar</strong><br><span style="font-size:0.75rem; color:#6b7280;">Main Shiva Temple & Omkareshwar Counterpart (Jyotirlinga #4)</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Shiva</span></td>
+          <td><span class="badge badge-zone-north">North Kashi</span></td>
+          <td style="font-size:0.82rem;">A-33/23, Pathani Tola, North of Machhodari.  Matsyodari Teerth as mentioned in K</td>
+          <td><a class="btn-link btn-live" href="04_Shiva_and_Kashi_Jyotirlingas.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/shiva-temples/main-shiva-temples/omkareshwar/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="South Kashi">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/Prachand-Narsimha-1.jpg" 
+                 alt="Prachand Narsimha" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/Prachand-Narsimha-1.jpg';}">
+          </td>
+          <td><strong>Prachand Narsimha</strong><br><span style="font-size:0.75rem; color:#6b7280;">Formidable Slayer of Hiranyakashipu</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Vishnu</span></td>
+          <td><span class="badge badge-zone-south">South Kashi</span></td>
+          <td style="font-size:0.82rem;">B.1/151, Jagannath Temple, Assi Ghat</td>
+          <td><a class="btn-link btn-live" href="06_Vishnu_Temples.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/vishnu-temples/prachand-narsimha/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="North Kashi">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/PRAHLAD-KESHAV.jpg" 
+                 alt="Prahlad Keshav" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/PRAHLAD-KESHAV.jpg';}">
+          </td>
+          <td><strong>Prahlad Keshav</strong><br><span style="font-size:0.75rem; color:#6b7280;">Associated with Bhakta Prahlada (Prahlad Ghat)</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Vishnu</span></td>
+          <td><span class="badge badge-zone-north">North Kashi</span></td>
+          <td style="font-size:0.82rem;">A-10/80 Prahlad Ghat inside Prahledeshwar temple, on the face of Ganges, on the </td>
+          <td><a class="btn-link btn-live" href="06_Vishnu_Temples.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/vishnu-temples/prahlad-keshav/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="Zone unverified — location evidence insufficient">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/Pramoda-Vinayak-1.jpg" 
+                 alt="Pramoda Vinayak" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/Pramoda-Vinayak-1.jpg';}">
+          </td>
+          <td><strong>Pramoda Vinayak</strong><br><span style="font-size:0.75rem; color:#6b7280;">Bestower of Supreme Delight</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Vinayaka</span></td>
+          <td><span class="badge badge-zone-other">Zone unverified</span></td>
+          <td style="font-size:0.82rem;">Specific street address not published in source text</td>
+          <td><a class="btn-link btn-live" href="05_Vinayaka_Temples.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/vinayak-temples/pramoda-vinayak/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="North Kashi">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/Prayag-Madhav.jpeg" 
+                 alt="Prayag Madhav" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/Prayag-Madhav.jpeg';}">
+          </td>
+          <td><strong>Prayag Madhav</strong><br><span style="font-size:0.75rem; color:#6b7280;">Confluence Form of Madhava (Dashashwamedh)</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Vishnu</span></td>
+          <td><span class="badge badge-zone-north">North Kashi</span></td>
+          <td style="font-size:0.82rem;">D.17/111, in the premises of Ram Mandir at Dasaswamedh Ghat</td>
+          <td><a class="btn-link btn-live" href="06_Vishnu_Temples.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/vishnu-temples/prayag-madhav/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="South Kashi">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/img12.jpg" 
+                 alt="Ruru Bhairav" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/img12.jpg';}">
+          </td>
+          <td><strong>Ruru Bhairav</strong><br><span style="font-size:0.75rem; color:#6b7280;">Ashtabhairava #2 (Southeast Protector)</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Bhairav</span></td>
+          <td><span class="badge badge-zone-south">South Kashi</span></td>
+          <td style="font-size:0.82rem;">B.4/16, Hanuman Ghat, Varanasi</td>
+          <td><a class="btn-link btn-live" href="02_Bhairav_Temples.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/bhairav-temples/other-bhairav-temples/ruru-bhairav/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="West Kashi">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/Saamba-Aditya-1-1024x768.jpg" 
+                 alt="Saamba Aditya" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/Saamba-Aditya-1-1024x768.jpg';}">
+          </td>
+          <td><strong>Saamba Aditya</strong><br><span style="font-size:0.75rem; color:#6b7280;">Dwadasha Aditya #8</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Surya</span></td>
+          <td><span class="badge badge-zone-west">West Kashi</span></td>
+          <td style="font-size:0.82rem;">D-51/90 Surya Kund (Suraj Kund).  This is a famous locality</td>
+          <td><a class="btn-link btn-live" href="01_Surya_Dwadasa_Aditya.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/aditya-temples/saamba-aditya/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="North Kashi">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/Samhar.jpeg" 
+                 alt="Samhar Bhairav" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/Samhar.jpeg';}">
+          </td>
+          <td><strong>Samhar Bhairav</strong><br><span style="font-size:0.75rem; color:#6b7280;">Ashtabhairava #8 (Northeast Protector)</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Bhairav</span></td>
+          <td><span class="badge badge-zone-north">North Kashi</span></td>
+          <td style="font-size:0.82rem;">A.1/82, Patan Darwaja, near Gai Ghat</td>
+          <td><a class="btn-link btn-live" href="02_Bhairav_Temples.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/bhairav-temples/other-bhairav-temples/samhar-bhairav/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="West Kashi">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/sankatha-ji-Copy.jpeg" 
+                 alt="Sankata Devi" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/sankatha-ji-Copy.jpeg';}">
+          </td>
+          <td><strong>Sankata Devi</strong><br><span style="font-size:0.75rem; color:#6b7280;">Remover of Sins and Critical Difficulties</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Devi</span></td>
+          <td><span class="badge badge-zone-west">West Kashi</span></td>
+          <td style="font-size:0.82rem;">Ck.7/159, Sankataji</td>
+          <td><a class="btn-link btn-live" href="03_Devi_and_Dashamaha_Vidya.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/devi-temples/sankata-devi/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="Zone unverified — location evidence insufficient">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/Shail-comp.jpg" 
+                 alt="Shailputri" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/Shail-comp.jpg';}">
+          </td>
+          <td><strong>Shailputri</strong><br><span style="font-size:0.75rem; color:#6b7280;">Navadurga #1 (Marhia Ghat / Alipura)</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Devi</span></td>
+          <td><span class="badge badge-zone-other">Zone unverified</span></td>
+          <td style="font-size:0.82rem;">A-40/11, Marhia Ghat. If one travels from Varanasi Railway station through G</td>
+          <td><a class="btn-link btn-live" href="03_Devi_and_Dashamaha_Vidya.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/devi-temples/shailputri/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="West Kashi">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/sowbhagya-COMP.jpg" 
+                 alt="Shringar Gauri" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/sowbhagya-COMP.jpg';}">
+          </td>
+          <td><strong>Shringar Gauri</strong><br><span style="font-size:0.75rem; color:#6b7280;">Navagauri #4 (Gyanvapi Wall)</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Devi</span></td>
+          <td><span class="badge badge-zone-west">West Kashi</span></td>
+          <td style="font-size:0.82rem;">This Gauri is located behind Gyanvapi Masjid (mosque) and Darshan is allowed onl</td>
+          <td><a class="btn-link btn-live" href="03_Devi_and_Dashamaha_Vidya.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/devi-temples/shringar-gauri/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="East Kashi">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/Shwet-Madhav.jpeg" 
+                 alt="Shwet Madhav" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/Shwet-Madhav.jpeg';}">
+          </td>
+          <td><strong>Shwet Madhav</strong><br><span style="font-size:0.75rem; color:#6b7280;">White Form of Lord Madhava</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Vishnu</span></td>
+          <td><span class="badge badge-zone-east">East Kashi</span></td>
+          <td style="font-size:0.82rem;">D.3/71, Big Hanuman temple at Mir Ghat</td>
+          <td><a class="btn-link btn-live" href="06_Vishnu_Temples.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/vishnu-temples/shwet-madhav/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="East Kashi">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/Sidha-Lakshmi-Devi.jpeg" 
+                 alt="Siddha Lakshmi Devi" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/Sidha-Lakshmi-Devi.jpeg';}">
+          </td>
+          <td><strong>Siddha Lakshmi Devi</strong><br><span style="font-size:0.75rem; color:#6b7280;">Bestower of Spiritual & Material Siddhis</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Devi</span></td>
+          <td><span class="badge badge-zone-east">East Kashi</span></td>
+          <td style="font-size:0.82rem;">Siddha Lakshmi Devi is located on the Wall  at Ck.8/1, Opposite  Siddhi Vinayak,</td>
+          <td><a class="btn-link btn-live" href="03_Devi_and_Dashamaha_Vidya.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/devi-temples/siddha-lakshmi-devi/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="West Kashi">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/Sidheshwari.jpeg" 
+                 alt="Siddheshwari" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/Sidheshwari.jpeg';}">
+          </td>
+          <td><strong>Siddheshwari</strong><br><span style="font-size:0.75rem; color:#6b7280;">Navadurga #9 (Siddhidatri)</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Devi</span></td>
+          <td><span class="badge badge-zone-west">West Kashi</span></td>
+          <td style="font-size:0.82rem;">Ck.7/124, Siddheshwari Mohalla</td>
+          <td><a class="btn-link btn-live" href="03_Devi_and_Dashamaha_Vidya.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/devi-temples/siddheshwari/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="West Kashi">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/Siddhi-Vinayak-Shrine.svg" 
+                 alt="Siddhi Vinayak" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/Siddhi-Vinayak-Shrine.svg';}">
+          </td>
+          <td><strong>Siddhi Vinayak</strong><br><span style="font-size:0.75rem; color:#6b7280;">Bestower of Perfection & Siddhis (Vishwanath Lane)</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Vinayaka</span></td>
+          <td><span class="badge badge-zone-west">West Kashi</span></td>
+          <td style="font-size:0.82rem;">Ck. 9/1, near Mani Karnika Kund in the steps</td>
+          <td><a class="btn-link btn-live" href="05_Vinayaka_Temples.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/vinayak-temples/siddhi-vinayak/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="Zone unverified — location evidence insufficient">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/Closed-Door-housing-Vagheshwari-Ashwa-Rooda-1.jpg" 
+                 alt="Skanda Mata" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/Closed-Door-housing-Vagheshwari-Ashwa-Rooda-1.jpg';}">
+          </td>
+          <td><strong>Skanda Mata</strong><br><span style="font-size:0.75rem; color:#6b7280;">Navadurga #5 (Jaitpura)</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Devi</span></td>
+          <td><span class="badge badge-zone-other">Zone unverified</span></td>
+          <td style="font-size:0.82rem;">J.6/33, Jaitpura</td>
+          <td><a class="btn-link btn-live" href="03_Devi_and_Dashamaha_Vidya.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/devi-temples/skanda-mata/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="East Kashi">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/Someshwar-1.jpg" 
+                 alt="Someshwar" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/Someshwar-1.jpg';}">
+          </td>
+          <td><strong>Someshwar</strong><br><span style="font-size:0.75rem; color:#6b7280;">Somnath Counterpart (Jyotirlinga #1 - Man Mandir Ghat)</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Shiva</span></td>
+          <td><span class="badge badge-zone-east">East Kashi</span></td>
+          <td style="font-size:0.82rem;">Someshwar is locted at D.16/34, Manmandir Ghat. Devotees can travel upto Dasaswa</td>
+          <td><a class="btn-link btn-live" href="04_Shiva_and_Kashi_Jyotirlingas.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/shiva-temples/other-shiva-temples-s-y/someshwar/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="West Kashi">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/Sowbhagya-Gauri-1.jpg" 
+                 alt="Sowbhagya Gauri" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/Sowbhagya-Gauri-1.jpg';}">
+          </td>
+          <td><strong>Sowbhagya Gauri</strong><br><span style="font-size:0.75rem; color:#6b7280;">Navagauri #3 (Gyanvapi)</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Devi</span></td>
+          <td><span class="badge badge-zone-west">West Kashi</span></td>
+          <td style="font-size:0.82rem;">Ck.38/8, Adi Vishwanath Temple</td>
+          <td><a class="btn-link btn-live" href="03_Devi_and_Dashamaha_Vidya.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/devi-temples/sowbhagya-gauri/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="East Kashi">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/Stool-Dant-Vinayak-1.jpg" 
+                 alt="Sthool Dant Vinayak" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/Stool-Dant-Vinayak-1.jpg';}">
+          </td>
+          <td><strong>Sthool Dant Vinayak</strong><br><span style="font-size:0.75rem; color:#6b7280;">Mighty-Tusked Vinayaka</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Vinayaka</span></td>
+          <td><span class="badge badge-zone-east">East Kashi</span></td>
+          <td style="font-size:0.82rem;">D-16/34, Man Mandir, near Someshwar.  This Vinayak is capable of granting Siddhi</td>
+          <td><a class="btn-link btn-live" href="05_Vinayaka_Temples.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/vinayak-temples/sthool-dant-vinayak/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="Zone unverified — location evidence insufficient">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/Sumukh-Vinayak-1.jpg" 
+                 alt="Sumukh Vinayak" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/Sumukh-Vinayak-1.jpg';}">
+          </td>
+          <td><strong>Sumukh Vinayak</strong><br><span style="font-size:0.75rem; color:#6b7280;">Gracious-Faced Lord</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Vinayaka</span></td>
+          <td><span class="badge badge-zone-other">Zone unverified</span></td>
+          <td style="font-size:0.82rem;">Specific street address not published in source text</td>
+          <td><a class="btn-link btn-live" href="05_Vinayaka_Temples.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/vinayak-temples/sumukh-vinayak/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="West Kashi">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/Tamra1-1-1024x768.jpg" 
+                 alt="Tamra Varaha" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/Tamra1-1-1024x768.jpg';}">
+          </td>
+          <td><strong>Tamra Varaha</strong><br><span style="font-size:0.75rem; color:#6b7280;">Copper-Hued Boar Avatar</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Vishnu</span></td>
+          <td><span class="badge badge-zone-west">West Kashi</span></td>
+          <td style="font-size:0.82rem;">Tamra Varaha is located outside House No.Ck.33/57, Neelkanth Mohalla in the slop</td>
+          <td><a class="btn-link btn-live" href="06_Vishnu_Temples.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/vishnu-temples/tamra-varaha/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="West Kashi">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/Tri-Lokya-Sundary-Shrine.svg" 
+                 alt="Tri Lokya Sundary" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/Tri-Lokya-Sundary-Shrine.svg';}">
+          </td>
+          <td><strong>Tri Lokya Sundary</strong><br><span style="font-size:0.75rem; color:#6b7280;">Most Beautiful Across Three Worlds</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Devi</span></td>
+          <td><span class="badge badge-zone-west">West Kashi</span></td>
+          <td style="font-size:0.82rem;">No. Ck</td>
+          <td><a class="btn-link btn-live" href="03_Devi_and_Dashamaha_Vidya.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/devi-temples/tri-lokya-sundary/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="West Kashi">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/Triambakeshwar-1.jpg" 
+                 alt="Triambakeshwar" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/Triambakeshwar-1.jpg';}">
+          </td>
+          <td><strong>Triambakeshwar</strong><br><span style="font-size:0.75rem; color:#6b7280;">Trimbakeshwar Counterpart (Jyotirlinga #10 - Godowlia)</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Shiva</span></td>
+          <td><span class="badge badge-zone-west">West Kashi</span></td>
+          <td style="font-size:0.82rem;">D-38/21, Hauj Katora.  If a devotee proceeds from Godowlia towards Chowk, immedi</td>
+          <td><a class="btn-link btn-live" href="04_Shiva_and_Kashi_Jyotirlingas.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/shiva-temples/other-shiva-temples-s-y/triambakeshwar/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="East Kashi">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/Tribhuwan-Keshav.jpeg" 
+                 alt="Tribhuwan Keshav" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/Tribhuwan-Keshav.jpeg';}">
+          </td>
+          <td><strong>Tribhuwan Keshav</strong><br><span style="font-size:0.75rem; color:#6b7280;">Lord of the Three Worlds</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Vishnu</span></td>
+          <td><span class="badge badge-zone-east">East Kashi</span></td>
+          <td style="font-size:0.82rem;">D.17/100, Bandi Devi, Dasaswamedh Ghat</td>
+          <td><a class="btn-link btn-live" href="06_Vishnu_Temples.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/vishnu-temples/tribhuwan-keshav/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="North Kashi">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/Trilochaneshwar-1.jpg" 
+                 alt="Trilochan" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/Trilochaneshwar-1.jpg';}">
+          </td>
+          <td><strong>Trilochan</strong><br><span style="font-size:0.75rem; color:#6b7280;">The Three-Eyed Lord (Trilochan Ghat)</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Shiva</span></td>
+          <td><span class="badge badge-zone-north">North Kashi</span></td>
+          <td style="font-size:0.82rem;">A-2/80, Trilochan Ghat.  The temple is approachable from Birla Hospital after Ma</td>
+          <td><a class="btn-link btn-live" href="04_Shiva_and_Kashi_Jyotirlingas.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/shiva-temples/other-shiva-temples-s-y/trilochan/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="East Kashi">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/Tripura-Bhairavi-1-756x1024.jpg" 
+                 alt="Tripura Bhairavi" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/Tripura-Bhairavi-1-756x1024.jpg';}">
+          </td>
+          <td><strong>Tripura Bhairavi</strong><br><span style="font-size:0.75rem; color:#6b7280;">Mahavidya #5 (Bhairavi)</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Devi</span></td>
+          <td><span class="badge badge-zone-east">East Kashi</span></td>
+          <td style="font-size:0.82rem;">D.5/24, Mir Ghat</td>
+          <td><a class="btn-link btn-live" href="03_Devi_and_Dashamaha_Vidya.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/devi-temples/tripura-bhairavi/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="West Kashi">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/Tripurantakeshwar-1.jpg" 
+                 alt="Tripurantakeshwar" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/Tripurantakeshwar-1.jpg';}">
+          </td>
+          <td><strong>Tripurantakeshwar</strong><br><span style="font-size:0.75rem; color:#6b7280;">Mallikarjuna Counterpart (Jyotirlinga #2 - Sigra)</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Shiva</span></td>
+          <td><span class="badge badge-zone-west">West Kashi</span></td>
+          <td style="font-size:0.82rem;">D.59/95, Sigra Tila (Mount of Mud)</td>
+          <td><a class="btn-link btn-live" href="04_Shiva_and_Kashi_Jyotirlingas.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/shiva-temples/other-shiva-temples-s-y/tripurantakeshwar/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="North Kashi">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/Trivikrama-1-640x1024.jpg" 
+                 alt="Trivikrama" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/Trivikrama-1-640x1024.jpg';}">
+          </td>
+          <td><strong>Trivikrama</strong><br><span style="font-size:0.75rem; color:#6b7280;">Cosmic Three-Step Manifestation</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Vishnu</span></td>
+          <td><span class="badge badge-zone-north">North Kashi</span></td>
+          <td style="font-size:0.82rem;">A-2/80, Trilochaneshwar Temple. Above the idol, it has been mentioned as Brihasp</td>
+          <td><a class="btn-link btn-live" href="06_Vishnu_Temples.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/vishnu-temples/trivikrama/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="Zone unverified — location evidence insufficient">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/Unmat-PHOTO.jpg" 
+                 alt="Unmat Bhairav" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/Unmat-PHOTO.jpg';}">
+          </td>
+          <td><strong>Unmat Bhairav</strong><br><span style="font-size:0.75rem; color:#6b7280;">Ashtabhairava #5 (West Protector)</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Bhairav</span></td>
+          <td><span class="badge badge-zone-other">Zone unverified</span></td>
+          <td style="font-size:0.82rem;">Specific street address not published in source text</td>
+          <td><a class="btn-link btn-live" href="02_Bhairav_Temples.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/bhairav-temples/other-bhairav-temples/unmat-bhairav/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="North Kashi">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/Uttarark-Aditya-1.jpg" 
+                 alt="Uttarark Aditya" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/Uttarark-Aditya-1.jpg';}">
+          </td>
+          <td><strong>Uttarark Aditya</strong><br><span style="font-size:0.75rem; color:#6b7280;">Dwadasha Aditya #9</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Surya</span></td>
+          <td><span class="badge badge-zone-north">North Kashi</span></td>
+          <td style="font-size:0.82rem;">Uttarark Aditya is located in Alaipur, Bakaria Kund, near Varanasi City Station.</td>
+          <td><a class="btn-link btn-live" href="01_Surya_Dwadasa_Aditya.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/aditya-temples/uttarark-aditya/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="East Kashi">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/Vaikunt-Madhav.jpeg" 
+                 alt="Vaikunth Madhav" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/Vaikunt-Madhav.jpeg';}">
+          </td>
+          <td><strong>Vaikunth Madhav</strong><br><span style="font-size:0.75rem; color:#6b7280;">Lord of Vaikuntha in Kashi</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Vishnu</span></td>
+          <td><span class="badge badge-zone-east">East Kashi</span></td>
+          <td style="font-size:0.82rem;">Ck.7/165, near Harish-chandreshwar, Scindia Ghat</td>
+          <td><a class="btn-link btn-live" href="06_Vishnu_Temples.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/vishnu-temples/vaikunth-madhav/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="Zone unverified — location evidence insufficient">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/Vakra-Tund-Vinayak-Bara-Ganesh-1.jpg" 
+                 alt="Vakra Tund Vinayak (Bada Ganesh)" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/Vakra-Tund-Vinayak-Bara-Ganesh-1.jpg';}">
+          </td>
+          <td><strong>Vakra Tund Vinayak (Bada Ganesh)</strong><br><span style="font-size:0.75rem; color:#6b7280;">Famous Bada Ganesh (Lohatia)</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Vinayaka</span></td>
+          <td><span class="badge badge-zone-other">Zone unverified</span></td>
+          <td style="font-size:0.82rem;">K-58/101, Lohatia Bara Ganeshji. He removes ill effects paap karma (sins) commit</td>
+          <td><a class="btn-link btn-live" href="05_Vinayaka_Temples.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/vinayak-temples/vakra-tund-vinayak/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="North Kashi">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/Vaman-Keshav-Madhusudan-1.jpg" 
+                 alt="Vaman Keshav" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/Vaman-Keshav-Madhusudan-1.jpg';}">
+          </td>
+          <td><strong>Vaman Keshav</strong><br><span style="font-size:0.75rem; color:#6b7280;">Dwarf Avatar Form of Vishnu</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Vishnu</span></td>
+          <td><span class="badge badge-zone-north">North Kashi</span></td>
+          <td style="font-size:0.82rem;">A.2/29, Trilochan</td>
+          <td><a class="btn-link btn-live" href="06_Vishnu_Temples.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/vishnu-temples/vaman-keshav/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="East Kashi">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/Varahi-Devi-Shrine.svg" 
+                 alt="Varahi Devi" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/Varahi-Devi-Shrine.svg';}">
+          </td>
+          <td><strong>Varahi Devi</strong><br><span style="font-size:0.75rem; color:#6b7280;">Matrika / Night Deity (Panchganga Ghat)</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Devi</span></td>
+          <td><span class="badge badge-zone-east">East Kashi</span></td>
+          <td style="font-size:0.82rem;">D.16/84, Manmandir Ghat</td>
+          <td><a class="btn-link btn-live" href="03_Devi_and_Dashamaha_Vidya.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/devi-temples/varahi-devi/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="West Kashi">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/Veer-Madhav-1-640x1024.jpeg" 
+                 alt="Veer Madhav" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/Veer-Madhav-1-640x1024.jpeg';}">
+          </td>
+          <td><strong>Veer Madhav</strong><br><span style="font-size:0.75rem; color:#6b7280;">Heroic Aspect of Lord Madhava</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Vishnu</span></td>
+          <td><span class="badge badge-zone-west">West Kashi</span></td>
+          <td style="font-size:0.82rem;">There are two locations of Veer Madhav. One is near the door of Atma Veereshwar </td>
+          <td><a class="btn-link btn-live" href="06_Vishnu_Temples.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/vishnu-temples/veer-madhav/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="North Kashi">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/VIDAR-NARSIMHA.jpg" 
+                 alt="Vidar Narsimha" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/VIDAR-NARSIMHA.jpg';}">
+          </td>
+          <td><strong>Vidar Narsimha</strong><br><span style="font-size:0.75rem; color:#6b7280;">Chest-Ripping Aspect of Narasimha</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Vishnu</span></td>
+          <td><span class="badge badge-zone-north">North Kashi</span></td>
+          <td style="font-size:0.82rem;">A-10/82 Prahlad Ghat. People can approach this place by traveling in a rickshaw </td>
+          <td><a class="btn-link btn-live" href="06_Vishnu_Temples.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/vishnu-temples/vidar-narsimha/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="West Kashi">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/vimal-new.jpeg" 
+                 alt="Vimal Aditya" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/vimal-new.jpeg';}">
+          </td>
+          <td><strong>Vimal Aditya</strong><br><span style="font-size:0.75rem; color:#6b7280;">Dwadasha Aditya #10</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Surya</span></td>
+          <td><span class="badge badge-zone-west">West Kashi</span></td>
+          <td style="font-size:0.82rem;">No. D-35/273, Gully behind Khari Kuan, Jangambari, near Godowlia</td>
+          <td><a class="btn-link btn-live" href="01_Surya_Dwadasa_Aditya.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/aditya-temples/vimal-aditya/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="East Kashi">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/Vidhya-Devi.jpeg" 
+                 alt="Vindhya Devi" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/Vidhya-Devi.jpeg';}">
+          </td>
+          <td><strong>Vindhya Devi</strong><br><span style="font-size:0.75rem; color:#6b7280;">Vindhyavasini Manifestation in Kashi</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Devi</span></td>
+          <td><span class="badge badge-zone-east">East Kashi</span></td>
+          <td style="font-size:0.82rem;">Ck.2/33, outside Sankata Devi Temple</td>
+          <td><a class="btn-link btn-live" href="03_Devi_and_Dashamaha_Vidya.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/devi-temples/vindhya-devi/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="East Kashi">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/Vishalakshi-1.jpg" 
+                 alt="Vishalakshi Gauri" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/Vishalakshi-1.jpg';}">
+          </td>
+          <td><strong>Vishalakshi Gauri</strong><br><span style="font-size:0.75rem; color:#6b7280;">Shaktipeeth & Navagauri #5</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Devi</span></td>
+          <td><span class="badge badge-zone-east">East Kashi</span></td>
+          <td style="font-size:0.82rem;">Devotees can find Vishalakshi temple at D.3/85, Mir Ghat. They can travel upto D</td>
+          <td><a class="btn-link btn-live" href="03_Devi_and_Dashamaha_Vidya.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/devi-temples/vishalakshi-gauri/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="East Kashi">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/Vishwa-Bhuja-Gauri-1-716x1024.jpg" 
+                 alt="Vishwa Bhuja Gauri" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/Vishwa-Bhuja-Gauri-1-716x1024.jpg';}">
+          </td>
+          <td><strong>Vishwa Bhuja Gauri</strong><br><span style="font-size:0.75rem; color:#6b7280;">All-Embracing Universal Gauri</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Devi</span></td>
+          <td><span class="badge badge-zone-east">East Kashi</span></td>
+          <td style="font-size:0.82rem;">D.2/15, near Dharam Koop (Dharmeshwar)</td>
+          <td><a class="btn-link btn-live" href="03_Devi_and_Dashamaha_Vidya.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/devi-temples/vishwa-bhuja-gauri/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="West Kashi">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/Vishwanath-Sparsh-Copy-1024x609.jpg" 
+                 alt="Visweshwar (Vishwanath)" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/Vishwanath-Sparsh-Copy-1024x609.jpg';}">
+          </td>
+          <td><strong>Visweshwar (Vishwanath)</strong><br><span style="font-size:0.75rem; color:#6b7280;">Supreme Lord of Kashi & Jyotirlinga #7</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Shiva</span></td>
+          <td><span class="badge badge-zone-west">West Kashi</span></td>
+          <td style="font-size:0.82rem;">Ck-35/19, Chowk, Varanasi. The temple area has been widened to be known as Vishw</td>
+          <td><a class="btn-link btn-live" href="04_Shiva_and_Kashi_Jyotirlingas.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/shiva-temples/main-shiva-temples/visweshwar-vishwanath/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="South Kashi">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/Vitank-Narsimha-Shrine.svg" 
+                 alt="Vitank Narsimha" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/Vitank-Narsimha-Shrine.svg';}">
+          </td>
+          <td><strong>Vitank Narsimha</strong><br><span style="font-size:0.75rem; color:#6b7280;">Protector Narasimha Shrine</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Vishnu</span></td>
+          <td><span class="badge badge-zone-south">South Kashi</span></td>
+          <td style="font-size:0.82rem;">the steps of Kedar Ghat, on left side. Kedareshwar Temple, Kedar Ghat is a famou</td>
+          <td><a class="btn-link btn-live" href="06_Vishnu_Temples.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/vishnu-temples/vitank-narsimha/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="East Kashi">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/Vriddh-Aditya-Inner-Photo-1.jpg" 
+                 alt="Vriddh Aditya" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/Vriddh-Aditya-Inner-Photo-1.jpg';}">
+          </td>
+          <td><strong>Vriddh Aditya</strong><br><span style="font-size:0.75rem; color:#6b7280;">Dwadasha Aditya #11</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Surya</span></td>
+          <td><span class="badge badge-zone-east">East Kashi</span></td>
+          <td style="font-size:0.82rem;">D-3/15, South of Bare Hanumanji at Mir Ghat.  Devotees can approach this place b</td>
+          <td><a class="btn-link btn-live" href="01_Surya_Dwadasa_Aditya.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/aditya-temples/vriddh-aditya/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="Zone unverified — location evidence insufficient">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/Vridha-Kaleshwar-1.jpg" 
+                 alt="Vridha Kalelshwar" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/Vridha-Kaleshwar-1.jpg';}">
+          </td>
+          <td><strong>Vridha Kalelshwar</strong><br><span style="font-size:0.75rem; color:#6b7280;">Main Shiva Temple (Conqueror of Time/Death)</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Shiva</span></td>
+          <td><span class="badge badge-zone-other">Zone unverified</span></td>
+          <td style="font-size:0.82rem;">K-52/39, in the premises of Mrityunj Mahadev Temple.  The temple is approachable</td>
+          <td><a class="btn-link btn-live" href="04_Shiva_and_Kashi_Jyotirlingas.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/shiva-temples/main-shiva-temples/vridha-kalelshwar/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="Zone unverified — location evidence insufficient">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/Yagya-Varaha.jpeg" 
+                 alt="Yagya Varaha" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/Yagya-Varaha.jpeg';}">
+          </td>
+          <td><strong>Yagya Varaha</strong><br><span style="font-size:0.75rem; color:#6b7280;">Cosmic Sacrificial Boar Avatar (Mir Ghat)</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Vishnu</span></td>
+          <td><span class="badge badge-zone-other">Zone unverified</span></td>
+          <td style="font-size:0.82rem;">A.11/30, near Swarleeneshwar at Panch Agni Akhada Ghat</td>
+          <td><a class="btn-link btn-live" href="06_Vishnu_Temples.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/vishnu-temples/yagya-varaha/index.html">Mirror &#8599;</a></td>
+        </tr>
+        <tr data-zone="East Kashi">
+          <td style="text-align:center; vertical-align:middle; width:65px; padding:6px;">
+            <img src="Kashi_Exact_Offline_Website/assets/images/Yam-Aditya-1.jpg" 
+                 alt="Yama Aditya" 
+                 style="width:52px; height:52px; object-fit:cover; border-radius:6px; box-shadow:0 1px 3px rgba(0,0,0,0.15); display:block; margin:0 auto;" 
+                 loading="eager"
+                 onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/Yam-Aditya-1.jpg';}">
+          </td>
+          <td><strong>Yama Aditya</strong><br><span style="font-size:0.75rem; color:#6b7280;">Dwadasha Aditya #12</span></td>
+          <td><span class="badge" style="background:#fee2e2; color:#991b1b;">Surya</span></td>
+          <td><span class="badge badge-zone-east">East Kashi</span></td>
+          <td style="font-size:0.82rem;">No. Ck</td>
+          <td><a class="btn-link btn-live" href="01_Surya_Dwadasa_Aditya.html">View Guide &#8594;</a></td>
+          <td><a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/aditya-temples/yama-aditya/index.html">Mirror &#8599;</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Audit Summary -->
+  <div class="intro-box" style="margin-top:32px;">
+    <h2>Data Integrity & Validation Report Summary</h2>
+    <p>This knowledge base was compiled from <strong>1,314 crawled pages</strong> and <strong>326 original photographs</strong> from <em>varanasitemples.in</em>. Every address and puranic narrative reflects authentic textual statements published by the author.</p>
+    <ul style="margin: 10px 0 0 20px; font-size:0.88rem; color:#374151;">
+      <li><strong>Surya (12 Shrines):</strong> 100% verified against Kashi Khand Chapter 9.</li>
+      <li><strong>Bhairav (9 Shrines):</strong> Kaal Bhairav and all 8 directional Ashtabhairavas 100% verified.</li>
+      <li><strong>Devi (32 Shrines):</strong> All 32 navigation shrines extracted; Dashamaha Vidya research matrix populated.</li>
+      <li><strong>Shiva (20 Shrines):</strong> 9 Main Shiva shrines + 12 Kashi Jyotirlinga counterparts 100% mapped.</li>
+      <li><strong>Vinayaka (22 Shrines):</strong> Dhundhi Vinayak, Bada Ganesh + 56 Vinayakas overview documented.</li>
+      <li><strong>Vishnu (28 Shrines):</strong> 28 prominent shrines covering Adi Keshav, Bindu Madhav, Madhavas, Narasimhas, and Varahas.</li>
+    </ul>
+  </div>
+
+</div>
+
+<script>
+var activeZone = 'all';
+
+function setZoneFilter(zone) {
+  activeZone = zone;
+  var pills = document.getElementsByClassName('filter-pill');
+  for (var i = 0; i < pills.length; i++) {
+    pills[i].classList.remove('active');
+    if ((zone === 'all' && pills[i].innerText.indexOf('All') > -1) || pills[i].innerText.indexOf(zone) > -1) {
+      pills[i].classList.add('active');
+    }
+  }
+  filterMasterTable();
+}
+
+function filterMasterTable() {
+  var input = document.getElementById('masterSearch').value.toLowerCase();
+  var rows = document.getElementById('masterTable').getElementsByTagName('tbody')[0].getElementsByTagName('tr');
+  for (var i = 0; i < rows.length; i++) {
+    var text = rows[i].innerText.toLowerCase();
+    var zone = rows[i].getAttribute('data-zone');
+    var matchesText = text.indexOf(input) > -1;
+    var matchesZone = (activeZone === 'all') || (zone.indexOf(activeZone) > -1);
+    if (matchesText && matchesZone) {
+      rows[i].style.display = "";
+    } else {
+      rows[i].style.display = "none";
+    }
+  }
+}
+</script>
+
+</body>
+</html>

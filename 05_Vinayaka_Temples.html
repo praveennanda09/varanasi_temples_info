@@ -1,0 +1,1878 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vinayaka (Ganesha) Temples & 56 Vinayakas of Kashi — Kashi Offline Guide</title>
+  <style>
+    
+:root {
+  --primary: #8b1e0f;
+  --primary-dark: #5c1007;
+  --secondary: #d97706;
+  --accent: #b45309;
+  --bg: #fdfbf7;
+  --card-bg: #ffffff;
+  --text: #1f2937;
+  --text-muted: #4b5563;
+  --border: #e5e7eb;
+  --north: #1e40af;
+  --south: #15803d;
+  --east: #b45309;
+  --west: #6b21a8;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--text);
+  background-color: var(--bg);
+  padding-bottom: 60px;
+}
+
+header {
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: #fff;
+  padding: 24px 16px;
+  text-align: center;
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+  position: relative;
+}
+
+header h1 {
+  font-size: 1.6rem;
+  margin-bottom: 8px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+header p {
+  font-size: 0.95rem;
+  opacity: 0.9;
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.nav-bar {
+  background: #374151;
+  padding: 10px 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.nav-bar a {
+  color: #f3f4f6;
+  text-decoration: none;
+  font-size: 0.85rem;
+  padding: 6px 12px;
+  border-radius: 4px;
+  background: rgba(255,255,255,0.1);
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.nav-bar a:hover, .nav-bar a.active {
+  background: var(--secondary);
+  color: #fff;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.intro-box {
+  background: #fff;
+  border-left: 4px solid var(--secondary);
+  padding: 16px;
+  margin-bottom: 24px;
+  border-radius: 0 8px 8px 0;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.intro-box h2 {
+  font-size: 1.2rem;
+  color: var(--primary);
+  margin-bottom: 8px;
+}
+
+.zone-heading {
+  margin: 28px 0 16px 0;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.zone-north { background: var(--north); }
+.zone-south { background: var(--south); }
+.zone-east { background: var(--east); }
+.zone-west { background: var(--west); }
+.zone-other { background: #4b5563; }
+
+.temple-card {
+  background: var(--card-bg);
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  margin-bottom: 16px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  overflow: hidden;
+}
+
+.temple-header {
+  padding: 14px 16px;
+  background: #fff;
+  border-bottom: 1px solid var(--border);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  position: relative;
+}
+
+.temple-header:hover {
+  background: #f9fafb;
+}
+
+.temple-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.temple-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+}
+
+.badge {
+  font-size: 0.75rem;
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.badge-zone-north { background: #dbeafe; color: var(--north); }
+.badge-zone-south { background: #dcfce7; color: var(--south); }
+.badge-zone-east { background: #ffedd5; color: var(--east); }
+.badge-zone-west { background: #f3e8ff; color: var(--west); }
+.badge-zone-other { background: #f3f4f6; color: #4b5563; }
+
+.temple-sub {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.temple-body {
+  padding: 16px;
+}
+
+.temple-img-container {
+  margin-bottom: 16px;
+  text-align: center;
+  background: #f3f4f6;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.temple-img {
+  max-width: 100%;
+  height: auto;
+  max-height: 400px;
+  display: block;
+  margin: 0 auto;
+  object-fit: contain;
+}
+
+.img-caption {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  padding: 6px 10px;
+  background: #eee;
+  font-style: italic;
+}
+
+.detail-section {
+  margin-bottom: 14px;
+}
+
+.detail-label {
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--primary);
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.detail-content {
+  font-size: 0.92rem;
+  color: var(--text);
+  line-height: 1.55;
+  white-space: pre-line;
+}
+
+.sanskrit-box {
+  background: #fffbeb;
+  border-left: 3px solid var(--secondary);
+  padding: 10px 14px;
+  margin: 8px 0;
+  font-family: "Georgia", serif;
+  font-size: 0.95rem;
+  color: #78350f;
+  line-height: 1.6;
+}
+
+.links-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px dashed var(--border);
+}
+
+.btn-link {
+  font-size: 0.8rem;
+  padding: 5px 10px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.btn-mirror {
+  background: #eff6ff;
+  color: #1d4ed8;
+  border: 1px solid #bfdbfe;
+}
+
+.btn-mirror:hover { background: #dbeafe; }
+
+.btn-live {
+  background: #f3f4f6;
+  color: #4b5563;
+  border: 1px solid #d1d5db;
+}
+
+.btn-live:hover { background: #e5e7eb; }
+
+/* Filter / Search Bar */
+.search-box {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 1rem;
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  margin-bottom: 16px;
+  outline: none;
+  background: #fff;
+}
+
+.search-box:focus {
+  border-color: var(--secondary);
+}
+
+.filter-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.filter-pill {
+  padding: 6px 12px;
+  border-radius: 16px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  background: #fff;
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+}
+
+.filter-pill.active {
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+}
+
+/* Itinerary Table */
+.itinerary-day {
+  background: #fff;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  margin-bottom: 20px;
+  padding: 16px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.itinerary-day h3 {
+  color: var(--primary);
+  border-bottom: 2px solid #fef3c7;
+  padding-bottom: 6px;
+  margin-bottom: 12px;
+  font-size: 1.15rem;
+}
+
+.itinerary-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 8px;
+  font-size: 0.88rem;
+}
+
+.itinerary-table th, .itinerary-table td {
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+}
+
+.itinerary-table th {
+  background: #f9fafb;
+  color: var(--text-muted);
+}
+
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Vinayaka (Ganesha) Temples & 56 Vinayakas of Kashi</h1>
+  <p>Authentic scriptural narratives, Kashi Khand citations, verified addresses, and offline photographs from varanasitemples.in</p>
+</header>
+
+
+<div class="nav-bar">
+  <a href="Kashi_Pilgrimage_Master_Index.html">&#127963; Master Index</a>
+  <a href="01_Surya_Dwadasa_Aditya.html">&#9728; Surya (12 Aditya)</a>
+  <a href="02_Bhairav_Temples.html">&#128081; Bhairav (9 Temples)</a>
+  <a href="03_Devi_and_Dashamaha_Vidya.html">&#128330; Devi & Mahavidya</a>
+  <a href="04_Shiva_and_Kashi_Jyotirlingas.html">&#128740; Shiva & Jyotirlingas</a>
+  <a href="05_Vinayaka_Temples.html">&#128024; Vinayaka Temples</a>
+  <a href="06_Vishnu_Temples.html">&#127807; Vishnu Temples</a>
+  <a href="Kashi_Exact_Offline_Website/index.html">&#128194; Exact Website Mirror</a>
+</div>
+
+
+<div class="container">
+  
+<div class="intro-box">
+  <h2>The Sacred Geometry of the Fifty-Six Vinayakas</h2>
+  <p>According to <strong>Kashi Khand</strong>, Lord Vinayaka (Ganesha) established himself in 56 forms arranged in <strong>eight concentric protective circles (Avaranas)</strong> radiating outward from the central sanctum of Dhundhi Vinayak at Vishwanath. Each circle represents one of the eight directions of space and guards the sacred boundary of Anandavana. Below are the prominent sovereign Vinayaka temples extracted from the website.</p>
+</div>
+
+
+  <input type="text" id="searchInput" class="search-box" placeholder="&#128269; Search temples by name, locality, or address..." onkeyup="filterTemples()">
+
+  
+        <div class="zone-heading zone-north">
+          <span>North Kashi</span>
+          <span style="font-size:0.85rem; font-weight:normal;">(1 shrines)</span>
+        </div>
+        
+
+    <div class="temple-card" data-zone="North Kashi" data-name="mangal vinayak none noted in source">
+      <div class="temple-header">
+        <div class="temple-title-row">
+          <div class="temple-title">Mangal Vinayak</div>
+          <span class="badge badge-zone-north">North Kashi</span>
+        </div>
+        <div class="temple-sub">
+          <strong>Form:</strong> Auspicious Vinayaka (Near Manikarnika) | <strong>Alt:</strong> None noted in source
+        </div>
+      </div>
+      <div class="temple-body">
+        
+        <div class="temple-img-container">
+          <img class="temple-img" src="Kashi_Exact_Offline_Website/assets/images/Mangal-vinayak.jpeg" alt="Mangal Vinayak" loading="eager" onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src=\'assets/images/\' + this.src.split(\'/\').pop();}" >
+          <div class="img-caption">Mangal vinayak</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128214; Puranic Origin & Significance</div>
+          <div class="detail-content">(MANGAL VINAYAK)
+
+Mangal Vinayak is located at K-24/34, Mangala Gauri Temple, Bala Ghat. Devotees can travel upto Bhaironath by rickshaw and walk on foot to this place. Alternatively they can travel by boat upto Bala Ghat/Panchganga Ghat and walk up the steps and reach the place.  Mangal Vinayak guards Kashi against all evil forces and blesses the devotees.
+
+Please watch our YouTube Video about Mangal Vinayak at following Link :
+
+https://www.youtube.com/watch?v=l-35TQ5emoQ&t=13s</div>
+        </div>
+
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128205; Location & Approach Route</div>
+          <div class="detail-content">
+            <strong>Stated Address:</strong> K-24/34, Mangala Gauri Temple, Bala Ghat. Devotees can travel upto Bhaironath by rickshaw and walk on foot to this place<br>
+            <strong>Nearby Ghat:</strong> Bala Ghat<br>
+            <strong>Zone Verification:</strong> North Kashi (Confidence: Medium)<br>
+            <span style="font-size:0.82rem; color:#6b7280;">Evidence: North landmarks: ['panchganga']</span><br>
+            <strong>Directions:</strong> Mangal Vinayak is located at K-24/34, Mangala Gauri Temple, Bala Ghat. Devotees can travel upto Bhaironath by rickshaw and walk on foot to this place. Alternatively they can travel by boat upto Bala Ghat/Panchganga Ghat and walk up the steps and reach the place.  Mangal Vinayak guards Kashi against all evil forces and blesses the devotees.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#9200; Darshan Timings & Ritual Logistics</div>
+          <div class="detail-content">
+            <strong>Timings:</strong> The temple is open from 05.00 a.m. to 01.00 p.m. and from 03.00 p.m. to 10 p.m.  Aarties are performed in the evening.  For doing any special pooja etc., it is advisable to contact the Poojari.<br>
+            <strong>Puja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#128220; Scriptural References</div>
+          <div class="detail-content">
+            Not specified in the source article.
+          </div>
+        </div>
+
+        <div class="links-row">
+          <a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/vinayak-temples/mangal-vinayak/index.html">&#128194; Exact Website Mirror Article</a>
+          <a class="btn-link btn-live" href="https://varanasitemples.in/category/vinayak-temples/mangal-vinayak/" target="_blank" rel="noopener">&#127760; Original Live URL &#8599;</a>
+        </div>
+      </div>
+    </div>
+    
+
+        <div class="zone-heading zone-south">
+          <span>South Kashi</span>
+          <span style="font-size:0.85rem; font-weight:normal;">(2 shrines)</span>
+        </div>
+        
+
+    <div class="temple-card" data-zone="South Kashi" data-name="lambodara vinayak none noted in source">
+      <div class="temple-header">
+        <div class="temple-title-row">
+          <div class="temple-title">Lambodara Vinayak</div>
+          <span class="badge badge-zone-south">South Kashi</span>
+        </div>
+        <div class="temple-sub">
+          <strong>Form:</strong> Large-Bellied Preserver | <strong>Alt:</strong> None noted in source
+        </div>
+      </div>
+      <div class="temple-body">
+        
+        <div class="temple-img-container">
+          <img class="temple-img" src="Kashi_Exact_Offline_Website/assets/images/Lambodar-589x1024.jpg" alt="Lambodara Vinayak" loading="eager" onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src=\'assets/images/\' + this.src.split(\'/\').pop();}" >
+          <div class="img-caption">Lambodar</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128214; Puranic Origin & Significance</div>
+          <div class="detail-content">Lambodara Vinayak is located at B.7/206, Kedarghat Road and in this locality devotees normally  know this temple as Chintamani Ganesh temple. He gives Shakti (energy) to all his devotees and removes all obstacles.  This is a full fledged temple with a massive idol. Devotees can travel upto this place by autorickshaw or cycle rickshaw.
+
+(LAMBODAR VINAYAK)</div>
+        </div>
+
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128205; Location & Approach Route</div>
+          <div class="detail-content">
+            <strong>Stated Address:</strong> B.7/206, Kedarghat Road and in this locality devotees normally  know this temple as Chintamani Ganesh temple<br>
+            <strong>Nearby Ghat:</strong> after taking bath in Kedar Ghat<br>
+            <strong>Zone Verification:</strong> South Kashi (Confidence: High)<br>
+            <span style="font-size:0.82rem; color:#6b7280;">Evidence: South landmarks: ['assi', 'kedar ghat']</span><br>
+            <strong>Directions:</strong> Lambodara Vinayak is located at B.7/206, Kedarghat Road and in this locality devotees normally  know this temple as Chintamani Ganesh temple. He gives Shakti (energy) to all his devotees and removes all obstacles.  This is a full fledged temple with a massive idol. Devotees can travel upto this place by autorickshaw or cycle rickshaw.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#9200; Darshan Timings & Ritual Logistics</div>
+          <div class="detail-content">
+            <strong>Timings:</strong> The temple is open from 05.00 am to 10.00 noon and from 06.30 p.m. to 08.00 p.m.  However, darshan is allowed throughout the day through grilled door. Aarties are performed at 08.30 a.m. and 07.30 p.m. Special days are Sankata Hara Chaturthi. Devotees can perform pooja on their own self also.  So many regular devotees, after taking bath in Kedar Ghat, worship this Vinayak by chanting Ganesh Sahasranam etc.<br>
+            <strong>Puja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#128220; Scriptural References</div>
+          <div class="detail-content">
+            Not specified in the source article.
+          </div>
+        </div>
+
+        <div class="links-row">
+          <a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/vinayak-temples/lambodara-vinayak/index.html">&#128194; Exact Website Mirror Article</a>
+          <a class="btn-link btn-live" href="https://varanasitemples.in/category/vinayak-temples/lambodara-vinayak/" target="_blank" rel="noopener">&#127760; Original Live URL &#8599;</a>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="temple-card" data-zone="South Kashi" data-name="durg vinayak none noted in source">
+      <div class="temple-header">
+        <div class="temple-title-row">
+          <div class="temple-title">Durg Vinayak</div>
+          <span class="badge badge-zone-south">South Kashi</span>
+        </div>
+        <div class="temple-sub">
+          <strong>Form:</strong> Protector at Durga Kund | <strong>Alt:</strong> None noted in source
+        </div>
+      </div>
+      <div class="temple-body">
+        
+        <div class="temple-img-container">
+          <img class="temple-img" src="Kashi_Exact_Offline_Website/assets/images/Durg-Vinayak-2.jpg" alt="Durg Vinayak" loading="eager" onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src=\'assets/images/\' + this.src.split(\'/\').pop();}" >
+          <div class="img-caption">Durg Vinayak</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128214; Puranic Origin & Significance</div>
+          <div class="detail-content">Durg Vinayak is located at no. 27/1, behind Durga Kund. Durg Vinayak is a stand alone temple with two entrances and a lot of devotees regularly come for offering prayers. Devotees can travel upto this place by cycle rickshaw or auto rickshaw and famous landmark is Durga Kund which one can never miss.
+
+(DURG VINAYAK)
+
+Please watch our YouTube Video about Durg  Vinayak at following Link :
+
+https://www.youtube.com/watch?v=uzrtWjx_v9Q&t=87s</div>
+        </div>
+
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128205; Location & Approach Route</div>
+          <div class="detail-content">
+            <strong>Stated Address:</strong> no. 27/1, behind Durga Kund<br>
+            <strong>Nearby Ghat:</strong> Not directly on a riverfront ghat<br>
+            <strong>Zone Verification:</strong> South Kashi (Confidence: Medium)<br>
+            <span style="font-size:0.82rem; color:#6b7280;">Evidence: South landmarks: ['durga kund']</span><br>
+            <strong>Directions:</strong> Durg Vinayak is located at no. 27/1, behind Durga Kund. Durg Vinayak is a stand alone temple with two entrances and a lot of devotees regularly come for offering prayers. Devotees can travel upto this place by cycle rickshaw or auto rickshaw and famous landmark is Durga Kund which one can never miss.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#9200; Darshan Timings & Ritual Logistics</div>
+          <div class="detail-content">
+            <strong>Timings:</strong> The temple is open from 05.00 a.m. to 12.00 Noon and 04.00 p.m. to 10.00 p.m.  Mangala Aarti is held at 05.00 a.m., Bhog at 12.00 Noon, Sandhya Aarti at 07.00 p.m. and Shayan Aarti at 10.00 p.m.  The aarties are widely attended by many persons.  Staunch devotees believe that worshipping Durg Vinayak during or before any job/project, will certainly give success in that venture.<br>
+            <strong>Puja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#128220; Scriptural References</div>
+          <div class="detail-content">
+            Not specified in the source article.
+          </div>
+        </div>
+
+        <div class="links-row">
+          <a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/vinayak-temples/durg-vinayak/index.html">&#128194; Exact Website Mirror Article</a>
+          <a class="btn-link btn-live" href="https://varanasitemples.in/category/vinayak-temples/durg-vinayak/" target="_blank" rel="noopener">&#127760; Original Live URL &#8599;</a>
+        </div>
+      </div>
+    </div>
+    
+
+        <div class="zone-heading zone-east">
+          <span>East Kashi</span>
+          <span style="font-size:0.85rem; font-weight:normal;">(5 shrines)</span>
+        </div>
+        
+
+    <div class="temple-card" data-zone="East Kashi" data-name="dhundhi vinayak none noted in source">
+      <div class="temple-header">
+        <div class="temple-title-row">
+          <div class="temple-title">Dhundhi Vinayak</div>
+          <span class="badge badge-zone-east">East Kashi</span>
+        </div>
+        <div class="temple-sub">
+          <strong>Form:</strong> Principal Sovereign Vinayaka of Kashi (Kashi Vishwanath Corridor) | <strong>Alt:</strong> None noted in source
+        </div>
+      </div>
+      <div class="temple-body">
+        
+        
+        <div class="temple-img-container">
+          <img class="temple-img" 
+               src="Kashi_Exact_Offline_Website/assets/images/Dhundhi-Vinayak-Shrine.svg" 
+               alt="Dhundhi Vinayak" 
+               loading="eager"
+               onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/Dhundhi-Vinayak-Shrine.svg';}">
+          <div class="img-caption">&#128330; Sacred Iconographic Representation of Dhundhi Vinayak (Kashi Sanctum)</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128214; Puranic Origin & Significance</div>
+          <div class="detail-content">After Vinayak paved the way for his father, Lord Shiva made a grand entry into Kashi. Lord Shiva praised Vinayak for his deeds. The latter was called Dhundhi Vinayak.  All devotees who come to worship Lord Shiva in Visweshwar temple will necessarily have to come across Dhundhi Vinayak as it is the entry point and they will worship him first. A person who worships Dhundhi Vinayak daily in the morning will find all his obstacles removed.  A person who merely takes the name of Dhundhi Vinayak with full devotion will be blessed with all kinds of happiness.
+
+Devotees should worship Dhundhi Vinayak on all Tuesdays.  More importance is attached to Tuesdays coinciding with Chaturthi (fourth day after Amavasya or Poornima).  A person who performs pooja of Dhundhi Vinayak in the month of Magha, Chaturthi after Amavasya will be blessed by God. (Skanda Puran, Kashi Khand, Chapter 57).
+
+Later Shiva went on describing the various forms of Vinayak spread all over Kashi.
+
+-----------------------------------
+
+Kashi Khand, Chapter 03, Shlok 96
+
+सर्वार्थानामत्र दात्री भवानी सर्वान् कामान् पूरयेदत्र ढुण्ढि:
+
+सर्वान् जन्तून्  मोचयेदन्तकाले विश्वेशोऽत्र श्रोत्रमन्त्रोपदेशात्
+
+In this holy Kashi, the goddess who fulfills all the “Arth” (health, wealth, prosperity etc) is Annapurna Devi. Dhundhiraj Ganesha is the one who fulfills all the wishes and Lord Vishwanath frees all the beings from the bondage (Bhav Bandhan) by reciting mantras in their ears in their final stages.
+
+-----------------------------------</div>
+        </div>
+
+        
+        <div class="detail-section">
+          <div class="detail-label">&#128366; Sanskrit Verses (Kashi Khand)</div>
+          <div class="sanskrit-box">सर्वार्थानामत्र दात्री भवानी सर्वान् कामान् पूरयेदत्र ढुण्ढि:
+सर्वान् जन्तून्  मोचयेदन्तकाले विश्वेशोऽत्र श्रोत्रमन्त्रोपदेशात्</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128205; Location & Approach Route</div>
+          <div class="detail-content">
+            <strong>Stated Address:</strong> the entry point of Annapurna Temple via Gate No.1<br>
+            <strong>Nearby Ghat:</strong> Not directly on a riverfront ghat<br>
+            <strong>Zone Verification:</strong> East Kashi (Confidence: Medium)<br>
+            <span style="font-size:0.82rem; color:#6b7280;">Evidence: East/Riverfront landmarks: ['dasaswamedh']; West/Inland landmarks: ['bansphatak']</span><br>
+            <strong>Directions:</strong> Dhundhi Vinayak is located at the entry point of Annapurna Temple via Gate No.1. Devotees can approach via Dasaswamedh Vishwanath Gully or Bansphatak Vishwanath Gully.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#9200; Darshan Timings & Ritual Logistics</div>
+          <div class="detail-content">
+            <strong>Timings:</strong> Dhundhi Vinayak is a huge idol of Ganesha at the above point.  The place is open practically twenty four hours. Devotees may make offering of flowers or green grass to the Lord and some sweets as Bhog.  Since there is heavy patrolling police and other forces, devotees may visit the place early in the morning when there is likelihood of lesser crowd.<br>
+            <strong>Puja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#128220; Scriptural References</div>
+          <div class="detail-content">
+            Kashi Khand, Chapter 57, Kashi Khand, Chapter 03, Shlok 96
+          </div>
+        </div>
+
+        <div class="links-row">
+          <a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/vinayak-temples/aa-dhundhi-vinayak/index.html">&#128194; Exact Website Mirror Article</a>
+          <a class="btn-link btn-live" href="https://varanasitemples.in/category/vinayak-temples/aa-dhundhi-vinayak/" target="_blank" rel="noopener">&#127760; Original Live URL &#8599;</a>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="temple-card" data-zone="East Kashi" data-name="abhay vinayak none noted in source">
+      <div class="temple-header">
+        <div class="temple-title-row">
+          <div class="temple-title">Abhay Vinayak</div>
+          <span class="badge badge-zone-east">East Kashi</span>
+        </div>
+        <div class="temple-sub">
+          <strong>Form:</strong> Bestower of Fearlessness | <strong>Alt:</strong> None noted in source
+        </div>
+      </div>
+      <div class="temple-body">
+        
+        <div class="temple-img-container">
+          <img class="temple-img" src="Kashi_Exact_Offline_Website/assets/images/Abhay-Vinayak.jpg" alt="Abhay Vinayak" loading="eager" onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src=\'assets/images/\' + this.src.split(\'/\').pop();}" >
+          <div class="img-caption">Abhay Vinayak</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128214; Puranic Origin & Significance</div>
+          <div class="detail-content">Abhay Vinayak is located at D-17/111, Dasaswamedh Ghat inside the premises of Shooltankeshwar temple.  Worshipping this Vinayak will make the devotees free from all fears.
+
+(ABHAY VINAYAK)</div>
+        </div>
+
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128205; Location & Approach Route</div>
+          <div class="detail-content">
+            <strong>Stated Address:</strong> D-17/111, Dasaswamedh Ghat inside the premises of Shooltankeshwar temple.  Worshipping this Vinayak will make the devotees free from all fears<br>
+            <strong>Nearby Ghat:</strong> Dasaswamedh Ghat<br>
+            <strong>Zone Verification:</strong> East Kashi (Confidence: Medium)<br>
+            <span style="font-size:0.82rem; color:#6b7280;">Evidence: East/Riverfront landmarks: ['dasaswamedh']</span><br>
+            <strong>Directions:</strong> Devotees can travel almost upto this place by cycle rickshaw. Alternatively, they can have a boat ride upto Dasaswamedh Ghat and climb the steps.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#9200; Darshan Timings & Ritual Logistics</div>
+          <div class="detail-content">
+            <strong>Timings:</strong> The place of worship is open practically throughout and devotees can perform pooja by themselves.  Shri Lakshmi Shankar Tiwari is available at the temple for performing any special pooja etc.<br>
+            <strong>Puja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#128220; Scriptural References</div>
+          <div class="detail-content">
+            Not specified in the source article.
+          </div>
+        </div>
+
+        <div class="links-row">
+          <a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/vinayak-temples/abhay-vinayak/index.html">&#128194; Exact Website Mirror Article</a>
+          <a class="btn-link btn-live" href="https://varanasitemples.in/category/vinayak-temples/abhay-vinayak/" target="_blank" rel="noopener">&#127760; Original Live URL &#8599;</a>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="temple-card" data-zone="East Kashi" data-name="asha vinayak none noted in source">
+      <div class="temple-header">
+        <div class="temple-title-row">
+          <div class="temple-title">Asha Vinayak</div>
+          <span class="badge badge-zone-east">East Kashi</span>
+        </div>
+        <div class="temple-sub">
+          <strong>Form:</strong> Fulfiller of Desires and Hopes | <strong>Alt:</strong> None noted in source
+        </div>
+      </div>
+      <div class="temple-body">
+        
+        <div class="temple-img-container">
+          <img class="temple-img" src="Kashi_Exact_Offline_Website/assets/images/Asha-Vinayak-1-1024x768.jpg" alt="Asha Vinayak" loading="eager" onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src=\'assets/images/\' + this.src.split(\'/\').pop();}" >
+          <div class="img-caption">Asha Vinayak</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128214; Puranic Origin & Significance</div>
+          <div class="detail-content">Asha Vinayak is located at D-3/71, Mir Ghat, Bare Hanuman Temple.  This falls in the vicinity of Vishalakshi Devi Temple. All desires of the devotees will be fulfilled if they offer devout prayers to Asha Vinayak. Devotees can travel upto Dasaswamedh Vishwanath Gully by rickshaw and walk on foot to this place through Vishalakshi Gauri Temple, which is a famous landmark. Alternatively they can travel by boat upto Mir Ghat and walk up the steps and reach the place.
+
+(ASHA VINAYAK)
+
+In the same temple premises, devotees can worship Jarasandheshwar shiv Ling also.</div>
+        </div>
+
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128205; Location & Approach Route</div>
+          <div class="detail-content">
+            <strong>Stated Address:</strong> D-3/71, Mir Ghat, Bare Hanuman Temple.  This falls in the vicinity of Vishalakshi Devi Temple<br>
+            <strong>Nearby Ghat:</strong> Mir Ghat<br>
+            <strong>Zone Verification:</strong> East Kashi (Confidence: High)<br>
+            <span style="font-size:0.82rem; color:#6b7280;">Evidence: East/Riverfront landmarks: ['dasaswamedh', 'mir ghat']</span><br>
+            <strong>Directions:</strong> Asha Vinayak is located at D-3/71, Mir Ghat, Bare Hanuman Temple.  This falls in the vicinity of Vishalakshi Devi Temple. All desires of the devotees will be fulfilled if they offer devout prayers to Asha Vinayak. Devotees can travel upto Dasaswamedh Vishwanath Gully by rickshaw and walk on foot to this place through Vishalakshi Gauri Temple, which is a famous landmark. Alternatively they can travel by boat upto Mir Ghat and walk up the steps and reach the place.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#9200; Darshan Timings & Ritual Logistics</div>
+          <div class="detail-content">
+            <strong>Timings:</strong> The temple is open from 07.00 a.m. to 01.00 p.m. and from 04.00 p.m. to 09.00 p.m.  Aarties are held in the morning and evening.<br>
+            <strong>Puja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#128220; Scriptural References</div>
+          <div class="detail-content">
+            Not specified in the source article.
+          </div>
+        </div>
+
+        <div class="links-row">
+          <a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/vinayak-temples/asha-vinayak/index.html">&#128194; Exact Website Mirror Article</a>
+          <a class="btn-link btn-live" href="https://varanasitemples.in/category/vinayak-temples/asha-vinayak/" target="_blank" rel="noopener">&#127760; Original Live URL &#8599;</a>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="temple-card" data-zone="East Kashi" data-name="dwar vinayak none noted in source">
+      <div class="temple-header">
+        <div class="temple-title-row">
+          <div class="temple-title">Dwar Vinayak</div>
+          <span class="badge badge-zone-east">East Kashi</span>
+        </div>
+        <div class="temple-sub">
+          <strong>Form:</strong> Gateway Guardian Vinayaka | <strong>Alt:</strong> None noted in source
+        </div>
+      </div>
+      <div class="temple-body">
+        
+        <div class="temple-img-container">
+          <img class="temple-img" src="Kashi_Exact_Offline_Website/assets/images/Dwar-Vinayak.jpg" alt="Dwar Vinayak" loading="eager" onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src=\'assets/images/\' + this.src.split(\'/\').pop();}" >
+          <div class="img-caption">Dwar Vinayak</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128214; Puranic Origin & Significance</div>
+          <div class="detail-content">Dwar Vinayak also guards Kashi against evil forces, according to Kashi Khand.  Dwar Vinayak is located near Swargdwareshwar (Brahmanal  Chauraha) at the steps near Jau Vinayak. Devotees can reach this place by asking the directions to reach Manikarnika Ghat.
+
+(DWAR VINAYAK)
+
+The place of worship is open practically throughout and devotees can perform pooja by themselves.</div>
+        </div>
+
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128205; Location & Approach Route</div>
+          <div class="detail-content">
+            <strong>Stated Address:</strong> Dwar Vinayak also guards Kashi against evil forces, according to Kashi Khand.  Dwar Vinayak is located near Swargdwareshwar (Brahmanal  Chauraha) at the steps near Jau Vinayak. Devotees can reach this place by asking the directions to reach Manikarnika Ghat.<br>
+            <strong>Nearby Ghat:</strong> Devotees can reach this place by asking the directions to reach Manikarnika Ghat<br>
+            <strong>Zone Verification:</strong> East Kashi (Confidence: Medium)<br>
+            <span style="font-size:0.82rem; color:#6b7280;">Evidence: East/Riverfront landmarks: ['manikarnika']</span><br>
+            <strong>Directions:</strong> Dwar Vinayak also guards Kashi against evil forces, according to Kashi Khand.  Dwar Vinayak is located near Swargdwareshwar (Brahmanal  Chauraha) at the steps near Jau Vinayak. Devotees can reach this place by asking the directions to reach Manikarnika Ghat.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#9200; Darshan Timings & Ritual Logistics</div>
+          <div class="detail-content">
+            <strong>Timings:</strong> Open throughout the day / flexible local priest timings (confirm on arrival)<br>
+            <strong>Puja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#128220; Scriptural References</div>
+          <div class="detail-content">
+            Not specified in the source article.
+          </div>
+        </div>
+
+        <div class="links-row">
+          <a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/vinayak-temples/dwar-vinayak/index.html">&#128194; Exact Website Mirror Article</a>
+          <a class="btn-link btn-live" href="https://varanasitemples.in/category/vinayak-temples/dwar-vinayak/" target="_blank" rel="noopener">&#127760; Original Live URL &#8599;</a>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="temple-card" data-zone="East Kashi" data-name="sthool dant vinayak none noted in source">
+      <div class="temple-header">
+        <div class="temple-title-row">
+          <div class="temple-title">Sthool Dant Vinayak</div>
+          <span class="badge badge-zone-east">East Kashi</span>
+        </div>
+        <div class="temple-sub">
+          <strong>Form:</strong> Mighty-Tusked Vinayaka | <strong>Alt:</strong> None noted in source
+        </div>
+      </div>
+      <div class="temple-body">
+        
+        <div class="temple-img-container">
+          <img class="temple-img" src="Kashi_Exact_Offline_Website/assets/images/Stool-Dant-Vinayak-1.jpg" alt="Sthool Dant Vinayak" loading="eager" onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src=\'assets/images/\' + this.src.split(\'/\').pop();}" >
+          <div class="img-caption">Stool Dant Vinayak</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128214; Puranic Origin & Significance</div>
+          <div class="detail-content">(STHOOL DANT VINAYAK)
+
+Sthool Dant Vinayak is located at D-16/34, Man Mandir, near Someshwar.  This Vinayak is capable of granting Siddhi (supernatural accomplishments) to the devotees. Devotees can travel upto Dasaswamedh by rickshaw and walk on foot to this place. Alternatively they can travel by boat upto Man Mandir Ghat and climb th
+
+Please watch our YouTube Video about Sthool Dant Vinayak at following Link
+
+https://www.youtube.com/watch?v=NFXHu2NC_JM&t=56s</div>
+        </div>
+
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128205; Location & Approach Route</div>
+          <div class="detail-content">
+            <strong>Stated Address:</strong> D-16/34, Man Mandir, near Someshwar.  This Vinayak is capable of granting Siddhi (supernatural accomplishments) to the devotees<br>
+            <strong>Nearby Ghat:</strong> Alternatively they can travel by boat upto Man Mandir Ghat<br>
+            <strong>Zone Verification:</strong> East Kashi (Confidence: High)<br>
+            <span style="font-size:0.82rem; color:#6b7280;">Evidence: East/Riverfront landmarks: ['dasaswamedh', 'man mandir']</span><br>
+            <strong>Directions:</strong> Sthool Dant Vinayak is located at D-16/34, Man Mandir, near Someshwar.  This Vinayak is capable of granting Siddhi (supernatural accomplishments) to the devotees. Devotees can travel upto Dasaswamedh by rickshaw and walk on foot to this place. Alternatively they can travel by boat upto Man Mandir Ghat and climb th
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#9200; Darshan Timings & Ritual Logistics</div>
+          <div class="detail-content">
+            <strong>Timings:</strong> The place of worship is open practically throughout and devotees can perform pooja by themselves.<br>
+            <strong>Puja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#128220; Scriptural References</div>
+          <div class="detail-content">
+            Not specified in the source article.
+          </div>
+        </div>
+
+        <div class="links-row">
+          <a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/vinayak-temples/sthool-dant-vinayak/index.html">&#128194; Exact Website Mirror Article</a>
+          <a class="btn-link btn-live" href="https://varanasitemples.in/category/vinayak-temples/sthool-dant-vinayak/" target="_blank" rel="noopener">&#127760; Original Live URL &#8599;</a>
+        </div>
+      </div>
+    </div>
+    
+
+        <div class="zone-heading zone-west">
+          <span>West Kashi</span>
+          <span style="font-size:0.85rem; font-weight:normal;">(5 shrines)</span>
+        </div>
+        
+
+    <div class="temple-card" data-zone="West Kashi" data-name="siddhi vinayak none noted in source">
+      <div class="temple-header">
+        <div class="temple-title-row">
+          <div class="temple-title">Siddhi Vinayak</div>
+          <span class="badge badge-zone-west">West Kashi</span>
+        </div>
+        <div class="temple-sub">
+          <strong>Form:</strong> Bestower of Perfection & Siddhis (Vishwanath Lane) | <strong>Alt:</strong> None noted in source
+        </div>
+      </div>
+      <div class="temple-body">
+        
+        
+        <div class="temple-img-container">
+          <img class="temple-img" 
+               src="Kashi_Exact_Offline_Website/assets/images/Siddhi-Vinayak-Shrine.svg" 
+               alt="Siddhi Vinayak" 
+               loading="eager"
+               onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/Siddhi-Vinayak-Shrine.svg';}">
+          <div class="img-caption">&#128330; Sacred Iconographic Representation of Siddhi Vinayak (Kashi Sanctum)</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128214; Puranic Origin & Significance</div>
+          <div class="detail-content">Siddhi Vinayak is located at Ck. 9/1, near Mani Karnika Kund in the steps. Siddhi Vinayak grants Siddhi (attainment) to his devotees.  Devotees can travel upto Chowk by rickshaw and walk on foot to this temple.  Alternatively, they can take a boat ride upto Mani Karnika Ghat and walk up the steps.</div>
+        </div>
+
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128205; Location & Approach Route</div>
+          <div class="detail-content">
+            <strong>Stated Address:</strong> Ck. 9/1, near Mani Karnika Kund in the steps<br>
+            <strong>Nearby Ghat:</strong> they can take a boat ride upto Mani Karnika Ghat<br>
+            <strong>Zone Verification:</strong> West Kashi (Confidence: Medium)<br>
+            <span style="font-size:0.82rem; color:#6b7280;">Evidence: West/Inland landmarks: ['chowk']</span><br>
+            <strong>Directions:</strong> Siddhi Vinayak is located at Ck. 9/1, near Mani Karnika Kund in the steps. Siddhi Vinayak grants Siddhi (attainment) to his devotees.  Devotees can travel upto Chowk by rickshaw and walk on foot to this temple.  Alternatively, they can take a boat ride upto Mani Karnika Ghat and walk up the steps.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#9200; Darshan Timings & Ritual Logistics</div>
+          <div class="detail-content">
+            <strong>Timings:</strong> The place of worship is open practically throughout.<br>
+            <strong>Puja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#128220; Scriptural References</div>
+          <div class="detail-content">
+            Not specified in the source article.
+          </div>
+        </div>
+
+        <div class="links-row">
+          <a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/vinayak-temples/siddhi-vinayak/index.html">&#128194; Exact Website Mirror Article</a>
+          <a class="btn-link btn-live" href="https://varanasitemples.in/category/vinayak-temples/siddhi-vinayak/" target="_blank" rel="noopener">&#127760; Original Live URL &#8599;</a>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="temple-card" data-zone="West Kashi" data-name="dwi mukh vinayak none noted in source">
+      <div class="temple-header">
+        <div class="temple-title-row">
+          <div class="temple-title">Dwi Mukh Vinayak</div>
+          <span class="badge badge-zone-west">West Kashi</span>
+        </div>
+        <div class="temple-sub">
+          <strong>Form:</strong> Two-Faced Vinayaka (Near Panchganga Ghat) | <strong>Alt:</strong> None noted in source
+        </div>
+      </div>
+      <div class="temple-body">
+        
+        <div class="temple-img-container">
+          <img class="temple-img" src="Kashi_Exact_Offline_Website/assets/images/Dwi-Mukh-Vinayak-1.jpg" alt="Dwi Mukh Vinayak" loading="eager" onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src=\'assets/images/\' + this.src.split(\'/\').pop();}" >
+          <div class="img-caption">Dwi Mukh Vinayak</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128214; Puranic Origin & Significance</div>
+          <div class="detail-content">(DWI MUKH VINAYAK)
+
+Dwi Mukh Vinayak is located at D-51/90, West of Saamba Aditya, Suraj Kund. Worshipping this lord will give all round prosperity.  It is almost in the temple premises. Devotees can travel upto Suraj Kund by rickshaw.
+
+------------------------------------
+
+Kashi Khand, Chapter 57, Shlok 101
+
+क्षिप्रप्रसादनादैन्द्यां  द्वितुण्डो गणनायक:
+
+तस्य संदर्शनात्पुंसां भवेच्छ्री: सर्वतोमुखी
+
+Dwimukh Vinayak is to the east of Kshipra Prasadan Ganesha, by worshipping him, people get all kinds of prosperity.
+
+------------------------------------
+
+Please watch our YouTube Video about Dhundhi Vinayak at following Link :
+
+https://www.youtube.com/watch?v=40af4qZMnqA&t=55s</div>
+        </div>
+
+        
+        <div class="detail-section">
+          <div class="detail-label">&#128366; Sanskrit Verses (Kashi Khand)</div>
+          <div class="sanskrit-box">क्षिप्रप्रसादनादैन्द्यां  द्वितुण्डो गणनायक:
+तस्य संदर्शनात्पुंसां भवेच्छ्री: सर्वतोमुखी</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128205; Location & Approach Route</div>
+          <div class="detail-content">
+            <strong>Stated Address:</strong> D-51/90, West of Saamba Aditya, Suraj Kund. Worshipping this lord will give all round prosperity<br>
+            <strong>Nearby Ghat:</strong> Not directly on a riverfront ghat<br>
+            <strong>Zone Verification:</strong> West Kashi (Confidence: Medium)<br>
+            <span style="font-size:0.82rem; color:#6b7280;">Evidence: West/Inland landmarks: ['suraj kund']</span><br>
+            <strong>Directions:</strong> Dwi Mukh Vinayak is located at D-51/90, West of Saamba Aditya, Suraj Kund. Worshipping this lord will give all round prosperity.  It is almost in the temple premises. Devotees can travel upto Suraj Kund by rickshaw.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#9200; Darshan Timings & Ritual Logistics</div>
+          <div class="detail-content">
+            <strong>Timings:</strong> The place of worship is open practically throughout and devotees can perform pooja by themselves.<br>
+            <strong>Puja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#128220; Scriptural References</div>
+          <div class="detail-content">
+            Kashi Khand, Chapter 57, Shlok 101
+          </div>
+        </div>
+
+        <div class="links-row">
+          <a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/vinayak-temples/dwi-mukh-vinayak/index.html">&#128194; Exact Website Mirror Article</a>
+          <a class="btn-link btn-live" href="https://varanasitemples.in/category/vinayak-temples/dwi-mukh-vinayak/" target="_blank" rel="noopener">&#127760; Original Live URL &#8599;</a>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="temple-card" data-zone="West Kashi" data-name="gyan vinayak none noted in source">
+      <div class="temple-header">
+        <div class="temple-title-row">
+          <div class="temple-title">Gyan Vinayak</div>
+          <span class="badge badge-zone-west">West Kashi</span>
+        </div>
+        <div class="temple-sub">
+          <strong>Form:</strong> Bestower of Supreme Spiritual Wisdom | <strong>Alt:</strong> None noted in source
+        </div>
+      </div>
+      <div class="temple-body">
+        
+        <div class="temple-img-container">
+          <img class="temple-img" src="Kashi_Exact_Offline_Website/assets/images/Gyan-Vinayak-1.jpg" alt="Gyan Vinayak" loading="eager" onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src=\'assets/images/\' + this.src.split(\'/\').pop();}" >
+          <div class="img-caption">Gyan Vinayak</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128214; Puranic Origin & Significance</div>
+          <div class="detail-content">(GYAN VINAYAK)
+
+Gyan Vinayak is located at Khowa Gulli Chowraha at Ck.28/4 Langlishwar temple.  Gyan Vinayak guards Kashi against evil forces, according to Kashi Khand.   Devotees can travel upto Chowk by rickshaw and walk on foot to this place via Khatri Medical Hall.</div>
+        </div>
+
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128205; Location & Approach Route</div>
+          <div class="detail-content">
+            <strong>Stated Address:</strong> Khowa Gulli Chowraha at Ck.28/4 Langlishwar temple<br>
+            <strong>Nearby Ghat:</strong> Not directly on a riverfront ghat<br>
+            <strong>Zone Verification:</strong> West Kashi (Confidence: Medium)<br>
+            <span style="font-size:0.82rem; color:#6b7280;">Evidence: West/Inland landmarks: ['chowk']</span><br>
+            <strong>Directions:</strong> Gyan Vinayak is located at Khowa Gulli Chowraha at Ck.28/4 Langlishwar temple.  Gyan Vinayak guards Kashi against evil forces, according to Kashi Khand.   Devotees can travel upto Chowk by rickshaw and walk on foot to this place via Khatri Medical Hall.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#9200; Darshan Timings & Ritual Logistics</div>
+          <div class="detail-content">
+            <strong>Timings:</strong> The temple is open from 08.00 a.m. to 10.00 a.m. and from 06.00 p.m. to 08.00 p.m.  Aarties are held in the morning and evening.<br>
+            <strong>Puja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#128220; Scriptural References</div>
+          <div class="detail-content">
+            Not specified in the source article.
+          </div>
+        </div>
+
+        <div class="links-row">
+          <a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/vinayak-temples/gyan-vinayak/index.html">&#128194; Exact Website Mirror Article</a>
+          <a class="btn-link btn-live" href="https://varanasitemples.in/category/vinayak-temples/gyan-vinayak/" target="_blank" rel="noopener">&#127760; Original Live URL &#8599;</a>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="temple-card" data-zone="West Kashi" data-name="avi mukta vinayak none noted in source">
+      <div class="temple-header">
+        <div class="temple-title-row">
+          <div class="temple-title">Avi Mukta Vinayak</div>
+          <span class="badge badge-zone-west">West Kashi</span>
+        </div>
+        <div class="temple-sub">
+          <strong>Form:</strong> Lord of Avimukta Kshetra | <strong>Alt:</strong> None noted in source
+        </div>
+      </div>
+      <div class="temple-body">
+        
+        
+        <div class="temple-img-container">
+          <img class="temple-img" 
+               src="Kashi_Exact_Offline_Website/assets/images/Avi-Mukta-Vinayak-Shrine.svg" 
+               alt="Avi Mukta Vinayak" 
+               loading="eager"
+               onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/Avi-Mukta-Vinayak-Shrine.svg';}">
+          <div class="img-caption">&#128330; Sacred Iconographic Representation of Avi Mukta Vinayak (Kashi Sanctum)</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128214; Puranic Origin & Significance</div>
+          <div class="detail-content">According to some old timers, original Avi Mukt Vinayak idol has disappeared.  Now two places are claimed to house this deity. One at Gyavapi Masjid, in the wall and other inside Visweshwar (Vishwanath) temple premises besides Gauri and Vishnu. Avi Mukta Vinayak, according to Kashi Khand, removes all difficulties from the lives of devotees who stay in Avi Mukta Kshetra (Kashi).Devotees can travel upto Gyanvapi by rickshaw and walk on foot to this place.</div>
+        </div>
+
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128205; Location & Approach Route</div>
+          <div class="detail-content">
+            <strong>Stated Address:</strong> According to some old timers, original Avi Mukt Vinayak idol has disappeared.  Now two places are claimed to house this <br>
+            <strong>Nearby Ghat:</strong> Not directly on a riverfront ghat<br>
+            <strong>Zone Verification:</strong> West Kashi (Confidence: Medium)<br>
+            <span style="font-size:0.82rem; color:#6b7280;">Evidence: West/Inland landmarks: ['gyanvapi']</span><br>
+            <strong>Directions:</strong> According to some old timers, original Avi Mukt Vinayak idol has disappeared.  Now two places are claimed to house this deity. One at Gyavapi Masjid, in the wall and other inside Visweshwar (Vishwanath) temple premises besides Gauri and Vishnu. Avi Mukta Vinayak, according to Kashi Khand, removes all difficulties from the lives of devotees who stay in Avi Mukta Kshetra (Kashi).Devotees can travel upto Gyanvapi by rickshaw and walk on foot to this place.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#9200; Darshan Timings & Ritual Logistics</div>
+          <div class="detail-content">
+            <strong>Timings:</strong> The place of worship is open practically throughout and devotees can only pray.  Performing  pooja etc. may not be allowed.<br>
+            <strong>Puja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#128220; Scriptural References</div>
+          <div class="detail-content">
+            Not specified in the source article.
+          </div>
+        </div>
+
+        <div class="links-row">
+          <a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/vinayak-temples/avi-mukta-vinayak/index.html">&#128194; Exact Website Mirror Article</a>
+          <a class="btn-link btn-live" href="https://varanasitemples.in/category/vinayak-temples/avi-mukta-vinayak/" target="_blank" rel="noopener">&#127760; Original Live URL &#8599;</a>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="temple-card" data-zone="West Kashi" data-name="moda vinayak none noted in source">
+      <div class="temple-header">
+        <div class="temple-title-row">
+          <div class="temple-title">Moda Vinayak</div>
+          <span class="badge badge-zone-west">West Kashi</span>
+        </div>
+        <div class="temple-sub">
+          <strong>Form:</strong> Bestower of Joy | <strong>Alt:</strong> None noted in source
+        </div>
+      </div>
+      <div class="temple-body">
+        
+        <div class="temple-img-container">
+          <img class="temple-img" src="Kashi_Exact_Offline_Website/assets/images/Moda-Vinayak-1.jpg" alt="Moda Vinayak" loading="eager" onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src=\'assets/images/\' + this.src.split(\'/\').pop();}" >
+          <div class="img-caption">Moda Vinayak</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128214; Puranic Origin & Significance</div>
+          <div class="detail-content">(MODA VINAYAK)
+
+Moda Vinayak is located at  Ck.31/12, Kashi Karvat Temple, Naipali Khapra. Devotees can travel upto Chowk by rickshaw and walk on foot to this place.
+
+Moda Vinayak removes all obstacles in life.
+
+Please watch our YouTube Video about Moda Vinayak at following Link
+
+https://www.youtube.com/watch?v=l-35TQ5emoQ&t=13s</div>
+        </div>
+
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128205; Location & Approach Route</div>
+          <div class="detail-content">
+            <strong>Stated Address:</strong> Ck.31/12, Kashi Karvat Temple, Naipali Khapra<br>
+            <strong>Nearby Ghat:</strong> Not directly on a riverfront ghat<br>
+            <strong>Zone Verification:</strong> West Kashi (Confidence: Medium)<br>
+            <span style="font-size:0.82rem; color:#6b7280;">Evidence: West/Inland landmarks: ['chowk']</span><br>
+            <strong>Directions:</strong> Moda Vinayak is located at  Ck.31/12, Kashi Karvat Temple, Naipali Khapra. Devotees can travel upto Chowk by rickshaw and walk on foot to this place.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#9200; Darshan Timings & Ritual Logistics</div>
+          <div class="detail-content">
+            <strong>Timings:</strong> The place of worship is open practically throughout and devotees can perform pooja by themselves.<br>
+            <strong>Puja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#128220; Scriptural References</div>
+          <div class="detail-content">
+            Not specified in the source article.
+          </div>
+        </div>
+
+        <div class="links-row">
+          <a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/vinayak-temples/moda-vinayak/index.html">&#128194; Exact Website Mirror Article</a>
+          <a class="btn-link btn-live" href="https://varanasitemples.in/category/vinayak-temples/moda-vinayak/" target="_blank" rel="noopener">&#127760; Original Live URL &#8599;</a>
+        </div>
+      </div>
+    </div>
+    
+
+        <div class="zone-heading zone-other">
+          <span>Zone unverified — location evidence insufficient</span>
+          <span style="font-size:0.85rem; font-weight:normal;">(9 shrines)</span>
+        </div>
+        
+
+    <div class="temple-card" data-zone="Zone unverified — location evidence insufficient" data-name="vakra tund vinayak (bada ganesh) bara ganesh">
+      <div class="temple-header">
+        <div class="temple-title-row">
+          <div class="temple-title">Vakra Tund Vinayak (Bada Ganesh)</div>
+          <span class="badge badge-zone-other">Zone unverified</span>
+        </div>
+        <div class="temple-sub">
+          <strong>Form:</strong> Famous Bada Ganesh (Lohatia) | <strong>Alt:</strong> Bara Ganesh
+        </div>
+      </div>
+      <div class="temple-body">
+        
+        <div class="temple-img-container">
+          <img class="temple-img" src="Kashi_Exact_Offline_Website/assets/images/Vakra-Tund-Vinayak-Bara-Ganesh-1.jpg" alt="Vakra Tund Vinayak (Bada Ganesh)" loading="eager" onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src=\'assets/images/\' + this.src.split(\'/\').pop();}" >
+          <div class="img-caption">Vakra Tund Vinayak (Bara Ganesh)</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128214; Puranic Origin & Significance</div>
+          <div class="detail-content">Vakra Tunda Vinayak is located at K-58/101, Lohatia Bara Ganeshji. He removes ill effects paap karma (sins) committed by devotee and bestows upon them overall happiness.  This Vinayak is also known as Bara Ganesh. Devotees can travel upto Lohatia by auto rickshaw or cycle rickshaw and reach this temple on foot.
+
+(VAKRA TUND VINAYAK)
+
+Please watch our YouTube Video about Vakra Tund Vinayak at following Link
+
+https://www.youtube.com/watch?v=NFXHu2NC_JM&t=56s</div>
+        </div>
+
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128205; Location & Approach Route</div>
+          <div class="detail-content">
+            <strong>Stated Address:</strong> K-58/101, Lohatia Bara Ganeshji. He removes ill effects paap karma (sins) committed by devotee and bestows upon them overall happiness<br>
+            <strong>Nearby Ghat:</strong> Not directly on a riverfront ghat<br>
+            <strong>Zone Verification:</strong> Zone unverified — location evidence insufficient (Confidence: Low)<br>
+            <span style="font-size:0.82rem; color:#6b7280;">Evidence: No distinct locality keyword matched in source text</span><br>
+            <strong>Directions:</strong> Vakra Tunda Vinayak is located at K-58/101, Lohatia Bara Ganeshji. He removes ill effects paap karma (sins) committed by devotee and bestows upon them overall happiness.  This Vinayak is also known as Bara Ganesh. Devotees can travel upto Lohatia by auto rickshaw or cycle rickshaw and reach this temple on foot.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#9200; Darshan Timings & Ritual Logistics</div>
+          <div class="detail-content">
+            <strong>Timings:</strong> The temple is a stand alone temple and widely worshipped. The temple is open from 04.45 a.m. to 10.30 p.m.  Mangala Aarti is held at 04.45 a.m., Bhog at 10.30 a.m. and Shayan Aarti at 10.30 p.m. Wednesday is a special day when special Aarti is held at 11.30 p.m.<br>
+            <strong>Puja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#128220; Scriptural References</div>
+          <div class="detail-content">
+            Not specified in the source article.
+          </div>
+        </div>
+
+        <div class="links-row">
+          <a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/vinayak-temples/vakra-tund-vinayak/index.html">&#128194; Exact Website Mirror Article</a>
+          <a class="btn-link btn-live" href="https://varanasitemples.in/category/vinayak-temples/vakra-tund-vinayak/" target="_blank" rel="noopener">&#127760; Original Live URL &#8599;</a>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="temple-card" data-zone="Zone unverified — location evidence insufficient" data-name="chintamani vinayak none noted in source">
+      <div class="temple-header">
+        <div class="temple-title-row">
+          <div class="temple-title">Chintamani Vinayak</div>
+          <span class="badge badge-zone-other">Zone unverified</span>
+        </div>
+        <div class="temple-sub">
+          <strong>Form:</strong> Remover of All Worries (Near Kedargeshwar) | <strong>Alt:</strong> None noted in source
+        </div>
+      </div>
+      <div class="temple-body">
+        
+        <div class="temple-img-container">
+          <img class="temple-img" src="Kashi_Exact_Offline_Website/assets/images/Chintamani-Vinayak-1.jpg" alt="Chintamani Vinayak" loading="eager" onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src=\'assets/images/\' + this.src.split(\'/\').pop();}" >
+          <div class="img-caption">Chintamani Vinayak</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128214; Puranic Origin & Significance</div>
+          <div class="detail-content">Chintamani Vinayak is located at K-56/42, East of Ishwar Gangi Talab, Babu Bazar.  By worshipping Chintamani Vinayak, the devotees will attain whatever good things they desire. Devotees can travel upto this place by cycle rickshaw, through Laburabir. Ishwar Gangi Talab is a famous place.
+
+(CHINTAMANI VINAYAK)</div>
+        </div>
+
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128205; Location & Approach Route</div>
+          <div class="detail-content">
+            <strong>Stated Address:</strong> K-56/42, East of Ishwar Gangi Talab, Babu Bazar.  By worshipping Chintamani Vinayak, the devotees will attain whatever good things they desire<br>
+            <strong>Nearby Ghat:</strong> Not directly on a riverfront ghat<br>
+            <strong>Zone Verification:</strong> Zone unverified — location evidence insufficient (Confidence: Low)<br>
+            <span style="font-size:0.82rem; color:#6b7280;">Evidence: No distinct locality keyword matched in source text</span><br>
+            <strong>Directions:</strong> Chintamani Vinayak is located at K-56/42, East of Ishwar Gangi Talab, Babu Bazar.  By worshipping Chintamani Vinayak, the devotees will attain whatever good things they desire. Devotees can travel upto this place by cycle rickshaw, through Laburabir. Ishwar Gangi Talab is a famous place.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#9200; Darshan Timings & Ritual Logistics</div>
+          <div class="detail-content">
+            <strong>Timings:</strong> The place of worship is open practically throughout and devotees can perform pooja by themselves.<br>
+            <strong>Puja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#128220; Scriptural References</div>
+          <div class="detail-content">
+            Not specified in the source article.
+          </div>
+        </div>
+
+        <div class="links-row">
+          <a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/vinayak-temples/chintamani-vinayak/index.html">&#128194; Exact Website Mirror Article</a>
+          <a class="btn-link btn-live" href="https://varanasitemples.in/category/vinayak-temples/chintamani-vinayak/" target="_blank" rel="noopener">&#127760; Original Live URL &#8599;</a>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="temple-card" data-zone="Zone unverified — location evidence insufficient" data-name="eka danta vinayak none noted in source">
+      <div class="temple-header">
+        <div class="temple-title-row">
+          <div class="temple-title">Eka Danta Vinayak</div>
+          <span class="badge badge-zone-other">Zone unverified</span>
+        </div>
+        <div class="temple-sub">
+          <strong>Form:</strong> Single-Tusked Lord | <strong>Alt:</strong> None noted in source
+        </div>
+      </div>
+      <div class="temple-body">
+        
+        <div class="temple-img-container">
+          <img class="temple-img" src="Kashi_Exact_Offline_Website/assets/images/Eka-Danta-Vinayak-1-1024x771.jpg" alt="Eka Danta Vinayak" loading="eager" onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src=\'assets/images/\' + this.src.split(\'/\').pop();}" >
+          <div class="img-caption">Eka Danta Vinayak</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128214; Puranic Origin & Significance</div>
+          <div class="detail-content">Eka Danta Vinayak is located at D-32/102, Pushpa Danteshwar, Bengali Tola, Varanasi. He guards Anand Van (Kashi) against the evil clutches.
+
+(EKA DANTA VINAYAK)</div>
+        </div>
+
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128205; Location & Approach Route</div>
+          <div class="detail-content">
+            <strong>Stated Address:</strong> D-32/102, Pushpa Danteshwar, Bengali Tola, Varanasi. He guards Anand Van (Kashi) against the evil clutches<br>
+            <strong>Nearby Ghat:</strong> Not directly on a riverfront ghat<br>
+            <strong>Zone Verification:</strong> Zone unverified — location evidence insufficient (Confidence: Low)<br>
+            <span style="font-size:0.82rem; color:#6b7280;">Evidence: No distinct locality keyword matched in source text</span><br>
+            <strong>Directions:</strong> Eka Danta Vinayak is located at D-32/102, Pushpa Danteshwar, Bengali Tola, Varanasi. He guards Anand Van (Kashi) against the evil clutches.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#9200; Darshan Timings & Ritual Logistics</div>
+          <div class="detail-content">
+            <strong>Timings:</strong> The place of worship is open practically throughout and devotees can perform pooja by themselves.<br>
+            <strong>Puja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#128220; Scriptural References</div>
+          <div class="detail-content">
+            Not specified in the source article.
+          </div>
+        </div>
+
+        <div class="links-row">
+          <a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/vinayak-temples/eka-danta-vinayak/index.html">&#128194; Exact Website Mirror Article</a>
+          <a class="btn-link btn-live" href="https://varanasitemples.in/category/vinayak-temples/eka-danta-vinayak/" target="_blank" rel="noopener">&#127760; Original Live URL &#8599;</a>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="temple-card" data-zone="Zone unverified — location evidence insufficient" data-name="durmukh vinayak none noted in source">
+      <div class="temple-header">
+        <div class="temple-title-row">
+          <div class="temple-title">Durmukh Vinayak</div>
+          <span class="badge badge-zone-other">Zone unverified</span>
+        </div>
+        <div class="temple-sub">
+          <strong>Form:</strong> Fierce-Faced Protector | <strong>Alt:</strong> None noted in source
+        </div>
+      </div>
+      <div class="temple-body">
+        
+        <div class="temple-img-container">
+          <img class="temple-img" src="Kashi_Exact_Offline_Website/assets/images/Durmukh-Vinayak-1.jpg" alt="Durmukh Vinayak" loading="eager" onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src=\'assets/images/\' + this.src.split(\'/\').pop();}" >
+          <div class="img-caption">Durmukh Vinayak</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128214; Puranic Origin & Significance</div>
+          <div class="detail-content">(DURMUKH VINAYAK)
+
+Durmukh Vinayak was earlier located at Ck.34/60,  near Kashi Karvat Temlple. Now it is relocated and placed in extended Kashi Vishwanath Corridor.</div>
+        </div>
+
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128205; Location & Approach Route</div>
+          <div class="detail-content">
+            <strong>Stated Address:</strong> Ck.34/60,  near Kashi Karvat Temlple<br>
+            <strong>Nearby Ghat:</strong> Not directly on a riverfront ghat<br>
+            <strong>Zone Verification:</strong> Zone unverified — location evidence insufficient (Confidence: Low)<br>
+            <span style="font-size:0.82rem; color:#6b7280;">Evidence: No distinct locality keyword matched in source text</span><br>
+            <strong>Directions:</strong> Durmukh Vinayak was earlier located at Ck.34/60,  near Kashi Karvat Temlple. Now it is relocated and placed in extended Kashi Vishwanath Corridor.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#9200; Darshan Timings & Ritual Logistics</div>
+          <div class="detail-content">
+            <strong>Timings:</strong> The place of worship is open practically throughout and devotees can perform pooja by themselves.<br>
+            <strong>Puja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#128220; Scriptural References</div>
+          <div class="detail-content">
+            Not specified in the source article.
+          </div>
+        </div>
+
+        <div class="links-row">
+          <a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/vinayak-temples/durmukh-vinayak/index.html">&#128194; Exact Website Mirror Article</a>
+          <a class="btn-link btn-live" href="https://varanasitemples.in/category/vinayak-temples/durmukh-vinayak/" target="_blank" rel="noopener">&#127760; Original Live URL &#8599;</a>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="temple-card" data-zone="Zone unverified — location evidence insufficient" data-name="dehli vinayak none noted in source">
+      <div class="temple-header">
+        <div class="temple-title-row">
+          <div class="temple-title">Dehli Vinayak</div>
+          <span class="badge badge-zone-other">Zone unverified</span>
+        </div>
+        <div class="temple-sub">
+          <strong>Form:</strong> Threshold Guardian of Kashi | <strong>Alt:</strong> None noted in source
+        </div>
+      </div>
+      <div class="temple-body">
+        
+        <div class="temple-img-container">
+          <img class="temple-img" src="Kashi_Exact_Offline_Website/assets/images/Vinayak-Misc.-300x225.jpg" alt="Dehli Vinayak" loading="eager" onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src=\'assets/images/\' + this.src.split(\'/\').pop();}" >
+          <div class="img-caption">Dehli Vinayak</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128214; Puranic Origin & Significance</div>
+          <div class="detail-content">Dehli Vinayak is located at a village which is almost more than 20 kms. away from the heart of Varanasi city.  Dehli in hindi means a threshold.  Worshipping Dehli Vinayak will remove all obstacles coming in the way of the devotees.</div>
+        </div>
+
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128205; Location & Approach Route</div>
+          <div class="detail-content">
+            <strong>Stated Address:</strong> a village which is almost more than 20 kms. away from the heart of Varanasi city<br>
+            <strong>Nearby Ghat:</strong> Not directly on a riverfront ghat<br>
+            <strong>Zone Verification:</strong> Zone unverified — location evidence insufficient (Confidence: Low)<br>
+            <span style="font-size:0.82rem; color:#6b7280;">Evidence: No distinct locality keyword matched in source text</span><br>
+            <strong>Directions:</strong> Dehli Vinayak is located at a village which is almost more than 20 kms. away from the heart of Varanasi city.  Dehli in hindi means a threshold.  Worshipping Dehli Vinayak will remove all obstacles coming in the way of the devotees.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#9200; Darshan Timings & Ritual Logistics</div>
+          <div class="detail-content">
+            <strong>Timings:</strong> The place of worship is open practically throughout and devotees can perform pooja by themselves.<br>
+            <strong>Puja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#128220; Scriptural References</div>
+          <div class="detail-content">
+            Not specified in the source article.
+          </div>
+        </div>
+
+        <div class="links-row">
+          <a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/vinayak-temples/dehli-vinayak/index.html">&#128194; Exact Website Mirror Article</a>
+          <a class="btn-link btn-live" href="https://varanasitemples.in/category/vinayak-temples/dehli-vinayak/" target="_blank" rel="noopener">&#127760; Original Live URL &#8599;</a>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="temple-card" data-zone="Zone unverified — location evidence insufficient" data-name="heramba vinayak none noted in source">
+      <div class="temple-header">
+        <div class="temple-title-row">
+          <div class="temple-title">Heramba Vinayak</div>
+          <span class="badge badge-zone-other">Zone unverified</span>
+        </div>
+        <div class="temple-sub">
+          <strong>Form:</strong> Five-Headed Protector Vinayaka | <strong>Alt:</strong> None noted in source
+        </div>
+      </div>
+      <div class="temple-body">
+        
+        <div class="temple-img-container">
+          <img class="temple-img" src="Kashi_Exact_Offline_Website/assets/images/Heramba-Vinayak-1.jpg" alt="Heramba Vinayak" loading="eager" onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src=\'assets/images/\' + this.src.split(\'/\').pop();}" >
+          <div class="img-caption">Heramba Vinayak</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128214; Puranic Origin & Significance</div>
+          <div class="detail-content">Heramba Vinayak is located at C-21/14, Maldahiya. At the original place of this temple, a shopping complex, known as TSM Complex,  has been constructed and a small temple has been constructed in the premises on the second floor.  Worshipping Heramba Vinayak will fulfill the desires of devotees.
+
+(HERAMB VINAYAK)</div>
+        </div>
+
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128205; Location & Approach Route</div>
+          <div class="detail-content">
+            <strong>Stated Address:</strong> C-21/14, Maldahiya. At the original place of this temple, a shopping complex, known as TSM Complex,  has been constructed and a small temple has been constructed in the premises on the second floor<br>
+            <strong>Nearby Ghat:</strong> Not directly on a riverfront ghat<br>
+            <strong>Zone Verification:</strong> Zone unverified — location evidence insufficient (Confidence: Low)<br>
+            <span style="font-size:0.82rem; color:#6b7280;">Evidence: No distinct locality keyword matched in source text</span><br>
+            <strong>Directions:</strong> Heramba Vinayak is located at C-21/14, Maldahiya. At the original place of this temple, a shopping complex, known as TSM Complex,  has been constructed and a small temple has been constructed in the premises on the second floor.  Worshipping Heramba Vinayak will fulfill the desires of devotees.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#9200; Darshan Timings & Ritual Logistics</div>
+          <div class="detail-content">
+            <strong>Timings:</strong> The place of worship is open from 08.00 a.m. to 12.00 noon and from 06.00 p.m. to 08.00 p.m.  Aarties are held in the morning and evening.<br>
+            <strong>Puja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#128220; Scriptural References</div>
+          <div class="detail-content">
+            Not specified in the source article.
+          </div>
+        </div>
+
+        <div class="links-row">
+          <a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/vinayak-temples/heramba-vinayak/index.html">&#128194; Exact Website Mirror Article</a>
+          <a class="btn-link btn-live" href="https://varanasitemples.in/category/vinayak-temples/heramba-vinayak/" target="_blank" rel="noopener">&#127760; Original Live URL &#8599;</a>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="temple-card" data-zone="Zone unverified — location evidence insufficient" data-name="kshipra prasad vinayak none noted in source">
+      <div class="temple-header">
+        <div class="temple-title-row">
+          <div class="temple-title">Kshipra Prasad Vinayak</div>
+          <span class="badge badge-zone-other">Zone unverified</span>
+        </div>
+        <div class="temple-sub">
+          <strong>Form:</strong> Quickly Pleased / Swift Boons | <strong>Alt:</strong> None noted in source
+        </div>
+      </div>
+      <div class="temple-body">
+        
+        <div class="temple-img-container">
+          <img class="temple-img" src="Kashi_Exact_Offline_Website/assets/images/Kshipra-Prasad-Vinayak-2.jpg" alt="Kshipra Prasad Vinayak" loading="eager" onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src=\'assets/images/\' + this.src.split(\'/\').pop();}" >
+          <div class="img-caption">Kshipra Prasad Vinayak</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128214; Puranic Origin & Significance</div>
+          <div class="detail-content">Kshipra Prasad Vinayak is located at C-18/47, Pitar Kunda, Pitreshwar Temple.  Devotees can travel upto this place by rickshaw, via Pishachmochan. Pitar Kunda is a famous locality. Worshipping this Vinayak will bring all round success to the devotees.
+
+(KSHIPRA PRASAD VINAYAK)
+
+-----------------------------------
+
+Kashi Khand, Chapter 57, Shlok 92
+
+प्राच्यां पञ्चास्यत: पायात् पुरीं क्षिप्रप्रसादन:
+
+क्षिप्रप्रसादनार्चात: क्षिप्रं सिद्ध्यन्ति सिद्धय:
+
+Kshipra Prasadan Ganesha, to the east of Panchmukh Ganesha, protects this city. By worshipping him, all the achievements are attained very quickly.
+
+-----------------------------------
+
+Please watch our YouTube Video about Kshipra Prasad Vinayak at following Link
+
+https://www.youtube.com/watch?v=l-35TQ5emoQ&t=13s</div>
+        </div>
+
+        
+        <div class="detail-section">
+          <div class="detail-label">&#128366; Sanskrit Verses (Kashi Khand)</div>
+          <div class="sanskrit-box">प्राच्यां पञ्चास्यत: पायात् पुरीं क्षिप्रप्रसादन:
+क्षिप्रप्रसादनार्चात: क्षिप्रं सिद्ध्यन्ति सिद्धय:</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128205; Location & Approach Route</div>
+          <div class="detail-content">
+            <strong>Stated Address:</strong> C-18/47, Pitar Kunda, Pitreshwar Temple.  Devotees can travel upto this place by rickshaw, via Pishachmochan<br>
+            <strong>Nearby Ghat:</strong> Not directly on a riverfront ghat<br>
+            <strong>Zone Verification:</strong> Zone unverified — location evidence insufficient (Confidence: Low)<br>
+            <span style="font-size:0.82rem; color:#6b7280;">Evidence: No distinct locality keyword matched in source text</span><br>
+            <strong>Directions:</strong> Kshipra Prasad Vinayak is located at C-18/47, Pitar Kunda, Pitreshwar Temple.  Devotees can travel upto this place by rickshaw, via Pishachmochan. Pitar Kunda is a famous locality. Worshipping this Vinayak will bring all round success to the devotees.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#9200; Darshan Timings & Ritual Logistics</div>
+          <div class="detail-content">
+            <strong>Timings:</strong> The place of worship is open practically throughout and devotees can perform pooja by themselves.  Shri Ganesh Prasad is the Poojari of the temple.<br>
+            <strong>Puja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#128220; Scriptural References</div>
+          <div class="detail-content">
+            Kashi Khand, Chapter 57, Shlok 92
+          </div>
+        </div>
+
+        <div class="links-row">
+          <a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/vinayak-temples/kshipra-prasad-vinayak/index.html">&#128194; Exact Website Mirror Article</a>
+          <a class="btn-link btn-live" href="https://varanasitemples.in/category/vinayak-temples/kshipra-prasad-vinayak/" target="_blank" rel="noopener">&#127760; Original Live URL &#8599;</a>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="temple-card" data-zone="Zone unverified — location evidence insufficient" data-name="pramoda vinayak none noted in source">
+      <div class="temple-header">
+        <div class="temple-title-row">
+          <div class="temple-title">Pramoda Vinayak</div>
+          <span class="badge badge-zone-other">Zone unverified</span>
+        </div>
+        <div class="temple-sub">
+          <strong>Form:</strong> Bestower of Supreme Delight | <strong>Alt:</strong> None noted in source
+        </div>
+      </div>
+      <div class="temple-body">
+        
+        <div class="temple-img-container">
+          <img class="temple-img" src="Kashi_Exact_Offline_Website/assets/images/Pramoda-Vinayak-1.jpg" alt="Pramoda Vinayak" loading="eager" onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src=\'assets/images/\' + this.src.split(\'/\').pop();}" >
+          <div class="img-caption">Pramoda Vinayak</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128214; Puranic Origin & Significance</div>
+          <div class="detail-content">(PRAMODA VINAYAK)
+
+Pramoda Vinayak is presently located inside extended Kashi Vishwanath Corridor.</div>
+        </div>
+
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128205; Location & Approach Route</div>
+          <div class="detail-content">
+            <strong>Stated Address:</strong> Specific street address not published in source text<br>
+            <strong>Nearby Ghat:</strong> Not directly on a riverfront ghat<br>
+            <strong>Zone Verification:</strong> Zone unverified — location evidence insufficient (Confidence: Low)<br>
+            <span style="font-size:0.82rem; color:#6b7280;">Evidence: No distinct locality keyword matched in source text</span><br>
+            <strong>Directions:</strong> 
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#9200; Darshan Timings & Ritual Logistics</div>
+          <div class="detail-content">
+            <strong>Timings:</strong> The place of worship is open practically throughout and devotees can perform pooja by themselves.<br>
+            <strong>Puja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#128220; Scriptural References</div>
+          <div class="detail-content">
+            Not specified in the source article.
+          </div>
+        </div>
+
+        <div class="links-row">
+          <a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/vinayak-temples/pramoda-vinayak/index.html">&#128194; Exact Website Mirror Article</a>
+          <a class="btn-link btn-live" href="https://varanasitemples.in/category/vinayak-temples/pramoda-vinayak/" target="_blank" rel="noopener">&#127760; Original Live URL &#8599;</a>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="temple-card" data-zone="Zone unverified — location evidence insufficient" data-name="sumukh vinayak none noted in source">
+      <div class="temple-header">
+        <div class="temple-title-row">
+          <div class="temple-title">Sumukh Vinayak</div>
+          <span class="badge badge-zone-other">Zone unverified</span>
+        </div>
+        <div class="temple-sub">
+          <strong>Form:</strong> Gracious-Faced Lord | <strong>Alt:</strong> None noted in source
+        </div>
+      </div>
+      <div class="temple-body">
+        
+        <div class="temple-img-container">
+          <img class="temple-img" src="Kashi_Exact_Offline_Website/assets/images/Sumukh-Vinayak-1.jpg" alt="Sumukh Vinayak" loading="eager" onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src=\'assets/images/\' + this.src.split(\'/\').pop();}" >
+          <div class="img-caption">Sumukh Vinayak</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128214; Puranic Origin & Significance</div>
+          <div class="detail-content">(SUMUKH VINAYAK)
+
+Sumukh Vinayak is presently located inside the extended Kashi Vishwanath Corridor.  Worshipping this Vinayak will give all sorts of happiness to devotees.</div>
+        </div>
+
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128205; Location & Approach Route</div>
+          <div class="detail-content">
+            <strong>Stated Address:</strong> Specific street address not published in source text<br>
+            <strong>Nearby Ghat:</strong> Not directly on a riverfront ghat<br>
+            <strong>Zone Verification:</strong> Zone unverified — location evidence insufficient (Confidence: Low)<br>
+            <span style="font-size:0.82rem; color:#6b7280;">Evidence: No distinct locality keyword matched in source text</span><br>
+            <strong>Directions:</strong> 
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#9200; Darshan Timings & Ritual Logistics</div>
+          <div class="detail-content">
+            <strong>Timings:</strong> The place of worship is open practically throughout and devotees can perform pooja by themselves.<br>
+            <strong>Puja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#128220; Scriptural References</div>
+          <div class="detail-content">
+            Not specified in the source article.
+          </div>
+        </div>
+
+        <div class="links-row">
+          <a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/vinayak-temples/sumukh-vinayak/index.html">&#128194; Exact Website Mirror Article</a>
+          <a class="btn-link btn-live" href="https://varanasitemples.in/category/vinayak-temples/sumukh-vinayak/" target="_blank" rel="noopener">&#127760; Original Live URL &#8599;</a>
+        </div>
+      </div>
+    </div>
+    
+</div>
+
+<script>
+function filterTemples() {
+  var input = document.getElementById('searchInput').value.toLowerCase();
+  var cards = document.getElementsByClassName('temple-card');
+  for (var i = 0; i < cards.length; i++) {
+    var name = cards[i].getAttribute('data-name');
+    var text = cards[i].innerText.toLowerCase();
+    if (name.indexOf(input) > -1 || text.indexOf(input) > -1) {
+      cards[i].style.display = "";
+    } else {
+      cards[i].style.display = "none";
+    }
+  }
+}
+</script>
+
+</body>
+</html>

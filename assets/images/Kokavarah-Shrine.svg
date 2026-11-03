@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgKoka" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e1b4b"/>
+      <stop offset="50%" stop-color="#312e81"/>
+      <stop offset="100%" stop-color="#1e3a8a"/>
+    </linearGradient>
+    <radialGradient id="auraKoka" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fde047" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#fde047" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="500" rx="12" fill="url(#bgKoka)"/>
+  
+  <rect x="20" y="20" width="760" height="460" rx="8" fill="none" stroke="#60a5fa" stroke-width="2" stroke-dasharray="6,4" opacity="0.75"/>
+  <rect x="30" y="30" width="740" height="440" rx="6" fill="none" stroke="#bfdbfe" stroke-width="1" opacity="0.5"/>
+
+  <circle cx="400" cy="230" r="180" fill="url(#auraKoka)"/>
+
+  <!-- Temple Mandapam -->
+  <path d="M 270 370 L 270 210 Q 400 115 530 210 L 530 370 Z" fill="#0f172a" opacity="0.6" stroke="#93c5fd" stroke-width="2"/>
+  
+  <!-- Sacred Shankha & Chakra Emblems -->
+  <circle cx="340" cy="190" r="28" fill="#3b82f6" stroke="#93c5fd" stroke-width="2"/>
+  <text x="340" y="197" text-anchor="middle" font-family="'Segoe UI Historic', serif" font-size="20" fill="#ffffff">☸</text>
+  <circle cx="460" cy="190" r="28" fill="#3b82f6" stroke="#93c5fd" stroke-width="2"/>
+  <text x="460" y="197" text-anchor="middle" font-family="'Segoe UI Historic', serif" font-size="20" fill="#ffffff">🐚</text>
+
+  <!-- Boar (Varaha) Sacred Face Profile -->
+  <path d="M 370 240 Q 385 210 415 220 Q 445 230 455 255 Q 460 270 440 285 Q 410 295 380 270 Z" fill="#d97706" stroke="#fde047" stroke-width="3" filter="url(#glow)"/>
+  <!-- Divine White Tusk -->
+  <path d="M 435 270 Q 465 260 460 235 Q 450 245 440 255 Z" fill="#ffffff" stroke="#fde047" stroke-width="1.5"/>
+
+  <!-- Text Details -->
+  <text x="400" y="75" text-anchor="middle" font-family="'Cinzel', 'Georgia', serif" font-size="28" font-weight="bold" fill="#fde047" letter-spacing="2">
+    SHRI KOKAVARAH TEMPLE
+  </text>
+  <text x="400" y="108" text-anchor="middle" font-family="'Segoe UI Historic', 'Noto Sans Devanagari', serif" font-size="19" fill="#93c5fd" letter-spacing="1">
+    ॥ श्री कोकावराह मन्दिर • काशी क्षेत्र ॥
+  </text>
+  <text x="400" y="345" text-anchor="middle" font-family="'Cinzel', 'Georgia', serif" font-size="14" font-weight="600" fill="#fde047">
+    PRIMORDIAL PROTECTIVE BOAR AVATAR OF VISHNU
+  </text>
+  <text x="400" y="370" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="12" fill="#bfdbfe">
+    Manifested at Koka Teerth &bull; Kashi Khand, Chapter 61
+  </text>
+  <text x="400" y="435" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="11" fill="#93c5fd" opacity="0.9">
+    Preserves Devotees from All Fear of Rebirth &bull; Panchganga / Rajghat Zone
+  </text>
+</svg>

@@ -1,0 +1,1744 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Kashi Dwadasa Aditya Pilgrimage Knowledge Base & Mirror</title>
+<style>
+  @page {
+    size: A4 portrait;
+    margin: 16mm 14mm 18mm 14mm;
+    @top-center {
+      content: "KASHI DWADASHA ADITYAS — EXACT SCRIPTURAL ARCHIVE";
+      font-family: 'Cinzel', 'Georgia', serif;
+      font-size: 8pt;
+      color: #991b1b;
+      letter-spacing: 1px;
+      border-bottom: 1px solid #fecaca;
+      padding-bottom: 4px;
+    }
+    @bottom-center {
+      content: "Page " counter(page) " • Source: varanasitemples.in";
+      font-family: 'Segoe UI', Arial, sans-serif;
+      font-size: 8pt;
+      color: #6b7280;
+    }
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Georgia', 'Merriweather', 'Palatino Linotype', serif;
+    font-size: 10.5pt;
+    line-height: 1.6;
+    color: #1f2937;
+    background: #ffffff;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Headings */
+  h1, h2, h3, h4 {
+    font-family: 'Georgia', 'Cinzel', serif;
+    color: #8b1e0f;
+    margin-top: 14pt;
+    margin-bottom: 6pt;
+    page-break-after: avoid;
+    break-after: avoid;
+  }
+
+  h1 { font-size: 18pt; border-bottom: 2px solid #b45309; padding-bottom: 4pt; }
+  h2 { font-size: 14pt; color: #991b1b; }
+  h3 { font-size: 12pt; color: #b45309; }
+
+  p {
+    margin-top: 0;
+    margin-bottom: 8pt;
+    text-align: justify;
+    text-justify: inter-word;
+  }
+
+  a {
+    color: #b45309;
+    text-decoration: underline;
+    word-break: break-all;
+  }
+
+  /* Page Break Utilities */
+  .page-break {
+    page-break-before: always;
+    break-before: page;
+  }
+
+  .avoid-break {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  /* Cover Page */
+  .cover-container {
+    text-align: center;
+    padding: 40pt 20pt;
+    border: 3px double #d97706;
+    border-radius: 8px;
+    background: linear-gradient(180deg, #fffbeb 0%, #ffffff 100%);
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .cover-om {
+    font-size: 42pt;
+    color: #d97706;
+    margin-bottom: 8pt;
+  }
+
+  .cover-title {
+    font-size: 24pt;
+    font-weight: 700;
+    color: #7f1d1d;
+    letter-spacing: 1px;
+    margin-bottom: 8pt;
+  }
+
+  .cover-sub {
+    font-size: 13pt;
+    color: #b45309;
+    font-style: italic;
+    margin-bottom: 20pt;
+  }
+
+  .cover-divider {
+    width: 60%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #d97706, transparent);
+    margin: 16pt auto;
+  }
+
+  .cover-meta-box {
+    background: #ffffff;
+    border: 1px solid #fed7aa;
+    border-radius: 8px;
+    padding: 14pt 18pt;
+    text-align: left;
+    margin: 16pt auto;
+    max-width: 480pt;
+    font-size: 9.5pt;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  }
+
+  .cover-meta-box table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .cover-meta-box td {
+    padding: 4pt 6pt;
+    vertical-align: top;
+  }
+
+  .cover-meta-box td.label {
+    font-weight: 700;
+    color: #9a3412;
+    width: 32%;
+  }
+
+  /* Table of Contents */
+  .toc-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16pt 0;
+    font-size: 9.5pt;
+  }
+
+  .toc-table th {
+    background: #7f1d1d;
+    color: #ffffff;
+    padding: 6pt 10pt;
+    text-align: left;
+    font-weight: 600;
+  }
+
+  .toc-table td {
+    padding: 6pt 10pt;
+    border-bottom: 1px solid #fed7aa;
+    vertical-align: top;
+  }
+
+  .toc-table tr:nth-child(even) {
+    background: #fffbeb;
+  }
+
+  /* Article Card Styling */
+  .article-header-banner {
+    background: linear-gradient(135deg, #7f1d1d 0%, #991b1b 100%);
+    color: #ffffff;
+    padding: 12pt 16pt;
+    border-radius: 6px;
+    margin-bottom: 12pt;
+    page-break-after: avoid;
+    break-after: avoid;
+  }
+
+  .article-number-badge {
+    display: inline-block;
+    background: #f59e0b;
+    color: #451a03;
+    font-weight: 700;
+    font-size: 9pt;
+    padding: 2pt 8pt;
+    border-radius: 12px;
+    margin-bottom: 4pt;
+    text-transform: uppercase;
+  }
+
+  .article-main-title {
+    font-size: 16pt;
+    font-weight: 700;
+    margin: 2pt 0;
+    color: #ffffff;
+    border: none;
+    padding: 0;
+  }
+
+  .article-subtitle {
+    font-size: 10pt;
+    color: #fef3c7;
+    font-style: italic;
+  }
+
+  /* Provenance Box */
+  .provenance-box {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-left: 4px solid #b45309;
+    border-radius: 4px;
+    padding: 6pt 10pt;
+    margin-bottom: 12pt;
+    font-size: 8.5pt;
+    page-break-inside: avoid;
+  }
+
+  .provenance-box table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .provenance-box td {
+    padding: 2pt 4pt;
+    vertical-align: top;
+  }
+
+  .provenance-box td.key {
+    font-weight: 700;
+    color: #4b5563;
+    width: 22%;
+  }
+
+  /* Images */
+  .temple-img-wrap {
+    text-align: center;
+    margin: 12pt auto;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  .temple-pdf-img {
+    max-width: 80%;
+    max-height: 320px;
+    height: auto;
+    border-radius: 6px;
+    border: 1px solid #d1d5db;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    display: block;
+    margin: 0 auto;
+    object-fit: contain;
+  }
+
+  .temple-img-caption {
+    font-size: 8.5pt;
+    color: #6b7280;
+    font-style: italic;
+    margin-top: 4pt;
+    text-align: center;
+  }
+
+  /* Sanskrit Quotes Box */
+  .sanskrit-card {
+    background: #fffbeb;
+    border: 1px solid #fde68a;
+    border-left: 4px solid #d97706;
+    border-radius: 6px;
+    padding: 8pt 12pt;
+    margin: 10pt 0;
+    page-break-inside: avoid;
+  }
+
+  .sanskrit-devanagari {
+    font-family: 'Mangal', 'Noto Sans Devanagari', 'Kokila', serif;
+    font-size: 12pt;
+    font-weight: 700;
+    color: #92400e;
+    text-align: center;
+    line-height: 1.8;
+  }
+
+  /* Location, Timings, & Info Cards */
+  .info-grid {
+    display: table;
+    width: 100%;
+    margin-top: 12pt;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  .info-cell {
+    display: table-cell;
+    width: 50%;
+    padding: 6pt;
+    vertical-align: top;
+  }
+
+  .info-panel {
+    background: #fafaf9;
+    border: 1px solid #e7e5e4;
+    border-top: 3px solid #b45309;
+    border-radius: 4px;
+    padding: 8pt 10pt;
+    height: 100%;
+    font-size: 9pt;
+  }
+
+  .info-panel h4 {
+    margin-top: 0;
+    margin-bottom: 4pt;
+    color: #7f1d1d;
+    font-size: 9.5pt;
+    font-weight: 700;
+  }
+
+  /* Digital Links Box */
+  .links-box {
+    background: #eff6ff;
+    border: 1px solid #bfdbfe;
+    border-radius: 4px;
+    padding: 6pt 10pt;
+    margin-top: 8pt;
+    font-size: 8.5pt;
+    page-break-inside: avoid;
+  }
+
+  .badge-tag {
+    display: inline-block;
+    padding: 1pt 5pt;
+    border-radius: 4px;
+    font-size: 7.5pt;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .badge-north { background: #dbeafe; color: #1e40af; }
+  .badge-south { background: #fed7aa; color: #9a3412; }
+  .badge-east { background: #dcfce7; color: #166534; }
+  .badge-west { background: #fef08a; color: #854d0e; }
+</style>
+</head>
+<body>
+
+
+<div class="cover-container">
+  <div>
+    <div class="cover-om">&#2384;</div>
+    <div class="cover-title">KASHI DWADASHA ADITYAS</div>
+    <div class="cover-sub">The Twelve Sacred Solar Shrines of Varanasi • Complete Offline Knowledge Base</div>
+    <div class="cover-divider"></div>
+    <p style="font-size:11pt; color:#4b5563; max-width:440pt; margin:0 auto; text-align:center;">
+      An exact, comprehensive, self-contained mirror of all 12 Dwadasha Aditya articles and foundational legends from the authorised public website <strong>varanasitemples.in</strong>, preserved for offline pilgrimage in Kashi.
+    </p>
+  </div>
+
+  <div class="cover-meta-box">
+    <table>
+      <tr>
+        <td class="label">&#127760; Source Website:</td>
+        <td><a href="https://varanasitemples.in/">https://varanasitemples.in/</a></td>
+      </tr>
+      <tr>
+        <td class="label">&#128214; Scriptural Authority:</td>
+        <td>Skanda Purana — Kashi Khand (Chapters 46–52)</td>
+      </tr>
+      <tr>
+        <td class="label">&#128506; Spiritual Tradition:</td>
+        <td>Establishment of Dwadasha Adityas during King Divodasa’s Reign</td>
+      </tr>
+      <tr>
+        <td class="label">&#127963; Shrines Included:</td>
+        <td>All 12 Dwadasha Aditya Shrines + Foundational Puranic Hub</td>
+      </tr>
+      <tr>
+        <td class="label">&#128247; Visual Media:</td>
+        <td>100% Original High-Resolution Photographs Embedded</td>
+      </tr>
+      <tr>
+        <td class="label">&#128205; Navigation & Links:</td>
+        <td>Addresses, Ghats, Puja Timings, YouTube & Google Maps URLs</td>
+      </tr>
+      <tr>
+        <td class="label">&#9200; Compilation Date:</td>
+        <td>November 2026 • Verified 100% Complete Offline Deliverable</td>
+      </tr>
+    </table>
+  </div>
+
+  <div style="font-size:8.5pt; color:#9ca3af; text-align:center;">
+    Preserved for offline pilgrimage access &bull; Designed to function without cellular reception in the Varanasi galis.
+  </div>
+</div>
+
+
+<div class="page-break"></div>
+<h1>&#128203; Table of Contents & Quick Reference Matrix</h1>
+<p style="font-size:9.5pt; color:#4b5563;">
+  Lord Surya established himself in twelve distinct forms throughout Kashi, strategically positioned across the sacred topography from the Varuna Sangam in the North to the Assi Sangam in the South.
+</p>
+
+<table class="toc-table">
+  <thead>
+    <tr>
+      <th style="width:5%;">#</th>
+      <th style="width:24%;">Aditya Name</th>
+      <th style="width:28%;">Spiritual Significance (Kashi Khand)</th>
+      <th style="width:25%;">Location / Ghat</th>
+      <th style="width:18%;">Zone</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>—</td>
+      <td><strong>Foundational Hub</strong></td>
+      <td>Legend of King Divodasa & Surya’s Kashi Mission</td>
+      <td>Central Kashi Overview</td>
+      <td><span class="badge-tag badge-east">Foundational</span></td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td><strong>Arun Aditya</strong></td>
+      <td>Charioteer of Surya; cures illness & poverty</td>
+      <td>Near Trilochan Temple (Trilochan Ghat)</td>
+      <td><span class="badge-tag badge-north">North Kashi</span></td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td><strong>Draupad Aditya</strong></td>
+      <td>Akshaya Patra bestower; removes hunger & poverty</td>
+      <td>Inside Vishwanath Temple Corridor</td>
+      <td><span class="badge-tag badge-east">East Kashi</span></td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td><strong>Ganga Aditya</strong></td>
+      <td>Surya’s worship of Ganga; cleanses lifetimes of sins</td>
+      <td>Lalita Ghat (Below Nepali Mandir)</td>
+      <td><span class="badge-tag badge-east">East Kashi</span></td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td><strong>Keshava Aditya</strong></td>
+      <td>Varuna Sangam confluence; grants spiritual liberation</td>
+      <td>Adi Keshav Temple, Rajghat Fort</td>
+      <td><span class="badge-tag badge-north">North Kashi</span></td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td><strong>Khakholkh Aditya</strong></td>
+      <td>Illuminator of skies; cures leprosy & blindness</td>
+      <td>Kameshwar Temple, Machhodari / Trilochan</td>
+      <td><span class="badge-tag badge-north">North Kashi</span></td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td><strong>Lolark Aditya</strong></td>
+      <td>Trembling Sun; cures ailments & bestows progeny</td>
+      <td>Lolark Kund, near Assi / Tulsi Ghat</td>
+      <td><span class="badge-tag badge-south">South Kashi</span></td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td><strong>Mayukh Aditya</strong></td>
+      <td>Radiant solar rays; relieves sorrow & grants boons</td>
+      <td>Mangala Gauri Temple, Panchganga Ghat</td>
+      <td><span class="badge-tag badge-north">North Kashi</span></td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td><strong>Saamba Aditya</strong></td>
+      <td>Saamba’s penance; holy Surya Kund snan; cures leprosy</td>
+      <td>Surya Kund (Suraj Kund), Luxa Road</td>
+      <td><span class="badge-tag badge-west">West Kashi</span></td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td><strong>Uttarark Aditya</strong></td>
+      <td>Northern solstice solar energy; clears planetary doshas</td>
+      <td>Bakaria Kund, Alaipur (near City Station)</td>
+      <td><span class="badge-tag badge-north">North Kashi</span></td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td><strong>Vimal Aditya</strong></td>
+      <td>Spotless purity; cleanses vitiligo & moral blemishes</td>
+      <td>Khari Kuan, Jangambari, near Godowlia</td>
+      <td><span class="badge-tag badge-south">South-Central</span></td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td><strong>Vriddh Aditya</strong></td>
+      <td>Ancient Sun; restored Sage Harita’s youth & vision</td>
+      <td>Mir Ghat (South of Bare Hanumanji)</td>
+      <td><span class="badge-tag badge-east">East Kashi</span></td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td><strong>Yama Aditya</strong></td>
+      <td>Lord Yama’s devotion; shields from premature death</td>
+      <td>Sankata Ghat steps (near Sankata Devi)</td>
+      <td><span class="badge-tag badge-east">East Kashi</span></td>
+    </tr>
+  </tbody>
+</table>
+
+
+<div class="page-break"></div>
+<div class="article-header-banner">
+  <div class="article-number-badge">FOUNDATIONAL SCRIPTURAL HUB</div>
+  <div class="article-main-title">ALL PLACES OF WORSHIP OF LORD SURYA (ADITYA) IN KASHI</div>
+  <div class="article-subtitle">Foundational Puranic Origin • Kashi Khand Legendary Context</div>
+</div>
+
+<div class="provenance-box">
+  <table>
+    <tr>
+      <td class="key">&#127760; Original Live URL:</td>
+      <td><a href="https://varanasitemples.in/category/aditya-temples/all-places-of-worship-of-lord-surya-aditya-in-kashi/" target="_blank">https://varanasitemples.in/category/aditya-temples/all-places-of-worship-of-lord-surya-aditya-in-kashi/</a></td>
+    </tr>
+    <tr>
+      <td class="key">&#128194; Exact Mirror Path:</td>
+      <td><code>Kashi_Exact_Offline_Website/category/aditya-temples/all-places-of-worship-of-lord-surya-aditya-in-kashi/index.html</code></td>
+    </tr>
+    <tr>
+      <td class="key">&#128214; Scripture Authority:</td>
+      <td>Skanda Purana — Kashi Khand (Sanctum established by Lord Surya)</td>
+    </tr>
+  </table>
+</div>
+
+
+<div class="article-body-container">
+  
+
+
+
+          <p>Lord Shiva was in Mandarachal and Kashi was ruled by a very pious and religious King named Divodas.  In his Kingdom every one was very happy and there was all round prosperity.  He had reached an understanding with Lord Brahma that as long as he was ruling, Devas and other celestial beings should stay away from Kashi and should not create any disturbance  in Kashi.</p>
+<p>Lord Brahma more or less agreed to it but on one condition that King Divodas should prove himself an excellent and able administrator and all people living in Kashi or visiting Kashi should be treated well in their religious pursuits.  The King agreed to it and accordingly gave excellent governance.</p>
+<p>Lord Shiva was very upset at being away from Kashi for a long time and he wanted to make King Divodas commit some mistake.  Accordingly, he sent sixty four Yoginis to create some disturbance, but they were enthralled by the beauty and serene surroundings of Kashi which appeared to be a part of heaven. They ultimately settled down there.</p>
+<p>When the Yoginis failed to return, Lord Shiva sent Lord Surya with instructions to create some disturbance in Kashi so as to defeat King Divodas in his resolve.  Lord Surya came to Kashi and disguised himself as an astrologer, a learned scholar, a religious propagator, a businessman, a brahmin etc. But he could not find any fault with any person in Kashi or with the governance of King Divodas. Lord Surya was also very much attracted towards Kashi and the beauty of the city.  Lord Surya thought, if he went back to Mandarachal without fulfilling the wishes of Lord Shiva, the latter would get angry.</p>
+<p><strong>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-</strong></p>
+<p><strong>Kashi Khand, Chapter 09, Shlok 69</strong></p>
+<p><strong>न दरिद्रा न दु:खार्ता न व्याधिपरिपीडिता:</strong></p>
+<p><strong>संक्रमेष्वर्कभक्ता ये न विरूपा न दुर्भगा:</strong></p>
+
+<p><strong>Devotees who worship Sun God on Sankranti days will not face the hardships of sorrow, poverty, illness, ugliness and misfortune. (There are 12 Sankranti days every year).</strong></p>
+<p><strong>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;</strong></p>
+<p>Lord Surya finally decided to stay in Kashi. He said to himself, disobeying the instructions of Lord Shiva is a sin, but by staying in Kashi and undertaking religious activities, such sins will easily get cleansed.</p>
+
+<p><strong>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-</strong></p>
+<p><strong> </strong></p>
+<p><strong>Kashi Khand, Chapter 09, Shlok 75</strong></p>
+<p><strong> </strong></p>
+<p><strong>रविवारे संक्रमश्चेदुपरागोऽथवा भवेत् </strong></p>
+<p><strong>तदा  यदर्चितं पुण्यं तदिहाक्षयमाप्यते</strong></p>
+
+<p><strong>If there is Sankranti or solar eclipse on Sunday, then if a devotee engages in good deeds like money donation, chanting of religious verses, havan, bathing in holy rivers (like Ganga) etc., the punya benefits become inexhaustible here (they are ever lasting). </strong></p>
+<p><strong> </strong></p>
+<p><strong>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;</strong></p>
+
+<p>Accordingly Surya settled down in Kashi for the time being.  Lord Surya is worshipped in his twelve forms and Kashi Khand has narrated the importance of the twelve Adityas as under :</p>
+               
+
+
+</div>
+
+
+<div class="page-break"></div>
+<div class="article-header-banner">
+  <div class="article-number-badge">DWADASHA ADITYA #1</div>
+  <div class="article-main-title">ARUN ADITYA</div>
+  <div class="article-subtitle">Charioteer of Surya • Dispeller of Poverty & Chronic Ailments</div>
+</div>
+
+<div class="provenance-box">
+  <table>
+    <tr>
+      <td class="key">&#127760; Original Live URL:</td>
+      <td><a href="https://varanasitemples.in/category/aditya-temples/arun-aditya/" target="_blank">https://varanasitemples.in/category/aditya-temples/arun-aditya/</a></td>
+    </tr>
+    <tr>
+      <td class="key">&#128194; Exact Mirror Path:</td>
+      <td><code>Kashi_Exact_Offline_Website/category/aditya-temples/arun-aditya/index.html</code></td>
+    </tr>
+    <tr>
+      <td class="key">&#128214; Scripture Authority:</td>
+      <td>Skanda Purana — Kashi Khand (Sanctum established by Lord Surya)</td>
+    </tr>
+  </table>
+</div>
+
+
+<div class="article-body-container">
+  
+
+
+
+          <p>Lord Skanda was describing the predicament of Vinata whereby she had become slave once upon a time.  Sage Agasthya wanted to know what made her become a slave, even though she was very pious in her daily activities.</p>
+<p>Lord Skanda described thus: Sage Kashyap had many wives of which two were Kadru and Vinata.  While Kadru gave birth to  hundred snakes, Vinata gave birth to three children, Owl, Garuda and Arun.  Initially when Owl was born, he became the King of all birds, but due to his incompetency, the birds chose to disregard him.  Therefore, to this day the birds do not have a king of their own.</p>
+<p>While Owl was her first offspring, the other two were still in the egg.  Vinata wished her remaining eggs to hatch but to her utter dismay, the eggs  did not hatch. She could not bear the agony of her first child being ridiculed.  So, in her impetuousness to beget the baby, she decided to break open one of the eggs prematurely, hoping to get a son.  As soon as she broke open the egg, she saw a child within, fully developed from thigh upwards, but the lower portion representing the legs was still under making.</p>
+<p>Thus, the premature new born child who was referred to as Arun (Dawn) in Kashi Khand, Chapter 51, was very furious at his  mother’s impatience which resulted in his deformity. Arun cursed his mother that she would become a slave to the children of Kadru.  Vinata pleaded innocence whereupon Arun took pity on her. He told her not to be impatient with the third egg.  The child born out of this egg, will get her out of the slavery.</p>
+<p>Having said so, Arun in due course of time wanted to rid himself of the deformity.  He came to Kashi and started penitently praying to Lord Surya, who became happy with Arun. He appeared in person and blessed Arun stating that the latter will always be with him (Lord Surya) as his charioteer.  Lord Surya said a person who worships me in the form of Arun Aditya will not know what is sadness and poverty will always remain at a distance.</p>
+<p><img class="aligncenter wp-image-3311 temple-pdf-img" src="file:///C:/Users/koppi/Downloads/Kashi_Offline_Guide_Pack/assets/images/Arun-Aditya-1024x746.jpg" alt="Arun Aditya" width="447" height="326"   /></p>
+
+<p style="text-align: center;"><strong>(ARUN ADITYA)</strong></p>
+
+<p>According to Kashi Khand, a person who worships Arun Aditya will never fall ill and there will be no obstacles in the devotee’s smooth life. The devotee will not know what is misery.</p>
+
+<p><strong>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-</strong></p>
+<p><strong> </strong></p>
+<p><strong>Kashi Khand, Chapter 51, Shlok 23</strong></p>
+<p><strong> </strong></p>
+<p><strong>व्याधिभिर्नाऽभिभूयन्ते नोपसर्गैश्च कैश्चन</strong></p>
+<p><strong>शोकाग्निना न दह्यन्ते ह्यरुणादित्यसेवनात</strong></p>
+
+<p><strong>By worshipping Arunaditya, the devotee will not face  diseases of any kind, nor will face any hindrance and can never be disturbed by sorrow. </strong></p>
+<p><strong> </strong></p>
+<p><strong>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;</strong></p>
+
+<h1>LOCATION OF ARUN ADITYA</h1>
+
+<p><strong>Please watch our YouTube Video about Arun Aditya at following Link</strong></p>
+<p><a href="https://www.youtube.com/watch?v=OQNxSl_krFY">https://www.youtube.com/watch?v=OQNxSl_krFY</a></p>
+<p><strong><span style="text-decoration: underline;">TYPES OF POOJAS</span></strong></p>
+<p>The temple is open for worship 05.30 a.m. to 12.00 noon and 05.00 p.m. to 11 p.m.  Mangala Aarti is performed at 05.30 a.m. and Shayan Aarti at 11.00 p.m. For doing special pooja etc., it is advisable to consult the Poojari before hand.</p>
+<h2></h2>
+               
+
+
+</div>
+
+
+<div class="info-grid">
+  <div class="info-cell">
+    <div class="info-panel">
+      <h4>&#128205; Location & Approach Route</h4>
+      <p style="margin-bottom:4pt;"><strong>Address:</strong> Please watch our YouTube Video about Arun Aditya at following Link
+https://www.youtube.com/watch?v=OQNxSl_krFY</p>
+      <p style="margin-bottom:4pt;"><strong>Nearby Ghat / Landmark:</strong> Not directly on a riverfront ghat</p>
+      <p style="margin-bottom:0;"><strong>Geographic Zone:</strong> Zone unverified — location evidence insufficient</p>
+    </div>
+  </div>
+  <div class="info-cell">
+    <div class="info-panel">
+      <h4>&#9200; Darshan & Pooja Arrangements</h4>
+      <p style="margin-bottom:4pt;"><strong>Timings:</strong> S
+The temple is open for worship 05.30 a.m. to 12.00 noon and 05.00 p.m. to 11 p.m.  Mangala Aarti is performed at 05.30 a.m. and Shayan Aarti at 11.00 p.m. For doing special pooja etc., it is advisable to consult the Poojari before hand.</p>
+      <p style="margin-bottom:0;"><strong>Pooja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.</p>
+    </div>
+  </div>
+</div>
+
+
+<div class="links-box">
+  <div style="font-weight:700; color:#1e40af; margin-bottom:3pt;">&#128279; Digital Reference Links (Requires Internet):</div>
+  <strong>Temple Darshan Video:</strong> <a href="https://www.youtube.com/watch?v=OQNxSl_krFY" target="_blank">https://www.youtube.com/watch?v=OQNxSl_krFY</a>
+</div>
+
+
+<div class="page-break"></div>
+<div class="article-header-banner">
+  <div class="article-number-badge">DWADASHA ADITYA #2</div>
+  <div class="article-main-title">DRAUPAD ADITYA</div>
+  <div class="article-subtitle">Bestower of the Akshaya Patra • Sovereign Sustainer of Pilgrims</div>
+</div>
+
+<div class="provenance-box">
+  <table>
+    <tr>
+      <td class="key">&#127760; Original Live URL:</td>
+      <td><a href="https://varanasitemples.in/category/aditya-temples/draupad-aditya/" target="_blank">https://varanasitemples.in/category/aditya-temples/draupad-aditya/</a></td>
+    </tr>
+    <tr>
+      <td class="key">&#128194; Exact Mirror Path:</td>
+      <td><code>Kashi_Exact_Offline_Website/category/aditya-temples/draupad-aditya/index.html</code></td>
+    </tr>
+    <tr>
+      <td class="key">&#128214; Scripture Authority:</td>
+      <td>Skanda Purana — Kashi Khand (Sanctum established by Lord Surya)</td>
+    </tr>
+  </table>
+</div>
+
+
+<div class="article-body-container">
+  
+
+
+
+          <p>When Pandavas went in exile, Draupadi was extremely sad to look at the plight of her husbands.  (It is well known that Draupadi was married to the five pandavas and she also accompanied them to the forests and other places in exile).</p>
+<p>She came to Kashi and started intensely praying to Lord Surya.  Lord Surya was deeply moved by her sincerity and appeared before her.  He gave her one vessel and told her that the vessel would be a “never emptying vessel” inasmuch as she could  go on feeding any number of guests and the vessel would never get empty. However, she should be the last one to eat.  (Even now old timers say that Guests should be fed first and household ladies should be the last to eat).</p>
+<p>Lord Surya also told Draupadi about a divine wish that Lord Shiva had given to him.  According to it, if a devotee who comes to pray to Vishveshwar in Kashi, prays to Lord Surya first, Lord Surya will have the power to remove all the sorrows which are clinging to the devotee. Lord Surya also states here that a person who sincerely prays to  him at this place will never remain hungry. (Kashi Khand,  Chapter 49).</p>
+
+<p><strong>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-</strong></p>
+<p><strong> </strong></p>
+<p><span style="text-decoration: underline;"><strong>Kashi Khand, Chapter 49, Shlok 17</strong></span></p>
+<p><strong> </strong></p>
+<p><strong>प्राग्रवे त्वां समाराध्य यो मां द्रक्ष्यति मानव:</strong></p>
+<p><strong>तस्य त्वं दु:खतिमिरमपानुद निजै: करै:</strong></p>
+
+<p><strong>(Vishweshwara says to the Sun God), the person who first worships you (in the form of Draupad Aditya) and then worships me, you should remove the darkness of his sorrow with your rays. </strong></p>
+<p><strong> </strong></p>
+<p><strong>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;</strong></p>
+
+<p><img class="aligncenter size-full wp-image-3314 temple-pdf-img" src="file:///C:/Users/koppi/Downloads/Kashi_Offline_Guide_Pack/assets/images/Draupad-Aditya.jpeg" alt="Draupad Aditya" width="222" height="220"   /></p>
+<p style="text-align: center;"><strong>(DRAUPAD ADITYA)</strong></p>
+<p>The Aditya located here came to be called as Draupad Aditya.</p>
+<p><strong><span style="text-decoration: underline;">LOCATION OF DRAUPAD ADITYA</span></strong></p>
+<p>Draupad Aditya was earlier located at Ck. 35/21, Akshay Vat, near Vishweshar Temple.  <strong>Now it comes inside Kashi Vishwanath Temple corridor.</strong></p>
+<p>There are three approach lanes one via Dashashwamedh Road, 2<sup>nd</sup> via Bansphatak and third via Gyanvapi.   It is difficult to prescribe the convenient entry point because due to heavy police patrolling, entry points keep changing. During peak rush days like Mondays and other important festivals, the police may regulate the pilgrims through Gyanvapi and the exit point may be through Bansphatak etc.  Since the temple is located in deep Gully, it is advisable to visit the temple alongwith  a local person or Guide.</p>
+
+<h3>TYPES OF POOJA</h3>
+<p>The place is open for worship practically throughout the day.  People can perform self poojas at the place.</p>
+               
+
+
+</div>
+
+
+<div class="info-grid">
+  <div class="info-cell">
+    <div class="info-panel">
+      <h4>&#128205; Location & Approach Route</h4>
+      <p style="margin-bottom:4pt;"><strong>Address:</strong> Please watch our YouTube Video about Arun Aditya at following Link
+https://www.youtube.com/watch?v=OQNxSl_krFY</p>
+      <p style="margin-bottom:4pt;"><strong>Nearby Ghat / Landmark:</strong> Not directly on a riverfront ghat</p>
+      <p style="margin-bottom:0;"><strong>Geographic Zone:</strong> Zone unverified — location evidence insufficient</p>
+    </div>
+  </div>
+  <div class="info-cell">
+    <div class="info-panel">
+      <h4>&#9200; Darshan & Pooja Arrangements</h4>
+      <p style="margin-bottom:4pt;"><strong>Timings:</strong> S
+The temple is open for worship 05.30 a.m. to 12.00 noon and 05.00 p.m. to 11 p.m.  Mangala Aarti is performed at 05.30 a.m. and Shayan Aarti at 11.00 p.m. For doing special pooja etc., it is advisable to consult the Poojari before hand.</p>
+      <p style="margin-bottom:0;"><strong>Pooja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.</p>
+    </div>
+  </div>
+</div>
+
+
+<div class="links-box">
+  <div style="font-weight:700; color:#1e40af; margin-bottom:3pt;">&#128279; Digital Reference Links (Requires Internet):</div>
+  <strong>Temple Darshan Video:</strong> <a href="https://www.youtube.com/watch?v=OQNxSl_krFY" target="_blank">https://www.youtube.com/watch?v=OQNxSl_krFY</a>
+</div>
+
+
+<div class="page-break"></div>
+<div class="article-header-banner">
+  <div class="article-number-badge">DWADASHA ADITYA #3</div>
+  <div class="article-main-title">GANGA ADITYA</div>
+  <div class="article-subtitle">Sacred Riverfront Solar Sanctum • Lalita Ghat Celestial Confluence</div>
+</div>
+
+<div class="provenance-box">
+  <table>
+    <tr>
+      <td class="key">&#127760; Original Live URL:</td>
+      <td><a href="https://varanasitemples.in/category/aditya-temples/ganga-aditya/" target="_blank">https://varanasitemples.in/category/aditya-temples/ganga-aditya/</a></td>
+    </tr>
+    <tr>
+      <td class="key">&#128194; Exact Mirror Path:</td>
+      <td><code>Kashi_Exact_Offline_Website/category/aditya-temples/ganga-aditya/index.html</code></td>
+    </tr>
+    <tr>
+      <td class="key">&#128214; Scripture Authority:</td>
+      <td>Skanda Purana — Kashi Khand (Sanctum established by Lord Surya)</td>
+    </tr>
+  </table>
+</div>
+
+
+<div class="article-body-container">
+  
+
+
+
+          <p>Kashi Khand states  that Lord Surya positioned himself at a particular place in Kashi so as to worship Holy river Ganges.</p>
+<p><img class="aligncenter size-full wp-image-3318 temple-pdf-img" src="file:///C:/Users/koppi/Downloads/Kashi_Offline_Guide_Pack/assets/images/Ganga-Aditya.jpeg" alt="Ganga Aditya" width="242" height="218" /></p>
+<p style="text-align: center;"><strong>(GANGA ADITYA)</strong></p>
+<p>It is believed that even today Lord Surya is residing at the above place reciting Stotras of Ganges and blessing his devotees.  The form of Surya at the Ghat of Ganges came to be known as Ganga Aditya.</p>
+<p>A staunch devotee, who worships Ganga Aditya will never face any mishap and will never be cheated by anyone. (Kashi Khand, Chapter 51).</p>
+
+<p><strong>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-</strong></p>
+<p><strong> </strong></p>
+<p><strong>Kashi Khand, Chapter 51, Shlok 104</strong></p>
+<p><strong> </strong></p>
+<p><strong>गङ्गादित्यं समाराध्य वाराणस्यां नरोत्तम:</strong></p>
+<p><strong>न जातु दुर्गतिं क्वापि लभते न च रोगभाक्</strong></p>
+
+<p><strong>The good man (sincere devotee) who worships Gangaditya in Varanasi neither has to suffer any misfortune nor does he suffer from any disease. </strong></p>
+<p><strong> </strong></p>
+<p><strong>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;</strong></p>
+
+<p><strong><span style="text-decoration: underline;">LOCATION OF GANGA ADITYA</span></strong></p>
+<p>Ganga Aditya is located at No. 1/68, below Nepali Mandir, Lalita Ghat.  The deity is situated in a room covered with iron grill and facing the river Ganges. From Vishwanath temple, a devotee should walk to the Ghat steps and it is advisable to ask for Nepali Pasupatinath temple for location. Nepali Pasupatinath temple is a landmark below which, devotees can find Ganga Aditya.</p>
+<p>Location of this premises as per Google Maps is given in the link below</p>
+<p>:<a href="https://www.google.com/maps/place/Ganga+Aditya+Temple+-+Dwadash+Aditya+Kashi+Khand/@25.3099306,83.0108974,17z/data=!3m1!4b1!4m5!3m4!1s0x398e2fa2e0d52caf:0x604f40f8d885c08!8m2!3d25.3099258!4d83.0130915">https://www.google.com/maps/place/Ganga+Aditya+Temple+-+Dwadash+Aditya+Kashi+Khand/@25.3099306,83.0108974,17z/data=!3m1!4b1!4m5!3m4!1s0x398e2fa2e0d52caf:0x604f40f8d885c08!8m2!3d25.3099258!4d83.0130915</a></p>
+
+<p><strong>Please watch our YouTube Video about Ganga Aditya at following Link</strong></p>
+
+<p><a href="https://www.youtube.com/watch?v=OQNxSl_krFY">https://www.youtube.com/watch?v=OQNxSl_krFY</a></p>
+
+<p><strong><span style="text-decoration: underline;">TYPES OF POOJA PERFORMED</span></strong></p>
+<p>Devotees can have darshan practically throughout.</p>
+               
+
+
+</div>
+
+
+<div class="info-grid">
+  <div class="info-cell">
+    <div class="info-panel">
+      <h4>&#128205; Location & Approach Route</h4>
+      <p style="margin-bottom:4pt;"><strong>Address:</strong> Please watch our YouTube Video about Arun Aditya at following Link
+https://www.youtube.com/watch?v=OQNxSl_krFY</p>
+      <p style="margin-bottom:4pt;"><strong>Nearby Ghat / Landmark:</strong> Not directly on a riverfront ghat</p>
+      <p style="margin-bottom:0;"><strong>Geographic Zone:</strong> Zone unverified — location evidence insufficient</p>
+    </div>
+  </div>
+  <div class="info-cell">
+    <div class="info-panel">
+      <h4>&#9200; Darshan & Pooja Arrangements</h4>
+      <p style="margin-bottom:4pt;"><strong>Timings:</strong> S
+The temple is open for worship 05.30 a.m. to 12.00 noon and 05.00 p.m. to 11 p.m.  Mangala Aarti is performed at 05.30 a.m. and Shayan Aarti at 11.00 p.m. For doing special pooja etc., it is advisable to consult the Poojari before hand.</p>
+      <p style="margin-bottom:0;"><strong>Pooja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.</p>
+    </div>
+  </div>
+</div>
+
+
+<div class="links-box">
+  <div style="font-weight:700; color:#1e40af; margin-bottom:3pt;">&#128279; Digital Reference Links (Requires Internet):</div>
+  <strong>Temple Darshan Video:</strong> <a href="https://www.youtube.com/watch?v=OQNxSl_krFY" target="_blank">https://www.youtube.com/watch?v=OQNxSl_krFY</a><br><strong>Google Maps:</strong> <a href="https://www.google.com/maps/place/Ganga+Aditya+Temple+-+Dwadash+Aditya+Kashi+Khand/@25.3099306,83.0108974,17z/data=!3m1!4b1!4m5!3m4!1s0x398e2fa2e0d52caf:0x604f40f8d885c08!8m2!3d25.3099258!4d83.0130915" target="_blank">https://www.google.com/maps/place/Ganga+Aditya+Temple+-+Dwadash+Aditya+Kashi+Khand/@25.309...</a>
+</div>
+
+
+<div class="page-break"></div>
+<div class="article-header-banner">
+  <div class="article-number-badge">DWADASHA ADITYA #4</div>
+  <div class="article-main-title">KESHAVA ADITYA</div>
+  <div class="article-subtitle">Confluence of Holy Varuna & Ganga • Rajghat Primordial Sanctuary</div>
+</div>
+
+<div class="provenance-box">
+  <table>
+    <tr>
+      <td class="key">&#127760; Original Live URL:</td>
+      <td><a href="https://varanasitemples.in/category/aditya-temples/keshava-aditya/" target="_blank">https://varanasitemples.in/category/aditya-temples/keshava-aditya/</a></td>
+    </tr>
+    <tr>
+      <td class="key">&#128194; Exact Mirror Path:</td>
+      <td><code>Kashi_Exact_Offline_Website/category/aditya-temples/keshava-aditya/index.html</code></td>
+    </tr>
+    <tr>
+      <td class="key">&#128214; Scripture Authority:</td>
+      <td>Skanda Purana — Kashi Khand (Sanctum established by Lord Surya)</td>
+    </tr>
+  </table>
+</div>
+
+
+<div class="article-body-container">
+  
+
+
+
+          <p>Once Lord Surya was travelling in the sky and from a distance he could see Adi Keshav (Lord Vishnu) worshipping a Shiv Ling.  Being very curious, Lord Surya came down to the earth and after Adi Keshav finished the prayers, put forward a question to the latter.</p>
+<p>Lord Surya asked when the entire world regards Lord Vishnu as Antaratma,  the latter should be worshipped. Lord Surya was surprised why Lord Vishnu was worshipping Lord Shiva.  To quell his anxiety, Lord Vishnu replied that in Kashi Kshetra Lord Shiva is the supreme Lord and he should be worshipped by every one.</p>
+<p><img class="aligncenter wp-image-3320 temple-pdf-img" src="file:///C:/Users/koppi/Downloads/Kashi_Offline_Guide_Pack/assets/images/KESHAV-ADITYA.jpg" alt="KESHAV ADITYA" width="391" height="381"   /></p>
+<p style="text-align: center;"><strong>(KESHAV ADITYA)</strong></p>
+<p>Lord Vishnu extensively described the importance of Linga Pooja in Kashi inasmuch as a devotee who performs abhishek of a Shiv Ling and consumes the water as prasad, gets the punya of taking bath in all religious Teerths (Sacred Ponds). Lord Vishnu advised Lord Surya also to worship Lord Shiva in Ling form in Kashi.  (Kashi Khand, Chapter 51).</p>
+<p>Lord Surya piously regarded Adi Keshav as his Guru for giving this sacred knowledge and Lord Surya came to be called as Keshava Aditya at that place.</p>
+
+<p><strong>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-</strong></p>
+<p><strong> </strong></p>
+<p><strong>Kashi Khand, Chapter 51, Shlok 74</strong></p>
+<p><strong> </strong></p>
+<p><strong>केशवादित्यमाराध्य वाराणस्यां नरोत्तम:</strong></p>
+<p><strong>परमं ज्ञानमाप्नोति येन निर्वाणभाग् भवेत्</strong></p>
+
+<p><strong>By worshiping Keshavaditya in Varanasi Puri, the ideal man attains that supreme knowledge, through which he finally attains the state of Nirvana (salvation). </strong></p>
+<p><strong> </strong></p>
+<p><strong>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;</strong></p>
+
+<p>According to Kashi Khand, a person who takes bath in Padodak Teerth (Koop) and worships Keshava Aditya gets rid of all sins.  Special importance is attached to Magh month (Jan 21-Feb 20) on any Saptami day (7<sup>th</sup> day after Amavasya or Poornima) when it coincides with Sunday.  On such days, devotees are advised to take bath in Padodak Koop and worship Keshava Aditya.</p>
+<p><strong><span style="text-decoration: underline;">LOCATION OF KESHAVA ADITYA</span></strong></p>
+<p>Keshava Aditya is located at No. A-37/51, Adi Keshav Temple, Rajghat Fort. Devotees can travel upto this place by autorickshaw or cycle rickshaw or car.</p>
+
+<p><a href="https://www.google.com/maps/place/Adi+Keshav+Ghat/@25.3288669,83.0243932,15z/data=!3m1!4b1!4m6!3m5!1s0x398e2fc96ca9762f:0xd72c9629869ba96f!8m2!3d25.328868!4d83.0428259!16s%2Fg%2F11b6dy3165?entry=ttu&amp;g_ep=EgoyMDI1MDEyOS4xIKXMDSoASAFQAw%3D%3D">https://www.google.com/maps/place/Adi+Keshav+Ghat/@25.3288669,83.0243932,15z/data=!3m1!4b1!4m6!3m5!1s0x398e2fc96ca9762f:0xd72c9629869ba96f!8m2!3d25.328868!4d83.0428259!16s%2Fg%2F11b6dy3165?entry=ttu&amp;g_ep=EgoyMDI1MDEyOS4xIKXMDSoASAFQAw%3D%3D</a></p>
+
+<p>Location of Adi Keshav Temple as per Google Maps is given above :</p>
+
+<p><strong>Please watch our YouTube Video about Keshav Aditya at following Link</strong></p>
+
+<p><a href="https://www.youtube.com/watch?v=OQNxSl_krFY">https://www.youtube.com/watch?v=OQNxSl_krFY</a></p>
+<h3></h3>
+<h3>TYPES OF POOJA</h3>
+<p>The place of worship is open from 06.00 a.m. to 12.00 Noon and from 04.00 p.m. to 10.00 p.m.  The timings may be flexible.</p>
+
+               
+
+
+</div>
+
+
+<div class="info-grid">
+  <div class="info-cell">
+    <div class="info-panel">
+      <h4>&#128205; Location & Approach Route</h4>
+      <p style="margin-bottom:4pt;"><strong>Address:</strong> Please watch our YouTube Video about Arun Aditya at following Link
+https://www.youtube.com/watch?v=OQNxSl_krFY</p>
+      <p style="margin-bottom:4pt;"><strong>Nearby Ghat / Landmark:</strong> Not directly on a riverfront ghat</p>
+      <p style="margin-bottom:0;"><strong>Geographic Zone:</strong> Zone unverified — location evidence insufficient</p>
+    </div>
+  </div>
+  <div class="info-cell">
+    <div class="info-panel">
+      <h4>&#9200; Darshan & Pooja Arrangements</h4>
+      <p style="margin-bottom:4pt;"><strong>Timings:</strong> S
+The temple is open for worship 05.30 a.m. to 12.00 noon and 05.00 p.m. to 11 p.m.  Mangala Aarti is performed at 05.30 a.m. and Shayan Aarti at 11.00 p.m. For doing special pooja etc., it is advisable to consult the Poojari before hand.</p>
+      <p style="margin-bottom:0;"><strong>Pooja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.</p>
+    </div>
+  </div>
+</div>
+
+
+<div class="links-box">
+  <div style="font-weight:700; color:#1e40af; margin-bottom:3pt;">&#128279; Digital Reference Links (Requires Internet):</div>
+  <strong>Temple Darshan Video:</strong> <a href="https://www.youtube.com/watch?v=OQNxSl_krFY" target="_blank">https://www.youtube.com/watch?v=OQNxSl_krFY</a><br><strong>Google Maps:</strong> <a href="https://www.google.com/maps/place/Adi+Keshav+Ghat/@25.3288669,83.0243932,15z/data=!3m1!4b1!4m6!3m5!1s0x398e2fc96ca9762f:0xd72c9629869ba96f!8m2!3d25.328868!4d83.0428259!16s%2Fg%2F11b6dy3165?entry=ttu&amp;g_ep=EgoyMDI1MDEyOS4xIKXMDSoASAFQAw%3D%3D" target="_blank">https://www.google.com/maps/place/Adi+Keshav+Ghat/@25.3288669,83.0243932,15z/data=!3m1!4b1...</a>
+</div>
+
+
+<div class="page-break"></div>
+<div class="article-header-banner">
+  <div class="article-number-badge">DWADASHA ADITYA #5</div>
+  <div class="article-main-title">KHAKHOLKH ADITYA</div>
+  <div class="article-subtitle">Celestial Illuminator of the Cosmic Skies • Healer of Severe Afflictions</div>
+</div>
+
+<div class="provenance-box">
+  <table>
+    <tr>
+      <td class="key">&#127760; Original Live URL:</td>
+      <td><a href="https://varanasitemples.in/category/aditya-temples/khakholkh-aditya/" target="_blank">https://varanasitemples.in/category/aditya-temples/khakholkh-aditya/</a></td>
+    </tr>
+    <tr>
+      <td class="key">&#128194; Exact Mirror Path:</td>
+      <td><code>Kashi_Exact_Offline_Website/category/aditya-temples/khakholkh-aditya/index.html</code></td>
+    </tr>
+    <tr>
+      <td class="key">&#128214; Scripture Authority:</td>
+      <td>Skanda Purana — Kashi Khand (Sanctum established by Lord Surya)</td>
+    </tr>
+  </table>
+</div>
+
+
+<div class="article-body-container">
+  
+
+
+
+          <p>Sage Kashyap had many wives of which two were Kadru and Vinata. Kadru gave birth to children who were snakes and Vinata who was a huge bird gave birth to Garuda.</p>
+<p>Both the sisters were playful. While Kadru was cunning, Vinata was very innocent.  Once Kadru, with an ulterior motive in her mind, asked Vinata to play a guess game and the sister who loses in the game will become slave to the winner.  Vinata agreed.  The guess game was “what is the colour of the Uchchaisrva, one of the horses which draws Lord Surya’s Chariot”.  It was well known that the colour was white and Vinata told accordingly.</p>
+<p>But Kadru had other game plan in her mind. Upon her insistence, her children (snakes) twined themselves round the tail of the horse Uchchaisrva and started spewing venom.  The colour of the horse became grayish black.  Vinata lost  the game and was enslaved to Kadru and her snake sons.  She was very much ill treated and her son, Garuda was deeply pained at her woeful plight.</p>
+<p>He appealed to the sons of Kadru to release his mother.  They agreed to do so on one condition that he should bring them Amrit (nectar).  Garuda knew this was an arduous task because Nectar was closely guarded by the Devas. However, as a dutiful son, he left for Dev Lok to accomplish the mission impossible.  In the process, he had to fight with Lord Vishnu.  Lord Vishnu was deeply touched by the respect which Garuda had for his mother as well as his filial obligations and told Garuda that henceforth he (Garuda) would be Lord Vishnu’s vehicle.</p>
+<p>As regards Amrit, Lord Vishnu let Garuda take it to the snake children as ransom for release of his mother but cautioned that under no circumstances the snakes were to drink it.  Garuda took the amrit and gave it to the snake children.  His mother was freed by the snakes as per the agreement.  Before they could consume the amrit, Garuda told them that the amrit was the purest elixir and a person who wants to consume it should get himself purified first by having a holy bath.  Accordingly, the snakes placed the vessel containing the amrit on a mat made of dry grass and left for performing ablutions.  In their absence, Lord Vishnu took the vessel and vanished because it  did not belong to the snakes rightfully.</p>
+<p>When the snakes returned they were anguished to see the vessel missing and with a view to getting at least a drop of amrit, they started licking the mat.  The dry grass was very sharp and it slit their tongues. To this day, snakes are born with a forked tongue because they tried to consume something which they had not rightfully earned.  Even now, elders advise people to take or consume only such things which have been rightfully earned.</p>
+<p>Later, Vinata told her son Garuda that she must have committed some sin which made her  a slave.  She desired to go to Kashi for atonement of her sins. Garuda took her to Kashi  where Garuda installed a Shiv Ling and started praying ardently. Vinata started worshipping Lord Surya in his form as Khakholkh Aditya. Lord Shiva appeared in person and blessed Garuda stating that the latter would be known by everyone in the world as the vehicle/ride (vahana) of Lord Vishnu.</p>
+<p><img class="aligncenter wp-image-3322 temple-pdf-img" src="file:///C:/Users/koppi/Downloads/Kashi_Offline_Guide_Pack/assets/images/Khakholkh-Aditya1.jpg" alt="Khakholkh Aditya1" width="378" height="395"   /></p>
+<p style="text-align: center;"><strong>(KHAKHOLKH ADITYA)</strong></p>
+<p>Lord Surya also appeared in person before Vinata and blessed her, whereupon Vinata was absolved of all her sins.  According to Kashi Khand, Chapter 50, Khakholkh Aditya finds mention in the proximity of Pilpila Teerth.</p>
+
+<p><strong>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-</strong></p>
+<p><strong> </strong></p>
+<p><span style="text-decoration: underline;"><strong>Kashi Khand, Chapter 50, Shlok 150</strong></span></p>
+<p><strong> </strong></p>
+<p><strong>काश्यां पैशङ्गिले तीर्थे खखोल्कस्य विलोकनात्</strong></p>
+<p><strong>नरश्चिन्तितमाप्नोति नीरोगो जायते क्षणात्</strong></p>
+
+<p><strong>By having darshan of Khakholkh Aditya near Pilpila Teerth (Trilochan area), the devotee is freed of all his sins, achieves all things desired and is cured of all illness.</strong></p>
+<p><strong> </strong></p>
+<p><strong>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;</strong></p>
+<p><strong><span style="text-decoration: underline;">LOCATION OF KHAKHOLKH ADITYA</span></strong></p>
+<p>Khakholkh Aditya is located at Kameshwar Temple at A-2/9 North of Trilochan.  The temple is approachable from a famous locality called Machhodari.  Devotees can travel upto Macchodari, take a right circular turn, reach Birla Hospital and take a right turn. Kameshwar temple is located in a Gully there.</p>
+<p>Pilpila Teerth mentioned in Kashi Khand is existent now in the form of a Koop (Well) near Trilochaneshwar.</p>
+
+<p><strong>Please watch our YouTube Video about Khakholkh  Aditya at following Link</strong></p>
+
+<p><a href="https://www.youtube.com/watch?v=3MiOW5wXASQ&amp;t=6s">https://www.youtube.com/watch?v=3MiOW5wXASQ&amp;t=6s</a></p>
+
+
+<p><strong><span style="text-decoration: underline;">TYPES OF POOJAS</span></strong></p>
+<p>The temple is open for worship from 05.00 a.m. to 12.00 Noon and 05.00 p.m. to 10.00 p.m.  Mangala Aarti is held at 5.30 a.m. and Shayan Aarti at 09.30 p.m.</p>
+<h2>POOJARIS OF THE TEMPLE</h2>
+<p>Shri Rajesh Giri is the Poojari of the temple and he can be contacted on his Cell number (0) 9839703054 for doing any special pooja etc.</p>
+               
+
+
+</div>
+
+
+<div class="info-grid">
+  <div class="info-cell">
+    <div class="info-panel">
+      <h4>&#128205; Location & Approach Route</h4>
+      <p style="margin-bottom:4pt;"><strong>Address:</strong> Please watch our YouTube Video about Arun Aditya at following Link
+https://www.youtube.com/watch?v=OQNxSl_krFY</p>
+      <p style="margin-bottom:4pt;"><strong>Nearby Ghat / Landmark:</strong> Not directly on a riverfront ghat</p>
+      <p style="margin-bottom:0;"><strong>Geographic Zone:</strong> Zone unverified — location evidence insufficient</p>
+    </div>
+  </div>
+  <div class="info-cell">
+    <div class="info-panel">
+      <h4>&#9200; Darshan & Pooja Arrangements</h4>
+      <p style="margin-bottom:4pt;"><strong>Timings:</strong> S
+The temple is open for worship 05.30 a.m. to 12.00 noon and 05.00 p.m. to 11 p.m.  Mangala Aarti is performed at 05.30 a.m. and Shayan Aarti at 11.00 p.m. For doing special pooja etc., it is advisable to consult the Poojari before hand.</p>
+      <p style="margin-bottom:0;"><strong>Pooja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.</p>
+    </div>
+  </div>
+</div>
+
+
+<div class="links-box">
+  <div style="font-weight:700; color:#1e40af; margin-bottom:3pt;">&#128279; Digital Reference Links (Requires Internet):</div>
+  <strong>Temple Darshan Video:</strong> <a href="https://www.youtube.com/watch?v=OQNxSl_krFY" target="_blank">https://www.youtube.com/watch?v=OQNxSl_krFY</a><br><strong>YouTube Video:</strong> <a href="https://www.youtube.com/watch?v=3MiOW5wXASQ&amp;t=6s" target="_blank">https://www.youtube.com/watch?v=3MiOW5wXASQ&amp;t=6s</a>
+</div>
+
+
+<div class="page-break"></div>
+<div class="article-header-banner">
+  <div class="article-number-badge">DWADASHA ADITYA #6</div>
+  <div class="article-main-title">LOLARK ADITYA</div>
+  <div class="article-subtitle">The Trembling Solar God • Miraculous Sunken Stepwell of Progeny</div>
+</div>
+
+<div class="provenance-box">
+  <table>
+    <tr>
+      <td class="key">&#127760; Original Live URL:</td>
+      <td><a href="https://varanasitemples.in/category/aditya-temples/lolark-aditya/" target="_blank">https://varanasitemples.in/category/aditya-temples/lolark-aditya/</a></td>
+    </tr>
+    <tr>
+      <td class="key">&#128194; Exact Mirror Path:</td>
+      <td><code>Kashi_Exact_Offline_Website/category/aditya-temples/lolark-aditya/index.html</code></td>
+    </tr>
+    <tr>
+      <td class="key">&#128214; Scripture Authority:</td>
+      <td>Skanda Purana — Kashi Khand (Sanctum established by Lord Surya)</td>
+    </tr>
+  </table>
+</div>
+
+
+<div class="article-body-container">
+  
+
+
+
+          <p>Lolark Aditya is situated in the southern part of Kashi near Assi-Ganga Sangam, near Lolark Kund.  Lolark Kund has been given great importance in Kashi Khand. In ancient times, Lolark Kund was believed to be in confluence with Ganga and Assi a rivulet but now this is in form of a Kund (Pond) only.  Even now, during rainy days, Ganges water enters the Kund through some underground source.</p>
+<p><img class="aligncenter  wp-image-3326 temple-pdf-img" src="file:///C:/Users/koppi/Downloads/Kashi_Offline_Guide_Pack/assets/images/Lolark-Aditya-1.jpg" alt="Lolark Aditya" width="329" height="350"   /></p>
+<p style="text-align: center;"><strong>(LOLARK ADITYA)</strong></p>
+
+<p>Great importance is attached to taking bath in this Pond in Magha Month when Shukla Shashti or Saptmi (sixth or seventh day after Amavasya) coincides with Sunday.  Bathing on such a day in this kund and performing puja etc. will grant the devotees all their desires.  The devotee’s sins accumulated over seven previous births will be cleansed away by the above religious act. (Kashi Khand, Chapter 46).</p>
+<p>A person who religiously prays to Lolark Aditya on every Sunday is absolved of all his sins and all his skin ailments will be healed. (Kashi Khand, Chapter 46).</p>
+<h2>LOCATION OF LOLARK ADITYA</h2>
+<p>Lolark Aditya/Lolark Kund is located near Tulsi Ghat. Persons can travel upto Marwadi Seva Sangh, Assi in a  rickshaw and walk on foot upto Lolark Kund. Alternatively, they can have a boat ride upto Tulsi Ghat and climb the steps.</p>
+<h3></h3>
+<h3><strong>Please watch our YouTube Video about Lolark  Aditya at following Link</strong></h3>
+<h3></h3>
+<p><a href="https://www.youtube.com/watch?v=3MiOW5wXASQ&amp;t=6s">https://www.youtube.com/watch?v=3MiOW5wXASQ&amp;t=6s</a></p>
+
+
+<h3>TYPES OF POOJAS</h3>
+<p>The place is open self worship practically twenty four hours daily.  Special importance is attached to prayers by self on Sundays.  Presently, on a particular day every year (Lolark Chat) which falls in the Bhadrapad Month Shukla Paksha Shashti (6<sup>th</sup> day after Amavasya) devotees come in large numbers for taking bath in Lolark Kund.  Further, Margashirsha Month,  Shukla Paksha Shashti (6<sup>th</sup> day after Amavasya), is also an important day.</p>
+               
+
+
+</div>
+
+
+<div class="info-grid">
+  <div class="info-cell">
+    <div class="info-panel">
+      <h4>&#128205; Location & Approach Route</h4>
+      <p style="margin-bottom:4pt;"><strong>Address:</strong> Please watch our YouTube Video about Arun Aditya at following Link
+https://www.youtube.com/watch?v=OQNxSl_krFY</p>
+      <p style="margin-bottom:4pt;"><strong>Nearby Ghat / Landmark:</strong> Not directly on a riverfront ghat</p>
+      <p style="margin-bottom:0;"><strong>Geographic Zone:</strong> Zone unverified — location evidence insufficient</p>
+    </div>
+  </div>
+  <div class="info-cell">
+    <div class="info-panel">
+      <h4>&#9200; Darshan & Pooja Arrangements</h4>
+      <p style="margin-bottom:4pt;"><strong>Timings:</strong> S
+The temple is open for worship 05.30 a.m. to 12.00 noon and 05.00 p.m. to 11 p.m.  Mangala Aarti is performed at 05.30 a.m. and Shayan Aarti at 11.00 p.m. For doing special pooja etc., it is advisable to consult the Poojari before hand.</p>
+      <p style="margin-bottom:0;"><strong>Pooja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.</p>
+    </div>
+  </div>
+</div>
+
+
+<div class="links-box">
+  <div style="font-weight:700; color:#1e40af; margin-bottom:3pt;">&#128279; Digital Reference Links (Requires Internet):</div>
+  <strong>Temple Darshan Video:</strong> <a href="https://www.youtube.com/watch?v=OQNxSl_krFY" target="_blank">https://www.youtube.com/watch?v=OQNxSl_krFY</a><br><strong>YouTube Video:</strong> <a href="https://www.youtube.com/watch?v=3MiOW5wXASQ&amp;t=6s" target="_blank">https://www.youtube.com/watch?v=3MiOW5wXASQ&amp;t=6s</a>
+</div>
+
+
+<div class="page-break"></div>
+<div class="article-header-banner">
+  <div class="article-number-badge">DWADASHA ADITYA #7</div>
+  <div class="article-main-title">MAYUKH ADITYA</div>
+  <div class="article-subtitle">Divine Radiant Rays of Surya • Mangala Gauri Gabhasteeshwar Sanctum</div>
+</div>
+
+<div class="provenance-box">
+  <table>
+    <tr>
+      <td class="key">&#127760; Original Live URL:</td>
+      <td><a href="https://varanasitemples.in/category/aditya-temples/mayukh-aditya/" target="_blank">https://varanasitemples.in/category/aditya-temples/mayukh-aditya/</a></td>
+    </tr>
+    <tr>
+      <td class="key">&#128194; Exact Mirror Path:</td>
+      <td><code>Kashi_Exact_Offline_Website/category/aditya-temples/mayukh-aditya/index.html</code></td>
+    </tr>
+    <tr>
+      <td class="key">&#128214; Scripture Authority:</td>
+      <td>Skanda Purana — Kashi Khand (Sanctum established by Lord Surya)</td>
+    </tr>
+  </table>
+</div>
+
+
+<div class="article-body-container">
+  
+
+
+
+          <p>Once Lord Surya installed a Shiv Ling known as Gabhasteeshwar and a devi idol known as Mangala Gauri at Panchanada Teerth (Panchganga Ghat) and started immensely praying to  Lord Shiva.  (Importance of Panchganga Ghat is described under River Ganga and Teerths Categories).</p>
+<p>The intensity of Lord Surya’s prayers started reflecting in the extreme heat generated thereby.  Sunrays started getting warmer and warmer. Finally it became extremely unbearable for all living beings and all physical activities practically came to a standstill.</p>
+<p><img class="aligncenter size-full wp-image-3329 temple-pdf-img" src="file:///C:/Users/koppi/Downloads/Kashi_Offline_Guide_Pack/assets/images/Mayukh-Aditya.jpeg" alt="Mayukh Aditya" width="375" height="329"   /></p>
+<p style="text-align: center;"><strong>(MAYUKH ADITYA)</strong></p>
+<p>Lord Shiva and Goddess Parvaty came to know about this and they appeared in person in front of Lord Surya.  Lord Shiva gently touched Lord Surya, whereupon the latter’s extreme heat slowly subsided and he became more or less cool. Lord Surya opened his eyes and started singing praises of Goddess Parvaty and Lord Shiva whereupon both of them became extremely happy.  They granted several divine wishes to Lord Surya.</p>
+<p>Lord Shiva told Lord Surya that when the latter was performing pooja of the former, only the sunrays were visible and the body of Lord Surya was not visible.  Accordingly, Lord Surya will be called Mayukh Aditya.  Mayukh means effulgence. Lord Shiva also stated that a devotee who worships Mayukh Aditya on Sundays will never fall ill. (Kashi Khand, Chapter 49).</p>
+
+<p><strong>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-</strong></p>
+<p><strong> </strong></p>
+<p><span style="text-decoration: underline;"><strong>Kashi Khand, Chapter 49, Shlok 94</strong></span></p>
+<p><strong> </strong></p>
+<p><strong>त्वदर्चनान्नृणां  कश्चिन्न व्याधि: प्रभविष्यति </strong></p>
+<p><strong>भविष्यति न दारिद्रयं रविवारे त्वदोक्षणात्</strong></p>
+
+<p><strong>Lord Shiva says, by performing your (Mayukh Aditya’s) pooja, devotees will be free from all diseases and by worshipping you on Sunday, devotees will not face poverty.</strong></p>
+<p><strong> </strong></p>
+<p><strong>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;</strong></p>
+
+<p><strong><span style="text-decoration: underline;">LOCATION OF MAYUKH ADITYA</span></strong></p>
+<p>Mayukh Aditya is located at No. K-24/34, Mangala Gauri Temple, Panchganga Ghat.  Devotees can travel upto Bhaironath (Kaal Bhairav) by rickshaw and walk on foot upto this temple through labyrinthine lanes. This walk usually takes about twenty to thirty minutes.   Alternatively, they can take a boat ride upto Balaji Ghat/Panchganga Ghat and walk up the stairs.</p>
+<p>The idol of Mayukh Aditya always remains moist and cool. If we physically remove the moisture and make it dry, the idol will again become moist.  The reason for this is Lord Shiva touched Lord Surya to reduce his intense heat (as mentioned above).  Old timers in and around the temple believe that the hidden river Dhootpapa is flowing beneath the surface, causing this moistness.</p>
+<p>The temple also houses Gabhastheeshwar, Mangala Gauri and Mangal Vinayak. In the close vicinity are temples of Brahmacharini and Brahmeshwar.</p>
+<h3></h3>
+<h3><strong>Please watch our YouTube Video about Mayukh Aditya at following Link</strong></h3>
+
+<h3><a href="https://www.youtube.com/watch?v=3MiOW5wXASQ&amp;t=6s">https://www.youtube.com/watch?v=3MiOW5wXASQ&amp;t=6s</a></h3>
+
+<h3></h3>
+<h3>TYPES OF POOJA</h3>
+<p>The temple is open from 05.00 a.m. to 01.00 p.m. and from 03.00 p.m. to 10 p.m.  Aarties are performed in the evening.  For doing any special pooja etc., it is advisable to contact the Poojari.</p>
+<h2>POOJARIS OF THE TEMPLE</h2>
+<p>Shri Manoj Kumar Pandey is the chief priest and his cell number is (0)9305645502.  Other priest is Shri Umesh Kumar Sharma whose cell number is (0)9450284728.</p>
+               
+
+
+</div>
+
+
+<div class="info-grid">
+  <div class="info-cell">
+    <div class="info-panel">
+      <h4>&#128205; Location & Approach Route</h4>
+      <p style="margin-bottom:4pt;"><strong>Address:</strong> Please watch our YouTube Video about Arun Aditya at following Link
+https://www.youtube.com/watch?v=OQNxSl_krFY</p>
+      <p style="margin-bottom:4pt;"><strong>Nearby Ghat / Landmark:</strong> Not directly on a riverfront ghat</p>
+      <p style="margin-bottom:0;"><strong>Geographic Zone:</strong> Zone unverified — location evidence insufficient</p>
+    </div>
+  </div>
+  <div class="info-cell">
+    <div class="info-panel">
+      <h4>&#9200; Darshan & Pooja Arrangements</h4>
+      <p style="margin-bottom:4pt;"><strong>Timings:</strong> S
+The temple is open for worship 05.30 a.m. to 12.00 noon and 05.00 p.m. to 11 p.m.  Mangala Aarti is performed at 05.30 a.m. and Shayan Aarti at 11.00 p.m. For doing special pooja etc., it is advisable to consult the Poojari before hand.</p>
+      <p style="margin-bottom:0;"><strong>Pooja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.</p>
+    </div>
+  </div>
+</div>
+
+
+<div class="links-box">
+  <div style="font-weight:700; color:#1e40af; margin-bottom:3pt;">&#128279; Digital Reference Links (Requires Internet):</div>
+  <strong>Temple Darshan Video:</strong> <a href="https://www.youtube.com/watch?v=OQNxSl_krFY" target="_blank">https://www.youtube.com/watch?v=OQNxSl_krFY</a><br><strong>YouTube Video:</strong> <a href="https://www.youtube.com/watch?v=3MiOW5wXASQ&amp;t=6s" target="_blank">https://www.youtube.com/watch?v=3MiOW5wXASQ&amp;t=6s</a>
+</div>
+
+
+<div class="page-break"></div>
+<div class="article-header-banner">
+  <div class="article-number-badge">DWADASHA ADITYA #8</div>
+  <div class="article-main-title">SAAMBA ADITYA</div>
+  <div class="article-subtitle">Curative Tapasya of Krishna’s Son Saamba • Surya Kund Golden Sanctuary</div>
+</div>
+
+<div class="provenance-box">
+  <table>
+    <tr>
+      <td class="key">&#127760; Original Live URL:</td>
+      <td><a href="https://varanasitemples.in/category/aditya-temples/saamba-aditya/" target="_blank">https://varanasitemples.in/category/aditya-temples/saamba-aditya/</a></td>
+    </tr>
+    <tr>
+      <td class="key">&#128194; Exact Mirror Path:</td>
+      <td><code>Kashi_Exact_Offline_Website/category/aditya-temples/saamba-aditya/index.html</code></td>
+    </tr>
+    <tr>
+      <td class="key">&#128214; Scripture Authority:</td>
+      <td>Skanda Purana — Kashi Khand (Sanctum established by Lord Surya)</td>
+    </tr>
+  </table>
+</div>
+
+
+<div class="article-body-container">
+  
+
+
+
+          <p>According to Kashi Khand, Once Sage Narada traveled to Dwaraka Puri and he was fondly welcomed by the mind born  sons of Lord Krishna.  They exhibited hospitality of the highest order and Narad was pleased.  However, one son named Saamba remained aloof and did not pay any respect to Narad.</p>
+<p>Lord Krishna welcomed Sage Narad in the former’s palace with all humility.  After exchanging all formalities/pleasantries, Sage Narad brought Saamba’s behaviour to the notice of Lord Krishna.  Sage Narad went a step ahead, stating that Saamba was a strong and handsome boy and was capable of seducing various ladies in and around the palace.</p>
+<p>Soon Narad left the palace and Lord Krishna started keeping a close watch on Saamba but nothing untoward was observed in Saamba’s behaviour. However, the surveillance went on for quite some time.</p>
+<p>After some days, Narad again visited Dwarka Puri and precisely at that time, Lord Krishna was in his personal chambers alongwith various ladies.  Narad called Saamba, who was loitering outside, and told him to inform Lord Krishna about his arrival. Saamba hesitated for a while. It was a double whammy for him.  On the one hand, if he barges in and disturbs Lord Krishna, the latter may get angry.  On the other hand, if he disobeys Narad, he may get angry because on the earlier occasion he had not respected Narad.</p>
+<p>With a dilemma, he went inside Lord Krishna’s private quarters, not knowing that Narad was following him.  Both of them disturbed Lord Krishna who was in a compromising position.  Lord Krishna suddenly got up very embarrassed.  All the girls surrounding him were also equally embarrassed. Saamba silently left the place.</p>
+<p>Narad gave a wrong interpretation of the events to Lord Krishna stating that the ladies who were with Lord Krishna were indeed seduced by the appearance of Saamba. Lord Krishna got infuriated and cursed Saamba that he will be inflicted with Leprosy.  However, Saamba pleaded innocence and Lord Krishna was very much moved.  He told Saamba that to get rid of this curse, he should go to Kashi and pray to Lord Surya.</p>
+<p>Accordingly, Saamba came to Kashi, dug a Kund which was called Saamba Kund and undertook rigorous penance and pooja of Lord Surya.  In due course, he was cured of this dreaded disease.  Lord Aditya who is present at this place came to be called Saamba Aditya.</p>
+<p><img class="aligncenter wp-image-3332 temple-pdf-img" src="file:///C:/Users/koppi/Downloads/Kashi_Offline_Guide_Pack/assets/images/Saamba-Aditya-1-1024x768.jpg" alt="Saamba Aditya" width="337" height="252"   /></p>
+<p style="text-align: center;"><strong>(SAAMBA ADITYA)</strong></p>
+<p>According to Kashi Khand Chapter 48, a person who takes bath in Saamba Kund religiously on Sundays at sunrise and prays  to Saamba Aditya will get cured of any incurable disease, any married lady performing such prayers will always remain Sumangali (Suhagin-lady whose husband is alive) and childless couple will be blessed with child.</p>
+<p>Saamba Kund is now known as Surya Kund / Suraj Kund.</p>
+
+<p><strong>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-</strong></p>
+<p><strong> </strong></p>
+<p><span style="text-decoration: underline;"><strong>Kashi Khand, Chapter 48, Shlok 48</strong></span></p>
+<p><strong> </strong></p>
+<p><strong>साम्बकुण्डे नर: स्नात्वा रविवारेऽरुणोदये  </strong></p>
+<p><strong>सांबादित्यं च संपूज्य व्याधिभिर्नाऽभिभूयते</strong></p>
+
+<p><strong>If a person takes a holy dip in Samba Kund and worships Sambaditya with devotion at the time of sunrise on Sunday, he never suffers from diseases. </strong></p>
+<p><strong> </strong></p>
+<p><strong>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;</strong></p>
+
+<h3>LOCATION OF SAAMBA ADITYA</h3>
+<p>Saamba Aditya is located at D-51/90 Surya Kund (Suraj Kund).  This is a famous locality.  Devotees can travel upto this place in a  cycle rickshaw.</p>
+<h3></h3>
+<h3><strong>Please watch our YouTube Video about Saamba Aditya at following Link</strong></h3>
+<h3></h3>
+<p><a href="https://www.youtube.com/watch?v=zGk_LHQDrTU&amp;t=5s">https://www.youtube.com/watch?v=zGk_LHQDrTU&amp;t=5s</a></p>
+<h3></h3>
+<h3></h3>
+<h3>TYPES OF POOJA</h3>
+<p>The place is open for worship from 06.30 a.m. to 01.00 p.m. and from 07.00 p.m. to 09.00 p.m..  Special importance is attached to Magh month (Feb-March) on Sundays when Navami conjoins.  Equally important is Chaitra month (March-April) Sundays.</p>
+               
+
+
+</div>
+
+
+<div class="info-grid">
+  <div class="info-cell">
+    <div class="info-panel">
+      <h4>&#128205; Location & Approach Route</h4>
+      <p style="margin-bottom:4pt;"><strong>Address:</strong> Please watch our YouTube Video about Arun Aditya at following Link
+https://www.youtube.com/watch?v=OQNxSl_krFY</p>
+      <p style="margin-bottom:4pt;"><strong>Nearby Ghat / Landmark:</strong> Not directly on a riverfront ghat</p>
+      <p style="margin-bottom:0;"><strong>Geographic Zone:</strong> Zone unverified — location evidence insufficient</p>
+    </div>
+  </div>
+  <div class="info-cell">
+    <div class="info-panel">
+      <h4>&#9200; Darshan & Pooja Arrangements</h4>
+      <p style="margin-bottom:4pt;"><strong>Timings:</strong> S
+The temple is open for worship 05.30 a.m. to 12.00 noon and 05.00 p.m. to 11 p.m.  Mangala Aarti is performed at 05.30 a.m. and Shayan Aarti at 11.00 p.m. For doing special pooja etc., it is advisable to consult the Poojari before hand.</p>
+      <p style="margin-bottom:0;"><strong>Pooja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.</p>
+    </div>
+  </div>
+</div>
+
+
+<div class="links-box">
+  <div style="font-weight:700; color:#1e40af; margin-bottom:3pt;">&#128279; Digital Reference Links (Requires Internet):</div>
+  <strong>Temple Darshan Video:</strong> <a href="https://www.youtube.com/watch?v=OQNxSl_krFY" target="_blank">https://www.youtube.com/watch?v=OQNxSl_krFY</a><br><strong>YouTube Video:</strong> <a href="https://www.youtube.com/watch?v=zGk_LHQDrTU&amp;t=5s" target="_blank">https://www.youtube.com/watch?v=zGk_LHQDrTU&amp;t=5s</a>
+</div>
+
+
+<div class="page-break"></div>
+<div class="article-header-banner">
+  <div class="article-number-badge">DWADASHA ADITYA #9</div>
+  <div class="article-main-title">UTTARARK ADITYA</div>
+  <div class="article-subtitle">Northern Solstice Uttarayana Aspect • Bakaria Kund Solar Guardian</div>
+</div>
+
+<div class="provenance-box">
+  <table>
+    <tr>
+      <td class="key">&#127760; Original Live URL:</td>
+      <td><a href="https://varanasitemples.in/category/aditya-temples/uttarark-aditya/" target="_blank">https://varanasitemples.in/category/aditya-temples/uttarark-aditya/</a></td>
+    </tr>
+    <tr>
+      <td class="key">&#128194; Exact Mirror Path:</td>
+      <td><code>Kashi_Exact_Offline_Website/category/aditya-temples/uttarark-aditya/index.html</code></td>
+    </tr>
+    <tr>
+      <td class="key">&#128214; Scripture Authority:</td>
+      <td>Skanda Purana — Kashi Khand (Sanctum established by Lord Surya)</td>
+    </tr>
+  </table>
+</div>
+
+
+<div class="article-body-container">
+  
+
+
+
+          <p>According to Kashi Khand, Chapter 47, long time back, one Brahmin named Priyavrat was living in Kashi alongwith his beautiful wife named Shubhavradha.  Both were very religious and were blessed with a beautiful girl child, who was named as Sulakshana. The girl was born in Moola Star, 1<sup>st</sup> Charan (Padam) with Guru in fourth house. This combination is not supposed to be auspicious.</p>
+<p>The child grew up to be a beautiful girl, well versed in all household activities. When she approached the age of marriage, her father got worried because he had to find a suitable match for her, mainly because of her birth in Moola star.  Due to constant worries he fell sick and as there was no cure for worries, he died in due course.  Overcome with grief, the girl’s mother also died, leaving the girl all alone in the world.</p>
+<p>The girl dutifully performed the rites of her parents and she started praying to Lord Surya in his form of Uttarark Aditya. She underwent severe penance for a considerably long time and observed that a white goat used to come daily and constantly stare at her. The goat used to take bath in the Kund in the morning, wait for the whole day and in the evening,  it used to eat dry grass, drink water from the Uttarark Kund and go back.  This went on for several years.</p>
+<p><img class="aligncenter size-full wp-image-3335 temple-pdf-img" src="file:///C:/Users/koppi/Downloads/Kashi_Offline_Guide_Pack/assets/images/Uttarark-Aditya-1.jpg" alt="Uttarark Aditya" width="432" height="338"   /></p>
+<p style="text-align: center;"><strong>(UTTARARK ADITYA)</strong></p>
+<p>One day Lord Shiva and Goddess Parvaty were travelling above and they saw this girl (who had gone lean), praying before Uttarark Aditya.  Both Lord Shiva and Goddess Parvaty were deeply moved by the prayers of Sulakshana and Lord Shiva offered the girl a divine wish.</p>
+<p>Sulakshana thought for a moment and saw the Goat standing nearby.  She requested Lord Shiva to grant a boon to the Goat instead of herself.  Goddess Parvaty was moved by the philanthropy exhibited by Sulakshana and ordained that Sulakshana will always be with Goddess Parvaty as a companion.  The goat will take rebirth as daughter of Kashi Raja in consideration of its devotion to Uttarark Kund.</p>
+<p>According to Kashi Khand, Goddess Parvaty stated that the Kund will be remembered for the sincerity of the Goat (because the Goat was regularly taking bath in the Kund even during severe winter months) and that all devotees should take bath in the above Kund in Paushya Month (December-January) on Sundays and pray to Uttarark Aditya.  By performing the above ritual, they will be divinely blessed.  The Kund was named Barkari Kund (reference : Sankshipta Skanda Puran, Gita Press, Page No. 831). The Kund is now known as Bakria Kund in local parlance.</p>
+<h3>LOCATION OF UTTARARK ADITYA</h3>
+<p>Uttarark Aditya is located in Alaipur, Bakaria Kund, near Varanasi City Station. Devotees can travel upto the place by Auto/Cycle Rickshaw.</p>
+<h3></h3>
+<h3><strong>Please watch our YouTube Video about Uttarark Aditya at following Link</strong></h3>
+<h3></h3>
+<p><a href="https://www.youtube.com/watch?v=zGk_LHQDrTU&amp;t=5s">https://www.youtube.com/watch?v=zGk_LHQDrTU&amp;t=5s</a></p>
+<h3></h3>
+
+<h3>TYPES OF POOJA</h3>
+<p>The place of worship is open from 05.00 a.m. to 12.00 noon and from 05.00 p.m. to 10.00 p.m.  Aarti is held at 08.00 a.m. in the morning.</p>
+<p><strong><span style="text-decoration: underline;">POOJARIES OF THE TEMPLE</span></strong></p>
+<p>Shri Ashok Tripathi is the poojari of the temple and he can be contacted in his Cell No.(0)9305041589.</p>
+               
+
+
+</div>
+
+
+<div class="info-grid">
+  <div class="info-cell">
+    <div class="info-panel">
+      <h4>&#128205; Location & Approach Route</h4>
+      <p style="margin-bottom:4pt;"><strong>Address:</strong> Please watch our YouTube Video about Arun Aditya at following Link
+https://www.youtube.com/watch?v=OQNxSl_krFY</p>
+      <p style="margin-bottom:4pt;"><strong>Nearby Ghat / Landmark:</strong> Not directly on a riverfront ghat</p>
+      <p style="margin-bottom:0;"><strong>Geographic Zone:</strong> Zone unverified — location evidence insufficient</p>
+    </div>
+  </div>
+  <div class="info-cell">
+    <div class="info-panel">
+      <h4>&#9200; Darshan & Pooja Arrangements</h4>
+      <p style="margin-bottom:4pt;"><strong>Timings:</strong> S
+The temple is open for worship 05.30 a.m. to 12.00 noon and 05.00 p.m. to 11 p.m.  Mangala Aarti is performed at 05.30 a.m. and Shayan Aarti at 11.00 p.m. For doing special pooja etc., it is advisable to consult the Poojari before hand.</p>
+      <p style="margin-bottom:0;"><strong>Pooja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.</p>
+    </div>
+  </div>
+</div>
+
+
+<div class="links-box">
+  <div style="font-weight:700; color:#1e40af; margin-bottom:3pt;">&#128279; Digital Reference Links (Requires Internet):</div>
+  <strong>Temple Darshan Video:</strong> <a href="https://www.youtube.com/watch?v=OQNxSl_krFY" target="_blank">https://www.youtube.com/watch?v=OQNxSl_krFY</a><br><strong>YouTube Video:</strong> <a href="https://www.youtube.com/watch?v=zGk_LHQDrTU&amp;t=5s" target="_blank">https://www.youtube.com/watch?v=zGk_LHQDrTU&amp;t=5s</a>
+</div>
+
+
+<div class="page-break"></div>
+<div class="article-header-banner">
+  <div class="article-number-badge">DWADASHA ADITYA #10</div>
+  <div class="article-main-title">VIMAL ADITYA</div>
+  <div class="article-subtitle">Stainless Purity • Dispeller of Leprosy & Generational Afflictions</div>
+</div>
+
+<div class="provenance-box">
+  <table>
+    <tr>
+      <td class="key">&#127760; Original Live URL:</td>
+      <td><a href="https://varanasitemples.in/category/aditya-temples/vimal-aditya/" target="_blank">https://varanasitemples.in/category/aditya-temples/vimal-aditya/</a></td>
+    </tr>
+    <tr>
+      <td class="key">&#128194; Exact Mirror Path:</td>
+      <td><code>Kashi_Exact_Offline_Website/category/aditya-temples/vimal-aditya/index.html</code></td>
+    </tr>
+    <tr>
+      <td class="key">&#128214; Scripture Authority:</td>
+      <td>Skanda Purana — Kashi Khand (Sanctum established by Lord Surya)</td>
+    </tr>
+  </table>
+</div>
+
+
+<div class="article-body-container">
+  
+
+
+
+          <p>Long time back, one person named Vimal was residing in a hilly place.  Due to some sins committed in his earlier life, he was afflicted with Leprosy.  He had heard about Kashi and he left his family and belongings, came to Kashi and started worshipping Lord Surya with all fervour.</p>
+<p>He performed all sorts of Poojas, Pushp Archana and other rituals as are prescribed for Lord Surya.  His pious actions pleased Lord Surya who appeared before him and with his divine blessings, Vimal was cured of his ailment (Leprosy).  Lord Surya also offered a divine wish to Vimal.</p>
+<p><img class="aligncenter wp-image-3337 temple-pdf-img" src="file:///C:/Users/koppi/Downloads/Kashi_Offline_Guide_Pack/assets/images/vimal-new.jpeg" alt="vimal new" width="350" height="380"   /></p>
+
+<p style="text-align: center;"><strong>(VIMAL ADITYA)</strong></p>
+<p>Vimal appealed to Lord Surya that all his devotees should never be afflicted by this dreaded disease.  They should not face any sort of difficulties in their life.  Lord Surya granted accordingly and stated that devotees will know him as Vimal Aditya at that place.  Further, Lord Surya will always remain in the idol of Vimal Aditya and will continue to bless his devotees.</p>
+<p>According to Kashi Khand, a mere darshan of Vimal Aditya is capable enough to cure all kinds of diseases.</p>
+
+<p><strong>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-</strong></p>
+<p><strong>Kashi Khand, Chapter 51, Shlok 97</strong></p>
+<p><strong>विमलादित्य इत्याख्या भक्तानां वरदा सदा</strong></p>
+<p><strong>सर्वव्याधिनिहन्त्री च सर्वपापक्षयंकरी  </strong></p>
+
+<p><strong>According to Lord Surya, this deity will be  called Vimal Aditya and this idol will always bless the devotees, destroy all their illness and cleanse all their sins. </strong></p>
+<p><strong>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;</strong></p>
+
+<p><strong><span style="text-decoration: underline;">LOCATION OF VIMAL ADITYA</span></strong></p>
+<p>Vimal Aditya is located at No. D-35/273, Gully behind Khari Kuan, Jangambari, near Godowlia.  People can reach this place by rickshaw.</p>
+
+<h3><strong>Please watch our YouTube Video about Vimal Aditya at following Link</strong></h3>
+
+<p><a href="https://www.youtube.com/watch?v=zGk_LHQDrTU&amp;t=5s">https://www.youtube.com/watch?v=zGk_LHQDrTU&amp;t=5s</a></p>
+
+
+<p><strong><span style="text-decoration: underline;">TYPES OF POOJA PERFORMED</span></strong></p>
+<p>The place of worship remains practially open throughout.  Shri Rohit Kapooria is can be contacted at his cell number 7839361621 for performing any pooja or  Jap at this temple.</p>
+               
+
+
+</div>
+
+
+<div class="info-grid">
+  <div class="info-cell">
+    <div class="info-panel">
+      <h4>&#128205; Location & Approach Route</h4>
+      <p style="margin-bottom:4pt;"><strong>Address:</strong> Please watch our YouTube Video about Arun Aditya at following Link
+https://www.youtube.com/watch?v=OQNxSl_krFY</p>
+      <p style="margin-bottom:4pt;"><strong>Nearby Ghat / Landmark:</strong> Not directly on a riverfront ghat</p>
+      <p style="margin-bottom:0;"><strong>Geographic Zone:</strong> Zone unverified — location evidence insufficient</p>
+    </div>
+  </div>
+  <div class="info-cell">
+    <div class="info-panel">
+      <h4>&#9200; Darshan & Pooja Arrangements</h4>
+      <p style="margin-bottom:4pt;"><strong>Timings:</strong> S
+The temple is open for worship 05.30 a.m. to 12.00 noon and 05.00 p.m. to 11 p.m.  Mangala Aarti is performed at 05.30 a.m. and Shayan Aarti at 11.00 p.m. For doing special pooja etc., it is advisable to consult the Poojari before hand.</p>
+      <p style="margin-bottom:0;"><strong>Pooja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.</p>
+    </div>
+  </div>
+</div>
+
+
+<div class="links-box">
+  <div style="font-weight:700; color:#1e40af; margin-bottom:3pt;">&#128279; Digital Reference Links (Requires Internet):</div>
+  <strong>Temple Darshan Video:</strong> <a href="https://www.youtube.com/watch?v=OQNxSl_krFY" target="_blank">https://www.youtube.com/watch?v=OQNxSl_krFY</a><br><strong>YouTube Video:</strong> <a href="https://www.youtube.com/watch?v=zGk_LHQDrTU&amp;t=5s" target="_blank">https://www.youtube.com/watch?v=zGk_LHQDrTU&amp;t=5s</a>
+</div>
+
+
+<div class="page-break"></div>
+<div class="article-header-banner">
+  <div class="article-number-badge">DWADASHA ADITYA #11</div>
+  <div class="article-main-title">VRIDDH ADITYA</div>
+  <div class="article-subtitle">The Ancient Sun • Restorer of Sage Harita’s Youth & Vitality</div>
+</div>
+
+<div class="provenance-box">
+  <table>
+    <tr>
+      <td class="key">&#127760; Original Live URL:</td>
+      <td><a href="https://varanasitemples.in/category/aditya-temples/vriddh-aditya/" target="_blank">https://varanasitemples.in/category/aditya-temples/vriddh-aditya/</a></td>
+    </tr>
+    <tr>
+      <td class="key">&#128194; Exact Mirror Path:</td>
+      <td><code>Kashi_Exact_Offline_Website/category/aditya-temples/vriddh-aditya/index.html</code></td>
+    </tr>
+    <tr>
+      <td class="key">&#128214; Scripture Authority:</td>
+      <td>Skanda Purana — Kashi Khand (Sanctum established by Lord Surya)</td>
+    </tr>
+  </table>
+</div>
+
+
+<div class="article-body-container">
+  
+
+
+
+          <p>According to Kashi Khand, once a staunch devotee called Harit, who was very old in age, stationed himself near Visalakshi Devi and intensely prayed to Lord Surya. After a long time, Lord Surya appeared before him and told the old man that he (Lord Surya) was pleased and the old man may seek any divine boon.</p>
+<p>The old man said “for performing Tap (Tapas – rigorous ascetic practices), a devotee needs sufficient strength. There is nothing in this world as good as Tapas which gives prosperity, enlightenment and all joys.  However, one needs to be young and virile enough for carrying out Tapas.” Accordingly, the old man requested Lord Surya that he should be made young.</p>
+<p><img class="aligncenter wp-image-3341 temple-pdf-img" src="file:///C:/Users/koppi/Downloads/Kashi_Offline_Guide_Pack/assets/images/Vriddh-Aditya-Inner-Photo-1.jpg" alt="Vriddh Aditya (Inner Photo)" width="300" height="271"   /></p>
+<p style="text-align: center;"><strong>(VRIDDH ADITYA &#8211; INNER PHOTO)</strong></p>
+<p>Lord Surya was deeply moved by the sincerity and devotion of the old man and he granted boon accordingly. Thus the old man became young. Since Lord Surya was eulogized  by an old man at that place, the Lord came to be known as Vriddh Aditya at that place.  According to Kashi Khand, a person who regularly prays to Vriddh Aditya will always remain energetic like a young man.</p>
+<p><img class="aligncenter wp-image-3342 temple-pdf-img" src="file:///C:/Users/koppi/Downloads/Kashi_Offline_Guide_Pack/assets/images/Vriddh-Aditya-Outer-Photo-1.jpg" alt="Vriddh Aditya (Outer Photo)" width="304" height="254"   /></p>
+
+<p style="text-align: center;"><strong>(VRIDDH ADITYA &#8211; OUTSIDE PHOTO)</strong></p>
+
+<p><strong>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-</strong></p>
+<p><strong> </strong></p>
+<p><strong>Kashi Khand, Chapter 51, Shlok 43</strong></p>
+<p><strong> </strong></p>
+<p><strong>वृद्धादित्यं नमस्कृत्य वाराणस्यां रवौ नर:</strong></p>
+<p><strong>लभेदभीप्सितां सिद्धिं न क्वचिद्दुर्गतिं लभेत्</strong></p>
+
+<p><strong>Whoever worships Vridhaditya on Sundays in Varanasi region, he will never suffer misery. That person  gets his desired achievement/accomplishment. </strong></p>
+<p><strong> </strong></p>
+<p><strong>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;</strong></p>
+
+<p><strong><span style="text-decoration: underline;">LOCATION OF VRIDDH ADITYA</span></strong></p>
+<p>Vriddh Aditya is located at D-3/15, South of Bare Hanumanji at Mir Ghat.  Devotees can approach this place by traveling upto Dasaswamdh Vishwanath Gulli by rickshaw and then on foot in the Gully.  Alternatively, they can take a boat ride upto Mir Ghat and climb up the stairs.</p>
+<p>Location of Vriddh Aditya temple as per Google Maps is as per the following Link :<a href="https://www.google.com/maps/place/Vriddha+Aditya+Mandir+-+Dwadash+Aditya+Kashi+Khand/@25.309506,83.0095866,17z/data=!3m1!4b1!4m5!3m4!1s0x398e2f5290925235:0xaf09add8cf2f3ca7!8m2!3d25.3095014!4d83.0117713">https://www.google.com/maps/place/Vriddha+Aditya+Mandir+-+Dwadash+Aditya+Kashi+Khand/@25.309506,83.0095866,17z/data=!3m1!4b1!4m5!3m4!1s0x398e2f5290925235:0xaf09add8cf2f3ca7!8m2!3d25.3095014!4d83.0117713</a></p>
+
+
+<h3><strong>Please watch our YouTube Video about Vriddh Aditya at following Link</strong></h3>
+<p><strong> </strong></p>
+<p><a href="https://www.youtube.com/watch?v=YQ82l_QM0Wg&amp;t=34s">https://www.youtube.com/watch?v=YQ82l_QM0Wg&amp;t=34s</a></p>
+
+
+<p><strong><span style="text-decoration: underline;">TYPES OF POOJA PERFORMED</span></strong></p>
+<p>The temple is open for worship from 06.30 a.m. to 09.30 p.m.  The timings may change. While the idol is situated inside the premises, there is a Surya Chakra in the outer wall of the premises. Devotees can pray/perform pooja on their own.</p>
+               
+
+
+</div>
+
+
+<div class="info-grid">
+  <div class="info-cell">
+    <div class="info-panel">
+      <h4>&#128205; Location & Approach Route</h4>
+      <p style="margin-bottom:4pt;"><strong>Address:</strong> Please watch our YouTube Video about Arun Aditya at following Link
+https://www.youtube.com/watch?v=OQNxSl_krFY</p>
+      <p style="margin-bottom:4pt;"><strong>Nearby Ghat / Landmark:</strong> Not directly on a riverfront ghat</p>
+      <p style="margin-bottom:0;"><strong>Geographic Zone:</strong> Zone unverified — location evidence insufficient</p>
+    </div>
+  </div>
+  <div class="info-cell">
+    <div class="info-panel">
+      <h4>&#9200; Darshan & Pooja Arrangements</h4>
+      <p style="margin-bottom:4pt;"><strong>Timings:</strong> S
+The temple is open for worship 05.30 a.m. to 12.00 noon and 05.00 p.m. to 11 p.m.  Mangala Aarti is performed at 05.30 a.m. and Shayan Aarti at 11.00 p.m. For doing special pooja etc., it is advisable to consult the Poojari before hand.</p>
+      <p style="margin-bottom:0;"><strong>Pooja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.</p>
+    </div>
+  </div>
+</div>
+
+
+<div class="links-box">
+  <div style="font-weight:700; color:#1e40af; margin-bottom:3pt;">&#128279; Digital Reference Links (Requires Internet):</div>
+  <strong>Temple Darshan Video:</strong> <a href="https://www.youtube.com/watch?v=OQNxSl_krFY" target="_blank">https://www.youtube.com/watch?v=OQNxSl_krFY</a><br><strong>Google Maps:</strong> <a href="https://www.google.com/maps/place/Vriddha+Aditya+Mandir+-+Dwadash+Aditya+Kashi+Khand/@25.309506,83.0095866,17z/data=!3m1!4b1!4m5!3m4!1s0x398e2f5290925235:0xaf09add8cf2f3ca7!8m2!3d25.3095014!4d83.0117713" target="_blank">https://www.google.com/maps/place/Vriddha+Aditya+Mandir+-+Dwadash+Aditya+Kashi+Khand/@25.3...</a><br><strong>YouTube Video:</strong> <a href="https://www.youtube.com/watch?v=YQ82l_QM0Wg&amp;t=34s" target="_blank">https://www.youtube.com/watch?v=YQ82l_QM0Wg&amp;t=34s</a>
+</div>
+
+
+<div class="page-break"></div>
+<div class="article-header-banner">
+  <div class="article-number-badge">DWADASHA ADITYA #12</div>
+  <div class="article-main-title">YAMA ADITYA</div>
+  <div class="article-subtitle">Lord Dharmaraja’s Devotion • Shield from Premature Death & Torments</div>
+</div>
+
+<div class="provenance-box">
+  <table>
+    <tr>
+      <td class="key">&#127760; Original Live URL:</td>
+      <td><a href="https://varanasitemples.in/category/aditya-temples/yama-aditya/" target="_blank">https://varanasitemples.in/category/aditya-temples/yama-aditya/</a></td>
+    </tr>
+    <tr>
+      <td class="key">&#128194; Exact Mirror Path:</td>
+      <td><code>Kashi_Exact_Offline_Website/category/aditya-temples/yama-aditya/index.html</code></td>
+    </tr>
+    <tr>
+      <td class="key">&#128214; Scripture Authority:</td>
+      <td>Skanda Purana — Kashi Khand (Sanctum established by Lord Surya)</td>
+    </tr>
+  </table>
+</div>
+
+
+<div class="article-body-container">
+  
+
+
+
+          <p>Once Yamraj installed one Shiv Ling and one idol for Lord Surya in Yam Teerth and performed rigorous Tapas. The Shiv Ling came to be known as Yameshwar and the idol of Lord Surya came to be known as Yama Aditya.</p>
+<p>Kashi Khand states that if a person takes bath in Yama Teerth (now Ganges at Sankata Ghat), worships Yameshwar and Yama Aditya, such devotee will never experience the tortures of Hell. (He will reach heaven after his death).</p>
+<p><img class="aligncenter wp-image-3345 temple-pdf-img" src="file:///C:/Users/koppi/Downloads/Kashi_Offline_Guide_Pack/assets/images/Yam-Aditya-1.jpg" alt="Yam Aditya" width="365" height="221"   /></p>
+<p style="text-align: center;"><strong>(YAMA ADITYA)</strong></p>
+<p>On an auspicious day when Tuesday, Bharani Nakshatra and Chaturdasi (14<sup>th</sup> day after Amavasya or Poornima) coincide, if a person performs rituals for his forefathers, he will attain all round happiness.  It is believed that forefathers eagerly wait for their descendents to take bath in Yam Teerth and perform the rituals on the aforesaid day.</p>
+<p>A person who prays to Yama Aditya and Yameshwar after taking bath in Yama Teerth will always remain happy.</p>
+
+<p><strong>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-</strong></p>
+<p><strong> </strong></p>
+<p><span style="text-decoration: underline;"><strong>Kashi Khand, Chapter 51, Shlok 106</strong></span></p>
+<p><strong> </strong></p>
+<p><strong>यमेशात्पश्चिमे  भागे वीरेशात्पूर्वतो </strong></p>
+<p><strong>यमादित्यं नरो दृष्ट्वा यमलोकं न पश्यति</strong></p>
+
+<p><strong>Yamaditya, whose darshan ensures that one never has to see Yamaloka ever, is situated on the western side of Yameshwar  and the eastern side of  (Atma) Veereshwar.</strong></p>
+<p><strong> </strong></p>
+<p><strong>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;</strong></p>
+
+<p><strong><span style="text-decoration: underline;">LOCATION OF YAMA ADITYA</span></strong></p>
+<p>Yama Aditya is located at No. Ck.7/135, on the steps leading to  Sankata Ghat.  People can travel upto Chowk by rickshaw and travel to this place on foot.  Sankata Devi temple is an important landmark. Alternatively, they can have a boat ride upto Sankata Ghat and climb the steps.</p>
+
+<p><strong>Please watch our YouTube Video about Yama Aditya at following Link</strong></p>
+
+<p><a href="https://www.youtube.com/watch?v=YQ82l_QM0Wg&amp;t=34s">https://www.youtube.com/watch?v=YQ82l_QM0Wg&amp;t=34s</a></p>
+
+
+<p><strong><span style="text-decoration: underline;">TYPES OF POOJA PERFORMED</span></strong></p>
+<p>Devotees can have darshan practically throughout the day.</p>
+               
+
+
+</div>
+
+
+<div class="info-grid">
+  <div class="info-cell">
+    <div class="info-panel">
+      <h4>&#128205; Location & Approach Route</h4>
+      <p style="margin-bottom:4pt;"><strong>Address:</strong> Please watch our YouTube Video about Arun Aditya at following Link
+https://www.youtube.com/watch?v=OQNxSl_krFY</p>
+      <p style="margin-bottom:4pt;"><strong>Nearby Ghat / Landmark:</strong> Not directly on a riverfront ghat</p>
+      <p style="margin-bottom:0;"><strong>Geographic Zone:</strong> Zone unverified — location evidence insufficient</p>
+    </div>
+  </div>
+  <div class="info-cell">
+    <div class="info-panel">
+      <h4>&#9200; Darshan & Pooja Arrangements</h4>
+      <p style="margin-bottom:4pt;"><strong>Timings:</strong> S
+The temple is open for worship 05.30 a.m. to 12.00 noon and 05.00 p.m. to 11 p.m.  Mangala Aarti is performed at 05.30 a.m. and Shayan Aarti at 11.00 p.m. For doing special pooja etc., it is advisable to consult the Poojari before hand.</p>
+      <p style="margin-bottom:0;"><strong>Pooja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.</p>
+    </div>
+  </div>
+</div>
+
+
+<div class="links-box">
+  <div style="font-weight:700; color:#1e40af; margin-bottom:3pt;">&#128279; Digital Reference Links (Requires Internet):</div>
+  <strong>Temple Darshan Video:</strong> <a href="https://www.youtube.com/watch?v=OQNxSl_krFY" target="_blank">https://www.youtube.com/watch?v=OQNxSl_krFY</a><br><strong>YouTube Video:</strong> <a href="https://www.youtube.com/watch?v=YQ82l_QM0Wg&amp;t=34s" target="_blank">https://www.youtube.com/watch?v=YQ82l_QM0Wg&amp;t=34s</a>
+</div>
+
+
+<div class="page-break"></div>
+<h1>&#128506; Appendix: Practical One-Day Dwadasa Aditya Pilgrimage Circuit</h1>
+<p style="font-size:9.5pt; color:#4b5563;">
+  For devotees undertaking the sacred Dwadasha Aditya Yatra in Varanasi, visiting all twelve solar sanctums in a single day is a deeply purifying traditional observance. Below is the optimized geographical itinerary organized by cluster to avoid backtracking through the narrow galis.
+</p>
+
+<table class="toc-table">
+  <thead>
+    <tr>
+      <th style="width:18%;">Timing</th>
+      <th style="width:28%;">Shrines & Sanctums</th>
+      <th style="width:34%;">Route & Approach Instructions</th>
+      <th style="width:20%;">Zone Cluster</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>05:30 – 07:00</strong></td>
+      <td><strong>#6. Lolark Aditya</strong><br>(Holy Snan at Lolark Kund)</td>
+      <td>Begin at Tulsi Ghat / Assi. Take early holy snan at Lolark Kund. Proceed via cycle rickshaw along Sonarpura road.</td>
+      <td><span class="badge-tag badge-south">South Kashi</span></td>
+    </tr>
+    <tr>
+      <td><strong>07:15 – 08:30</strong></td>
+      <td><strong>#8. Saamba Aditya</strong><br>(Suraj Kund Sanctum)</td>
+      <td>Reach Suraj Kund near Luxa Road / Gurubagh. Visit the large sacred kund constructed by Krishna's son Saamba.</td>
+      <td><span class="badge-tag badge-west">West Kashi</span></td>
+    </tr>
+    <tr>
+      <td><strong>08:45 – 09:30</strong></td>
+      <td><strong>#10. Vimal Aditya</strong><br>(Khari Kuan, Jangambari)</td>
+      <td>Walk into the alley behind Khari Kuan, Jangambari near Godowlia. Stainless solar sanctum for morning darshan.</td>
+      <td><span class="badge-tag badge-south">South-Central</span></td>
+    </tr>
+    <tr>
+      <td><strong>09:45 – 11:30</strong></td>
+      <td><strong>#11. Vriddh Aditya (Mir Ghat)</strong><br><strong>#3. Ganga Aditya (Lalita Ghat)</strong><br><strong>#2. Draupad Aditya (Corridor)</strong></td>
+      <td>Enter Dashashwamedh / Vishwanath area on foot. Mir Ghat (Vriddha Aditya) &rarr; Lalita Ghat below Nepali temple (Ganga Aditya) &rarr; Vishwanath Temple corridor (Draupad Aditya).</td>
+      <td><span class="badge-tag badge-east">Central Ghats</span></td>
+    </tr>
+    <tr>
+      <td><strong>11:45 – 12:45</strong></td>
+      <td><strong>#12. Yama Aditya (Sankata Ghat)</strong><br><strong>#7. Mayukh Aditya (Mangala Gauri)</strong></td>
+      <td>Walk northwards along riverfront: Sankata Ghat steps (Yama Aditya) &rarr; climb steps to Mangala Gauri (Mayukh Aditya). Concludes morning session before temple midday closures.</td>
+      <td><span class="badge-tag badge-east">East Ghats</span></td>
+    </tr>
+    <tr>
+      <td><strong>13:00 – 16:00</strong></td>
+      <td><em>Midday Rest & Temple Closures</em></td>
+      <td>Most sanctums close between 1:00 PM and 4:00 PM. Rest and take prasadam.</td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <td><strong>16:15 – 17:30</strong></td>
+      <td><strong>#1. Arun Aditya (Trilochan)</strong><br><strong>#5. Khakholkh Aditya (Kameshwar)</strong></td>
+      <td>Auto-rickshaw to Machhodari / Prahlad Ghat. Arun Aditya near Trilochan Ghat &rarr; Khakholkh Aditya inside Kameshwar complex.</td>
+      <td><span class="badge-tag badge-north">North Kashi</span></td>
+    </tr>
+    <tr>
+      <td><strong>17:45 – 18:45</strong></td>
+      <td><strong>#9. Uttarark Aditya</strong><br>(Bakaria Kund, Alaipur)</td>
+      <td>Take auto north to Alaipur near Varanasi City Station. Large ancient reservoir of Bakaria Kund.</td>
+      <td><span class="badge-tag badge-north">Outer North</span></td>
+    </tr>
+    <tr>
+      <td><strong>19:00 – 20:00</strong></td>
+      <td><strong>#4. Keshava Aditya</strong><br>(Adi Keshav, Varuna Sangam)</td>
+      <td>Final destination at the historic confluence of Varuna and Ganga at Rajghat Fort. Concludes the complete Dwadasha Aditya Parikrama with auspicious evening aarti.</td>
+      <td><span class="badge-tag badge-north">Confluence Terminus</span></td>
+    </tr>
+  </tbody>
+</table>
+
+<div style="margin-top:24pt; border-top:1px solid #d1d5db; padding-top:10pt; font-size:8.5pt; color:#6b7280; text-align:center;">
+  <strong>END OF KASHI DWADASHA ADITYA PILGRIMAGE GUIDE</strong> &bull; Compiled from Authorised Website Archive: <a href="https://varanasitemples.in/">https://varanasitemples.in/</a>
+</div>
+
+
+</body>
+</html>

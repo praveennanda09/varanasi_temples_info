@@ -1,0 +1,2144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shiva Temples & 12 Kashi Jyotirlinga Counterparts — Kashi Offline Guide</title>
+  <style>
+    
+:root {
+  --primary: #8b1e0f;
+  --primary-dark: #5c1007;
+  --secondary: #d97706;
+  --accent: #b45309;
+  --bg: #fdfbf7;
+  --card-bg: #ffffff;
+  --text: #1f2937;
+  --text-muted: #4b5563;
+  --border: #e5e7eb;
+  --north: #1e40af;
+  --south: #15803d;
+  --east: #b45309;
+  --west: #6b21a8;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--text);
+  background-color: var(--bg);
+  padding-bottom: 60px;
+}
+
+header {
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: #fff;
+  padding: 24px 16px;
+  text-align: center;
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+  position: relative;
+}
+
+header h1 {
+  font-size: 1.6rem;
+  margin-bottom: 8px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+header p {
+  font-size: 0.95rem;
+  opacity: 0.9;
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.nav-bar {
+  background: #374151;
+  padding: 10px 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.nav-bar a {
+  color: #f3f4f6;
+  text-decoration: none;
+  font-size: 0.85rem;
+  padding: 6px 12px;
+  border-radius: 4px;
+  background: rgba(255,255,255,0.1);
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.nav-bar a:hover, .nav-bar a.active {
+  background: var(--secondary);
+  color: #fff;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.intro-box {
+  background: #fff;
+  border-left: 4px solid var(--secondary);
+  padding: 16px;
+  margin-bottom: 24px;
+  border-radius: 0 8px 8px 0;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.intro-box h2 {
+  font-size: 1.2rem;
+  color: var(--primary);
+  margin-bottom: 8px;
+}
+
+.zone-heading {
+  margin: 28px 0 16px 0;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.zone-north { background: var(--north); }
+.zone-south { background: var(--south); }
+.zone-east { background: var(--east); }
+.zone-west { background: var(--west); }
+.zone-other { background: #4b5563; }
+
+.temple-card {
+  background: var(--card-bg);
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  margin-bottom: 16px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  overflow: hidden;
+}
+
+.temple-header {
+  padding: 14px 16px;
+  background: #fff;
+  border-bottom: 1px solid var(--border);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  position: relative;
+}
+
+.temple-header:hover {
+  background: #f9fafb;
+}
+
+.temple-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.temple-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+}
+
+.badge {
+  font-size: 0.75rem;
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.badge-zone-north { background: #dbeafe; color: var(--north); }
+.badge-zone-south { background: #dcfce7; color: var(--south); }
+.badge-zone-east { background: #ffedd5; color: var(--east); }
+.badge-zone-west { background: #f3e8ff; color: var(--west); }
+.badge-zone-other { background: #f3f4f6; color: #4b5563; }
+
+.temple-sub {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.temple-body {
+  padding: 16px;
+}
+
+.temple-img-container {
+  margin-bottom: 16px;
+  text-align: center;
+  background: #f3f4f6;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.temple-img {
+  max-width: 100%;
+  height: auto;
+  max-height: 400px;
+  display: block;
+  margin: 0 auto;
+  object-fit: contain;
+}
+
+.img-caption {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  padding: 6px 10px;
+  background: #eee;
+  font-style: italic;
+}
+
+.detail-section {
+  margin-bottom: 14px;
+}
+
+.detail-label {
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--primary);
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.detail-content {
+  font-size: 0.92rem;
+  color: var(--text);
+  line-height: 1.55;
+  white-space: pre-line;
+}
+
+.sanskrit-box {
+  background: #fffbeb;
+  border-left: 3px solid var(--secondary);
+  padding: 10px 14px;
+  margin: 8px 0;
+  font-family: "Georgia", serif;
+  font-size: 0.95rem;
+  color: #78350f;
+  line-height: 1.6;
+}
+
+.links-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px dashed var(--border);
+}
+
+.btn-link {
+  font-size: 0.8rem;
+  padding: 5px 10px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.btn-mirror {
+  background: #eff6ff;
+  color: #1d4ed8;
+  border: 1px solid #bfdbfe;
+}
+
+.btn-mirror:hover { background: #dbeafe; }
+
+.btn-live {
+  background: #f3f4f6;
+  color: #4b5563;
+  border: 1px solid #d1d5db;
+}
+
+.btn-live:hover { background: #e5e7eb; }
+
+/* Filter / Search Bar */
+.search-box {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 1rem;
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  margin-bottom: 16px;
+  outline: none;
+  background: #fff;
+}
+
+.search-box:focus {
+  border-color: var(--secondary);
+}
+
+.filter-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.filter-pill {
+  padding: 6px 12px;
+  border-radius: 16px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  background: #fff;
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+}
+
+.filter-pill.active {
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+}
+
+/* Itinerary Table */
+.itinerary-day {
+  background: #fff;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  margin-bottom: 20px;
+  padding: 16px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.itinerary-day h3 {
+  color: var(--primary);
+  border-bottom: 2px solid #fef3c7;
+  padding-bottom: 6px;
+  margin-bottom: 12px;
+  font-size: 1.15rem;
+}
+
+.itinerary-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 8px;
+  font-size: 0.88rem;
+}
+
+.itinerary-table th, .itinerary-table td {
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+}
+
+.itinerary-table th {
+  background: #f9fafb;
+  color: var(--text-muted);
+}
+
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Shiva Temples & 12 Kashi Jyotirlinga Counterparts</h1>
+  <p>Authentic scriptural narratives, Kashi Khand citations, verified addresses, and offline photographs from varanasitemples.in</p>
+</header>
+
+
+<div class="nav-bar">
+  <a href="Kashi_Pilgrimage_Master_Index.html">&#127963; Master Index</a>
+  <a href="01_Surya_Dwadasa_Aditya.html">&#9728; Surya (12 Aditya)</a>
+  <a href="02_Bhairav_Temples.html">&#128081; Bhairav (9 Temples)</a>
+  <a href="03_Devi_and_Dashamaha_Vidya.html">&#128330; Devi & Mahavidya</a>
+  <a href="04_Shiva_and_Kashi_Jyotirlingas.html">&#128740; Shiva & Jyotirlingas</a>
+  <a href="05_Vinayaka_Temples.html">&#128024; Vinayaka Temples</a>
+  <a href="06_Vishnu_Temples.html">&#127807; Vishnu Temples</a>
+  <a href="Kashi_Exact_Offline_Website/index.html">&#128194; Exact Website Mirror</a>
+</div>
+
+
+<div class="container">
+  
+<div class="intro-box">
+  <h2>Pan-India Jyotirlingas & Their Kashi Counterparts</h2>
+  <p>The author of <em>varanasitemples.in</em> highlights that a devotee unable to travel across India can attain the full merit of all twelve Jyotirlingas simply by taking darshan of their established Kashi counterpart shrines:</p>
+  
+  <div style="overflow-x:auto; margin-top:12px;">
+    <table class="itinerary-table" style="font-size:0.83rem;">
+      <thead>
+        <tr>
+          <th>Pan-India Jyotirlinga</th>
+          <th>Original Location</th>
+          <th>Corresponding Temple in Kashi</th>
+          <th>Kashi Locality</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>1. Somnath</strong></td><td>Saurashtra, Gujarat</td><td><strong>Someshwar</strong></td><td>Man Mandir Ghat</td></tr>
+        <tr><td><strong>2. Mallikarjun</strong></td><td>Shri Shailam, Andhra</td><td><strong>Tripurantakeshwar</strong></td><td>Sigra</td></tr>
+        <tr><td><strong>3. Mahakaleshwar</strong></td><td>Ujjain, Madhya Pradesh</td><td><strong>Mahakaleshwar</strong></td><td>Daranagar</td></tr>
+        <tr><td><strong>4. Omkareshwar</strong></td><td>Near Indore, MP</td><td><strong>Omkareshwar</strong></td><td>Beyond Machhodari</td></tr>
+        <tr><td><strong>5. Baijnath</strong></td><td>Parli / Deoghar (Bihar)</td><td><strong>Baijnatheshwar</strong></td><td>Kamachha</td></tr>
+        <tr><td><strong>6. Bheema Shankar</strong></td><td>Pune, Maharashtra</td><td><strong>Bheemeshwar</strong></td><td>Kashi Karvat Temple</td></tr>
+        <tr><td><strong>7. Rameshwar</strong></td><td>Tamil Nadu</td><td><strong>Ganeshwar (Rameshwar)</strong></td><td>Man Mandir Ghat</td></tr>
+        <tr><td><strong>8. Nageshwar</strong></td><td>Dwarka / Aundha</td><td><strong>Nageshwar</strong></td><td>Bhonsla Ghat</td></tr>
+        <tr><td><strong>9. Visweshwar</strong></td><td>Kashi (Varanasi)</td><td><strong>Visweshwar (Vishwanath)</strong></td><td>Main Golden Temple</td></tr>
+        <tr><td><strong>10. Triambakeshwar</strong></td><td>Nashik, Maharashtra</td><td><strong>Triambakeshwar</strong></td><td>Godowlia</td></tr>
+        <tr><td><strong>11. Kedareshwar</strong></td><td>Uttarakhand</td><td><strong>Kedareshwar</strong></td><td>Kedar Ghat</td></tr>
+        <tr><td><strong>12. Grishneshwar</strong></td><td>Ellora, Maharashtra</td><td><strong>Grishneshwar</strong></td><td>Kamakhya Devi Temple</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+  <input type="text" id="searchInput" class="search-box" placeholder="&#128269; Search temples by name, locality, or address..." onkeyup="filterTemples()">
+
+  
+        <div class="zone-heading zone-north">
+          <span>North Kashi</span>
+          <span style="font-size:0.85rem; font-weight:normal;">(6 shrines)</span>
+        </div>
+        
+
+    <div class="temple-card" data-zone="North Kashi" data-name="omkareshwar kapileshwar and nadeshwar">
+      <div class="temple-header">
+        <div class="temple-title-row">
+          <div class="temple-title">Omkareshwar</div>
+          <span class="badge badge-zone-north">North Kashi</span>
+        </div>
+        <div class="temple-sub">
+          <strong>Form:</strong> Main Shiva Temple & Omkareshwar Counterpart (Jyotirlinga #4) | <strong>Alt:</strong> Kapileshwar and Nadeshwar
+        </div>
+      </div>
+      <div class="temple-body">
+        
+        <div class="temple-img-container">
+          <img class="temple-img" src="Kashi_Exact_Offline_Website/assets/images/Omkareshwar-1.jpg" alt="Omkareshwar" loading="eager" onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src=\'assets/images/\' + this.src.split(\'/\').pop();}" >
+          <div class="img-caption">Omkareshwar</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128214; Puranic Origin & Significance</div>
+          <div class="detail-content">According to Kashi Khand, Chapter 73, Goddess Parvati wanted to know about Omkareshwar Ling and Lord Shiva narrated as under :
+
+Once Lord Brahma underwent severe penance for several long years and a mighty or very strong force erupted from beneath, piercing the ground, radiating divine light all over. This assumed the form of a divine Ling and Lord Brahma beheld a divine energy which was representative of all the Vedas (Rig, Yajur and Sam Veda), the energy which represented Akaar, Ukaar and Makaar.  Lord Brahma saw in that divine light, the energy of OM which governs the entire universe.
+
+Lord Brahma visualized a creature with four horns, seven hands, two heads. The Lord also saw a divine energy encompassing  all the Vedas, Puranas, five Brahms (Akaar, Ukaar, Makaar, Naad and Bindu).  Lord Brahma was so enchanted with the Panchakshara Ling (Panch+Akshar means five letters mentioned within the coasts above) that he started singing praises of Lord Shiva whom he could visualize in person, standing in front.
+
+Kashi Khand has described in detail the praises and eulogy which were expressed by Lord Brahma in veneration of Lord Shiva.  Very pleased with the prayers of Lord Brahma, Lord Shiva granted a divine boon to the former.  Lord Brahma desired that Lord Shiva should always be present in the Shiv Ling which had appeared as a Divine energy and the name of the Ling should be Omkareshwar. Lord Shiva granted accordingly and stated that the Shiv Ling was to be called  Shiva Panchayatan, symbolic of Akaar, Ukaar, Makaar, Naad and Bindu.
+
+(OMKARESHWAR)
+
+A devotee who takes a holy dip in Matsyodari Teerth and worships Omkareshwar will not have the fear of rebirth.  A person who worships Omkareshwar will derive the benefits accruing out of performing Ashwa Medha Yagna.  According to Kashi Khand, worshipping Omkareshwar is equivalent to reciting one lakh Rudra Japam and is also equivalent to worshipping all the Shiv Lings in the world. Relevant shlokas from Kashi Khand are given below.
+
+-----------------------------------
+
+Kashi Khand, Chapter 73, Shlok 169
+
+रुद्राणां नियुतं जप्त्वा यत्फलम् सम्यगाप्यते
+
+तत्फलं लभते नूनं भक्त्योङ्कारविलोकनात्
+
+By worshipping Omkareshwar Ling in Kashi, the devotee derives punya benefits of reciting one lakh rudra japam.
+
+-----------------------------------
+
+Kashi Khand, Chapter 73, Shlok 171
+
+एकमोंकारमालोक्य समस्ते क्षोणिमण्डले
+
+लिङ्गजातानी सर्वाणि दृष्टानि स्युर्न संशय:
+
+Worshipping Omkareshwar will give punya of worshipping all groups of Shiv Lings in the world.
+
+-----------------------------------
+
+A person who is a devotee of Omkareshwar will attain Mukti even if he dies at any place other than Kashi. Lord Shiva told Lord Brahma that with the radiating energy of Omkareshwar, Lord Brahma will be successful in his job of creating human beings. After granting all the boons to Lord Brahma, Lord Shiva disappeared inside the Ling.
+
+Earlier there were five Shiv Lings representing Shiva Panchayatan viz. Akaareshwar, Omkareshwar, Makaareshwar, Naadeshwar and Bindu Ling.  Now there are only three Lings, Akaareshwar, Omkareshwar and Makaareshwar.
+
+Omkareshwar Ling is also known as Kapileshwar and Nadeshwar. Omkareshwar ling was stated to be on the banks of Matsyodari Teerth where, during rainy season, the rising river Ganges also  used to join.
+
+According to Kashi Khand (Chapter 73), on Ashtami and Chaturdasi days, having a bath in Matsyodari Teerth and praying to Lord Omkareshwar, will cleanse the devotee of all sins.  A person praying at Lord  Omkareshwar temple is really lucky and will find place in heaven. His ancestors plunge into ecstasy on seeing their descendent praying at the above temple.</div>
+        </div>
+
+        
+        <div class="detail-section">
+          <div class="detail-label">&#128366; Sanskrit Verses (Kashi Khand)</div>
+          <div class="sanskrit-box">रुद्राणां नियुतं जप्त्वा यत्फलम् सम्यगाप्यते
+तत्फलं लभते नूनं भक्त्योङ्कारविलोकनात्
+एकमोंकारमालोक्य समस्ते क्षोणिमण्डले
+लिङ्गजातानी सर्वाणि दृष्टानि स्युर्न संशय:</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128205; Location & Approach Route</div>
+          <div class="detail-content">
+            <strong>Stated Address:</strong> A-33/23, Pathani Tola, North of Machhodari.  Matsyodari Teerth as mentioned in Kashi Khand has dried up now and the locality is known as Macchodari<br>
+            <strong>Nearby Ghat:</strong> Not directly on a riverfront ghat<br>
+            <strong>Zone Verification:</strong> North Kashi (Confidence: High)<br>
+            <span style="font-size:0.82rem; color:#6b7280;">Evidence: South landmarks: ['assi']; North landmarks: ['trilochan', 'machhodari']; West/Inland landmarks: ['chowk']</span><br>
+            <strong>Directions:</strong> Omkareshwar temple is located at A-33/23, Pathani Tola, North of Machhodari.  Matsyodari Teerth as mentioned in Kashi Khand has dried up now and the locality is known as Macchodari. The temple is approachable from a famous locality called Machhodari and if a devotee travels through the left of Machhodari, he will come across Trilochan Police Chowki after which he will take a left turn to reach Omkareshwar.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#9200; Darshan Timings & Ritual Logistics</div>
+          <div class="detail-content">
+            <strong>Timings:</strong> S
+The temple is open for worship from 05.00 a.m. to 11.00 a.m. and from 05.00 p.m. to 09.00 p.m. Aarties are conducted in the morning. Special importance is on Vaisakha Month which commences some time around April 20, Chaturdasi day after Amavasya (one day before Poornima). Annual Shringar is held on the above day at Omkareshwar. A person undergoing Vratham (fast) on the above day and doing pooja at Omkareshwar temple attains high level of intellect.
+As the importance of Matsoydari Teerth has dwindled (due to drying up of the Teerth), people may perform the abhishek of Omkareshwar Ling with Ganges water.
+Recently one Parvaty Devi idol has been installed by Shri Shivkoti Anantapuram (Andhra Pradesh) on 5.5.2010.
+For doing special pooja, it is advisable to consult the Poojari before hand.<br>
+            <strong>Puja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#128220; Scriptural References</div>
+          <div class="detail-content">
+            Kashi Khand, Chapter 73, Kashi Khand, Chapter 73, Shlok 171, Kashi Khand, Chapter 73, Shlok 169
+          </div>
+        </div>
+
+        <div class="links-row">
+          <a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/shiva-temples/main-shiva-temples/omkareshwar/index.html">&#128194; Exact Website Mirror Article</a>
+          <a class="btn-link btn-live" href="https://varanasitemples.in/category/shiva-temples/main-shiva-temples/omkareshwar/" target="_blank" rel="noopener">&#127760; Original Live URL &#8599;</a>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="temple-card" data-zone="North Kashi" data-name="mrityunjay mahadev none noted in source">
+      <div class="temple-header">
+        <div class="temple-title-row">
+          <div class="temple-title">Mrityunjay Mahadev</div>
+          <span class="badge badge-zone-north">North Kashi</span>
+        </div>
+        <div class="temple-sub">
+          <strong>Form:</strong> Main Shiva Temple (Conqueror of Death) | <strong>Alt:</strong> None noted in source
+        </div>
+      </div>
+      <div class="temple-body">
+        
+        <div class="temple-img-container">
+          <img class="temple-img" src="Kashi_Exact_Offline_Website/assets/images/Mrityunjay.jpeg" alt="Mrityunjay Mahadev" loading="eager" onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src=\'assets/images/\' + this.src.split(\'/\').pop();}" >
+          <div class="img-caption">Mrityunjay</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128214; Puranic Origin & Significance</div>
+          <div class="detail-content">Lord Shiva was describing the various sacred Teerths (Ponds), Koops (Wells) and places of worship in Kashi.  Lord Shiva described such places with pleasure (Kashi Khand, Chapter 97).
+
+In the vicinity of Kaleshwar is the Mrityunjayeshwar. This Ling is capable of keeping untimely death away from devotees.  In the vicinity of the Ling is Kalodak Koop (Well). The water from the well is capable of curing all diseases.
+
+Mrityunjayeshwar is also referred to as Apa Mrityu Hareshwar in Kashi Khand (the Lord who wards off untimely death).
+
+Please watch our YouTube Video about Mrityunjay Mahadev at following Link
+
+https://www.youtube.com/watch?v=L6Hr3HZADGg&t=10s</div>
+        </div>
+
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128205; Location & Approach Route</div>
+          <div class="detail-content">
+            <strong>Stated Address:</strong> K-52/39, Vriddha Kal, Mrityunjay Mahadev Temple.  People can approach this temple by rickshaw through Bisheshwarganj/GPO<br>
+            <strong>Nearby Ghat:</strong> Not directly on a riverfront ghat<br>
+            <strong>Zone Verification:</strong> North Kashi (Confidence: Medium)<br>
+            <span style="font-size:0.82rem; color:#6b7280;">Evidence: North landmarks: ['bisheshwarganj']</span><br>
+            <strong>Directions:</strong> Mrityunjayeshwar is located at K-52/39, Vriddha Kal, Mrityunjay Mahadev Temple.  People can approach this temple by rickshaw through Bisheshwarganj/GPO.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#9200; Darshan Timings & Ritual Logistics</div>
+          <div class="detail-content">
+            <strong>Timings:</strong> The temple is open from 04.00 a.m. to 12.00 midnight.  The doors of the sanctum sanctorum may remain closed at certain times on account of Shringar (Decoration) etc.  There are three aarties at 05.30 a.m. in the morning, 6.30 p.m. and in the night.
+As the name implies, Mrityu is death, Jay is victory.  Therefore, the combination may be taken as victory over death.
+People who are afflicted with fatal planetary combinations in their horoscope, indicating untimely death, perform Maha Mrityunjay Jap at this place and many devotees have succeeded in their endeavours.<br>
+            <strong>Puja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#128220; Scriptural References</div>
+          <div class="detail-content">
+            Kashi Khand, Chapter 97
+          </div>
+        </div>
+
+        <div class="links-row">
+          <a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/shiva-temples/main-shiva-temples/mrityunjay-mahadev/index.html">&#128194; Exact Website Mirror Article</a>
+          <a class="btn-link btn-live" href="https://varanasitemples.in/category/shiva-temples/main-shiva-temples/mrityunjay-mahadev/" target="_blank" rel="noopener">&#127760; Original Live URL &#8599;</a>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="temple-card" data-zone="North Kashi" data-name="gabhasteeshwar none noted in source">
+      <div class="temple-header">
+        <div class="temple-title-row">
+          <div class="temple-title">Gabhasteeshwar</div>
+          <span class="badge badge-zone-north">North Kashi</span>
+        </div>
+        <div class="temple-sub">
+          <strong>Form:</strong> Main Shiva Temple (Installed by Surya / Mayukh Aditya) | <strong>Alt:</strong> None noted in source
+        </div>
+      </div>
+      <div class="temple-body">
+        
+        <div class="temple-img-container">
+          <img class="temple-img" src="Kashi_Exact_Offline_Website/assets/images/Gabhasteeshwar-New.jpg" alt="Gabhasteeshwar" loading="eager" onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src=\'assets/images/\' + this.src.split(\'/\').pop();}" >
+          <div class="img-caption">Gabhasteeshwar New</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128214; Puranic Origin & Significance</div>
+          <div class="detail-content">Once Lord Surya installed a Shiv Ling and a devi idol at Panchanada Teerth (Panchganga Ghat) and started immensely propitiating Lord Shiva.  (Importance of Panchganga Ghat is described elsewhere).
+
+The intensity of Lord Surya’s prayers started reflecting in the extreme heat generated thereby.  Sunrays started getting warmer and warmer. Finally it became extremely unbearable for all living beings and all physical activities practically came to a standstill.
+
+Lord Shiva and Goddess Parvaty came to know about this and they appeared in person in front of Lord Surya.  Lord Surya opened his eyes and started singing praises of Goddess Parvaty and Lord Shiva whereupon both of them became extremely happy.  They granted several divine wishes to Lord Surya.
+
+Lord Shiva told Lord Surya that the Shiv Ling installed by Lord Surya will be known as Gabhasteeshwar.  A person who takes bath at Pancha Nada Teerth (Panchganga) and worships Gabhastheeswar will be free from all sins and will certainly attain Moksha. (Kashi Khand, Chapter 49)
+
+-----------------------------------
+
+Kashi Khand, Chapter 49, Shlok 77
+
+त्वया प्रतिष्ठितं लिङ्गं गभस्तीश्वरसंज्ञितम्
+
+सेवितं भक्तिभावेन सर्वसिद्धिसमर्पकम्
+
+(Lord Shiva says to the Sun God), whoever devotedly worships this Linga named Gabhastishwar, installed by you, will get all the achievements/ accomplishments.
+
+-----------------------------------</div>
+        </div>
+
+        
+        <div class="detail-section">
+          <div class="detail-label">&#128366; Sanskrit Verses (Kashi Khand)</div>
+          <div class="sanskrit-box">त्वया प्रतिष्ठितं लिङ्गं गभस्तीश्वरसंज्ञितम्
+सेवितं भक्तिभावेन सर्वसिद्धिसमर्पकम्</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128205; Location & Approach Route</div>
+          <div class="detail-content">
+            <strong>Stated Address:</strong> K-24/34, Mangala Gauri Temple.  Devotees can travel upto Bhaironath by auto or cycle rickshaw and walk upto this place<br>
+            <strong>Nearby Ghat:</strong> Panchganga Ghat<br>
+            <strong>Zone Verification:</strong> North Kashi (Confidence: High)<br>
+            <span style="font-size:0.82rem; color:#6b7280;">Evidence: North landmarks: ['panchganga', 'panchanada']</span><br>
+            <strong>Directions:</strong> Gabhastheeshwar is located at K-24/34, Mangala Gauri Temple.  Devotees can travel upto Bhaironath by auto or cycle rickshaw and walk upto this place.  Mangala Gauri temple is a famous landmark. Alternatively, they can take a boat ride upto Panchganga Ghat and reach this temple through Ghats.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#9200; Darshan Timings & Ritual Logistics</div>
+          <div class="detail-content">
+            <strong>Timings:</strong> The temple is open from 05.00 a.m. to 01.00 p.m. and from 03.00 p.m. to 10 p.m.  Aarties are performed in the evening.  For doing any special pooja etc., it is advisable to contact the Poojari.
+Gabhasteeshwar has been given much importance with respect to  Sun.  Devotees who are having afflictions in their Horoscope on account of planet Sun’s adverse position, get relief by worshipping this temple since the temple houses Gabhasteeshwar (Shiv Ling installed by Lord Surya) and Mayukh Aditya (one of the places of worship of Lord Surya in Kashi).
+POOJARIS OF THE TEMPLE
+Shri Manoj Kumar Pandey is the chief priest and his cell number is (0)9305645502.  Other priest is Shri Umesh Kumar Sharma whose cell number is (0)9450284728.<br>
+            <strong>Puja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#128220; Scriptural References</div>
+          <div class="detail-content">
+            Kashi Khand, Chapter 49, Kashi Khand, Chapter 49, Shlok 77
+          </div>
+        </div>
+
+        <div class="links-row">
+          <a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/shiva-temples/main-shiva-temples/gabhasteeshwar/index.html">&#128194; Exact Website Mirror Article</a>
+          <a class="btn-link btn-live" href="https://varanasitemples.in/category/shiva-temples/main-shiva-temples/gabhasteeshwar/" target="_blank" rel="noopener">&#127760; Original Live URL &#8599;</a>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="temple-card" data-zone="North Kashi" data-name="mahakaleshwar none noted in source">
+      <div class="temple-header">
+        <div class="temple-title-row">
+          <div class="temple-title">Mahakaleshwar</div>
+          <span class="badge badge-zone-north">North Kashi</span>
+        </div>
+        <div class="temple-sub">
+          <strong>Form:</strong> Mahakaleshwar Counterpart (Jyotirlinga #3 - Daranagar) | <strong>Alt:</strong> None noted in source
+        </div>
+      </div>
+      <div class="temple-body">
+        
+        <div class="temple-img-container">
+          <img class="temple-img" src="Kashi_Exact_Offline_Website/assets/images/Mahakaleshwar-1.jpg" alt="Mahakaleshwar" loading="eager" onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src=\'assets/images/\' + this.src.split(\'/\').pop();}" >
+          <div class="img-caption">Mahakaleshwar</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128214; Puranic Origin & Significance</div>
+          <div class="detail-content">On a question raised by Goddess Parvaty, Lord Shiva was describing the various sacred Teerths (Ponds), Koops (Wells) and places of worship in Kashi.  Lord Shiva described such places with pleasure.
+
+(MAHAKALESHWAR)
+
+Towards the east of Daksheshwar Ling is the Mahakaleshwar Ling. By worshipping this Ling, the devotee  gets the benefits of worshipping the entire world. (Kashi Khand, Chapter 97). Here, it may mean that of all the deities spread over the world. Mahakaleshwar is capable of saving devotees from untimely death.
+
+While Mahakaleshwar Jyotirling is in Ujjain, people worship this temple in Kashi (as Jyotirling of the same name) as it is stated to be equivalent in strength.
+
+Please watch our YouTube Video about Mahakaleshwar at following Link
+
+https://www.youtube.com/watch?v=1OSYpqeUaVI&t=9s</div>
+        </div>
+
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128205; Location & Approach Route</div>
+          <div class="detail-content">
+            <strong>Stated Address:</strong> K-52/39, Mrityunjay Mahadev temple.  People can approach this temple by rickshaw through Bisheshwarganj/GPO<br>
+            <strong>Nearby Ghat:</strong> Not directly on a riverfront ghat<br>
+            <strong>Zone Verification:</strong> North Kashi (Confidence: Medium)<br>
+            <span style="font-size:0.82rem; color:#6b7280;">Evidence: North landmarks: ['bisheshwarganj']</span><br>
+            <strong>Directions:</strong> Mahakaleshwar is located at K-52/39, Mrityunjay Mahadev temple.  People can approach this temple by rickshaw through Bisheshwarganj/GPO.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#9200; Darshan Timings & Ritual Logistics</div>
+          <div class="detail-content">
+            <strong>Timings:</strong> The temple is open from 04.00 a.m. to 12.00 midnight for worship.  People can perform pooja as per their convenience with sacred Ganges water and flowers etc.<br>
+            <strong>Puja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#128220; Scriptural References</div>
+          <div class="detail-content">
+            Kashi Khand, Chapter 97
+          </div>
+        </div>
+
+        <div class="links-row">
+          <a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/shiva-temples/other-shiva-temples-l-r/mahakaleshwar/index.html">&#128194; Exact Website Mirror Article</a>
+          <a class="btn-link btn-live" href="https://varanasitemples.in/category/shiva-temples/other-shiva-temples-l-r/mahakaleshwar/" target="_blank" rel="noopener">&#127760; Original Live URL &#8599;</a>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="temple-card" data-zone="North Kashi" data-name="trilochan akshay tritheeya is a very very auspicious day and people who observe vrath (fast) on that day and perform shraadh karma (rituals towards their forefathers) attain high level of enlightenment and obtain blessings of their ancestors and gods">
+      <div class="temple-header">
+        <div class="temple-title-row">
+          <div class="temple-title">Trilochan</div>
+          <span class="badge badge-zone-north">North Kashi</span>
+        </div>
+        <div class="temple-sub">
+          <strong>Form:</strong> The Three-Eyed Lord (Trilochan Ghat) | <strong>Alt:</strong> Akshay Tritheeya is a very very auspicious day and people who observe vrath (fast) on that day and perform Shraadh Karma (rituals towards their forefathers) attain high level of enlightenment and obtain blessings of their ancestors and Gods
+        </div>
+      </div>
+      <div class="temple-body">
+        
+        <div class="temple-img-container">
+          <img class="temple-img" src="Kashi_Exact_Offline_Website/assets/images/Trilochaneshwar-1.jpg" alt="Trilochan" loading="eager" onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src=\'assets/images/\' + this.src.split(\'/\').pop();}" >
+          <div class="img-caption">Trilochaneshwar</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128214; Puranic Origin & Significance</div>
+          <div class="detail-content">Trilochan Ling finds mention in Kashi Khand as Trivishtabh Ling.  In the south of Trilochan, three holy rivers Yamuna, Saraswati and Narmada joined together once. It is believed that these three rivers themselves performed abhishek of Trilochan Ling (Kashi Khand, Chapter 75).
+
+While Omkareshwar Ling attained prime importance among all Lings in Kashi, the importance of darshan of Trilochan Ling is given more prominence.  Trilochan is a Swayambhu Ling and  it is stated in Kashi Khand that the Ling came to the earth from seven Patal Lokas, piercing each and every layer.
+
+Let alone having darshan, even uttering the word of Trilochan by mouth will cleanse the devotee of his sins.  A person knowingly or unknowingly committing sins in any place, finds mukti in Kashi and a person committing a similar sin in Kashi finds mukti by eulogizing (praising) Trilochan Ling. (Kashi Khand, ibid).
+
+(TRILOCHANESHWAR)
+
+The three rivers mentioned above join together in a Teerth called Pilpila Teerth.  It is believed that taking a bath in Pilpila Teerth and having darshan of Trilochan is considered very auspicious.
+
+-----------------------------------
+
+Kashi Khand, Chapter 75, Shlok 72
+
+सकृत्त्रिविष्टपं दृष्ट्वा स्नात्वा पैलिपिले हृदे
+
+न जातु मातुस्तनपो जायते जन्तुरत्र हि
+
+Those devotees who take bath in Pilpila Tirtha and worship Trilochaneshwar will never be breastfed by their mother. (Meaning, they will have no rebirth - they will attain salvation.)  (Akshay Triteeya day is considered very holy for this purpose and many devotees undertake this ritual).
+
+-----------------------------------
+
+Performing pooja/archana of Trilochan on all Ashtami and Chaturdashi days are auspicious.  In Vaishaka Month (April 20-May 20) Shukla Paksha Tritheeya (third day after Amavasya), also known as Akshay Tritheeya is a very very auspicious day and people who observe vrath (fast) on that day and perform Shraadh Karma (rituals towards their forefathers) attain high level of enlightenment and obtain blessings of their ancestors and Gods.
+
+If all the Shiv Lings in the world are visualised as a human being (personified), Trilochan Ling is the Eye of the Personified structure.  Local pundits believe that Trilochan Ling is the third eye of Vishweshwar Ling.
+
+-----------------------------------
+
+Kashi Khand, Chapter 75,  Shlok 57
+
+क्षमां प्रदक्षिणीकृत्य यत्फलं सम्यगाप्यते
+
+प्रदोषे यत्फलं काश्यां सप्तकृत्वस्त्रिलोचने
+
+A devotee will derive the fruits of performing parikrama of the entire world by performing seven parikaramas of Trilochan Ling during twilight  time.
+
+-----------------------------------
+
+In Kashi Khand, besides Pilpila Teerth, there is mention of Padodak Koop (well). This Koop is still existing in the temple premises.  Pilpila Teerth is existing in the form of Pilpila Koop very near to Trilochan temple. While the Padodak well has been kept covered, there is a pump attached to the well, with the help of which water is drawn.</div>
+        </div>
+
+        
+        <div class="detail-section">
+          <div class="detail-label">&#128366; Sanskrit Verses (Kashi Khand)</div>
+          <div class="sanskrit-box">सकृत्त्रिविष्टपं दृष्ट्वा स्नात्वा पैलिपिले हृदे
+न जातु मातुस्तनपो जायते जन्तुरत्र हि
+क्षमां प्रदक्षिणीकृत्य यत्फलं सम्यगाप्यते
+प्रदोषे यत्फलं काश्यां सप्तकृत्वस्त्रिलोचने</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128205; Location & Approach Route</div>
+          <div class="detail-content">
+            <strong>Stated Address:</strong> A-2/80, Trilochan Ghat.  The temple is approachable from Birla Hospital after Machhodari upto which place, devotees can travel by Auto or Cycle Rickshaw<br>
+            <strong>Nearby Ghat:</strong> Trilochan Ghat<br>
+            <strong>Zone Verification:</strong> North Kashi (Confidence: High)<br>
+            <span style="font-size:0.82rem; color:#6b7280;">Evidence: North landmarks: ['trilochan', 'machhodari', 'trilochan ghat']</span><br>
+            <strong>Directions:</strong> Trilochaneshwar Temple is located at A-2/80, Trilochan Ghat.  The temple is approachable from Birla Hospital after Machhodari upto which place, devotees can travel by Auto or Cycle Rickshaw. Alternatively, they can have a boat ride upto Trilochan Ghat and climb the steps. This temple also houses Varanasi Devi which finds mention in Kashi Khand, Chapter 33.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#9200; Darshan Timings & Ritual Logistics</div>
+          <div class="detail-content">
+            <strong>Timings:</strong> S
+The temple is open for worship 05.30 a.m. to 12.00 noon and 05.00 p.m. to 11 p.m.  Mangala Aarti is performed at 05.30 a.m. and Shayan Aarti at 11.00 p.m.
+Taking bath in Padodak Koop on Akshay Tritheeya day and performing pooja of Trilochan is very auspicious and there is heavy rush on the above day even now.
+Jal Shringar is done on Akshay Tritheeya Day  in the evening which is very well worshipped by devotees.
+For doing special pooja etc., it is advisable to consult the Poojari before hand.
+The temple also houses a Shiv Ling known as Saraswateeshwar, which finds mention in Kashi Khand.<br>
+            <strong>Puja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#128220; Scriptural References</div>
+          <div class="detail-content">
+            Kashi Khand, Chapter 75, Shlok 72, Kashi Khand, Chapter 75, Kashi Khand, Chapter 75,  Shlok 57, Kashi Khand, Chapter 33
+          </div>
+        </div>
+
+        <div class="links-row">
+          <a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/shiva-temples/other-shiva-temples-s-y/trilochan/index.html">&#128194; Exact Website Mirror Article</a>
+          <a class="btn-link btn-live" href="https://varanasitemples.in/category/shiva-temples/other-shiva-temples-s-y/trilochan/" target="_blank" rel="noopener">&#127760; Original Live URL &#8599;</a>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="temple-card" data-zone="North Kashi" data-name="aadi mahadev none noted in source">
+      <div class="temple-header">
+        <div class="temple-title-row">
+          <div class="temple-title">Aadi Mahadev</div>
+          <span class="badge badge-zone-north">North Kashi</span>
+        </div>
+        <div class="temple-sub">
+          <strong>Form:</strong> Primordial Shiva Linga | <strong>Alt:</strong> None noted in source
+        </div>
+      </div>
+      <div class="temple-body">
+        
+        <div class="temple-img-container">
+          <img class="temple-img" src="Kashi_Exact_Offline_Website/assets/images/Aadi-Mahadev-1.jpg" alt="Aadi Mahadev" loading="eager" onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src=\'assets/images/\' + this.src.split(\'/\').pop();}" >
+          <div class="img-caption">Aadi Mahadev</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128214; Puranic Origin & Significance</div>
+          <div class="detail-content">Lord Kartikeya was describing various important Shiv Lings in his narration in Kashi Khand (Chapter 68).
+
+In Satya Yug, in response to devout prayers by Devas and Rishis, one Ling emerged from the Bhoomi and manifested itself. This came to be called  Mahadev Ling.  This Ling gets the credit of making Kashi a Mukti Kshetra (region free from bondage). A person who peforms pooja and archana with sincere devotion at this temple will reach Shiva’s abode after death, even if he happens to die in any place other than Kashi.
+
+(AADI MAHADEV)
+
+A devotee who sincerely prays to Lord Mahadev in Kashi, gets the punya equivalent to praying all Lings available in the entire world. A person who performs pooja at least once at Mahadev temple, will find a place in Lord Shiva’s abode after death (Kashi Khand, ibid).
+
+Special importance is attached to the offering of Yagyopaveeth (Sacred Thread) at Mahadev temple on Chaturdasi Day after Amavasya during Shravan Month (July-August) (Kashi Khand, ibid).
+
+-----------------------------------
+
+Kashi Khand, Chapter 69, Shlok 35
+
+पवित्रपर्वणि सदा श्रावणे मासि यत्नत:
+
+लिङ्गे पवित्रमारोप्य महादेवेन गर्भभाक्
+
+In the holy period of Shravan month (i.e. on the day of Shukla Chaturdashi) whoever sincerely consecrates (offers sacred thread) to the (Adi) Mahadev Linga, will not have rebirth.
+
+-----------------------------------
+
+Presently the temple is known as Aadi Mahadev Temple.</div>
+        </div>
+
+        
+        <div class="detail-section">
+          <div class="detail-label">&#128366; Sanskrit Verses (Kashi Khand)</div>
+          <div class="sanskrit-box">पवित्रपर्वणि सदा श्रावणे मासि यत्नत:
+लिङ्गे पवित्रमारोप्य महादेवेन गर्भभाक्</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128205; Location & Approach Route</div>
+          <div class="detail-content">
+            <strong>Stated Address:</strong> No. A-3/92, behind Trilochan Temple<br>
+            <strong>Nearby Ghat:</strong> they can have a boat ride upto Trilochan Ghat<br>
+            <strong>Zone Verification:</strong> North Kashi (Confidence: High)<br>
+            <span style="font-size:0.82rem; color:#6b7280;">Evidence: North landmarks: ['trilochan', 'machhodari', 'trilochan ghat']</span><br>
+            <strong>Directions:</strong> In Satya Yug, in response to devout prayers by Devas and Rishis, one Ling emerged from the Bhoomi and manifested itself. This came to be called  Mahadev Ling.  This Ling gets the credit of making Kashi a Mukti Kshetra (region free from bondage). A person who peforms pooja and archana with sincere devotion at this temple will reach Shiva’s abode after death, even if he happens to die in any place other than Kashi.
+The temple is located at No. A-3/92, behind Trilochan Temple.  The temple is approachable from Birla hospital after Machhodari upto which place, people can travel by Auto or Cycle Rickshaw. Alternatively, they can have a boat ride upto Trilochan Ghat and climb the steps.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#9200; Darshan Timings & Ritual Logistics</div>
+          <div class="detail-content">
+            <strong>Timings:</strong> S
+The temple is open from 05.00 a.m to 9.00 p.m.   Mangala Aarti is performed at 05.00 a.m., Shringar  at 06.30 a.m., and Aarti at 07.00 a.m. The temple is open till 09.00 p.m.<br>
+            <strong>Puja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#128220; Scriptural References</div>
+          <div class="detail-content">
+            Kashi Khand, Chapter 69, Shlok 35
+          </div>
+        </div>
+
+        <div class="links-row">
+          <a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/shiva-temples/other-shiva-temples-a-d/aadi-mahadev/index.html">&#128194; Exact Website Mirror Article</a>
+          <a class="btn-link btn-live" href="https://varanasitemples.in/category/shiva-temples/other-shiva-temples-a-d/aadi-mahadev/" target="_blank" rel="noopener">&#127760; Original Live URL &#8599;</a>
+        </div>
+      </div>
+    </div>
+    
+
+        <div class="zone-heading zone-south">
+          <span>South Kashi</span>
+          <span style="font-size:0.85rem; font-weight:normal;">(2 shrines)</span>
+        </div>
+        
+
+    <div class="temple-card" data-zone="South Kashi" data-name="kedareshwar none noted in source">
+      <div class="temple-header">
+        <div class="temple-title-row">
+          <div class="temple-title">Kedareshwar</div>
+          <span class="badge badge-zone-south">South Kashi</span>
+        </div>
+        <div class="temple-sub">
+          <strong>Form:</strong> Main Shiva Temple & Kedarnath Counterpart (Jyotirlinga #11) | <strong>Alt:</strong> None noted in source
+        </div>
+      </div>
+      <div class="temple-body">
+        
+        <div class="temple-img-container">
+          <img class="temple-img" src="Kashi_Exact_Offline_Website/assets/images/Kedar-alankar-photo.jpeg" alt="Kedareshwar" loading="eager" onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src=\'assets/images/\' + this.src.split(\'/\').pop();}" >
+          <div class="img-caption">Kedar alankar photo</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128214; Puranic Origin & Significance</div>
+          <div class="detail-content">Kedareshwar is a Shiva temple in Himalayas which is one of the twelve jyotirlingas.  According to Kashi Khand, one gentleman performed the upnayanam ceremony of his son named Vashisht at Ujjain. The boy, Vashisht, was very religious and performed all poojas including Linga pooja etc.  He used to visit Kedareshwar Temple in Himalayas alongwith his Guru regularly and perform pooja of Lord Kedareshwar.
+
+Once, on the way to Kedareshwar, the Guru died unfortunately and since he had all along done only good deeds, he found a place for himself at Mount Kailas.  Vashisht who was 12 at that time, got an enlightenment that those who go for having darshan of Kedareshwar are blessed with all punyas.  He then went and settled down at Kashi.
+
+But on all Chaitra Month Poornima days (March 20-April 21), Vashisht (who remained a Brahmachari) used to visit Kedareshwar Ling at Himalayas  and this went on for 61 years. But due to old age, he could not move out and he started praying to Lord Shiva at Kashi.  Lord Shiva blessed him with a wish and Vashisht requested that Lord Shiva should kindly appear at Kashi itself as Kedareshwar.
+
+-----------------------------------
+
+Kashi Khand, Chapter 77, Shlok 46
+
+तुषाराद्रिम् समारुह्य केदारं वीक्ष्य यत्फलं
+
+तत्फलं सप्तगुणितं काश्यां केदारदर्शने
+
+Worshipping Kedareshwar in Kashi will yield seven times punya which accrues from worshipping Kedar Ling in Himalayas.
+
+-----------------------------------
+
+Lord Shiva was overwhelmed with the sincerity and devotion of Vashisht and granted accordingly.  He appeared as Kedareshwar at Kashi and told Vashisht that performing pooja at Kedareshwar at Kashi will yield seven times greater punya as compared to performing pooja at Kedareshwar at Himalayas (Kashi Khand, Chapter 77).
+
+(KEDARESHWAR)
+
+Gauri Kund, Hans teerth and Manasarovar teerth find mention in Kashi Khand in reference to Kedareshwar but now only Gauri Kund remains.  Manasarovar and Hans Teerth have dried up.
+
+People observe vrath (fast) on Chaitra Month (March 20-April 20) Shukla  Paksha Chaturdasi and break their fast on Poornima day, the next day, after performing pooja of Kedareshwar.  This is as stated in Kashi Khand where Vashisht used to pray Lord Kedareshwar on Chaitra Poornima days (as mentioned in para above).
+
+-----------------------------------
+
+Kashi Khand, Chapter 77, Shlok 05
+
+गृहाद्विनिर्गते पुंसि केदारमभिनिश्चितं
+
+जन्मद्वयार्जितं पापं शरीरदापी निर्वजेत्
+
+Accumulated sins of a devotee for two births will be certainly washed off from his body, if he proceeds from his home for worshipping Kedareshwar Ling (in Kashi).
+
+-----------------------------------
+
+Kashi is divided into three Khands, Omkar Khand, Vishweshwar Khand and Kedar Khand.  It is believed that a person who dies in Kashi attains Mukti.  Going a step further, if the person dies in the area governed by Kedar Khand, he obtains immediate mukti while in other two Khands, there are some sort of hardships to be faced.
+
+On all India basis there are twelve Jyotirlings and there are twelve important Shiv Lings in Kashi which represent the aforesaid twelve Jyotirlings.  Kedareshwar (Varanasi) is worshipped as Kedareshwar Jyotirling (Uttarakhand).</div>
+        </div>
+
+        
+        <div class="detail-section">
+          <div class="detail-label">&#128366; Sanskrit Verses (Kashi Khand)</div>
+          <div class="sanskrit-box">तुषाराद्रिम् समारुह्य केदारं वीक्ष्य यत्फलं
+तत्फलं सप्तगुणितं काश्यां केदारदर्शने
+गृहाद्विनिर्गते पुंसि केदारमभिनिश्चितं
+जन्मद्वयार्जितं पापं शरीरदापी निर्वजेत्</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128205; Location & Approach Route</div>
+          <div class="detail-content">
+            <strong>Stated Address:</strong> B-6/102, Kedar Ghat which is a famous locality. It is approachable by cycle rickshaw<br>
+            <strong>Nearby Ghat:</strong> Kedar Ghat<br>
+            <strong>Zone Verification:</strong> South Kashi (Confidence: High)<br>
+            <span style="font-size:0.82rem; color:#6b7280;">Evidence: South landmarks: ['kedar ghat', 'kedareshwar', 'sonarpura']</span><br>
+            <strong>Directions:</strong> Kedareshwar temple is located at B-6/102, Kedar Ghat which is a famous locality. It is approachable by cycle rickshaw.  Alternatively, people can travel upto a locality called Sonarpura by Car or Auto rickshaw and travel on foot.  People may also travel by boat to Kedar Ghat and walk up the steps directly into the temple.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#9200; Darshan Timings & Ritual Logistics</div>
+          <div class="detail-content">
+            <strong>Timings:</strong> S
+The temple is open for worship 03.00 a.m. to 11.00 p.m. Mangala Aarti is performed at 03.15 a.m., 2 nd  Aarti at 10.00 a.m.,  3 rd  Aarti at 05.30 p.m. and Shayan Aarti at 10.30 p.m.<br>
+            <strong>Puja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#128220; Scriptural References</div>
+          <div class="detail-content">
+            Kashi Khand, Chapter 77, Shlok 05, Kashi Khand, Chapter 77, Shlok 46, Kashi Khand, Chapter 77
+          </div>
+        </div>
+
+        <div class="links-row">
+          <a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/shiva-temples/main-shiva-temples/kedareshwar/index.html">&#128194; Exact Website Mirror Article</a>
+          <a class="btn-link btn-live" href="https://varanasitemples.in/category/shiva-temples/main-shiva-temples/kedareshwar/" target="_blank" rel="noopener">&#127760; Original Live URL &#8599;</a>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="temple-card" data-zone="South Kashi" data-name="kardhameshwar none noted in source">
+      <div class="temple-header">
+        <div class="temple-title-row">
+          <div class="temple-title">Kardhameshwar</div>
+          <span class="badge badge-zone-south">South Kashi</span>
+        </div>
+        <div class="temple-sub">
+          <strong>Form:</strong> First stop on Panchkroshi Pilgrimage | <strong>Alt:</strong> None noted in source
+        </div>
+      </div>
+      <div class="temple-body">
+        
+        <div class="temple-img-container">
+          <img class="temple-img" src="Kashi_Exact_Offline_Website/assets/images/Kardhameshwar-1.jpg" alt="Kardhameshwar" loading="eager" onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src=\'assets/images/\' + this.src.split(\'/\').pop();}" >
+          <div class="img-caption">Kardhameshwar</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128214; Puranic Origin & Significance</div>
+          <div class="detail-content">Goddess Parvaty wanted to know about  various Shiv Lings and deities at several places in Kashi and Lord Shiva was pleased to narrate about such deities (Kashi Khand, Chapter 97).
+
+Lord Shiva narrates about Kardhameshwar Ling in the vicinity of Ark Vinayak (Lolark) and this Ling is in between Ark Vinayak and Durga Devi.
+
+(KARDHAMESHWAR)
+
+A devotee who worships Kardhameshwar will be blessed by Lord Shiva and the devotee will see his wishes fulfilled.</div>
+        </div>
+
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128205; Location & Approach Route</div>
+          <div class="detail-content">
+            <strong>Stated Address:</strong> No. B<br>
+            <strong>Nearby Ghat:</strong> Not directly on a riverfront ghat<br>
+            <strong>Zone Verification:</strong> South Kashi (Confidence: Medium)<br>
+            <span style="font-size:0.82rem; color:#6b7280;">Evidence: South landmarks: ['assi']</span><br>
+            <strong>Directions:</strong> Kardhameshwar is located at No. B.2/17, in the temple premises of Mahishasurmardini (Chamunda Devi). Devotees can reach this place by travelling upto Lolark by rickshaw and then on foot.  Mahishasurmardini temple is quite famous.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#9200; Darshan Timings & Ritual Logistics</div>
+          <div class="detail-content">
+            <strong>Timings:</strong> The temple is open from 05.30 a.m. to 11.30 a.m. and from 05.00 p.m. to 09.00 p.m.  Aarties are held in the morning and evening.  Evening aarti at around 07.00 – 07.30 is worth watching.<br>
+            <strong>Puja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#128220; Scriptural References</div>
+          <div class="detail-content">
+            Kashi Khand, Chapter 97
+          </div>
+        </div>
+
+        <div class="links-row">
+          <a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/shiva-temples/other-shiva-temples-e-k/kardhameshwar/index.html">&#128194; Exact Website Mirror Article</a>
+          <a class="btn-link btn-live" href="https://varanasitemples.in/category/shiva-temples/other-shiva-temples-e-k/kardhameshwar/" target="_blank" rel="noopener">&#127760; Original Live URL &#8599;</a>
+        </div>
+      </div>
+    </div>
+    
+
+        <div class="zone-heading zone-east">
+          <span>East Kashi</span>
+          <span style="font-size:0.85rem; font-weight:normal;">(4 shrines)</span>
+        </div>
+        
+
+    <div class="temple-card" data-zone="East Kashi" data-name="dharmeshwar none noted in source">
+      <div class="temple-header">
+        <div class="temple-title-row">
+          <div class="temple-title">Dharmeshwar</div>
+          <span class="badge badge-zone-east">East Kashi</span>
+        </div>
+        <div class="temple-sub">
+          <strong>Form:</strong> Main Shiva Temple (Installed by Yama Dharmaraja) | <strong>Alt:</strong> None noted in source
+        </div>
+      </div>
+      <div class="temple-body">
+        
+        <div class="temple-img-container">
+          <img class="temple-img" src="Kashi_Exact_Offline_Website/assets/images/dharmeshwar.jpg" alt="Dharmeshwar" loading="eager" onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src=\'assets/images/\' + this.src.split(\'/\').pop();}" >
+          <div class="img-caption">dharmeshwar</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128214; Puranic Origin & Significance</div>
+          <div class="detail-content">Goddess Parvaty asked Lord Shiva to describe the various important Shiv Lings in Kashi.  Lord Shiva told her, once upon a time, in Anand Van (Kashi) Yam Raj installed a Ling and underwent severe penance in prayer of Lord Shiva.  His prayers went on during extremely cold winters and torrid summers.  The intensity of his prayers went on increasing; he stood on one leg and prayed for several years and finally stood on one toe for several days during his penance.  At last Lord Shiva appeared before him and conferred the title of Dharma Raja on Yam Raj. (In some mantras like Sandhya Vandana, the mantra reads as Yamaya Dharma Rajaya etc. etc.)   The Ling installed by Yam Raj was named by Lord Shiva as Dharmeshwar Ling. On seeing Lord Shiva in person, Yam Raj was dumb struck and could not ask what he wanted.  He was overwhelmed with joy.
+
+(DHARMESHWAR)
+
+Lord Shiva took the initiative and told Yam Raj that the latter should do proper justice to people who die, those committing sins should face punishment and those performing punya Karma (virtuous deeds) should go to heaven. The judgement should be fair.  Those who live in Kashi and engage in pooja etc. should be free from all sins committed in any generation. Yam Raj as such is for evil persons/sinners and he is Dharma Raj for good people.
+
+Those persons who take bath in Dharma Koop and perform pooja of Dharmeshwar are cleansed of all sins.  Yam Raj agreed to do as he was directed by Lord Shiva. (Kashi Khand, Chapter 78).
+
+-----------------------------------
+
+Kashi Khand, Chapter 78, Shlok 48
+
+कृत्याऽप्यघानामिह य: सहस्रं धर्मेश्वरं पश्यति दैवयोगात्
+
+सहेतनो जातु स नारकीं व्यथां कथां तदीयां दिवि कुर्वतेऽमरा:
+
+Even after committing thousands of sins, if a devotee – by God’s Grace – worships Dharmeshwar, he will not have to face the hardships of hell, on the contrary devtaas in heaven will keep discussing about him.
+
+-----------------------------------
+
+To this day, it is believed that those who live in Kashi, performing regular poojas etc. are cleansed of all sins.</div>
+        </div>
+
+        
+        <div class="detail-section">
+          <div class="detail-label">&#128366; Sanskrit Verses (Kashi Khand)</div>
+          <div class="sanskrit-box">कृत्याऽप्यघानामिह य: सहस्रं धर्मेश्वरं पश्यति दैवयोगात्
+सहेतनो जातु स नारकीं व्यथां कथां तदीयां दिवि कुर्वतेऽमरा:</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128205; Location & Approach Route</div>
+          <div class="detail-content">
+            <strong>Stated Address:</strong> D-2/21, Mir Ghat.  The temple is approachable from a famous locality called Dashashwamedh<br>
+            <strong>Nearby Ghat:</strong> Mir Ghat<br>
+            <strong>Zone Verification:</strong> East Kashi (Confidence: High)<br>
+            <span style="font-size:0.82rem; color:#6b7280;">Evidence: East/Riverfront landmarks: ['dashashwamedh', 'mir ghat']</span><br>
+            <strong>Directions:</strong> Dharmeshwar Temple is located at D-2/21, Mir Ghat.  The temple is approachable from a famous locality called Dashashwamedh.  People can travel upto Dashashwamedh Vishwanath Gulli by Rickshaw and then to the temple via famous Vishalakshi Gauri temple by foot.  A devotee who has finished darshan of Visweshwar Temple, can proceed towards the Saraswati Phatak gate and walk towards Vishalakshi Gauri temple, to reach Dharmeshwar. Alternatively, they can travel to Mirghat by boat and climb the steps.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#9200; Darshan Timings & Ritual Logistics</div>
+          <div class="detail-content">
+            <strong>Timings:</strong> S
+The temple is open for worship from 05.00 a.m. to 12.30 p.m. and from 05.00 p.m. to 07.30 p.m.  Aarties are performed at 05.00 a.m. and 07.00 p.m.
+Performing pooja in Dharmeshwar temple in the month of Kartik (October 20-November-20), Shukla Paksha Ashtami, 8 th  day after Amavasya, is considered very auspicious.
+There is a well nearby known as Dharma Koop.  Shraaddh Karma performed here after taking bath in Dharma Koop is equivalent to performing Shraaddh in Gaya.
+For doing special pooja etc., it is advisable to consult the Poojari before hand.<br>
+            <strong>Puja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#128220; Scriptural References</div>
+          <div class="detail-content">
+            Kashi Khand, Chapter 78, Shlok 48, Kashi Khand, Chapter 78
+          </div>
+        </div>
+
+        <div class="links-row">
+          <a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/shiva-temples/main-shiva-temples/dharmeshwar/index.html">&#128194; Exact Website Mirror Article</a>
+          <a class="btn-link btn-live" href="https://varanasitemples.in/category/shiva-temples/main-shiva-temples/dharmeshwar/" target="_blank" rel="noopener">&#127760; Original Live URL &#8599;</a>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="temple-card" data-zone="East Kashi" data-name="atma veereshwar none noted in source">
+      <div class="temple-header">
+        <div class="temple-title-row">
+          <div class="temple-title">Atma Veereshwar</div>
+          <span class="badge badge-zone-east">East Kashi</span>
+        </div>
+        <div class="temple-sub">
+          <strong>Form:</strong> Main Shiva Temple (Installed by Sage Vishwamitra) | <strong>Alt:</strong> None noted in source
+        </div>
+      </div>
+      <div class="temple-body">
+        
+        <div class="temple-img-container">
+          <img class="temple-img" src="Kashi_Exact_Offline_Website/assets/images/Atma-Veereshwar.jpeg" alt="Atma Veereshwar" loading="eager" onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src=\'assets/images/\' + this.src.split(\'/\').pop();}" >
+          <div class="img-caption">Atma Veereshwar</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128214; Puranic Origin & Significance</div>
+          <div class="detail-content">According to Kashi Khand, Chapater 82, Lord Shiva described the power of Veereshwar Ling as under :
+
+Once a kingdom was ruled by a very religious minded ruler named Amitrajit. He was a staunch devotee of Lord Vishnu and he made it a rule that all the citizens of his kingdom also became devotees of Lord Vishnu.  One day Narad Rishi visited his palace and was welcomed with due respect by the King.
+
+(ATMA VEERESHWAR)
+
+As per the direction of Narad Rishi, King Amitrajit saved one beautiful girl called Malayagandini from the clutches of one evil person. The King subsequently married her and they came to Kashi and were immediately happy with the beautiful surroundings.  In due course, Malayagandini was blessed with a handsome male child, who was destined to become 16 years old, immediately after birth.  However, since he was born in an inauspicious planetary combination, the Ministers of the King told the Queen that  she would have to sacrifice the child, otherwise the King would die.
+
+In order to save the King, she sent the child to Vikata Devi.  But no one was inclined to slay the handsome boy who had been 16 years of age by then.  The boy undertook severe penance of Lord Shiva, whereupon Lord Shiva appeared before him in form of a Ling.  This Ling was named by Lord Shiva as Veereshwar Ling.
+
+According to Lord Shiva, a person who performs Pooja, Abhishek and archana of Veereshwar Ling attains all sort of happiness, prosperity and success.
+
+Kashi Khand, Chapter 83, states that a person who performs pooja of Veereshwar gets the benefit of doing pooja of three crore Lingas.  (The time after twilight - sandhya kaal, is considered night time).
+
+-----------------------------------
+
+Kashi Khand, Chapter 83, Shlok 112
+
+यस्तु वीरेश्वरं लिङ्गं नक्तमभ्यर्चयिष्यति
+
+तेन त्रिकोटिसंख्यानि लिङ्गानीहाऽर्चितानि वै
+
+A devotee who performs pooja of (Atma) Veereshwar Ling (in Kashi), at night, will get the punya benefit of performing pooja of three crore lings, here itself.
+
+-----------------------------------
+
+It is considered auspicious to worship this Ling during Chaturdasi nights without going to sleep or bed.  It is also considered auspicious to perform abhishek of this Ling with Panch Amritam (five ingredients namely milk, curd, honey, sugar and clarified butter) (Kashi Khand ibid).
+
+-----------------------------------
+
+Kashi Khand, Chapter 83, Shlok 117
+
+यदन्यत्र फलं लिङ्गे  कोटिपुष्पप्रदानतः
+
+तदेकेनैव  पुष्पेण वीरेशे नाऽत्र संशयः
+
+Whatever punya is derived by offering one crore flowers to other lings, the same punya is derived by  offering just one flower to (Atma) Veereshwar in Kashi. There is no doubt about that.
+
+-----------------------------------
+
+Kashi Khand, Chapter 11, mentions  the importance of pooja/archana of Atma Veereshwar for being blessed with a child. One Sage Vishwanar and his pious wife prayed at various places in Kashi and finally arrived at the Siddha Peeth of Atma Veereshwar.  He performed all rituals and rites at this temple for many months, reciting a prayer called Abhilasha Ashtakam  and one day he saw a boy aged eight years standing near the Ling.  The sage started worshipping the boy with the same fervour as one would worship Lord Shiva with.
+
+The boy was none other than Lord Shiva himself who directed his devotees to recite Abhilasha Ashtakam for one year, as was done by Sage Vishwanar, which will certainly result in progeny for childless couples.  Subsequently, the boy disappeared into the Atma Veereshwar Ling.
+
+Though this Ling is mentioned as Veereshwar in Kashi Khand, presently, this ling is called as Atma Veereshwar or the soul of Veereshwar.</div>
+        </div>
+
+        
+        <div class="detail-section">
+          <div class="detail-label">&#128366; Sanskrit Verses (Kashi Khand)</div>
+          <div class="sanskrit-box">यस्तु वीरेश्वरं लिङ्गं नक्तमभ्यर्चयिष्यति
+तेन त्रिकोटिसंख्यानि लिङ्गानीहाऽर्चितानि वै
+यदन्यत्र फलं लिङ्गे  कोटिपुष्पप्रदानतः
+तदेकेनैव  पुष्पेण वीरेशे नाऽत्र संशयः</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128205; Location & Approach Route</div>
+          <div class="detail-content">
+            <strong>Stated Address:</strong> Ck-7/158, Scindia Ghat which is a famous locality in Varanasi. This place can be reached by boat through Scindia Ghat<br>
+            <strong>Nearby Ghat:</strong> Scindia Ghat<br>
+            <strong>Zone Verification:</strong> East Kashi (Confidence: Medium)<br>
+            <span style="font-size:0.82rem; color:#6b7280;">Evidence: East/Riverfront landmarks: ['scindia ghat']; West/Inland landmarks: ['chowk']</span><br>
+            <strong>Directions:</strong> Atma Veereshwar temple is located at Ck-7/158, Scindia Ghat which is a famous locality in Varanasi. This place can be reached by boat through Scindia Ghat.  Alternatively one can travel in cycle rickshaw upto Chowk and walk down the gullies to reach the temple. Reciting Rudra Japa at Atma Veereshwar temple is very fruitful.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#9200; Darshan Timings & Ritual Logistics</div>
+          <div class="detail-content">
+            <strong>Timings:</strong> S
+The temple is open for worship 05.00 a.m. to 11.30 a.m. and from 12.30 p.m. to 9.30.  Special Aarti is held from 07.00 to 8.30 p.m.  For doing special pooja, it is advisable to consult the Poojari before hand.<br>
+            <strong>Puja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#128220; Scriptural References</div>
+          <div class="detail-content">
+            Kashi Khand, Chapter 11, Kashi Khand, Chapter 83, Shlok 112, Kashi Khand, Chapter 83, Shlok 117, Kashi Khand, Chapter 83
+          </div>
+        </div>
+
+        <div class="links-row">
+          <a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/shiva-temples/main-shiva-temples/atma-veereshwar/index.html">&#128194; Exact Website Mirror Article</a>
+          <a class="btn-link btn-live" href="https://varanasitemples.in/category/shiva-temples/main-shiva-temples/atma-veereshwar/" target="_blank" rel="noopener">&#127760; Original Live URL &#8599;</a>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="temple-card" data-zone="East Kashi" data-name="someshwar none noted in source">
+      <div class="temple-header">
+        <div class="temple-title-row">
+          <div class="temple-title">Someshwar</div>
+          <span class="badge badge-zone-east">East Kashi</span>
+        </div>
+        <div class="temple-sub">
+          <strong>Form:</strong> Somnath Counterpart (Jyotirlinga #1 - Man Mandir Ghat) | <strong>Alt:</strong> None noted in source
+        </div>
+      </div>
+      <div class="temple-body">
+        
+        <div class="temple-img-container">
+          <img class="temple-img" src="Kashi_Exact_Offline_Website/assets/images/Someshwar-1.jpg" alt="Someshwar" loading="eager" onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src=\'assets/images/\' + this.src.split(\'/\').pop();}" >
+          <div class="img-caption">Someshwar</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128214; Puranic Origin & Significance</div>
+          <div class="detail-content">Kashi Khand, Chapter 100 states that devotees should undertake religious tour (Yatra) of several deities situated within the main area of Kashi. This Yatra is known as Antargrihi Yatra and should be undertaken daily.
+
+One such deity among the deities to be worshipped is Someshwar.  It is worth mentioning that Someshwar is symbolic of Somnath Jyotir Ling.
+
+(SOMESHWAR)
+
+People who worship this deity will always be blessed with happiness and prosperity.
+
+Many people undertake Dwadasa Jyotirlinga Yatra in Kashi (Dwadasa means twelve).  Someshwar represents Somnath of Saurashtra which is the first among the twelve jyotirlings.  Even otherwise, old timers say that devotees in Kashi, who cannot travel upto Somnath in Gujarat, can worship this Shiv Ling, Someshwar, in Kashi and they will derive the same amount of blessings.</div>
+        </div>
+
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128205; Location & Approach Route</div>
+          <div class="detail-content">
+            <strong>Stated Address:</strong> Someshwar is locted at D.16/34, Manmandir Ghat. Devotees can travel upto Dasaswamedh Vishwanath Gully by rickshaw, enter the gulli and immediately take a right turn and proceed further for about 150 yards. They may seek guidance from the locals at that place to reach the Varahi temple and proceed further.  Someshwar is located in the vicinity of Varahi temple.<br>
+            <strong>Nearby Ghat:</strong> Manmandir Ghat<br>
+            <strong>Zone Verification:</strong> East Kashi (Confidence: Medium)<br>
+            <span style="font-size:0.82rem; color:#6b7280;">Evidence: East/Riverfront landmarks: ['dasaswamedh']</span><br>
+            <strong>Directions:</strong> Many people undertake Dwadasa Jyotirlinga Yatra in Kashi (Dwadasa means twelve).  Someshwar represents Somnath of Saurashtra which is the first among the twelve jyotirlings.  Even otherwise, old timers say that devotees in Kashi, who cannot travel upto Somnath in Gujarat, can worship this Shiv Ling, Someshwar, in Kashi and they will derive the same amount of blessings.
+Someshwar is locted at D.16/34, Manmandir Ghat. Devotees can travel upto Dasaswamedh Vishwanath Gully by rickshaw, enter the gulli and immediately take a right turn and proceed further for about 150 yards. They may seek guidance from the locals at that place to reach the Varahi temple and proceed further.  Someshwar is located in the vicinity of Varahi temple.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#9200; Darshan Timings & Ritual Logistics</div>
+          <div class="detail-content">
+            <strong>Timings:</strong> The temple remains open for worship from 05.00 a.m. to 09.00 a.m. and from 05.00 p.m. to 09.00 p.m. The<br>
+            <strong>Puja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#128220; Scriptural References</div>
+          <div class="detail-content">
+            Kashi Khand, Chapter 100
+          </div>
+        </div>
+
+        <div class="links-row">
+          <a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/shiva-temples/other-shiva-temples-s-y/someshwar/index.html">&#128194; Exact Website Mirror Article</a>
+          <a class="btn-link btn-live" href="https://varanasitemples.in/category/shiva-temples/other-shiva-temples-s-y/someshwar/" target="_blank" rel="noopener">&#127760; Original Live URL &#8599;</a>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="temple-card" data-zone="East Kashi" data-name="ganeshwar (rameshwar) rameshwar and is worshipped as rameshwar jyotirling (rameshwaram">
+      <div class="temple-header">
+        <div class="temple-title-row">
+          <div class="temple-title">Ganeshwar (Rameshwar)</div>
+          <span class="badge badge-zone-east">East Kashi</span>
+        </div>
+        <div class="temple-sub">
+          <strong>Form:</strong> Rameshwaram Counterpart (Jyotirlinga #7 - Man Mandir Ghat) | <strong>Alt:</strong> Rameshwar and is worshipped as Rameshwar Jyotirling (Rameshwaram
+        </div>
+      </div>
+      <div class="temple-body">
+        
+        <div class="temple-img-container">
+          <img class="temple-img" src="Kashi_Exact_Offline_Website/assets/images/Ganeshwar-Rameshwar-1.jpg" alt="Ganeshwar (Rameshwar)" loading="eager" onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src=\'assets/images/\' + this.src.split(\'/\').pop();}" >
+          <div class="img-caption">Ganeshwar (Rameshwar)</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128214; Puranic Origin & Significance</div>
+          <div class="detail-content">According to Kashi Khand, Chapter 97, Lord Shiva was narrating various Teerths (Sacred Ponds) and Shiv Lings in Kashi.
+
+In the vicinity of Someshwar Ling, there is mention of Ganeshwar Ling.  Devotees who worship this Ling will derive happiness and prosperity.
+
+On all India basis there are twelve Jyotirlings and there are twelve important Shiv Lings in Kashi which represent the aforesaid twelve Jyotirlings.  Ganeshwar is also known as Rameshwar and is worshipped as Rameshwar Jyotirling (Rameshwaram, Tamil Nadu).
+
+(GANESHWAR-RAMESHWAR)</div>
+        </div>
+
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128205; Location & Approach Route</div>
+          <div class="detail-content">
+            <strong>Stated Address:</strong> D.16/34, Manmandir Ghat<br>
+            <strong>Nearby Ghat:</strong> Manmandir Ghat<br>
+            <strong>Zone Verification:</strong> East Kashi (Confidence: Medium)<br>
+            <span style="font-size:0.82rem; color:#6b7280;">Evidence: East/Riverfront landmarks: ['dasaswamedh']</span><br>
+            <strong>Directions:</strong> Ganeshwar also known as Rameshwar is located at D.16/34, Manmandir Ghat. Devotees can travel upto Dasaswamedh Vishwanath Gully in a rickshaw and immediately after entering the gully, they should take a right turn and walk for about 60 yards.  They may ask for directions of Varahi Devi temple which is very famous and quite close by.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#9200; Darshan Timings & Ritual Logistics</div>
+          <div class="detail-content">
+            <strong>Timings:</strong> The place of worship is open from 06.00 a.m. to 12.00 Noon and from 05.00 p.m. to 09.00 p.m.  Devotees can worship as per their convenience.<br>
+            <strong>Puja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#128220; Scriptural References</div>
+          <div class="detail-content">
+            Kashi Khand, Chapter 97
+          </div>
+        </div>
+
+        <div class="links-row">
+          <a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/shiva-temples/other-shiva-temples-e-k/ganeshwar-rameshwar/index.html">&#128194; Exact Website Mirror Article</a>
+          <a class="btn-link btn-live" href="https://varanasitemples.in/category/shiva-temples/other-shiva-temples-e-k/ganeshwar-rameshwar/" target="_blank" rel="noopener">&#127760; Original Live URL &#8599;</a>
+        </div>
+      </div>
+    </div>
+    
+
+        <div class="zone-heading zone-west">
+          <span>West Kashi</span>
+          <span style="font-size:0.85rem; font-weight:normal;">(5 shrines)</span>
+        </div>
+        
+
+    <div class="temple-card" data-zone="West Kashi" data-name="visweshwar (vishwanath) vishwanath temple is one of the twelve jyotirlingas">
+      <div class="temple-header">
+        <div class="temple-title-row">
+          <div class="temple-title">Visweshwar (Vishwanath)</div>
+          <span class="badge badge-zone-west">West Kashi</span>
+        </div>
+        <div class="temple-sub">
+          <strong>Form:</strong> Supreme Lord of Kashi & Jyotirlinga #7 | <strong>Alt:</strong> Vishwanath Temple is one of the twelve Jyotirlingas
+        </div>
+      </div>
+      <div class="temple-body">
+        
+        <div class="temple-img-container">
+          <img class="temple-img" src="Kashi_Exact_Offline_Website/assets/images/Vishwanath-Sparsh-Copy-1024x609.jpg" alt="Visweshwar (Vishwanath)" loading="eager" onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src=\'assets/images/\' + this.src.split(\'/\').pop();}" >
+          <div class="img-caption">Vishwanath Sparsh - Copy</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128214; Puranic Origin & Significance</div>
+          <div class="detail-content">Vishweshwar Temple also known as  Vishwanath Temple is one of the twelve Jyotirlingas. This temple finds mention in various religious texts like Kashi Khand, Shiv Puran etc.  According to Kashi Khand, the name of this temple was Moksh Lakshmi Vilas temple which contained five mandaps of which the main mandap was Garbha Griha (Sanctum Sanctorum) where the Vishweshwar Ling was worshipped.  Vishweshwar Ling is Swayambhu Ling.
+
+Importance of offering flowers to Lord Vishwanath has been described in Kashi Khand in the following shloka.
+
+When Lord Shiva was narrating the greatness, he was accompanied by Lord Indra on one side and seven great rishis were surrounding him. (Kashi Khand, Chapter 99, para 5).” Even today, seven poojaries (believed to be the descendents of the great seven rishis) perform a daily pooja at Vishwanatha Temple at around 7-7.30 p.m., known as Sapta Rishi Pooja/Aarti. As on date devotees can see video clippings  of this Aarti at www.shrikashivishwanath.org. However, devotees who visit Kashi must make it a point to participate in this Holy ritual and it is certain that they will like the Aarti to their utmost satisfaction.
+
+(KASHI VISHWANATH JYOTIRLING)
+
+There are various</div>
+        </div>
+
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128205; Location & Approach Route</div>
+          <div class="detail-content">
+            <strong>Stated Address:</strong> Ck-35/19, Chowk, Varanasi. The temple area has been widened to be known as Vishwanath Corridor and the entrance is  via Gyanvapi<br>
+            <strong>Nearby Ghat:</strong> It is believed that taking a dip in the Holy Ganges at Manikarnika Ghat<br>
+            <strong>Zone Verification:</strong> West Kashi (Confidence: High)<br>
+            <span style="font-size:0.82rem; color:#6b7280;">Evidence: East/Riverfront landmarks: ['manikarnika']; West/Inland landmarks: ['chowk', 'gyanvapi']</span><br>
+            <strong>Directions:</strong> The temple is located at Ck-35/19, Chowk, Varanasi. The temple area has been widened to be known as Vishwanath Corridor and the entrance is  via Gyanvapi.
+Please watch our YouTube Video about Kashi Vishwanath at following Link
+https://www.youtube.com/watch?v=nVskyJmzxGQ&t=13s
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#9200; Darshan Timings & Ritual Logistics</div>
+          <div class="detail-content">
+            <strong>Timings:</strong> s and rituals prescribed in ancient texts like Kashi Khand, Padma Puran, Linga Puran etc. but considering the present environs it may not be possible for any person to follow the steps mentioned in the above texts.  It is believed that taking a dip in the Holy Ganges at Manikarnika Ghat and having darshan at Vishwanath Temple will cleanse all sins of a person.
+The greatness of Visweshwar (Vishwanath) has been described amply in Kashi Khand in several places in several chapters and if an attempt is made to reproduce the same here, it may consume much space.  However, it is sufficient to say that Vishwanath temple is highly revered and worshipped by several devotees not only from all over India but all over the world.
+Every year on the day after Deepavali Amavasya, 56 Bhog Annakoot Shringar is done at Vishwanath Temple and this attracts devotees from all over the world.  It is believed that having darshan of this beholding sight will prevent shortage of food at our house.
+During the past few years, the temple complex has been expanded and new Kashi Vishwanath Corridor has come up.  Presently lakhs of devotees are visiting this holy temple daily.
+(NEW KASHI VISHWANATH CORRIDOR)
+LOCATION OF THE TEMPLE
+The temple is located at Ck-35/19, Chowk, Varanasi. The temple area has been widened to be known as Vishwanath Corridor and the entrance is  via Gyanvapi.<br>
+            <strong>Puja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#128220; Scriptural References</div>
+          <div class="detail-content">
+            Kashi Khand, Chapter 99
+          </div>
+        </div>
+
+        <div class="links-row">
+          <a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/shiva-temples/main-shiva-temples/visweshwar-vishwanath/index.html">&#128194; Exact Website Mirror Article</a>
+          <a class="btn-link btn-live" href="https://varanasitemples.in/category/shiva-temples/main-shiva-temples/visweshwar-vishwanath/" target="_blank" rel="noopener">&#127760; Original Live URL &#8599;</a>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="temple-card" data-zone="West Kashi" data-name="tripurantakeshwar none noted in source">
+      <div class="temple-header">
+        <div class="temple-title-row">
+          <div class="temple-title">Tripurantakeshwar</div>
+          <span class="badge badge-zone-west">West Kashi</span>
+        </div>
+        <div class="temple-sub">
+          <strong>Form:</strong> Mallikarjuna Counterpart (Jyotirlinga #2 - Sigra) | <strong>Alt:</strong> None noted in source
+        </div>
+      </div>
+      <div class="temple-body">
+        
+        <div class="temple-img-container">
+          <img class="temple-img" src="Kashi_Exact_Offline_Website/assets/images/Tripurantakeshwar-1.jpg" alt="Tripurantakeshwar" loading="eager" onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src=\'assets/images/\' + this.src.split(\'/\').pop();}" >
+          <div class="img-caption">Tripurantakeshwar</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128214; Puranic Origin & Significance</div>
+          <div class="detail-content">According to Kashi Khand, Chapter 69, the place where Lord Shiva wore the skin of Gajasur after slaying the latter, was called Rudra Vasam. (Kindly refer to Krithi Vaseshwar).
+
+Once the Lord, in his form as Krithi Vaseshwar, was sitting alongwith Goddess Uma Devi when Nandi offered his prayers and stated that there are 68 places of worship dedicated to Lord Shiva in this holy place.  Various idols/Shiv Lings have been brought from several other places and installed in Kashi.
+
+From Shri Shail Mountain one Ling by name of Tripurantak has appeared in the Holy city of Kashi, which is called Tripurantakeshwar.  By worshipping this deity, the devotee derives the benefit of worship the Holy Shri Shail Mountain.  A devotee who worships Tripurantakeshwar will attain Moksha and need not worry about rebirth.
+
+(TRIPURANTAKESHWAR)
+
+On all India basis there are twelve Jyotirlings and there are twelve important Shiv Lings in Kashi which represent the aforesaid twelve Jyotirlings.  Tripurantakeshwar is worshipped as Mallikarjun Jyotirling (Sri Sailam, Andhra Pradesh).
+
+-----------------------------------
+
+Kashi Khand, Chapter 69, Shlok 73
+
+श्रीशैलशिखरं  दृष्ट्वा यत्फलम् समुदीरितम्
+
+त्रिपुरान्तकमालोक्य  तत्फलं हेलयाप्यते
+
+By worshipping Tripurantakeshwar Ling in Kashi, the devotee, without any efforts,  gets the punya benefits of worshipping holy Shri Shail Mountain.
+
+-----------------------------------</div>
+        </div>
+
+        
+        <div class="detail-section">
+          <div class="detail-label">&#128366; Sanskrit Verses (Kashi Khand)</div>
+          <div class="sanskrit-box">श्रीशैलशिखरं  दृष्ट्वा यत्फलम् समुदीरितम्
+त्रिपुरान्तकमालोक्य  तत्फलं हेलयाप्यते</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128205; Location & Approach Route</div>
+          <div class="detail-content">
+            <strong>Stated Address:</strong> D.59/95, Sigra Tila (Mount of Mud)<br>
+            <strong>Nearby Ghat:</strong> Not directly on a riverfront ghat<br>
+            <strong>Zone Verification:</strong> West Kashi (Confidence: Medium)<br>
+            <span style="font-size:0.82rem; color:#6b7280;">Evidence: West/Inland landmarks: ['sigra']</span><br>
+            <strong>Directions:</strong> Tripurantakeshwar is located at D.59/95, Sigra Tila (Mount of Mud). If devotee travels from Sigra towards Mehmoorganj, after about 100 yards towards the left side he will come across Union Bank of India and further onwards one commercial complex called Siddharth.  Just ahead of this is Shitla Devi immediately after which there is a left turn. After taking a left turn devotees will come to Sigra Tila over which this temple is located.  In the same premises, devotees can find Trimukh Vinayak.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#9200; Darshan Timings & Ritual Logistics</div>
+          <div class="detail-content">
+            <strong>Timings:</strong> The place of worship is open from 06.00 a.m. to 11.30 a.m. and from 05.00 p.m. to 09.00 p.m.  The<br>
+            <strong>Puja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#128220; Scriptural References</div>
+          <div class="detail-content">
+            Kashi Khand, Chapter 69, Kashi Khand, Chapter 69, Shlok 73
+          </div>
+        </div>
+
+        <div class="links-row">
+          <a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/shiva-temples/other-shiva-temples-s-y/tripurantakeshwar/index.html">&#128194; Exact Website Mirror Article</a>
+          <a class="btn-link btn-live" href="https://varanasitemples.in/category/shiva-temples/other-shiva-temples-s-y/tripurantakeshwar/" target="_blank" rel="noopener">&#127760; Original Live URL &#8599;</a>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="temple-card" data-zone="West Kashi" data-name="nageshwar none noted in source">
+      <div class="temple-header">
+        <div class="temple-title-row">
+          <div class="temple-title">Nageshwar</div>
+          <span class="badge badge-zone-west">West Kashi</span>
+        </div>
+        <div class="temple-sub">
+          <strong>Form:</strong> Nageshwar Counterpart (Jyotirlinga #8 - Bhonsla Ghat) | <strong>Alt:</strong> None noted in source
+        </div>
+      </div>
+      <div class="temple-body">
+        
+        <div class="temple-img-container">
+          <img class="temple-img" src="Kashi_Exact_Offline_Website/assets/images/Nageshwar-bhosala-ghat.jpg" alt="Nageshwar" loading="eager" onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src=\'assets/images/\' + this.src.split(\'/\').pop();}" >
+          <div class="img-caption">Nageshwar bhosala ghat</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128214; Puranic Origin & Significance</div>
+          <div class="detail-content">Kashi Khand, Chapter 100 has prescribed some Yatras (Religious tours) and one of the important ones is the Antargrihi Yatra.
+
+Among the deities to be worshipped is Nageshwar which is considered to be an important Shiv Ling.
+
+(NAGESHWAR)
+
+Nageshwar is one of the twelve Jyotirlings.  On all India basis, there are two temples which are worshipped as Nageshwar Jyotirling.  One is in Maharashtra and the other one is near Dwarka.
+
+Nageshwar temple in Varanasi is worshipped as one of the Jyotirlings.  It is believed that doing pooja and archana of Nageshwar Ling at Kashi is as beneficial as doing a similar pooja at the above two temples.  This will cleanse the devotee of all the sins committed knowingly or unknowingly.</div>
+        </div>
+
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128205; Location & Approach Route</div>
+          <div class="detail-content">
+            <strong>Stated Address:</strong> House No. Ck<br>
+            <strong>Nearby Ghat:</strong> Bhosala  Ghat<br>
+            <strong>Zone Verification:</strong> West Kashi (Confidence: Medium)<br>
+            <span style="font-size:0.82rem; color:#6b7280;">Evidence: West/Inland landmarks: ['chowk']</span><br>
+            <strong>Directions:</strong> The temple is located at House No. Ck.1/21, Patani Tola, Bhosala  Ghat, Varanasi.  One can travel upto Chowk by Cycle Rickshaw and walk to this place via Sankata Devi Temple (famous landmark). Alternatively, devotees can approach the place by boat upto Bhosala Ghat and climb up the steps. There is another Shiv Ling named Nageshwar in the premises of Mrityunjay Temple and devotees worship this Ling also with all divinity.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#9200; Darshan Timings & Ritual Logistics</div>
+          <div class="detail-content">
+            <strong>Timings:</strong> The temple is open from 07.00 a.m. to 9.00 a.m. and in the evening from 07.00 p.m. to 08.00 p.m. Devotees can perform pooja as per their convenience within the above<br>
+            <strong>Puja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#128220; Scriptural References</div>
+          <div class="detail-content">
+            Kashi Khand, Chapter 100
+          </div>
+        </div>
+
+        <div class="links-row">
+          <a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/shiva-temples/other-shiva-temples-l-r/nageshwar/index.html">&#128194; Exact Website Mirror Article</a>
+          <a class="btn-link btn-live" href="https://varanasitemples.in/category/shiva-temples/other-shiva-temples-l-r/nageshwar/" target="_blank" rel="noopener">&#127760; Original Live URL &#8599;</a>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="temple-card" data-zone="West Kashi" data-name="triambakeshwar triloknath) is located at d-38/21">
+      <div class="temple-header">
+        <div class="temple-title-row">
+          <div class="temple-title">Triambakeshwar</div>
+          <span class="badge badge-zone-west">West Kashi</span>
+        </div>
+        <div class="temple-sub">
+          <strong>Form:</strong> Trimbakeshwar Counterpart (Jyotirlinga #10 - Godowlia) | <strong>Alt:</strong> Triloknath) is located at D-38/21
+        </div>
+      </div>
+      <div class="temple-body">
+        
+        <div class="temple-img-container">
+          <img class="temple-img" src="Kashi_Exact_Offline_Website/assets/images/Triambakeshwar-1.jpg" alt="Triambakeshwar" loading="eager" onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src=\'assets/images/\' + this.src.split(\'/\').pop();}" >
+          <div class="img-caption">Triambakeshwar</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128214; Puranic Origin & Significance</div>
+          <div class="detail-content">According to Kashi Khand, Chapter 69, the place where Lord Shiva wore the skin of Gajasur after slaying the latter, was called Rudra Vasam. (Kindly refer to Krithi Vaseshwar).
+
+Once the Lord, in his form as Krithi Vaseshwar, was sitting alongwith Goddess Uma Devi when Nandi offered his prayers and stated that there are 68 places of worship dedicated to Lord Shiva in this holy place.  Various idols/Shiv Lings have been brought from several other places and installed in Kashi.
+
+(TRIAMBAKESHWAR)
+
+From Trisandhyam Teerth one Ling by name of Triambak has appeared in the Holy city of Kashi, which is called Triambakeshwar.  By worshipping this deity, the devotee will get the respect normally given to Lord. (In other words, he will be held in high esteem).
+
+On all India basis there are twelve Jyotirlings and there are twelve important Shiv Lings in Kashi which represent the aforesaid twelve Jyotirlings.  The above deity is worshipped as Triambakeshwar (Nashik, Maharashtra).</div>
+        </div>
+
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128205; Location & Approach Route</div>
+          <div class="detail-content">
+            <strong>Stated Address:</strong> D-38/21, Hauj Katora.  If a devotee proceeds from Godowlia towards Chowk, immediately after Spice KCM cinema, he should take a left turn and after walking a few yards, he should take a right turn<br>
+            <strong>Nearby Ghat:</strong> Not directly on a riverfront ghat<br>
+            <strong>Zone Verification:</strong> West Kashi (Confidence: High)<br>
+            <span style="font-size:0.82rem; color:#6b7280;">Evidence: South landmarks: ['kedareshwar']; West/Inland landmarks: ['chowk', 'godowlia']</span><br>
+            <strong>Directions:</strong> Triambakeshwar (also known as Triloknath) is located at D-38/21, Hauj Katora.  If a devotee proceeds from Godowlia towards Chowk, immediately after Spice KCM cinema, he should take a left turn and after walking a few yards, he should take a right turn. This temple also houses the idol of Purushottam (Lord Vishnu) and many people know this temple by the name of Purushottam.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#9200; Darshan Timings & Ritual Logistics</div>
+          <div class="detail-content">
+            <strong>Timings:</strong> The place of worship is open from 06.00 a.m. to 11.00 p.m. and from 05.00 p.m. to 09.00 p.m.  Aarties are held in the morning and evening.<br>
+            <strong>Puja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#128220; Scriptural References</div>
+          <div class="detail-content">
+            Kashi Khand, Chapter 69
+          </div>
+        </div>
+
+        <div class="links-row">
+          <a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/shiva-temples/other-shiva-temples-s-y/triambakeshwar/index.html">&#128194; Exact Website Mirror Article</a>
+          <a class="btn-link btn-live" href="https://varanasitemples.in/category/shiva-temples/other-shiva-temples-s-y/triambakeshwar/" target="_blank" rel="noopener">&#127760; Original Live URL &#8599;</a>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="temple-card" data-zone="West Kashi" data-name="markandeyshwar none noted in source">
+      <div class="temple-header">
+        <div class="temple-title-row">
+          <div class="temple-title">Markandeyshwar</div>
+          <span class="badge badge-zone-west">West Kashi</span>
+        </div>
+        <div class="temple-sub">
+          <strong>Form:</strong> Associated with Sage Markandeya | <strong>Alt:</strong> None noted in source
+        </div>
+      </div>
+      <div class="temple-body">
+        
+        <div class="temple-img-container">
+          <img class="temple-img" src="Kashi_Exact_Offline_Website/assets/images/Markhandeshwar-1.jpg" alt="Markandeyshwar" loading="eager" onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src=\'assets/images/\' + this.src.split(\'/\').pop();}" >
+          <div class="img-caption">Markhandeshwar</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128214; Puranic Origin & Significance</div>
+          <div class="detail-content">Lord Vishnu was describing various religiously important places, teerths etc. to Sage Bindu (Kashi Khand, Chapter 61).
+
+Devotees should bathe in Markanday Teerth and perform rituals for their forefathers. The devotees should then worship Markandeyshwar nearby.
+
+By performing the above religious activities, the devotees will be cleansed of all their sins howsoever abysmal or outrageous these may be.
+
+(MARKHANDEYSHWAR)
+
+Markanday Teerth is not in existence now.</div>
+        </div>
+
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128205; Location & Approach Route</div>
+          <div class="detail-content">
+            <strong>Stated Address:</strong> Ck.36/10,  in the bazar behind Gyan Vapi<br>
+            <strong>Nearby Ghat:</strong> Not directly on a riverfront ghat<br>
+            <strong>Zone Verification:</strong> West Kashi (Confidence: High)<br>
+            <span style="font-size:0.82rem; color:#6b7280;">Evidence: West/Inland landmarks: ['chowk', 'gyan vapi']</span><br>
+            <strong>Directions:</strong> Markandeyshwar is located at Ck.36/10,  in the bazar behind Gyan Vapi.  Devotees can travel upto Gyan Vapi (Near Chowk) by rickshaw, take a right turn, climb down the steps and again take a right turn. (If a devotee proceeds diagonally left, he will enter the Gyan Vapi area).  After walking a few yards, the devotee will come to Markhandeyshwar on the right side. For ready reference, Jalans (textile merchants) have a portion of their shop nearby (cut piece wing).
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#9200; Darshan Timings & Ritual Logistics</div>
+          <div class="detail-content">
+            <strong>Timings:</strong> The place of worship is open from 06.00 a.m. to 09.00 a.m. and from 06.00 p.m. to 08.00 p.m.  However, devotees can have darshan through opening at any time.
+POOJARIES OF THE TEMPLE
+Shri Sanjay Mishra is the priest at this place and he can be contacted at (0)9739712012.<br>
+            <strong>Puja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#128220; Scriptural References</div>
+          <div class="detail-content">
+            Kashi Khand, Chapter 61
+          </div>
+        </div>
+
+        <div class="links-row">
+          <a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/shiva-temples/other-shiva-temples-l-r/markandeyshwar/index.html">&#128194; Exact Website Mirror Article</a>
+          <a class="btn-link btn-live" href="https://varanasitemples.in/category/shiva-temples/other-shiva-temples-l-r/markandeyshwar/" target="_blank" rel="noopener">&#127760; Original Live URL &#8599;</a>
+        </div>
+      </div>
+    </div>
+    
+
+        <div class="zone-heading zone-other">
+          <span>Zone unverified — location evidence insufficient</span>
+          <span style="font-size:0.85rem; font-weight:normal;">(3 shrines)</span>
+        </div>
+        
+
+    <div class="temple-card" data-zone="Zone unverified — location evidence insufficient" data-name="krithi vaseshwar none noted in source">
+      <div class="temple-header">
+        <div class="temple-title-row">
+          <div class="temple-title">Krithi Vaseshwar</div>
+          <span class="badge badge-zone-other">Zone unverified</span>
+        </div>
+        <div class="temple-sub">
+          <strong>Form:</strong> Main Shiva Temple (Slayer of Gajasura) | <strong>Alt:</strong> None noted in source
+        </div>
+      </div>
+      <div class="temple-body">
+        
+        <div class="temple-img-container">
+          <img class="temple-img" src="Kashi_Exact_Offline_Website/assets/images/krithi-vaseshwar.jpg" alt="Krithi Vaseshwar" loading="eager" onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src=\'assets/images/\' + this.src.split(\'/\').pop();}" >
+          <div class="img-caption">krithi-vaseshwar</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128214; Puranic Origin & Significance</div>
+          <div class="detail-content">Lord Shiva was describing the fame of Ratneshwar to Goddess Parvaty and precisely at that time Mahishasur’s son Gajasur was aggressively beating up and killing various Shiv Gans (attendants / servitors).  Wherever his steps touched the ground there were earthquake like tremors.  His gigantic hands uprooted all the trees and his forceful exhalation of breath caused huge tidal waves in the ocean.
+
+Left alone, Gajasur would have created havoc in the world and Lord Shiva did not want any sort of disturbance in the Punya Kshetra : Kashi.  When Gajasur approached him in a speed, Lord Shiva pierced him with his Trishul and lifted him high in the sky.  Before dying Gajasur told Lord Shiva that he was extremely happy that he faced death at the hands of Lord Shiva and this was indeed a bliss in disguise for him.  All living beings have to  die one day or the other and he prayed that such kind of death should be a boon to all.  He also wished that, after his death, his skin should adorn Lord Shiva for ever and he (Gajasur) would have the satisfaction of being in constant touch of Lord Shiva.
+
+Lord Shiva agreed accordingly. He further stated that Gajasur had attained his death in the Avimukta Kshetra called Kashi and his body will attain the form of a huge Shiv Ling precisely at that place. This Ling will be called Kriti Vaseshwar.  Krithi Vaseshwar will be a huge/enormous ling, much bigger than any of the Shiv Lings in Kashi. For the benefit of mankind, Lord Shiva stated that he and his family will always remain in Krithi Vaseshwar Ling.
+
+(KRITHI VASESHWAR)
+
+All sins committed in previous births and present births are washed away by performing various poojas and good/righteous actions. But a mere darshan of Krithi Vaseshwar would cleanse the devotee of all his sins.  Whatever benefit is derived by reciting seven crore Rudra Jap, will be attained simply by one Rudra Jap (japam) in front of Krithi Vaseshwar. (Kashi Khand, Chapter sixty eight).  Jap or Japam is repeated recitation of a mantra or shloka.
+
+According to Brahma Vaivart Puran, Krithi Vaseshwar makes the life of Kashi Vasis (residents of Kashi who have adopted divine life) fruitful and gives Moksha to devotees who pray at this temple.  According to Koormapuran, whether a devotee attains Moksha even after thousand births or not, with blessings of Krithi Vaseshwar, the devotee certainly attains moksha and is liberated.
+
+Elsewhere in Kashi Khand, Goddess Parvaty desired to know about the Lingas which are worshipped in Kashi and which are capable of giving mukti.  Lord Shiva told Goddess Parvaty that there are crores of Lingas in Kashi (Kashi Khand,  Chapter 73) of which many are Swayambhu Lingas and many have been established by devotees after observing vedic rituals.
+
+Of the above Lings, there are fourteen prominent Lingas and by merely uttering the names of such Lings, the devotee is absolved of all his sins.  Fourth among such Lings is Krithi Vaseshwar Ling.
+
+-----------------------------------
+
+Kashi Khand, Chapter 68, Shlok 43
+
+सप्तकोटि महारुद्रै: सुजप्तैर्यत्फलं  भवेत्
+
+तत्फलं लभ्यते काश्यां पूजनात्क्रित्तिवासास:
+
+Performing Pooja of Krithi Vaaseshwar in Kashi, will yield punya of reciting seven crore Maha Rudrams.
+
+-----------------------------------
+
+During medieval times, many Mughal rulers destroyed various temples.  Of the important temples of Kashi which were destroyed three were prominent, i.e. Vishweshwar Temple, Krithi Vaseshwar Temple and Bindu Madhav Temple (Vishnu).  Krithi Vaseshwar temple was situated to the north of Kal Bhairav temple and was destroyed by Aurangzeb. Near the temple was Hans Teerth. People were known to take bath in Hans (Swan) Teerth and pray at Krithi Vaseshwar temple.
+
+After destruction of the temple, the reconstruction was undertaken by Raja Patnimal after a long gap and the present temple  was constructed at a place to the South of the ancient temple and worship is being done at this newly constructed temple now.
+
+One important point needs to be mentioned here.  Original Krithi Vaseshwar was in a huge temple premises.  As mentioned in the foregoing paragraphs, a mosque was constructed after destruction of the temple and there was a fountain, precisely at the place where Krithi Vaseshwar Ling existed once.  For several centuries, devotees used to pray at the fountain on Shiv Ratri days, at the spot where the Ling stood once.  Several years back, one huge Ling had been installed again on that spot. It is learnt that the devotees are offering regular prayers at the above spot also.
+
+Special importance is on all Chaturdasi days after Poornima (one day before Amavasya). A person undergoing Vratham on the above day and doing pooja at Krithi Vaseshwar temple attains highest level of happiness.  Kashi Khand lays special importance for pooja/archana during Magha month (Jan. 21 – Feb. 20), Chaturdasi day after Amavasya (fourteenth day) and Chaitra month (March – April) Poornima days. Performing pooja on such days will be highly beneficial for the devotees.</div>
+        </div>
+
+        
+        <div class="detail-section">
+          <div class="detail-label">&#128366; Sanskrit Verses (Kashi Khand)</div>
+          <div class="sanskrit-box">सप्तकोटि महारुद्रै: सुजप्तैर्यत्फलं  भवेत्
+तत्फलं लभ्यते काश्यां पूजनात्क्रित्तिवासास:</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128205; Location & Approach Route</div>
+          <div class="detail-content">
+            <strong>Stated Address:</strong> K-46/23, West of Har Tirath Pond, in Mrityunay Mahadev Road.  Hans Teerth as mentioned in ancient texts is now known as Har Tirath and many buildings have now come up where once the pond existed<br>
+            <strong>Nearby Ghat:</strong> Not directly on a riverfront ghat<br>
+            <strong>Zone Verification:</strong> Zone unverified — location evidence insufficient (Confidence: Low)<br>
+            <span style="font-size:0.82rem; color:#6b7280;">Evidence: No distinct locality keyword matched in source text</span><br>
+            <strong>Directions:</strong> Left alone, Gajasur would have created havoc in the world and Lord Shiva did not want any sort of disturbance in the Punya Kshetra : Kashi.  When Gajasur approached him in a speed, Lord Shiva pierced him with his Trishul and lifted him high in the sky.  Before dying Gajasur told Lord Shiva that he was extremely happy that he faced death at the hands of Lord Shiva and this was indeed a bliss in disguise for him.  All living beings have to  die one day or the other and he prayed that such kind of death should be a boon to all.  He also wished that, after his death, his skin should adorn Lord Shiva for ever and he (Gajasur) would have the satisfaction of being in constant touch of Lord Shiva.
+Krithi Vaseshwar temple is located at K-46/23, West of Har Tirath Pond, in Mrityunay Mahadev Road.  Hans Teerth as mentioned in ancient texts is now known as Har Tirath and many buildings have now come up where once the pond existed. The temple is approachable from a famous locality called Bishweshwarganj, which is a great mandi (market place) and travelling to the temple in cycle rickshaw is convenient.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#9200; Darshan Timings & Ritual Logistics</div>
+          <div class="detail-content">
+            <strong>Timings:</strong> S
+The temple is open from 04.00 a.m. to 01.30 p.m. and from 05.00 p.m. to 10.00 p.m. Mangala Aarti is at 04.00 a.m., aarties are performed at 08.00 am, 12.00 noon, 08.00 p.m. and Shayan Aarti at 10.00 p.m.
+For doing special pooja, it is advisable to consult the Poojari before hand.<br>
+            <strong>Puja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#128220; Scriptural References</div>
+          <div class="detail-content">
+            Kashi Khand, Chapter 68, Shlok 43, Kashi Khand,  Chapter 73
+          </div>
+        </div>
+
+        <div class="links-row">
+          <a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/shiva-temples/main-shiva-temples/krithi-vaseshwar/index.html">&#128194; Exact Website Mirror Article</a>
+          <a class="btn-link btn-live" href="https://varanasitemples.in/category/shiva-temples/main-shiva-temples/krithi-vaseshwar/" target="_blank" rel="noopener">&#127760; Original Live URL &#8599;</a>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="temple-card" data-zone="Zone unverified — location evidence insufficient" data-name="vridha kalelshwar none noted in source">
+      <div class="temple-header">
+        <div class="temple-title-row">
+          <div class="temple-title">Vridha Kalelshwar</div>
+          <span class="badge badge-zone-other">Zone unverified</span>
+        </div>
+        <div class="temple-sub">
+          <strong>Form:</strong> Main Shiva Temple (Conqueror of Time/Death) | <strong>Alt:</strong> None noted in source
+        </div>
+      </div>
+      <div class="temple-body">
+        
+        <div class="temple-img-container">
+          <img class="temple-img" src="Kashi_Exact_Offline_Website/assets/images/Vridha-Kaleshwar-1.jpg" alt="Vridha Kalelshwar" loading="eager" onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src=\'assets/images/\' + this.src.split(\'/\').pop();}" >
+          <div class="img-caption">Vridha Kaleshwar</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128214; Puranic Origin & Significance</div>
+          <div class="detail-content">According to Kashi Khand, Chapter 24, there was a staunch devotee known as Vridha Kal. In his earlier birth, he was residing in Holy city of Madurai and was known as Siva Sharma. He died in Haridwar and reached Vaikunth.  Due to his punya karma, he took rebirth and reached Kashi. He was worshipping one Ling and in due course the Ling was known as Vridha Kaleshwar.
+
+It was believed that Vridha Kal built the temple with the Ling inside but claimed that Lord Mahadev had himself built the temple.  Accordingly, even now it is said that whenever we do some good deed, we should not go on bragging about it.  The good deed will be recognized in due course by the appropriate authority and due rewards will ensue.
+
+-----------------------------------
+
+Kashi Khand, Chapter 24, Shlok 73
+
+दर्शनात् स्पर्षनातस्य पूजनाच्छुवणान्नते:
+
+वृद्धकालेशलिङ्गस्य सर्व प्राप्नोति वाञ्छितम्
+
+By seeing, touching, worshipping, listening to and saluting this Vridha  Kaleshwar Linga, all the wordly desires are achieved.
+
+-----------------------------------
+
+There was an original temple in a locality called Daranagar which became extinct and another temple was built in a different locality and was named Kaleshwar.  Subsequently, a temple was re-built at the original spot (Daranagar) and to distinguish between the two, the temple in original place is called Vridha Kaleshwar.
+
+(VRIDHA KALESHWAR)
+
+According to Kashi Khand, a person performing pooja and archana at Vridha Kaleshwar is granted all his wishes, he remains absolutely happy and is free from all sorts of diseases and poverty.  Nearby is Kalodak Well, the water from which, will be a cure for all diseases.
+
+-----------------------------------
+
+Kashi Khand, Chapter 24, Shlok 80
+
+वृद्धकालेश्वरे  लिङ्गे सेविते न दरिद्रता
+
+नोपसर्गा न वा रोगा न पापं नाघजं फलम्
+
+A devotee who worships Vriddh Kaaleshwar Ling will not face poverty, bad reputation, illness and all his sins will be washed away.
+
+-----------------------------------
+
+Vridha Kaleshwar also finds mention in Brahma Vaivart Puran and Ling Puran.
+
+Please watch our YouTube Video about Vridha Kaleshwar at following Link
+
+https://www.youtube.com/watch?v=sNjQ1lbIzmA&t=17s</div>
+        </div>
+
+        
+        <div class="detail-section">
+          <div class="detail-label">&#128366; Sanskrit Verses (Kashi Khand)</div>
+          <div class="sanskrit-box">दर्शनात् स्पर्षनातस्य पूजनाच्छुवणान्नते:
+वृद्धकालेशलिङ्गस्य सर्व प्राप्नोति वाञ्छितम्
+वृद्धकालेश्वरे  लिङ्गे सेविते न दरिद्रता
+नोपसर्गा न वा रोगा न पापं नाघजं फलम्</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128205; Location & Approach Route</div>
+          <div class="detail-content">
+            <strong>Stated Address:</strong> K-52/39, in the premises of Mrityunj Mahadev Temple.  The temple is approachable from a famous locality called Bishweshwarganj, which is a great mandi (market place) and travelling to the temple in cycle rickshaw or auto-rickshaw is convenient<br>
+            <strong>Nearby Ghat:</strong> Not directly on a riverfront ghat<br>
+            <strong>Zone Verification:</strong> Zone unverified — location evidence insufficient (Confidence: Low)<br>
+            <span style="font-size:0.82rem; color:#6b7280;">Evidence: No distinct locality keyword matched in source text</span><br>
+            <strong>Directions:</strong> According to Kashi Khand, Chapter 24, there was a staunch devotee known as Vridha Kal. In his earlier birth, he was residing in Holy city of Madurai and was known as Siva Sharma. He died in Haridwar and reached Vaikunth.  Due to his punya karma, he took rebirth and reached Kashi. He was worshipping one Ling and in due course the Ling was known as Vridha Kaleshwar.
+Vridha Kaleshwar temple is located at K-52/39, in the premises of Mrityunj Mahadev Temple.  The temple is approachable from a famous locality called Bishweshwarganj, which is a great mandi (market place) and travelling to the temple in cycle rickshaw or auto-rickshaw is convenient.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#9200; Darshan Timings & Ritual Logistics</div>
+          <div class="detail-content">
+            <strong>Timings:</strong> S
+The temple is open for worship throughout the day.  People can perform pooja and abhishek as per their own convenience.  For doing special pooja, it is advisable to consult the Poojari before hand.<br>
+            <strong>Puja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#128220; Scriptural References</div>
+          <div class="detail-content">
+            Kashi Khand, Chapter 24, Shlok 73, Kashi Khand, Chapter 24, Kashi Khand, Chapter 24, Shlok 80
+          </div>
+        </div>
+
+        <div class="links-row">
+          <a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/shiva-temples/main-shiva-temples/vridha-kalelshwar/index.html">&#128194; Exact Website Mirror Article</a>
+          <a class="btn-link btn-live" href="https://varanasitemples.in/category/shiva-temples/main-shiva-temples/vridha-kalelshwar/" target="_blank" rel="noopener">&#127760; Original Live URL &#8599;</a>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="temple-card" data-zone="Zone unverified — location evidence insufficient" data-name="bheemeshwar none noted in source">
+      <div class="temple-header">
+        <div class="temple-title-row">
+          <div class="temple-title">Bheemeshwar</div>
+          <span class="badge badge-zone-other">Zone unverified</span>
+        </div>
+        <div class="temple-sub">
+          <strong>Form:</strong> Bhimashankar Counterpart (Jyotirlinga #6 - Kashi Karvat) | <strong>Alt:</strong> None noted in source
+        </div>
+      </div>
+      <div class="temple-body">
+        
+        <div class="temple-img-container">
+          <img class="temple-img" src="Kashi_Exact_Offline_Website/assets/images/Bheemeshwar-1024x799.jpeg" alt="Bheemeshwar" loading="eager" onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src=\'assets/images/\' + this.src.split(\'/\').pop();}" >
+          <div class="img-caption">Bheemeshwar</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128214; Puranic Origin & Significance</div>
+          <div class="detail-content">According to Kashi Khand, Chapter 69, the place where Lord Shiva wore the skin of Gajasur after slaying the latter, was called Rudra Vasam. (Kindly refer to Krithi Vaseshwar).
+
+Once the Lord, in his form as Krithi Vaseshwar, was sitting alongwith Goddess Uma Devi when Nandi offered his prayers and stated that there are 68 places of worship dedicated to Lord Shiva in this holy place.  Various idols/Shiv Lings have been brought from several other places and installed in Kashi.
+
+From Sapt Godavari Teerth the Lord has appeared in Kashi by name of Bheemeshwar for bestowing happiness and granting Moksha to devotees.  All those devotees who worship Bheemeshwar which is to the east of Nakuleshwar, will be freed from even the most heinous sins committed by them.
+
+(BHEEMESHWAR)
+
+On all India basis there are twelve Jyotirlings and there are twelve important Shiv Lings in Kashi which represent the aforesaid twelve Jyotirlings.  The above deity is worshipped as Bheema Shankar(Nashik-Pune Road, Maharashtra).</div>
+        </div>
+
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128205; Location & Approach Route</div>
+          <div class="detail-content">
+            <strong>Stated Address:</strong> Ck.31/12, Kashi Karvat temple<br>
+            <strong>Nearby Ghat:</strong> Not directly on a riverfront ghat<br>
+            <strong>Zone Verification:</strong> Zone unverified — location evidence insufficient (Confidence: Low)<br>
+            <span style="font-size:0.82rem; color:#6b7280;">Evidence: No distinct locality keyword matched in source text</span><br>
+            <strong>Directions:</strong> Bheemeshwar is located at Ck.31/12, Kashi Karvat temple. Devotees can proceed northwards from Visweshwar temple towards Saraswati Phatak and ask for Kashi Karvat temple, which is quite famous.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#9200; Darshan Timings & Ritual Logistics</div>
+          <div class="detail-content">
+            <strong>Timings:</strong> The place of worship is open practically throughout the day. The ling can be viewed from the top as it is located below the ground level.<br>
+            <strong>Puja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#128220; Scriptural References</div>
+          <div class="detail-content">
+            Kashi Khand, Chapter 69
+          </div>
+        </div>
+
+        <div class="links-row">
+          <a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/shiva-temples/other-shiva-temples-a-d/bheemeshwar/index.html">&#128194; Exact Website Mirror Article</a>
+          <a class="btn-link btn-live" href="https://varanasitemples.in/category/shiva-temples/other-shiva-temples-a-d/bheemeshwar/" target="_blank" rel="noopener">&#127760; Original Live URL &#8599;</a>
+        </div>
+      </div>
+    </div>
+    
+</div>
+
+<script>
+function filterTemples() {
+  var input = document.getElementById('searchInput').value.toLowerCase();
+  var cards = document.getElementsByClassName('temple-card');
+  for (var i = 0; i < cards.length; i++) {
+    var name = cards[i].getAttribute('data-name');
+    var text = cards[i].innerText.toLowerCase();
+    if (name.indexOf(input) > -1 || text.indexOf(input) > -1) {
+      cards[i].style.display = "";
+    } else {
+      cards[i].style.display = "none";
+    }
+  }
+}
+</script>
+
+</body>
+</html>

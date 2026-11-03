@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgVapi" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0c4a6e"/>
+      <stop offset="50%" stop-color="#0369a1"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
+    <radialGradient id="auraVapi" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fef08a" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#fef08a" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="500" rx="12" fill="url(#bgVapi)"/>
+  
+  <rect x="20" y="20" width="760" height="460" rx="8" fill="none" stroke="#7dd3fc" stroke-width="2" stroke-dasharray="6,4" opacity="0.75"/>
+  <rect x="30" y="30" width="740" height="440" rx="6" fill="none" stroke="#bae6fd" stroke-width="1" opacity="0.5"/>
+
+  <circle cx="400" cy="230" r="180" fill="url(#auraVapi)"/>
+
+  <!-- Sacred Well Hexagonal Structure -->
+  <polygon points="400,160 480,205 480,295 400,340 320,295 320,205" fill="#0f172a" opacity="0.7" stroke="#38bdf8" stroke-width="3"/>
+  
+  <!-- Sacred Well Water Center -->
+  <ellipse cx="400" cy="250" rx="60" ry="40" fill="#0284c7" stroke="#7dd3fc" stroke-width="2"/>
+  <ellipse cx="400" cy="250" rx="40" ry="25" fill="#38bdf8" opacity="0.7"/>
+
+  <!-- Divine Trishul (Trident of Lord Shiva/Eeshan) Piercing the Earth -->
+  <line x1="400" y1="120" x2="400" y2="250" stroke="#fde047" stroke-width="5" stroke-linecap="round" filter="url(#glow)"/>
+  <!-- Central Spear Point -->
+  <polygon points="400,100 395,125 405,125" fill="#fde047" stroke="#fde047" stroke-width="1"/>
+  <!-- Left Prong -->
+  <path d="M 395 135 Q 375 135 375 110 L 370 115" fill="none" stroke="#fde047" stroke-width="4" stroke-linecap="round"/>
+  <!-- Right Prong -->
+  <path d="M 405 135 Q 425 135 425 110 L 430 115" fill="none" stroke="#fde047" stroke-width="4" stroke-linecap="round"/>
+  <!-- Damaru attached -->
+  <polygon points="392,150 408,162 392,162 408,150" fill="#ea580c"/>
+
+  <!-- Text Details -->
+  <text x="400" y="72" text-anchor="middle" font-family="'Cinzel', 'Georgia', serif" font-size="28" font-weight="bold" fill="#fde047" letter-spacing="2">
+    GYAN VAPI KUND (WELL OF WISDOM)
+  </text>
+  <text x="400" y="102" text-anchor="middle" font-family="'Segoe UI Historic', 'Noto Sans Devanagari', serif" font-size="18" fill="#bae6fd" letter-spacing="1">
+    ॥ ज्ञानवापी तीर्थ • ईशानेश्वर त्रिशूल खनित तीर्थ ॥
+  </text>
+  <text x="400" y="375" text-anchor="middle" font-family="'Cinzel', 'Georgia', serif" font-size="14" font-weight="600" fill="#fde047">
+    PRIMORDIAL SACRED WELL DUG BY LORD SHIVA&apos;S TRISHUL
+  </text>
+  <text x="400" y="400" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="12" fill="#e0f2fe">
+    Bestower of Transcendental Spiritual Wisdom (Gyan) &bull; Kashi Khand Ch. 33
+  </text>
+  <text x="400" y="445" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="11" fill="#7dd3fc" opacity="0.9">
+    Adjacent to Kashi Vishweshwar Sanctum Sanctorum &bull; Heart of Avimukta
+  </text>
+</svg>

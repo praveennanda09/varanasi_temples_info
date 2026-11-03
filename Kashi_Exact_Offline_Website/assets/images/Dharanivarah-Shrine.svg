@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgDharani" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#064e3b"/>
+      <stop offset="50%" stop-color="#047857"/>
+      <stop offset="100%" stop-color="#0f766e"/>
+    </linearGradient>
+    <radialGradient id="auraDharani" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fef08a" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#fef08a" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="500" rx="12" fill="url(#bgDharani)"/>
+  
+  <rect x="20" y="20" width="760" height="460" rx="8" fill="none" stroke="#6ee7b7" stroke-width="2" stroke-dasharray="6,4" opacity="0.75"/>
+  <rect x="30" y="30" width="740" height="440" rx="6" fill="none" stroke="#a7f3d0" stroke-width="1" opacity="0.5"/>
+
+  <circle cx="400" cy="230" r="180" fill="url(#auraDharani)"/>
+
+  <!-- Temple Mandapam -->
+  <path d="M 270 370 L 270 210 Q 400 115 530 210 L 530 370 Z" fill="#064e3b" opacity="0.6" stroke="#6ee7b7" stroke-width="2"/>
+
+  <!-- Mother Earth (Bhudevi Globe) on Divine Tusk -->
+  <circle cx="475" cy="215" r="32" fill="#0284c7" stroke="#38bdf8" stroke-width="2" filter="url(#glow)"/>
+  <!-- Continents on Globe -->
+  <path d="M 460 205 Q 470 200 480 208 Q 485 220 475 228 Q 460 220 460 205 Z" fill="#22c55e"/>
+  
+  <!-- Boar (Varaha) Sacred Face Profile -->
+  <path d="M 360 240 Q 380 205 415 220 Q 445 230 455 255 Q 460 270 435 285 Q 400 295 370 270 Z" fill="#b45309" stroke="#fef08a" stroke-width="3" filter="url(#glow)"/>
+  <!-- Divine White Tusk lifting the Earth -->
+  <path d="M 435 270 Q 475 260 475 225 Q 455 240 440 255 Z" fill="#ffffff" stroke="#fef08a" stroke-width="2"/>
+
+  <!-- Text Details -->
+  <text x="400" y="75" text-anchor="middle" font-family="'Cinzel', 'Georgia', serif" font-size="28" font-weight="bold" fill="#fef08a" letter-spacing="2">
+    SHRI DHARANIVARAH TEMPLE
+  </text>
+  <text x="400" y="108" text-anchor="middle" font-family="'Segoe UI Historic', 'Noto Sans Devanagari', serif" font-size="19" fill="#a7f3d0" letter-spacing="1">
+    ॥ श्री धरणीवराह मन्दिर • धरणीवराह तीर्थ ॥
+  </text>
+  <text x="400" y="345" text-anchor="middle" font-family="'Cinzel', 'Georgia', serif" font-size="14" font-weight="600" fill="#fef08a">
+    SAVIOUR &amp; SUSTAINER OF MOTHER EARTH (BHUDEVI)
+  </text>
+  <text x="400" y="370" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="12" fill="#d1fae5">
+    Lifting the Earth from the Cosmic Ocean &bull; Kashi Khand, Chapter 61
+  </text>
+  <text x="400" y="435" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="11" fill="#6ee7b7" opacity="0.9">
+    Grants Terrestrial Stability, Agricultural Prosperity &bull; Avimukta Kshetra
+  </text>
+</svg>

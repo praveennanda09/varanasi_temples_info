@@ -1,0 +1,2861 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Devi Shrines of Kashi & Dashamaha Vidya Knowledge Base — Kashi Offline Guide</title>
+  <style>
+    
+:root {
+  --primary: #8b1e0f;
+  --primary-dark: #5c1007;
+  --secondary: #d97706;
+  --accent: #b45309;
+  --bg: #fdfbf7;
+  --card-bg: #ffffff;
+  --text: #1f2937;
+  --text-muted: #4b5563;
+  --border: #e5e7eb;
+  --north: #1e40af;
+  --south: #15803d;
+  --east: #b45309;
+  --west: #6b21a8;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--text);
+  background-color: var(--bg);
+  padding-bottom: 60px;
+}
+
+header {
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: #fff;
+  padding: 24px 16px;
+  text-align: center;
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+  position: relative;
+}
+
+header h1 {
+  font-size: 1.6rem;
+  margin-bottom: 8px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+header p {
+  font-size: 0.95rem;
+  opacity: 0.9;
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.nav-bar {
+  background: #374151;
+  padding: 10px 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.nav-bar a {
+  color: #f3f4f6;
+  text-decoration: none;
+  font-size: 0.85rem;
+  padding: 6px 12px;
+  border-radius: 4px;
+  background: rgba(255,255,255,0.1);
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.nav-bar a:hover, .nav-bar a.active {
+  background: var(--secondary);
+  color: #fff;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.intro-box {
+  background: #fff;
+  border-left: 4px solid var(--secondary);
+  padding: 16px;
+  margin-bottom: 24px;
+  border-radius: 0 8px 8px 0;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.intro-box h2 {
+  font-size: 1.2rem;
+  color: var(--primary);
+  margin-bottom: 8px;
+}
+
+.zone-heading {
+  margin: 28px 0 16px 0;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.zone-north { background: var(--north); }
+.zone-south { background: var(--south); }
+.zone-east { background: var(--east); }
+.zone-west { background: var(--west); }
+.zone-other { background: #4b5563; }
+
+.temple-card {
+  background: var(--card-bg);
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  margin-bottom: 16px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  overflow: hidden;
+}
+
+.temple-header {
+  padding: 14px 16px;
+  background: #fff;
+  border-bottom: 1px solid var(--border);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  position: relative;
+}
+
+.temple-header:hover {
+  background: #f9fafb;
+}
+
+.temple-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.temple-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+}
+
+.badge {
+  font-size: 0.75rem;
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.badge-zone-north { background: #dbeafe; color: var(--north); }
+.badge-zone-south { background: #dcfce7; color: var(--south); }
+.badge-zone-east { background: #ffedd5; color: var(--east); }
+.badge-zone-west { background: #f3e8ff; color: var(--west); }
+.badge-zone-other { background: #f3f4f6; color: #4b5563; }
+
+.temple-sub {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.temple-body {
+  padding: 16px;
+}
+
+.temple-img-container {
+  margin-bottom: 16px;
+  text-align: center;
+  background: #f3f4f6;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.temple-img {
+  max-width: 100%;
+  height: auto;
+  max-height: 400px;
+  display: block;
+  margin: 0 auto;
+  object-fit: contain;
+}
+
+.img-caption {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  padding: 6px 10px;
+  background: #eee;
+  font-style: italic;
+}
+
+.detail-section {
+  margin-bottom: 14px;
+}
+
+.detail-label {
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--primary);
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.detail-content {
+  font-size: 0.92rem;
+  color: var(--text);
+  line-height: 1.55;
+  white-space: pre-line;
+}
+
+.sanskrit-box {
+  background: #fffbeb;
+  border-left: 3px solid var(--secondary);
+  padding: 10px 14px;
+  margin: 8px 0;
+  font-family: "Georgia", serif;
+  font-size: 0.95rem;
+  color: #78350f;
+  line-height: 1.6;
+}
+
+.links-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px dashed var(--border);
+}
+
+.btn-link {
+  font-size: 0.8rem;
+  padding: 5px 10px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.btn-mirror {
+  background: #eff6ff;
+  color: #1d4ed8;
+  border: 1px solid #bfdbfe;
+}
+
+.btn-mirror:hover { background: #dbeafe; }
+
+.btn-live {
+  background: #f3f4f6;
+  color: #4b5563;
+  border: 1px solid #d1d5db;
+}
+
+.btn-live:hover { background: #e5e7eb; }
+
+/* Filter / Search Bar */
+.search-box {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 1rem;
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  margin-bottom: 16px;
+  outline: none;
+  background: #fff;
+}
+
+.search-box:focus {
+  border-color: var(--secondary);
+}
+
+.filter-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.filter-pill {
+  padding: 6px 12px;
+  border-radius: 16px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  background: #fff;
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+}
+
+.filter-pill.active {
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+}
+
+/* Itinerary Table */
+.itinerary-day {
+  background: #fff;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  margin-bottom: 20px;
+  padding: 16px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.itinerary-day h3 {
+  color: var(--primary);
+  border-bottom: 2px solid #fef3c7;
+  padding-bottom: 6px;
+  margin-bottom: 12px;
+  font-size: 1.15rem;
+}
+
+.itinerary-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 8px;
+  font-size: 0.88rem;
+}
+
+.itinerary-table th, .itinerary-table td {
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+}
+
+.itinerary-table th {
+  background: #f9fafb;
+  color: var(--text-muted);
+}
+
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Devi Shrines of Kashi & Dashamaha Vidya Knowledge Base</h1>
+  <p>Authentic scriptural narratives, Kashi Khand citations, verified addresses, and offline photographs from varanasitemples.in</p>
+</header>
+
+
+<div class="nav-bar">
+  <a href="Kashi_Pilgrimage_Master_Index.html">&#127963; Master Index</a>
+  <a href="01_Surya_Dwadasa_Aditya.html">&#9728; Surya (12 Aditya)</a>
+  <a href="02_Bhairav_Temples.html">&#128081; Bhairav (9 Temples)</a>
+  <a href="03_Devi_and_Dashamaha_Vidya.html">&#128330; Devi & Mahavidya</a>
+  <a href="04_Shiva_and_Kashi_Jyotirlingas.html">&#128740; Shiva & Jyotirlingas</a>
+  <a href="05_Vinayaka_Temples.html">&#128024; Vinayaka Temples</a>
+  <a href="06_Vishnu_Temples.html">&#127807; Vishnu Temples</a>
+  <a href="Kashi_Exact_Offline_Website/index.html">&#128194; Exact Website Mirror</a>
+</div>
+
+
+<div class="container">
+  
+<div class="intro-box">
+  <h2>Shakti Tradition & Dashamaha Vidya Research Matrix</h2>
+  <p>Kashi is permeated by the Divine Mother across <strong>Navadurga</strong>, <strong>Navagauri</strong>, and the <strong>Dashamaha Vidya</strong> traditions. Below is the mandatory Dashamaha Vidya comparative research matrix mapping the ten Great Wisdom Goddesses to verified Kashi shrines and website coverage gaps:</p>
+  
+  <div style="overflow-x:auto; margin-top:12px;">
+    <table class="itinerary-table" style="font-size:0.83rem;">
+      <thead>
+        <tr>
+          <th>Mahavidya</th>
+          <th>Specific Kashi Shrine</th>
+          <th>Location / Landmark</th>
+          <th>Source Website Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>1. Kali</strong></td>
+          <td>Kalratri Devi Temple</td>
+          <td>D.8/17, Kalika Gali / Mir Ghat</td>
+          <td><span style="color:#16a34a; font-weight:bold;">Documented in Guide</span> (Category: Kalratri)</td>
+        </tr>
+        <tr>
+          <td><strong>2. Tara</strong></td>
+          <td>Shamshan Tara / Tara Devi</td>
+          <td>Manikarnika Ghat Cremation Grounds</td>
+          <td><span style="color:#d97706; font-weight:bold;">External Shakta Target</span> (Ghat Tradition)</td>
+        </tr>
+        <tr>
+          <td><strong>3. Tripurasundari (Shodashi)</strong></td>
+          <td>Tri Lokya Sundary & Lalitha Gauri</td>
+          <td>Lalita Ghat / D-1/67</td>
+          <td><span style="color:#16a34a; font-weight:bold;">Documented in Guide</span> (Category: Lalitha Gauri)</td>
+        </tr>
+        <tr>
+          <td><strong>4. Bhuvaneshwari</strong></td>
+          <td>Bhuvaneshwari Temple</td>
+          <td>Near Ramghat / Machhodari</td>
+          <td><span style="color:#d97706; font-weight:bold;">External Shakta Target</span> (Coverage Gap on Site)</td>
+        </tr>
+        <tr>
+          <td><strong>5. Bhairavi</strong></td>
+          <td>Tripura Bhairavi Temple</td>
+          <td>D.5/24, Tripura Bhairavi Ghat</td>
+          <td><span style="color:#16a34a; font-weight:bold;">Documented in Guide</span> (Category: Tripura Bhairavi)</td>
+        </tr>
+        <tr>
+          <td><strong>6. Chhinnamasta</strong></td>
+          <td>Chhinnamasta Shrine</td>
+          <td>Inside Durga Temple Complex, Durgakund</td>
+          <td><span style="color:#d97706; font-weight:bold;">External Shakta Target</span> (Sub-shrine at Durga Kund)</td>
+        </tr>
+        <tr>
+          <td><strong>7. Dhumavati</strong></td>
+          <td>Dhumavati Devi Temple</td>
+          <td>Dhupchandi locality</td>
+          <td><span style="color:#d97706; font-weight:bold;">External Shakta Target</span> (Coverage Gap on Site)</td>
+        </tr>
+        <tr>
+          <td><strong>8. Bagalamukhi</strong></td>
+          <td>Pitambara Bagalamukhi</td>
+          <td>Assi Sangam area</td>
+          <td><span style="color:#d97706; font-weight:bold;">External Shakta Target</span> (Coverage Gap on Site)</td>
+        </tr>
+        <tr>
+          <td><strong>9. Matangi</strong></td>
+          <td>Matangi Devi</td>
+          <td>Near Sankata Ghat / Madanpura</td>
+          <td><span style="color:#d97706; font-weight:bold;">External Shakta Target</span> (Coverage Gap on Site)</td>
+        </tr>
+        <tr>
+          <td><strong>10. Kamalatmika (Kamala)</strong></td>
+          <td>Mahalakshmi Gauri & Siddha Lakshmi</td>
+          <td>D.52/40, Lakshmi Kund</td>
+          <td><span style="color:#16a34a; font-weight:bold;">Documented in Guide</span> (Category: Mahalakshmi Gauri)</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+  <input type="text" id="searchInput" class="search-box" placeholder="&#128269; Search temples by name, locality, or address..." onkeyup="filterTemples()">
+
+  
+        <div class="zone-heading zone-north">
+          <span>North Kashi</span>
+          <span style="font-size:0.85rem; font-weight:normal;">(3 shrines)</span>
+        </div>
+        
+
+    <div class="temple-card" data-zone="North Kashi" data-name="mangala gauri none noted in source">
+      <div class="temple-header">
+        <div class="temple-title-row">
+          <div class="temple-title">Mangala Gauri</div>
+          <span class="badge badge-zone-north">North Kashi</span>
+        </div>
+        <div class="temple-sub">
+          <strong>Form:</strong> Navagauri #8 (Panchganga Ghat) | <strong>Alt:</strong> None noted in source
+        </div>
+      </div>
+      <div class="temple-body">
+        
+        <div class="temple-img-container">
+          <img class="temple-img" src="Kashi_Exact_Offline_Website/assets/images/Mangala-Gauri.jpeg" alt="Mangala Gauri" loading="eager" onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src=\'assets/images/\' + this.src.split(\'/\').pop();}" >
+          <div class="img-caption">Mangala Gauri</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128214; Puranic Origin & Significance</div>
+          <div class="detail-content">Once Lord Surya installed a Shiv Ling and a devi idol at Panchanada Teerth (Panchganga Ghat) and started immensely praying to Lord Shiva.  (Importance of Panchganga Ghat is described under River Ganga-Teerths category).
+
+The intensity of Lord Surya’s prayers started reflecting in the extreme heat generated thereby.  Sunrays started getting warmer and warmer. Finally it became unbearable for all living beings and all physical activities practically came to a standstill.
+
+Lord Shiva and Goddess Parvaty came to know about this and they appeared in person in front of Lord Surya.  Lord Surya opened his eyes and started singing praises of Goddess Parvaty and Lord Shiva whereupon both of them became extremely happy.  They granted several divine wishes to Lord Surya.
+
+(MANGALA GAURI)
+
+Lord Shiva told Lord Surya that the devi idol installed by the latter would be known as Mangala Gauri. A person who worships Mangala Gauri with all devotion is blessed with all happiness and prosperity.  Unmarried girls will soon find a suitable match for themselves and childless couples will be blessed with  children.
+
+Special importance is laid by Kashi Khand, Chapter 49 for Chaitra Month (March-April), Shukla Paksha Tritheeya (3 rd  Day after amavasya) for worshipping this Goddess.
+
+-----------------------------------
+
+Kashi Khand, Chapter 97, Shlok 187
+
+क्षितिप्रदक्षिणफला मङ्गलैका  प्रदक्षिणा
+
+Performing one circumambulation (pradakshinam/Parikrama) of Mangala Gouri Devi will yield punya of performing pradakshinam/Parikrama of the entire world.
+
+-----------------------------------</div>
+        </div>
+
+        
+        <div class="detail-section">
+          <div class="detail-label">&#128366; Sanskrit Verses (Kashi Khand)</div>
+          <div class="sanskrit-box">क्षितिप्रदक्षिणफला मङ्गलैका  प्रदक्षिणा</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128205; Location & Approach Route</div>
+          <div class="detail-content">
+            <strong>Stated Address:</strong> K-24/34, Panchganga Ghat.  Devotees can travel upto Bhaironath by auto or cycle rickshaw and walk upto this place<br>
+            <strong>Nearby Ghat:</strong> Panchganga Ghat<br>
+            <strong>Zone Verification:</strong> North Kashi (Confidence: High)<br>
+            <span style="font-size:0.82rem; color:#6b7280;">Evidence: North landmarks: ['panchganga', 'panchanada']</span><br>
+            <strong>Directions:</strong> Mangala Gauri is located at K-24/34, Panchganga Ghat.  Devotees can travel upto Bhaironath by auto or cycle rickshaw and walk upto this place.  Mangala Gauri temple is a famous landmark. Alternatively, they can take a boat ride upto Panchganga Ghat and reach this temple through Ghats.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#9200; Darshan Timings & Ritual Logistics</div>
+          <div class="detail-content">
+            <strong>Timings:</strong> The temple is open from 05.00 a.m. to 01.00 p.m. and from 03.00 p.m. to 10 p.m.  Aarties are performed in the evening.  For doing any special pooja etc., it is advisable to contact the Poojari.  There is usually a large crowd on Tuesdays and locals say that many unmarried girls have had their wishes fulfilled by praying at this temple.  Mangala Gauri is one of the 9 Gauris which are worshipped in Navratri falling in March-April (9 days preceding Ram Navami).<br>
+            <strong>Puja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#128220; Scriptural References</div>
+          <div class="detail-content">
+            Kashi Khand, Chapter 97, Shlok 187, Kashi Khand, Chapter 49
+          </div>
+        </div>
+
+        <div class="links-row">
+          <a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/devi-temples/mangala-gauri/index.html">&#128194; Exact Website Mirror Article</a>
+          <a class="btn-link btn-live" href="https://varanasitemples.in/category/devi-temples/mangala-gauri/" target="_blank" rel="noopener">&#127760; Original Live URL &#8599;</a>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="temple-card" data-zone="North Kashi" data-name="mukhnirmalika gauri none noted in source">
+      <div class="temple-header">
+        <div class="temple-title-row">
+          <div class="temple-title">Mukhnirmalika Gauri</div>
+          <span class="badge badge-zone-north">North Kashi</span>
+        </div>
+        <div class="temple-sub">
+          <strong>Form:</strong> Navagauri #1 (Panchganga Ghat) | <strong>Alt:</strong> None noted in source
+        </div>
+      </div>
+      <div class="temple-body">
+        
+        <div class="temple-img-container">
+          <img class="temple-img" src="Kashi_Exact_Offline_Website/assets/images/mukh-nirmalika-comp.jpg" alt="Mukhnirmalika Gauri" loading="eager" onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src=\'assets/images/\' + this.src.split(\'/\').pop();}" >
+          <div class="img-caption">mukh nirmalika comp</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128214; Puranic Origin & Significance</div>
+          <div class="detail-content">Kashi Khand, Chapter 100 has prescribed Gauri Yatra (religious tour of Gauri temples). This Yatra is to be undertaken on Triteeya after Amavasya (3 rd  day after Amavasya).
+
+Devotees are advised to take bath in Gopreksha Teerth and worship Mukhnirmalika Gauri.
+
+Devotees who worship Mukhnirmalika Gauri will get all sorts of happiness and prosperity in life.
+
+(MUKHNIRMALIKA GAURI)</div>
+        </div>
+
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128205; Location & Approach Route</div>
+          <div class="detail-content">
+            <strong>Stated Address:</strong> K.3/42, Hanumanji temple at Gai Ghat<br>
+            <strong>Nearby Ghat:</strong> Hanumanji temple at Gai Ghat<br>
+            <strong>Zone Verification:</strong> North Kashi (Confidence: High)<br>
+            <span style="font-size:0.82rem; color:#6b7280;">Evidence: North landmarks: ['machhodari', 'gaighat', 'gai ghat']</span><br>
+            <strong>Directions:</strong> Mukhnirmalika Gauri is located at K.3/42, Hanumanji temple at Gai Ghat.  Devotees can travel upto Gaighat area behind Machhodari by rickshaw and walk to this place on  foot, by asking for directions.  Alternatively, they can take a boat ride upto Gai Ghat and climb the steps.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#9200; Darshan Timings & Ritual Logistics</div>
+          <div class="detail-content">
+            <strong>Timings:</strong> The temple is open for worship from 05.00 a.m. to 08.00 a.m. and from 05.00 p.m. to 08.00 p.m.  Aarties are held in the morning and evening.
+According to the devotees in the temple, people whose marriages are getting delayed on account of Mangal Graha (planet Mars), perform special pooja at this temple.<br>
+            <strong>Puja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#128220; Scriptural References</div>
+          <div class="detail-content">
+            Kashi Khand, Chapter 100
+          </div>
+        </div>
+
+        <div class="links-row">
+          <a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/devi-temples/mukhnirmalika-gauri/index.html">&#128194; Exact Website Mirror Article</a>
+          <a class="btn-link btn-live" href="https://varanasitemples.in/category/devi-temples/mukhnirmalika-gauri/" target="_blank" rel="noopener">&#127760; Original Live URL &#8599;</a>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="temple-card" data-zone="North Kashi" data-name="jyeshta gauri none noted in source">
+      <div class="temple-header">
+        <div class="temple-title-row">
+          <div class="temple-title">Jyeshta Gauri</div>
+          <span class="badge badge-zone-north">North Kashi</span>
+        </div>
+        <div class="temple-sub">
+          <strong>Form:</strong> Navagauri #2 (Kashi Pura) | <strong>Alt:</strong> None noted in source
+        </div>
+      </div>
+      <div class="temple-body">
+        
+        <div class="temple-img-container">
+          <img class="temple-img" src="Kashi_Exact_Offline_Website/assets/images/Jyeshta-gauri-COMP.jpg" alt="Jyeshta Gauri" loading="eager" onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src=\'assets/images/\' + this.src.split(\'/\').pop();}" >
+          <div class="img-caption">Jyeshta gauri COMP</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128214; Puranic Origin & Significance</div>
+          <div class="detail-content">The importance of Jyeshta Gauri has been described amply in Kashi Khand, Chapter 63.  Lord Shiva said, in the Jyeshta Month (May 20 to June 20), eighth day after Amavasya (Shukla Paksha Ashtami), people should have darshan of Jyeshta Gauri.
+
+(JYESHTA GAURI)
+
+If a girl, who may be most unfortunate, visits the Jyeshta Gauri Temple and prays with sincerity, she becomes most fortunate (Sowbhagyavati).  It is stated that persons visiting Kashi and having darshan of Jyeshta Gauri will reach a high position in life (Kashi Khand, ibid).
+
+Jyeshta Gauri temple is one of the Nine  Gauri temples, which are worshipped in Vasantha Nav Ratri (9 days preceding Rama Navami day).
+
+-----------------------------------
+
+Kashi Khand, Chapter 63, Shlok 20
+
+जयेष्ठेश्वरोऽर्च्य: प्रथमं काश्यां श्रेयोऽर्थिभिर्नरै:
+
+ज्येष्ठा गौरी ततोऽभ्यर्च्या सर्वज्येष्ठमभीप्सुभि:
+
+People who want welfare, should first of all worship Jyeshtheshwar in Kashi, and then by worshiping Jyeshtha Gauri, they will get the position of seniority among all.
+
+-----------------------------------</div>
+        </div>
+
+        
+        <div class="detail-section">
+          <div class="detail-label">&#128366; Sanskrit Verses (Kashi Khand)</div>
+          <div class="sanskrit-box">जयेष्ठेश्वरोऽर्च्य: प्रथमं काश्यां श्रेयोऽर्थिभिर्नरै:
+ज्येष्ठा गौरी ततोऽभ्यर्च्या सर्वज्येष्ठमभीप्सुभि:</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128205; Location & Approach Route</div>
+          <div class="detail-content">
+            <strong>Stated Address:</strong> K-63/24, Sapt Sagar Mohalla. The temple is approachable from a famous locality called Maidagin<br>
+            <strong>Nearby Ghat:</strong> Not directly on a riverfront ghat<br>
+            <strong>Zone Verification:</strong> North Kashi (Confidence: Medium)<br>
+            <span style="font-size:0.82rem; color:#6b7280;">Evidence: North landmarks: ['maidagin']</span><br>
+            <strong>Directions:</strong> If a girl, who may be most unfortunate, visits the Jyeshta Gauri Temple and prays with sincerity, she becomes most fortunate (Sowbhagyavati).  It is stated that persons visiting Kashi and having darshan of Jyeshta Gauri will reach a high position in life (Kashi Khand, ibid).
+Jyeshta Gauri temple is located at K-63/24, Sapt Sagar Mohalla. The temple is approachable from a famous locality called Maidagin.  People can approach Maidagin by Auto or Cycle Rickshaw or even car.  From Maidagin it is advisable to walk on foot. A famous landmark near this temple is the Kashi Devi Temple.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#9200; Darshan Timings & Ritual Logistics</div>
+          <div class="detail-content">
+            <strong>Timings:</strong> S
+The temple is open for worship practically throughout the day.  Aarties are held in the morning and evening. According to old timers, special importance to this temple is attached only on Navratri Gauri Yatras and some special occasions.
+It was also given to understand that pious ladies staying near the temple area gather once in while to sing religious songs and bhajans which creates a spiritual atmosphere.<br>
+            <strong>Puja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#128220; Scriptural References</div>
+          <div class="detail-content">
+            Kashi Khand, Chapter 63, Shlok 20, Kashi Khand, Chapter 63
+          </div>
+        </div>
+
+        <div class="links-row">
+          <a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/devi-temples/jyeshta-gauri/index.html">&#128194; Exact Website Mirror Article</a>
+          <a class="btn-link btn-live" href="https://varanasitemples.in/category/devi-temples/jyeshta-gauri/" target="_blank" rel="noopener">&#127760; Original Live URL &#8599;</a>
+        </div>
+      </div>
+    </div>
+    
+
+        <div class="zone-heading zone-south">
+          <span>South Kashi</span>
+          <span style="font-size:0.85rem; font-weight:normal;">(4 shrines)</span>
+        </div>
+        
+
+    <div class="temple-card" data-zone="South Kashi" data-name="durga devi (kooshmanda durga) none noted in source">
+      <div class="temple-header">
+        <div class="temple-title-row">
+          <div class="temple-title">Durga Devi (Kooshmanda Durga)</div>
+          <span class="badge badge-zone-south">South Kashi</span>
+        </div>
+        <div class="temple-sub">
+          <strong>Form:</strong> Navadurga #4 & Durgakund Protector | <strong>Alt:</strong> None noted in source
+        </div>
+      </div>
+      <div class="temple-body">
+        
+        <div class="temple-img-container">
+          <img class="temple-img" src="Kashi_Exact_Offline_Website/assets/images/Durga-Temple.jpg" alt="Durga Devi (Kooshmanda Durga)" loading="eager" onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src=\'assets/images/\' + this.src.split(\'/\').pop();}" >
+          <div class="img-caption">Durga Temple</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128214; Puranic Origin & Significance</div>
+          <div class="detail-content">Sage Agasthya wanted to know from Lord Kartikeya as to how Goddess got the name of Durga (Kashi Khand, Chapter 71).
+
+Lord Kartikeya narrated, once there was a Demon named Durgasur who underwent intense prayers for several long years and achieved the powers whereby no man could defeat him.  Due to this and on account of his sheer arrogance he began tormenting all religious people, he got several worlds (Bhoo Lok, Swarg Lok etc.) under his control.
+
+(DURGA TEMPLE)
+
+He destroyed various Gurukuls (residential schools), Yagya Shala (places where Yagya/fire rituals were performed), imprisoned various religious Heads, imprisoned various Rishi Patnis (wives of sages).  Rivers started flowing in wrong direction, crops started giving different kinds of yields.
+
+All the devas and human beings approached Lord Shiva and sought refuge.  Lord Shiva knew about the powers of Durgasura especially that the latter could not be killed by a Man.  He hinted the Devi to do the needful.
+
+Devi sent her emissary, Kalratri, alongwith a few other ladies to warn Durgasur. Kalratri reached Durgasur’s abode and passed on the message.  She further asked him to refrain from tormenting religious people, return the land etc. grabbed by him and go elsewhere, otherwise Goddess Devi would certainly slay him.  With utter arrogance Durgasur asked his warriors to capture Kalratri and imprison her.
+
+When the warriors approached her, Kalratri exhaled with a roar which produced jets of fire balls and thousands of the warriors were killed.  This further infuriated Durgasur, who ordered  more warriors to chase her.  Kalratri immediately flew through the sky, reached Goddess’s abode near Vindhyachal mountains and reported the entire happenings to Goddess.
+
+Soon Durgasur arrived at the place where Goddess was stationed and a fierce war ensued.  In the process, Devi released all her Shaktis which took form of various female warriors (with extreme powers).
+
+The battle has been described in detail in Kashi Khand.  Here we may suffice it to say that Goddess, with her extreme powers, killed Durgasur and all his deputies.  There was extreme joy in the entire world and peace and happiness returned.
+
+All devas and other learned people praised Goddess by reciting Vajra Panchakam.  Goddess was pleased and assumed the name of  Durga Devi (on account of slaying Durgasur).  Goddess Durga told the people that devotees should recite Vajra Panchakam which will help them in overcoming any sort of obstacles.
+
+(DURGA KUND)
+
+On Asthami and Chaturdasi, especially if Tuesday combines with the above days, devotees should worship Durga Devi in Kashi. Goddess will bless devotees with purity in thoughts and deeds.  Devotees should perform various kinds of poojas to please Durga Devi.  In Sharad Navaratri and Vasanth Navaratri, devotees should undertake Yatra of Durga Devi.
+
+-----------------------------------
+
+Kashi Khand, Chapter 72, Shlok 82
+
+अष्टम्यां च चतुर्दश्यां भौमवारे विशेषतः
+
+सम्पूज्या सततं काश्यां दुर्गा दुर्गतिनाशिनी
+
+Devotees are advised to perform pooja of Durga Devi (destroyer of distress) on Ashtami, Chaturdasi days and specially on Tuesdays.
+
+-----------------------------------
+
+During Navratri, devotees should take bath in Durga Kund and worship Durga Devi without fail.  By this act, the devotee will cleanse all sins accumulated over his entire life time.
+
+Please watch our YouTube Video about Durga (Kooshmanda) Devi at following Link
+
+https://www.youtube.com/watch?v=7i5RVjROvbQ&t=68s</div>
+        </div>
+
+        
+        <div class="detail-section">
+          <div class="detail-label">&#128366; Sanskrit Verses (Kashi Khand)</div>
+          <div class="sanskrit-box">अष्टम्यां च चतुर्दश्यां भौमवारे विशेषतः
+सम्पूज्या सततं काश्यां दुर्गा दुर्गतिनाशिनी</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128205; Location & Approach Route</div>
+          <div class="detail-content">
+            <strong>Stated Address:</strong> Durga Kund area.  People can travel upto this place in car/auto or cycle rickshaw<br>
+            <strong>Nearby Ghat:</strong> Not directly on a riverfront ghat<br>
+            <strong>Zone Verification:</strong> South Kashi (Confidence: Medium)<br>
+            <span style="font-size:0.82rem; color:#6b7280;">Evidence: South landmarks: ['durga kund']</span><br>
+            <strong>Directions:</strong> All the devas and human beings approached Lord Shiva and sought refuge.  Lord Shiva knew about the powers of Durgasura especially that the latter could not be killed by a Man.  He hinted the Devi to do the needful.
+Devi sent her emissary, Kalratri, alongwith a few other ladies to warn Durgasur. Kalratri reached Durgasur’s abode and passed on the message.  She further asked him to refrain from tormenting religious people, return the land etc. grabbed by him and go elsewhere, otherwise Goddess Devi would certainly slay him.  With utter arrogance Durgasur asked his warriors to capture Kalratri and imprison her.
+When the warriors approached her, Kalratri exhaled with a roar which produced jets of fire balls and thousands of the warriors were killed.  This further infuriated Durgasur, who ordered  more warriors to chase her.  Kalratri immediately flew through the sky, reached Goddess’s abode near Vindhyachal mountains and reported the entire happenings to Goddess.
+Durga Temple of Kashi is quite famous and is located at Durga Kund area.  People can travel upto this place in car/auto or cycle rickshaw.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#9200; Darshan Timings & Ritual Logistics</div>
+          <div class="detail-content">
+            <strong>Timings:</strong> The temple is open from 04.00 a.m. to 01.00 p.m. and from 03.00 p.m. to 11.00 p.m.  This is one of the well maintained temples with idols of Goddesses Lakshmi, Saraswati and Kali present in the premises.  Frequently, Chandi Havan is conducted in the temple.
+Kashi Khand mentions that devotees should offer Bali (slaying of animals).  Old timers say that till several decades back Bali was being offered and there is a place earmarked for that purpose near the temple.  But nowadays Bali is banned by the Government.
+POOJARIES OF THE TEMPLE
+Shri Vijay Dubey is one of the priests of the temple and he can be contacted in his Cell No.  (0)9453365725  for performing any special Pooja, Chandi Havan etc.<br>
+            <strong>Puja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#128220; Scriptural References</div>
+          <div class="detail-content">
+            Kashi Khand, Chapter 71, Kashi Khand, Chapter 72, Shlok 82
+          </div>
+        </div>
+
+        <div class="links-row">
+          <a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/devi-temples/durga-devi-kooshmanda-durga/index.html">&#128194; Exact Website Mirror Article</a>
+          <a class="btn-link btn-live" href="https://varanasitemples.in/category/devi-temples/durga-devi-kooshmanda-durga/" target="_blank" rel="noopener">&#127760; Original Live URL &#8599;</a>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="temple-card" data-zone="South Kashi" data-name="kamakhya devi (kamakshi) none noted in source">
+      <div class="temple-header">
+        <div class="temple-title-row">
+          <div class="temple-title">Kamakhya Devi (Kamakshi)</div>
+          <span class="badge badge-zone-south">South Kashi</span>
+        </div>
+        <div class="temple-sub">
+          <strong>Form:</strong> Yoni Mudra Shakti Peeth Counterpart | <strong>Alt:</strong> None noted in source
+        </div>
+      </div>
+      <div class="temple-body">
+        
+        <div class="temple-img-container">
+          <img class="temple-img" src="Kashi_Exact_Offline_Website/assets/images/Kamakhya-Devi-comp.jpg" alt="Kamakhya Devi (Kamakshi)" loading="eager" onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src=\'assets/images/\' + this.src.split(\'/\').pop();}" >
+          <div class="img-caption">Kamakhya Devi comp</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128214; Puranic Origin & Significance</div>
+          <div class="detail-content">Lord Shiva was in Mandarachal and Kashi was ruled by a very pious and religious King named Divodas.  In his Kingdom every one was very happy and there was all round prosperity.  He had reached an understanding with Lord Brahma that as long as he was ruling, Devas and other celestial beings should stay away from Kashi and should not create any disturbance in Kashi.  (Kashi Khand, Chapter 45).
+
+Lord Brahma more or less agreed to it but on one condition that King Divodas should prove to be an excellent administrator and all people living in Kashi and visiting Kashi should be treated well in their religious pursuits.  The King agreed and accordingly gave excellent governance.
+
+Lord Shiva was very upset at being away from Kashi for a long time and he wanted to make King Divodas commit some mistake.  Accordingly, he sent sixty four Yoginis to create some disturbance, but they were enthralled by the beauty and serene surroundings of Kashi which appeared to be a part of heaven. They ultimately settled down in Kashi and established themselves at various places all round the Kshetra.  KAMAKHYA DEVI (KAMAKSHI DEVI) was one of them.
+
+All the places where these Yoginis stationed themselves are regarded as Shakti Peeth.  A person praying at these places will get divine energy.  The devotees will be blessed with mental peace, victory in competitions and debates and will attain all round success.
+
+(KAMAKHYA DEVI)
+
+Kashi Khand, Chapter 72, in another reference has described Kamakhya as a super power created by Goddess in her fight with Durgasur.</div>
+        </div>
+
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128205; Location & Approach Route</div>
+          <div class="detail-content">
+            <strong>Stated Address:</strong> B.21/123, Kamachha<br>
+            <strong>Nearby Ghat:</strong> Not directly on a riverfront ghat<br>
+            <strong>Zone Verification:</strong> South Kashi (Confidence: Medium)<br>
+            <span style="font-size:0.82rem; color:#6b7280;">Evidence: South landmarks: ['bhelupur']; West/Inland landmarks: ['kamachha']</span><br>
+            <strong>Directions:</strong> Lord Shiva was in Mandarachal and Kashi was ruled by a very pious and religious King named Divodas.  In his Kingdom every one was very happy and there was all round prosperity.  He had reached an understanding with Lord Brahma that as long as he was ruling, Devas and other celestial beings should stay away from Kashi and should not create any disturbance in Kashi.  (Kashi Khand, Chapter 45).
+Kamakhya Devi temple is located at B.21/123, Kamachha.  This is a famous temple and another temple “Batuk Bhairav temple” nearby is a famous landmark.  In fact, the name of the locality Kamachha has been derived from the name of Kamakhya Devi.  If a devotee travels from Bhelupura towards Rathyatra he will have to take a left turn just before multi storeyed Kashi Raaj Apartments to reach this place.  Since the temple is quite famous, most of the rickshaw pullers know this place.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#9200; Darshan Timings & Ritual Logistics</div>
+          <div class="detail-content">
+            <strong>Timings:</strong> The temple is open from 03.00 a.m to 12.00 p.m. and from 04.00 p.m. to 10.00 p.m.  Aarties are held at 05.30 a.m. and 07.30 a.m.  There is a heavy rush on Tuesdays, Fridays and during Navratri days (both in March-April and September-October).
+POOJARIES OF THE TEMPLE
+Shri Digambar Vireshwar Puri is the poojari of the temple.<br>
+            <strong>Puja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#128220; Scriptural References</div>
+          <div class="detail-content">
+            Kashi Khand, Chapter 45, Kashi Khand, Chapter 72
+          </div>
+        </div>
+
+        <div class="links-row">
+          <a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/devi-temples/kamakhya-devi-kamakshi/index.html">&#128194; Exact Website Mirror Article</a>
+          <a class="btn-link btn-live" href="https://varanasitemples.in/category/devi-temples/kamakhya-devi-kamakshi/" target="_blank" rel="noopener">&#127760; Original Live URL &#8599;</a>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="temple-card" data-zone="South Kashi" data-name="chamunda devi none noted in source">
+      <div class="temple-header">
+        <div class="temple-title-row">
+          <div class="temple-title">Chamunda Devi</div>
+          <span class="badge badge-zone-south">South Kashi</span>
+        </div>
+        <div class="temple-sub">
+          <strong>Form:</strong> Slayer of Chanda and Munda | <strong>Alt:</strong> None noted in source
+        </div>
+      </div>
+      <div class="temple-body">
+        
+        <div class="temple-img-container">
+          <img class="temple-img" src="Kashi_Exact_Offline_Website/assets/images/Chamunda-Devi-Mahishasurmardini-1.jpg" alt="Chamunda Devi" loading="eager" onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src=\'assets/images/\' + this.src.split(\'/\').pop();}" >
+          <div class="img-caption">Chamunda Devi (Mahishasurmardini)</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128214; Puranic Origin & Significance</div>
+          <div class="detail-content">In Hayagreeva Teerth and to the north of Lolark, devotees will find Chamunda Devi.  Chamunda Devi alongwith Charma Munda Devi and Maha Munda Devi are regarded as Kshetra Rakshikas (guardians of Region).
+
+Devotees who worship Chamunda Devi will be blessed with wealth, increased agricultural produce, children and grand children. (Kashi Khand, Chapter 70).
+
+(CHAMUNDA DEVI)</div>
+        </div>
+
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128205; Location & Approach Route</div>
+          <div class="detail-content">
+            <strong>Stated Address:</strong> This Devi is known by the name of Mahishasura Mardini near Lolark Kund, which is quite famous.  People can travel upto t<br>
+            <strong>Nearby Ghat:</strong> Not directly on a riverfront ghat<br>
+            <strong>Zone Verification:</strong> South Kashi (Confidence: Medium)<br>
+            <span style="font-size:0.82rem; color:#6b7280;">Evidence: South landmarks: ['lolark kund']</span><br>
+            <strong>Directions:</strong> This Devi is known by the name of Mahishasura Mardini near Lolark Kund, which is quite famous.  People can travel upto this place in rickshaw as this temple is well known.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#9200; Darshan Timings & Ritual Logistics</div>
+          <div class="detail-content">
+            <strong>Timings:</strong> The temple is open from 05.30 a.m. to 11.30 a.m. and from 05.00 p.m. to 09.00 p.m.  Aarties are held in the morning and evening.  Evening aarti at around 07.00 – 07.30 is worth watching.<br>
+            <strong>Puja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#128220; Scriptural References</div>
+          <div class="detail-content">
+            Kashi Khand, Chapter 70
+          </div>
+        </div>
+
+        <div class="links-row">
+          <a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/devi-temples/chamunda-devi/index.html">&#128194; Exact Website Mirror Article</a>
+          <a class="btn-link btn-live" href="https://varanasitemples.in/category/devi-temples/chamunda-devi/" target="_blank" rel="noopener">&#127760; Original Live URL &#8599;</a>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="temple-card" data-zone="South Kashi" data-name="charma munda devi none noted in source">
+      <div class="temple-header">
+        <div class="temple-title-row">
+          <div class="temple-title">Charma Munda Devi</div>
+          <span class="badge badge-zone-south">South Kashi</span>
+        </div>
+        <div class="temple-sub">
+          <strong>Form:</strong> Protector of Kashi Kshetra | <strong>Alt:</strong> None noted in source
+        </div>
+      </div>
+      <div class="temple-body">
+        
+        <div class="temple-img-container">
+          <img class="temple-img" src="Kashi_Exact_Offline_Website/assets/images/Charma-Munda-1.jpg" alt="Charma Munda Devi" loading="eager" onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src=\'assets/images/\' + this.src.split(\'/\').pop();}" >
+          <div class="img-caption">Charma Munda</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128214; Puranic Origin & Significance</div>
+          <div class="detail-content">According to Kashi Khand, Chapter 70, in Tarkeshwar Teerth, devotees can find Charma Munda Devi.  The Devi is visualised  as a huge figure trying to swallow the entire galaxy. She is described holding skull and knife in her hand with thousand shoulders.  Her hands are very huge.
+
+(CHARMA MUNDA DEVI)
+
+She destroys all the evil forces and the enemies of the Holy place are chewed by her in her mouth. Devotees who worship Charma Munda Devi will not face any obstacles in their religious life.
+
+(MAHA MUNDA DEVI)</div>
+        </div>
+
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128205; Location & Approach Route</div>
+          <div class="detail-content">
+            <strong>Stated Address:</strong> B-2/62 Bhadaini. If one proceeds after Mata Anandmayee Hospital towards Assi, there is left turn going towards Bhadaini Water Works<br>
+            <strong>Nearby Ghat:</strong> Not directly on a riverfront ghat<br>
+            <strong>Zone Verification:</strong> South Kashi (Confidence: High)<br>
+            <span style="font-size:0.82rem; color:#6b7280;">Evidence: South landmarks: ['assi', 'bhadaini']</span><br>
+            <strong>Directions:</strong> Charma Munda Devi is located at B-2/62 Bhadaini. If one proceeds after Mata Anandmayee Hospital towards Assi, there is left turn going towards Bhadaini Water Works.  The corner building is B-2/61 which is the house of the Priest of the temple.  There is a fairly steep slope over which this temple is situated.  The locals call this temple as Nav Durga Temple.
+The temple also houses Maha Munda Devi (Maha Runda) which has reference in Kashi Khand, Chapter 70.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#9200; Darshan Timings & Ritual Logistics</div>
+          <div class="detail-content">
+            <strong>Timings:</strong> The place of worship is open from  05.30 a.m. to 10.00 a.m. and from 04.00 p.m. to 10.00 p.m.  Mangala Aarti is performed at 05.45 a.m., Bhog Aarti at 10.00 a.m., evening aarti at 07.30 p.m. and Shayan Aarti at 10.00 p.m.<br>
+            <strong>Puja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#128220; Scriptural References</div>
+          <div class="detail-content">
+            Kashi Khand, Chapter 70
+          </div>
+        </div>
+
+        <div class="links-row">
+          <a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/devi-temples/charma-munda-devi/index.html">&#128194; Exact Website Mirror Article</a>
+          <a class="btn-link btn-live" href="https://varanasitemples.in/category/devi-temples/charma-munda-devi/" target="_blank" rel="noopener">&#127760; Original Live URL &#8599;</a>
+        </div>
+      </div>
+    </div>
+    
+
+        <div class="zone-heading zone-east">
+          <span>East Kashi</span>
+          <span style="font-size:0.85rem; font-weight:normal;">(13 shrines)</span>
+        </div>
+        
+
+    <div class="temple-card" data-zone="East Kashi" data-name="annapurna devi none noted in source">
+      <div class="temple-header">
+        <div class="temple-title-row">
+          <div class="temple-title">Annapurna Devi</div>
+          <span class="badge badge-zone-east">East Kashi</span>
+        </div>
+        <div class="temple-sub">
+          <strong>Form:</strong> Supreme Provider of Food & Sustenance | <strong>Alt:</strong> None noted in source
+        </div>
+      </div>
+      <div class="temple-body">
+        
+        <div class="temple-img-container">
+          <img class="temple-img" src="Kashi_Exact_Offline_Website/assets/images/annapurna1.jpg" alt="Annapurna Devi" loading="eager" onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src=\'assets/images/\' + this.src.split(\'/\').pop();}" >
+          <div class="img-caption">annapurna1</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128214; Puranic Origin & Significance</div>
+          <div class="detail-content">Annapurna Devi is referred to as Bhavani Devi by people in Kashi.  Lord Vishnu was describing the various deities and Teerths (Sacred ponds etc.) to Sage Bindu (Chapter 61, Kashi Khand).
+
+Devotees have been advised to worship Annapurna Devi and they would get the benefit of worshipping all Devis in the world.  Devotees should worship this deity with the offerings of clothes, precious stones, flowers, incense sticks, deep (lamp).
+
+Kashi Khand states that devotees should circumambulate Bhavani (Annapurna) 108 times in Chaitra Month, Shukla Paksha Ashtami.  By doing this the devotees would derive the benefit of circumabulating all the mountains, seas, divine ashrams, all islands and the entire world.
+
+Devotees should circumambulate this deity eight times daily and worship Annapurna.  With the blessings of Annapurna all residents of Kashi will always remain happy.  If devotees face any sort of hardship in Kashi, they should sincerely worship Maa Annapurna and they will be blessed with all prosperity and their obstacles will be removed.
+
+Kashi Khand has described the greatness of Bhavani (Annapurna) in detail.
+
+According to puranic belief, Maa Durga’s eighth form is Maha Gauri. She is fair complexioned and her fairness is compared with shell, conch and moon. She is considered to be eight years old. Her clothes and ornaments are also white. Her vehicle is a bull. She has four hands. Her upper right hand grants protection from all fears and in her lower right hand she holds a trishul (trident).  She has a small drum in her upper left hand and her lower left hand grants blessings. Her appearance is very peaceful.
+
+To attain Lord Shiva as her husband, She (as Parvati) had undergone rigorous penance, due to which her full body became black. Lord Shiva was pleased with her penance and he bather her with holy Ganga Water due to which she became as lovely and white as lightning. So she is called Maha Gauri (Gauri means fair complexioned/white). She always grants wishes to her devotees without fail. Devotees get all round prosperity and they do not have to face any sort of grief or sorrow.
+
+Every year from Dhanteras viz. Triyodashi before Deepavali Amavasya to one day after Amavasya (total four days), Golden Annapurna idol is installed on the upper floor of Annapurna temple for darshan by devotees. South Indian devotees general combine Deepavali Darshan for Golden Annapurna, Ganga Snaan and Vishwanath Darshan.
+
+Please watch our YouTube Video about Mahagauri (Annapurna) Devi at following Link
+
+https://www.youtube.com/watch?v=HY-Z3pvPaBU&t=97s</div>
+        </div>
+
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128205; Location & Approach Route</div>
+          <div class="detail-content">
+            <strong>Stated Address:</strong> D-9/1, Annapurna Temple. The narrow lane or Gully approaching the temple is known as Vishwanath Gully<br>
+            <strong>Nearby Ghat:</strong> Not directly on a riverfront ghat<br>
+            <strong>Zone Verification:</strong> East Kashi (Confidence: Medium)<br>
+            <span style="font-size:0.82rem; color:#6b7280;">Evidence: East/Riverfront landmarks: ['dashashwamedh']; West/Inland landmarks: ['bansphatak']</span><br>
+            <strong>Directions:</strong> Annapurna Devi is located at D-9/1, Annapurna Temple. The narrow lane or Gully approaching the temple is known as Vishwanath Gully.
+There are two approach lanes one via Dashashwamedh Road, 2 nd  via Bansphatak.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#9200; Darshan Timings & Ritual Logistics</div>
+          <div class="detail-content">
+            <strong>Timings:</strong> The place of worship is open from 05.00 a.m. to 10.00 p.m.  Aarties are conducted in the morning and evening.  There is also annadanam daily at the temple premises in the afternoon where devotees can get free food.<br>
+            <strong>Puja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#128220; Scriptural References</div>
+          <div class="detail-content">
+            Not specified in the source article.
+          </div>
+        </div>
+
+        <div class="links-row">
+          <a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/devi-temples/annapurna-devi/index.html">&#128194; Exact Website Mirror Article</a>
+          <a class="btn-link btn-live" href="https://varanasitemples.in/category/devi-temples/annapurna-devi/" target="_blank" rel="noopener">&#127760; Original Live URL &#8599;</a>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="temple-card" data-zone="East Kashi" data-name="vishalakshi gauri none noted in source">
+      <div class="temple-header">
+        <div class="temple-title-row">
+          <div class="temple-title">Vishalakshi Gauri</div>
+          <span class="badge badge-zone-east">East Kashi</span>
+        </div>
+        <div class="temple-sub">
+          <strong>Form:</strong> Shaktipeeth & Navagauri #5 | <strong>Alt:</strong> None noted in source
+        </div>
+      </div>
+      <div class="temple-body">
+        
+        <div class="temple-img-container">
+          <img class="temple-img" src="Kashi_Exact_Offline_Website/assets/images/Vishalakshi-1.jpg" alt="Vishalakshi Gauri" loading="eager" onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src=\'assets/images/\' + this.src.split(\'/\').pop();}" >
+          <div class="img-caption">Vishalakshi</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128214; Puranic Origin & Significance</div>
+          <div class="detail-content">On a request from Sage Agasthya Lord Kartikeya  happily started describing various Devis in Kashi.
+
+Devi is present in the form of Goddess Vishalakshi in Vishal Teerth in River Ganga. A devotee should bathe in Vishal Teerth and worship Vishalakshi Devi for all round happiness.
+
+In the month of Aswin (Sept. 23-Oct. 22) devotees should remain on fast and keep awake on the night of Triteeya. In the morning they should devotedly offer new clothes and other related items and feed 14 girls. After performing the above Kanya Pooja, they should break their fast.
+
+Vishalakshi Devi temple is a powerful Shakti Peeth and any pooja, charity, recitation of devi mantras performed in this premises is considered to yield very high results.  Unmarried girls worshipping Vishalakshi Devi are sure to get married, childless couple will certainly be blessed with a child, even the most unfortunate ladies will find all fortunes coming their way.
+
+Kashi Khand, Chapter 70, has amply described the greatness of Vishalakshi Devi.  Further, in Chapter 100, Kashi Khand has prescribed Nau Gauri Yatra (religious pilgrimage tour of nine Gauris and Vishalakshi is one of those Gauris).
+
+(VISHALAKSHI DEVI)
+
+If you look carefully in the photograph, there are two Devi images.  One is at the back with garland orange in colour. This is Aadi Vishalakshi.  The idol in front has been installed at a later stage.
+
+South Indians attach great importance to this temple.  They regard this as one of the three main Devi Temples in India viz. Kanchi Kamakshi, Madurai Meenakshi and Kashi Vishalakshi.
+
+Please watch our YouTube Video about Vishalakshy Gauri at following Link
+
+https://www.youtube.com/watch?v=65mhbPpO8XY&t=14s</div>
+        </div>
+
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128205; Location & Approach Route</div>
+          <div class="detail-content">
+            <strong>Stated Address:</strong> Devotees can find Vishalakshi temple at D.3/85, Mir Ghat. They can travel upto Dasaswamedh Vishwanath Gulli or Bansphata<br>
+            <strong>Nearby Ghat:</strong> Mir Ghat<br>
+            <strong>Zone Verification:</strong> East Kashi (Confidence: High)<br>
+            <span style="font-size:0.82rem; color:#6b7280;">Evidence: South landmarks: ['assi']; East/Riverfront landmarks: ['dasaswamedh', 'mir ghat']; West/Inland landmarks: ['bansphatak']</span><br>
+            <strong>Directions:</strong> Devotees can find Vishalakshi temple at D.3/85, Mir Ghat. They can travel upto Dasaswamedh Vishwanath Gulli or Bansphatak Vishwanath Gulli by rickshaw and walk on foot to this place.  Devotees generally combine prayers at this temple alongwith darshan of Visweshwar / Annapurna temple.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#9200; Darshan Timings & Ritual Logistics</div>
+          <div class="detail-content">
+            <strong>Timings:</strong> The temple is open from 04.30 a.m. in the morning to 11.00 a.m. and from 05.00 p.m. to 10.00 p.m.  The<br>
+            <strong>Puja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#128220; Scriptural References</div>
+          <div class="detail-content">
+            Kashi Khand, Chapter 70
+          </div>
+        </div>
+
+        <div class="links-row">
+          <a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/devi-temples/vishalakshi-gauri/index.html">&#128194; Exact Website Mirror Article</a>
+          <a class="btn-link btn-live" href="https://varanasitemples.in/category/devi-temples/vishalakshi-gauri/" target="_blank" rel="noopener">&#127760; Original Live URL &#8599;</a>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="temple-card" data-zone="East Kashi" data-name="tripura bhairavi none noted in source">
+      <div class="temple-header">
+        <div class="temple-title-row">
+          <div class="temple-title">Tripura Bhairavi</div>
+          <span class="badge badge-zone-east">East Kashi</span>
+        </div>
+        <div class="temple-sub">
+          <strong>Form:</strong> Mahavidya #5 (Bhairavi) | <strong>Alt:</strong> None noted in source
+        </div>
+      </div>
+      <div class="temple-body">
+        
+        <div class="temple-img-container">
+          <img class="temple-img" src="Kashi_Exact_Offline_Website/assets/images/Tripura-Bhairavi-1-756x1024.jpg" alt="Tripura Bhairavi" loading="eager" onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src=\'assets/images/\' + this.src.split(\'/\').pop();}" >
+          <div class="img-caption">Tripura Bhairavi</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128214; Puranic Origin & Significance</div>
+          <div class="detail-content">When Goddess was fighting a fierce battle against Durgasur (Kindly refer Durga Devi), she released various forms of energy (called Shakti) from her body.  These Shakti Devis released intense energy in form of fire balls to fight Durgasur and his army. (Kashi Khand, Chapter 72).  Finally the battle was won.
+
+(TRIPURA BHAIRAVI)
+
+One of those Shaktis is  Tripura Bhairavi.  Devotees who worship this deity will attain success in their endeavours and they will gain  mental strength.  Out of more than 90 forms of Shaktis, only a few deities are present now.  Many of their temples or idols have ceased to be in existence and one or two of them are inside private houses where public worship is not allowed.</div>
+        </div>
+
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128205; Location & Approach Route</div>
+          <div class="detail-content">
+            <strong>Stated Address:</strong> D.5/24, Mir Ghat<br>
+            <strong>Nearby Ghat:</strong> Mir Ghat<br>
+            <strong>Zone Verification:</strong> East Kashi (Confidence: High)<br>
+            <span style="font-size:0.82rem; color:#6b7280;">Evidence: East/Riverfront landmarks: ['dasaswamedh', 'mir ghat', 'tripura bhairavi']</span><br>
+            <strong>Directions:</strong> Tripura Bhairavi is located at D.5/24, Mir Ghat. Devotees may approach this place from Dasaswamedh Vishwanath Gully and take the first right turn. This is a famous place.  This temple also houses Tripureshwar Shiv Ling (in the vicinity of Rudreshwar) which finds mention in Kashi Khand, Chapter 69. Devotees may worship these two lings also.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#9200; Darshan Timings & Ritual Logistics</div>
+          <div class="detail-content">
+            <strong>Timings:</strong> The place of worship is open from 05.00 a.m. to 10.00 a.m. and from 06.00 p.m.to 10.00 p.m. Aarties are held in the morning and evening.  Devotees can worship through grill gate during other times.<br>
+            <strong>Puja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#128220; Scriptural References</div>
+          <div class="detail-content">
+            Kashi Khand, Chapter 69, Kashi Khand, Chapter 72
+          </div>
+        </div>
+
+        <div class="links-row">
+          <a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/devi-temples/tripura-bhairavi/index.html">&#128194; Exact Website Mirror Article</a>
+          <a class="btn-link btn-live" href="https://varanasitemples.in/category/devi-temples/tripura-bhairavi/" target="_blank" rel="noopener">&#127760; Original Live URL &#8599;</a>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="temple-card" data-zone="East Kashi" data-name="kalratri none noted in source">
+      <div class="temple-header">
+        <div class="temple-title-row">
+          <div class="temple-title">Kalratri</div>
+          <span class="badge badge-zone-east">East Kashi</span>
+        </div>
+        <div class="temple-sub">
+          <strong>Form:</strong> Navadurga #7 & Mahavidya Kali counterpart | <strong>Alt:</strong> None noted in source
+        </div>
+      </div>
+      <div class="temple-body">
+        
+        <div class="temple-img-container">
+          <img class="temple-img" src="Kashi_Exact_Offline_Website/assets/images/kalika1.jpg" alt="Kalratri" loading="eager" onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src=\'assets/images/\' + this.src.split(\'/\').pop();}" >
+          <div class="img-caption">kalika1</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128214; Puranic Origin & Significance</div>
+          <div class="detail-content">When the evil demon Durgasur was to be killed, Kalratri was sent by Goddess as her special emissary. Kalratri created havoc by her exhalation which resulted in huge fire balls destroying the demon’s army. (Details given under Durga Devi).
+
+After slaying the demon and taking the form of  Durga Devi, Kashi Khand states that Durga Devi guards Kashi in form of various Shaktis/Devis at various places in Kashi.  Kalratri is one of them.
+
+Maa Durga’s seventh form is Kalratri. Her body is pitch black just like darkness.  Her hair is in disorder. She has garland around her neck which shines like lightning. She has 3 eyes which are round like the universe and give out lightning rays continuously. She exhales fire flames continuously through her nose. Her vehicle is a donkey.  Her upper right hand grants blessings and lower right hand assures protection. Her upper left hand has an iron thorn and her lower left hand has a dagger.
+
+Though her appearance is fearsome, she always grants auspicious boons. So her name is Shubhkari. Her devotees need not fear her. She destroys evil, so demons and ghosts run away even when somebody thinks about her.  Her devotees are freed from fear (phobia) of fire, water, animals, enemies, night etc i.e. all kinds of fear.
+
+Kalratri devi is considered to be very powerful.
+
+Please watch our YouTube Video about Kalratri Devi at following Link
+
+https://www.youtube.com/watch?v=HY-Z3pvPaBU&t=97s</div>
+        </div>
+
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128205; Location & Approach Route</div>
+          <div class="detail-content">
+            <strong>Stated Address:</strong> D.8/17, Kalika Galli, which is a lane parallel to Annapurna – Vishwanath Lane<br>
+            <strong>Nearby Ghat:</strong> Not directly on a riverfront ghat<br>
+            <strong>Zone Verification:</strong> East Kashi (Confidence: Medium)<br>
+            <span style="font-size:0.82rem; color:#6b7280;">Evidence: East/Riverfront landmarks: ['dasaswamedh']</span><br>
+            <strong>Directions:</strong> Kalratri is located at D.8/17, Kalika Galli, which is a lane parallel to Annapurna – Vishwanath Lane.  People can travel to Dasaswamedh by rickshaw and walk through the Gully to Visweshwar temple and after crossing Sakshi Vinayak, they may take right turn, climb a few steps and reach Kalika Galli through Shukreshwar.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#9200; Darshan Timings & Ritual Logistics</div>
+          <div class="detail-content">
+            <strong>Timings:</strong> The temple is open from 06.00 a.m. to 12.30 p.m. and from 04.00 p.m. to 10.30 p.m.  Aarties are held in the morning and evening.
+According to old timers, Kalratri is a very powerful  Devi and at any time, few old people can be seen in the temple premises deeply engrossed in prayers.<br>
+            <strong>Puja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#128220; Scriptural References</div>
+          <div class="detail-content">
+            Not specified in the source article.
+          </div>
+        </div>
+
+        <div class="links-row">
+          <a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/devi-temples/kalratri/index.html">&#128194; Exact Website Mirror Article</a>
+          <a class="btn-link btn-live" href="https://varanasitemples.in/category/devi-temples/kalratri/" target="_blank" rel="noopener">&#127760; Original Live URL &#8599;</a>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="temple-card" data-zone="East Kashi" data-name="lalitha gauri none noted in source">
+      <div class="temple-header">
+        <div class="temple-title-row">
+          <div class="temple-title">Lalitha Gauri</div>
+          <span class="badge badge-zone-east">East Kashi</span>
+        </div>
+        <div class="temple-sub">
+          <strong>Form:</strong> Navagauri #6 & Mahavidya Lalitha/Shodashi counterpart | <strong>Alt:</strong> None noted in source
+        </div>
+      </div>
+      <div class="temple-body">
+        
+        <div class="temple-img-container">
+          <img class="temple-img" src="Kashi_Exact_Offline_Website/assets/images/Lalita-Gauri.jpeg" alt="Lalitha Gauri" loading="eager" onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src=\'assets/images/\' + this.src.split(\'/\').pop();}" >
+          <div class="img-caption">Lalita Gauri</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128214; Puranic Origin & Significance</div>
+          <div class="detail-content">Near Ganga Keshav, there is a Teerth known as Lalita Teerth where Devi is present in the form of Lalita Gauri.
+
+A person who worships Lalita Gauri with all sincerity is sure to get all wealth and prosperity.  Aswin Month, (Sept. Oct.) Krishna Paksha, Dwiteeya, 2 nd  day after Poornima is considered  auspicious for performing special pooja of Lalita Gauri.
+
+(LALITA GAURI)
+
+A person who takes bath in Lalita Teerth (now Lalita Ghat) and worships Lalita Gauri is sure to be blessed with prosperity. (Kashi Khand, Chapter 70).</div>
+        </div>
+
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128205; Location & Approach Route</div>
+          <div class="detail-content">
+            <strong>Stated Address:</strong> Lalita Gauri is present at Ck.1/67, Lalita Ghat. If one desires to walk on foot, he will have to travel upto Dasaswamedh<br>
+            <strong>Nearby Ghat:</strong> now Lalita Ghat<br>
+            <strong>Zone Verification:</strong> East Kashi (Confidence: High)<br>
+            <span style="font-size:0.82rem; color:#6b7280;">Evidence: East/Riverfront landmarks: ['dasaswamedh', 'lalita ghat']</span><br>
+            <strong>Directions:</strong> Lalita Gauri is present at Ck.1/67, Lalita Ghat. If one desires to walk on foot, he will have to travel upto Dasaswamedh by rickshaw and walk through the Ghats upto Lalita Ghat and climb the steps.  If the devotee is already in the Gullies in the vicinity, Nepali Pasupati Mandir is an important landmark.  However, Nepali Pasupati Mandir is not mentioned in Kashi Khand, as such the same is not covered here.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#9200; Darshan Timings & Ritual Logistics</div>
+          <div class="detail-content">
+            <strong>Timings:</strong> The temple also houses Kashi Devi and Bhagirath Devi idols.  The temple is open from 05.00 a.m. to 09.00 a.m. and from 05.00 p.m. to 09.30 p.m. The<br>
+            <strong>Puja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#128220; Scriptural References</div>
+          <div class="detail-content">
+            Kashi Khand, Chapter 70
+          </div>
+        </div>
+
+        <div class="links-row">
+          <a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/devi-temples/lalitha-gauri/index.html">&#128194; Exact Website Mirror Article</a>
+          <a class="btn-link btn-live" href="https://varanasitemples.in/category/devi-temples/lalitha-gauri/" target="_blank" rel="noopener">&#127760; Original Live URL &#8599;</a>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="temple-card" data-zone="East Kashi" data-name="siddha lakshmi devi none noted in source">
+      <div class="temple-header">
+        <div class="temple-title-row">
+          <div class="temple-title">Siddha Lakshmi Devi</div>
+          <span class="badge badge-zone-east">East Kashi</span>
+        </div>
+        <div class="temple-sub">
+          <strong>Form:</strong> Bestower of Spiritual & Material Siddhis | <strong>Alt:</strong> None noted in source
+        </div>
+      </div>
+      <div class="temple-body">
+        
+        <div class="temple-img-container">
+          <img class="temple-img" src="Kashi_Exact_Offline_Website/assets/images/Sidha-Lakshmi-Devi.jpeg" alt="Siddha Lakshmi Devi" loading="eager" onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src=\'assets/images/\' + this.src.split(\'/\').pop();}" >
+          <div class="img-caption">Sidha Lakshmi Devi</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128214; Puranic Origin & Significance</div>
+          <div class="detail-content">Kashi Khand, Chapter 70 mentions various Devis in Kashi who have to be worshipped.  All of them are powerful Devis.
+
+In the vicinity of Pita Maheshwar, Jaganmata is present in the form of Siddha Lakshmi Devi.
+
+(SIDDHA LAKSHMI DEVI)
+
+People who worship this Devi  obtain all sorts of Siddhi (divine powers) and their wishes will be fulfilled.  The devotee’s life will be full of happiness and prosperity.</div>
+        </div>
+
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128205; Location & Approach Route</div>
+          <div class="detail-content">
+            <strong>Stated Address:</strong> Siddha Lakshmi Devi is located on the Wall  at Ck.8/1, Opposite  Siddhi Vinayak, Manikarnika.  Devotees can travel upto Chowk by rickshaw and travel on foot to this temple. Alternatively, they can take a boat ride upto Manikarnika Ghat (near Chakra Pushkarini Teerth) and climb the steps.<br>
+            <strong>Nearby Ghat:</strong> they can take a boat ride upto Manikarnika Ghat<br>
+            <strong>Zone Verification:</strong> East Kashi (Confidence: Medium)<br>
+            <span style="font-size:0.82rem; color:#6b7280;">Evidence: East/Riverfront landmarks: ['manikarnika']; West/Inland landmarks: ['chowk']</span><br>
+            <strong>Directions:</strong> Siddha Lakshmi Devi is located on the Wall  at Ck.8/1, Opposite  Siddhi Vinayak, Manikarnika.  Devotees can travel upto Chowk by rickshaw and travel on foot to this temple. Alternatively, they can take a boat ride upto Manikarnika Ghat (near Chakra Pushkarini Teerth) and climb the steps.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#9200; Darshan Timings & Ritual Logistics</div>
+          <div class="detail-content">
+            <strong>Timings:</strong> The place of worship is open from 06.00 a.m. to 11.30 a.m. and from 04.30 p.m. to 10.00 p.m.<br>
+            <strong>Puja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#128220; Scriptural References</div>
+          <div class="detail-content">
+            Kashi Khand, Chapter 70
+          </div>
+        </div>
+
+        <div class="links-row">
+          <a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/devi-temples/siddha-lakshmi-devi/index.html">&#128194; Exact Website Mirror Article</a>
+          <a class="btn-link btn-live" href="https://varanasitemples.in/category/devi-temples/siddha-lakshmi-devi/" target="_blank" rel="noopener">&#127760; Original Live URL &#8599;</a>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="temple-card" data-zone="East Kashi" data-name="brahma charini devi none noted in source">
+      <div class="temple-header">
+        <div class="temple-title-row">
+          <div class="temple-title">Brahma Charini Devi</div>
+          <span class="badge badge-zone-east">East Kashi</span>
+        </div>
+        <div class="temple-sub">
+          <strong>Form:</strong> Navadurga #2 (Ganga Ghat) | <strong>Alt:</strong> None noted in source
+        </div>
+      </div>
+      <div class="temple-body">
+        
+        <div class="temple-img-container">
+          <img class="temple-img" src="Kashi_Exact_Offline_Website/assets/images/Brahmacharini.jpeg" alt="Brahma Charini Devi" loading="eager" onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src=\'assets/images/\' + this.src.split(\'/\').pop();}" >
+          <div class="img-caption">Brahmacharini</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128214; Puranic Origin & Significance</div>
+          <div class="detail-content">According to Kashi Khand, Chapter 70, in the vicinity of Brahmeshwar, devotees can find Brahma Devi (Brahmacharini).
+
+Among the nine forms of Maa Durga, Brahmacharini is the second. Here Brahma means Tapasya (penance). Brahmacharini means one who observes penance. Brahmacharini Devi’s form is brilliant and very magnificent. She has a bead garland in her right hand and a Kamandalu (water pot) in her left hand.
+
+(BRAHMACHARINI DEVI)
+
+In her previous birth she was born as the daughter of Himalaya. At that time, she was encouraged by Sage Narad’s advice and she underwent a rigorous penance for several thousand years to be blessed with Lord Shiva as her husband. Due to this rigorous penance, she was called Tapascharini.  All the Devas and Sages described her penance as extra ordinary and began to praise her.  In the end, Lord Brahma was also impressed and addressed her saying that nobody had done such a rigorous penance and it has been admired by everybody everywhere.  Lord Brahma further stated that Tapascharini will get Lord Shiva as her husband.
+
+This second form of Maa Durga grants her devotees unlimited wishes.  By worshipping her the qualities like penance, sacrifice, freedom from wordly desires, discipline, self control etc. increase in a devotee.  Even in adverse circumstances his mind does not waver from his duties. Due to her blessings he attains victory and prosperity everywhere.
+
+The Devi is described as paralyzing the enemies by sprinkling the holy water from the water jug.  Those who worship this Devi daily will become adept in Brahma Vidya.  In the modern day parlance, this can be taken for higher education.
+
+Please watch our YouTube Video about Brahmacharini Devi at following Link
+
+https://www.youtube.com/watch?v=4J2GrPNCmlc&t=32s</div>
+        </div>
+
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128205; Location & Approach Route</div>
+          <div class="detail-content">
+            <strong>Stated Address:</strong> K-22/72, Durga Ghat.  Devotees can travel upto Bhaironath by rickshaw and walk on foot upto Brahmeshwar temple<br>
+            <strong>Nearby Ghat:</strong> Durga Ghat<br>
+            <strong>Zone Verification:</strong> East Kashi (Confidence: Medium)<br>
+            <span style="font-size:0.82rem; color:#6b7280;">Evidence: East/Riverfront landmarks: ['dasaswamedh']</span><br>
+            <strong>Directions:</strong> Brahma Charini is located at K-22/72, Durga Ghat.  Devotees can travel upto Bhaironath by rickshaw and walk on foot upto Brahmeshwar temple.  Alternatively, they can travel upto Durga Ghat / Brahma Ghat by boat and climb the steps. Devotees specially worship Brahmacharini Devi during Navratri falling in September/October. There is another Devi worshipped as Brahmini who is very powerful alongwith Goddesses like Maaheshwari, Varahi etc.  This Devi idol is located at Brahmeshwar temple  at D-33/66 Khalispura, near Dasaswamedh, Varanasi.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#9200; Darshan Timings & Ritual Logistics</div>
+          <div class="detail-content">
+            <strong>Timings:</strong> The temple is open from 06.00 a.m. to 01.30 p.m. and from 04.00 p.m. to 11.00 p.m.  Aarti is performed at 06.00 a.m., 04.00 p.m. and 11.00 p.m. (Shayan Aarti).
+POOJARI OF THE TEMPLE
+Shri Rajesh Sagarkar is the Poojari of the temple and he can be contacted at his phone No. 0542-2437004 for performing any special pooja etc.<br>
+            <strong>Puja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#128220; Scriptural References</div>
+          <div class="detail-content">
+            Kashi Khand, Chapter 70
+          </div>
+        </div>
+
+        <div class="links-row">
+          <a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/devi-temples/brahma-charini-devi/index.html">&#128194; Exact Website Mirror Article</a>
+          <a class="btn-link btn-live" href="https://varanasitemples.in/category/devi-temples/brahma-charini-devi/" target="_blank" rel="noopener">&#127760; Original Live URL &#8599;</a>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="temple-card" data-zone="East Kashi" data-name="katyayani none noted in source">
+      <div class="temple-header">
+        <div class="temple-title-row">
+          <div class="temple-title">Katyayani</div>
+          <span class="badge badge-zone-east">East Kashi</span>
+        </div>
+        <div class="temple-sub">
+          <strong>Form:</strong> Navadurga #6 (Atma Veereshwar complex) | <strong>Alt:</strong> None noted in source
+        </div>
+      </div>
+      <div class="temple-body">
+        
+        <div class="temple-img-container">
+          <img class="temple-img" src="Kashi_Exact_Offline_Website/assets/images/Katyayani-Devi.jpeg" alt="Katyayani" loading="eager" onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src=\'assets/images/\' + this.src.split(\'/\').pop();}" >
+          <div class="img-caption">Katyayani Devi</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128214; Puranic Origin & Significance</div>
+          <div class="detail-content">According to Kashi Khand, Chapater 82, Once a kingdom was ruled by a very religious minded ruler named Amitrajit. He was a staunch devotee of Lord Vishnu and he made it a rule that all the citizens of his kingdom also become devotees of Lord Vishnu.  One day Narad Rishi visited his palace and was welcomed with due respect by the King.
+
+As per the direction of Narad Rishi, King Amitrajit saved one beautiful girl called Malayagandini from the clutches of one evil person. The King subsequently married her and they came to Kashi and were immediately happy with the beautiful surroundings.  In due course, Malayagandini was blessed with a handsome male child, who was destined to become 16 years old, immediately after birth.  However, since he was born in an inauspicious planetary combination, the Ministers of the King told the Queen that  she had to sacrifice the child, otherwise the King would die.
+
+(KATYAYANI DEVI)
+
+In order to save the King, she sent the child to Vikata Devi in Pancha Mudra Maha Peeth.  Vikata Devi summoned various Yoginis and asked them to take the boy to Matrika Devis with whose permission, the child should be spared.  Accordingly, the Yoginis took the boy to Matrika Devis, who after observing the divinity in the boy, ordered the Yoginis to take the boy back to Pancha Mudra Peet.
+
+The boy was brought back to the Pancha Mudra peeth by the Yoginis where he started praying.   In nut shell, the boy had undertaken a short trip to heaven and returned.
+
+Vikata Devi is known and worshipped as Katyayini Devi.
+
+Maa Durga’s 6 th  form is Katyayini. She got this name on account of the following story.
+
+When Demon Mahishasur’s cruelty became unbearable on earth, Lords Brahma, Vishnu
+
+and Shiva gave a part of their energies and created a Devi to kill Mahishasur. Sage Katyayan was the first person to perform her puja and so she is called Katyayini.
+
+Maa Katyayini grants wishes to her devotees without fail. To acquire Krishna as their husband, the Gopis of Braj had performed her puja on the banks of  Kalindi Yamuna. She is regarded as the supreme saviour Goddess in Braj (Mathura-Vrindavan).
+
+Her form is supposed to be very simple and divine. Her colour is golden and radiant. She has four hands. Her upper right hand has the posture assuring safety or protection and lower right hand grants wishes. She has a sword in her upper left hand and a lotus flower in lower left hand. Her vehicle is lion.
+
+Katyayini Devi blesses her devotees who are freed from any sort of disease, sorrow, fear and suffering. They radiate a supernatural energy.
+
+Please watch our YouTube Video about Katyayani Devi at following Link
+
+https://www.youtube.com/watch?v=7i5RVjROvbQ&t=68s</div>
+        </div>
+
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128205; Location & Approach Route</div>
+          <div class="detail-content">
+            <strong>Stated Address:</strong> Katyayini Devi is located in the premises of Atma Veereshwar Temple at Ck-7/158, Scindia Ghat which is a famous locality in Varanasi. One can reach this place by boat through Scindia Ghat.  Alternatively one can travel in cycle rickshaw upto Chowk and walk down the gullies to reach the temple.<br>
+            <strong>Nearby Ghat:</strong> Scindia Ghat<br>
+            <strong>Zone Verification:</strong> East Kashi (Confidence: Medium)<br>
+            <span style="font-size:0.82rem; color:#6b7280;">Evidence: East/Riverfront landmarks: ['scindia ghat']; West/Inland landmarks: ['chowk']</span><br>
+            <strong>Directions:</strong> Katyayini Devi is located in the premises of Atma Veereshwar Temple at Ck-7/158, Scindia Ghat which is a famous locality in Varanasi. One can reach this place by boat through Scindia Ghat.  Alternatively one can travel in cycle rickshaw upto Chowk and walk down the gullies to reach the temple.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#9200; Darshan Timings & Ritual Logistics</div>
+          <div class="detail-content">
+            <strong>Timings:</strong> S
+The temple is open for worship 05.00 a.m. to 11.30 a.m. and from 12.30 p.m. to 9.30 p.m.  Special Aarti is held from 07.00 to 8.30 p.m.  For doing special pooja, it is advisable to consult the Poojari before hand.<br>
+            <strong>Puja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#128220; Scriptural References</div>
+          <div class="detail-content">
+            Not specified in the source article.
+          </div>
+        </div>
+
+        <div class="links-row">
+          <a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/devi-temples/katyayani/index.html">&#128194; Exact Website Mirror Article</a>
+          <a class="btn-link btn-live" href="https://varanasitemples.in/category/devi-temples/katyayani/" target="_blank" rel="noopener">&#127760; Original Live URL &#8599;</a>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="temple-card" data-zone="East Kashi" data-name="vishwa bhuja gauri none noted in source">
+      <div class="temple-header">
+        <div class="temple-title-row">
+          <div class="temple-title">Vishwa Bhuja Gauri</div>
+          <span class="badge badge-zone-east">East Kashi</span>
+        </div>
+        <div class="temple-sub">
+          <strong>Form:</strong> All-Embracing Universal Gauri | <strong>Alt:</strong> None noted in source
+        </div>
+      </div>
+      <div class="temple-body">
+        
+        <div class="temple-img-container">
+          <img class="temple-img" src="Kashi_Exact_Offline_Website/assets/images/Vishwa-Bhuja-Gauri-1-716x1024.jpg" alt="Vishwa Bhuja Gauri" loading="eager" onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src=\'assets/images/\' + this.src.split(\'/\').pop();}" >
+          <div class="img-caption">Vishwa Bhuja Gauri</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128214; Puranic Origin & Significance</div>
+          <div class="detail-content">According to Kashi Khand, Chapter 70, in the vicinity of Vishalakshi Gauri, devotees can worship Vishwa Bhuja Gauri who is worshipped by the entire world.
+
+Vishwa Bhuja Gauri removes all the obstacles in the path of the devotees.  All the devotees should worship this Gauri on all days during Navratri (September – October) and their wishes/desires will be fulfilled.
+
+( VISHWA BHUJA GAURI)</div>
+        </div>
+
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128205; Location & Approach Route</div>
+          <div class="detail-content">
+            <strong>Stated Address:</strong> D.2/15, near Dharam Koop (Dharmeshwar)<br>
+            <strong>Nearby Ghat:</strong> Not directly on a riverfront ghat<br>
+            <strong>Zone Verification:</strong> East Kashi (Confidence: Medium)<br>
+            <span style="font-size:0.82rem; color:#6b7280;">Evidence: East/Riverfront landmarks: ['dasaswamedh']; West/Inland landmarks: ['bansphatak']</span><br>
+            <strong>Directions:</strong> Vishwa Bhuja Gauri is located at D.2/15, near Dharam Koop (Dharmeshwar).  This is very near to Vishalakshi Devi temple. Devotees  can travel upto Dasaswamedh Vishwanath Gulli or Bansphatak Vishwanath Gulli by rickshaw and walk on foot to this place.  Devotees generally combine prayers at this temple alognwith darshan of Visweshwar / Annapurna temple.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#9200; Darshan Timings & Ritual Logistics</div>
+          <div class="detail-content">
+            <strong>Timings:</strong> The place of worship is open practically through out and devotees can worship as per their convenience.<br>
+            <strong>Puja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#128220; Scriptural References</div>
+          <div class="detail-content">
+            Kashi Khand, Chapter 70
+          </div>
+        </div>
+
+        <div class="links-row">
+          <a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/devi-temples/vishwa-bhuja-gauri/index.html">&#128194; Exact Website Mirror Article</a>
+          <a class="btn-link btn-live" href="https://varanasitemples.in/category/devi-temples/vishwa-bhuja-gauri/" target="_blank" rel="noopener">&#127760; Original Live URL &#8599;</a>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="temple-card" data-zone="East Kashi" data-name="varahi devi none noted in source">
+      <div class="temple-header">
+        <div class="temple-title-row">
+          <div class="temple-title">Varahi Devi</div>
+          <span class="badge badge-zone-east">East Kashi</span>
+        </div>
+        <div class="temple-sub">
+          <strong>Form:</strong> Matrika / Night Deity (Panchganga Ghat) | <strong>Alt:</strong> None noted in source
+        </div>
+      </div>
+      <div class="temple-body">
+        
+        
+        <div class="temple-img-container">
+          <img class="temple-img" 
+               src="Kashi_Exact_Offline_Website/assets/images/Varahi-Devi-Shrine.svg" 
+               alt="Varahi Devi" 
+               loading="eager"
+               onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/Varahi-Devi-Shrine.svg';}">
+          <div class="img-caption">&#128330; Sacred Iconographic Representation of Varahi Devi (Kashi Sanctum)</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128214; Puranic Origin & Significance</div>
+          <div class="detail-content">Kashi Khand, Chapter 70 mentions Varahi Devi and the devotees who worship this devi will never fall into any danger.
+
+Kashi Khand, Chapter 45 states that Lord Shiva sent sixty four Yoginis to Kashi to create disturbance in the governance of King Divodas.  However, the sixty four yoginis were totally enthralled by the beauty of Kashi and they decided to settle down in Kashi itself.  Varahi is one of them.
+
+It is worth mentioning that Varahi is a very powerful devi.</div>
+        </div>
+
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128205; Location & Approach Route</div>
+          <div class="detail-content">
+            <strong>Stated Address:</strong> D.16/84, Manmandir Ghat<br>
+            <strong>Nearby Ghat:</strong> Manmandir Ghat<br>
+            <strong>Zone Verification:</strong> East Kashi (Confidence: Medium)<br>
+            <span style="font-size:0.82rem; color:#6b7280;">Evidence: East/Riverfront landmarks: ['dasaswamedh']</span><br>
+            <strong>Directions:</strong> Varahi Devi is located at D.16/84, Manmandir Ghat.  People can travel upto Dasaswamedh Vishwanath Galli by rickshaw, enter the gulli and immediately take a right turn and proceed further for about 150 yards. They may seek guidance from the locals at that place to reach the temple.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#9200; Darshan Timings & Ritual Logistics</div>
+          <div class="detail-content">
+            <strong>Timings:</strong> The temple is open for worship from 05.30 a.m. to 7.30 a.m. only and remains closed for the entire day.  Aarti is performed in the morning. At the time of aarti, the main door is closed.  If a devotee remains inside, he can have full darshan of aarti. After the aarti, darshan is allowed for some time and the temple is closed for the day.
+It needs to be mentioned here that Varahi is a very powerful devi and located under the ground level.  A marble slab is opened and devotees can have darshan through the opening.  Except the Priest, no one is allowed to go to the underground level.
+Our enquiries reveal that only regular worship is allowed in the temple and no special pooja etc. on request is allowed.<br>
+            <strong>Puja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#128220; Scriptural References</div>
+          <div class="detail-content">
+            Kashi Khand, Chapter 45, Kashi Khand, Chapter 70
+          </div>
+        </div>
+
+        <div class="links-row">
+          <a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/devi-temples/varahi-devi/index.html">&#128194; Exact Website Mirror Article</a>
+          <a class="btn-link btn-live" href="https://varanasitemples.in/category/devi-temples/varahi-devi/" target="_blank" rel="noopener">&#127760; Original Live URL &#8599;</a>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="temple-card" data-zone="East Kashi" data-name="bandi devi none noted in source">
+      <div class="temple-header">
+        <div class="temple-title-row">
+          <div class="temple-title">Bandi Devi</div>
+          <span class="badge badge-zone-east">East Kashi</span>
+        </div>
+        <div class="temple-sub">
+          <strong>Form:</strong> Liberator from Captivity and Bondage | <strong>Alt:</strong> None noted in source
+        </div>
+      </div>
+      <div class="temple-body">
+        
+        <div class="temple-img-container">
+          <img class="temple-img" src="Kashi_Exact_Offline_Website/assets/images/Bandi-Devi.jpg" alt="Bandi Devi" loading="eager" onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src=\'assets/images/\' + this.src.split(\'/\').pop();}" >
+          <div class="img-caption">Bandi Devi</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128214; Puranic Origin & Significance</div>
+          <div class="detail-content">A devotee who bathes in prayag teerth (now dasaswamedh ghat) and performs pooja/archana of Bandi Devi with all devotion will not be bound with iron chains.
+
+A person who has committed any crime which may involve jail punishment, is advised (Kashi Khand Chapter 70) to worship Bandi Devi on all Tuesdays with fasting (having one time means only).  By undertaking such poojas, devi will relieve him of all worldly bondages.  When Devi can relieve the devotee from all bondages, ordinary chains are nothing.
+
+(BANDI DEVI)
+
+If a devotee sincerely worships Bandi Devi as mentioned in Kashi Khand, this will benefit his relatives also who may be living elsewhere and that person will be released from imprisonment.
+
+-----------------------------------
+
+Kashi Khand, Chapter 70, Shlok 50
+
+दूरस्थोऽपि हि यो बन्धु: सोऽपि क्षिप्रं समेष्यति
+
+बन्दीपदजुषां पुंसो श्रद्धया नाऽत्र संशय:
+
+In Kashi, those who are devotees of Bandidevi, if a friend of theirs has been imprisoned in a far away place, then without a doubt he gets liberated.
+
+-----------------------------------
+
+Sincere prayers to Bandi Devi will result in fulfilment of all desires of the devotees and there is no doubt about this.
+
+Worshipping Bandi Devi will remove all sorts of misgivings tormenting the devotee, who will be blessed by the Devi.</div>
+        </div>
+
+        
+        <div class="detail-section">
+          <div class="detail-label">&#128366; Sanskrit Verses (Kashi Khand)</div>
+          <div class="sanskrit-box">दूरस्थोऽपि हि यो बन्धु: सोऽपि क्षिप्रं समेष्यति
+बन्दीपदजुषां पुंसो श्रद्धया नाऽत्र संशय:</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128205; Location & Approach Route</div>
+          <div class="detail-content">
+            <strong>Stated Address:</strong> No. D<br>
+            <strong>Nearby Ghat:</strong> just before Dasaswamedh Ghat<br>
+            <strong>Zone Verification:</strong> East Kashi (Confidence: Medium)<br>
+            <span style="font-size:0.82rem; color:#6b7280;">Evidence: East/Riverfront landmarks: ['dasaswamedh']</span><br>
+            <strong>Directions:</strong> Bandi Devi is located at No. D.17/100, just before Dasaswamedh Ghat.  People can travel upto Dasaswamedh Ghat by rickshaw and before going down the steps, they should take a right turn.  It is advisable to consult some local shop keepers as there are several labyrinthine gullies in the vicinity.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#9200; Darshan Timings & Ritual Logistics</div>
+          <div class="detail-content">
+            <strong>Timings:</strong> The temple<br>
+            <strong>Puja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#128220; Scriptural References</div>
+          <div class="detail-content">
+            Kashi Khand, Chapter 70, Shlok 50, Kashi Khand Chapter 70
+          </div>
+        </div>
+
+        <div class="links-row">
+          <a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/devi-temples/bandi-devi/index.html">&#128194; Exact Website Mirror Article</a>
+          <a class="btn-link btn-live" href="https://varanasitemples.in/category/devi-temples/bandi-devi/" target="_blank" rel="noopener">&#127760; Original Live URL &#8599;</a>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="temple-card" data-zone="East Kashi" data-name="mani karnika devi none noted in source">
+      <div class="temple-header">
+        <div class="temple-title-row">
+          <div class="temple-title">Mani Karnika Devi</div>
+          <span class="badge badge-zone-east">East Kashi</span>
+        </div>
+        <div class="temple-sub">
+          <strong>Form:</strong> Presiding Deity of Manikarnika Teerth | <strong>Alt:</strong> None noted in source
+        </div>
+      </div>
+      <div class="temple-body">
+        
+        <div class="temple-img-container">
+          <img class="temple-img" src="Kashi_Exact_Offline_Website/assets/images/Manikarnika-Devi-768x1024.jpeg" alt="Mani Karnika Devi" loading="eager" onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src=\'assets/images/\' + this.src.split(\'/\').pop();}" >
+          <div class="img-caption">Manikarnika Devi</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128214; Puranic Origin & Significance</div>
+          <div class="detail-content">Lord Vishnu was describing to Sage Bindu, the various forms of Lord Vishnu and other deities in Kashi.
+
+(MANIKARNIKA DEVI)
+
+Lord Vishnu describes Manikarnika in the form of a Goddess near Chakra Pushkarini Teerth (Mani Karnika Ghat). Kashi Khand has described amply the structure and appearance of Manikarnika Devi who appears as a twelve year old girl.  She is as fair as a Spatik (crystal), with soft hairs.  The devi is described as radiating beauty.
+
+Devotees who wish for attaining Moksha should worship this deity.</div>
+        </div>
+
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128205; Location & Approach Route</div>
+          <div class="detail-content">
+            <strong>Stated Address:</strong> Ck.7/130, Scindia Ghat, opposite Atma Veereshwar Temple<br>
+            <strong>Nearby Ghat:</strong> Mani Karnika Ghat<br>
+            <strong>Zone Verification:</strong> East Kashi (Confidence: High)<br>
+            <span style="font-size:0.82rem; color:#6b7280;">Evidence: East/Riverfront landmarks: ['manikarnika', 'scindia ghat']; West/Inland landmarks: ['chowk']</span><br>
+            <strong>Directions:</strong> Manikarnika Devi is located at Ck.7/130, Scindia Ghat, opposite Atma Veereshwar Temple.  This place can be reached by boat through Scindia Ghat.  Alternatively one can travel in cycle rickshaw upto Chowk and walk down the gullies to reach the temple. Atma Veereshwar is a famous temple.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#9200; Darshan Timings & Ritual Logistics</div>
+          <div class="detail-content">
+            <strong>Timings:</strong> S
+The temple is open for worship 06.00 a.m. to 11.30 a.m. and from 04.30 p.m. to 9.30 p.m.<br>
+            <strong>Puja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#128220; Scriptural References</div>
+          <div class="detail-content">
+            Not specified in the source article.
+          </div>
+        </div>
+
+        <div class="links-row">
+          <a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/devi-temples/mani-karnika-devi/index.html">&#128194; Exact Website Mirror Article</a>
+          <a class="btn-link btn-live" href="https://varanasitemples.in/category/devi-temples/mani-karnika-devi/" target="_blank" rel="noopener">&#127760; Original Live URL &#8599;</a>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="temple-card" data-zone="East Kashi" data-name="vindhya devi none noted in source">
+      <div class="temple-header">
+        <div class="temple-title-row">
+          <div class="temple-title">Vindhya Devi</div>
+          <span class="badge badge-zone-east">East Kashi</span>
+        </div>
+        <div class="temple-sub">
+          <strong>Form:</strong> Vindhyavasini Manifestation in Kashi | <strong>Alt:</strong> None noted in source
+        </div>
+      </div>
+      <div class="temple-body">
+        
+        <div class="temple-img-container">
+          <img class="temple-img" src="Kashi_Exact_Offline_Website/assets/images/Vidhya-Devi.jpeg" alt="Vindhya Devi" loading="eager" onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src=\'assets/images/\' + this.src.split(\'/\').pop();}" >
+          <div class="img-caption">Vidhya Devi</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128214; Puranic Origin & Significance</div>
+          <div class="detail-content">Kashi Khand, Chapter 70 mentions various Devis in Kashi who are to be worshipped.  All of them are powerful Devis.
+
+Among other Devis, Kashi Khand mentions Vindhya Devi which is a powerful deity.
+
+(VINDHYA DEVI)
+
+Devotees who worship Vindhya Devi will attain all kinds of Siddhi in their life.</div>
+        </div>
+
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128205; Location & Approach Route</div>
+          <div class="detail-content">
+            <strong>Stated Address:</strong> Ck.2/33, outside Sankata Devi Temple<br>
+            <strong>Nearby Ghat:</strong> devotees can approach the place by boat upto Ganga Mahal Ghat<br>
+            <strong>Zone Verification:</strong> East Kashi (Confidence: Medium)<br>
+            <span style="font-size:0.82rem; color:#6b7280;">Evidence: East/Riverfront landmarks: ['ganga mahal']; West/Inland landmarks: ['chowk']</span><br>
+            <strong>Directions:</strong> Vindhya Devi, known by the name of Vindhya Vasini is located at Ck.2/33, outside Sankata Devi Temple.   After reaching Sankata Devi Temple, the devotees may ask for directions. Vindhya Devi is located just adjacent to Sankata Devi temple.  One can travel upto Chowk by Cycle Rickshaw and walk to this place via Sankata Devi Temple (famous landmark). Alternatively, devotees can approach the place by boat upto Ganga Mahal Ghat and climb up the steps.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#9200; Darshan Timings & Ritual Logistics</div>
+          <div class="detail-content">
+            <strong>Timings:</strong> S
+The temple is open from 06.00 am to 10.00 p.m. Devotees can worship as per their convenience.<br>
+            <strong>Puja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#128220; Scriptural References</div>
+          <div class="detail-content">
+            Kashi Khand, Chapter 70
+          </div>
+        </div>
+
+        <div class="links-row">
+          <a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/devi-temples/vindhya-devi/index.html">&#128194; Exact Website Mirror Article</a>
+          <a class="btn-link btn-live" href="https://varanasitemples.in/category/devi-temples/vindhya-devi/" target="_blank" rel="noopener">&#127760; Original Live URL &#8599;</a>
+        </div>
+      </div>
+    </div>
+    
+
+        <div class="zone-heading zone-west">
+          <span>West Kashi</span>
+          <span style="font-size:0.85rem; font-weight:normal;">(8 shrines)</span>
+        </div>
+        
+
+    <div class="temple-card" data-zone="West Kashi" data-name="sankata devi none noted in source">
+      <div class="temple-header">
+        <div class="temple-title-row">
+          <div class="temple-title">Sankata Devi</div>
+          <span class="badge badge-zone-west">West Kashi</span>
+        </div>
+        <div class="temple-sub">
+          <strong>Form:</strong> Remover of Sins and Critical Difficulties | <strong>Alt:</strong> None noted in source
+        </div>
+      </div>
+      <div class="temple-body">
+        
+        <div class="temple-img-container">
+          <img class="temple-img" src="Kashi_Exact_Offline_Website/assets/images/sankatha-ji-Copy.jpeg" alt="Sankata Devi" loading="eager" onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src=\'assets/images/\' + this.src.split(\'/\').pop();}" >
+          <div class="img-caption">sankatha ji - Copy</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128214; Puranic Origin & Significance</div>
+          <div class="detail-content">Kashi Khand has prescribed Durga Devi Yatra during Navratri where devotees have been exhorted to worship Durga Devi on all the nine days of Navratri.
+
+(SANKATA DEVI)
+
+Devotees worship Sankata Devi on the 8 th  day of Navratri falling in September-October.</div>
+        </div>
+
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128205; Location & Approach Route</div>
+          <div class="detail-content">
+            <strong>Stated Address:</strong> Ck.7/159, Sankataji<br>
+            <strong>Nearby Ghat:</strong> Not directly on a riverfront ghat<br>
+            <strong>Zone Verification:</strong> West Kashi (Confidence: Medium)<br>
+            <span style="font-size:0.82rem; color:#6b7280;">Evidence: West/Inland landmarks: ['chowk']</span><br>
+            <strong>Directions:</strong> Sankata Devi is located at Ck.7/159, Sankataji.  Devotees can travel upto Chowk by rickshaw and travel on foot to this temple by asking for directions.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#9200; Darshan Timings & Ritual Logistics</div>
+          <div class="detail-content">
+            <strong>Timings:</strong> The place of worship remains open from 05.00 a.m. to 1.00 p.m. and from 04.00 p.m. to 10.00 p.m.<br>
+            <strong>Puja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#128220; Scriptural References</div>
+          <div class="detail-content">
+            Not specified in the source article.
+          </div>
+        </div>
+
+        <div class="links-row">
+          <a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/devi-temples/sankata-devi/index.html">&#128194; Exact Website Mirror Article</a>
+          <a class="btn-link btn-live" href="https://varanasitemples.in/category/devi-temples/sankata-devi/" target="_blank" rel="noopener">&#127760; Original Live URL &#8599;</a>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="temple-card" data-zone="West Kashi" data-name="mahalakshmi gauri none noted in source">
+      <div class="temple-header">
+        <div class="temple-title-row">
+          <div class="temple-title">Mahalakshmi Gauri</div>
+          <span class="badge badge-zone-west">West Kashi</span>
+        </div>
+        <div class="temple-sub">
+          <strong>Form:</strong> Navagauri #9 & Mahavidya Kamala counterpart | <strong>Alt:</strong> None noted in source
+        </div>
+      </div>
+      <div class="temple-body">
+        
+        <div class="temple-img-container">
+          <img class="temple-img" src="Kashi_Exact_Offline_Website/assets/images/Mahalakshmi-Gauri-1.jpg" alt="Mahalakshmi Gauri" loading="eager" onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src=\'assets/images/\' + this.src.split(\'/\').pop();}" >
+          <div class="img-caption">Mahalakshmi Gauri</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128214; Puranic Origin & Significance</div>
+          <div class="detail-content">According to Kashi Khand, Chapter 70, Mahalakshmi is present near Lakshmi Kund.
+
+Devotees should take bath in Lakshmi Kund and worship Mahalakshmi.  Devotees have also been advised to perform the rituals for their forefathers and give alms to needy people, whereby they will be blessed by Mahalakshmi.
+
+(MAHALAKSHMI GAURI)
+
+Kashi Khand states that the entire locality is a Shakti Peeth (seat of vital energy). There are many powerful Devis in the area and of all the Shakti Peeths in Kashi, Mahalakshmi Shakti Peeth is the most powerful.
+
+-----------------------------------
+
+Kashi Khand, Chapter 70, Shlok 60
+
+सन्ति पीठान्यनेकानि काश्यां सिद्धिकराण्यपि
+
+महालक्ष्मीपीठसमं नान्यल्लक्ष्मीकरं परम्
+
+Although there are many Peethas in Kashipuri that give accomplishment (attainment), but there is no one else who is capable of giving ultimate prosperity  like Mahalakshmi-peet.
+
+-----------------------------------
+
+Devotees who worship Mahalakshmi regularly will attain all kinds of Siddhi (divine powers) and achievements. Mahalakshmi will always reside in their homes. (Here Mahalakshmi is symbolic of wealth and prosperity).
+
+Further, in Chapter 100, Kashi Khand has prescribed Nau Gauri Yatra (religious pilgrimage of nine Gauris) and Mahalakshmi is the ninth Gauri.</div>
+        </div>
+
+        
+        <div class="detail-section">
+          <div class="detail-label">&#128366; Sanskrit Verses (Kashi Khand)</div>
+          <div class="sanskrit-box">सन्ति पीठान्यनेकानि काश्यां सिद्धिकराण्यपि
+महालक्ष्मीपीठसमं नान्यल्लक्ष्मीकरं परम्</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128205; Location & Approach Route</div>
+          <div class="detail-content">
+            <strong>Stated Address:</strong> D.52/40, Lakshmi Kund<br>
+            <strong>Nearby Ghat:</strong> Not directly on a riverfront ghat<br>
+            <strong>Zone Verification:</strong> West Kashi (Confidence: Medium)<br>
+            <span style="font-size:0.82rem; color:#6b7280;">Evidence: West/Inland landmarks: ['luxa']</span><br>
+            <strong>Directions:</strong> Mahalakshmi is located at D.52/40, Lakshmi Kund. This temple and the locality (Lakshmi Kund) are quite famous and people can approach this place through Luxa by rickshaw.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#9200; Darshan Timings & Ritual Logistics</div>
+          <div class="detail-content">
+            <strong>Timings:</strong> The temple is open from 06.00 a.m. to 01.00 p.m. and from 05.00 p.m. to 10.00 p.m.  Aarties are performed in the morning and evening.<br>
+            <strong>Puja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#128220; Scriptural References</div>
+          <div class="detail-content">
+            Kashi Khand, Chapter 70, Kashi Khand, Chapter 70, Shlok 60
+          </div>
+        </div>
+
+        <div class="links-row">
+          <a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/devi-temples/mahalakshmi-gauri/index.html">&#128194; Exact Website Mirror Article</a>
+          <a class="btn-link btn-live" href="https://varanasitemples.in/category/devi-temples/mahalakshmi-gauri/" target="_blank" rel="noopener">&#127760; Original Live URL &#8599;</a>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="temple-card" data-zone="West Kashi" data-name="hayakanti devi none noted in source">
+      <div class="temple-header">
+        <div class="temple-title-row">
+          <div class="temple-title">Hayakanti Devi</div>
+          <span class="badge badge-zone-west">West Kashi</span>
+        </div>
+        <div class="temple-sub">
+          <strong>Form:</strong> Bestower of Radiant Beauty & Radiance | <strong>Alt:</strong> None noted in source
+        </div>
+      </div>
+      <div class="temple-body">
+        
+        <div class="temple-img-container">
+          <img class="temple-img" src="Kashi_Exact_Offline_Website/assets/images/Hayakanti-Devi-1.jpg" alt="Hayakanti Devi" loading="eager" onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src=\'assets/images/\' + this.src.split(\'/\').pop();}" >
+          <div class="img-caption">Hayakanti Devi</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128214; Puranic Origin & Significance</div>
+          <div class="detail-content">According to Kashi Khand, Chapter 70, near Mahalakshmi Devi a Devi by name of Hayakanti is present with a sickle in her hand.
+
+Hayakanti Devi destroys the obstacles coming in the way of devotees just as the plants and trees are felled with a sickle.
+
+(HAYAKANTI DEVI)
+
+A person who worships Hayakanti Devi with all sincerity will see all the obstacles in his smooth life disappear.
+
+The part “Kant” in Hayakanti is pronounced as “Kant” in Neelkant.</div>
+        </div>
+
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128205; Location & Approach Route</div>
+          <div class="detail-content">
+            <strong>Stated Address:</strong> D.52/35, Kali Mutt, Lakshmi Kund<br>
+            <strong>Nearby Ghat:</strong> Not directly on a riverfront ghat<br>
+            <strong>Zone Verification:</strong> West Kashi (Confidence: Medium)<br>
+            <span style="font-size:0.82rem; color:#6b7280;">Evidence: West/Inland landmarks: ['luxa']</span><br>
+            <strong>Directions:</strong> Hayakanti Devi is located at D.52/35, Kali Mutt, Lakshmi Kund. People can reach this place by rickshaw through Luxa.  Lakshmi Kund is a famous locality.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#9200; Darshan Timings & Ritual Logistics</div>
+          <div class="detail-content">
+            <strong>Timings:</strong> The place of worship is open from 05.00 a.m. to 11.30 a.m. and from 05.30 p.m. to 10.00 p.m.  Aarties are held in the morning and evening.  The<br>
+            <strong>Puja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#128220; Scriptural References</div>
+          <div class="detail-content">
+            Kashi Khand, Chapter 70
+          </div>
+        </div>
+
+        <div class="links-row">
+          <a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/devi-temples/hayakanti-devi/index.html">&#128194; Exact Website Mirror Article</a>
+          <a class="btn-link btn-live" href="https://varanasitemples.in/category/devi-temples/hayakanti-devi/" target="_blank" rel="noopener">&#127760; Original Live URL &#8599;</a>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="temple-card" data-zone="West Kashi" data-name="chitra ghanta devi none noted in source">
+      <div class="temple-header">
+        <div class="temple-title-row">
+          <div class="temple-title">Chitra Ghanta Devi</div>
+          <span class="badge badge-zone-west">West Kashi</span>
+        </div>
+        <div class="temple-sub">
+          <strong>Form:</strong> Navadurga #3 (Chandraghanta) | <strong>Alt:</strong> None noted in source
+        </div>
+      </div>
+      <div class="temple-body">
+        
+        <div class="temple-img-container">
+          <img class="temple-img" src="Kashi_Exact_Offline_Website/assets/images/Chitra-Ghanta-Devi-1.jpg" alt="Chitra Ghanta Devi" loading="eager" onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src=\'assets/images/\' + this.src.split(\'/\').pop();}" >
+          <div class="img-caption">Chitra Ghanta Devi</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128214; Puranic Origin & Significance</div>
+          <div class="detail-content">Kashi Khand advises devotees to take bath in Chitra Koop, worship Chitra Gupteshwar and perform pooja of Chitra Ghanta Devi.
+
+By performing poojas with all divinity, the devotee’s name will not figure in the books of  Chitra Gupta.  It is noteworthy to mention here that Chitra Gupta records the sins committed by various devotees, who ultimately find their way to Hell.  Kashi Khand is very succinct in its narration.
+
+By saying that the devotee’s name will not figure in the books of  Chitra Gupta, it means that all the sins of the devotee, committed knowingly or unknowingly will be cleansed away.
+
+(CHITRA GHANTA DEVI)
+
+As per Puranic belief, the third power of Maa Durga is Chitra Ghanta  who is worshipped on the third day of Navratri.  She has a crescent shaped bell on her forehead and so she is called Chandra Ghanta. Her body has a golden glow.  She has ten hands which have different weapons. Her vehicle is lion and her posture signifies readiness for battle.
+
+In spite of her warrior attitude, she presents a mild, prosperous and peaceful form to her devotees. Since she is always ready for battle, she gives blessings to her devotees very fast. Her devotees are as mighty and brave as a lion and at the same time they exude a peaceful and happy radiance wherever they go.
+
+Maa Chitra Ghanta relieves her devotees of all difficulties and they get success very easily.
+
+Please watch our YouTube Video about Chitra Ghanta Devi at following Link
+
+https://www.youtube.com/watch?v=4J2GrPNCmlc&t=32s</div>
+        </div>
+
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128205; Location & Approach Route</div>
+          <div class="detail-content">
+            <strong>Stated Address:</strong> Ck. 23/34, Chitra Ghanta Gulli<br>
+            <strong>Nearby Ghat:</strong> Not directly on a riverfront ghat<br>
+            <strong>Zone Verification:</strong> West Kashi (Confidence: High)<br>
+            <span style="font-size:0.82rem; color:#6b7280;">Evidence: West/Inland landmarks: ['chowk', 'chitra ghanta']</span><br>
+            <strong>Directions:</strong> Chitra Ghanta Devi is located at Ck. 23/34, Chitra Ghanta Gulli. Devotees can travel upto Chowk by rickshaw and walk on foot to this place. The temple is situated in a narrow gully somewhat opposite UCO Bank in Chowk.   Devotees specially worship this Devi on the Navaratri falling in September/October.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#9200; Darshan Timings & Ritual Logistics</div>
+          <div class="detail-content">
+            <strong>Timings:</strong> The temple remains open in the morning from 06.00 a.m. to 10.00 a.m. and from 6.00 p.m.  to 08.00 p.m.  However, devotees can have darshan practically the whole day, through the grill gate.  According to locals, the<br>
+            <strong>Puja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#128220; Scriptural References</div>
+          <div class="detail-content">
+            Not specified in the source article.
+          </div>
+        </div>
+
+        <div class="links-row">
+          <a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/devi-temples/chitra-ghanta-devi/index.html">&#128194; Exact Website Mirror Article</a>
+          <a class="btn-link btn-live" href="https://varanasitemples.in/category/devi-temples/chitra-ghanta-devi/" target="_blank" rel="noopener">&#127760; Original Live URL &#8599;</a>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="temple-card" data-zone="West Kashi" data-name="siddheshwari none noted in source">
+      <div class="temple-header">
+        <div class="temple-title-row">
+          <div class="temple-title">Siddheshwari</div>
+          <span class="badge badge-zone-west">West Kashi</span>
+        </div>
+        <div class="temple-sub">
+          <strong>Form:</strong> Navadurga #9 (Siddhidatri) | <strong>Alt:</strong> None noted in source
+        </div>
+      </div>
+      <div class="temple-body">
+        
+        <div class="temple-img-container">
+          <img class="temple-img" src="Kashi_Exact_Offline_Website/assets/images/Sidheshwari.jpeg" alt="Siddheshwari" loading="eager" onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src=\'assets/images/\' + this.src.split(\'/\').pop();}" >
+          <div class="img-caption">Sidheshwari</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128214; Puranic Origin & Significance</div>
+          <div class="detail-content">Kashi Khand has prescribed Durga Devi Yatra during Navratri where devotees have been exhorted to worship Durga Devi on all the nine days of Navratri.
+
+Devotees worship Siddheshwari Devi on the 9 th   day of Navratri falling in September-October.
+
+Maa Durgas 9 th  form is Siddhi Dhatri. She gives all sorts of siddhi to her devotees.  There are several types of Siddhis mentioned in various Purans. According to Devi Puran, Lord  Shiva attained all the Siddhi by her blessings. His half body assumed the form of  Goddess. So he is also called Ardha Narishwar.
+
+(SIDDHESHWARI DEVI)
+
+Maa Siddhi Dhatri has four hands. Her vehicle is Lion. She sits on a lotus flower. She has a Chakra in her lower right hand, a mace/club in her upper right hand, a conch in her lower left hand and a lotus flower in her upper left hand.
+
+Her devotees are freed from sorrow and they get salvation after enjoying all happiness in the world.
+
+-----------------------------------
+
+Kashi Khand, Chapter 14, Shlok 68
+
+सन्ति पीठान्यनेकानि क्षितौ साधकसिद्धये
+
+परं योगीशवरीपीठाद् भूपृष्ठे नाशु सिद्धिदम्
+
+Although there are many Peets in the earth which give Siddhi to the seekers (ardent devotees); But at present there is no other place like this (Siddh) Yogeshwari Peeth (Siddheshwari Peeth) on the earth which will give Siddhi soon.
+
+-----------------------------------
+
+Please watch our YouTube Video about Siddheshwari (Siddhi Dhatri) Devi at following Link
+
+https://www.youtube.com/watch?v=HY-Z3pvPaBU&t=97s</div>
+        </div>
+
+        
+        <div class="detail-section">
+          <div class="detail-label">&#128366; Sanskrit Verses (Kashi Khand)</div>
+          <div class="sanskrit-box">सन्ति पीठान्यनेकानि क्षितौ साधकसिद्धये
+परं योगीशवरीपीठाद् भूपृष्ठे नाशु सिद्धिदम्</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128205; Location & Approach Route</div>
+          <div class="detail-content">
+            <strong>Stated Address:</strong> Ck.7/124, Siddheshwari Mohalla<br>
+            <strong>Nearby Ghat:</strong> Not directly on a riverfront ghat<br>
+            <strong>Zone Verification:</strong> West Kashi (Confidence: Medium)<br>
+            <span style="font-size:0.82rem; color:#6b7280;">Evidence: West/Inland landmarks: ['chowk']</span><br>
+            <strong>Directions:</strong> Siddheshwari is located at Ck.7/124, Siddheshwari Mohalla.  Devotees can travel upto Chowk by rickshaw and travel on foot to this temple by asking for directions.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#9200; Darshan Timings & Ritual Logistics</div>
+          <div class="detail-content">
+            <strong>Timings:</strong> The place of worship remains open from 05.00 a.m. to 10.00 a.m. and from 04.00 p.m. to 10.00 p.m.<br>
+            <strong>Puja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#128220; Scriptural References</div>
+          <div class="detail-content">
+            Kashi Khand, Chapter 14, Shlok 68
+          </div>
+        </div>
+
+        <div class="links-row">
+          <a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/devi-temples/siddheshwari/index.html">&#128194; Exact Website Mirror Article</a>
+          <a class="btn-link btn-live" href="https://varanasitemples.in/category/devi-temples/siddheshwari/" target="_blank" rel="noopener">&#127760; Original Live URL &#8599;</a>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="temple-card" data-zone="West Kashi" data-name="sowbhagya gauri none noted in source">
+      <div class="temple-header">
+        <div class="temple-title-row">
+          <div class="temple-title">Sowbhagya Gauri</div>
+          <span class="badge badge-zone-west">West Kashi</span>
+        </div>
+        <div class="temple-sub">
+          <strong>Form:</strong> Navagauri #3 (Gyanvapi) | <strong>Alt:</strong> None noted in source
+        </div>
+      </div>
+      <div class="temple-body">
+        
+        <div class="temple-img-container">
+          <img class="temple-img" src="Kashi_Exact_Offline_Website/assets/images/Sowbhagya-Gauri-1.jpg" alt="Sowbhagya Gauri" loading="eager" onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src=\'assets/images/\' + this.src.split(\'/\').pop();}" >
+          <div class="img-caption">Sowbhagya Gauri</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128214; Puranic Origin & Significance</div>
+          <div class="detail-content">Kashi Khand, Chapter 100 has prescribed Gauri Yatra (religious tour of Gauri temples). This Yatra is to be undertaken on Triteeya after Amavasya (3 rd  day after Amavasya).
+
+Devotees are advised to take bath in Gyan Vapi and worship Sowbhagya Gauri.
+
+(SOWBHAGYA GAURI)
+
+Devotees who worship Sowbhagya Gauri will get all sorts of happiness and prosperity in life.</div>
+        </div>
+
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128205; Location & Approach Route</div>
+          <div class="detail-content">
+            <strong>Stated Address:</strong> Ck.38/8, Adi Vishwanath Temple<br>
+            <strong>Nearby Ghat:</strong> Not directly on a riverfront ghat<br>
+            <strong>Zone Verification:</strong> West Kashi (Confidence: High)<br>
+            <span style="font-size:0.82rem; color:#6b7280;">Evidence: West/Inland landmarks: ['chowk', 'bansphatak', 'gyan vapi']</span><br>
+            <strong>Directions:</strong> Sowbhagya Gauri is located at Ck.38/8, Adi Vishwanath Temple.  If a devotee travels from Bansphatak to Chowk, after crossing flower market (on the left side), there is a flight of steps leading to a fairly big ground and Shiva temple.  On the right side of the ground (north side), the devotee will find Sowbhagya Gauri.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#9200; Darshan Timings & Ritual Logistics</div>
+          <div class="detail-content">
+            <strong>Timings:</strong> The place of worship is open from 06.00 a.m. to 11.00 a.m. and from 06.00 p.m. to 10.00 p.m.<br>
+            <strong>Puja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#128220; Scriptural References</div>
+          <div class="detail-content">
+            Kashi Khand, Chapter 100
+          </div>
+        </div>
+
+        <div class="links-row">
+          <a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/devi-temples/sowbhagya-gauri/index.html">&#128194; Exact Website Mirror Article</a>
+          <a class="btn-link btn-live" href="https://varanasitemples.in/category/devi-temples/sowbhagya-gauri/" target="_blank" rel="noopener">&#127760; Original Live URL &#8599;</a>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="temple-card" data-zone="West Kashi" data-name="shringar gauri none noted in source">
+      <div class="temple-header">
+        <div class="temple-title-row">
+          <div class="temple-title">Shringar Gauri</div>
+          <span class="badge badge-zone-west">West Kashi</span>
+        </div>
+        <div class="temple-sub">
+          <strong>Form:</strong> Navagauri #4 (Gyanvapi Wall) | <strong>Alt:</strong> None noted in source
+        </div>
+      </div>
+      <div class="temple-body">
+        
+        <div class="temple-img-container">
+          <img class="temple-img" src="Kashi_Exact_Offline_Website/assets/images/sowbhagya-COMP.jpg" alt="Shringar Gauri" loading="eager" onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src=\'assets/images/\' + this.src.split(\'/\').pop();}" >
+          <div class="img-caption">sowbhagya COMP</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128214; Puranic Origin & Significance</div>
+          <div class="detail-content">Kashi Khand, Chapter 100 has prescribed Gauri Yatra (religious tour of Gauri temples). This Yatra is to be undertaken on Triteeya after Amavasya (3 rd  day after Amavasya).
+
+After worshipping Sowbhagya Gauri, devotees have been advised to worship Shringar Gauri. Devotees who worship Shringar Gauri will get all sorts of happiness and prosperity in life.
+
+(SHRINGAR GAURI)
+
+Please watch our YouTube Video about Shringar Gauri at following Link
+
+https://www.youtube.com/watch?v=65mhbPpO8XY&t=14s</div>
+        </div>
+
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128205; Location & Approach Route</div>
+          <div class="detail-content">
+            <strong>Stated Address:</strong> This Gauri is located behind Gyanvapi Masjid (mosque) and Darshan is allowed only on two days in an year. However, devotees worship this deity in Vishwanath (Visweshwar) temple premises marked as Annapurna Devi.  Kindly refer Visveshwar temple regarding directions to reach the place. Devotees also worship one deity near Bansphatak flower market, near Satyanarayan temple as Shringar Gauri.<br>
+            <strong>Nearby Ghat:</strong> Not directly on a riverfront ghat<br>
+            <strong>Zone Verification:</strong> West Kashi (Confidence: High)<br>
+            <span style="font-size:0.82rem; color:#6b7280;">Evidence: West/Inland landmarks: ['bansphatak', 'gyanvapi']</span><br>
+            <strong>Directions:</strong> This Gauri is located behind Gyanvapi Masjid (mosque) and Darshan is allowed only on two days in an year. However, devotees worship this deity in Vishwanath (Visweshwar) temple premises marked as Annapurna Devi.  Kindly refer Visveshwar temple regarding directions to reach the place. Devotees also worship one deity near Bansphatak flower market, near Satyanarayan temple as Shringar Gauri.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#9200; Darshan Timings & Ritual Logistics</div>
+          <div class="detail-content">
+            <strong>Timings:</strong> This Gauri is located behind Gyanvapi Masjid (mosque) and Darshan is allowed only on two days in an year. However, devotees worship this deity in Vishwanath (Visweshwar) temple premises marked as Annapurna Devi.  Kindly refer Visveshwar temple regarding directions to reach the place. Devotees also worship one deity near Bansphatak flower market, near Satyanarayan temple as Shringar Gauri.<br>
+            <strong>Puja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#128220; Scriptural References</div>
+          <div class="detail-content">
+            Kashi Khand, Chapter 100
+          </div>
+        </div>
+
+        <div class="links-row">
+          <a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/devi-temples/shringar-gauri/index.html">&#128194; Exact Website Mirror Article</a>
+          <a class="btn-link btn-live" href="https://varanasitemples.in/category/devi-temples/shringar-gauri/" target="_blank" rel="noopener">&#127760; Original Live URL &#8599;</a>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="temple-card" data-zone="West Kashi" data-name="tri lokya sundary shitla devi">
+      <div class="temple-header">
+        <div class="temple-title-row">
+          <div class="temple-title">Tri Lokya Sundary</div>
+          <span class="badge badge-zone-west">West Kashi</span>
+        </div>
+        <div class="temple-sub">
+          <strong>Form:</strong> Most Beautiful Across Three Worlds | <strong>Alt:</strong> Shitla Devi
+        </div>
+      </div>
+      <div class="temple-body">
+        
+        
+        <div class="temple-img-container">
+          <img class="temple-img" 
+               src="Kashi_Exact_Offline_Website/assets/images/Tri-Lokya-Sundary-Shrine.svg" 
+               alt="Tri Lokya Sundary" 
+               loading="eager"
+               onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src='assets/images/Tri-Lokya-Sundary-Shrine.svg';}">
+          <div class="img-caption">&#128330; Sacred Iconographic Representation of Tri Lokya Sundari (Kashi Sanctum)</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128214; Puranic Origin & Significance</div>
+          <div class="detail-content">Kashi Khand Chapter 70 states that near Nal Koopeshwar one can find Kubjambeshwar Ling. In the vicinity thereof, devotees can worship Tri Lokya Sundari.  (The letter “i” in Tri is prounced as “y” as in Try).
+
+Further, when Goddess was fighting a fierce battle against Durgasur (Kindly refer Durga Devi), she released various forms of energy (called Shakti) from her body.  These Shakti Devis released intense energy in form of fire balls to fight Durgasur and his army. (Kashi Khand, Chapter 72).  Tri Lokya Sundari is one of those Shaktis.
+
+Devotees who worship this Devi will be blessed with all sorts of prosperity.  Married ladies who worship this Goddess need not have fear of widowhood. (Widowhood is considered as a curse for ladies in India from time immemorial, because they lose their strong moral support).</div>
+        </div>
+
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128205; Location & Approach Route</div>
+          <div class="detail-content">
+            <strong>Stated Address:</strong> No. Ck<br>
+            <strong>Nearby Ghat:</strong> Not directly on a riverfront ghat<br>
+            <strong>Zone Verification:</strong> West Kashi (Confidence: Medium)<br>
+            <span style="font-size:0.82rem; color:#6b7280;">Evidence: West/Inland landmarks: ['chowk']</span><br>
+            <strong>Directions:</strong> The deity is located at No. Ck.7/92, Mohalla Kashmiri Mal ki Haveli, near Pita Maheshwar. This deity is also known as  Shitla Devi. The temple is approachable from Chowk upto which place, people can travel by Auto or Cycle Rickshaw.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#9200; Darshan Timings & Ritual Logistics</div>
+          <div class="detail-content">
+            <strong>Timings:</strong> S
+The temple is open practically throughout the day.
+POOJARIS OF THE TEMPLE
+Shri Kishan Yagnik and Ashutosh Yagnik are the Poojaris of the temple and they can be contacted in their Cell numbers (0)9935277580 and (0)9305761979 respectively for doing any special pooja.<br>
+            <strong>Puja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#128220; Scriptural References</div>
+          <div class="detail-content">
+            Kashi Khand Chapter 70, Kashi Khand, Chapter 72
+          </div>
+        </div>
+
+        <div class="links-row">
+          <a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/devi-temples/tri-lokya-sundary/index.html">&#128194; Exact Website Mirror Article</a>
+          <a class="btn-link btn-live" href="https://varanasitemples.in/category/devi-temples/tri-lokya-sundary/" target="_blank" rel="noopener">&#127760; Original Live URL &#8599;</a>
+        </div>
+      </div>
+    </div>
+    
+
+        <div class="zone-heading zone-other">
+          <span>Zone unverified — location evidence insufficient</span>
+          <span style="font-size:0.85rem; font-weight:normal;">(4 shrines)</span>
+        </div>
+        
+
+    <div class="temple-card" data-zone="Zone unverified — location evidence insufficient" data-name="bhavani gauri none noted in source">
+      <div class="temple-header">
+        <div class="temple-title-row">
+          <div class="temple-title">Bhavani Gauri</div>
+          <span class="badge badge-zone-other">Zone unverified</span>
+        </div>
+        <div class="temple-sub">
+          <strong>Form:</strong> Navagauri #7 (Near Vishwanath) | <strong>Alt:</strong> None noted in source
+        </div>
+      </div>
+      <div class="temple-body">
+        
+        <div class="temple-img-container">
+          <img class="temple-img" src="Kashi_Exact_Offline_Website/assets/images/Bhavani-Gauri-1.jpeg" alt="Bhavani Gauri" loading="eager" onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src=\'assets/images/\' + this.src.split(\'/\').pop();}" >
+          <div class="img-caption">Bhavani Gauri</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128214; Puranic Origin & Significance</div>
+          <div class="detail-content">Kashi Khand, Chapter 100 has prescribed Gauri Yatra (religious tour of Gauri temples). This Yatra is to be undertaken on Triteeya after Amavasya (3 rd  day after Amavasya).
+
+Devotees should take bath in Bhavani Teerth and worship Bhavani Gauri.  Devotees who worship Bhavani Gauri will get all sorts of happiness and prosperity in life.
+
+(BHAVANI GAURI)</div>
+        </div>
+
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128205; Location & Approach Route</div>
+          <div class="detail-content">
+            <strong>Stated Address:</strong> D.8/38, Ram Mandir annexed to the premises of Annapurna Devi<br>
+            <strong>Nearby Ghat:</strong> Not directly on a riverfront ghat<br>
+            <strong>Zone Verification:</strong> Zone unverified — location evidence insufficient (Confidence: Low)<br>
+            <span style="font-size:0.82rem; color:#6b7280;">Evidence: No distinct locality keyword matched in source text</span><br>
+            <strong>Directions:</strong> Bhavani Gauri is located at D.8/38, Ram Mandir annexed to the premises of Annapurna Devi. The deity is located between Kali Devi and Jagannath. Regarding directions to reach this place, kindly refer to Visweshwar temple.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#9200; Darshan Timings & Ritual Logistics</div>
+          <div class="detail-content">
+            <strong>Timings:</strong> This place of worship remains open from 05.30 a.m. to 11.30 a.m. and from 05.00 p.m. to 09.30 p.m.<br>
+            <strong>Puja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#128220; Scriptural References</div>
+          <div class="detail-content">
+            Kashi Khand, Chapter 100
+          </div>
+        </div>
+
+        <div class="links-row">
+          <a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/devi-temples/bhavani-gauri/index.html">&#128194; Exact Website Mirror Article</a>
+          <a class="btn-link btn-live" href="https://varanasitemples.in/category/devi-temples/bhavani-gauri/" target="_blank" rel="noopener">&#127760; Original Live URL &#8599;</a>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="temple-card" data-zone="Zone unverified — location evidence insufficient" data-name="shailputri shailputri">
+      <div class="temple-header">
+        <div class="temple-title-row">
+          <div class="temple-title">Shailputri</div>
+          <span class="badge badge-zone-other">Zone unverified</span>
+        </div>
+        <div class="temple-sub">
+          <strong>Form:</strong> Navadurga #1 (Marhia Ghat / Alipura) | <strong>Alt:</strong> Shailputri
+        </div>
+      </div>
+      <div class="temple-body">
+        
+        <div class="temple-img-container">
+          <img class="temple-img" src="Kashi_Exact_Offline_Website/assets/images/Shail-comp.jpg" alt="Shailputri" loading="eager" onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src=\'assets/images/\' + this.src.split(\'/\').pop();}" >
+          <div class="img-caption">Shail comp</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128214; Puranic Origin & Significance</div>
+          <div class="detail-content">According to Kashi Khand, Chapter 70, in the vicinity of Shaileshwar, devotees should worship Shaileshwari also known as Shailputri.
+
+Shailputri, with the little finger in her right hand, removes all the problems/obstacles faced by the devotees on account of bad company.   One point needs to be mentioned.  People enter into friendship or companionship with others without knowing  others’ motives or inner feelings.  At times the company may be bad and some problems may arise.
+
+Maa Durga in her first form is known as Shailputri.  As she was the daughter of the King of mountains Himalaya she had got this name.  Her vehicle is  bull,  she has a trishul (trident) in her right hand and lotus flower in her left hand.  Among the nine Durgas, who are worshipped during Navratri, she is the first Durga.
+
+(SHAIL PUTRI DEVI)
+
+In her earlier birth, she was the daughter of King Daksha and her name was Sati. Sati Devi got married to Lord Shiva.  Sati in her rebirth was born as Shailraj Himalaya’s daughter and was known as Shailputri.  She is also known as Parvati and Hemvati.
+
+Shailputri also got married to Lord Shankar and as in her previous birth she become his other half.   Shailputri’s importance and strength is unlimited.
+
+Please watch our YouTube Video about Shailputri Devi at following Link
+
+https://www.youtube.com/watch?v=4J2GrPNCmlc&t=32s</div>
+        </div>
+
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128205; Location & Approach Route</div>
+          <div class="detail-content">
+            <strong>Stated Address:</strong> A-40/11, Marhia Ghat. If one travels from Varanasi Railway station through G<br>
+            <strong>Nearby Ghat:</strong> Marhia Ghat<br>
+            <strong>Zone Verification:</strong> Zone unverified — location evidence insufficient (Confidence: Low)<br>
+            <span style="font-size:0.82rem; color:#6b7280;">Evidence: No distinct locality keyword matched in source text</span><br>
+            <strong>Directions:</strong> Shailputri is located at A-40/11, Marhia Ghat. If one travels from Varanasi Railway station through G.T. Road, just before Varanasi City Station, a small road takes a left turn where he will encounter a level crossing. After crossing the road, he will have to travel for about 2 Kms. to reach this place. People can travel upto this place by rickshaw/auto rickshaw and most of the drivers know the place where Shailputri temple is located.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#9200; Darshan Timings & Ritual Logistics</div>
+          <div class="detail-content">
+            <strong>Timings:</strong> The temple is open from 5.00 a.m. to 12.00 noon  and from 03.00 p.m. to 10.00 p.m. Aarties are performed in the morning and in the evening.  The<br>
+            <strong>Puja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#128220; Scriptural References</div>
+          <div class="detail-content">
+            Kashi Khand, Chapter 70
+          </div>
+        </div>
+
+        <div class="links-row">
+          <a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/devi-temples/shailputri/index.html">&#128194; Exact Website Mirror Article</a>
+          <a class="btn-link btn-live" href="https://varanasitemples.in/category/devi-temples/shailputri/" target="_blank" rel="noopener">&#127760; Original Live URL &#8599;</a>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="temple-card" data-zone="Zone unverified — location evidence insufficient" data-name="skanda mata none noted in source">
+      <div class="temple-header">
+        <div class="temple-title-row">
+          <div class="temple-title">Skanda Mata</div>
+          <span class="badge badge-zone-other">Zone unverified</span>
+        </div>
+        <div class="temple-sub">
+          <strong>Form:</strong> Navadurga #5 (Jaitpura) | <strong>Alt:</strong> None noted in source
+        </div>
+      </div>
+      <div class="temple-body">
+        
+        <div class="temple-img-container">
+          <img class="temple-img" src="Kashi_Exact_Offline_Website/assets/images/Closed-Door-housing-Vagheshwari-Ashwa-Rooda-1.jpg" alt="Skanda Mata" loading="eager" onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src=\'assets/images/\' + this.src.split(\'/\').pop();}" >
+          <div class="img-caption">Closed Door housing Vagheshwari (Ashwa Rooda)</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128214; Puranic Origin & Significance</div>
+          <div class="detail-content">When the evil demon Durgasur with his supernatural powers was tormenting religious people, Lord Shiva sent Goddess to kill him.(Details given under Durga Devi).
+
+After slaying the demon and taking the form of  Durga Devi, Kashi Khand states that Durga Devi guards Kashi in form of various Shaktis/Devis at various places in Kashi.  One of them is Ashwa Roodha.  According to Pundits this deity is known as Vageshwari.
+
+This deity is located in the temple premises which houses  Skanda Mata Devi.
+
+Maa Durga’s 5 th  form is Skand Mata. She has child Skand (Kartikeya) seated on her lap and so she is called Skand Mata.
+
+Skand Mata has four hands. In each of her upper hands she has a lotus flower. Her left hand has the posture of giving blessings. Her form is auspicious and she sits on a lotus flower. Hence she is called Padmasana Devi.  Her vehicle is lion.
+
+Her devotees get all their desires fulfilled, they get peace and happiness and their way to salvation becomes easy. Since she guards the Sun’s orbit, her devotees get a radiating light which surround them as an aura.
+
+(CLOSED DOOR)
+
+Vageshwari Devi (Ashwa Rooda)  is allowed to be worshipped only on two days in one full year.   On all the other days the door remains closed and devotees worship the door only.
+
+Skanda Mata is considered to be a powerful Devi.</div>
+        </div>
+
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128205; Location & Approach Route</div>
+          <div class="detail-content">
+            <strong>Stated Address:</strong> J.6/33, Jaitpura<br>
+            <strong>Nearby Ghat:</strong> Not directly on a riverfront ghat<br>
+            <strong>Zone Verification:</strong> Zone unverified — location evidence insufficient (Confidence: Low)<br>
+            <span style="font-size:0.82rem; color:#6b7280;">Evidence: No distinct locality keyword matched in source text</span><br>
+            <strong>Directions:</strong> Skanda Mata Temple is located at J.6/33, Jaitpura. People can reach this place by rickshaw as Jaitpura Police Station is an important landmark. Devotees worship Skanda Mata during Navratri falling in September/October as one of the nine Durgas.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#9200; Darshan Timings & Ritual Logistics</div>
+          <div class="detail-content">
+            <strong>Timings:</strong> The temple is open from 05.00 a.m. to 12.00 Noon and from 04.00 p.m. to 07.00 p.m.  Aarties are held in morning and evening.<br>
+            <strong>Puja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#128220; Scriptural References</div>
+          <div class="detail-content">
+            Not specified in the source article.
+          </div>
+        </div>
+
+        <div class="links-row">
+          <a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/devi-temples/skanda-mata/index.html">&#128194; Exact Website Mirror Article</a>
+          <a class="btn-link btn-live" href="https://varanasitemples.in/category/devi-temples/skanda-mata/" target="_blank" rel="noopener">&#127760; Original Live URL &#8599;</a>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="temple-card" data-zone="Zone unverified — location evidence insufficient" data-name="chandi devi none noted in source">
+      <div class="temple-header">
+        <div class="temple-title-row">
+          <div class="temple-title">Chandi Devi</div>
+          <span class="badge badge-zone-other">Zone unverified</span>
+        </div>
+        <div class="temple-sub">
+          <strong>Form:</strong> Fierce Protector Form | <strong>Alt:</strong> None noted in source
+        </div>
+      </div>
+      <div class="temple-body">
+        
+        <div class="temple-img-container">
+          <img class="temple-img" src="Kashi_Exact_Offline_Website/assets/images/Chandi-Devi-1.jpg" alt="Chandi Devi" loading="eager" onerror="if(!this.dataset.retried){this.dataset.retried=1; this.src=\'assets/images/\' + this.src.split(\'/\').pop();}" >
+          <div class="img-caption">Chandi Devi</div>
+        </div>
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128214; Puranic Origin & Significance</div>
+          <div class="detail-content">Kashi Khand, Chapter 83 mentions seven Matrika Devis and Chandika Devi is the last among them. They were instrumental in giving life to a young boy. Details mentioned under Veereshwar.
+
+These Matrika Devis are extremely powerful and are capable of giving Siddhis to their Devotees.
+
+(CHANDI DEVI)
+
+Further Kashi Khand, Chapter 70 mentions various powerful Devis located at several places in the Holy city of Kashi and Kaurmi Shakti is one of them.  Shri Kedar Nath Vyas in his book published after extensive research has given Chandi Devi as the name of this powerful deity.
+
+One point may be mentioned here. The deities mentioned in Kashi Khand may not be in the same place as mentioned therein. They could have been relocated to other places for various reasons like foreign invasion etc.  Further, some of the deities,  Shiv Lings are no longer existing.
+
+Regular poojas are being done in this temple.  During Chaitra Navaratri (March/April) and Sharadeya Navaratri (Sept/Oct), special poojas and Aarti are done.  The saptami Aarti is a real treat to watch and there is a huge crowd.  For this Aarti, the Chief Priest assumes the form of Kali Devi.</div>
+        </div>
+
+        
+
+        <div class="detail-section">
+          <div class="detail-label">&#128205; Location & Approach Route</div>
+          <div class="detail-content">
+            <strong>Stated Address:</strong> several places in the Holy city of Kashi and Kaurmi Shakti is one of them.  Shri Kedar Nath Vyas in his book published after extensive research has given Chandi Devi as the name of this powerful deity<br>
+            <strong>Nearby Ghat:</strong> Not directly on a riverfront ghat<br>
+            <strong>Zone Verification:</strong> Zone unverified — location evidence insufficient (Confidence: Low)<br>
+            <span style="font-size:0.82rem; color:#6b7280;">Evidence: No distinct locality keyword matched in source text</span><br>
+            <strong>Directions:</strong> Chandi Devi is located at Sadar Bazar.  In the Cantonment area, if a devotee proceeds in the road where various posh hotels are located, he will come across Radisson, Ideal Towers, Hotel Clarks etc. and JHV Mall.  If he proceeds further in the road (known as Cariappa Marg), he will come across a turning to the right where there is an indicator reading “Bheeshma Chandi Devi temple&#8221;.
+Please watch our YouTube Video about Chandi Devi at following Link
+https://www.youtube.com/watch?v=BQZWSYUQx5k&t=53s
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#9200; Darshan Timings & Ritual Logistics</div>
+          <div class="detail-content">
+            <strong>Timings:</strong> This place of worship is open from 05.00 a.m. to 10.00 p.m. and devotees can worship as per their convenience. According to locals this temple is a powerful Shakti Peeth.<br>
+            <strong>Puja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <div class="detail-label">&#128220; Scriptural References</div>
+          <div class="detail-content">
+            Kashi Khand, Chapter 70, Kashi Khand, Chapter 83
+          </div>
+        </div>
+
+        <div class="links-row">
+          <a class="btn-link btn-mirror" href="Kashi_Exact_Offline_Website/category/devi-temples/chandi-devi/index.html">&#128194; Exact Website Mirror Article</a>
+          <a class="btn-link btn-live" href="https://varanasitemples.in/category/devi-temples/chandi-devi/" target="_blank" rel="noopener">&#127760; Original Live URL &#8599;</a>
+        </div>
+      </div>
+    </div>
+    
+</div>
+
+<script>
+function filterTemples() {
+  var input = document.getElementById('searchInput').value.toLowerCase();
+  var cards = document.getElementsByClassName('temple-card');
+  for (var i = 0; i < cards.length; i++) {
+    var name = cards[i].getAttribute('data-name');
+    var text = cards[i].innerText.toLowerCase();
+    if (name.indexOf(input) > -1 || text.indexOf(input) > -1) {
+      cards[i].style.display = "";
+    } else {
+      cards[i].style.display = "none";
+    }
+  }
+}
+</script>
+
+</body>
+</html>

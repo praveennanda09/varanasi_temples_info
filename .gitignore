@@ -1,0 +1,11 @@
+# Python bytecode/cache artifacts
+__pycache__/
+*.py[cod]
+
+# Local virtual environments
+.venv/
+venv/
+
+# OS/editor metadata
+.DS_Store
+Thumbs.db

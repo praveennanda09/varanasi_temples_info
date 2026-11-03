@@ -1,0 +1,1301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Kashi Bhairav Temples & Ashtabhairavas — Complete Mirror & Knowledge Base</title>
+<style>
+  @page {
+    size: A4 portrait;
+    margin: 16mm 14mm 18mm 14mm;
+    @top-center {
+      content: "KASHI BHAIRAV TEMPLES & ASHTABHAIRAVAS — SCRIPTURAL ARCHIVE";
+      font-family: 'Cinzel', 'Georgia', serif;
+      font-size: 8pt;
+      color: #7f1d1d;
+      letter-spacing: 1px;
+      border-bottom: 1px solid #fecaca;
+      padding-bottom: 4px;
+    }
+    @bottom-center {
+      content: "Page " counter(page) " • Source: varanasitemples.in";
+      font-family: 'Segoe UI', Arial, sans-serif;
+      font-size: 8pt;
+      color: #6b7280;
+    }
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Georgia', 'Merriweather', 'Palatino Linotype', serif;
+    font-size: 10.5pt;
+    line-height: 1.6;
+    color: #1f2937;
+    background: #ffffff;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Headings */
+  h1, h2, h3, h4 {
+    font-family: 'Georgia', 'Cinzel', serif;
+    color: #7f1d1d;
+    margin-top: 14pt;
+    margin-bottom: 6pt;
+    page-break-after: avoid;
+    break-after: avoid;
+  }
+
+  h1 { font-size: 18pt; border-bottom: 2px solid #b45309; padding-bottom: 4pt; }
+  h2 { font-size: 14pt; color: #991b1b; }
+  h3 { font-size: 12pt; color: #b45309; }
+
+  p {
+    margin-top: 0;
+    margin-bottom: 8pt;
+    text-align: justify;
+    text-justify: inter-word;
+  }
+
+  a {
+    color: #b45309;
+    text-decoration: underline;
+    word-break: break-all;
+  }
+
+  .page-break {
+    page-break-before: always;
+    break-before: page;
+  }
+
+  .avoid-break {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  /* Cover Page */
+  .cover-container {
+    text-align: center;
+    padding: 40pt 20pt;
+    border: 3px double #b45309;
+    border-radius: 8px;
+    background: linear-gradient(180deg, #fff7ed 0%, #ffffff 100%);
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .cover-om {
+    font-size: 44pt;
+    color: #b45309;
+    margin-bottom: 6pt;
+  }
+
+  .cover-title {
+    font-size: 24pt;
+    font-weight: 700;
+    color: #7f1d1d;
+    letter-spacing: 1px;
+    margin-bottom: 8pt;
+  }
+
+  .cover-sub {
+    font-size: 13pt;
+    color: #c2410c;
+    font-style: italic;
+    margin-bottom: 18pt;
+  }
+
+  .cover-divider {
+    width: 60%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #b45309, transparent);
+    margin: 14pt auto;
+  }
+
+  .cover-meta-box {
+    background: #ffffff;
+    border: 1px solid #fed7aa;
+    border-radius: 8px;
+    padding: 14pt 18pt;
+    text-align: left;
+    margin: 16pt auto;
+    max-width: 480pt;
+    font-size: 9.5pt;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  }
+
+  .cover-meta-box table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .cover-meta-box td {
+    padding: 4pt 6pt;
+    vertical-align: top;
+  }
+
+  .cover-meta-box td.label {
+    font-weight: 700;
+    color: #9a3412;
+    width: 32%;
+  }
+
+  /* Table of Contents */
+  .toc-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16pt 0;
+    font-size: 9.5pt;
+  }
+
+  .toc-table th {
+    background: #7f1d1d;
+    color: #ffffff;
+    padding: 6pt 10pt;
+    text-align: left;
+    font-weight: 600;
+  }
+
+  .toc-table td {
+    padding: 6pt 10pt;
+    border-bottom: 1px solid #fed7aa;
+    vertical-align: top;
+  }
+
+  .toc-table tr:nth-child(even) {
+    background: #fff7ed;
+  }
+
+  /* Article Header Banner */
+  .article-header-banner {
+    background: linear-gradient(135deg, #450a0a 0%, #7f1d1d 100%);
+    color: #ffffff;
+    padding: 12pt 16pt;
+    border-radius: 6px;
+    margin-bottom: 12pt;
+    page-break-after: avoid;
+    break-after: avoid;
+  }
+
+  .article-number-badge {
+    display: inline-block;
+    background: #f97316;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 8.5pt;
+    padding: 2pt 8pt;
+    border-radius: 12px;
+    margin-bottom: 4pt;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .article-main-title {
+    font-size: 16pt;
+    font-weight: 700;
+    margin: 2pt 0;
+    color: #ffffff;
+    border: none;
+    padding: 0;
+  }
+
+  .article-subtitle {
+    font-size: 10pt;
+    color: #fed7aa;
+    font-style: italic;
+  }
+
+  /* Provenance Box */
+  .provenance-box {
+    background: #fdf4ff;
+    border: 1px solid #fbcfe8;
+    border-left: 4px solid #9d174d;
+    border-radius: 4px;
+    padding: 6pt 10pt;
+    margin-bottom: 12pt;
+    font-size: 8.5pt;
+    page-break-inside: avoid;
+  }
+
+  .provenance-box table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .provenance-box td {
+    padding: 2pt 4pt;
+    vertical-align: top;
+  }
+
+  .provenance-box td.key {
+    font-weight: 700;
+    color: #831843;
+    width: 22%;
+  }
+
+  /* Images */
+  .temple-img-wrap {
+    text-align: center;
+    margin: 12pt auto;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  .temple-pdf-img {
+    max-width: 82%;
+    max-height: 330px;
+    height: auto;
+    border-radius: 6px;
+    border: 1px solid #d1d5db;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    display: block;
+    margin: 0 auto;
+    object-fit: contain;
+  }
+
+  .temple-img-caption {
+    font-size: 8.5pt;
+    color: #6b7280;
+    font-style: italic;
+    margin-top: 4pt;
+    text-align: center;
+  }
+
+  /* Sanskrit Quotes Box */
+  .sanskrit-card {
+    background: #fffbeb;
+    border: 1px solid #fde68a;
+    border-left: 4px solid #d97706;
+    border-radius: 6px;
+    padding: 8pt 12pt;
+    margin: 10pt 0;
+    page-break-inside: avoid;
+  }
+
+  .sanskrit-devanagari {
+    font-family: 'Mangal', 'Noto Sans Devanagari', 'Kokila', serif;
+    font-size: 12pt;
+    font-weight: 700;
+    color: #92400e;
+    text-align: center;
+    line-height: 1.8;
+  }
+
+  /* Location & Info Grid */
+  .info-grid {
+    display: table;
+    width: 100%;
+    margin-top: 12pt;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  .info-cell {
+    display: table-cell;
+    width: 50%;
+    padding: 6pt;
+    vertical-align: top;
+  }
+
+  .info-panel {
+    background: #fafaf9;
+    border: 1px solid #e7e5e4;
+    border-top: 3px solid #7f1d1d;
+    border-radius: 4px;
+    padding: 8pt 10pt;
+    height: 100%;
+    font-size: 9pt;
+  }
+
+  .info-panel h4 {
+    margin-top: 0;
+    margin-bottom: 4pt;
+    color: #7f1d1d;
+    font-size: 9.5pt;
+    font-weight: 700;
+  }
+
+  /* Links Box */
+  .links-box {
+    background: #eff6ff;
+    border: 1px solid #bfdbfe;
+    border-radius: 4px;
+    padding: 6pt 10pt;
+    margin-top: 8pt;
+    font-size: 8.5pt;
+    page-break-inside: avoid;
+  }
+
+  .badge-tag {
+    display: inline-block;
+    padding: 1pt 5pt;
+    border-radius: 4px;
+    font-size: 7.5pt;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .badge-north { background: #dbeafe; color: #1e40af; }
+  .badge-south { background: #fed7aa; color: #9a3412; }
+  .badge-east { background: #dcfce7; color: #166534; }
+  .badge-west { background: #fef08a; color: #854d0e; }
+  .badge-central { background: #fce7f3; color: #9d174d; }
+</style>
+</head>
+<body>
+
+
+<div class="cover-container">
+  <div>
+    <div class="cover-om">&#2384;</div>
+    <div class="cover-title">KASHI BHAIRAV TEMPLES</div>
+    <div class="cover-sub">Kaal Bhairav (Kotwal of Kashi) & The Sacred Ashtabhairavas • Complete Knowledge Base</div>
+    <div class="cover-divider"></div>
+    <p style="font-size:11pt; color:#4b5563; max-width:440pt; margin:0 auto; text-align:center;">
+      An exact, comprehensive, self-contained offline mirror of all Bhairav temple articles and foundational Puranic narratives from the authorised public website <strong>varanasitemples.in</strong>, preserved for offline pilgrimage in Varanasi.
+    </p>
+  </div>
+
+  <div class="cover-meta-box">
+    <table>
+      <tr>
+        <td class="label">&#127760; Source Website:</td>
+        <td><a href="https://varanasitemples.in/">https://varanasitemples.in/</a></td>
+      </tr>
+      <tr>
+        <td class="label">&#128214; Scriptural Authority:</td>
+        <td>Skanda Purana — Kashi Khand (Chapters 30, 31, 72 & 83)</td>
+      </tr>
+      <tr>
+        <td class="label">&#128737;&#65039; Spiritual Roles:</td>
+        <td>Kotwal of Kashi (Supreme Governor & Danda Bearer) + 8 Directional Protectors</td>
+      </tr>
+      <tr>
+        <td class="label">&#127963; Shrines Included:</td>
+        <td>Kaal Bhairav + All 8 Ashtabhairavas + Theological Origin Hub</td>
+      </tr>
+      <tr>
+        <td class="label">&#128247; Visual Media:</td>
+        <td>100% Original High-Resolution Photographs Embedded</td>
+      </tr>
+      <tr>
+        <td class="label">&#128205; Navigation & Links:</td>
+        <td>Addresses, Approach Routes, Darshan Timings, Priest Contacts, YouTube & Maps URLs</td>
+      </tr>
+      <tr>
+        <td class="label">&#9200; Compilation Date:</td>
+        <td>November 2026 • Verified 100% Complete Offline Deliverable</td>
+      </tr>
+    </table>
+  </div>
+
+  <div style="font-size:8.5pt; color:#9ca3af; text-align:center;">
+    Preserved for offline pilgrimage access &bull; Designed to function without cellular reception in the Varanasi galis.
+  </div>
+</div>
+
+
+<div class="page-break"></div>
+<h1>&#128203; Table of Contents & Directional Guardian Matrix</h1>
+<p style="font-size:9.5pt; color:#4b5563;">
+  In the sacred spiritual geography of Kashi, Lord Shiva appointed <strong>Kaal Bhairav</strong> as the supreme Kotwal (governor and police chief) of the holy city, while stationing eight directional manifestations (<strong>Ashtabhairava</strong>) at the cardinal and intercardinal compass points to protect devotees from demonic perils, planetary afflictions, and fear.
+</p>
+
+<table class="toc-table">
+  <thead>
+    <tr>
+      <th style="width:6%;">#</th>
+      <th style="width:25%;">Bhairava Shrine</th>
+      <th style="width:16%;">Direction</th>
+      <th style="width:33%;">Spiritual Significance (Kashi Khand)</th>
+      <th style="width:20%;">Locality / Zone</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>—</td>
+      <td><strong>Foundational Hub</strong></td>
+      <td>Universal</td>
+      <td>Creation of 8 Bhairavas to guard Kashi after Durgasur’s defeat</td>
+      <td><span class="badge-tag badge-central">Theological Origin</span></td>
+    </tr>
+    <tr>
+      <td>★</td>
+      <td><strong>Kaal Bhairav</strong></td>
+      <td>Central Kshetra</td>
+      <td>Kotwal of Kashi; severing of Brahma’s head; Paap Bhakshak</td>
+      <td>Visheshwarganj / Maidagin<br><span class="badge-tag badge-north">North Kashi</span></td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td><strong>Asitang Bhairav</strong></td>
+      <td>East (Prachi)</td>
+      <td>Ashtabhairava #1; bestows creative brilliance & removes curses</td>
+      <td>Near Vriddh Kaleshwar<br><span class="badge-tag badge-north">North Kashi</span></td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td><strong>Ruru Bhairav</strong></td>
+      <td>Southeast (Agneya)</td>
+      <td>Ashtabhairava #2 (Anand Bhairav); removes fear of foes</td>
+      <td>Hanuman Ghat<br><span class="badge-tag badge-south">South Kashi</span></td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td><strong>Chand Bhairav</strong></td>
+      <td>South (Dakshina)</td>
+      <td>Ashtabhairava #3; vanquisher of wrath; grants courage & health</td>
+      <td>Durga Kund Complex<br><span class="badge-tag badge-south">South Kashi</span></td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td><strong>Krodhan Bhairav</strong></td>
+      <td>Southwest (Nairritya)</td>
+      <td>Ashtabhairava #4; Rahu Shanti & Kaal Sarp Dosh eradication</td>
+      <td>Batuk Bhairav, Kamachha<br><span class="badge-tag badge-west">West Kashi</span></td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td><strong>Unmat Bhairav</strong></td>
+      <td>West (Pashchima)</td>
+      <td>Ashtabhairava #5; controls wandering mind & confers ecstasy</td>
+      <td>Deora Village (Panchkroshi)<br><span class="badge-tag badge-west">Outer West</span></td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td><strong>Kapal Bhairav</strong></td>
+      <td>Northwest (Vayavya)</td>
+      <td>Ashtabhairava #6 (Laat Bhairav); Kapal Mochan Teerth snan</td>
+      <td>Alaipur / Laat Sarovar<br><span class="badge-tag badge-north">North Kashi</span></td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td><strong>Bheeshan Bhairav</strong></td>
+      <td>North (Uttara)</td>
+      <td>Ashtabhairava #7 (Bhoot Bhairav); dispeller of spirits & terrors</td>
+      <td>Near Jyeshtheshwar<br><span class="badge-tag badge-west">West Kashi</span></td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td><strong>Samhar Bhairav</strong></td>
+      <td>Northeast (Ishanya)</td>
+      <td>Ashtabhairava #8; cosmic dissolver of all karmic bondages</td>
+      <td>Patan Darwaja, Gai Ghat<br><span class="badge-tag badge-north">North Kashi</span></td>
+    </tr>
+  </tbody>
+</table>
+
+
+<div class="page-break"></div>
+<div class="article-header-banner">
+  <div class="article-number-badge">THEOLOGICAL FOUNDATION HUB</div>
+  <div class="article-main-title">A BRIEF ABOUT BHAIRAV TEMPLES</div>
+  <div class="article-subtitle">The Origin of Bhairav, Severance of Brahma’s Head, & Kotwal of Kashi</div>
+</div>
+
+<div class="provenance-box">
+  <table>
+    <tr>
+      <td class="key">&#127760; Original Live URL:</td>
+      <td><a href="https://varanasitemples.in/category/bhairav-temples/other-bhairav-temples/a-brief-about-bhairav-temples/" target="_blank">https://varanasitemples.in/category/bhairav-temples/other-bhairav-temples/a-brief-about-bhairav-temples/</a></td>
+    </tr>
+    <tr>
+      <td class="key">&#128194; Exact Mirror Path:</td>
+      <td><code>Kashi_Exact_Offline_Website/category/bhairav-temples/other-bhairav-temples/a-brief-about-bhairav-temples/index.html</code></td>
+    </tr>
+    <tr>
+      <td class="key">&#128214; Scripture Authority:</td>
+      <td>Skanda Purana — Kashi Khand (Sanctum protected by Lord Bhairava)</td>
+    </tr>
+  </table>
+</div>
+
+
+<div class="article-body-container">
+  
+
+
+
+          <p>After Goddess killed the evil demon Durgasur (Kindly refer Durga Devi), she created  nine shaktis which were stationed in various places in Kashi to protect the holy city and its denizens. (Kashi Khand, Chapter 72).</p>
+<p>In the same way eight forms of Bhairavs were created who were positioned at various places in Kashi.  These Bhairavs protect the devotees from all sorts of evils and give the devotees happiness and prosperity in their lives.</p>
+<p>Devotees who worship these Bhairavs will develop a strong mental frame work and will be courageous.</p>
+               
+
+
+</div>
+
+
+<div class="page-break"></div>
+<div class="article-header-banner">
+  <div class="article-number-badge">SUPREME KOTWAL OF KASHI</div>
+  <div class="article-main-title">KAAL BHAIRAV</div>
+  <div class="article-subtitle">Kotwal of Kashi • Supreme Guardian & Dispenser of Justice</div>
+</div>
+
+<div class="provenance-box">
+  <table>
+    <tr>
+      <td class="key">&#127760; Original Live URL:</td>
+      <td><a href="https://varanasitemples.in/category/bhairav-temples/kaal-bhairav/" target="_blank">https://varanasitemples.in/category/bhairav-temples/kaal-bhairav/</a></td>
+    </tr>
+    <tr>
+      <td class="key">&#128194; Exact Mirror Path:</td>
+      <td><code>Kashi_Exact_Offline_Website/category/bhairav-temples/kaal-bhairav/index.html</code></td>
+    </tr>
+    <tr>
+      <td class="key">&#128214; Scripture Authority:</td>
+      <td>Skanda Purana — Kashi Khand (Sanctum protected by Lord Bhairava)</td>
+    </tr>
+  </table>
+</div>
+
+
+<div class="article-body-container">
+  
+
+
+
+          <p>Long time back several great Sages sitting atop Sumeru Mountain desired to know from Lord Brahma as to who was indestructible and supreme.  Lord Brahma proclaimed himself to be that superior person.  On hearing this, Yagyeshwar (symbolic of Narayan) reprimanded Lord Brahma for his hasty and audacious utterances.</p>
+<p>Both of them asked the same question to the four Vedas.  Rig Veda replied that the omnipotent deity who controls all living beings, named Rudra is supreme.  Yajur Veda replied that He, whom we worship through various Yagnas (Yagam) and other such rigorous rituals, is none other than Shiva, who is supreme.  Sam Veda stated that the respected figure who is worshipped by various Yogis and that Person who controls the entire world is none other than Triambakam.  Finally, Atharva Veda said, all human beings can see the Lord through Bhakti Marg and such a deity who can remove all the worries of human beings is indeed Shankar.  In a nut shell, all the four Vedas proclaimed that Lord Shiva is the ultimate being.</p>
+<p>Both Lord Brahma and Yagya Narayan started laughing in disbelief. Shortly Lord Shiva appeared as a powerful divine light in their midst.  Lord Brahma stared at that Being furiously with his fifth head.  Lord Shiva immediately created one living being and stated that he (the new being) will be King of Kaal and will be known as Kaal Bhairav.  (Here Kaal is denoted to mean the final time viz. death). Lord Shiva further stated Kaal Bhairav will always be in Kashi, removing all sins of the devotees and therefore, he will be known as Paap Bhakshak.</p>
+<p><img class="aligncenter wp-image-3348 temple-pdf-img" src="file:///C:/Users/koppi/Downloads/Kashi_Offline_Guide_Pack/assets/images/Kaal-Bhairav-1-1024x757.jpg" alt="Kaal Bhairav" width="370" height="274"   /></p>
+
+<p style="text-align: center;"><strong>(KAAL BHAIRAV)</strong></p>
+
+<p>Meanwhile, Lord Brahma’s fifth head was still burning with fury and Kaal Bhairav plucked that head (just as we pluck flowers from the garden).  Immediately all the people present there started singing praises of Lord Shiva.  Lord Shiva directed Bhairav to go around various places but Brahma Hatya Dosh (affliction on account of hurting a Brahmin) will always follow him.  Lord Shiva created a dangerous and fierce looking female figure, named Brahma Hatya and asked her to follow Kaal Bhairav wherever he went.</p>
+<p>Kaal Bhairav, with Brahma’s head in his hand, started going around various places in the world, took bath in various Teerths, worshipped various Lords, nevertheless saw that Brahma Hatya was following him all along.  He could not get rid of that affliction.</p>
+<p>Finally, Kaal Bhairav reached the Moksha Puri, Kashi. The moment Kaal Bhairav entered Kashi, Brahma Hatya started shouting, screaming and finally disappeared into the netherworld.  The head of Brahma, (Kapal) fell at a place which was called Kapal Mochan and there was a Teerth which was later called  Kapal Mochan Teerth. Then onwards Kaal Bhairav stationed himself permanently in Kashi, giving shelter to all his devotees.  Those living in or visiting Kashi, must worship Kaal Bhairav and he grants protection to all his devotees.</p>
+<p>Ashtami day (eighth day after Poornima) in the month of Margashirsha is an important day for worshipping Kaal Bhairav.  Besides, Sundays, Tuesdays, Ashtami and Chaturdasi days are very important for worshipping Kaal Bhairav.</p>
+
+<p><strong>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-</strong></p>
+<p><strong> </strong></p>
+<p><strong>Kashi Khand, Chapter 31, Shlok 146</strong></p>
+<p><strong> </strong></p>
+<p><strong>कृत्वा च विविधां पूजां महासम्भारविस्तरै:</strong></p>
+<p><strong>नरो मार्गाऽसिताऽष्टंम्यां  वार्षिकं विघ्नमुत्सृजेत</strong></p>
+
+<p><strong>On the Krishna Ashtami date (Kaal Bhairav Jayanti) of Margashirsha (Agahan) month, a devotee who performs various pujas (of Kaal Bhairav) with all pooja  materials, his obstacles/troubles for the whole year are removed.</strong></p>
+<p><strong> </strong></p>
+<p><strong>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;</strong></p>
+
+<p>A person who circumabulates Lord Kaal Bhairav eight times will be absolved of all the sins committed by him.  A devotee who worships Kaal Bhairav for six months will attain all types of Siddhi. (Kashi Khand, Chapter 31).</p>
+
+<p><strong>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-</strong></p>
+<p><strong>Kashi Khand, Chapter 31, Shlok 147</strong></p>
+<p><strong>अष्टम्यां च चतुर्दश्यां रविभूमिजवासरे</strong></p>
+<p><strong>यात्रां  च भैरवीं कृत्वा कृतै: पापै: प्रमुच्यते </strong></p>
+
+<p><strong>If a devotee worships Kaal Bhairav on Sundays or Tuesdays as also on Ashtami and Chaturdasi days, he will get relief from all sins committed. </strong></p>
+<p><strong>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;</strong></p>
+
+<p>Old timers in Kashi believe whenever residents of Kashi leave the city for short journeys, they worship Kaal Bhairav (taking his permission) and on return back to Kashi, they again worship Kaal Bhairav.</p>
+<h2>LOCATION OF KAAL BHAIRAV</h2>
+<p>Kaal Bhairav is located at K-32/22, Bhaironath.  People can approach this place by rickshaw either through Bisheshwarganj cross roads or through Golghar (Maidagin).  This is a very famous temple and devotees will be guided by the local residents.</p>
+<h2></h2>
+<p><strong>Please watch our YouTube Video about Kaal Bhairav  at following Link</strong></p>
+
+
+<p><a href="https://www.youtube.com/watch?v=0T5SMXRgQQs&amp;t=11s">https://www.youtube.com/watch?v=0T5SMXRgQQs&amp;t=11s</a></p>
+<h2></h2>
+<h2>TYPES OF POOJA</h2>
+<p>The temple remains open from 05.00 a.m. to 1.30 p.m. and from 04.30 p.m. to 09.30 p.m.  There is heavy rush of devotees on Sundays and Tuesdays.</p>
+               
+
+
+</div>
+
+
+<div class="info-grid">
+  <div class="info-cell">
+    <div class="info-panel">
+      <h4>&#128205; Location & Approach Route</h4>
+      <p style="margin-bottom:4pt;"><strong>Address:</strong> K-32/22, Bhaironath.  People can approach this place by rickshaw either through Bisheshwarganj cross roads or through Golghar (Maidagin)</p>
+      <p style="margin-bottom:4pt;"><strong>Nearby Ghat / Landmark:</strong> Not directly on a riverfront ghat</p>
+      <p style="margin-bottom:0;"><strong>Geographic Zone:</strong> North Kashi</p>
+    </div>
+  </div>
+  <div class="info-cell">
+    <div class="info-panel">
+      <h4>&#9200; Darshan & Pooja Arrangements</h4>
+      <p style="margin-bottom:4pt;"><strong>Timings:</strong> The temple remains open from 05.00 a.m. to 1.30 p.m. and from 04.30 p.m. to 09.30 p.m.  There is heavy rush of devotees on Sundays and Tuesdays.</p>
+      <p style="margin-bottom:0;"><strong>Pooja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.</p>
+    </div>
+  </div>
+</div>
+
+
+<div class="links-box">
+  <div style="font-weight:700; color:#1e40af; margin-bottom:3pt;">&#128279; Digital Reference Links (Requires Internet):</div>
+  <strong>Temple Darshan Video:</strong> <a href="https://www.youtube.com/watch?v=0T5SMXRgQQs&amp;t=11s" target="_blank">https://www.youtube.com/watch?v=0T5SMXRgQQs&amp;t=11s</a>
+</div>
+
+
+<div class="page-break"></div>
+<div class="article-header-banner">
+  <div class="article-number-badge">ASHTABHAIRAVA #1</div>
+  <div class="article-main-title">ASITANG BHAIRAV</div>
+  <div class="article-subtitle">Ashtabhairava #1 • Eastern Directional Guardian (Near Vriddh Kaleshwar)</div>
+</div>
+
+<div class="provenance-box">
+  <table>
+    <tr>
+      <td class="key">&#127760; Original Live URL:</td>
+      <td><a href="https://varanasitemples.in/category/bhairav-temples/other-bhairav-temples/asitang-bhairav/" target="_blank">https://varanasitemples.in/category/bhairav-temples/other-bhairav-temples/asitang-bhairav/</a></td>
+    </tr>
+    <tr>
+      <td class="key">&#128194; Exact Mirror Path:</td>
+      <td><code>Kashi_Exact_Offline_Website/category/bhairav-temples/other-bhairav-temples/asitang-bhairav/index.html</code></td>
+    </tr>
+    <tr>
+      <td class="key">&#128214; Scripture Authority:</td>
+      <td>Skanda Purana — Kashi Khand (Sanctum protected by Lord Bhairava)</td>
+    </tr>
+  </table>
+</div>
+
+
+<div class="article-body-container">
+  
+
+
+
+          <p style="text-align: left;">Asitang Bhairav is located at K.52/39, Maha Mrityunjay temple near Vriddh Kaleshwar.  Devotees can reach this place by rickshaw by travelling through Bisheshwarganj G.P.O.  Mrityunjay temple is quite famous.</p>
+<p style="text-align: left;"><img class="aligncenter  wp-image-3350 temple-pdf-img" src="file:///C:/Users/koppi/Downloads/Kashi_Offline_Guide_Pack/assets/images/Asitang-Bhairav-1.jpg" alt="Asitang Bhairav" width="382" height="382"   /></p>
+<p style="text-align: left;">
+<p style="text-align: center;"><strong>(ASITANG BHAIRAV)</strong></p>
+<p style="text-align: left;">This temples falls in the religious area of Krithi Vaasaa Peet.  Any prayers undertaken here will yield multiple benefits.</p>
+<h2></h2>
+<p><strong>Please watch our YouTube Video about Asitang Bhairav  at following Link</strong></p>
+<h2></h2>
+<h2><a href="https://www.youtube.com/watch?v=0T5SMXRgQQs&amp;t=11s">https://www.youtube.com/watch?v=0T5SMXRgQQs&amp;t=11s</a></h2>
+<h2></h2>
+<h2>TYPES OF POOJA</h2>
+<p>The place of worship is open throughout the day. Devotees can worship this deity as per their convenience.</p>
+
+<p><strong>LOCATION OF MRITYUNJAY MAHADEV TEMPLE AS PER GOOGLE MAPS IS GIVEN BELOW</strong></p>
+
+<p><a href="https://www.google.com/maps/place/Mahamrityunjay+Mahadev+Temple/@25.3222648,83.014546,20z/data=!4m12!1m6!3m5!1s0x398e2e3d7dd1fb31:0x15ea53adbe61e75a!2sAnjaneya+Temple!8m2!3d25.3221965!4d83.0148166!3m4!1s0x398e2e3d59280bad:0x5b8de15c093375b2!8m2!3d25.3221891!4d83.0147241">https://www.google.com/maps/place/Mahamrityunjay+Mahadev+Temple/@25.3222648,83.014546,20z/data=!4m12!1m6!3m5!1s0x398e2e3d7dd1fb31:0x15ea53adbe61e75a!2sAnjaneya+Temple!8m2!3d25.3221965!4d83.0148166!3m4!1s0x398e2e3d59280bad:0x5b8de15c093375b2!8m2!3d25.3221891!4d83.0147241</a></p>
+
+
+               
+
+
+</div>
+
+
+<div class="info-grid">
+  <div class="info-cell">
+    <div class="info-panel">
+      <h4>&#128205; Location & Approach Route</h4>
+      <p style="margin-bottom:4pt;"><strong>Address:</strong> K-32/22, Bhaironath.  People can approach this place by rickshaw either through Bisheshwarganj cross roads or through Golghar (Maidagin)</p>
+      <p style="margin-bottom:4pt;"><strong>Nearby Ghat / Landmark:</strong> Not directly on a riverfront ghat</p>
+      <p style="margin-bottom:0;"><strong>Geographic Zone:</strong> North Kashi</p>
+    </div>
+  </div>
+  <div class="info-cell">
+    <div class="info-panel">
+      <h4>&#9200; Darshan & Pooja Arrangements</h4>
+      <p style="margin-bottom:4pt;"><strong>Timings:</strong> The temple remains open from 05.00 a.m. to 1.30 p.m. and from 04.30 p.m. to 09.30 p.m.  There is heavy rush of devotees on Sundays and Tuesdays.</p>
+      <p style="margin-bottom:0;"><strong>Pooja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.</p>
+    </div>
+  </div>
+</div>
+
+
+<div class="links-box">
+  <div style="font-weight:700; color:#1e40af; margin-bottom:3pt;">&#128279; Digital Reference Links (Requires Internet):</div>
+  <strong>Temple Darshan Video:</strong> <a href="https://www.youtube.com/watch?v=0T5SMXRgQQs&amp;t=11s" target="_blank">https://www.youtube.com/watch?v=0T5SMXRgQQs&amp;t=11s</a><br><strong>Google Maps:</strong> <a href="https://www.google.com/maps/place/Mahamrityunjay+Mahadev+Temple/@25.3222648,83.014546,20z/data=!4m12!1m6!3m5!1s0x398e2e3d7dd1fb31:0x15ea53adbe61e75a!2sAnjaneya+Temple!8m2!3d25.3221965!4d83.0148166!3m4!1s0x398e2e3d59280bad:0x5b8de15c093375b2!8m2!3d25.3221891!4d83.0147241" target="_blank">https://www.google.com/maps/place/Mahamrityunjay+Mahadev+Temple/@25.3222648,83.014546,20z/...</a>
+</div>
+
+
+<div class="page-break"></div>
+<div class="article-header-banner">
+  <div class="article-number-badge">ASHTABHAIRAVA #2</div>
+  <div class="article-main-title">RURU BHAIRAV</div>
+  <div class="article-subtitle">Ashtabhairava #2 • Southeastern Directional Guardian (Hanuman Ghat)</div>
+</div>
+
+<div class="provenance-box">
+  <table>
+    <tr>
+      <td class="key">&#127760; Original Live URL:</td>
+      <td><a href="https://varanasitemples.in/category/bhairav-temples/other-bhairav-temples/ruru-bhairav/" target="_blank">https://varanasitemples.in/category/bhairav-temples/other-bhairav-temples/ruru-bhairav/</a></td>
+    </tr>
+    <tr>
+      <td class="key">&#128194; Exact Mirror Path:</td>
+      <td><code>Kashi_Exact_Offline_Website/category/bhairav-temples/other-bhairav-temples/ruru-bhairav/index.html</code></td>
+    </tr>
+    <tr>
+      <td class="key">&#128214; Scripture Authority:</td>
+      <td>Skanda Purana — Kashi Khand (Sanctum protected by Lord Bhairava)</td>
+    </tr>
+  </table>
+</div>
+
+
+<div class="article-body-container">
+  
+
+
+
+          <p style="text-align: left;">Ruru Bhairav, also called as Anand Bhairav by locals, is located at B.4/16, Hanuman Ghat, Varanasi.  Devotees can travel upto this place in a rickshaw.  Hanuman Ghat is near Harishchandra Ghat, one of the cremation grounds and is a famous place. Devotees will have to get down at Hanuman Ghat main Road and walk towards the Hanuman Temple which is located near Ruru Bhairav.</p>
+<p><img class="aligncenter size-full wp-image-3365 temple-pdf-img" src="file:///C:/Users/koppi/Downloads/Kashi_Offline_Guide_Pack/assets/images/img12.jpg" alt="img12" width="416" height="278"   /></p>
+
+<p style="text-align: center;"><strong>(RURU BHAIRAV)</strong></p>
+
+<p><strong>Please watch our YouTube video on Ruru Bhairav in the  folowing link :</strong></p>
+
+<p><a href="https://www.youtube.com/watch?v=yc6cjqcNyTI&amp;t=23s">https://www.youtube.com/watch?v=yc6cjqcNyTI&amp;t=23s</a></p>
+
+<p><strong><span style="text-decoration: underline;">TYPES OF POOJA</span></strong></p>
+<p>The place of worship is open from 05.00 a.m. to 10.00 a.m. and from 05.00 p.m. to 09.30 p.m.  Aarties are conducted in the morning and evening.</p>
+               
+
+
+</div>
+
+
+<div class="info-grid">
+  <div class="info-cell">
+    <div class="info-panel">
+      <h4>&#128205; Location & Approach Route</h4>
+      <p style="margin-bottom:4pt;"><strong>Address:</strong> K-32/22, Bhaironath.  People can approach this place by rickshaw either through Bisheshwarganj cross roads or through Golghar (Maidagin)</p>
+      <p style="margin-bottom:4pt;"><strong>Nearby Ghat / Landmark:</strong> Not directly on a riverfront ghat</p>
+      <p style="margin-bottom:0;"><strong>Geographic Zone:</strong> North Kashi</p>
+    </div>
+  </div>
+  <div class="info-cell">
+    <div class="info-panel">
+      <h4>&#9200; Darshan & Pooja Arrangements</h4>
+      <p style="margin-bottom:4pt;"><strong>Timings:</strong> The temple remains open from 05.00 a.m. to 1.30 p.m. and from 04.30 p.m. to 09.30 p.m.  There is heavy rush of devotees on Sundays and Tuesdays.</p>
+      <p style="margin-bottom:0;"><strong>Pooja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.</p>
+    </div>
+  </div>
+</div>
+
+
+<div class="links-box">
+  <div style="font-weight:700; color:#1e40af; margin-bottom:3pt;">&#128279; Digital Reference Links (Requires Internet):</div>
+  <strong>Temple Darshan Video:</strong> <a href="https://www.youtube.com/watch?v=0T5SMXRgQQs&amp;t=11s" target="_blank">https://www.youtube.com/watch?v=0T5SMXRgQQs&amp;t=11s</a><br><strong>YouTube Video:</strong> <a href="https://www.youtube.com/watch?v=yc6cjqcNyTI&amp;t=23s" target="_blank">https://www.youtube.com/watch?v=yc6cjqcNyTI&amp;t=23s</a>
+</div>
+
+
+<div class="page-break"></div>
+<div class="article-header-banner">
+  <div class="article-number-badge">ASHTABHAIRAVA #3</div>
+  <div class="article-main-title">CHAND BHAIRAV</div>
+  <div class="article-subtitle">Ashtabhairava #3 • Southern Directional Guardian (Durga Kund Complex)</div>
+</div>
+
+<div class="provenance-box">
+  <table>
+    <tr>
+      <td class="key">&#127760; Original Live URL:</td>
+      <td><a href="https://varanasitemples.in/category/bhairav-temples/other-bhairav-temples/chand-bhairav/" target="_blank">https://varanasitemples.in/category/bhairav-temples/other-bhairav-temples/chand-bhairav/</a></td>
+    </tr>
+    <tr>
+      <td class="key">&#128194; Exact Mirror Path:</td>
+      <td><code>Kashi_Exact_Offline_Website/category/bhairav-temples/other-bhairav-temples/chand-bhairav/index.html</code></td>
+    </tr>
+    <tr>
+      <td class="key">&#128214; Scripture Authority:</td>
+      <td>Skanda Purana — Kashi Khand (Sanctum protected by Lord Bhairava)</td>
+    </tr>
+  </table>
+</div>
+
+
+<div class="article-body-container">
+  
+
+
+
+          <p style="text-align: left;">
+<p style="text-align: left;"><img class="aligncenter  wp-image-3357 temple-pdf-img" src="file:///C:/Users/koppi/Downloads/Kashi_Offline_Guide_Pack/assets/images/Chand-Bhairav-2.jpg" alt="Chand Bhairav" width="429" height="406"   /></p>
+<p style="text-align: left;">
+<p style="text-align: center;"><strong>(CHAND BHAIRAV)</strong></p>
+<p style="text-align: left;">Chand Bhairav is located in the temple premises of Durga Devi at B.27/2, Durga Kund.  This is a famous locality and devotees can reach this place by rickshaw or auto or car.</p>
+<h4><strong>Please watch our YouTube Video about Chand Bhairav  at following Link</strong></h4>
+<h2></h2>
+<p><a href="https://www.youtube.com/watch?v=mWq7tpm11Bc&amp;t=121s">https://www.youtube.com/watch?v=mWq7tpm11Bc&amp;t=121s</a></p>
+<h2></h2>
+<p><strong>TYPES OF POOJA</strong></p>
+<p>This place of worship is open throughout the day. Devotees can worship this deity as per their convenience.</p>
+               
+
+
+</div>
+
+
+<div class="info-grid">
+  <div class="info-cell">
+    <div class="info-panel">
+      <h4>&#128205; Location & Approach Route</h4>
+      <p style="margin-bottom:4pt;"><strong>Address:</strong> K-32/22, Bhaironath.  People can approach this place by rickshaw either through Bisheshwarganj cross roads or through Golghar (Maidagin)</p>
+      <p style="margin-bottom:4pt;"><strong>Nearby Ghat / Landmark:</strong> Not directly on a riverfront ghat</p>
+      <p style="margin-bottom:0;"><strong>Geographic Zone:</strong> North Kashi</p>
+    </div>
+  </div>
+  <div class="info-cell">
+    <div class="info-panel">
+      <h4>&#9200; Darshan & Pooja Arrangements</h4>
+      <p style="margin-bottom:4pt;"><strong>Timings:</strong> The temple remains open from 05.00 a.m. to 1.30 p.m. and from 04.30 p.m. to 09.30 p.m.  There is heavy rush of devotees on Sundays and Tuesdays.</p>
+      <p style="margin-bottom:0;"><strong>Pooja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.</p>
+    </div>
+  </div>
+</div>
+
+
+<div class="links-box">
+  <div style="font-weight:700; color:#1e40af; margin-bottom:3pt;">&#128279; Digital Reference Links (Requires Internet):</div>
+  <strong>Temple Darshan Video:</strong> <a href="https://www.youtube.com/watch?v=0T5SMXRgQQs&amp;t=11s" target="_blank">https://www.youtube.com/watch?v=0T5SMXRgQQs&amp;t=11s</a><br><strong>YouTube Video:</strong> <a href="https://www.youtube.com/watch?v=mWq7tpm11Bc&amp;t=121s" target="_blank">https://www.youtube.com/watch?v=mWq7tpm11Bc&amp;t=121s</a>
+</div>
+
+
+<div class="page-break"></div>
+<div class="article-header-banner">
+  <div class="article-number-badge">ASHTABHAIRAVA #4</div>
+  <div class="article-main-title">KRODHAN BHAIRAV</div>
+  <div class="article-subtitle">Ashtabhairava #4 • Southwestern Directional Guardian (Batuk Bhairav, Kamachha)</div>
+</div>
+
+<div class="provenance-box">
+  <table>
+    <tr>
+      <td class="key">&#127760; Original Live URL:</td>
+      <td><a href="https://varanasitemples.in/category/bhairav-temples/other-bhairav-temples/krodhan-bhairav/" target="_blank">https://varanasitemples.in/category/bhairav-temples/other-bhairav-temples/krodhan-bhairav/</a></td>
+    </tr>
+    <tr>
+      <td class="key">&#128194; Exact Mirror Path:</td>
+      <td><code>Kashi_Exact_Offline_Website/category/bhairav-temples/other-bhairav-temples/krodhan-bhairav/index.html</code></td>
+    </tr>
+    <tr>
+      <td class="key">&#128214; Scripture Authority:</td>
+      <td>Skanda Purana — Kashi Khand (Sanctum protected by Lord Bhairava)</td>
+    </tr>
+  </table>
+</div>
+
+
+<div class="article-body-container">
+  
+
+
+
+          <p>Krodhan Bhairav is known as Aadi Bhairav and is located at Batuk Bhairav temple at B.31/126, Kamachha, Varanasi.  Devotees can reach this place in rickshaw from anywhere in Kashi as Kamachha and Batuk Bhairav are famous places. Some people say that Krodhan Bhairav is the small Bhairav located adjacent to Kamakhya Devi in the temple nearby.</p>
+<h4><img class="aligncenter size-full wp-image-3363 temple-pdf-img" src="file:///C:/Users/koppi/Downloads/Kashi_Offline_Guide_Pack/assets/images/Krodhan-Bhairav-1.jpg" alt="Krodhan Bhairav" width="483" height="690"   /></h4>
+<p style="text-align: center;"><strong>(KRODHAN BHAIRAV &#8211; AADI BHAIRAV)</strong></p>
+<h4><strong>Please watch our YouTube Video about Krodhan Bhairav  at following Link</strong></h4>
+<h4></h4>
+<p><a href="https://www.youtube.com/watch?v=mWq7tpm11Bc&amp;t=121s">https://www.youtube.com/watch?v=mWq7tpm11Bc&amp;t=121s</a></p>
+
+
+<h4><span style="text-decoration: underline;">TYPES OF POOJA</span></h4>
+<p>The place of worship is open from 05.00 a.m. to 12.00 Noon and from 04.00 p.m. to 12.00 p.m.  Aarties are conducted in the morning and evening.</p>
+
+<h5><strong>POOJARIES OF THE TEMPLE</strong></h5>
+<p>Mahant Vijay Puri and Acharya Shambu Saran are available near the temple premises and can be contacted at Mobile No. (0)9839152539 from 09.00 a.m. to 12.00 noon and from 06.00 p.m. to 09.00 p.m.  According to the Mahantji, devotees contact the temple authorities for Rahu Shanti, relief from Kaal Sarp Dosh, Tantra Nivaran etc., for which Japam (repetition of a set of mantras) is being undertaken at the temple.</p>
+               
+
+
+</div>
+
+
+<div class="info-grid">
+  <div class="info-cell">
+    <div class="info-panel">
+      <h4>&#128205; Location & Approach Route</h4>
+      <p style="margin-bottom:4pt;"><strong>Address:</strong> K-32/22, Bhaironath.  People can approach this place by rickshaw either through Bisheshwarganj cross roads or through Golghar (Maidagin)</p>
+      <p style="margin-bottom:4pt;"><strong>Nearby Ghat / Landmark:</strong> Not directly on a riverfront ghat</p>
+      <p style="margin-bottom:0;"><strong>Geographic Zone:</strong> North Kashi</p>
+    </div>
+  </div>
+  <div class="info-cell">
+    <div class="info-panel">
+      <h4>&#9200; Darshan & Pooja Arrangements</h4>
+      <p style="margin-bottom:4pt;"><strong>Timings:</strong> The temple remains open from 05.00 a.m. to 1.30 p.m. and from 04.30 p.m. to 09.30 p.m.  There is heavy rush of devotees on Sundays and Tuesdays.</p>
+      <p style="margin-bottom:0;"><strong>Pooja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.</p>
+    </div>
+  </div>
+</div>
+
+
+<div class="links-box">
+  <div style="font-weight:700; color:#1e40af; margin-bottom:3pt;">&#128279; Digital Reference Links (Requires Internet):</div>
+  <strong>Temple Darshan Video:</strong> <a href="https://www.youtube.com/watch?v=0T5SMXRgQQs&amp;t=11s" target="_blank">https://www.youtube.com/watch?v=0T5SMXRgQQs&amp;t=11s</a><br><strong>YouTube Video:</strong> <a href="https://www.youtube.com/watch?v=mWq7tpm11Bc&amp;t=121s" target="_blank">https://www.youtube.com/watch?v=mWq7tpm11Bc&amp;t=121s</a>
+</div>
+
+
+<div class="page-break"></div>
+<div class="article-header-banner">
+  <div class="article-number-badge">ASHTABHAIRAVA #5</div>
+  <div class="article-main-title">UNMAT BHAIRAV</div>
+  <div class="article-subtitle">Ashtabhairava #5 • Western Directional Guardian (Deora Village)</div>
+</div>
+
+<div class="provenance-box">
+  <table>
+    <tr>
+      <td class="key">&#127760; Original Live URL:</td>
+      <td><a href="https://varanasitemples.in/category/bhairav-temples/other-bhairav-temples/unmat-bhairav/" target="_blank">https://varanasitemples.in/category/bhairav-temples/other-bhairav-temples/unmat-bhairav/</a></td>
+    </tr>
+    <tr>
+      <td class="key">&#128194; Exact Mirror Path:</td>
+      <td><code>Kashi_Exact_Offline_Website/category/bhairav-temples/other-bhairav-temples/unmat-bhairav/index.html</code></td>
+    </tr>
+    <tr>
+      <td class="key">&#128214; Scripture Authority:</td>
+      <td>Skanda Purana — Kashi Khand (Sanctum protected by Lord Bhairava)</td>
+    </tr>
+  </table>
+</div>
+
+
+<div class="article-body-container">
+  
+
+
+
+          <p>Unmat Bhairav is located in the Panch Kroshi Marg at Deora Village, which is about 15 Kms. away from Varanasi.</p>
+<p>Since this temple is situated very far away from Varanasi, devotees may find it difficult to reach there.  Recently one staunch devotee has fully renovated this temple.</p>
+<p>Shri Akhilesh Pandey is the Priest of this temple.  Devotees may speak to him at 9118460531 for any guidance and directions.</p>
+
+<h2><img class="aligncenter size-full wp-image-2735 temple-pdf-img" src="file:///C:/Users/koppi/Downloads/Kashi_Offline_Guide_Pack/assets/images/Unmat-PHOTO.jpg" alt="Unmat PHOTO" width="325" height="444"   /></h2>
+<h2 style="text-align: center;"> (UNMAT BHAIRAV)</h2>
+<h2>Please watch our YouTube video on Unmat Bhairav in the following link :</h2>
+
+<p><a href="https://www.youtube.com/watch?v=yc6cjqcNyTI&amp;t=23s">https://www.youtube.com/watch?v=yc6cjqcNyTI&amp;t=23s</a></p>
+<h2></h2>
+<h2>TYPES OF POOJA</h2>
+<p>The place of worship is open practically throughout the day.</p>
+               
+
+
+</div>
+
+
+<div class="info-grid">
+  <div class="info-cell">
+    <div class="info-panel">
+      <h4>&#128205; Location & Approach Route</h4>
+      <p style="margin-bottom:4pt;"><strong>Address:</strong> K-32/22, Bhaironath.  People can approach this place by rickshaw either through Bisheshwarganj cross roads or through Golghar (Maidagin)</p>
+      <p style="margin-bottom:4pt;"><strong>Nearby Ghat / Landmark:</strong> Not directly on a riverfront ghat</p>
+      <p style="margin-bottom:0;"><strong>Geographic Zone:</strong> North Kashi</p>
+    </div>
+  </div>
+  <div class="info-cell">
+    <div class="info-panel">
+      <h4>&#9200; Darshan & Pooja Arrangements</h4>
+      <p style="margin-bottom:4pt;"><strong>Timings:</strong> The temple remains open from 05.00 a.m. to 1.30 p.m. and from 04.30 p.m. to 09.30 p.m.  There is heavy rush of devotees on Sundays and Tuesdays.</p>
+      <p style="margin-bottom:0;"><strong>Pooja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.</p>
+    </div>
+  </div>
+</div>
+
+
+<div class="links-box">
+  <div style="font-weight:700; color:#1e40af; margin-bottom:3pt;">&#128279; Digital Reference Links (Requires Internet):</div>
+  <strong>Temple Darshan Video:</strong> <a href="https://www.youtube.com/watch?v=0T5SMXRgQQs&amp;t=11s" target="_blank">https://www.youtube.com/watch?v=0T5SMXRgQQs&amp;t=11s</a><br><strong>YouTube Video:</strong> <a href="https://www.youtube.com/watch?v=yc6cjqcNyTI&amp;t=23s" target="_blank">https://www.youtube.com/watch?v=yc6cjqcNyTI&amp;t=23s</a>
+</div>
+
+
+<div class="page-break"></div>
+<div class="article-header-banner">
+  <div class="article-number-badge">ASHTABHAIRAVA #6</div>
+  <div class="article-main-title">KAPAL BHAIRAV (LAAT BHAIRAV)</div>
+  <div class="article-subtitle">Ashtabhairava #6 • Northwestern Directional Guardian (Kapal Mochan Teerth)</div>
+</div>
+
+<div class="provenance-box">
+  <table>
+    <tr>
+      <td class="key">&#127760; Original Live URL:</td>
+      <td><a href="https://varanasitemples.in/category/bhairav-temples/other-bhairav-temples/kapal-bhairav-laat-bhairav/" target="_blank">https://varanasitemples.in/category/bhairav-temples/other-bhairav-temples/kapal-bhairav-laat-bhairav/</a></td>
+    </tr>
+    <tr>
+      <td class="key">&#128194; Exact Mirror Path:</td>
+      <td><code>Kashi_Exact_Offline_Website/category/bhairav-temples/other-bhairav-temples/kapal-bhairav-laat-bhairav/index.html</code></td>
+    </tr>
+    <tr>
+      <td class="key">&#128214; Scripture Authority:</td>
+      <td>Skanda Purana — Kashi Khand (Sanctum protected by Lord Bhairava)</td>
+    </tr>
+  </table>
+</div>
+
+
+<div class="article-body-container">
+  
+
+
+
+          <p>Kapal Bhairav (Laat Bhairav) is located at A.1/123, Alaipur.  This falls almost on the outskirts of Varanasi towards the North Eastern side.   Devotees can travel in a rickshaw/auto to reach this place.  From Ashapur Chowmani, the road to the left goes to Sarnath. Devotees should take the road to the right and travel about 2 kms. to reach Laat Bhairav.</p>
+<h2><img class="aligncenter size-full wp-image-3360 temple-pdf-img" src="file:///C:/Users/koppi/Downloads/Kashi_Offline_Guide_Pack/assets/images/Kapal-Bhairav.jpg" alt="Kapal Bhairav" width="376" height="358"   /></h2>
+<h2 style="text-align: center;"> (KAPAL BHAIRAV)</h2>
+<h4><strong>Please watch our YouTube Video about Laat Bhairav  at following Link</strong></h4>
+<h2></h2>
+<p><a href="https://www.youtube.com/watch?v=mWq7tpm11Bc&amp;t=121s">https://www.youtube.com/watch?v=mWq7tpm11Bc&amp;t=121s</a></p>
+<h2></h2>
+<h2>TYPES OF POOJA</h2>
+<p>The place of worship is open from 06.00 a.m. to 11.00 a.m. and from 06.00 p.m. to 09.00 p.m.  The timings are extremely flexible. Devotees can worship this deity as per their convenience.</p>
+<div id="attachment_1806" style="width: 310px" class="wp-caption aligncenter"><a href="../../../../assets/images/Kapal-Mochan-Teerth-Laat-Sarovar2.jpg"><img class="size-medium wp-image-1806 temple-pdf-img" title="Kapal Mochan Teerth (Laat Sarovar)" src="file:///C:/Users/koppi/Downloads/Kashi_Offline_Guide_Pack/assets/images/Kapal-Mochan-Teerth-Laat-Sarovar2-300x225.jpg" alt="Kapal Mochan Teerth (Laat Sarovar)" width="300" height="225"   /></a><p class="wp-caption-text">Kapal Mochan Teerth (Laat Sarovar)</p></div>
+               
+
+
+</div>
+
+
+<div class="info-grid">
+  <div class="info-cell">
+    <div class="info-panel">
+      <h4>&#128205; Location & Approach Route</h4>
+      <p style="margin-bottom:4pt;"><strong>Address:</strong> K-32/22, Bhaironath.  People can approach this place by rickshaw either through Bisheshwarganj cross roads or through Golghar (Maidagin)</p>
+      <p style="margin-bottom:4pt;"><strong>Nearby Ghat / Landmark:</strong> Not directly on a riverfront ghat</p>
+      <p style="margin-bottom:0;"><strong>Geographic Zone:</strong> North Kashi</p>
+    </div>
+  </div>
+  <div class="info-cell">
+    <div class="info-panel">
+      <h4>&#9200; Darshan & Pooja Arrangements</h4>
+      <p style="margin-bottom:4pt;"><strong>Timings:</strong> The temple remains open from 05.00 a.m. to 1.30 p.m. and from 04.30 p.m. to 09.30 p.m.  There is heavy rush of devotees on Sundays and Tuesdays.</p>
+      <p style="margin-bottom:0;"><strong>Pooja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.</p>
+    </div>
+  </div>
+</div>
+
+
+<div class="links-box">
+  <div style="font-weight:700; color:#1e40af; margin-bottom:3pt;">&#128279; Digital Reference Links (Requires Internet):</div>
+  <strong>Temple Darshan Video:</strong> <a href="https://www.youtube.com/watch?v=0T5SMXRgQQs&amp;t=11s" target="_blank">https://www.youtube.com/watch?v=0T5SMXRgQQs&amp;t=11s</a><br><strong>YouTube Video:</strong> <a href="https://www.youtube.com/watch?v=mWq7tpm11Bc&amp;t=121s" target="_blank">https://www.youtube.com/watch?v=mWq7tpm11Bc&amp;t=121s</a>
+</div>
+
+
+<div class="page-break"></div>
+<div class="article-header-banner">
+  <div class="article-number-badge">ASHTABHAIRAVA #7</div>
+  <div class="article-main-title">BHEESHAN BHAIRAV (BHOOT BHAIRAV)</div>
+  <div class="article-subtitle">Ashtabhairava #7 • Northern Directional Guardian (Jyeshtheshwar Precinct)</div>
+</div>
+
+<div class="provenance-box">
+  <table>
+    <tr>
+      <td class="key">&#127760; Original Live URL:</td>
+      <td><a href="https://varanasitemples.in/category/bhairav-temples/other-bhairav-temples/bheeshan-bhairav/" target="_blank">https://varanasitemples.in/category/bhairav-temples/other-bhairav-temples/bheeshan-bhairav/</a></td>
+    </tr>
+    <tr>
+      <td class="key">&#128194; Exact Mirror Path:</td>
+      <td><code>Kashi_Exact_Offline_Website/category/bhairav-temples/other-bhairav-temples/bheeshan-bhairav/index.html</code></td>
+    </tr>
+    <tr>
+      <td class="key">&#128214; Scripture Authority:</td>
+      <td>Skanda Purana — Kashi Khand (Sanctum protected by Lord Bhairava)</td>
+    </tr>
+  </table>
+</div>
+
+
+<div class="article-body-container">
+  
+
+
+
+          <p>Bheeshan Bhairav is located at K.63/28, Bhoot Bhairav, near Jyeshteshwar.  This deity is also known as Bhoot Bhairav.  Devotees can reach this place in a rickshaw through Sapt Sagar or Kashipura.</p>
+<p><img class="aligncenter  wp-image-3352 temple-pdf-img" src="file:///C:/Users/koppi/Downloads/Kashi_Offline_Guide_Pack/assets/images/Bheeshan-Bhairavar.jpg" alt="Bheeshan Bhairavar" width="387" height="408"   /></p>
+<h4></h4>
+<h4 style="text-align: center;">(BHEESHAN BHAIRAV)</h4>
+<h4>The morning Aarti at around 10 am is a treat to watch.</h4>
+<h4> <strong>Please watch our YouTube Video about Bheeshan Bhairav  at following Link</strong></h4>
+<h4></h4>
+<p><a href="https://www.youtube.com/watch?v=0T5SMXRgQQs&amp;t=11s">https://www.youtube.com/watch?v=0T5SMXRgQQs&amp;t=11s</a></p>
+
+
+<h4>TYPES OF POOJA</h4>
+<p>The place of worship is open from 06.00 a.m. to 10.00 a.m. and from 06.00 p.m. to 08.00 p.m.  Timings are flexible.</p>
+               
+
+
+</div>
+
+
+<div class="info-grid">
+  <div class="info-cell">
+    <div class="info-panel">
+      <h4>&#128205; Location & Approach Route</h4>
+      <p style="margin-bottom:4pt;"><strong>Address:</strong> K-32/22, Bhaironath.  People can approach this place by rickshaw either through Bisheshwarganj cross roads or through Golghar (Maidagin)</p>
+      <p style="margin-bottom:4pt;"><strong>Nearby Ghat / Landmark:</strong> Not directly on a riverfront ghat</p>
+      <p style="margin-bottom:0;"><strong>Geographic Zone:</strong> North Kashi</p>
+    </div>
+  </div>
+  <div class="info-cell">
+    <div class="info-panel">
+      <h4>&#9200; Darshan & Pooja Arrangements</h4>
+      <p style="margin-bottom:4pt;"><strong>Timings:</strong> The temple remains open from 05.00 a.m. to 1.30 p.m. and from 04.30 p.m. to 09.30 p.m.  There is heavy rush of devotees on Sundays and Tuesdays.</p>
+      <p style="margin-bottom:0;"><strong>Pooja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.</p>
+    </div>
+  </div>
+</div>
+
+
+<div class="links-box">
+  <div style="font-weight:700; color:#1e40af; margin-bottom:3pt;">&#128279; Digital Reference Links (Requires Internet):</div>
+  <strong>Temple Darshan Video:</strong> <a href="https://www.youtube.com/watch?v=0T5SMXRgQQs&amp;t=11s" target="_blank">https://www.youtube.com/watch?v=0T5SMXRgQQs&amp;t=11s</a>
+</div>
+
+
+<div class="page-break"></div>
+<div class="article-header-banner">
+  <div class="article-number-badge">ASHTABHAIRAVA #8</div>
+  <div class="article-main-title">SAMHAR BHAIRAV</div>
+  <div class="article-subtitle">Ashtabhairava #8 • Northeastern Directional Guardian (Gai Ghat / Patan Darwaja)</div>
+</div>
+
+<div class="provenance-box">
+  <table>
+    <tr>
+      <td class="key">&#127760; Original Live URL:</td>
+      <td><a href="https://varanasitemples.in/category/bhairav-temples/other-bhairav-temples/samhar-bhairav/" target="_blank">https://varanasitemples.in/category/bhairav-temples/other-bhairav-temples/samhar-bhairav/</a></td>
+    </tr>
+    <tr>
+      <td class="key">&#128194; Exact Mirror Path:</td>
+      <td><code>Kashi_Exact_Offline_Website/category/bhairav-temples/other-bhairav-temples/samhar-bhairav/index.html</code></td>
+    </tr>
+    <tr>
+      <td class="key">&#128214; Scripture Authority:</td>
+      <td>Skanda Purana — Kashi Khand (Sanctum protected by Lord Bhairava)</td>
+    </tr>
+  </table>
+</div>
+
+
+<div class="article-body-container">
+  
+
+
+
+          <p>Besides the above narration of Kashi Khand, there is reference to Samhar Bhairav in Chapter 69.  Here it is stated that Samhar Bhairav has come from Bhairav Kshetra and this Bhairav annihilates the sins of the devotees who worship Him.</p>
+<p>Samhar Bhairav is located at A.1/82, Patan Darwaja, near Gai Ghat.  This area falls towards the northern side of Kashi.  Devotees can reach this place by rickshaw through Machhodari. They can also take a boat ride upto Gai Ghat and climb the steps.</p>
+<h2><img class="aligncenter size-full wp-image-3367 temple-pdf-img" src="file:///C:/Users/koppi/Downloads/Kashi_Offline_Guide_Pack/assets/images/Samhar.jpeg" alt="Samhar" width="257" height="390"   /></h2>
+<h2 style="text-align: center;">(SAMHAR BHAIRAV)</h2>
+<p><strong>Please watch our YouTube video on Samhar Bhairav in the following link :</strong></p>
+
+<p><a href="https://www.youtube.com/watch?v=yc6cjqcNyTI&amp;t=23s">https://www.youtube.com/watch?v=yc6cjqcNyTI&amp;t=23s</a></p>
+<h2></h2>
+<h2>TYPES OF POOJA</h2>
+<p>The place of worship is open from 05.00 a.m. to 11.00 a.m. and from 05.00  p.m. to 09.30 p.m.  Timings are flexible.  Devotees can worship as per their convenience.</p>
+               
+
+
+</div>
+
+
+<div class="info-grid">
+  <div class="info-cell">
+    <div class="info-panel">
+      <h4>&#128205; Location & Approach Route</h4>
+      <p style="margin-bottom:4pt;"><strong>Address:</strong> K-32/22, Bhaironath.  People can approach this place by rickshaw either through Bisheshwarganj cross roads or through Golghar (Maidagin)</p>
+      <p style="margin-bottom:4pt;"><strong>Nearby Ghat / Landmark:</strong> Not directly on a riverfront ghat</p>
+      <p style="margin-bottom:0;"><strong>Geographic Zone:</strong> North Kashi</p>
+    </div>
+  </div>
+  <div class="info-cell">
+    <div class="info-panel">
+      <h4>&#9200; Darshan & Pooja Arrangements</h4>
+      <p style="margin-bottom:4pt;"><strong>Timings:</strong> The temple remains open from 05.00 a.m. to 1.30 p.m. and from 04.30 p.m. to 09.30 p.m.  There is heavy rush of devotees on Sundays and Tuesdays.</p>
+      <p style="margin-bottom:0;"><strong>Pooja Details:</strong> Self-abhisheka / pooja usually permitted with priest guidance. Local offerings: Ganga water, bel patra, flowers, sindoor/chandan.</p>
+    </div>
+  </div>
+</div>
+
+
+<div class="links-box">
+  <div style="font-weight:700; color:#1e40af; margin-bottom:3pt;">&#128279; Digital Reference Links (Requires Internet):</div>
+  <strong>Temple Darshan Video:</strong> <a href="https://www.youtube.com/watch?v=0T5SMXRgQQs&amp;t=11s" target="_blank">https://www.youtube.com/watch?v=0T5SMXRgQQs&amp;t=11s</a><br><strong>YouTube Video:</strong> <a href="https://www.youtube.com/watch?v=yc6cjqcNyTI&amp;t=23s" target="_blank">https://www.youtube.com/watch?v=yc6cjqcNyTI&amp;t=23s</a>
+</div>
+
+
+<div class="page-break"></div>
+<h1>&#128506; Appendix: Traditional Kashi Bhairav Parikrama Pilgrimage Route</h1>
+<p style="font-size:9.5pt; color:#4b5563;">
+  Undertaking the pilgrimage of Kaal Bhairav and the eight directional Ashtabhairavas grants total protection from malefic spirits, removes fear of mortality, and cleanses sins. Below is the traditional geographical sequence recommended for pilgrims:
+</p>
+
+<table class="toc-table">
+  <thead>
+    <tr>
+      <th style="width:18%;">Sequence</th>
+      <th style="width:28%;">Shrine Visited</th>
+      <th style="width:36%;">Location & Route Instructions</th>
+      <th style="width:18%;">Direction / Zone</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Step 1 (Mandatory Initial Visit)</strong></td>
+      <td><strong>Kaal Bhairav</strong><br>(The Kotwal of Kashi)</td>
+      <td>Visit Kaal Bhairav temple in Visheshwarganj/Bhaironath early morning. Obtain divine permission to reside and perform pilgrimage in Kashi. Receive the consecrated black thread (ganda).</td>
+      <td><span class="badge-tag badge-central">Center / Kotwal</span></td>
+    </tr>
+    <tr>
+      <td><strong>Step 2</strong></td>
+      <td><strong>#1. Asitang Bhairav</strong><br>(Near Vriddh Kaleshwar)</td>
+      <td>Proceed to Maha Mrityunjay temple precinct at K.52/39 near Vriddh Kaleshwar (Daranagar / Maidagin). Worship the East protector.</td>
+      <td><span class="badge-tag badge-east">East Protector</span></td>
+    </tr>
+    <tr>
+      <td><strong>Step 3</strong></td>
+      <td><strong>#8. Samhar Bhairav</strong><br>(Gai Ghat / Patan Darwaja)</td>
+      <td>Head northeast towards riverfront: A.1/82 Patan Darwaja near Gai Ghat. Powerful dissolver of sins.</td>
+      <td><span class="badge-tag badge-north">Northeast</span></td>
+    </tr>
+    <tr>
+      <td><strong>Step 4</strong></td>
+      <td><strong>#6. Kapal Bhairav</strong><br>(Laat Bhairav & Kapal Mochan)</td>
+      <td>Take auto-rickshaw north to Alaipur near Laat Sarovar (ancient Kapal Mochan Teerth where Brahma's severed skull fell).</td>
+      <td><span class="badge-tag badge-north">Northwest</span></td>
+    </tr>
+    <tr>
+      <td><strong>Step 5</strong></td>
+      <td><strong>#7. Bheeshan Bhairav</strong><br>(Bhoot Bhairav / Jyeshtheshwar)</td>
+      <td>Return southwards into inland galis: K.63/28 near Jyeshtheshwar / Kashipura. Dispeller of ghostly fears.</td>
+      <td><span class="badge-tag badge-north">North Protector</span></td>
+    </tr>
+    <tr>
+      <td><strong>Step 6</strong></td>
+      <td><strong>#4. Krodhan Bhairav</strong><br>(Batuk Bhairav, Kamachha)</td>
+      <td>Travel south-west to Kamachha: famous Batuk Bhairav temple at B.31/126. Renowned for Rahu Shanti and Kaal Sarp Dosh pujas.</td>
+      <td><span class="badge-tag badge-west">Southwest</span></td>
+    </tr>
+    <tr>
+      <td><strong>Step 7</strong></td>
+      <td><strong>#3. Chand Bhairav</strong><br>(Durga Kund Premises)</td>
+      <td>Proceed south along Durgakund Road. Chand Bhairav is located inside the historic Durga Temple complex at B.27/2.</td>
+      <td><span class="badge-tag badge-south">South Protector</span></td>
+    </tr>
+    <tr>
+      <td><strong>Step 8</strong></td>
+      <td><strong>#2. Ruru Bhairav</strong><br>(Anand Bhairav, Hanuman Ghat)</td>
+      <td>Proceed east to Hanuman Ghat on the riverbank: B.4/16 Hanuman Ghat. Worshipped for ananda (bliss) and freedom from enemies.</td>
+      <td><span class="badge-tag badge-south">Southeast</span></td>
+    </tr>
+    <tr>
+      <td><strong>Step 9 (Optional Outlying Shashi)</strong></td>
+      <td><strong>#5. Unmat Bhairav</strong><br>(Deora Village, Panchkroshi)</td>
+      <td>Located 15 km outside city along Panchkroshi Marg at Deora Village. Contact priest Akhilesh Pandey (9118460531) for guidance.</td>
+      <td><span class="badge-tag badge-west">West Protector</span></td>
+    </tr>
+  </tbody>
+</table>
+
+<div style="margin-top:24pt; border-top:1px solid #d1d5db; padding-top:10pt; font-size:8.5pt; color:#6b7280; text-align:center;">
+  <strong>END OF KASHI BHAIRAV TEMPLES GUIDE</strong> &bull; Compiled from Authorised Website Archive: <a href="https://varanasitemples.in/">https://varanasitemples.in/</a>
+</div>
+
+
+</body>
+</html>

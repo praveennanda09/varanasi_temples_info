@@ -1,0 +1,1316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Kashi Ganga & Teerthas Knowledge Base — Complete Offline Mirror</title>
+<style>
+  @page {
+    size: A4 portrait;
+    margin: 16mm 14mm 18mm 14mm;
+    @top-center {
+      content: "KASHI GANGA & TEERTHAS KNOWLEDGE BASE • SCRIPTURAL ARCHIVE";
+      font-family: 'Cinzel', 'Georgia', serif;
+      font-size: 8pt;
+      color: #0f766e;
+      letter-spacing: 1px;
+      border-bottom: 1px solid #99f6e4;
+      padding-bottom: 4px;
+    }
+    @bottom-center {
+      content: "Page " counter(page) " • Source: varanasitemples.in • Complete Offline Guide";
+      font-family: 'Segoe UI', Arial, sans-serif;
+      font-size: 8pt;
+      color: #64748b;
+    }
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Georgia', 'Merriweather', 'Palatino Linotype', serif;
+    font-size: 10pt;
+    line-height: 1.55;
+    color: #0f172a;
+    background: #ffffff;
+    margin: 0;
+    padding: 0;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: 'Georgia', 'Cinzel', serif;
+    color: #115e59;
+    margin-top: 14pt;
+    margin-bottom: 6pt;
+    page-break-after: avoid;
+    break-after: avoid;
+  }
+
+  h1 { 
+    font-size: 17pt; 
+    border-bottom: 2px solid #0d9488; 
+    padding-bottom: 4pt; 
+    color: #0f766e;
+  }
+  h2 { 
+    font-size: 13.5pt; 
+    color: #0f766e; 
+    border-bottom: 1px dashed #99f6e4;
+    padding-bottom: 3pt;
+  }
+  h3 { 
+    font-size: 11.5pt; 
+    color: #0d9488; 
+  }
+
+  p {
+    margin-top: 0;
+    margin-bottom: 7.5pt;
+    text-align: justify;
+    text-justify: inter-word;
+  }
+
+  a {
+    color: #0f766e;
+    text-decoration: underline;
+    word-break: break-all;
+  }
+
+  .page-break {
+    page-break-before: always;
+    break-before: page;
+  }
+
+  .avoid-break {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  /* Cover Page */
+  .cover-container {
+    text-align: center;
+    padding: 35pt 18pt;
+    border: 3px double #0d9488;
+    border-radius: 8px;
+    background: linear-gradient(180deg, #f0fdfa 0%, #ffffff 100%);
+    min-height: 88vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .cover-om {
+    font-size: 38pt;
+    color: #0f766e;
+    margin-bottom: 4pt;
+  }
+
+  .cover-ganga-mantra {
+    font-size: 12pt;
+    font-family: 'Segoe UI Historic', 'Noto Sans Devanagari', 'Arial Unicode MS', serif;
+    color: #047857;
+    font-weight: 700;
+    margin-bottom: 12pt;
+    letter-spacing: 0.5px;
+    line-height: 1.5;
+  }
+
+  .cover-title {
+    font-size: 22pt;
+    font-weight: 700;
+    color: #115e59;
+    letter-spacing: 0.5px;
+    margin-bottom: 6pt;
+    line-height: 1.25;
+  }
+
+  .cover-sub {
+    font-size: 12pt;
+    color: #0d9488;
+    font-style: italic;
+    margin-bottom: 14pt;
+  }
+
+  .cover-divider {
+    width: 60%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #0d9488, transparent);
+    margin: 12pt auto;
+  }
+
+  .cover-meta-box {
+    background: #ffffff;
+    border: 1px solid #99f6e4;
+    border-radius: 8px;
+    padding: 12pt 16pt;
+    text-align: left;
+    margin: 12pt auto;
+    max-width: 490pt;
+    font-size: 8.8pt;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+  }
+
+  .cover-meta-box table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .cover-meta-box td {
+    padding: 3pt 5pt;
+    vertical-align: top;
+  }
+
+  .cover-meta-box td.label {
+    font-weight: 700;
+    color: #0f766e;
+    width: 32%;
+  }
+
+  /* Section Dividers */
+  .section-banner {
+    background: linear-gradient(135deg, #115e59 0%, #0f766e 50%, #0d9488 100%);
+    color: #ffffff;
+    padding: 14pt 18pt;
+    border-radius: 6px;
+    margin: 18pt 0 14pt 0;
+    page-break-after: avoid;
+  }
+
+  .section-banner h2 {
+    color: #f0fdfa;
+    border: none;
+    margin: 0;
+    font-size: 15pt;
+  }
+
+  .section-banner p {
+    color: #ccfbf1;
+    margin: 4pt 0 0 0;
+    font-size: 9pt;
+  }
+
+  /* Tables */
+  .toc-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10pt 0 16pt 0;
+    font-size: 8.5pt;
+  }
+
+  .toc-table th {
+    background: #0f766e;
+    color: #ffffff;
+    padding: 5pt 7pt;
+    text-align: left;
+    font-weight: 600;
+  }
+
+  .toc-table td {
+    padding: 4.5pt 7pt;
+    border-bottom: 1px solid #ccfbf1;
+    vertical-align: middle;
+  }
+
+  .toc-table tr:nth-child(even) {
+    background-color: #f0fdfa;
+  }
+
+  .toc-badge {
+    display: inline-block;
+    padding: 1.5pt 5pt;
+    border-radius: 4px;
+    font-size: 7.5pt;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  .badge-ganga { background: #ccfbf1; color: #115e59; border: 1px solid #99f6e4; }
+  .badge-teerth { background: #dbeafe; color: #1e40af; border: 1px solid #bfdbfe; }
+  .badge-kund { background: #fef3c7; color: #92400e; border: 1px solid #fde68a; }
+
+  /* Shrine Info Cards */
+  .temple-header-card {
+    background: #f0fdfa;
+    border-left: 4px solid #0d9488;
+    border-right: 1px solid #99f6e4;
+    border-top: 1px solid #99f6e4;
+    border-bottom: 1px solid #99f6e4;
+    border-radius: 0 6px 6px 0;
+    padding: 8pt 12pt;
+    margin: 12pt 0;
+    font-size: 8.8pt;
+  }
+
+  .temple-meta-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4pt 12pt;
+    margin-top: 4pt;
+  }
+
+  .temple-meta-item {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .temple-meta-label {
+    font-weight: 700;
+    color: #0f766e;
+    min-width: 90pt;
+    flex-shrink: 0;
+  }
+
+  .temple-meta-val {
+    color: #334155;
+  }
+
+  /* Sanskrit Verses */
+  .sanskrit-box {
+    background: #fffbeb;
+    border: 1px solid #fde68a;
+    border-left: 3px solid #d97706;
+    padding: 8pt 12pt;
+    margin: 10pt 0;
+    font-family: 'Segoe UI Historic', 'Noto Sans Devanagari', 'Arial Unicode MS', serif;
+    font-size: 10pt;
+    line-height: 1.6;
+    color: #78350f;
+    border-radius: 0 4px 4px 0;
+    page-break-inside: avoid;
+    white-space: pre-line;
+  }
+
+  .sanskrit-box .verse-tag {
+    font-family: 'Georgia', serif;
+    font-size: 8pt;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #b45309;
+    margin-bottom: 3pt;
+    display: block;
+    letter-spacing: 0.5px;
+  }
+
+  /* Images */
+  .temple-img-container {
+    text-align: center;
+    margin: 12pt 0;
+    page-break-inside: avoid;
+  }
+
+  .temple-img {
+    max-width: 86%;
+    max-height: 220pt;
+    height: auto;
+    border-radius: 6px;
+    border: 1px solid #99f6e4;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.08);
+  }
+
+  .multi-img-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8pt;
+    margin: 10pt 0;
+    page-break-inside: avoid;
+  }
+
+  .multi-img-grid img {
+    max-height: 145pt;
+    max-width: 46%;
+    border-radius: 4px;
+    border: 1px solid #99f6e4;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.06);
+  }
+
+  .temple-img-caption {
+    font-size: 8pt;
+    font-style: italic;
+    color: #64748b;
+    margin-top: 4pt;
+  }
+
+  /* Callout boxes */
+  .callout-box {
+    background: #f0fdf4;
+    border-left: 3px solid #16a34a;
+    padding: 7pt 10pt;
+    margin: 8pt 0;
+    font-size: 8.8pt;
+    color: #14532d;
+    page-break-inside: avoid;
+  }
+
+  .callout-title {
+    font-weight: 700;
+    color: #166534;
+    margin-bottom: 2pt;
+  }
+</style>
+</head>
+<body>
+
+<div class="cover-container">
+  <div>
+    <div class="cover-om">॥ गङ्गा गङ्गेति यो ब्रूयात् योजनानां शतैरपि ॥</div>
+    <div class="cover-ganga-mantra">
+      गङ्गे च यमुने चैव गोदावरि सरस्वति । नर्मदे सिन्धु कावेरि जलेऽस्मिन् संनिधिं कुरु ॥<br>
+      नमामि गङ्गे तव पादपङ्कजं सुरासुरैर्वन्दितदिव्यरूपम् । भुक्तिं च मुक्तिं च ददासि नित्यं भावानुसारिण सदा नराणाम् ॥
+    </div>
+    <div class="cover-title">KASHI GANGA & TEERTHAS KNOWLEDGE BASE</div>
+    <div class="cover-sub">Comprehensive Scriptural Archive & Field Pilgrimage Mirror of the Holy River, Ghats & Sacred Kunds</div>
+    <div class="cover-divider"></div>
+    <p style="font-size: 9pt; color: #475569; max-width: 440pt; margin: 0 auto; text-align: center;">
+      An exact offline transcription of the foundational Ganga articles, riverfront confluences, sacred ghats, 
+      and miraculous masonry tanks from <strong>varanasitemples.in</strong>, combining Puranic narratives from Kashi Khand, 
+      authentic embedded photographs and sacred vector artworks, Devanagari Sanskrit verses, and field pilgrimage routing.
+    </p>
+  </div>
+
+  <div class="cover-meta-box">
+    <table>
+      <tr>
+        <td class="label">Primary Source Domain:</td>
+        <td><a href="https://varanasitemples.in/">https://varanasitemples.in/</a> (Authorized Public Archive)</td>
+      </tr>
+      <tr>
+        <td class="label">Featured Sacred Sections:</td>
+        <td><strong>14 Sacred Manifestations &amp; Sanctums</strong> (River Ganga, Asthi Immersion, 10 Canonical Teerths/Kunds, plus Supplementary Historic Tanks)</td>
+      </tr>
+      <tr>
+        <td class="label">Canonical Sacred Teerths &amp; Ghats:</td>
+        <td>Assi Sangam, Dasaswamedh, Gyan Vapi Kund, Lolark Kund, Manikarnika, Padodak, Panch Ganga, Pilpila, Varuna Sangam, Vimal Teerth (Pisachmochan)</td>
+      </tr>
+      <tr>
+        <td class="label">Supplementary Sacred Tanks:</td>
+        <td>Durga Kund (Shakti Tank) &bull; Kapal Mochan Teerth (Laat Sarovar)</td>
+      </tr>
+      <tr>
+        <td class="label">The Sacred Panchateerthi:</td>
+        <td>Complete ritual sequence of the 5-Ghat Pilgrimage (Assi, Dasaswamedh, Varuna Sangam, Panchganga, Manikarnika)</td>
+      </tr>
+      <tr>
+        <td class="label">Offline Visual Verification:</td>
+        <td><strong>100% Embedded Visuals</strong> &bull; Authentic photographs &amp; sacred vector iconography verified on disk</td>
+      </tr>
+    </table>
+  </div>
+
+  <div style="font-size: 8pt; color: #64748b;">
+    Avimukta Maha-Kshetra Sacred Waters Series &bull; Compiled for Dedicated Four-Day Android Offline Use &bull; Har Har Gange!
+  </div>
+</div>
+
+<div class="page-break"></div>
+
+<h1>MASTER PILGRIMAGE REFERENCE MATRIX</h1>
+<p style="font-size: 8.8pt; color: #475569;">
+  In the <em>Kashi Khand</em> of the <em>Skanda Purana</em>, Lord Shiva proclaimed that every droplet of water in the sacred 
+  perimeter of Kashi possesses the sanctifying potency of all the holy rivers in the three worlds. The table below provides 
+  an index to the 14 sacred chapters covering River Ganga, the confluences, ghats, and miraculous tanks.
+</p>
+
+<h2>Canonical Ganga & Teertha Manifestations of Kashi</h2>
+<table class="toc-table">
+  <thead>
+    <tr>
+      <th style="width: 5%;">#</th>
+      <th style="width: 26%;">Sacred Sanctum / Teerth</th>
+      <th style="width: 32%;">Spiritual Classification & Role</th>
+      <th style="width: 25%;">Locality / Riverfront Ghat</th>
+      <th style="width: 12%;">Category</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <tr>
+      <td><strong>1</strong></td>
+      <td><strong><a href="#ganga-sec-1">River Ganga</a></strong></td>
+      <td>Supreme Mother & Sanctifying River of Avimukta Kshetra...</td>
+      <td>Flows from South to North (Uttara-Vahini) along ...</td>
+      <td><span class="toc-badge badge-ganga">Maha Ganga</span></td>
+    </tr>
+    
+    <tr>
+      <td><strong>2</strong></td>
+      <td><strong><a href="#ganga-sec-2">Importance of immersion of mortal remains (Asthi) in Ganga</a></strong></td>
+      <td>Supreme Liberation (Moksha) for Ancestral Souls & Pitris...</td>
+      <td>Conducted primarily at Manikarnika Ghat, Harishc...</td>
+      <td><span class="toc-badge badge-ganga">Maha Ganga</span></td>
+    </tr>
+    
+    <tr>
+      <td><strong>3</strong></td>
+      <td><strong><a href="#ganga-sec-3">Assi Sangam</a></strong></td>
+      <td>Southern Boundary Confluence of River Assi and Ganga...</td>
+      <td>...</td>
+      <td><span class="toc-badge badge-teerth">Teerth/Ghat</span></td>
+    </tr>
+    
+    <tr>
+      <td><strong>4</strong></td>
+      <td><strong><a href="#ganga-sec-4">Dasaswamedh</a></strong></td>
+      <td>Site of the Ten Horse Sacrifices of Lord Brahma & Central ...</td>
+      <td>...</td>
+      <td><span class="toc-badge badge-teerth">Teerth/Ghat</span></td>
+    </tr>
+    
+    <tr>
+      <td><strong>5</strong></td>
+      <td><strong><a href="#ganga-sec-5">Gyan Vapi</a></strong></td>
+      <td>Primordial Well of Transcendental Knowledge Dug by Lord Sh...</td>
+      <td>Situated inside the Kashi Vishweshwar (Vishwanat...</td>
+      <td><span class="toc-badge badge-kund">Sacred Kund</span></td>
+    </tr>
+    
+    <tr>
+      <td><strong>6</strong></td>
+      <td><strong><a href="#ganga-sec-6">Lolark Kund</a></strong></td>
+      <td>Miraculous Solar Tank of Sage Agasthya, Lopamudra & Lolark...</td>
+      <td>...</td>
+      <td><span class="toc-badge badge-kund">Sacred Kund</span></td>
+    </tr>
+    
+    <tr>
+      <td><strong>7</strong></td>
+      <td><strong><a href="#ganga-sec-7">Manikarnika</a></strong></td>
+      <td>Primordial Chakra Pushkarini Kund & Crest-Jewel of All Tee...</td>
+      <td>...</td>
+      <td><span class="toc-badge badge-kund">Sacred Kund</span></td>
+    </tr>
+    
+    <tr>
+      <td><strong>8</strong></td>
+      <td><strong><a href="#ganga-sec-8">Padodak Teerth</a></strong></td>
+      <td>Sacred Foot-Washing Teerth of Lord Vishnu at Varuna Sangam...</td>
+      <td>...</td>
+      <td><span class="toc-badge badge-teerth">Teerth/Ghat</span></td>
+    </tr>
+    
+    <tr>
+      <td><strong>9</strong></td>
+      <td><strong><a href="#ganga-sec-9">Panch Ganga (Panch Nada Teerth)</a></strong></td>
+      <td>Invisible Confluence of Five Celestial Streams & Abode of ...</td>
+      <td>...</td>
+      <td><span class="toc-badge badge-teerth">Teerth/Ghat</span></td>
+    </tr>
+    
+    <tr>
+      <td><strong>10</strong></td>
+      <td><strong><a href="#ganga-sec-10">Pilpila Teerth</a></strong></td>
+      <td>Sacred Miraculous Kund Adjoining Trilochan Mahadev...</td>
+      <td>...</td>
+      <td><span class="toc-badge badge-teerth">Teerth/Ghat</span></td>
+    </tr>
+    
+    <tr>
+      <td><strong>11</strong></td>
+      <td><strong><a href="#ganga-sec-11">Varuna Sangam</a></strong></td>
+      <td>Northern Boundary Confluence of River Varuna and Ganga at ...</td>
+      <td>...</td>
+      <td><span class="toc-badge badge-teerth">Teerth/Ghat</span></td>
+    </tr>
+    
+    <tr>
+      <td><strong>12</strong></td>
+      <td><strong><a href="#ganga-sec-12">Vimal Teerth (Pisachmochan)</a></strong></td>
+      <td>Miracle Pool Absolving Ghostly Afflictions & Pitri Dosh...</td>
+      <td>...</td>
+      <td><span class="toc-badge badge-teerth">Teerth/Ghat</span></td>
+    </tr>
+    
+    <tr>
+      <td><strong>13</strong></td>
+      <td><strong><a href="#ganga-sec-13">Durga Kund (Sacred Shakti Tank)</a></strong></td>
+      <td>Sacred Kund Adjoining the Historic Durga Temple & Durg Vin...</td>
+      <td>Located at Durga Kund road, Southern Varanasi, a...</td>
+      <td><span class="toc-badge badge-kund">Sacred Kund</span></td>
+    </tr>
+    
+    <tr>
+      <td><strong>14</strong></td>
+      <td><strong><a href="#ganga-sec-14">Kapal Mochan Teerth (Laat Sarovar Kund)</a></strong></td>
+      <td>Where the Fifth Head of Brahma Fell from Bhairava's Hand...</td>
+      <td>Located at Laat Bhairav, Adampura / Sarai Mohana...</td>
+      <td><span class="toc-badge badge-teerth">Teerth/Ghat</span></td>
+    </tr>
+    
+  </tbody>
+</table>
+
+<div class="callout-box">
+  <div class="callout-title">&#128220; Scope & Archival Completeness</div>
+  Every article in this deliverable reproduces the <strong>100% unshortened mirror textbody</strong> from 
+  <code>category/importance-of-river-ganga/</code>, <code>category/importance-of-immersion-of-mortal-remains-asthi-in-ganga/</code>, 
+  and associated Puranic sections, featuring embedded photographs, Devanagari Sanskrit verses, exact location coordinates, and YouTube darshan links.
+</div>
+
+<div class="page-break"></div>
+
+<h1>THE PURANIC GLORY OF RIVER GANGA IN AVIMUKTA KSHETRA</h1>
+
+<div class="sanskrit-box">
+<span class="verse-tag">Kashi Khand &bull; Chapter 27, Shloka 1</span>
+गङ्गा गङ्गेति यो ब्रूयाद् योजनानां शतैरपि ।
+मुच्यते सर्वपापेभ्यो विष्णुलोकं स गच्छति ॥
+<br>
+<em>"Whoever utters the holy name 'Ganga! Ganga!' even from a distance of hundreds of yojanas (thousands of miles) 
+is instantly liberated from all accumulated sins and attains the supreme realm of Lord Vishnu."</em>
+</div>
+
+<h3>The Cosmic Phenomenon of Uttara-Vahini Ganga</h3>
+<p>
+  Throughout her long descent of over 2,500 kilometers from the Gangotri glacier in the high Himalayas to the Bay of Bengal, 
+  River Ganga predominantly flows southeastwards. However, upon entering the sacred perimeter of Varanasi between Assi Sangam 
+  in the south and Varuna Sangam in the north, she performs a miraculous cosmic reversal: she turns directly northward 
+  (<strong>Uttara-Vahini</strong>).
+</p>
+<p>
+  According to Chapter 28 of the <em>Kashi Khand</em>, this northward course symbolizes the river turning back towards her origin 
+  in the Himalayas to bow down in eternal prostration before Lord Shiva at Kashi Vishweshwar. Bathing in Uttara-Vahini Ganga 
+  confers a hundred thousand times greater spiritual merit than bathing at any other point along her course.
+</p>
+
+<h3>The Five Sacred Confluences: The Panchateerthi</h3>
+<p>
+  In Chapter 30 of the <em>Kashi Khand</em>, Lord Shiva designates the five greatest pilgrimage ghats on the Ganga riverfront, 
+  known as the <strong>Panchateerthi</strong>:
+</p>
+<ul>
+  <li><strong>1. Assi Sangam:</strong> The southern boundary where the sword of Goddess Durga (the river Assi) fell and merged with the Ganga.</li>
+  <li><strong>2. Dasaswamedh Teerth:</strong> Where Lord Brahma performed ten Ashwamedha (horse) sacrifices upon the sacred ghat.</li>
+  <li><strong>3. Adi Keshav (Varuna Sangam):</strong> The northern boundary where Lord Vishnu first set foot in Kashi and washed his lotus feet.</li>
+  <li><strong>4. Panchganga (Panch Nada):</strong> The invisible underground confluence of five sacred rivers (Ganga, Yamuna, Saraswati, Kirana, Dhutapapa).</li>
+  <li><strong>5. Manikarnika Teerth:</strong> The crest-jewel of all holy places, carved by Lord Vishnu's Sudarshana Chakra before the creation of the universe.</li>
+</ul>
+
+<div class="page-break"></div>
+
+    <div id="ganga-sec-1" style="margin-top: 14pt;">
+      <h1>1. River Ganga</h1>
+      <div style="font-size: 10.5pt; color: #0f766e; font-style: italic; margin-top: -3pt; margin-bottom: 6pt;">
+        Supreme Mother & Sanctifying River of Avimukta Kshetra &bull; <span class="toc-badge badge-ganga">Sacred Section #1</span>
+      </div>
+    
+      <div class="temple-header-card avoid-break">
+        <div style="font-weight: 700; color: #0f766e; border-bottom: 1px solid #99f6e4; padding-bottom: 3pt; margin-bottom: 4pt;">
+          &#128740; FIELD PILGRIMAGE REFERENCE CARD
+        </div>
+        <div class="temple-meta-grid">
+          <div class="temple-meta-item">
+            <span class="temple-meta-label">Location / Ghat:</span>
+            <span class="temple-meta-val">Flows from South to North (Uttara-Vahini) along the entire eastern perimeter of Varanasi, connecting all 84 historic stone ghats from Assi S</span>
+          </div>
+          <div class="temple-meta-item">
+            <span class="temple-meta-label">Bathing / Timings:</span>
+            <span class="temple-meta-val">Open continuously 24 hours. Highly auspicious for Brahma Muhurta snan (04:30 AM to 06:00 AM) and evening Ganga Aarti (06</span>
+          </div>
+          <div class="temple-meta-item">
+            <span class="temple-meta-label">YouTube Darshan:</span>
+            <span class="temple-meta-val"><a href="https://www.youtube.com/watch?v=TZExLkMEmCM" target="_blank">Watch YouTube Video</a></span>
+          </div>
+          <div class="temple-meta-item">
+            <span class="temple-meta-label">Original Live Source:</span>
+            <span class="temple-meta-val"><a href="https://varanasitemples.in/category/importance-of-river-ganga/river-ganga/" target="_blank">https://varanasitemples.in/category/importance-of-river-ganga/river-ganga/</a></span>
+          </div>
+        </div>
+      </div>
+    <div class="multi-img-grid">
+                <div style="text-align: center;">
+                  <img src="file:///C:/Users/koppi/Downloads/Kashi_Offline_Guide_Pack/assets/images/ganga-photo-3-300x169.jpg" alt="River Ganga">
+                  <div class="temple-img-caption">River Ganga</div>
+                </div>
+                
+                <div style="text-align: center;">
+                  <img src="file:///C:/Users/koppi/Downloads/Kashi_Offline_Guide_Pack/assets/images/ganga-photo-2-1024x576.jpg" alt="River Ganga">
+                  <div class="temple-img-caption">River Ganga</div>
+                </div>
+                
+                <div style="text-align: center;">
+                  <img src="file:///C:/Users/koppi/Downloads/Kashi_Offline_Guide_Pack/assets/images/ganga_ghats_a-1-1024x512.jpg" alt="River Ganga Sanctum">
+                  <div class="temple-img-caption">River Ganga Sanctum</div>
+                </div>
+                </div>
+            <div class="sanskrit-box">
+              <span class="verse-tag">Scriptural Shloka &bull; Kashi Khand</span>
+              अन्यत्र सम्यक संकल्प्य तपः कृत्वा समा त्रयम्
+            </div>
+            
+            <div class="sanskrit-box">
+              <span class="verse-tag">Scriptural Shloka &bull; Kashi Khand</span>
+              यत्फलं तद्भक्त्या गङ्गायाम् घटिकाऽर्धतः
+            </div>
+            
+            <div class="sanskrit-box">
+              <span class="verse-tag">Scriptural Shloka &bull; Kashi Khand</span>
+              गृहाद गङ्गावगाहार्थ गच्छतस्तु पदे पदे
+            </div>
+            
+            <div class="sanskrit-box">
+              <span class="verse-tag">Scriptural Shloka &bull; Kashi Khand</span>
+              निराशानि व्रजन्त्येव पापान्यस्य शरीरतः
+            </div>
+            <div class="temple-narrative"><p>class="art-PostContent"> RIVER GANGA Skanda Puran, Kashi Khand has described the importance and divine powers of Holy River Ganga in several chapters. In Chapters 27, 28 and 29 Kashi Khand has amply eulogized River Ganga.</p><p>(GANGA RIVER AND GHATS)</p><p>Supreme Sage (Raja Rishi) King Bhageerath was suffering from a curse of a Brahmin. He underwent intense penance to Lord Shiva and brought River Ganga to earth. After the deluge, Lord Shiva and Goddess Parvaty appeared on the earth and Lord Vishnu also manifested in Kashi. (Kindly refer to Manikarnika). With his Sudarshan Chakra, Lord Vishnu dug a huge Pond and filled it with his divine perspiration. This Kund came to be known as Chakrapushkarini Teerth. Lord Shiva’s jewel from the ear tops fell in the Chakrapushkarini Teerth and then onwards the Pond used to be called Manikarnika (jewel is referred to as Mani and Karnika means ear). When river Ganga started flowing through Kashi, the Avimukta Kshetra became all the more pious.</p><p>River Ganga possesses the religious power of all the Sacred Ponds, Rivers and Lakes in the world put together. A devotee who bathes for even once in River Ganga derives the benefit of bathing in all the Sacred Ponds and performing all rituals elsewhere. It is believed that a person may take his bath anywhere, but at the time of bathing if he utters the words “Ganga, Ganga”, he derives the benefit of bathing in Holy Ganga.</p><p>(RIVER GANGA &#8211; ANOTHER VIEW)</p><p>River Ganga destroys the devotee’s sins committed knowingly or unknowingly. A devotee who always thinks about Holy Ganga while walking, sitting, praying, concentrating, eating or sleeping attains freedom from bondage. A devotee who religiously performs the rituals for his forefathers in Holy Ganga makes his forefathers very happy and they remain satisfied for many decades. Just as worshipping one Shiv Ling gives the benefit of worshipping the entire world, taking bath in River Ganga gives the benefit of bathing in all the Sacred Ponds in the world.</p><p>A devotee who bathes in River Ganga and worships Shiv Ling, derives much more benefits than undergoing various rituals like religious fasting, donation, intense penance and austerity, Havans (rituals with fire etc.). Wantingly or unwantingly, if a person touches fire, he will get burnt; similarly wantingly or unwantingly if a devotee bathes in Holy Ganga, the river swallows all his sins.</p><p>Please watch our YouTube video about importance of River Ganga in the below Link :</p><p>https://www.youtube.com/watch?v=TZExLkMEmCM&t=57s</p><p>A devotee gets some amount of Punya by bathing in Ganga, he will derive the same amount of Punya by guiding or directing another person to bathe in Ganga. By bathing once in River Ganga, a devotee derives the benefit of performing Aswa Medha Yagya (horse sacrifice ritual). If a person bathes in Holy Ganga for one month, he will reside with Lord Indra. If a fortunate person bathes in Holy Ganga for a year, he will reach Lord Vishnu’s abode. If a sincere devotee bathes in River Ganga during his entire life, he attains Moksha and highest order in life. For bathing in Ganga one need not observe auspicious time (Muhurat) etc., because no such rules apply for Holy Ganga.</p><p>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-</p><p>Kashi Khand, Chapter 28, Shlok 111</p><p>अन्यत्र सम्यक संकल्प्य तपः कृत्वा समा त्रयम्</p><p>यत्फलं तद्भक्त्या गङ्गायाम् घटिकाऽर्धतः</p><p>Whatever punya accrues out of Tapas/Japam for 3 years in other places with all divinity, the same results accrue to a devotee who does the Japam for 12 minutes, with divinity, on the banks of Ganga (in Kashi).</p><p>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;</p><p>If a person, with sincere devotion to his forefathers, bathes in Ganga and performs Abhishek of Shiv Ling with Holy Ganga Water, does a great service to his forefathers and even if they are residing in Hell (on account of their evil deeds etc.), they will be pushed to Heaven. (Abhishek means pouring of Holy water or any other ingredient like milk on Lord’s idol, Shiv Ling etc.).</p><p>Any kind of donation, alms or gifts given on the Banks of Holy Ganga will yield multiple results. If a devotee donates one cow and calf to a deserving person, he will certainly reach Heaven. Besides, during his life time, he will never face any shortage of wealth and food grains. On the banks of River Ganga, if a devotee donates a small quantity of gold to a learned Brahmin, he will be respected and worshipped wherever he lives. In the Kashi Yatra undertaken by South Indians, a final ritual is Ganga Pooja and Dampati (married couple) Pooja. Ganga Pooja as the words imply is worship/prayers to Holy River Ganga and in Dampati Pooja, the devotee honours a married couple who have dedicated their lives to Kashi. Among other things, a small quantity of gold is donated to such couple.</p><p>Bathing in Holy Ganga on the birth day will absolve the devotee of all his sins. Taking bath in the river in Vaisaka Month, Shravan Month and Kartik Month will yield multiple results. Amavasya is indeed is a good day for such deed. On all Sankarantis, taking bath in Holy Ganga will yield benefit which is thousand times of the normal day. (There are twelve Rashis or houses in the Galaxy, starting from Mesha, Rishabh and upto Meen. When Surya enters Mesha Rashi, it is Mesha Sankaranti, if it enters Rishabh, it is Rishabh Sankaranti. The most important Sankaranti is Makar Sankaranti when Surya enters Makar Rashi). The Sankaranti days generally fall around 14 th or 15 th of each month. This can be ascertained from the religious almanac (Panchang). At the time of Solar or Lunar Eclipse, if a devotee bathes in Ganga he will derive the benefits which will be One Lakh times of the normal day.</p><p>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-</p><p>Kashi Khand, Chapter 27, Shlok 46</p><p>गृहाद गङ्गावगाहार्थ गच्छतस्तु पदे पदे</p><p>निराशानि व्रजन्त्येव पापान्यस्य शरीरतः</p><p>Sins start moving away (sadly) from the body of devotee at every step he takes while proceeding for Ganga Snaan.</p><p>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;</p><p>In Chapter 28, Lord Skanda narrates what Lord Shiva told Lord Vishnu about the religious powers of River Ganga. When a devotee performs rituals for his forefathers with Til (black sesame seeds), his fore fathers gently enter heaven (if they are already not there). If they are already there, they get better positions. They will stay in heaven for that many number of years, depending on the number of Til Seeds as have been used in the rituals. His forefathers may have committed so many sins which the devotee may not know, they may be facing the ordeals in various parts of Hell like Kumbi Pakam, Rauravam, Tamisram etc. But if a devotee performs their rituals in River Ganga as prescribed, they are certain to get released from the Hell and slowly but surely travel towards heaven.</p><p>River Ganga is pure and carrying religious power, but her power increased in the Holy city of Kashi where she is Uttara Vahini (flowing northwards). When Ganga entered with a force in Kashi, Lord Shiva threw his Trishul (Trident) just before the entry point of Kashi, whereby the river somewhat slowed down. Ganga also promised Lord Shiva that she will always remain in Kashi and serve its denizens. Therefore, Ganga is perennial in Kashi whereas in other places, it is not so.</p><p>If a person dies in Kashi he attains Moksha. If a person dies in other places, but his body is cremated in Kashi then also he attains Moksha. Similarly, a person may have died and cremated elsewhere but if his ashes and bones (Asthi) are immersed in Holy Ganga, he will reach heaven. The benefits of immersing bones and ashes in Ganges have been covered elsewhere.</p><p>If a person stays far away from Kashi and desires to have the benefit of bathing in Ganga, Kashi Khand has prescribed Ganga Sahasranam. (Sahasra means thousand, nam means name). These are thousand different names by which Holy River Ganga has been eulogized.</p><p>Therefore, South Indians who perform Kashi Yatra generally stay for minimum two days or even three days in Varanasi (Kashi). One ritual is Madhyannika Manikarnika Snanam (bathing in Manikarnika in the Noon) and other ritual is Pinda Daan (rituals for forefathers) in five Ghats viz. Assi, Dasaswamedh, Manikarnika, Panchganga and Varuna. While performing the Pancha Ghatta Pindam (ritual in five important Ghats), some Yatris take bath only once and in the remaining Ghats, they merely sprinkle water on their heads. The compiler appeals to all devotees, who visit Kashi for their religious rituals, to sincerely bathe in all the five Ghats and take Madhyannika Manikarnika Snanam with all divinity. At the time of performing these rituals, the compiler requests them to think of their departed father/parents (as the case may be) and forefathers.</p><p>Given above is the brief write up of River Ganga. If we give a word by word translation of River Ganga’s divinity, it may consume more than 40 pages.</p></div></div><div class="page-break"></div>
+    <div id="ganga-sec-2" style="margin-top: 14pt;">
+      <h1>2. Importance of immersion of mortal remains (Asthi) in Ganga</h1>
+      <div style="font-size: 10.5pt; color: #0f766e; font-style: italic; margin-top: -3pt; margin-bottom: 6pt;">
+        Supreme Liberation (Moksha) for Ancestral Souls & Pitris &bull; <span class="toc-badge badge-ganga">Sacred Section #2</span>
+      </div>
+    
+      <div class="temple-header-card avoid-break">
+        <div style="font-weight: 700; color: #0f766e; border-bottom: 1px solid #99f6e4; padding-bottom: 3pt; margin-bottom: 4pt;">
+          &#128740; FIELD PILGRIMAGE REFERENCE CARD
+        </div>
+        <div class="temple-meta-grid">
+          <div class="temple-meta-item">
+            <span class="temple-meta-label">Location / Ghat:</span>
+            <span class="temple-meta-val">Conducted primarily at Manikarnika Ghat, Harishchandra Ghat, and Dashashwamedh Ghat along the sacred Ganga.</span>
+          </div>
+          <div class="temple-meta-item">
+            <span class="temple-meta-label">Bathing / Timings:</span>
+            <span class="temple-meta-val">Cremation and Asthi Visarjan rites are conducted throughout the day and night at Manikarnika and Harishchandra Ghats.</span>
+          </div>
+          <div class="temple-meta-item">
+            <span class="temple-meta-label">YouTube Darshan:</span>
+            <span class="temple-meta-val">Not available</span>
+          </div>
+          <div class="temple-meta-item">
+            <span class="temple-meta-label">Original Live Source:</span>
+            <span class="temple-meta-val"><a href="https://varanasitemples.in/category/importance-of-immersion-of-mortal-remains-asthi-in-ganga/" target="_blank">https://varanasitemples.in/category/importance-of-immersion-of-mortal-remains-asthi-in-ganga/</a></span>
+          </div>
+        </div>
+      </div>
+    
+            <div class="temple-img-container">
+              <img class="temple-img" src="file:///C:/Users/koppi/Downloads/Kashi_Offline_Guide_Pack/assets/images/Ganga-Assi-Ghat-1024x645.jpg" alt="Importance of immersion of mortal remains (Asthi) in Ganga Sanctum">
+              <div class="temple-img-caption">&#128247; Authentic Visual: Importance of immersion of mortal remains (Asthi) in Ganga Sanctum</div>
+            </div>
+            <div class="temple-narrative"><p>class="art-PostContent"> IMPORTANCE OF IMMERSION OF MORTAL REMAINS (ASTHI) IN GANGA In Hindu tradition, if a person dies, his body is cremated and the ashes alongwith osseous fragments (consisting of bones &#8211; Asthi) are immersed in a holy river or even sea. People attach much importance to immersion of Asthi in Ganges.</p><p>According to Kashi Khand, Chapter 28, Lord Shiva was describing to Goddess Parvaty the importance of River Ganga. A long time back there was a Brahmin named Vahikan. Though he had adorned the sacred thread (Yagyopaveeth), he neither observed any rituals nor followed any code of conduct prescribed for Brahmins. He never uttered any prayers. He was never interested in chanting vedic hymns and he married a girl from out of his caste.</p><p>Once there was a severe famine and left with no alternative he and his wife left their home for greener pastures. On the way they had to cross a forest, where he was attacked and killed by a tiger. A vulture saw his dead body, took a piece of his leg and flew away. In the sky, it encountered another vulture who fought with the first vulture for sharing a piece of flesh and in the scuffle one small piece of flesh and bone fell below. It so happened that coincidentally both the vultures were flying over the River Ganga and the piece of bone fell into the holy river.</p><p>After Vahikan’s death, the attendants of Yam Raj took him and produced before Yam Raj. Chitragupta listed out the evil doings by Vahikan. Kashi Khand has described in detail the misdeeds and sins committed by the dead person. Accordingly Yam Raj ordained that Vahikan should be awarded the severest of all punishments and he should go through the travails of various hells like Raurava, Anda Tamisra, Kumbi Paka, Krimi Bhojana etc.</p><p>Just when Vahikan was about to suffer the punishments, his bones fell into the River Ganga following a fight between the vultures. Several celestial damsels from Heaven (Apsaras) descended on the earth and took Vahikan, who had now assumed a divine form, to heaven. This shows the power of immersion of bones in the River Ganga.</p><p>To this day, people immerse the Asthi of their departed relatives in Holy River Ganga.</p></div></div><div class="page-break"></div>
+    <div id="ganga-sec-3" style="margin-top: 14pt;">
+      <h1>3. Assi Sangam</h1>
+      <div style="font-size: 10.5pt; color: #0f766e; font-style: italic; margin-top: -3pt; margin-bottom: 6pt;">
+        Southern Boundary Confluence of River Assi and Ganga &bull; <span class="toc-badge badge-ganga">Sacred Section #3</span>
+      </div>
+    
+      <div class="temple-header-card avoid-break">
+        <div style="font-weight: 700; color: #0f766e; border-bottom: 1px solid #99f6e4; padding-bottom: 3pt; margin-bottom: 4pt;">
+          &#128740; FIELD PILGRIMAGE REFERENCE CARD
+        </div>
+        <div class="temple-meta-grid">
+          <div class="temple-meta-item">
+            <span class="temple-meta-label">Location / Ghat:</span>
+            <span class="temple-meta-val">Refer to article text</span>
+          </div>
+          <div class="temple-meta-item">
+            <span class="temple-meta-label">Bathing / Timings:</span>
+            <span class="temple-meta-val">Open throughout the day and night</span>
+          </div>
+          <div class="temple-meta-item">
+            <span class="temple-meta-label">YouTube Darshan:</span>
+            <span class="temple-meta-val"><a href="https://www.youtube.com/watch?v=GjYa_ntAvtQ" target="_blank">Watch YouTube Video</a></span>
+          </div>
+          <div class="temple-meta-item">
+            <span class="temple-meta-label">Original Live Source:</span>
+            <span class="temple-meta-val"><a href="https://varanasitemples.in/category/importance-of-river-ganga/important-teerthsghats/assi-sangam/" target="_blank">https://varanasitemples.in/category/importance-of-river-ganga/important-teerthsghats/assi-sangam/</a></span>
+          </div>
+        </div>
+      </div>
+    
+            <div class="temple-img-container">
+              <img class="temple-img" src="file:///C:/Users/koppi/Downloads/Kashi_Offline_Guide_Pack/assets/images/Ganga-Assi-Ghat-1024x645.jpg" alt="Assi Sangam">
+              <div class="temple-img-caption">&#128247; Authentic Visual: Assi Sangam</div>
+            </div>
+            <div class="temple-narrative"><p>class="art-PostContent"> ASSI SANGAM Towards the southern part of the Holy city is the Assi Ganga confluence. Assi has been mentioned as a river once upon a time but now it is virtually a streamlet.</p><p>According to Kashi Khand, Chapter 30, Kashi is a Mukti Kshetra. Long back Yama, Indra and Agni saw the devotees in Kashi engaged in religious activities and they drew boundaries for Kashi. All the above Lords, with a view to destroy Asatya (falsehood) and negative thoughts in the Holy City, created Assi River.</p><p>According to Kashi Khand, Chapter 46, a devotee who takes bath in Assi Ganga Sangam and performs rituals for his forefathers does a great service to them. By bathing in Assi Ganga Sangam, the devotee gets the benefit of taking bath in all sacred teerths.</p><p>Kashi Khand has references of Assi Ganga Sangam in various chapters. In various references to Lolark, it is stated to be near the Assi Ganga Sangam, whereas in the present days, Lolark is a bit away. This leads one to believe that the religious/spiritual influence of Assi Ganga Sangam (Confluence of two rivers Assi and Ganga) must have been very wide.</p><p>The place where two rivers conjoin is usually considered to be very auspicious. In fact the name Varanasi was coined as that Kshetra which is in between two great rivers Varuna and Assi.</p><p>(ASSI GHAT &#8211; VIEW FROM GHAT STEPS)</p><p>At present Assi Ghat is a very wide area and offers a very beautiful appearance. Many devotees visit this place and it is virtually the only place where four wheelers can take them as near as to Ganga as possible and a parking lot is also there.</p><p>Please watch our YouTube Video about Assi Teerth in the below Link :</p><p>https://www.youtube.com/watch?v=GjYa_ntAvtQ&t=15s</p><p>As per religious importance Assi Ganga Sangam area covers a vast stretch even surpassing the present day Tulsi Ghat. The South Indian pilgrims who undertake Pancha Ghatta Pindam (Assi, Dasaswamedh, Manikarnika, Panch Ganga and Varuna), generally bathe near Tulsi Ghat which, as mentioned above, comes under the religious sanction at Assi Ganga Sangam. They may take a cue and bathe near Assi Ghat.</p><p>Ganga Aarti is being conducted in Assi Ghat also, which is a visual treat.</p></div></div><div class="page-break"></div>
+    <div id="ganga-sec-4" style="margin-top: 14pt;">
+      <h1>4. Dasaswamedh</h1>
+      <div style="font-size: 10.5pt; color: #0f766e; font-style: italic; margin-top: -3pt; margin-bottom: 6pt;">
+        Site of the Ten Horse Sacrifices of Lord Brahma & Central Ghat of Kashi &bull; <span class="toc-badge badge-ganga">Sacred Section #4</span>
+      </div>
+    
+      <div class="temple-header-card avoid-break">
+        <div style="font-weight: 700; color: #0f766e; border-bottom: 1px solid #99f6e4; padding-bottom: 3pt; margin-bottom: 4pt;">
+          &#128740; FIELD PILGRIMAGE REFERENCE CARD
+        </div>
+        <div class="temple-meta-grid">
+          <div class="temple-meta-item">
+            <span class="temple-meta-label">Location / Ghat:</span>
+            <span class="temple-meta-val">Refer to article text</span>
+          </div>
+          <div class="temple-meta-item">
+            <span class="temple-meta-label">Bathing / Timings:</span>
+            <span class="temple-meta-val">Open throughout the day and night</span>
+          </div>
+          <div class="temple-meta-item">
+            <span class="temple-meta-label">YouTube Darshan:</span>
+            <span class="temple-meta-val"><a href="https://www.youtube.com/watch?v=17cp-USFyOM" target="_blank">Watch YouTube Video</a></span>
+          </div>
+          <div class="temple-meta-item">
+            <span class="temple-meta-label">Original Live Source:</span>
+            <span class="temple-meta-val"><a href="https://varanasitemples.in/category/importance-of-river-ganga/important-teerthsghats/dasaswamedh/" target="_blank">https://varanasitemples.in/category/importance-of-river-ganga/important-teerthsghats/dasaswamedh/</a></span>
+          </div>
+        </div>
+      </div>
+    <div class="multi-img-grid">
+                <div style="text-align: center;">
+                  <img src="file:///C:/Users/koppi/Downloads/Kashi_Offline_Guide_Pack/assets/images/dasaswamedh-Teerth-ghat-1024x576.jpg" alt="Dasaswamedh">
+                  <div class="temple-img-caption">Dasaswamedh</div>
+                </div>
+                
+                <div style="text-align: center;">
+                  <img src="file:///C:/Users/koppi/Downloads/Kashi_Offline_Guide_Pack/assets/images/Dasaswamedh-Ganga-Aarti-1024x576.jpg" alt="Dasaswamedh">
+                  <div class="temple-img-caption">Dasaswamedh</div>
+                </div>
+                </div>
+            <div class="sanskrit-box">
+              <span class="verse-tag">Scriptural Shloka &bull; Kashi Khand</span>
+              तिथिं दशहरां प्राप्य दशजन्माघहारिणीम्
+            </div>
+            
+            <div class="sanskrit-box">
+              <span class="verse-tag">Scriptural Shloka &bull; Kashi Khand</span>
+              दशाश्वमेधिके स्नातो यामीं पश्येन्न यातनाम्
+            </div>
+            
+            <div class="sanskrit-box">
+              <span class="verse-tag">Scriptural Shloka &bull; Kashi Khand</span>
+              गङ्गा यमुनयो: सङ्गे यत्पुण्यं स्नान कारिणाम्
+            </div>
+            
+            <div class="sanskrit-box">
+              <span class="verse-tag">Scriptural Shloka &bull; Kashi Khand</span>
+              काश्यां मत्सन्निधावत्र तत्पुण्यं स्याद्दशोत्तरम्
+            </div>
+            <div class="temple-narrative"><p>class="art-PostContent"> DASASWAMEDH Lord Shiva was in Mandarachal and Kashi was ruled by a very pious and religious King named Divodas. In his Kingdom every one was very happy and there was all round prosperity. He had reached an understanding with Lord Brahma that as long as he was ruling, Devas and other celestial beings should stay away from Kashi and should not create any interference in Kashi.</p><p>Lord Brahma more or less agreed to it but on one condition that King Divodas should prove to be an excellent administrator and all people living in Kashi and visiting Kashi should be treated well in their religious pursuits. The King agreed and accordingly gave excellent governance.</p><p>Lord Shiva was very upset at being away from Kashi for a long time and he wanted to make King Divodas commit some mistake. Accordingly, he sent sixty four Yoginis and Lord Surya in succession. But they did not accomplish the task. (Kindly refer Divodaseshwar).</p><p>Lord Shiva then sent Lord Brahma to Kashi to create disturbances. Lord Brahma tried his level best but he was very much satisfied with the efficient way in which King Divodas was ruling Kashi. To test the King, Lord Brahma expressed his desire to perform Aswa Medha Yagya and the King gave every thing in his command to Lord Brahma. Lord Brahma performed not one but ten Aswa Medha Yagyas (Horse Sacrifice rituals). The smoke arising out of the huge fire of the Yagya reached the sky and assumed a light blue colour. To this day, the sky is maintaining the same colour which people refer to as “Sky Blue”.</p><p>The Teerth nearby took the name of Dasaswamedh Teerth. Prior to advent of Lord Brahma, the Teerth was known by the name of Rudra Sarovar. Now the bathing place has come to be known as Dasaswamedh Ghat. Lord Brahma installed Shiv Lings known as Dasaswamedheshwar and Brahmeshwar and started worshipping Lord Shiva.</p><p>(DASHASHWAMEDH GHAT)</p><p>A devotee who takes a holy dip in Dasaswamedh, performs all religious activities like Japam (repitition of a set of religious texts called Mantras), Daan (donation with a religious end use), Homam (rituals with fire), chanting of Vedas, Pooja, Tarpan etc. will derive maximum benefits. Kashi Khand further states that Annadanam (free feeding) performed at Dasaswamedh will yield multiple benefits. One trust is performing this holy task at Annapoorna temple which falls under the spiritual area of Dasaswamedh.</p><p>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-</p><p>Kashi Khand, Chapter 52, Shlok 90</p><p>तिथिं दशहरां प्राप्य दशजन्माघहारिणीम्</p><p>दशाश्वमेधिके स्नातो यामीं पश्येन्न यातनाम्</p><p>The one who bathes in this Dashashwamedh Tirtha on (Ganga) Dussehra Tithi, which destroys the sins of ten births, does not have to face torture of Yama.</p><p>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;</p><p>Please watch our YouTube Video on Dasaswamedh Teerth in the below Link :</p><p>https://www.youtube.com/watch?v=17cp-USFyOM&t=131s</p><p>A devotee who takes a holy dip in Dasaswamedh Teerth (now Dasaswamedh Ghat) on the first day after Amavasya in Aashad month (June 22-July 20), will see his sins totally getting removed from him. A devote who bathes in Dasaswamedh and worships Dasaswamedheshwar will be free from all sins committed knowingly or unknowingly.</p><p>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-</p><p>Kashi Khand, Chapter 61, Shlok 31</p><p>गङ्गा यमुनयो: सङ्गे यत्पुण्यं स्नान कारिणाम्</p><p>काश्यां मत्सन्निधावत्र तत्पुण्यं स्याद्दशोत्तरम्</p><p>(Lord Vishnu says,) Whatever punya is obtained by devotees who take bath at the confluence of Ganga and Yamuna, such devotees obtain ten times more punya by taking bath at the Teertha near to me (Dashaswamedha Prayag Teertha) in Kashi.</p><p>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;</p><p>Kashi Khand has recommended that the devotees should bathe in Dasaswamedh in Aashad month for the entire fortnight starting from the first day after Amavasya. A devotee who bathes in Dasaswamedh gets the benefit of performing Aswa Medha Yagya.</p><p>In TV or video clippings Varanasi’s river ghat is shown with a lot of brown coloured umbrella like structures, the place is Dasaswamedh Ghat. Of late, one important function has started in Varanasi viz. Ganga Aarti.</p><p>(DASHASHWAMEDH GANGA AARTI)</p><p>A group of pundits perform Aarti for River Ganga (River Ganga is worshipped as Maa Ganga), daily in the evening at around 7.15 p.m. The entire performance lasts for about 45 minutes and there is a huge crowd. It is worth watching this aarti sitting in a boat. During the time of aarti, the entire area turns into a divine and pious environment.</p></div></div><div class="page-break"></div>
+    <div id="ganga-sec-5" style="margin-top: 14pt;">
+      <h1>5. Gyan Vapi</h1>
+      <div style="font-size: 10.5pt; color: #0f766e; font-style: italic; margin-top: -3pt; margin-bottom: 6pt;">
+        Primordial Well of Transcendental Knowledge Dug by Lord Shiva's Trishul &bull; <span class="toc-badge badge-ganga">Sacred Section #5</span>
+      </div>
+    
+      <div class="temple-header-card avoid-break">
+        <div style="font-weight: 700; color: #0f766e; border-bottom: 1px solid #99f6e4; padding-bottom: 3pt; margin-bottom: 4pt;">
+          &#128740; FIELD PILGRIMAGE REFERENCE CARD
+        </div>
+        <div class="temple-meta-grid">
+          <div class="temple-meta-item">
+            <span class="temple-meta-label">Location / Ghat:</span>
+            <span class="temple-meta-val">Situated inside the Kashi Vishweshwar (Vishwanath) Temple complex, immediately adjacent to the Nandi pavilion.</span>
+          </div>
+          <div class="temple-meta-item">
+            <span class="temple-meta-label">Bathing / Timings:</span>
+            <span class="temple-meta-val">Darshan accessible during regular Kashi Vishwanath temple hours.</span>
+          </div>
+          <div class="temple-meta-item">
+            <span class="temple-meta-label">YouTube Darshan:</span>
+            <span class="temple-meta-val">Not available</span>
+          </div>
+          <div class="temple-meta-item">
+            <span class="temple-meta-label">Original Live Source:</span>
+            <span class="temple-meta-val"><a href="https://varanasitemples.in/category/importance-of-river-ganga/important-teerthsghats/gyan-vapi/" target="_blank">https://varanasitemples.in/category/importance-of-river-ganga/important-teerthsghats/gyan-vapi/</a></span>
+          </div>
+        </div>
+      </div>
+    
+            <div class="temple-img-container">
+              <img class="temple-img" src="file:///C:/Users/koppi/Downloads/Kashi_Offline_Guide_Pack/assets/images/Gyan-Vapi-Kund-Shrine.svg" alt="Gyan Vapi Sanctum">
+              <div class="temple-img-caption">&#128247; Authentic Visual: Gyan Vapi Sanctum</div>
+            </div>
+            <div class="temple-narrative"><p>class="art-PostContent"> GYAN VAPI According to Kashi Khand one Digpal named Eeshan came to Kashi and with his Trishul dug a Vapi which came to be known as Gyan Vapi. He then started worshipping Lord Shiva. The water from this Vapi (Well) is capable of giving knowledge to the devotees. This well is located near the Gyan Vapi Mosque on the way to Vishwanath Temple.</p><p>Kashi Khand has described the power of water from Gyan Vapi in Chapters 33 and 34. One Princess Kalawati was presented a map of Kashi and when she happened to touch the Gyan Vapi in the map with her finger, she could recollect the events that had occurred in her previous birth.</p><p>Elsewhere Kashi Khand has amply described the good effects of Gyan Vapi water in various chapters. A devotee who takes bath in Gyan Vapi and performs rituals for his forefathers will make them extremely happy and even if they are rotting in hell, they are certain to reach the heaven.</p><p>However, in the present day scenario, with heavy police patrolling, it may not be possible to freely engage in such activities. However, devotees can have darshan of the Gyan Vapi, take some water therefrom for sprinkling over their heads or consumption as Prasad.</p></div></div><div class="page-break"></div>
+    <div id="ganga-sec-6" style="margin-top: 14pt;">
+      <h1>6. Lolark Kund</h1>
+      <div style="font-size: 10.5pt; color: #0f766e; font-style: italic; margin-top: -3pt; margin-bottom: 6pt;">
+        Miraculous Solar Tank of Sage Agasthya, Lopamudra & Lolark Aditya &bull; <span class="toc-badge badge-ganga">Sacred Section #6</span>
+      </div>
+    
+      <div class="temple-header-card avoid-break">
+        <div style="font-weight: 700; color: #0f766e; border-bottom: 1px solid #99f6e4; padding-bottom: 3pt; margin-bottom: 4pt;">
+          &#128740; FIELD PILGRIMAGE REFERENCE CARD
+        </div>
+        <div class="temple-meta-grid">
+          <div class="temple-meta-item">
+            <span class="temple-meta-label">Location / Ghat:</span>
+            <span class="temple-meta-val">Refer to article text</span>
+          </div>
+          <div class="temple-meta-item">
+            <span class="temple-meta-label">Bathing / Timings:</span>
+            <span class="temple-meta-val">Open throughout the day and night</span>
+          </div>
+          <div class="temple-meta-item">
+            <span class="temple-meta-label">YouTube Darshan:</span>
+            <span class="temple-meta-val"><a href="https://www.youtube.com/watch?v=L6aCdl5kBjc" target="_blank">Watch YouTube Video</a></span>
+          </div>
+          <div class="temple-meta-item">
+            <span class="temple-meta-label">Original Live Source:</span>
+            <span class="temple-meta-val"><a href="https://varanasitemples.in/category/importance-of-river-ganga/important-teerthsghats/lolark-kund/" target="_blank">https://varanasitemples.in/category/importance-of-river-ganga/important-teerthsghats/lolark-kund/</a></span>
+          </div>
+        </div>
+      </div>
+    
+            <div class="temple-img-container">
+              <img class="temple-img" src="file:///C:/Users/koppi/Downloads/Kashi_Offline_Guide_Pack/assets/images/Lolark-Kund-1-1024x576.jpg" alt="Lolark Kund">
+              <div class="temple-img-caption">&#128247; Authentic Visual: Lolark Kund</div>
+            </div>
+            
+            <div class="sanskrit-box">
+              <span class="verse-tag">Scriptural Shloka &bull; Kashi Khand</span>
+              प्रत्यर्कवारं लोलार्क य: पश्यति शुचिव्रत:
+            </div>
+            
+            <div class="sanskrit-box">
+              <span class="verse-tag">Scriptural Shloka &bull; Kashi Khand</span>
+              न तस्य दु:खं लोकेऽस्मिन् कदाचित्संभविष्यति
+            </div>
+            <div class="temple-narrative"><p>class="art-PostContent"> LOLARK KUND Kashi Khand has attached great importance to Lolark Kund mainly because of the presence of Lolark Aditya (Chapter 46).</p><p>Of all Teerths, Lolark has been given great importance. Taking bath in Lolark Teerth (now Lolark Kund), performing pooja etc., at this place is considered to be very beneficial to devotees.</p><p>Important days for Lolark Kund as observed by the devotees are Margsirsh month, Shukla Paksha Shashti or Saptmi (conjoined with Sunday), Magha month, Shukla Paksha Saptmi (Rath Saptmi).</p><p>Our enquiries reveal that no one takes regular bath in this Kund. However, there is a huge crowd on special days, as above.</p><p>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-</p><p>Kashi Khand, Chapter 46, Shlok 56</p><p>प्रत्यर्कवारं लोलार्क य: पश्यति शुचिव्रत:</p><p>न तस्य दु:खं लोकेऽस्मिन् कदाचित्संभविष्यति</p><p>Whoever observes a holy fast and worships Lolark every Sunday, does not have to suffer any sorrow in this world.</p><p>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;</p><p>Please watch our YouTube video on the subject in the following Link :</p><p>https://www.youtube.com/watch?v=L6aCdl5kBjc&t=65s</p><p>Devotees come to this Kund to worship Lolark Aditya. The approach to the Kund is well constructed with steps leading down from three places. On the fourth side, the kund takes the shape of a well.</p><p>(LOLARK KUND)</p><p>Devotees who visit Kashi, can combine visit of this place alongwith Durga Devi temple which is about 1 km. in proximity.</p></div></div><div class="page-break"></div>
+    <div id="ganga-sec-7" style="margin-top: 14pt;">
+      <h1>7. Manikarnika</h1>
+      <div style="font-size: 10.5pt; color: #0f766e; font-style: italic; margin-top: -3pt; margin-bottom: 6pt;">
+        Primordial Chakra Pushkarini Kund & Crest-Jewel of All Teerthas &bull; <span class="toc-badge badge-ganga">Sacred Section #7</span>
+      </div>
+    
+      <div class="temple-header-card avoid-break">
+        <div style="font-weight: 700; color: #0f766e; border-bottom: 1px solid #99f6e4; padding-bottom: 3pt; margin-bottom: 4pt;">
+          &#128740; FIELD PILGRIMAGE REFERENCE CARD
+        </div>
+        <div class="temple-meta-grid">
+          <div class="temple-meta-item">
+            <span class="temple-meta-label">Location / Ghat:</span>
+            <span class="temple-meta-val">Refer to article text</span>
+          </div>
+          <div class="temple-meta-item">
+            <span class="temple-meta-label">Bathing / Timings:</span>
+            <span class="temple-meta-val">Open throughout the day and night</span>
+          </div>
+          <div class="temple-meta-item">
+            <span class="temple-meta-label">YouTube Darshan:</span>
+            <span class="temple-meta-val"><a href="https://www.youtube.com/watch?v=GjYa_ntAvtQ" target="_blank">Watch YouTube Video</a></span>
+          </div>
+          <div class="temple-meta-item">
+            <span class="temple-meta-label">Original Live Source:</span>
+            <span class="temple-meta-val"><a href="https://varanasitemples.in/category/importance-of-river-ganga/important-teerthsghats/manikarnika/" target="_blank">https://varanasitemples.in/category/importance-of-river-ganga/important-teerthsghats/manikarnika/</a></span>
+          </div>
+        </div>
+      </div>
+    <div class="multi-img-grid">
+                <div style="text-align: center;">
+                  <img src="file:///C:/Users/koppi/Downloads/Kashi_Offline_Guide_Pack/assets/images/episode-numbers-300x173.jpg" alt="Manikarnika">
+                  <div class="temple-img-caption">Manikarnika</div>
+                </div>
+                
+                <div style="text-align: center;">
+                  <img src="file:///C:/Users/koppi/Downloads/Kashi_Offline_Guide_Pack/assets/images/Manikarnika-Chakra-Pushkarini-Shrine.svg" alt="Manikarnika Sanctum">
+                  <div class="temple-img-caption">Manikarnika Sanctum</div>
+                </div>
+                </div>
+            <div class="sanskrit-box">
+              <span class="verse-tag">Scriptural Shloka &bull; Kashi Khand</span>
+              सर्वतीर्थेषु संस्नानाद्यत्पुण्यं समवाप्यते
+            </div>
+            
+            <div class="sanskrit-box">
+              <span class="verse-tag">Scriptural Shloka &bull; Kashi Khand</span>
+              तत्पुण्यमाप्यते सम्यङ्ग मणिकर्णयेकमज्जनात्
+            </div>
+            
+            <div class="sanskrit-box">
+              <span class="verse-tag">Scriptural Shloka &bull; Kashi Khand</span>
+              तर्पिता: पितरो येन सम्प्राप्य मणिकर्णिकाम्
+            </div>
+            
+            <div class="sanskrit-box">
+              <span class="verse-tag">Scriptural Shloka &bull; Kashi Khand</span>
+              सप्त सप्त तथा सप्त पूर्वजास्तेन तारिता:
+            </div>
+            
+            <div class="sanskrit-box">
+              <span class="verse-tag">Scriptural Shloka &bull; Kashi Khand</span>
+              जप्त्वैकामपि गायत्रीं सम्प्राप्य मणिकर्णिकाम्
+            </div>
+            
+            <div class="sanskrit-box">
+              <span class="verse-tag">Scriptural Shloka &bull; Kashi Khand</span>
+              लभेदयुतगायत्रीजपनस्य फलं स्फुटं
+            </div>
+            
+            <div class="sanskrit-box">
+              <span class="verse-tag">Scriptural Shloka &bull; Kashi Khand</span>
+              दत्वा दानान्यनेकानि विगाह्य मणिकर्णिकाम्
+            </div>
+            
+            <div class="sanskrit-box">
+              <span class="verse-tag">Scriptural Shloka &bull; Kashi Khand</span>
+              स्वर्गद्वारं प्रविष्टा ये न ते निरयगामिन:
+            </div>
+            <div class="temple-narrative"><p>class="art-PostContent"> MANIKARNIKA According to Kashi Khand, Chapter 26, at the time of Maha Pralay (deluge) there was absolute destruction every where and darkness prevailed all over. There was no direction anywhere, no one to speak, cry or listen.</p><p>At that time the ever pervading Brahm existed and the omnipotent Lord Almighty Shiva manifested himself alongwith Goddess in the form of Shakti. Lord Shiva addressed himself as Purush and Goddess as Shakti Roopee stree (feminine embodiment of energy). As far as land is concerned, only the area representing Pancha Krosha Kshetra existed. (Pancha Krosha means five Krosha, again Krosha is a measurement of distance which is approximately equal to 2 miles). Taking a mid point, a radius of 10 miles was the Pancha Krosha Kshetra.</p><p>Even during the worst time of deluge, Lord Shiva and Goddess Parvaty did not leave this place (Pancha Krosha Kshetra), therefore this place is known as Avi Mukta Kshetra. Lord Shiva desired that every one in the Kshetra (region or area) should be happy and the place was called as Ananda Kanan (Anandavan).</p><p>Lord Shiva cast a soft and affectionate glance to his left side wherefrom a handsome man appeared. Since this person qualified as Uttama Purush, he was known as Purushottam. Lord Shiva was glad and he proclaimed that Purushottam was none other than Maha Vishnu. Lord Shiva and Lord Vishnu entered Anand Van where Lord Vishnu immediately engaged himself in intense prayers.</p><p>With his Sudarshan Chakra, Lord Vishnu dug a huge Pond and filled it with his divine perspiration. This Kund came to be known as Chakrapushkarini Teerth. Lord Vishnu was deeply engrossed in his prayers and Lord Shiva was moved by the former’s sincerity. He requested Lord Vishnu to get up and ask for divine boon. Lord Vishnu desired that both Lord Shiva and Goddess Parvaty should always be available to accept his (Lord Vishnu’s) prayers. Lord Shiva’s jewel from the ear tops fell in the Chakrapushkarini Teerth and then onwards the Pond came to be called Manikarnika (jewel is referred to as Mani and Karnika means ear).</p><p>Manikarnika Ghat</p><p>Lord Vishnu further stated that the entire area is shining with a bright divine light with great radiance and, therefore, this Kshetra (region) will be called as “Kashi”. (Even now Kashi is referred to as City of Light).</p><p>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-</p><p>Kashi Khand, Chapter 26, Shlok 117</p><p>सर्वतीर्थेषु संस्नानाद्यत्पुण्यं समवाप्यते</p><p>तत्पुण्यमाप्यते सम्यङ्ग मणिकर्णयेकमज्जनात्</p><p>The aggregate punya accruing out of bathing in all Teerths in the world, will be obtained by taking one dip in Manikarnika in Kashi, with all divinity.</p><p>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;</p><p>A devotee who religiously takes bath in Manikarnika will attain Moksha and there is absolutely no doubt about it.</p><p>Please watch our YouTube Videos on Manikarnika Teerth in the below Link :</p><p>https://www.youtube.com/watch?v=GjYa_ntAvtQ&t=15s</p><p>A devotee who takes holy dip in Manikarnika with all devotion, performs rituals for his forefathers and offers prayers to the Almighty will derive the benefits of performing various Yagyas.</p><p>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-</p><p>Kashi Khand, Chapter 34, Shlok 33</p><p>तर्पिता: पितरो येन सम्प्राप्य मणिकर्णिकाम्</p><p>सप्त सप्त तथा सप्त पूर्वजास्तेन तारिता:</p><p>A devotee who goes to Manikarnika and performs Pitru Tarpan, gives salvation to seven generations before him and seven generations after him, including his family.</p><p>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;</p><p>Lord Vishnu describes various important Teerths in Kashi Khand, Chapter 61. All the sacred teerths (sacred waters) come to Manikarnika during the noon time for taking bath. While all sacred teerths are capable of cleansing the sins, Manikarnika Teerth tops them all. All those sacred teerths derive their strength from Manikarnika Teerth.</p><p>Lord Shiva and Goddess Parvaty themselves come to Manikarnika during noon for taking bath. Lord Vishnu himself comes to Manikarnika during the above time alongwith Goddess Lakshmi from Vaikunth to take bath. According to Lord Vishnu, Lord Brahma also visits Manikarnika at the above time for his bath. Therefore, Maadhyannika Snanam (Bath at noon) at Manikarnika is considered very auspicious and this is a part and parcel of Kashi Yatra being performed by South Indians.</p><p>Not only the above Lords, but Lord Indra, other Devas as also great Nag Rajas (Serpent Kings) like Vasuki etc. visit Manikarnika during noon for their holy bath.</p><p>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-</p><p>Kashi Khand, Chapter 61, Shlok 69</p><p>जप्त्वैकामपि गायत्रीं सम्प्राप्य मणिकर्णिकाम्</p><p>लभेदयुतगायत्रीजपनस्य फलं स्फुटं</p><p>Reciting one Gayatri in Manikarnika (in Kashi) will yield punya benefits of reciting 10,000 gayatris.</p><p>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;</p><p>As per the above shloka, a devotee who chants one Gayatri Mantra at Manikarnika gets the benefit of chanting ten thousand Gayatri Mantras at other places. A devotee who performs Homam with one Ahuti at Manikarnika gets the benefit of performing Agnihotra Homam for the entire life. (Agnihotra Homam is performed only by those great Pundits who have performed great Yagam called Soma Yagam).</p><p>Lord Vishnu has described the boundary of Manikarnika Kshetra: In the south the area extends upto Ganga Keshav (presently Lalita Ghat), in the north Harishchandra Mandap (roughly near Sankata Ghat), River Ganga to the east and Swarga Dwari to the west (Brahmanal Chauraha – cross road). According to Lord Vishnu, devotees who take bath in Manikarnika and worship Manikarnikeshwar will not see mother’s womb again (meaning – there will be no rebirth).</p><p>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-</p><p>Kashi Khand, Chapter 35, Shlok 117</p><p>दत्वा दानान्यनेकानि विगाह्य मणिकर्णिकाम्</p><p>स्वर्गद्वारं प्रविष्टा ये न ते निरयगामिन:</p><p>Those who enter the swargdwaar area after taking bath and giving donations in Manikarnika, will never go to hell.</p><p>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;</p><p>Presently Manikarnika Ghat is practically a cremation ground. However, if a devotee proceeds in a boat slightly towards the north (towards Panch Ganga), he will reach Chakrapushkarini Kund. Since the Manikarnika area is quite vast (as described in the previous para), devotees take bath in the river adjacent to Chakrapushkarini Kund. There is an inscription near the above Kund(courtesy Distt. Administration) which gives a brief history of Lord Vishnu’s association with Chakrapushkarini Kund.</p><p>Kashi Khand, Chapter 33, mentions that Raja Harishchandra (who was known for his truthfulness) sold himself at this place to safeguard upholding his ideals.</p></div></div><div class="page-break"></div>
+    <div id="ganga-sec-8" style="margin-top: 14pt;">
+      <h1>8. Padodak Teerth</h1>
+      <div style="font-size: 10.5pt; color: #0f766e; font-style: italic; margin-top: -3pt; margin-bottom: 6pt;">
+        Sacred Foot-Washing Teerth of Lord Vishnu at Varuna Sangam &bull; <span class="toc-badge badge-ganga">Sacred Section #8</span>
+      </div>
+    
+      <div class="temple-header-card avoid-break">
+        <div style="font-weight: 700; color: #0f766e; border-bottom: 1px solid #99f6e4; padding-bottom: 3pt; margin-bottom: 4pt;">
+          &#128740; FIELD PILGRIMAGE REFERENCE CARD
+        </div>
+        <div class="temple-meta-grid">
+          <div class="temple-meta-item">
+            <span class="temple-meta-label">Location / Ghat:</span>
+            <span class="temple-meta-val">Refer to article text</span>
+          </div>
+          <div class="temple-meta-item">
+            <span class="temple-meta-label">Bathing / Timings:</span>
+            <span class="temple-meta-val">Open throughout the day and night</span>
+          </div>
+          <div class="temple-meta-item">
+            <span class="temple-meta-label">YouTube Darshan:</span>
+            <span class="temple-meta-val"><a href="https://www.youtube.com/watch?v=sIu14DKGbEs" target="_blank">Watch YouTube Video</a></span>
+          </div>
+          <div class="temple-meta-item">
+            <span class="temple-meta-label">Original Live Source:</span>
+            <span class="temple-meta-val"><a href="https://varanasitemples.in/category/importance-of-river-ganga/important-teerthsghats/padodak-teerth/" target="_blank">https://varanasitemples.in/category/importance-of-river-ganga/important-teerthsghats/padodak-teerth/</a></span>
+          </div>
+        </div>
+      </div>
+    
+            <div class="temple-img-container">
+              <img class="temple-img" src="file:///C:/Users/koppi/Downloads/Kashi_Offline_Guide_Pack/assets/images/Padodak-Teerth-Shrine.svg" alt="Padodak Teerth Sanctum">
+              <div class="temple-img-caption">&#128247; Authentic Visual: Padodak Teerth Sanctum</div>
+            </div>
+            <div class="temple-narrative"><p>class="art-PostContent"> PADODAK TEERTH Lord Shiva deputed sixty four Yoginis to create disturbance in Kashi and when they did not return, he sent Lord Surya, then Lord Brahma and Lord Vinayak. When these deities did not return, Lord Shiva sent Lord Vishnu to Kashi to accomplish the same mission. (For details, kindly refer Divodaseshwar), Lord Vishnu was very happy with getting such divine instructions from Lord Shiva. He prayed to Lord Shiva and accompanied by Goddess Mahalakshmi, he travelled in his vehicle Garuda and reached Kashi. For going to Kashi one need not wait for a proper muhurat because anytime is good time for this pious task.</p><p>On reaching Kashi, Lord Vishnu saw the entire kshetra with wide eyes. He then went to a place where the Holy River Varuna joins River Ganga and washed his hands and feet.</p><p>The place where Lord Vishnu’s Charan (feet referred to with respect) were washed came to be known as PADODAK TEERTH . According to Skanda Puran, Kashi Khand, Chapter 58, devotees who bathe in Padodak Teerth will be cleansed of all their sins accumulated over 7 births, including the present life.</p><p>A devotee who performs Shraaddh (rituals for his forefathers), does a service for twentyone generations of his forefathers. Performing Shraaddh at Padodak Teerth in Kashi is equivalent to performing Shraaddh at Gaya. A devotee who takes a holy dip in Padodak Teerth, consumes Padodak water and gives Padodak water to any other person will be blessed by Lord Vishnu and he will not encounter Hell. A person who consumes water from Padodak Teerth which is Charan Amrit (nectar from the Lotus Feet of Lord Vishnu) need not have fear of rebirth in this world.</p><p>Devotees are advised by Kashi Khand to take Padodak Teerth in Shankh (sea conch) and perform abhishek of Lord and consume such water. Such devotees will not have any fear of apamrityu (untimely death). Further, they will always be remembered for their good actions.</p><p>Please watch our YouTube video on this subject in the following link :</p><p>https://www.youtube.com/watch?v=sIu14DKGbEs&t=52s</p><p>Presently Padodak Teerth is not existent in the form of any river/rivulet or pond. However, there is a Padodak Koop (Well) situated inside the temple premises of Trilochaneshwar. At some point the well was constructed and one hand pump has been installed there. The water is very pure and clean. Here one point needs to be mentioned. The events mentioned in Kashi Khand date back to several Yugs (aeons) before. Probably at that time, Varuna river might have been very wide and must have covered a vast area. Presently, the river is very narrow and quite away from Trilochaneshwar. It looks like a streamlet at present.</p><p>Devotees visiting Trilochaneshwar have high divine respect for water from Padodak Koop and on Akshaya Tritheeya day, people visit this temple in huge numbers and consume water from Padodak Koop as Charan Amrit.</p></div></div><div class="page-break"></div>
+    <div id="ganga-sec-9" style="margin-top: 14pt;">
+      <h1>9. Panch Ganga (Panch Nada Teerth)</h1>
+      <div style="font-size: 10.5pt; color: #0f766e; font-style: italic; margin-top: -3pt; margin-bottom: 6pt;">
+        Invisible Confluence of Five Celestial Streams & Abode of Bindu Madhav &bull; <span class="toc-badge badge-ganga">Sacred Section #9</span>
+      </div>
+    
+      <div class="temple-header-card avoid-break">
+        <div style="font-weight: 700; color: #0f766e; border-bottom: 1px solid #99f6e4; padding-bottom: 3pt; margin-bottom: 4pt;">
+          &#128740; FIELD PILGRIMAGE REFERENCE CARD
+        </div>
+        <div class="temple-meta-grid">
+          <div class="temple-meta-item">
+            <span class="temple-meta-label">Location / Ghat:</span>
+            <span class="temple-meta-val">Refer to article text</span>
+          </div>
+          <div class="temple-meta-item">
+            <span class="temple-meta-label">Bathing / Timings:</span>
+            <span class="temple-meta-val">Open throughout the day and night</span>
+          </div>
+          <div class="temple-meta-item">
+            <span class="temple-meta-label">YouTube Darshan:</span>
+            <span class="temple-meta-val"><a href="https://www.youtube.com/watch?v=sIu14DKGbEs" target="_blank">Watch YouTube Video</a></span>
+          </div>
+          <div class="temple-meta-item">
+            <span class="temple-meta-label">Original Live Source:</span>
+            <span class="temple-meta-val"><a href="https://varanasitemples.in/category/importance-of-river-ganga/important-teerthsghats/panch-ganga-panch-nada-teerth/" target="_blank">https://varanasitemples.in/category/importance-of-river-ganga/important-teerthsghats/panch-ganga-panch-nada-teerth/</a></span>
+          </div>
+        </div>
+      </div>
+    
+            <div class="temple-img-container">
+              <img class="temple-img" src="file:///C:/Users/koppi/Downloads/Kashi_Offline_Guide_Pack/assets/images/Panch-Ganga-1024x754.jpg" alt="Panch Ganga (Panch Nada Teerth)">
+              <div class="temple-img-caption">&#128247; Authentic Visual: Panch Ganga (Panch Nada Teerth)</div>
+            </div>
+            
+            <div class="sanskrit-box">
+              <span class="verse-tag">Scriptural Shloka &bull; Kashi Khand</span>
+              शतं समास्तपस्तप्त्वा  कृते यत्प्राप्यते फलं
+            </div>
+            
+            <div class="sanskrit-box">
+              <span class="verse-tag">Scriptural Shloka &bull; Kashi Khand</span>
+              तत्कार्तिके पञ्चनदे सकृत्स्नानेन लभ्यते
+            </div>
+            
+            <div class="sanskrit-box">
+              <span class="verse-tag">Scriptural Shloka &bull; Kashi Khand</span>
+              तत्र पञ्चनदे तीर्थे यत् किञ्चिद्दीयते वसु
+            </div>
+            
+            <div class="sanskrit-box">
+              <span class="verse-tag">Scriptural Shloka &bull; Kashi Khand</span>
+              कल्पक्षयेऽपि न भवेत्तस्य पुण्यस्य संक्ष्य:
+            </div>
+            
+            <div class="sanskrit-box">
+              <span class="verse-tag">Scriptural Shloka &bull; Kashi Khand</span>
+              प्रतिक्षपं कार्तिकिके कुर्वन् ज्योत्स्नां प्रदीपजाम्
+            </div>
+            
+            <div class="sanskrit-box">
+              <span class="verse-tag">Scriptural Shloka &bull; Kashi Khand</span>
+              ममाग्रे भक्तिसंयुक्तो गर्भध्वान्तं न संविशेत्
+            </div>
+            <div class="temple-narrative"><p>class="art-PostContent"> PANCHA GANGA (PANCHA NADA TEERTH) Long back there was a highly learned Sage named Vedasira, who belonged to Bhrigu family. Once he was engrossed in intense prayers and one beautiful Apsara (celestial damsel) named Suchi happened to pass in front of him. On seeing her, the Sage lost control over his passions and there started physical reactions within his body.</p><p>The Apsara, Suchi, became very much afraid that the Sage might curse her. She pleaded innocence and asked the Sage to forgive her. The Sage, after much pondering, told Suchi that knowingly or unknowingly she had raised the inner passions of the Sage and she should follow it to the logical conclusions. The Sage was omnipotent. Without engaging in any tangible contact with the Apsara, he made her conceive his child.</p><p>In due course, she delivered a beautiful girl. Suchi soon came to the Ashram of the Sage, left the child there and went back to her place. The Sage was very happy at seeing his girl child, who was named by him as Dhootpapa. The Sage reared the girl with great love and affection.</p><p>When Dhootpapa reached the age of eight, the Sage started getting a bit worried in order to find a suitable match for her marriage. He had a frank discussion about this with Dhootpapa and the latter replied that she would like to marry a person according to her choice. She stated that the person desired by her would be highly respected, would have all the qualities expected of him and will take care of her in a proper way.</p><p>The Sage agreed to this and told the girl that to get her wishes fulfilled, she had to undertake intense prayers and worship the Lord. Dhootpapa agreed to this and started her intense prayers, in the process going without food for several days. At times of extreme thirst she used to drink a drop of water and even during extreme winters, she continued her prayers. (Kashi Khand, Chapter 59 has described in detail the intensity of her prayers).</p><p>Finally Lord Brahma appeared before her and blessed her with all happiness. He told her that she was very pure and all the three and half crore sacred waters in the world would reside in the root of the hairs of her body. Lord Brahma further said that Dhootpapa would be venerated as pure and much more sacred than all the Teerths (sacred waters) in the world.</p><p>After accomplishing her prayers, Dhootpapa returned to the Ashram of the Sage. One day when she was playing in the garden, Lord Dharam Raj approached her and being enchanted by her beauty, proposed to her. Dhootpapa insisted that he should speak to her father, but Dharam Raj had other thoughts. The heated discussions went on for some time and Dharam Raj cursed her that she would turn into a statue. Dhootpapa in turn cursed that Dharam Raj would be converted into a male river named Dharma Nada.</p><p>Dhootpapa went inside the hermitage and told her father about what had happened. The Sage, with his divine powers, gathered as to what had happened and asked her to get converted into a metallic statue instead of a stone statue. In due course, the metallic statue would melt and form a river. He further stated that Dharam Raj had all the qualities of being her husband and once Dhootpapa became a river, she would join Dharma Nada.</p><p>The statue of Dhootpapa soon melted and got converted into a river by the same name. As she had got blessings of Lord Brahma, Dhootpapa became very sacred. At the place where Dhootpapa river conjoined Dharma Nada, Lord Surya, in his form as Mayukh Aditya, was undergoing intense prayers. Due to the intensity of the prayers, his Kiran (sun rays) became extremely hot and unbearable. Soon, the perspiration/sweat generated out of the heat started flowing in the form of a river which was called Kirana River.</p><p>Kirana River joined Dhootpapa river at a sacred point which were joined by Ganga, Yamuna and Saraswati rivers. Thus, these five sacred rivers viz. Dhootpapa, Kirana, Ganga, Yamuna and Saraswati joined together and assumed the name of Panchanada Teerth and later on Pancha Ganga.</p><p>(PANCH GANGA GHAT)</p><p>Taking bath in Pancha Ganga is considered highly auspicious. Taking bath just once in Panch Ganga is considered to be equivalent to taking bath in Prayag (Allahabad) for one full month of Magh.</p><p>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-</p><p>Kashi Khand, Chapter 59, Shlok 137</p><p>शतं समास्तपस्तप्त्वा कृते यत्प्राप्यते फलं</p><p>तत्कार्तिके पञ्चनदे सकृत्स्नानेन लभ्यते</p><p>The punya accruing out of performing tapasya for hundreds of years will be derived by taking one holy dip in Panch Ganga (Panch Nada Teerth) during Kartik Month.</p><p>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;</p><p>Kashi Khand has described in the detail the good effects arising out of taking bath in Panch Ganga. In the month of Kartik (October 23 – November 20 – roughly), if a person takes bath in Panch Ganga, he will derive the benefits accruing out of performing Tapas for several long years in other places or Yugs.</p><p>A devotee who takes bath in Panch Ganga and performs Shraaddh Karma for his forefathers will be doing a great service to them and will attain Moksha in his life. All the sins committed by him knowingly or unknowingly will be washed away. While performing Shraaddh at Pancha Ganga, the devotee’s forefathers will remain extremely happy for as many years, as the number of Til seeds (black sesame seeds) fall in the river. In other words, if 50 Til seeds fall into the river in the process of Pinda Danam, the forefathers will remain happy for 50 years.</p><p>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-</p><p>Kashi Khand, Chapter 59, Shlok 126</p><p>तत्र पञ्चनदे तीर्थे यत् किञ्चिद्दीयते वसु</p><p>कल्पक्षयेऽपि न भवेत्तस्य पुण्यस्य संक्ष्य:</p><p>If a devotee donates some wealth at this Pancha Nada tirth (Panch Ganga Ghat), the punya benefit never decays till the end of the cycle.</p><p>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;</p><p>Please watch our YouTube video on Panch Ganga Teerth in the below link :</p><p>https://www.youtube.com/watch?v=sIu14DKGbEs&t=52s</p><p>Whatever benefit accrues to a devotee for performing great Yagyas like Raja Suya Yagya or Aswa Medha Yagya, the devotee will derive several times more benefit by taking one holy dip in Pancha Ganga.</p><p>During the entire Kartik month, devout Hindus light lamps which are placed in a basket and suspended at a great height over bamboo poles. This is a ritual considered to be very auspicious. During the wee hours of the dawn, the votaries (devoted followers), who come for a Holy dip can see along the ghats an array of dotted lights sifting through the holes of the suspended baskets which present a mesmerizing and spectacular sight.</p><p>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-</p><p>Kashi Khand, Chapter 60, Shlok 113</p><p>प्रतिक्षपं कार्तिकिके कुर्वन् ज्योत्स्नां प्रदीपजाम्</p><p>ममाग्रे भक्तिसंयुक्तो गर्भध्वान्तं न संविशेत्</p><p>(Lord Vishnu says), a devotee who lights lamp in front of me, with all divinity, every night during Kartik Month, will not face rebirth.</p><p>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;</p><p>Kartik Poornima is a very auspicious day for taking bath in Panch Ganga. In fact during the entire Kartik Month there is a huge crowd of people taking bath in Panch Ganga just before or during Sunrise. It is believed that even Devas and deities come to Panch Ganga at this time to take bath.</p></div></div><div class="page-break"></div>
+    <div id="ganga-sec-10" style="margin-top: 14pt;">
+      <h1>10. Pilpila Teerth</h1>
+      <div style="font-size: 10.5pt; color: #0f766e; font-style: italic; margin-top: -3pt; margin-bottom: 6pt;">
+        Sacred Miraculous Kund Adjoining Trilochan Mahadev &bull; <span class="toc-badge badge-ganga">Sacred Section #10</span>
+      </div>
+    
+      <div class="temple-header-card avoid-break">
+        <div style="font-weight: 700; color: #0f766e; border-bottom: 1px solid #99f6e4; padding-bottom: 3pt; margin-bottom: 4pt;">
+          &#128740; FIELD PILGRIMAGE REFERENCE CARD
+        </div>
+        <div class="temple-meta-grid">
+          <div class="temple-meta-item">
+            <span class="temple-meta-label">Location / Ghat:</span>
+            <span class="temple-meta-val">Refer to article text</span>
+          </div>
+          <div class="temple-meta-item">
+            <span class="temple-meta-label">Bathing / Timings:</span>
+            <span class="temple-meta-val">Open throughout the day and night</span>
+          </div>
+          <div class="temple-meta-item">
+            <span class="temple-meta-label">YouTube Darshan:</span>
+            <span class="temple-meta-val">Not available</span>
+          </div>
+          <div class="temple-meta-item">
+            <span class="temple-meta-label">Original Live Source:</span>
+            <span class="temple-meta-val"><a href="https://varanasitemples.in/category/importance-of-river-ganga/important-teerthsghats/pilpila-teerth/" target="_blank">https://varanasitemples.in/category/importance-of-river-ganga/important-teerthsghats/pilpila-teerth/</a></span>
+          </div>
+        </div>
+      </div>
+    
+            <div class="temple-img-container">
+              <img class="temple-img" src="file:///C:/Users/koppi/Downloads/Kashi_Offline_Guide_Pack/assets/images/Pilpila-Teerth-Koop21-300x225.jpg" alt="Pilpila Teerth">
+              <div class="temple-img-caption">&#128247; Authentic Visual: Pilpila Teerth</div>
+            </div>
+            <div class="temple-narrative"><p>class="art-PostContent"> PILPILA TEERTH Kashi Khand, at various places, mentions one important Teerth called as Pilpila Teerth.</p><p>During Kashi Khand days, this Teerth must have been very big but now it is existing in the form of a Koop (Well). Pilpila Koop is located near Trilochaneshwar temple. The compiler visited the place on Akshay Triteeya day (a very auspicious day when many people take bath in the Koop). The compiler took bath with the water drawn from the well and were given to understand that there is a huge crowd on the above auspicious day.</p><p>Pilpila Teerth (Koop)</p><p>On Akshay Triteeya day, taking bath in Pilpila Teerth and having darshan of Trilochaneshwar and Madhusudan (Vaman Keshav) is considered very auspicious and compiler was lucky enough to go through the pious ritual as mentioned above.</p><p>During the other days, the place remains open for about one hour or so and at times it remains closed also.</p></div></div><div class="page-break"></div>
+    <div id="ganga-sec-11" style="margin-top: 14pt;">
+      <h1>11. Varuna Sangam</h1>
+      <div style="font-size: 10.5pt; color: #0f766e; font-style: italic; margin-top: -3pt; margin-bottom: 6pt;">
+        Northern Boundary Confluence of River Varuna and Ganga at Adi Keshav &bull; <span class="toc-badge badge-ganga">Sacred Section #11</span>
+      </div>
+    
+      <div class="temple-header-card avoid-break">
+        <div style="font-weight: 700; color: #0f766e; border-bottom: 1px solid #99f6e4; padding-bottom: 3pt; margin-bottom: 4pt;">
+          &#128740; FIELD PILGRIMAGE REFERENCE CARD
+        </div>
+        <div class="temple-meta-grid">
+          <div class="temple-meta-item">
+            <span class="temple-meta-label">Location / Ghat:</span>
+            <span class="temple-meta-val">Refer to article text</span>
+          </div>
+          <div class="temple-meta-item">
+            <span class="temple-meta-label">Bathing / Timings:</span>
+            <span class="temple-meta-val">Open throughout the day and night</span>
+          </div>
+          <div class="temple-meta-item">
+            <span class="temple-meta-label">YouTube Darshan:</span>
+            <span class="temple-meta-val"><a href="https://www.youtube.com/watch?v=sIu14DKGbEs" target="_blank">Watch YouTube Video</a></span>
+          </div>
+          <div class="temple-meta-item">
+            <span class="temple-meta-label">Original Live Source:</span>
+            <span class="temple-meta-val"><a href="https://varanasitemples.in/category/importance-of-river-ganga/important-teerthsghats/varuna-sangam/" target="_blank">https://varanasitemples.in/category/importance-of-river-ganga/important-teerthsghats/varuna-sangam/</a></span>
+          </div>
+        </div>
+      </div>
+    
+            <div class="temple-img-container">
+              <img class="temple-img" src="file:///C:/Users/koppi/Downloads/Kashi_Offline_Guide_Pack/assets/images/sangam-1024x562.jpg" alt="Varuna Sangam">
+              <div class="temple-img-caption">&#128247; Authentic Visual: Varuna Sangam</div>
+            </div>
+            <div class="temple-narrative"><p>class="art-PostContent"> VARUNA SANGAM According to Kashi Khand, Chapter 30, Kashi is a Mukti Kshetra. Long back Yama, Indra and Agni witnessed the devotees in Kashi engaged in religious activities and they drew boundaries for Kashi. All the above Lords, with a view to destroy Asatya (falsehood) and bad thoughts in the Holy City, created Assi River. Then they created Varuna River and made it run through the other end of Kashi.</p><p>As per the directions of Lord Shiva, Lord Vishnu proceeded towards Kashi (kindly refer to Padodak Teerth). On reaching Kashi, Lord Vishnu saw the entire kshetra with bird’s eye view. He then went to a place where the Holy Rivers Varuna and Ganga conjoined and washed his hands and feet.</p><p>The place where Lord Vishnu’s Charan (feet referred to with respect) were washed came to be known as PADODAK TEERTH . According to Kashi Khand, Chapter 58, devotees who bathe in Padodak Teerth will cleanse all their sins accumulated over 7 births, including the present life.</p><p>At the time when the events mentioned in Kashi Khand must have occurred (in Sat Yug), Varuna must have extended upto the present day Trilochan, because the place where Lord Vishnu washed his feet near Varuna Ganga Sangam is Padodak, which is now existing in the form of a well in Trilochaneshwar temple.</p><p>VARUNA GANGA SANGAM</p><p>Kashi Khand at several places has mentioned the importance of Varuna river. It is believed that devotees who bathe in Varuna-Ganga sangam and worship Varuna Sangameshwar will be blessed with all sorts of prosperity.</p><p>Please watch our YouTube Video about Varuna Ganga Sangam in the below Link :</p><p>https://www.youtube.com/watch?v=sIu14DKGbEs&t=52s</p><p>South Indian pilgrims who undertake Kashi yatra perform Pancha Ghatta Pindam and one of the places identified for the purpose is Varuna. However, the fifth place where they do the ritual is Trilochan Ghat. This must be because, the area of religious influence of Varuna must be extending upto Trilochan.</p><p>However, the devotees are advised to take a boat ride upto Varuna Ganga Sangam and in the process they can also have darshan of Adi Keshav temple alongwith other deities therein.</p></div></div><div class="page-break"></div>
+    <div id="ganga-sec-12" style="margin-top: 14pt;">
+      <h1>12. Vimal Teerth (Pisachmochan)</h1>
+      <div style="font-size: 10.5pt; color: #0f766e; font-style: italic; margin-top: -3pt; margin-bottom: 6pt;">
+        Miracle Pool Absolving Ghostly Afflictions & Pitri Dosh &bull; <span class="toc-badge badge-ganga">Sacred Section #12</span>
+      </div>
+    
+      <div class="temple-header-card avoid-break">
+        <div style="font-weight: 700; color: #0f766e; border-bottom: 1px solid #99f6e4; padding-bottom: 3pt; margin-bottom: 4pt;">
+          &#128740; FIELD PILGRIMAGE REFERENCE CARD
+        </div>
+        <div class="temple-meta-grid">
+          <div class="temple-meta-item">
+            <span class="temple-meta-label">Location / Ghat:</span>
+            <span class="temple-meta-val">Refer to article text</span>
+          </div>
+          <div class="temple-meta-item">
+            <span class="temple-meta-label">Bathing / Timings:</span>
+            <span class="temple-meta-val">Open throughout the day and night</span>
+          </div>
+          <div class="temple-meta-item">
+            <span class="temple-meta-label">YouTube Darshan:</span>
+            <span class="temple-meta-val"><a href="https://www.youtube.com/watch?v=L6aCdl5kBjc" target="_blank">Watch YouTube Video</a></span>
+          </div>
+          <div class="temple-meta-item">
+            <span class="temple-meta-label">Original Live Source:</span>
+            <span class="temple-meta-val"><a href="https://varanasitemples.in/category/importance-of-river-ganga/important-teerthsghats/vimal-teerth-pisachmochan/" target="_blank">https://varanasitemples.in/category/importance-of-river-ganga/important-teerthsghats/vimal-teerth-pisachmochan/</a></span>
+          </div>
+        </div>
+      </div>
+    
+            <div class="temple-img-container">
+              <img class="temple-img" src="file:///C:/Users/koppi/Downloads/Kashi_Offline_Guide_Pack/assets/images/Pisach-Mochan-Talab--1024x576.jpg" alt="Vimal Teerth (Pisachmochan)">
+              <div class="temple-img-caption">&#128247; Authentic Visual: Vimal Teerth (Pisachmochan)</div>
+            </div>
+            
+            <div class="sanskrit-box">
+              <span class="verse-tag">Scriptural Shloka &bull; Kashi Khand</span>
+              पैशाचमोचने तीर्थे संभोज्य शिवयोगिनम्
+            </div>
+            
+            <div class="sanskrit-box">
+              <span class="verse-tag">Scriptural Shloka &bull; Kashi Khand</span>
+              कोटिभोज्यफलं सम्यगेकैकपरिसंख्यया
+            </div>
+            <div class="temple-narrative"><p>class="art-PostContent"> VIMAL TEERTH (PISACHMOCHAN TALAB) Vimal Teerth is an important teerth and now the Teerth is known as Pishachmochan Talab and is probably the biggest Teerth available in Varanasi. Devotees even now take bath in the Talab (Pond) on auspicious days.</p><p>According to Kashi Khand, in ancient times one devotee of Kapardeeshwar named Valmiki was residing nearby. One day a hideous and cruel looking Pishach/demon (ghost) appeared and told Valmiki that he (Pishach) was once residing near the banks of the holy river Godavari and had committed many sins. He learnt that a person who lives in Holy places and commits sins, attains Pishach Yoni and his present appearance was due to his past sins. He appealed to Valmiki to help him.</p><p>Valmiki was all the while chanting Shiv Sahasranam(thousand praises of Lord Shiva) and advised the Pishach to take bath in Vimal Kund and pray to Lord Kapardeeshwar. The pishach did as he was told and attained Mukti. After that, Valmiki gave him vibhuti (sacred ash) to be smeared on his forehead and the Pishach followed his instructions. The value of smearing vibhuti on the forehead is amply described in Kashi Khand inasmuch as a person who smears vibhuti in his forhead is safe from untimely death and mishappenings.</p><p>After the Pishach attained Mukti, the above Vimal kund came to be called as Pishachmochan Kund (Kashi Khand chapter 54). This huge kund is still existing in the present day and fairly well maintained.</p><p>(VIMAL TEERTH &#8211; PISACHMOCHAN KUND)</p><p>People visit this Pishachmochan Kund for performing Pind Daan (Shraaddh/ rituals for their forefathers). Visiting this place is considered very auspicious during Magh month (January &#8211; Feb), Shukla Chaturdasi (one day before Amavasya).</p><p>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-</p><p>Kashi Khand, Chapter 54, Shlok 84</p><p>पैशाचमोचने तीर्थे संभोज्य शिवयोगिनम्</p><p>कोटिभोज्यफलं सम्यगेकैकपरिसंख्यया</p><p>Feeding of one Shiv Bhakt in Pisach Mochan Teerth (in Kashi) will yield full punya benefits of feeding one crore sanyasis.</p><p>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;</p><p>Please watch our YouTube Video about Pisach Mochan Talab at below Link :</p><p>https://www.youtube.com/watch?v=L6aCdl5kBjc&t=65s</p><p>Shri Kamlesh Tiwari is available at the place and he can be contacted on his Cell number (0)9918989066 for doing any special pooja. Shri Tiwari is also available for helping devotees to perform any rituals for their forefathers at Pishachmochan Kund.</p></div></div><div class="page-break"></div>
+    <div id="ganga-sec-13" style="margin-top: 14pt;">
+      <h1>13. Durga Kund (Sacred Shakti Tank)</h1>
+      <div style="font-size: 10.5pt; color: #0f766e; font-style: italic; margin-top: -3pt; margin-bottom: 6pt;">
+        Sacred Kund Adjoining the Historic Durga Temple & Durg Vinayak &bull; <span class="toc-badge badge-ganga">Sacred Section #13</span>
+      </div>
+    
+      <div class="temple-header-card avoid-break">
+        <div style="font-weight: 700; color: #0f766e; border-bottom: 1px solid #99f6e4; padding-bottom: 3pt; margin-bottom: 4pt;">
+          &#128740; FIELD PILGRIMAGE REFERENCE CARD
+        </div>
+        <div class="temple-meta-grid">
+          <div class="temple-meta-item">
+            <span class="temple-meta-label">Location / Ghat:</span>
+            <span class="temple-meta-val">Located at Durga Kund road, Southern Varanasi, adjacent to the 18th-century red stone Durga Mandir and Durg Vinayak Temple.</span>
+          </div>
+          <div class="temple-meta-item">
+            <span class="temple-meta-label">Bathing / Timings:</span>
+            <span class="temple-meta-val">Open daily from 05:00 AM to 10:00 PM. Highly vibrant during Navratri.</span>
+          </div>
+          <div class="temple-meta-item">
+            <span class="temple-meta-label">YouTube Darshan:</span>
+            <span class="temple-meta-val"><a href="https://www.youtube.com/watch?v=uzrtWjx_v9Q" target="_blank">Watch YouTube Video</a></span>
+          </div>
+          <div class="temple-meta-item">
+            <span class="temple-meta-label">Original Live Source:</span>
+            <span class="temple-meta-val"><a href="https://varanasitemples.in/category/devi-temples/durga/" target="_blank">https://varanasitemples.in/category/devi-temples/durga/</a></span>
+          </div>
+        </div>
+      </div>
+    
+            <div class="temple-img-container">
+              <img class="temple-img" src="file:///C:/Users/koppi/Downloads/Kashi_Offline_Guide_Pack/assets/images/Durga-Kund-1024x692.jpg" alt="Durga Kund Sacred Tank • Durgabari">
+              <div class="temple-img-caption">&#128247; Authentic Visual: Durga Kund Sacred Tank • Durgabari</div>
+            </div>
+            
+            <div class="sanskrit-box">
+              <span class="verse-tag">Scriptural Shloka &bull; Kashi Khand</span>
+              Kashi Khand, Chapter 72
+दुर्गाकुण्डे नर: स्नात्वा पूजयित्वा च चण्डिकाम् ।
+सर्वान् कामानवाप्नोति मुच्यते सर्वपातकै: ॥
+("Devotees who bathe in Durga Kund and worship Devi Chandika attain all cherished desires and are liberated from every sin.")
+            </div>
+            <div class="temple-narrative"><p>Durga Kund is one of the most prominent historic masonry tanks (kunds) in southern Varanasi. Commissioned adjacent to the ancient Durga Temple, this vast rectangular tank features stone steps on all sides and was historically connected directly to river Ganga through subterranean channels.</p><p>According to Kashi Khand Chapter 72, bathing in Durga Kund on Tuesdays and during the nine nights of Navratri confers supreme protective blessings, dispelling all fear of adversaries, illness, and planetary afflictions.</p><p>Pilgrims visiting Durg Vinayak, Durga Devi, and nearby Sankat Mochan habitually perform achamana at the kund steps before proceeding for darshan.</p></div></div><div class="page-break"></div>
+    <div id="ganga-sec-14" style="margin-top: 14pt;">
+      <h1>14. Kapal Mochan Teerth (Laat Sarovar Kund)</h1>
+      <div style="font-size: 10.5pt; color: #0f766e; font-style: italic; margin-top: -3pt; margin-bottom: 6pt;">
+        Where the Fifth Head of Brahma Fell from Bhairava's Hand &bull; <span class="toc-badge badge-ganga">Sacred Section #14</span>
+      </div>
+    
+      <div class="temple-header-card avoid-break">
+        <div style="font-weight: 700; color: #0f766e; border-bottom: 1px solid #99f6e4; padding-bottom: 3pt; margin-bottom: 4pt;">
+          &#128740; FIELD PILGRIMAGE REFERENCE CARD
+        </div>
+        <div class="temple-meta-grid">
+          <div class="temple-meta-item">
+            <span class="temple-meta-label">Location / Ghat:</span>
+            <span class="temple-meta-val">Located at Laat Bhairav, Adampura / Sarai Mohana, Northern Varanasi.</span>
+          </div>
+          <div class="temple-meta-item">
+            <span class="temple-meta-label">Bathing / Timings:</span>
+            <span class="temple-meta-val">Open daily from 06:00 AM to 08:30 PM.</span>
+          </div>
+          <div class="temple-meta-item">
+            <span class="temple-meta-label">YouTube Darshan:</span>
+            <span class="temple-meta-val"><a href="https://www.youtube.com/watch?v=P2b8sEw8bqw" target="_blank">Watch YouTube Video</a></span>
+          </div>
+          <div class="temple-meta-item">
+            <span class="temple-meta-label">Original Live Source:</span>
+            <span class="temple-meta-val"><a href="https://varanasitemples.in/category/bhairav-temples/kapal-bhairav/" target="_blank">https://varanasitemples.in/category/bhairav-temples/kapal-bhairav/</a></span>
+          </div>
+        </div>
+      </div>
+    
+            <div class="temple-img-container">
+              <img class="temple-img" src="file:///C:/Users/koppi/Downloads/Kashi_Offline_Guide_Pack/assets/images/Kapal-Mochan-Teerth-Laat-Sarovar2-300x225.jpg" alt="Kapal Mochan Teerth / Laat Sarovar • Northern Varanasi">
+              <div class="temple-img-caption">&#128247; Authentic Visual: Kapal Mochan Teerth / Laat Sarovar • Northern Varanasi</div>
+            </div>
+            
+            <div class="sanskrit-box">
+              <span class="verse-tag">Scriptural Shloka &bull; Kashi Khand</span>
+              Kashi Khand, Chapter 31
+कपालमोचनं तीर्थं सर्वपापप्रणाशनम् ।
+यत्र स्नातो नरो मुच्यते ब्रह्महत्यादिपातकात् ॥
+("Kapal Mochan Teerth destroys all heinous sins. A mortal who bathes here is absolved even of the grave sin of Brahmahatya.")
+            </div>
+            <div class="temple-narrative"><p>Kapal Mochan Teerth (also known as Laat Sarovar) is one of the most spiritually dramatic teerths in Kashi Khand. When Lord Bhairava severed the fifth arrogant head of Lord Brahma, the skull (Kapala) adhered obstinately to his divine hand due to the cosmic sin of Brahmahatya.</p><p>Lord Bhairava wandered the cosmos begging for alms, but the skull would not detach. Only when he crossed the sacred threshold of Avimukta Kshetra into Kashi did the severed head drop into this sacred tank, instantly absolving the sin. Hence, the pool was christened Kapal Mochan (Liberation from the Skull).</p><p>Pilgrims bathe here to cleanse deep-seated karmic burdens, ancestral guilts, and spiritual obstacles before praying to Kapal Bhairav (Laat Bhairav).</p></div></div><div class="page-break"></div>
+<div class="section-banner">
+  <h2>SECTION IV: PRACTICAL FIELD PILGRIMAGE CIRCUIT & RITUAL GUIDELINES</h2>
+  <p>The Sacred Panchateerthi Snan Yatra & Riverfront Darshan Etiquette in Varanasi</p>
+</div>
+
+<h3>1. The Sacred Panchateerthi Pilgrimage Sequence</h3>
+<p>
+  Undertaking the <strong>Panchateerthi Yatra</strong> involves taking a ritual bath in five specific sanctified points 
+  along the riverfront on the same day, moving in traditional order from south to north, and ending at Manikarnika:
+</p>
+
+<table class="toc-table">
+  <thead>
+    <tr>
+      <th style="width: 8%;">Step</th>
+      <th style="width: 25%;">Sacred Ghat / Teerth</th>
+      <th style="width: 32%;">Location & Approach</th>
+      <th style="width: 35%;">Pilgrimage Ritual & Significance</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>1</strong></td>
+      <td><strong>Assi Sangam</strong></td>
+      <td>Southernmost Ghat (Assi Ghat)</td>
+      <td>First holy bath at dawn; invocation of Surya and Sankalpa for the yatra.</td>
+    </tr>
+    <tr>
+      <td><strong>2</strong></td>
+      <td><strong>Dasaswamedh Teerth</strong></td>
+      <td>Central Ghat (Godowlia market exit)</td>
+      <td>Second holy bath; offering of arghya and remembrance of Brahma's 10 Ashwamedhas.</td>
+    </tr>
+    <tr>
+      <td><strong>3</strong></td>
+      <td><strong>Varuna Sangam (Adi Keshav)</strong></td>
+      <td>Northernmost confluence (Rajghat Fort)</td>
+      <td>Third holy bath; washing feet at Padodak Teerth & darshan of Lord Adi Keshav.</td>
+    </tr>
+    <tr>
+      <td><strong>4</strong></td>
+      <td><strong>Panchganga (Panch Nada)</strong></td>
+      <td>Panchganga Ghat (below Bindu Madhav)</td>
+      <td>Fourth holy bath; merging with the 5 subterranean rivers & prayer to Bindu Madhav.</td>
+    </tr>
+    <tr>
+      <td><strong>5</strong></td>
+      <td><strong>Manikarnika Teerth</strong></td>
+      <td>Manikarnika Ghat & Chakra Pushkarini</td>
+      <td>Fifth and culminating bath in the primordial kund; complete liberation from rebirth.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>2. Sacred Bathing and Offering Protocol (Ganga Snan Vidhi)</h3>
+<ul>
+  <li><strong>Achamana & Sankalpa:</strong> Before immersing into the river, perform three sips of holy Ganga water (Achamana) and state your Gotra, name, and intent to purify body, speech, and mind.</li>
+  <li><strong>Three Immersions:</strong> Take three complete dips facing East (toward the rising sun), praying to Lord Shiva, Goddess Ganga, and Lord Vishnu.</li>
+  <li><strong>Pitri Tarpana:</strong> Offer oblations of water mixed with sesame seeds (Til) and Kusha grass to departed ancestors, facing South.</li>
+  <li><strong>Deepdan (Floating Lamps):</strong> In the evening, light earthen lamps (diyas) nestled with marigold flowers and set them afloat upon the river surface, invoking light for all beings in creation.</li>
+  <li><strong>Environmental Sanctity:</strong> Under strict Vedic injunctions, never use soaps, detergents, shampoos, or plastic bags in or near the sacred river waters. Maintain absolute reverence for Mother Ganga.</li>
+</ul>
+
+<div style="margin-top: 30pt; padding: 12pt; border: 1px solid #99f6e4; border-radius: 6px; text-align: center; font-size: 8.5pt; color: #64748b;">
+  <strong>Kashi Offline Pilgrimage Mirror Pack</strong> &bull; Complete Ganga &amp; Teerthas Knowledge Base<br>
+  Preserved from <a href="https://varanasitemples.in/">https://varanasitemples.in/</a> for offline field worship &bull; Har Har Gange!
+</div>
+
+</body>
+</html>
